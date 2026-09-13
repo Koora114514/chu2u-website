@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来）
+   注意：只拦截「刷新」；「前进/后退」仍交给浏览器自己恢复位置，不然返回上一页会丢失阅读位置 */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
 <title>羽啾chu2u · 来！打块！</title>
 <meta name="description" content="羽啾chu2u 像素个人站 · 俄罗斯方块小游戏">
 <link rel="icon" type="image/png" href="images/fumo啾.png">

@@ -3,6 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来）
+   注意：只拦截「刷新」；「前进/后退」仍交给浏览器自己恢复位置，不然返回上一页会丢失阅读位置 */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
 <title>羽啾chu2u · 陪啾啾听！</title>
 <meta name="description" content="羽啾chu2u 像素个人站 · 歌单（歌单/历史/中意/我的歌单 + 播放器/睡眠定时）">
 <link rel="icon" type="image/png" href="images/fumo啾.png">
@@ -64,7 +82,7 @@
       <p class="sub">和啾啾一起听的像素歌单：收藏、历史与我的歌单都存在本地浏览器里，中意页可导出/导入存档备份。</p>
     </div>
 
-    <!-- 页面切换（仿 viridis.love 歌单页：歌单 / 历史 / 中意 / 我的歌单） -->
+    <!-- 页面切换（歌单 / 历史 / 中意 / 我的歌单） -->
     <div class="pl-tabs reveal" role="tablist">
       <button class="px-btn on" id="tabSongs" type="button" role="tab">🎵 歌单</button>
       <button class="px-btn" id="tabHist" type="button" role="tab">📜 历史</button>
@@ -72,7 +90,7 @@
       <button class="px-btn" id="tabLists" type="button" role="tab">📚 我的歌单</button>
     </div>
 
-    <!-- 歌单页：搜索范围 + 高级筛选（仿 viridis.love：建议筛选在面板里，平时收起） -->
+    <!-- 歌单页：搜索范围 + 高级筛选（建议筛选在面板里，平时收起） -->
     <div class="pl-view reveal" id="viewSongs">
       <div class="pixel-card pl-card">
         <div class="pl-tools">
@@ -134,7 +152,7 @@
 </main>
 
 <!-- 播放列表（队列）面板 -->
-<!-- ⭐ 高级筛选抽屉（仿 viridis.love：点按钮才弹出，带遮罩的二级交互窗口） -->
+<!-- ⭐ 高级筛选抽屉（点按钮才弹出，带遮罩的二级交互窗口） -->
 <div class="pl-drawer-backdrop" id="plAdvBackdrop" hidden></div>
 <div class="pl-drawer" id="plAdvPanel" role="dialog" aria-modal="true" aria-labelledby="plAdvTitle" hidden>
   <div class="pl-drawer-head">
@@ -263,7 +281,7 @@
   var bar = document.getElementById("playerBar");
   if(!bar) return;
   var SONGS = window.CHU2U_SONGS || [];
-  /* 播放器图标：全部用内联 SVG（2026-09-13 用户定「按键不要 emoji」，仿参考站的圆形图标键）。
+  /* 播放器图标：全部用内联 SVG（2026-09-13 用户定「按键不要 emoji」，做成圆形图标键）。
      要换图标改这里就行；viewBox 12×12、currentColor 着色，跟按键文字色一致。 */
   var ICON = {
     play:  '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.8 1.8 10 6 3.8 10.2Z"/></svg>',
@@ -512,7 +530,7 @@
     if(!qp.hidden) renderQueue();
   }
 
-  /* ---------- 筛选（仿 viridis.love 的「建议筛选 + 高级筛选」） ----------
+  /* ---------- 筛选（筛选选项全部收在面板里） ----------
      语言 / 标签是**多选**：一个都不选 = 不过滤（等同全选）；
      次数/天数/二创是预设单选；排序方式 + 排序方向独立。 */
   var filters = {
@@ -641,7 +659,7 @@
     }
     renderActiveFilters();
   }
-  /* 「已生效」胶囊栏：每个条件一颗胶囊，**点 × 可单独移除**（仿 viridis.love：
+  /* 「已生效」胶囊栏：每个条件一颗胶囊，**点 × 可单独移除**（
      不占垂直视野，直观呈现并支持单项移除）。排序不算筛选条件，单独文字提示。 */
   var COUNT_LABEL = {ge1:"≥1次", ge5:"≥5次", ge10:"≥10次", ge20:"≥20次", only1:"仅1次"};
   var DAYS_LABEL = {d7:"近7天", d30:"近30天", d90:"近90天", d90p:"90天以上"};
@@ -1212,7 +1230,7 @@
   });
   document.addEventListener("click", function(){ closePopups(null); });
 
-  /* ---------- ⭐ 高级筛选抽屉（仿 viridis.love：点按钮才弹出，带遮罩的二级窗口） ---------- */
+  /* ---------- ⭐ 高级筛选抽屉（点按钮才弹出，带遮罩的二级窗口） ---------- */
   var advBtn = document.getElementById("plAdvBtn");
   var advPanel = document.getElementById("plAdvPanel");
   var advBackdrop = document.getElementById("plAdvBackdrop");

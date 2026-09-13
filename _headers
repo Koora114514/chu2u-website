@@ -1,0 +1,43 @@
+# ============================================================
+#  安全响应头（Cloudflare Pages / Netlify 会自动读取本文件并生效）
+#
+#  说明：这是静态站能做的防护里最有效的一层——浏览器拿到这些头之后，
+#        会主动拦掉「页面被塞进别人的 iframe」「MIME 类型嗅探」「越权调用摄像头」等风险。
+#        托管平台不支持本文件时会被忽略，不影响网站本身。
+#
+#  ⚠ 如果上线后网站有东西显示不出来（字体/图片/脚本被拦），
+#     多半是下面的 Content-Security-Policy 太严——把这一整段注释掉重传即可。
+# ============================================================
+/*
+  # 禁止浏览器猜测文件类型（防止伪造的文件被当脚本执行）
+  X-Content-Type-Options: nosniff
+
+  # 不允许别的网站把本站塞进 iframe（防点击劫持）
+  X-Frame-Options: SAMEORIGIN
+
+  # 跳转到外部站点时不泄露本站完整地址
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # 关掉本站用不到的敏感权限
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=(), usb=()
+
+  # 内容安全策略：白名单制，只允许加载下面列出的东西
+  #   'self'            = 本站自己的文件（脚本/样式/图片/音频/字体）
+  #   'unsafe-inline'   = 允许页面内联的 <script>/<style>（本站脚本都写在页面里，必须开）
+  #   cdn.jsdelivr.net  = 唯一的第三方，只有像素字体
+  #   connect-src self  = 页面只允许请求本站自己的资源（不向任何外部服务器发请求）
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; media-src 'self'; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'none'; object-src 'none'
+
+# 图片和音频体积大、不会变，让浏览器长期缓存（第二次打开更快）
+/images/*
+  Cache-Control: public, max-age=604800
+
+/music/*
+  Cache-Control: public, max-age=604800
+
+# 页面和数据文件每次都要问一下有没有新版（保证维护程序更新后能立刻看到）
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+/data/*
+  Cache-Control: public, max-age=0, must-revalidate

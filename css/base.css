@@ -1,6 +1,6 @@
 /* ============================================================
-   CHU2U 像素个人站 —— 按 chu2u/个人网站模板.md v2 生成
-   配色提取自参考图 assets/reference/待机页面.png
+   CHU2U 像素个人站 —— 全站共用样式
+   配色：低饱和橄榄绿 + 米黄底 + 深墨描边
    🎨 换主题色：改 :root 里的 --olive / --olive-deep
    ============================================================ */
 :root{
@@ -767,7 +767,7 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .item:hover{transform:translate(-3px,-3px);box-shadow:7px 7px 0 rgba(48,48,48,.6);border-color:var(--olive-deep)}
 .item .thumb{grid-column:1;grid-row:1/5;width:128px;height:72px;display:grid;place-items:center;font-size:30px;background:var(--olive-pale);border:2px solid var(--ink)}
 .item .thumb img{width:100%;height:100%;object-fit:cover;image-rendering:auto}
-/* 里程碑卡：无图，大数字 + 单位小字（仿参考站 ms-num） */
+/* 里程碑卡：无图，大数字 + 单位小字（ ms-num） */
 .item .ms-num{
   grid-column:1;grid-row:1/5;width:128px;height:72px;display:flex;align-items:center;justify-content:center;
   background:var(--olive-pale);border:2px solid var(--ink);color:var(--olive-deep);
@@ -875,7 +875,7 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .song-card.playing .cover::after{content:"▶";position:absolute;font-size:12px;background:var(--ink);color:var(--olive);padding:2px 6px}
 /* 播放器条 */
 /* 播放器：底部**常驻**（2026-09-13 用户定，不再「有歌才出现」）；
-   高度整体压低一档（按钮 30px、内边距 6px），圆角 20px 仿参考站 */
+   高度整体压低一档（按钮 30px、内边距 6px），圆角 20px  */
 .player-bar{
   position:fixed;left:50%;transform:translateX(-50%);bottom:44px;z-index:8600;
   display:flex;align-items:center;gap:8px;width:min(920px,calc(100% - 28px));
@@ -892,7 +892,7 @@ body.dark .player-bar{background-image:linear-gradient(180deg,rgba(255,255,255,.
 .player-bar .p-progress{position:relative;flex:1;min-width:90px;height:14px;border:2px solid var(--ink);background:var(--olive-pale);cursor:pointer}
 .player-bar .p-progress .fill{position:absolute;inset:1px;width:0;background:var(--olive)}
 .p-time{flex:0 0 auto;font-size:14px;color:var(--ink-soft);white-space:nowrap;font-variant-numeric:tabular-nums}
-/* 播放器按键：圆形 + 内联 SVG 图标（2026-09-13 用户定「不要 emoji」，仿 viridis.love 的圆形键） */
+/* 播放器按键：圆形 + 内联 SVG 图标（2026-09-13 用户定「不要 emoji」，圆形键） */
 .pbtn{
   flex:0 0 auto;width:32px;height:32px;padding:0;cursor:pointer;
   background:var(--panel);border:2px solid var(--ink);box-shadow:2px 2px 0 rgba(48,48,48,.55);
@@ -1251,7 +1251,7 @@ body.dark .pl-chip.on{background:var(--olive-deep);color:#10102a}
 .pl-day{display:flex;align-items:center;gap:10px;margin:16px 0 8px;font-size:14px;color:var(--olive-deep);letter-spacing:2px}
 .pl-day::after{content:"";flex:1;height:3px;background:var(--line)}
 .pl-day:first-child{margin-top:0}
-/* ---------- 歌单页新增：搜索范围 / 高级筛选面板 / 已生效条 / 歌切（2026-09-13 仿 viridis.love 改造） ---------- */
+/* ---------- 歌单页新增：搜索范围 / 高级筛选面板 / 已生效条 / 歌切（2026-09-13  改造） ---------- */
 .pl-scope{display:flex;border:2px solid var(--ink);background:var(--panel);box-shadow:2px 2px 0 rgba(48,48,48,.4)}
 .pl-scope-btn{font:inherit;font-size:14px;padding:6px 12px;cursor:pointer;background:transparent;color:var(--ink-soft);border:0;border-right:2px solid var(--ink);letter-spacing:1px}
 .pl-scope-btn:last-child{border-right:0}
@@ -1262,7 +1262,7 @@ body.dark .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
 .pl-adv-k{font-size:14px;color:var(--olive-deep);letter-spacing:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .pl-adv-note{font-size:12px;color:var(--ink-soft);letter-spacing:0}
 .pl-adv-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-/* ⭐ 高级筛选抽屉：仿 viridis.love 的二级交互窗口（带遮罩，点按钮才弹出）
+/* ⭐ 高级筛选抽屉：二级交互窗口（带遮罩，点按钮才弹出）
    2026-09-13 用户定：窗口**居中**放置；内容超出时用滚轮滑动预览（像素细滚动条） */
 /* 蒙版：半透明压暗 + 背景模糊（2026-09-13 用户定：打开二级窗口时加模糊蒙版） */
 .pl-drawer-backdrop{
@@ -1274,7 +1274,7 @@ body.dark .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
 .pl-drawer{
   /* 上下左右都居中；高度固定占页面 Y 轴的 2/3（2026-09-13 用户定） */
   position:fixed;z-index:9011;left:50%;top:50%;transform:translate(-50%,-50%);
-  width:min(680px,94vw);height:66.667vh;   /* 加宽以容纳两栏网格（参考站也是 680px） */
+  width:min(680px,94vw);height:66.667vh;   /* 加宽以容纳两栏网格（680px 宽） */
   background:var(--panel);border:3px solid var(--ink);
   box-shadow:8px 8px 0 rgba(48,48,48,.35);
   display:flex;flex-direction:column;
@@ -1307,7 +1307,7 @@ body.dark .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
 body.pl-drawer-open{overflow:hidden}
 .pl-mini{font:inherit;font-size:12px;padding:2px 8px;cursor:pointer;background:var(--panel);color:var(--ink);border:2px solid var(--ink);box-shadow:2px 2px 0 rgba(48,48,48,.4);letter-spacing:1px}
 .pl-mini:hover{background:var(--olive)}
-/* 「已生效」胶囊栏：每颗胶囊点一下就移除该条件（仿 viridis.love 的单品移除） */
+/* 「已生效」胶囊栏：每颗胶囊点一下就移除该条件（每个条件可单独移除） */
 .pl-active{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px;padding-top:8px;border-top:2px dashed var(--line);font-size:12px}
 .pl-active-k{color:var(--olive-deep);letter-spacing:1px}
 .pl-active-chip{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:12px;cursor:pointer;background:var(--olive-pale);border:1px solid var(--ink);padding:2px 8px;color:var(--ink);letter-spacing:0}
@@ -1396,7 +1396,7 @@ body.dark .pl-clip.main{background:var(--olive-deep);color:#10102a}
 }
 
 /* ============================================================
-   全站圆角 + 高光（2026-09-13 用户定，「参考 viridis.love 的圆润卡片/按键」）
+   全站圆角 + 高光（2026-09-13 用户定，「圆润卡片 / 按键」）
    卡片 16px、按键 12px；高光 = 顶部一条柔白渐变（绘画式提亮），深浅色各配亮度。
    放在文件末尾，保证能盖住前面用 background 简写写的规则。
    ============================================================ */
@@ -1511,9 +1511,9 @@ main{padding-bottom:104px}
    2026-09-13 用户定：画框/展示框一律直角，只有操作性元素倒角 */
 .cover,.thumb,.slot,.de-pic,.ach-pic,.sk-pic,.pl-cover,.photo{border-radius:0}
 
-/* 侧边栏按键改成参考站 viridis.love 那种「胶囊」形状（2026-09-13 用户定）
-   参考站：按钮 border-radius:999px、当前页用渐变填充、悬停浅底；
-   这里保留本站的像素描边与右端三角尖，只把**形状**换成胶囊。 */
+/* 【历史遗留·已被后面的规则覆盖】侧边栏曾短暂试过胶囊形状：
+   下面这几条现在都不生效（文件末尾有 .side-btn{border-radius:0} 等把形状改回方角）。
+   保留仅为避免误删引发回归，新增样式不要参考这里。 */
 .side-btn{
   border-radius:999px;
   border-left:3px solid var(--ink);      /* 胶囊左边要有描边，形状才闭合 */
@@ -1535,7 +1535,7 @@ body.dark .side-btn:hover{background-image:linear-gradient(135deg,#34346a,#2a2a5
 /* 站标框和大立绘框也按「展示框一律直角」处理（2026-09-13 用户定） */
 .logo,.avatar-big{border-radius:0}
 
-/* ★ 撤销上一版的胶囊改动（用户澄清：不是要圆角，是要参考站侧边栏的样式） */
+/* ★ 撤销上一版的胶囊改动（用户澄清：不是要圆角，是要侧边栏的样式） */
 .side-btn{
   border-radius:0;
   border-left:none;
@@ -1548,7 +1548,7 @@ body.dark .side-btn:hover,body.dark .side-btn:focus-visible{background-image:lin
 .side-btn::before{left:100%}
 .side-btn::after{left:calc(100% + 3px)}
 
-/* ★ 侧边栏按键改成参考站 viridis.love 的「笔记本书签」形状（2026-09-13 用户定）
+/* ★ 侧边栏按键改成「笔记本书签」形状（2026-09-13 用户定）
    形状 = 五边形：右侧 18px 处收成一个尖角，**整个按键是一个连续形状**（不是矩形外挂三角）。
    描边用两层 clip-path 叠出来：外层墨色、内层底色（底色走 --tip，跟着悬停/当前页变色）；
    投影用 filter:drop-shadow（会跟着五边形走，box-shadow 是方的跟不了）。 */

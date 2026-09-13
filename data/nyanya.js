@@ -51,7 +51,7 @@ window.CHU2U_CAT = [
    t:"我说啾绿王朝了有人懂吗？", d:"小松绿智商低", date:"2026年8月16日"},
   {kind:"meme", uid:"702229167", link:"https://www.bilibili.com/opus/1236702001475092485", cover:"images/nyan/m4.jpg",
    t:"smoke中", d:"nakuu_骷", date:"2026年8月15日"},
-  {kind:"video", uid:"317092649", link:"https://www.bilibili.com/video/BV1j6uf6WE8R/", cover:"images/nyan/v2.jpg",
+  {kind:"video", uid:"aWttamNobG5j", link:"https://www.bilibili.com/video/BV1j6uf6WE8R/", cover:"images/nyan/v2.jpg",
    t:"【羽啾chu2u】Bad Apple自制动画", d:"此间风饮雪", date:"2026年8月14日"},
   {kind:"meme", uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1235381569597734931", cover:"images/nyan/m3.jpg",
    t:"请大家多多支持羽啾chuuuuuu!!!", d:"_可乐乐乐乐乐", date:"2026年8月12日"},

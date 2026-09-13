@@ -3,8 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来）
+   注意：只拦截「刷新」；「前进/后退」仍交给浏览器自己恢复位置，不然返回上一页会丢失阅读位置 */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
 <title>羽啾chu2u · 宇宙观测中心</title>
-<meta name="description" content="像素游戏风个人主页 · 等高线 · 外星人 —— 按《个人网站模板.md》生成的可预览版本">
+<meta name="description" content="像素游戏风个人主页 · 等高线 · 外星人 · 羽啾chu2u 的宇宙观测中心">
 <link rel="icon" type="image/png" href="images/fumo啾.png">
 <!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -385,7 +403,7 @@
 </div>
 
 
-<!-- ============ ⑤ 观测记录：本期 + 往期（LATEST ISSUE 布局仿 viridis.website；内容由 JS 从 data/records.js 渲染） ============ -->
+<!-- ============ ⑤ 观测记录：本期 + 往期（LATEST ISSUE 布局；内容由 JS 从 data/records.js 渲染） ============ -->
 <div class="wrap">
   <div class="sec-title reveal" id="records">
     <h2><span class="no">OBSERVATION RECORDS</span>观测记录！</h2>
@@ -523,6 +541,10 @@
 <script src="data/achieves.js"></script>
 <!-- 悬浮飘窗按钮的文案与跳转链接（手动维护，用 维护\飘窗手动更新.ps1 或直接改该文件） -->
 <script src="data/floatbtn.js"></script>
+<!-- 设计元素数据（手动维护，可用 维护\维护台 编辑） -->
+<script src="data/design.js"></script>
+<!-- 作品展柜数据（手动维护，可用 维护\维护台 编辑） -->
+<script src="data/works.js"></script>
 <script>
 /* ============================================================
    CHU2U 像素个人站 JS —— 全部功能
@@ -719,13 +741,7 @@
     var stage = root.querySelector(".de-stage");
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     // 🎨 素材配置：设计元素数据（按此顺序轮切；img 为 images/design/ 下文件名前缀，自动补 -c/-m/-s；locked:true = 压暗+大像素问号）
-    var DE_ITEMS = [
-      { img:"images/design/项圈！", title:"项圈！", text:"脖子上的项圈其实搭载了能实时监测生命活动的AI！它还会自己眨眼中，不信你跟它对视10秒！" },
-      { img:"images/design/探险记录相机", title:"科考相机！", text:"啾啾用来录制vlog的相机，在一些信号干扰区域的实地探测活动中，用于录像记录考察，可以分享给宇宙猫进行野生的信号研究！" },
-      { img:"images/design/对讲机！", title:"对讲机！", text:"用于接收外星通讯信号，如果接收到母星的信号会发出哔哩哔哩的动静！" },
-      { img:"images/design/外套！", title:"外套！", text:"用于约束羽啾「龙之力」的装备，衣服上的绝缘带可以规避敌对生物的探查，如果发现敌对生物迫近可拉动身后电线套在对方身上，可以作为拘束衣使用！绝缘带还可以屏蔽它们向母星发送的求救信号！" },
-      { img:"images/design/龙宫礼啾", title:"敬请期待", text:"新衣更新后解锁该资料！啾啾啾~~~！", locked:true }
-    ];
+    var DE_ITEMS = window.CHU2U_DESIGN || [];   /* 数据在 data/design.js（可用维护台编辑） */
     var N = DE_ITEMS.length, cur = 0, timer = null;
     var POS = { "is-l2":-2, "is-l1":-1, "is-c0":0, "is-r1":1, "is-r2":2 };
     var TIER = { "is-c0":"c", "is-l1":"m", "is-r1":"m", "is-l2":"s", "is-r2":"s" };
@@ -1055,121 +1071,7 @@
       }catch(e){ cb(null); }
     }
 
-    /* —— 日期来源 2：远程置顶动态抓取（镜像/公共代理；B 站直连有风控+CORS 拦截） —— */
-    var API_URL = "https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?host_mid=" + UID;
-    var SOURCES = [
-      { url: "https://rsshub.ktachibana.party/bilibili/user/dynamic/" + UID, type: "rss" },
-      { url: "https://cors.eu.org/" + API_URL, type: "api" },
-      { url: "https://api.allorigins.win/raw?url=" + encodeURIComponent(API_URL), type: "api" }
-    ];
-
-    function readCache(key){
-      try{
-        var c = JSON.parse(localStorage.getItem(key) || "null");
-        return (c && c.img) ? c : null;
-      }catch(e){ return null; }
-    }
-    function writeCache(key, c){
-      try{ localStorage.setItem(key, JSON.stringify(c)); return true; }
-      catch(e){ return false; }
-    }
-
-    /* 接口 JSON：找置顶（is_top===1）动态的第一张图 */
-    function parseApi(json){
-      var items = (json && json.data && json.data.items) || [];
-      for(var i = 0; i < items.length; i++){
-        var it = items[i];
-        var auth = it.modules && it.modules.module_author;
-        if(!auth || auth.is_top !== 1) continue;
-        var maj = it.modules.module_dynamic && it.modules.module_dynamic.major;
-        if(!maj) continue;
-        var pic = "";
-        if(maj.draw && maj.draw.items && maj.draw.items[0]) pic = maj.draw.items[0].src;
-        else if(maj.opus && maj.opus.pics && maj.opus.pics[0]) pic = maj.opus.pics[0].url;
-        else if(maj.archive && maj.archive.cover) pic = maj.archive.cover;
-        if(pic) return { id: String(it.id_str || it.id), img: pic };
-      }
-      return null;
-    }
-    /* RSSHub 输出没有置顶标记，取最新一条动态里的第一张图 */
-    function parseRss(json){
-      var items = (json && json.data && json.data.items) || [];
-      for(var i = 0; i < items.length; i++){
-        var m = /<img[^>]+src=["']([^"']+)["']/i.exec(items[i].description || "");
-        if(m) return { id: items[i].link || items[i].url || m[1], img: m[1] };
-      }
-      return null;
-    }
-
-    function fetchJson(url, onOk, onErr){
-      var ctrl = ("AbortController" in window) ? new AbortController() : null;
-      var timer = ctrl ? setTimeout(function(){ ctrl.abort(); }, 15000) : null;
-      fetch(url, { signal: ctrl ? ctrl.signal : undefined })
-        .then(function(r){ if(!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-        .then(function(json){ if(timer) clearTimeout(timer); onOk(json); })
-        .catch(function(){ if(timer) clearTimeout(timer); onErr(); });
-    }
-
-    function remoteSync(i, cb){
-      if(i >= SOURCES.length){ cb(false); return; }
-      fetchJson(SOURCES[i].url, function(json){
-        var got = SOURCES[i].type === "api" ? parseApi(json) : parseRss(json);
-        if(!got) throw new Error("no pinned pic");
-        var src = String(got.img).replace(/^http:/, "https:");
-        var now = Date.now();
-        writeCache(KEY, { id: got.id, img: src, ts: now, week: mondayTs() }); /* 置顶更新 → 抓取替换 */
-        showImg(src, true);
-        setDate(new Date(now));
-        cb(true);
-      }, function(){ remoteSync(i + 1, cb); });
-    }
-
-    function showImg(src, isRemote){
-      remoteActive = !!isRemote;
-      showingLocal = src.indexOf(LOCAL) !== -1;
-      if(showingLocal) curLocal = src;
-      img.hidden = false; fail.hidden = true;
-      img.src = src;
-    }
-    function failState(){
-      img.hidden = true; fail.hidden = false;
-      toast("未找到周表图 · 请把置顶动态第一张照片保存为 site/images/schedule-week-full.png");
-      setStatus("请以置顶动态为准");
-    }
-    function showLocal(){
-      showImg(LOCAL + "?v=" + Date.now(), false);
-      /* 日期：mtime 读不到（file:// 双击打开）时，用拖图/远程同步留下的日期 */
-      localMtime(function(t){
-        if(t){ setDate(t); }
-        else{
-          var d = readCache(DKEY);
-          if(d && d.ts){ setDate(new Date(d.ts)); }
-          else if(when.textContent.indexOf("更新于") !== 0){ setStatus("请以置顶动态为准"); }
-        }
-      });
-    }
-
-    /* —— 启动：以周一为一周起点；本周已更新过就直接用，不再联网抓取 —— */
-    var monday = mondayTs();
-    var cached = readCache(KEY);
-    var drop = readCache(DKEY);
-    if(cached && cached.week === monday){
-      /* 本周已成功抓取过 → 停止抓取，直接用缓存 */
-      showImg(cached.img, true);
-      setDate(new Date(cached.ts));
-    }else if(drop && drop.ts >= monday){
-      /* 本周已拖入新图 → 视为已更新，停止抓取 */
-      showImg(drop.img, false);
-      setDate(new Date(drop.ts));
-    }else{
-      /* 新的一周（周一起）：联网抓取一次；失败就落回旧图/本地图 */
-      remoteSync(0, function(ok){
-        if(ok) return;
-        if(cached){ showImg(cached.img, true); setDate(new Date(cached.ts)); }
-        else if(drop){ showImg(drop.img, false); setDate(new Date(drop.ts)); }
-        else showLocal();
-      });
-    }
+    /* 【已移除】原本这里是“页面自己联网抓周表”的代码，现已改为由维护程序抓取处理（见 维护\u5468表更新.py） */
 
     /* —— 拖入新周表图：读取文件真实修改日期，压缩后存入浏览器缓存 —— */
     photo.addEventListener("dragover", function(e){ e.preventDefault(); });
@@ -1482,7 +1384,7 @@
     var trig = document.getElementById("avatarBig");
     if(!trig) return;
     function view(){
-      window.open("../../探险啾.png", "_blank");
+      window.open("images/探险啾-立绘.png", "_blank");   /* 用站内本地文件，别再指向站点外的路径 */
     }
     trig.addEventListener("click", view);
     trig.addEventListener("keydown", function(e){
@@ -1496,13 +1398,7 @@
        改数据只改这里：t=标题、link=B站链接、cover=本地缓存封面、date=投稿日期。
        NEW！提示键是自动的：网站会把本浏览器见过的链接存在本地，只有发现没见过的新链接
        （= 刚维护进来的新投稿）才显示；点一下跳到最新投稿并记住，之后就不再提示。 */
-    var VIDEOS = [
-      {t:"【初投稿】Os-宇宙人", link:"https://www.bilibili.com/video/BV1MGuw6LEYa/", cover:"images/works/work-1.jpg", date:"2026.08.05"},
-      {t:"外星人解读汽车故障灯", link:"https://www.bilibili.com/video/BV1Z1M16mEBp/", cover:"images/works/work-2.jpg", date:"2026.08.06"},
-      {t:"【chu2u】以上，是从n次观测地发送回来的。", link:"https://www.bilibili.com/video/BV1m8uH6eEbs/", cover:"images/works/work-3.jpg", date:"2026.08.07"},
-      {t:"【chu2u】⚡感觉要坏掉了!⚡/どうにかなっちゃいそう", link:"https://www.bilibili.com/video/BV14zt86KENJ/", cover:"images/works/work-4.jpg", date:"2026.08.31"},
-      {t:"【万粉纪念】界隈の動物園", link:"https://www.bilibili.com/video/BV163tn6eE9C/", cover:"images/works/work-5.jpg", date:"2026.09.02"}
-    ];
+    var VIDEOS = window.CHU2U_WORKS || [];   /* 数据在 data/works.js（可用维护台编辑） */
     var VISIBLE = 4; /* 滑块一次显示 4 张卡；末尾固定追加 1 张空白卡（魔法正在生成中~） */
     var track = document.getElementById("worksTrack");
     var slider = document.getElementById("worksSlider");
