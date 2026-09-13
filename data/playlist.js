@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-14 00:51:40   共 87 首（另有手写占位 0 条）
+// 生成时间：2026-09-14 00:56:57   共 87 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -159,18 +159,8 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×2"
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE",
-  "clips": [
-   {
-    "bvid": "BV1cNYi6HEAE",
-    "page": 1,
-    "title": "花の塔",
-    "author": "千束和泷奈贴贴贴",
-    "date": "2026-09-13",
-    "play": 28,
-    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE"
-   }
-  ],
+  "link": "",
+  "clips": [],
   "src": "music/619979076.m4a",
   "cover": "images/song/619979076.jpg",
   "audioStatus": "ok",
@@ -1750,9 +1740,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/807356066.m4a",
+  "cover": "images/song/807356066.jpg",
+  "audioStatus": "ok",
+  "dur": 262.0
  },
  {
   "key": "432109980",
@@ -1942,9 +1933,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/462203233.m4a",
+  "cover": "images/song/462203233.jpg",
+  "audioStatus": "ok",
+  "dur": 180.1
  },
  {
   "key": "361186480",
@@ -1975,9 +1967,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/361186480.m4a",
+  "cover": "images/song/361186480.jpg",
+  "audioStatus": "ok",
+  "dur": 315.5
  },
  {
   "key": "461523872",
@@ -2008,9 +2001,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/461523872.m4a",
+  "cover": "images/song/461523872.jpg",
+  "audioStatus": "ok",
+  "dur": 282.2
  },
  {
   "key": "638097474",
@@ -2041,9 +2035,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/638097474.m4a",
+  "cover": "images/song/638097474.jpg",
+  "audioStatus": "ok",
+  "dur": 205.7
  },
  {
   "key": "210210409",
@@ -2074,9 +2069,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/210210409.m4a",
+  "cover": "images/song/210210409.jpg",
+  "audioStatus": "ok",
+  "dur": 243.0
  },
  {
   "key": "332483731",
@@ -2107,9 +2103,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/332483731.m4a",
+  "cover": "images/song/332483731.jpg",
+  "audioStatus": "ok",
+  "dur": 299.6
  },
  {
   "key": "65945350",
@@ -2140,9 +2137,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/65945350.m4a",
+  "cover": "images/song/65945350.jpg",
+  "audioStatus": "ok",
+  "dur": 16.9
  },
  {
   "key": "364564393",
