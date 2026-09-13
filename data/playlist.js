@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-14 00:38:46   共 87 首（另有手写占位 0 条）
+// 生成时间：2026-09-14 00:51:40   共 87 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -159,8 +159,18 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×2"
    }
   ],
-  "link": "",
-  "clips": [],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE",
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 1,
+    "title": "花の塔",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-13",
+    "play": 28,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE"
+   }
+  ],
   "src": "music/619979076.m4a",
   "cover": "images/song/619979076.jpg",
   "audioStatus": "ok",
@@ -297,9 +307,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/54629931.m4a",
+  "cover": "images/song/54629931.jpg",
+  "audioStatus": "ok",
+  "dur": 338.7
  },
  {
   "key": "623160006",
@@ -1431,9 +1442,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/237044391.m4a",
+  "cover": "images/song/237044391.jpg",
+  "audioStatus": "ok",
+  "dur": 163.6
  },
  {
   "key": "660336982",
@@ -1672,9 +1684,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/158244061.m4a",
+  "cover": "images/song/158244061.jpg",
+  "audioStatus": "ok",
+  "dur": 358.4
  },
  {
   "key": "601662214",
@@ -1703,9 +1716,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/601662214.m4a",
+  "cover": "images/song/601662214.jpg",
+  "audioStatus": "ok",
+  "dur": 257.2
  },
  {
   "key": "807356066",
