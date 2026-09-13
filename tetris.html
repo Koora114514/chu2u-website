@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>羽啾chu2u · 来！打块！</title>
+<meta name="description" content="羽啾chu2u 像素个人站 · 俄罗斯方块小游戏">
+<link rel="icon" type="image/png" href="images/fumo啾.png">
+<!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
+<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+<div class="contour-bg" aria-hidden="true"></div>
+<div class="dark-stars" aria-hidden="true"></div>
+
+<!-- ============ 顶部导航（站标 + B站主页 + 直播间状态） ============ -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo"><img src="images/喵啾.png" alt="羽啾chu2u"></span>
+      <span class="brand-text">
+        <b>羽啾chu2u</b>
+        <small>来！打块！</small>
+        <i>Universe Observation Center</i>
+      </span>
+    </div>
+    <nav class="nav">
+      <!-- 像素时钟：选中的时区记在本地浏览器（静态部署也能用，纯前端） -->
+      <div class="pixel-clock" id="pixelClock">
+        <div class="pc-row">
+          <span class="pc-time" id="pcTime">--:--:--</span>
+          <span class="pc-date" id="pcDate">----.--.-- 周-</span>
+        </div>
+        <select class="pc-sel" id="pcTz" aria-label="选择时区" title="选择时区"></select>
+      </div>
+      <div class="bili-box">
+        <a class="px-btn nav-bili" href="https://space.bilibili.com/2138961136?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">进入B站主页</a>
+        <!-- 直播间开播状态：数据来自 data/live.js（计划任务每 2 分钟刷新）；整行点按直达直播间 -->
+        <div class="live-wrap">
+          <a class="live-line" id="liveLine" href="https://live.bilibili.com/1727074031" target="_blank" rel="noopener" title="点我直达啾啾的直播间">
+            <span class="live-dot" aria-hidden="true"></span><span id="liveLabel">状态获取中…</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 侧边栏：三页切换导航（图标悬停弹出放大文字） ============ -->
+<nav class="sidenav" aria-label="页面切换">
+  <a class="side-btn" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
+  <a class="side-btn is-here" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
+  <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-hero reveal">
+      <span class="kicker">GAME CORNER<small>PIXEL TETRIS</small></span>
+      <h1>来！打块！</h1>
+      <p class="sub">和啾啾一起玩的像素俄罗斯方块：限时 3 分钟，堆行消分，挑战最高分！最高分记录保存在本地浏览器里。</p>
+    </div>
+
+  <div class="sec-title reveal" id="game">
+    <h2><span class="no">GAME</span>俄罗斯方块</h2>  </div>
+  <div class="pixel-card game-panel reveal">
+    <div class="game-wrap">
+      <div class="game-stage">
+        <canvas id="tetris" width="240" height="480" aria-label="俄罗斯方块游戏盘"></canvas>
+        <div class="game-overlay" id="gameOverlay">
+          <div class="ov-title" id="overlayMsg">READY?</div>
+          <button class="px-btn" id="overlayBtn" type="button">▶ 开始游戏</button>
+        </div>
+      </div>
+      <div class="vpad">
+        <button class="vbtn" data-act="left" type="button" aria-label="左移">◀</button>
+        <button class="vbtn" data-act="drop" type="button" aria-label="软降">▼</button>
+        <button class="vbtn" data-act="hard" type="button" aria-label="硬降">⤓</button>
+        <button class="vbtn" data-act="right" type="button" aria-label="右移">▶</button>
+        <button class="vbtn" data-act="pause" type="button" aria-label="暂停">⏸</button>
+        <button class="vbtn" data-act="reset" type="button" aria-label="重置">↺</button>
+      </div>
+      <div class="game-side">
+        <div class="side-top">
+          <div class="pixel-card hud">
+            <div class="row"><span>SCORE 得分</span><b id="score">000000</b></div>
+            <div class="row"><span>HIGH 最高</span><span class="hi-wrap"><b id="hiScore">000000</b><button class="hi-reset" id="hiReset" type="button" title="清零最高分" aria-label="清零最高分">↺</button></span></div>
+            <div class="row"><span>TIME 时间</span><b id="time">03:00</b></div>
+            <div class="row"><span>LINES 行数</span><b id="lines">000</b></div>
+          </div>
+          <div class="pixel-card next-box">
+            <span>NEXT 下一块</span>
+            <canvas id="nextCanvas" width="96" height="96"></canvas>
+          </div>
+          <div class="pixel-card spd-box">
+            <span>SPD 流速</span>
+            <div class="spd-row">
+              <button class="spd-btn" data-gear="1" type="button" aria-label="流速1档">1</button>
+              <button class="spd-btn" data-gear="2" type="button" aria-label="流速2档">2</button>
+              <button class="spd-btn" data-gear="3" type="button" aria-label="流速3档">3</button>
+              <button class="spd-btn" data-gear="4" type="button" aria-label="流速4档">4</button>
+              <button class="spd-btn" data-gear="5" type="button" aria-label="流速5档">5</button>
+            </div>
+          </div>
+          <div class="game-btns">
+            <button class="px-btn" id="btnStart" type="button">⏸ 暂停</button>
+            <button class="px-btn" id="btnReset" type="button">↺ 重置</button>
+          </div>
+        </div>
+        <p class="game-hint">限时 3 分钟 · 键盘：← → 移动 · ↓ 软降 · ↑ 旋转 · 空格硬降<br>手机：游戏盘下方虚拟按键</p>
+      </div>
+    </div>
+  </div>
+  </div>
+</main>
+
+<!-- 深浅色模式切换按钮（左下角） -->
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
+  <img class="tt-sun" src="images/得意啾.png" alt=""><img class="tt-moon" src="images/龙宫礼啾.png" alt="">
+</button>
+<!-- 返回顶部飞船按钮（右下角）：悬停上下浮动，点击垂直飞出并冒出像素气泡 -->
+<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
+  <img src="images/飞船啾.png" alt="返回顶部">
+</button>
+
+<script src="js/shared.js"></script>
+<script>
+/* 俄罗斯方块（原首页 ④ 板块整体搬入，勿改动） */
+  /* ---------- 俄罗斯方块 ---------- */
+  (function(){
+    var cv = document.getElementById("tetris");
+    if(!cv) return;
+    var ctx = cv.getContext("2d");
+    var ncv = document.getElementById("nextCanvas");
+    var nctx = ncv.getContext("2d");
+    var COLS = 10, ROWS = 20, CELL = 24;
+    var SHAPES = {
+      I:[[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]],
+      O:[[1,1],[1,1]],
+      T:[[0,1,0],[1,1,1],[0,0,0]],
+      S:[[0,1,1],[1,1,0],[0,0,0]],
+      Z:[[1,1,0],[0,1,1],[0,0,0]],
+      J:[[1,0,0],[1,1,1],[0,0,0]],
+      L:[[0,0,1],[1,1,1],[0,0,0]]
+    };
+    /* 🎨 素材配置：7 种方块颜色（默认按主题色派生） */
+    var COLORS = {I:"#B0C8E8", O:"#D0D878", T:"#8C9048", S:"#9FC088", Z:"#B5583C", J:"#6C8EB0", L:"#C9A66B"};
+    var SCORE_T = [0,100,300,500,800];
+    var board, piece, next, score, lines, dropMs, acc, last;
+    var bag, running = false, paused = false, over = false;
+    /* 限时 3 分钟；流速 5 档手动选择（1 慢 → 5 快），速度全程固定不再自动加速 */
+    var TIME_LIMIT = 180000, timeLeft = TIME_LIMIT, lastSec = -1;
+    var DROP_MS = [0, 900, 680, 500, 340, 200], gear = 3;
+    function fmtTime(ms){
+      var s = Math.ceil(ms/1000), m = Math.floor(s/60);
+      s = s % 60;
+      return String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+    }
+    var $ = function(id){ return document.getElementById(id); };
+
+    function newBag(){
+      var t = ["I","O","T","S","Z","J","L"];
+      for(var i = t.length-1; i > 0; i--){
+        var j = Math.floor(Math.random()*(i+1));
+        var tmp = t[i]; t[i] = t[j]; t[j] = tmp;
+      }
+      return t;
+    }
+    function take(){ if(!bag.length) bag = newBag(); return bag.pop(); }
+    function rot(m){ return m[0].map(function(_,i){ return m.map(function(r){ return r[i]; }).reverse(); }); }
+    function spawn(type){ var m = SHAPES[type]; return { m:m, x:Math.floor((COLS-m[0].length)/2), y:0, t:type }; }
+    function collide(m,x,y){
+      for(var r=0;r<m.length;r++)for(var c=0;c<m[r].length;c++){
+        if(!m[r][c]) continue;
+        var nx = x+c, ny = y+r;
+        if(nx<0 || nx>=COLS || ny>=ROWS) return true;
+        if(ny>=0 && board[ny][nx]) return true;
+      }
+      return false;
+    }
+    function drawCell(c, px, py, color){
+      c.fillStyle = color;
+      c.fillRect(px*CELL+1, py*CELL+1, CELL-2, CELL-2);
+      c.fillStyle = "rgba(0,0,0,.28)";
+      c.fillRect(px*CELL+1, (py+1)*CELL-3, CELL-2, 2);
+      c.fillRect((px+1)*CELL-3, py*CELL+1, 2, CELL-2);
+    }
+    function draw(){
+      ctx.fillStyle = "#2A2A2A";
+      ctx.fillRect(0,0,COLS*CELL,ROWS*CELL);
+      ctx.strokeStyle = "rgba(255,255,255,.07)";
+      ctx.lineWidth = 1;
+      for(var x=1;x<COLS;x++){ ctx.beginPath(); ctx.moveTo(x*CELL+.5,0); ctx.lineTo(x*CELL+.5,ROWS*CELL); ctx.stroke(); }
+      for(var y=1;y<ROWS;y++){ ctx.beginPath(); ctx.moveTo(0,y*CELL+.5); ctx.lineTo(COLS*CELL,y*CELL+.5); ctx.stroke(); }
+      for(var r=0;r<ROWS;r++)for(var c=0;c<COLS;c++) if(board[r][c]) drawCell(ctx, c, r, COLORS[board[r][c]]);
+      if(piece && !over) for(var pr=0;pr<piece.m.length;pr++)for(var pc=0;pc<piece.m[pr].length;pc++)
+        if(piece.m[pr][pc] && piece.y+pr >= 0) drawCell(ctx, piece.x+pc, piece.y+pr, COLORS[piece.t]);
+    }
+    function drawNext(){
+      nctx.fillStyle = "#2A2A2A";
+      nctx.fillRect(0,0,96,96);
+      if(!next) return;
+      var m = next.m, w = m[0].length, h = m.length;
+      var ox = (4-w)*12 + 12, oy = (4-h)*12 + 12;
+      for(var r=0;r<h;r++)for(var c=0;c<w;c++) if(m[r][c]) drawCell(nctx, Math.floor((ox+c*CELL)/CELL), Math.floor((oy+r*CELL)/CELL), COLORS[next.t]);
+    }
+    /* 最高分只存本地浏览器（localStorage），绝不上传到任何服务器；
+       带简单校验码：有人直接改数字会被识别，按 0 分处理 */
+    var HS_KEY = "chu2u-highscore", HS_SECRET = "chu2u-tetris-2026";
+    function hsHash(s){
+      var h = 2166136261;
+      for(var i=0;i<s.length;i++){ h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
+      return (h >>> 0).toString(16);
+    }
+    function saveHigh(v){
+      var salt = Math.random().toString(36).slice(2,10);
+      try{ localStorage.setItem(HS_KEY, JSON.stringify({ v: v, s: salt, h: hsHash(v + "|" + salt + "|" + HS_SECRET) })); }catch(e){}
+    }
+    function loadHigh(){
+      try{
+        var raw = localStorage.getItem(HS_KEY);
+        if(!raw) return 0;
+        var d = JSON.parse(raw);
+        return (typeof d.v === "number" && d.s && d.h === hsHash(d.v + "|" + d.s + "|" + HS_SECRET)) ? d.v : 0;
+      }catch(e){ return 0; }
+    }
+    function resetHigh(){
+      try{ localStorage.removeItem(HS_KEY); }catch(e){}
+      updateHud();
+    }
+    function updateHud(){
+      $("score").textContent = String(score).padStart(6,"0");
+      $("hiScore").textContent = String(loadHigh()).padStart(6,"0");
+      $("time").textContent = fmtTime(timeLeft);
+      $("lines").textContent = String(lines).padStart(3,"0");
+    }
+    function showOverlay(title, msg, btnText){
+      $("overlayMsg").textContent = title;
+      $("overlayBtn").textContent = btnText;
+      var ov = $("gameOverlay");
+      ov.classList.remove("hidden");
+      ov.querySelector(".ov-msg") && ov.querySelector(".ov-msg").remove();
+      if(msg){
+        var p = document.createElement("div");
+        p.className = "ov-msg";
+        p.textContent = msg;
+        ov.insertBefore(p, $("overlayBtn"));
+      }
+    }
+    function hideOverlay(){ $("gameOverlay").classList.add("hidden"); }
+    function gameOver(title, prefix){
+      over = true; running = false;
+      var hi = loadHigh();
+      var isRecord = score > hi;
+      if(isRecord){ saveHigh(score); }
+      showOverlay(title || "GAME OVER", (prefix || "") + "得分 " + score + (isRecord ? " · 新纪录!" : ""), "▶ 再来一局");
+      $("btnStart").textContent = "▶ 开始";
+    }
+    /* 3 分钟到点：直接结算 */
+    function timeUp(){ gameOver("TIME UP!", "限时 3 分钟结束 · "); }
+    function start(){
+      board = []; for(var i=0;i<ROWS;i++) board.push(new Array(COLS).fill(0));
+      bag = []; score = 0; lines = 0; timeLeft = TIME_LIMIT; lastSec = -1;
+      dropMs = DROP_MS[gear]; acc = 0; over = false;
+      running = true; paused = false;
+      next = spawn(take()); piece = spawn(take());
+      updateHud(); drawNext(); hideOverlay();
+      $("btnStart").textContent = "⏸ 暂停";
+    }
+    function lock(){
+      for(var r=0;r<piece.m.length;r++)for(var c=0;c<piece.m[r].length;c++){
+        if(!piece.m[r][c]) continue;
+        var ny = piece.y+r, nx = piece.x+c;
+        if(ny < 0){ gameOver(); return; }
+        board[ny][nx] = piece.t;
+      }
+      var cleared = 0;
+      for(var row=ROWS-1; row>=0; row--){
+        if(board[row].every(function(v){ return v; })){
+          board.splice(row,1); board.unshift(new Array(COLS).fill(0));
+          cleared++; row++;
+        }
+      }
+      if(cleared){
+        score += SCORE_T[cleared] * gear;
+        lines += cleared;
+        updateHud();
+      }
+      piece = next; next = spawn(take());
+      if(collide(piece.m, piece.x, piece.y)) gameOver();
+      drawNext();
+    }
+    function move(dx){ if(!running || paused || over) return; if(!collide(piece.m, piece.x+dx, piece.y)){ piece.x += dx; } }
+    function rotate(){
+      if(!running || paused || over) return;
+      var nm = rot(piece.m);
+      var kicks = [0,-1,1,-2,2];
+      for(var i=0;i<kicks.length;i++){
+        if(!collide(nm, piece.x+kicks[i], piece.y)){ piece.m = nm; piece.x += kicks[i]; return; }
+      }
+    }
+    function softDrop(){ if(!running || paused || over) return; if(!collide(piece.m, piece.x, piece.y+1)){ piece.y++; acc = 0; } }
+    function hardDrop(){
+      if(!running || paused || over) return;
+      while(!collide(piece.m, piece.x, piece.y+1)) piece.y++;
+      score += 2;
+      updateHud();
+      lock(); draw();
+    }
+    /* 键盘（编辑计划表格时忽略） */
+    window.addEventListener("keydown", function(e){
+      if(e.target && e.target.isContentEditable) return;
+      if(!running && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); start(); return; }
+      if(paused && e.key === "Enter"){ e.preventDefault(); $("overlayBtn").click(); return; }
+      if(e.key === "ArrowLeft"){ e.preventDefault(); move(-1); }
+      else if(e.key === "ArrowRight"){ e.preventDefault(); move(1); }
+      else if(e.key === "ArrowDown"){ e.preventDefault(); softDrop(); }
+      else if(e.key === "ArrowUp"){ e.preventDefault(); rotate(); }
+      else if(e.key === " "){ e.preventDefault(); hardDrop(); }
+    });
+    /* 虚拟按键 */
+    document.querySelectorAll(".vbtn").forEach(function(b){
+      b.addEventListener("pointerdown", function(e){
+        e.preventDefault();
+        var act = b.dataset.act;
+        if(act === "left") move(-1);
+        else if(act === "right") move(1);
+        else if(act === "rotate") rotate();
+        else if(act === "drop") softDrop();
+        else if(act === "hard") hardDrop();
+        else if(act === "pause") $("btnStart").click();
+        else if(act === "reset") $("btnReset").click();
+      });
+    });
+    /* 遮罩按钮：暂停中=继续，否则开新一局 */
+    $("overlayBtn").addEventListener("click", function(){
+      if(paused){ paused = false; $("btnStart").textContent = "⏸ 暂停"; hideOverlay(); return; }
+      start();
+    });
+    $("btnStart").addEventListener("click", function(){
+      if(!running){ start(); return; }
+      paused = !paused;
+      $("btnStart").textContent = paused ? "▶ 继续" : "⏸ 暂停";
+      if(paused) showOverlay("PAUSED", "游戏已暂停", "▶ 继续");
+      else hideOverlay();
+    });
+    /* 重置：随时开新一局（沿用当前流速档，计时重新从 3:00 开始） */
+    $("btnReset").addEventListener("click", start);
+    /* 最高分清零（换人玩/共用电脑时方便） */
+    $("hiReset").addEventListener("click", function(){
+      if(confirm("确定把本地最高分清零吗？")){ resetHigh(); }
+    });
+    /* 流速 5 档：开局前或游戏中随时切换，立即生效 */
+    document.querySelectorAll(".spd-btn").forEach(function(b){
+      b.addEventListener("click", function(){
+        gear = parseInt(b.dataset.gear,10);
+        dropMs = DROP_MS[gear];
+        acc = 0;
+        document.querySelectorAll(".spd-btn").forEach(function(x){ x.classList.toggle("active", x === b); });
+      });
+    });
+    document.querySelector(".spd-btn[data-gear='3']").classList.add("active");
+    /* 离开游戏区自动暂停 */
+    if("IntersectionObserver" in window){
+      var gameSec = document.getElementById("game");
+      new IntersectionObserver(function(es){
+        es.forEach(function(en){
+          if(!en.isIntersecting && running && !over && !paused){
+            paused = true;
+            $("btnStart").textContent = "▶ 继续";
+            showOverlay("PAUSED", "离开游戏区 · 已自动暂停", "▶ 继续");
+          }
+        });
+      }, {threshold:.25}).observe(gameSec);
+    }
+    /* 主循环 */
+    function loop(t){
+      requestAnimationFrame(loop);
+      if(!last) last = t;
+      var dt = t - last; last = t;
+      if(!running || paused || over) return;
+      acc += dt;
+      if(acc >= dropMs){
+        acc = 0;
+        if(!collide(piece.m, piece.x, piece.y+1)) piece.y++;
+        else lock();
+      }
+      timeLeft -= dt;
+      if(timeLeft <= 0){ timeLeft = 0; updateHud(); timeUp(); }
+      var sec = Math.ceil(timeLeft/1000);
+      if(sec !== lastSec){ lastSec = sec; updateHud(); }
+      draw();
+    }
+    /* 初始化 */
+    board = []; for(var i=0;i<ROWS;i++) board.push(new Array(COLS).fill(0));
+    bag = []; next = spawn(take()); piece = spawn(take());
+    updateHud(); drawNext(); draw();
+    showOverlay("READY?", "限时 3 分钟挑战 · 流速可选 1-5 档", "▶ 开始游戏");
+    requestAnimationFrame(function(t){ last = t; loop(t); });
+  })();
+</script>
+<!-- ============ 底部滚动弹幕（黑底 + 应援色，单击复制） ============ -->
+<div class="danmu-bar" id="danmuBar" role="button" tabindex="0" title="单击复制" aria-label="单击复制这段文字">
+  <div class="danmu-track" id="danmuTrack"></div>
+</div>
+<script>
+(function(){
+  var TEXT = "aHR0cHM6Ly9hcHAubm90aW9uLmNvbS9wLzNhMDEyNWQxNDM4ODgwZDNiZjVhZWRhZGRhZDNmNGE0P3NvdXJjZT1jb3B5X2xpbms=";
+  var bar = document.getElementById("danmuBar");
+  var track = document.getElementById("danmuTrack");
+  if(!bar || !track) return;
+  var unit = TEXT + "　★　";
+  function fill(n){
+    var buf = [];
+    for(var i = 0; i < n; i++) buf.push(unit);
+    track.textContent = buf.join("");
+    return n;
+  }
+  function layout(){
+    // 先铺一遍估算份数，量出「一份」的真实宽度
+    var times = fill(Math.max(3, Math.ceil((window.innerWidth * 1.8) / (unit.length * 8)) + 1));
+    var unitW = track.scrollWidth / times;
+    if(!(unitW > 0)) return;
+    // 份数要够：左移一份后，剩下的仍能盖满视口，否则循环处会露空
+    var need = Math.ceil(window.innerWidth / unitW) + 1;
+    if(need > times){
+      times = fill(need);
+      unitW = track.scrollWidth / times;
+    }
+    // 每轮只左移「一份」的宽度 → 下一份正好补到同一位置，无缝无限循环
+    track.style.setProperty("--danmu-shift", unitW.toFixed(1) + "px");
+    // 1.2 倍速 = 约 66px/秒（2026-09-13 用户定）
+    track.style.animationDuration = Math.max(6, unitW / 66).toFixed(1) + "s";
+  }
+  layout();
+  window.addEventListener("resize", layout);
+  function feedback(ok){
+    bar.classList.add("done");
+    bar.setAttribute("title", ok ? "已复制 ✓" : "复制失败，请手动选中");
+    clearTimeout(bar._t);
+    bar._t = setTimeout(function(){
+      bar.classList.remove("done");
+      bar.setAttribute("title", "单击复制");
+    }, 1300);
+  }
+  function syncCopy(){
+    try{
+      var ta = document.createElement("textarea");
+      ta.value = TEXT; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta); return ok;
+    }catch(e){ return false; }
+  }
+  function copy(){
+    // 先给反馈再真正复制：同步 execCommand 在真实点击下最可靠，
+    // 失败才退到异步剪贴板 API（它返回 Promise，某些环境会一直挂着不结算——
+    // 那样点了就没任何反应，所以不能把它当首选）
+    feedback(true);
+    if(syncCopy()) return;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(TEXT).then(null, function(){ feedback(false); });
+    } else { feedback(false); }
+  }
+  bar.addEventListener("click", copy);
+  bar.addEventListener("keydown", function(e){
+    if(e.key === "Enter" || e.key === " "){ e.preventDefault(); copy(); }
+  });
+})();
+</script>
+<!-- ============ 导航栏像素时钟（时区存本地） ============ -->
+<script>
+(function(){
+  var el = document.getElementById("pixelClock");
+  if(!el) return;
+  var tEl = document.getElementById("pcTime"),
+      dEl = document.getElementById("pcDate"),
+      sEl = document.getElementById("pcTz");
+  /* 时区候选：值用 IANA 名称，交给 Intl 换算（不用手算偏移，夏令时也自动对） */
+  var ZONES = [
+    ["local", "本地时间"],
+    ["Asia/Shanghai", "北京 UTC+8"],
+    ["Asia/Tokyo", "东京 UTC+9"],
+    ["Asia/Seoul", "首尔 UTC+9"],
+    ["Asia/Singapore", "新加坡 UTC+8"],
+    ["Europe/London", "伦敦"],
+    ["Europe/Paris", "巴黎·柏林"],
+    ["Europe/Moscow", "莫斯科"],
+    ["America/New_York", "纽约"],
+    ["America/Los_Angeles", "洛杉矶"],
+    ["UTC", "UTC 世界时"]
+  ];
+  ZONES.forEach(function(z){
+    var o = document.createElement("option");
+    o.value = z[0]; o.textContent = z[1];
+    sEl.appendChild(o);
+  });
+  var saved = "local";
+  try{ saved = localStorage.getItem("chu2u-clock-tz") || "local"; }catch(e){}
+  var ok = false;
+  for(var i = 0; i < sEl.options.length; i++){ if(sEl.options[i].value === saved) ok = true; }
+  sEl.value = ok ? saved : "local";
+  sEl.addEventListener("change", function(){
+    try{ localStorage.setItem("chu2u-clock-tz", sEl.value); }catch(e){}
+    tick();
+  });
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  var cachedFmt = null, cachedTz = "";
+  function tick(){
+    var tz = sEl.value, now = new Date();
+    if(tz === "local"){
+      tEl.textContent = p2(now.getHours()) + ":" + p2(now.getMinutes()) + ":" + p2(now.getSeconds());
+      dEl.textContent = now.getFullYear() + "." + p2(now.getMonth() + 1) + "." + p2(now.getDate()) +
+                        " 周" + "日一二三四五六".charAt(now.getDay());
+      return;
+    }
+    try{
+      if(tz !== cachedTz){
+        cachedFmt = new Intl.DateTimeFormat("zh-CN", {
+          timeZone: tz, hour12: false, year: "numeric", month: "2-digit", day: "2-digit",
+          hour: "2-digit", minute: "2-digit", second: "2-digit", weekday: "short"
+        });
+        cachedTz = tz;
+      }
+      var o = {};
+      cachedFmt.formatToParts(now).forEach(function(x){ o[x.type] = x.value; });
+      var hh = (o.hour === "24" ? "00" : o.hour);   /* 有的环境午夜会返回 24 */
+      tEl.textContent = hh + ":" + o.minute + ":" + o.second;
+      dEl.textContent = o.year + "." + o.month + "." + o.day + " " + o.weekday;
+    }catch(e){
+      tEl.textContent = "--:--:--";
+      dEl.textContent = "时区不可用";
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+<!-- 顶栏实际高度写进 --topbar-h，供栏目标题的滚动偏移用（顶栏高度随断点变化） -->
+<script>
+(function(){
+  function sync(){
+    var tb = document.getElementById("topbar");
+    if(!tb) return;
+    document.documentElement.style.setProperty("--topbar-h",
+      Math.round(tb.getBoundingClientRect().height) + "px");
+  }
+  sync();
+  window.addEventListener("load", sync);
+  window.addEventListener("resize", sync);
+  if(window.ResizeObserver){ try{ new ResizeObserver(sync).observe(document.getElementById("topbar")); }catch(e){} }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+/* ============================================================
+   羽啾chu2u · 猫猫宇宙论特辑！数据（每周一自动更新维护）
+   ============================================================
+   条目结构（新条目在前，数组开头 = 最新）：
+   { kind:"video|art|meme", uid:"发布者BID", link:"B站视频/动态链接",
+     cover:"本地预览图（images/nyan/，统一 4:3 672x504）",
+     t:"标题", d:"发布者昵称", date:"发布日期（XXXX年X月X日）" }
+   kind: video=二创视频（歌切/手书/二创游戏等创作类），art=绘画二创，
+         meme=表情包（以 GIF 图帖为主）
+
+   规则：
+   - 本栏目只从 B 站话题「猫猫宇宙论」(topic_id=1345548) 抓取，
+     展示话题里的优秀二创：绘画、二创视频、表情包。
+   - 不收录：直播切片/回放（标题含 切片/直播/联动/回放 或判定为直播剪辑）、
+     风景照/纯壁纸、AI 绘图（标题/简介含 AI 字样）、羽啾本人（mid 2138961136）
+     发的动态；《人是猫》这类创意二创归入视频类。
+   - 屏蔽名单（两位 B 站用户）与观测记录同一份，加密存在 index.html 里，
+     页面运行时解密后自动过滤；这里的条目 uid 不要收录那两位用户。
+   - 本人账号的 uid 字段一律写密文 "aWJqYm1vamI="（不写明文），
+     与观测记录同一份加密。
+   - 收录视频类前尽量抽 2~3 帧目检，确认不是直播录播素材。
+   - 只收质量高的作品（人工把关「优秀」）；新条目前插到数组开头，
+     总条数上限 48，超出删掉最旧条目。
+   - 预览图本地缓存在 chu2u/site/images/nyan/，统一 4:3（672x504）：
+     按 4:3 中心裁切后 Pillow LANCZOS 缩放，图片不拉伸变形。 */
+window.CHU2U_CAT_UPDATED = "2026-09-12";
+window.CHU2U_CAT = [
+  {kind:"video", uid:"3747549391359135", link:"https://www.bilibili.com/video/BV189Y86WEge/", cover:"images/nyan/v3.jpg",
+   t:"羽啾只是在伸出手指", d:"核对插座电量", date:"2026年9月10日"},
+  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245748516848926727", cover:"images/nyan/a2.jpg",
+   t:"羽啾比心🤍", d:"海圻圻圻", date:"2026年9月9日"},
+  {kind:"video", uid:"2034200085", link:"https://www.bilibili.com/video/BV11bbT6qEYz/", cover:"images/nyan/v4.jpg",
+   t:"！？合成大羽啾？！", d:"老美のNASA", date:"2026年9月8日"},
+  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245610833082318850", cover:"images/nyan/a1.jpg",
+   t:"萌萌的q版羽啾", d:"海圻圻圻", date:"2026年9月8日"},
+  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245313071570747392", cover:"images/nyan/a3.jpg",
+   t:"恭喜羽啾宝宝满月！", d:"海圻圻圻", date:"2026年9月7日"},
+  {kind:"video", uid:"3546957431704396", link:"https://www.bilibili.com/video/BV1myb76TEMx/", cover:"images/nyan/v1.jpg",
+   t:"【羽啾chu2u】人是猫？！", d:"yuyu_925", date:"2026年9月6日"},
+  {kind:"art", uid:"3745037691129660", link:"https://www.bilibili.com/opus/1242707430901547027", cover:"images/nyan/a4.jpg",
+   t:"小画了下啾宝大头", d:"绫梓二号机", date:"2026年8月31日"},
+  {kind:"meme", uid:"32959784", link:"https://www.bilibili.com/opus/1241314581585854466", cover:"images/nyan/m2.jpg",
+   t:"约了表情包发一下", d:"霜枫醉弈", date:"2026年8月28日"},
+  {kind:"art", uid:"15656417", link:"https://www.bilibili.com/opus/1241104776742043698", cover:"images/nyan/a5.jpg",
+   t:"羽啾本体被我找到了", d:"贰三3三", date:"2026年8月27日"},
+  {kind:"art", uid:"299513326", link:"https://www.bilibili.com/opus/1239675085193740306", cover:"images/nyan/a7.jpg",
+   t:"锡纸帽击穿", d:"猫头虫尾", date:"2026年8月23日"},
+  {kind:"video", uid:"49093035", link:"https://www.bilibili.com/video/BV1ACbi6DEHL/", cover:"images/nyan/v5.jpg",
+   t:"【小松绿|羽啾】“原来你是我最想留住的幸运”《小幸运》【虚空合唱】", d:"银河的鱼", date:"2026年8月17日"},
+  {kind:"art", uid:"3546845108242875", link:"https://www.bilibili.com/opus/1237113665495236610", cover:"images/nyan/a6.jpg",
+   t:"我说啾绿王朝了有人懂吗？", d:"小松绿智商低", date:"2026年8月16日"},
+  {kind:"meme", uid:"702229167", link:"https://www.bilibili.com/opus/1236702001475092485", cover:"images/nyan/m4.jpg",
+   t:"smoke中", d:"nakuu_骷", date:"2026年8月15日"},
+  {kind:"video", uid:"317092649", link:"https://www.bilibili.com/video/BV1j6uf6WE8R/", cover:"images/nyan/v2.jpg",
+   t:"【羽啾chu2u】Bad Apple自制动画", d:"此间风饮雪", date:"2026年8月14日"},
+  {kind:"meme", uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1235381569597734931", cover:"images/nyan/m3.jpg",
+   t:"请大家多多支持羽啾chuuuuuu!!!", d:"_可乐乐乐乐乐", date:"2026年8月12日"},
+  {kind:"meme", uid:"490589965", link:"https://www.bilibili.com/opus/1235244444203089937", cover:"images/nyan/m1.jpg",
+   t:"羽啾EmoteLab表情包", d:"芋泥咕咕茶", date:"2026年8月11日"}
+];
