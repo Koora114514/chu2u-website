@@ -111,51 +111,32 @@
     els.forEach(function(e){ io.observe(e); });
   })();
 
-  /* ---------- 直播间开播状态监控（正式网站走 /api/live 由服务器实时代问；本地 file:// 退回读 data/live.js；超 6 分钟未更新视为不可用） ---------- */
+  /* ---------- 直播间开播状态监控（读 data/live.js：本机计划任务每 2 分钟刷新，状态变化时由「自动上线」推送到线上。
+       数据新鲜就照实显示；超过 12 小时没更新则一律显示「未开播」——宁可保守，也不谎报直播中） ---------- */
   (function(){
     var line = document.getElementById("liveLine");
     if(!line) return;
     var label = document.getElementById("liveLabel");
-    function stamp(){                       // 接口刚答上来 = 数据就是此刻的，时间戳用访客本地时间打，省得对时区
-      var d = new Date(), p = function(n){ return (n < 10 ? "0" : "") + n; };
-      return d.getFullYear() + "-" + p(d.getMonth()+1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes()) + ":" + p(d.getSeconds());
-    }
     function apply(L){
-      var stale = true;
+      var fresh = false;
       if(L && L.checked){
-        try{ var tt = new Date(String(L.checked).replace(" ", "T")).getTime(); stale = (Date.now() - tt) > 6 * 60 * 1000; }catch(e){}
+        try{ var tt = new Date(String(L.checked).replace(" ", "T")).getTime(); fresh = (Date.now() - tt) <= 12 * 60 * 60 * 1000; }catch(e){}
       }
+      var live = !!(L && L.live && fresh);   // 数据过期时最多只敢说「未开播」，绝不说还在直播
       line.classList.remove("is-live", "is-offline");
-      if(!L || stale){
-        line.classList.add("is-offline");
-        label.textContent = "状态暂不可用";
-        line.title = "直播间状态还没拿到（稍等会自动重试）";
-        return;
-      }
-      var live = !!L.live;
       line.classList.add(live ? "is-live" : "is-offline");
       label.textContent = live ? ("直播中 · " + (L.title || "")) : "未开播";
       line.title = live ? "啾啾正在直播！点我直达直播间" : "点我直达啾啾的直播间";
     }
-    function fromFile(){                    // 退路：读本地 data/live.js（本地双击打开、或接口暂时答不上来时走这条）
+    function inject(){
       var s = document.createElement("script");
       s.src = "data/live.js?v=" + Date.now();
       s.onload = function(){ if(window.CHU2U_LIVE) apply(window.CHU2U_LIVE); };
       s.onerror = function(){ apply(null); };
       document.head.appendChild(s);
     }
-    function refresh(){
-      if(location.protocol === "file:" || !window.fetch){ fromFile(); return; }
-      fetch("api/live", {cache:"no-store"})
-        .then(function(r){ return r.ok ? r.json() : null; })
-        .then(function(j){
-          if(j && typeof j.live !== "undefined"){ apply({live:j.live, title:j.title, checked:stamp()}); }
-          else { fromFile(); }
-        })
-        .catch(function(){ fromFile(); });
-    }
     if(window.CHU2U_LIVE) apply(window.CHU2U_LIVE);
-    refresh();
-    setInterval(refresh, 60000);
+    inject();
+    setInterval(inject, 60000);
   })();
 })();
