@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-13 20:12:50   共 87 首（另有手写占位 0 条）
+// 生成时间：2026-09-14 00:28:47   共 87 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -60,9 +60,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/481454451.m4a",
+  "cover": "images/song/481454451.jpg",
+  "audioStatus": "ok",
+  "dur": 261.7
  },
  {
   "key": "620726933",
@@ -93,9 +94,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/620726933.m4a",
+  "cover": "images/song/620726933.jpg",
+  "audioStatus": "ok",
+  "dur": 192.4
  },
  {
   "key": "481322592",
@@ -159,9 +161,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/619979076.m4a",
+  "cover": "images/song/619979076.jpg",
+  "audioStatus": "ok",
+  "dur": 275.9
  },
  {
   "key": "456120608",
@@ -192,9 +195,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/456120608.m4a",
+  "cover": "images/song/456120608.jpg",
+  "audioStatus": "ok",
+  "dur": 244.2
  },
  {
   "key": "77982174",
@@ -225,9 +229,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/77982174.m4a",
+  "cover": "images/song/77982174.jpg",
+  "audioStatus": "ok",
+  "dur": 183.8
  },
  {
   "key": "827609207",
@@ -258,9 +263,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/827609207.m4a",
+  "cover": "images/song/827609207.jpg",
+  "audioStatus": "ok",
+  "dur": 209.1
  },
  {
   "key": "54629931",
@@ -324,9 +330,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/623160006.m4a",
+  "cover": "images/song/623160006.jpg",
+  "audioStatus": "ok",
+  "dur": 219.1
  },
  {
   "key": "714779054",
@@ -357,9 +364,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/714779054.m4a",
+  "cover": "images/song/714779054.jpg",
+  "audioStatus": "ok",
+  "dur": 206.1
  },
  {
   "key": "713035738",
@@ -650,9 +658,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=4"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/616467694.m4a",
+  "cover": "images/song/616467694.jpg",
+  "audioStatus": "ok",
+  "dur": 135.6
  },
  {
   "key": "896484099",
@@ -726,9 +735,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=5"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/565901209.m4a",
+  "cover": "images/song/565901209.jpg",
+  "audioStatus": "ok",
+  "dur": 202.3
  },
  {
   "key": "313675447",
@@ -792,9 +802,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/896206970.m4a",
+  "cover": "images/song/896206970.jpg",
+  "audioStatus": "ok",
+  "dur": 275.6
  },
  {
   "key": "869988140",
@@ -825,9 +836,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/869988140.m4a",
+  "cover": "images/song/869988140.jpg",
+  "audioStatus": "ok",
+  "dur": 26.8
  },
  {
   "key": "480448829",
@@ -858,9 +870,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/480448829.m4a",
+  "cover": "images/song/480448829.jpg",
+  "audioStatus": "ok",
+  "dur": 289.7
  },
  {
   "key": "804260475",
@@ -934,9 +947,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/531647731.m4a",
+  "cover": "images/song/531647731.jpg",
+  "audioStatus": "ok",
+  "dur": 171.0
  },
  {
   "key": "604675219",
@@ -977,9 +991,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=15"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/604675219.m4a",
+  "cover": "images/song/604675219.jpg",
+  "audioStatus": "ok",
+  "dur": 154.3
  },
  {
   "key": "303578234",
@@ -1010,9 +1025,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/303578234.m4a",
+  "cover": "images/song/303578234.jpg",
+  "audioStatus": "ok",
+  "dur": 91.4
  },
  {
   "key": "650468955",
@@ -1125,9 +1141,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/861843252.m4a",
+  "cover": "images/song/861843252.jpg",
+  "audioStatus": "ok",
+  "dur": 124.8
  },
  {
   "key": "648650875",
@@ -1201,9 +1218,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1ZhtS6GEG7"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/835399392.m4a",
+  "cover": "images/song/835399392.jpg",
+  "audioStatus": "ok",
+  "dur": 157.4
  },
  {
   "key": "490248749",
@@ -1277,9 +1295,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=4"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/461523873.m4a",
+  "cover": "images/song/461523873.jpg",
+  "audioStatus": "ok",
+  "dur": 185.1
  },
  {
   "key": "65338245",
@@ -1310,9 +1329,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/65338245.m4a",
+  "cover": "images/song/65338245.jpg",
+  "audioStatus": "ok",
+  "dur": 360.5
  },
  {
   "key": "595959840",
@@ -1343,9 +1363,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/595959840.m4a",
+  "cover": "images/song/595959840.jpg",
+  "audioStatus": "ok",
+  "dur": 273.4
  },
  {
   "key": "481323686",
@@ -1376,9 +1397,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/481323686.m4a",
+  "cover": "images/song/481323686.jpg",
+  "audioStatus": "ok",
+  "dur": 269.5
  },
  {
   "key": "237044391",
@@ -1440,9 +1462,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/660336982.m4a",
+  "cover": "images/song/660336982.jpg",
+  "audioStatus": "ok",
+  "dur": 264.2
  },
  {
   "key": "686305943",
@@ -1481,9 +1504,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=10"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/686305943.m4a",
+  "cover": "images/song/686305943.jpg",
+  "audioStatus": "ok",
+  "dur": 270.9
  },
  {
   "key": "664459294",
@@ -1512,9 +1536,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/664459294.m4a",
+  "cover": "images/song/664459294.jpg",
+  "audioStatus": "ok",
+  "dur": 207.1
  },
  {
   "key": "528878171",
@@ -1545,9 +1570,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/528878171.m4a",
+  "cover": "images/song/528878171.jpg",
+  "audioStatus": "ok",
+  "dur": 268.3
  },
  {
   "key": "339731574",
@@ -1578,9 +1604,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/339731574.m4a",
+  "cover": "images/song/339731574.jpg",
+  "audioStatus": "ok",
+  "dur": 203.4
  },
  {
   "key": "78017880",
@@ -1611,9 +1638,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/78017880.m4a",
+  "cover": "images/song/78017880.jpg",
+  "audioStatus": "ok",
+  "dur": 210.4
  },
  {
   "key": "158244061",
@@ -2163,9 +2191,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/858010707.m4a",
+  "cover": "images/song/858010707.jpg",
+  "audioStatus": "ok",
+  "dur": 271.6
  },
  {
   "key": "499194794",
@@ -2196,9 +2225,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/499194794.m4a",
+  "cover": "images/song/499194794.jpg",
+  "audioStatus": "ok",
+  "dur": 245.0
  },
  {
   "key": "830762158",
@@ -2229,9 +2259,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/830762158.m4a",
+  "cover": "images/song/830762158.jpg",
+  "audioStatus": "ok",
+  "dur": 153.2
  },
  {
   "key": "322223782",
@@ -2393,9 +2424,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/461523881.m4a",
+  "cover": "images/song/461523881.jpg",
+  "audioStatus": "ok",
+  "dur": 217.8
  },
  {
   "key": "319857015",
@@ -2434,9 +2466,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/319857015.m4a",
+  "cover": "images/song/319857015.jpg",
+  "audioStatus": "ok",
+  "dur": 344.4
  },
  {
   "key": "157498072",
