@@ -1,0 +1,40 @@
+# 【临时测试】三个每周自动更新功能真正用到的接口，在 GitHub 服务器上能不能访问
+# 测完即删。结果写进 bili-test-result.txt 并提交回来（不用 token 就能读）。
+name: bili-reach-test
+on: push
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 逐个接口探测
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          REF="https://www.bilibili.com/"
+          probe() {
+            name="$1"; url="$2"
+            code=$(curl -s -o /tmp/b.txt -w "%{http_code}" --max-time 25 -H "User-Agent: $UA" -H "Referer: $REF" "$url" || echo "000")
+            head=$(head -c 90 /tmp/b.txt | tr '\n' ' ')
+            echo "$name | HTTP=$code | $head" >> bili-test-result.txt
+          }
+          : > bili-test-result.txt
+          echo "时间(UTC): $(date -u '+%Y-%m-%d %H:%M:%S')  【GitHub 服务器视角】" >> bili-test-result.txt
+          probe "①观测记录-搜索投稿" "https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=%E7%BE%BD%E5%95%BEchu2u"
+          probe "②观测记录-稿件详情" "https://api.bilibili.com/x/web-interface/view?bvid=BV1Mwt36UE7D"
+          probe "③观测记录-标签"     "https://api.bilibili.com/x/tag/archive/tags?bvid=BV1Mwt36UE7D"
+          probe "④猫猫宇宙论-话题流" "https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/topic?topic_id=1345548&page=1"
+          probe "⑤猫猫宇宙论-空间动态" "https://api.bilibili.com/x/polymer/web-dynamic/v1/feed/space?host_mid=2138961136"
+          probe "⑥直播状态(对照)"    "https://api.live.bilibili.com/room/v1/Room/get_info?room_id=1727074031"
+          cat bili-test-result.txt
+
+      - name: 提交结果
+        run: |
+          git config user.name "chu2u-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add bili-test-result.txt
+          git commit -m "接口探测结果" || echo "无变化"
+          git push
