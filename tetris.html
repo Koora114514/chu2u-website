@@ -100,6 +100,7 @@
         <button class="vbtn" data-act="right" type="button" aria-label="右移">▶</button>
         <button class="vbtn" data-act="pause" type="button" aria-label="暂停">⏸</button>
         <button class="vbtn" data-act="reset" type="button" aria-label="重置">↺</button>
+        <button class="vbtn" data-act="rotate" type="button" aria-label="旋转" title="旋转">↻</button>
       </div>
       <div class="game-side">
         <div class="side-top">
@@ -167,7 +168,9 @@
     /* 🎨 素材配置：7 种方块颜色（默认按主题色派生） */
     var COLORS = {I:"#B0C8E8", O:"#D0D878", T:"#8C9048", S:"#9FC088", Z:"#B5583C", J:"#6C8EB0", L:"#C9A66B"};
     var SCORE_T = [0,100,300,500,800];
-    var board, piece, next, score, lines, dropMs, acc, last;
+    /* score / lines 必须给初值：它们只在 start() 里被赋值，不给初值的话
+       刚打开页面（还没点开始）计分板会直接显示 "undefined"（2026-09-14 实测发现） */
+    var board, piece, next, score = 0, lines = 0, dropMs, acc, last;
     var bag, running = false, paused = false, over = false;
     /* 限时 3 分钟；流速 5 档手动选择（1 慢 → 5 快），速度全程固定不再自动加速 */
     var TIME_LIMIT = 180000, timeLeft = TIME_LIMIT, lastSec = -1;

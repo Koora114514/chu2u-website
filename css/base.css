@@ -138,11 +138,6 @@ section[id]{scroll-margin-top:76px}
   position:absolute;left:0;right:0;top:calc(50% + 132px);
   display:flex;flex-direction:column;align-items:center;gap:18px;
 }
-@media(max-width:480px){#splash .splash-word{font-size:36px}#splash .splash-sub{letter-spacing:3px}}
-@media(max-height:620px){
-  #splash .splash-stage{top:44%;margin-top:-104px}
-  #splash .splash-text{top:calc(44% + 118px);gap:12px}
-}
 #splash .splash-word{font-size:60px;letter-spacing:4px;color:#fff;display:flex;gap:6px}
 #splash .splash-word span{opacity:0;animation:pxShow .25s steps(2) forwards}
 #splash .splash-sub{font-size:24px;letter-spacing:4px;color:var(--olive)}
@@ -156,6 +151,14 @@ section[id]{scroll-margin-top:76px}
   font-size:12px;padding:6px 14px;
 }
 #splash .splash-skip:hover{border-color:var(--olive);color:var(--olive)}
+/* 窄屏/矮屏适配：**必须写在基础规则之后**——CSS 是「后写的赢」，
+   放前面会被上面的 font-size:60px 盖掉（2026-09-14 实测踩坑：手机上开屏标题
+   一直是桌面尺寸 60px，把「羽啾chu2u」撑出屏幕右边） */
+@media(max-width:480px){#splash .splash-word{font-size:36px}#splash .splash-sub{letter-spacing:3px}}
+@media(max-height:620px){
+  #splash .splash-stage{top:44%;margin-top:-104px}
+  #splash .splash-text{top:calc(44% + 118px);gap:12px}
+}
 
 /* ---------- 顶部导航（像素任务栏） ---------- */
 .topbar{
@@ -549,8 +552,13 @@ body.dark .spd-btn.active{background:var(--olive-deep);color:#10102a}
 .game-hint{font-size:12px;color:var(--ink-soft);line-height:1.9}
 /* 虚拟按键：DOM 在游戏盘和侧栏之间——移动端(单列)自动落在游戏盘正下方；宽屏触屏(平板)横跨两列显示在最下方 */
 /* 2026-09-12/13 用户定：6 键布局=上行 左下右强降 四键、下行 暂停重置 两键（各跨 2 格，整体居中）；间距 12px；灰色按键 */
-.vpad{display:none;grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,1fr);gap:12px;max-width:400px;margin:0 auto}
+/* width:100% 必须写：父网格有 justify-items:center，不写的话整块会被压成「内容宽度」，
+   四个按键各只剩 30px 宽（2026-09-14 实测踩坑，手机上根本点不准） */
+.vpad{display:none;grid-column:1/-1;grid-row:2;grid-template-columns:repeat(4,1fr);gap:12px;width:100%;max-width:400px;margin:0 auto}
 .vpad .vbtn[data-act="pause"],.vpad .vbtn[data-act="reset"]{grid-column:span 2}
+/* 旋转键（2026-09-14 用户定：补上旋转键，但**不能压缩第一排**四个操作键的宽度）
+   → 单独占第三行、居中跨两格。第一排 ◀▼⤓▶ 和第二排 ⏸↺ 的宽度一点没动 */
+.vpad .vbtn[data-act="rotate"]{grid-column:2/span 2}
 .vbtn{
   font-size:24px;line-height:1;padding:10px 0;cursor:pointer;touch-action:manipulation;
   background:#c9c9c9;border:3px solid var(--ink);box-shadow:3px 3px 0 rgba(48,48,48,.85);
@@ -1893,3 +1901,31 @@ body.dark .hud-link.is-active{color:#f2f4e2;background-color:#2b2b56}
 /* 收纳键也去掉方框，只留一个淡淡的圆底 */
 .hud-exp{border:none !important;background-color:var(--olive-pale);border-radius:50%}
 .hud-exp:hover{background-color:var(--olive)}
+
+/* ============================================================
+   歌单：窄屏改「两行式」歌行（2026-09-14 按用户手机截图实测后修）
+   ------------------------------------------------------------
+   原来一行里塞了 9 个元素，光固定宽度就有：
+     封面 46 + 复制 + 次数 + 歌切 32 + 时长 + 收藏 32 + 加歌单 32 + 七个 12px 间距
+     ≈ 420px —— 比手机屏还宽，于是中间的「歌名/歌手」被挤到只剩几像素，
+     文字只好一个字一行地竖排（用户截图里「唱/过/1/次」竖着叠就是这个原因）。
+   现在：第一行 = 封面 + 歌名/歌手/标签；第二行 = 操作按键（加大到 40px 便于拇指点按）。
+   **信息一条没少，只是换行**；第一行之外的按钮顺序用 order 重排，DOM 没动。
+   ============================================================ */
+@media(max-width:700px){
+  .pl-row{flex-wrap:wrap;column-gap:10px;row-gap:10px;padding:12px}
+  /* 信息占满第一行（减去封面 46 + 间距 10 + 余量）→ 后面的按键自然被挤到第二行 */
+  .pl-row .pl-info{flex:1 1 calc(100% - 58px)}
+  .pl-row .pl-copy{order:1;margin-left:auto;margin-right:0}
+  .pl-row .pl-count2{order:2;font-size:13px;min-width:3.2em}
+  .pl-row .pl-link{order:3;width:40px;height:40px;font-size:18px}
+  .pl-row .pl-dur{order:4;font-size:13px}
+  .pl-row .pl-fav{order:5;width:40px;height:40px;font-size:19px}
+  .pl-row .pl-add{order:6;width:40px;height:40px;font-size:19px}
+}
+/* 更窄的真机（iPhone 390/安卓 360）再收紧一点：第二行刚好放得下，不会把「＋」挤到第三行。
+   次数位在窄屏不再预留固定宽度（那个固定宽度是为了桌面端不左右跳动），手机上换行显示不吃亏 */
+@media(max-width:430px){
+  .pl-row{column-gap:8px;row-gap:8px}
+  .pl-row .pl-count2{min-width:0}
+}
