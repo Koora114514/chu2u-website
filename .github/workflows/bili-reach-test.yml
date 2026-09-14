@@ -1,0 +1,54 @@
+# 【临时测试】B站连通性探测 —— 判断「自动更新能不能搬到 GitHub 服务器上跑」
+#
+# 背景：网站托管在 Cloudflare，但实测 Cloudflare 的服务器 IP 被 B 站风控按段封禁
+#       （api.live.bilibili.com 返回 412 / {"code":-412,"message":"request was banned"}），
+#       所以 B 站数据的抓取只能在家用宽带上跑。
+# 本工作流就为了回答一个问题：GitHub 的服务器（Azure 机房）能不能访问 B站？
+#   能  → 自动更新可以搬到 GitHub Actions（免费、不用开电脑）
+#   不能 → 只能继续在本机跑，或者换成国内云函数（国内 IP，B站不封）
+#
+# 测完即删。结果会写进 bili-test-result.txt 并提交回来，这样不用登 GitHub 也能看到。
+name: bili-reach-test
+on: push
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 探测 B站 直播间接口
+        run: |
+          UA="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          REF="https://live.bilibili.com/1727074031"
+          API="https://api.live.bilibili.com/room/v1/Room/get_info?room_id=1727074031"
+
+          code=$(curl -s -o /tmp/body.txt -w "%{http_code}" --max-time 25 -H "User-Agent: $UA" -H "Referer: $REF" "$API" || echo "curl失败")
+          {
+            echo "时间(UTC): $(date -u '+%Y-%m-%d %H:%M:%S')"
+            echo "HTTP状态码: $code"
+            echo "返回内容前300字:"
+            head -c 300 /tmp/body.txt
+            echo ""
+          } > bili-test-result.txt
+
+          # 顺便测一个更普通的接口，排除「只是直播间接口被拦」
+          code2=$(curl -s -o /tmp/body2.txt -w "%{http_code}" --max-time 25 -H "User-Agent: $UA" "https://api.bilibili.com/x/web-interface/view?bvid=BV1Mwt36UE7D" || echo "curl失败")
+          {
+            echo "---"
+            echo "投稿接口 HTTP状态码: $code2"
+            head -c 200 /tmp/body2.txt
+            echo ""
+          } >> bili-test-result.txt
+
+          cat bili-test-result.txt
+
+      - name: 把结果提交回仓库
+        run: |
+          git config user.name "chu2u-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add bili-test-result.txt
+          git commit -m "B站连通性测试结果（GitHub 服务器能否访问）" || echo "没有变化"
+          git push
