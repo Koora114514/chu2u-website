@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-15 00:21:33   共 87 首（另有手写占位 0 条）
+// 生成时间：2026-09-15 02:29:57   共 87 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -2556,9 +2556,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/572844605.m4a",
+  "cover": "images/song/572844605.jpg",
+  "audioStatus": "ok",
+  "dur": 284.8
  },
  {
   "key": "77855995",
@@ -2724,9 +2725,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/701897468.m4a",
+  "cover": "images/song/701897468.jpg",
+  "audioStatus": "ok",
+  "dur": 209.9
  },
  {
   "key": "474692776",
