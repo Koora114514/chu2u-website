@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"开开心心！⭐","online":248765,"area":"虚拟主播","start":1789394024,"checked":"2026-09-14 23:58:34"};
+window.CHU2U_LIVE={"live":true,"title":"开开心心！⭐","online":239215,"area":"虚拟主播","start":1789394024,"checked":"2026-09-15 00:08:01"};
