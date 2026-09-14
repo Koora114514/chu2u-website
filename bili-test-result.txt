@@ -1,13 +1,7 @@
-时间(UTC): 2026-09-14 15:54:26
-HTTP状态码: 200
-返回内容前300字:
-{"code":0,"msg":"ok","message":"ok","data":{"uid":2138961136,"room_id":1727074031,"short_id":0,"attention":17821,"online":251198,"is_portrait":false,"description":"","live_status":1,"area_id":371,"parent_area_id":9,"parent_area_name":"虚拟主播","old_area_id":6,"background":"","title":"开开心�
----
-投稿接口 HTTP状态码: 412
-<!DOCTYPE html>
-<html lang="zh-cn">
-
-<head>
-    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
-    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.5)">
-    <meta http-equiv
+时间(UTC): 2026-09-14 17:09:12  【GitHub 服务器视角】
+①观测记录-搜索投稿 | HTTP=200 | {"code":0,"message":"OK","ttl":1,"data":{"seid":"846332611908650463","page":1,"pagesize":2
+②观测记录-稿件详情 | HTTP=412 | <!DOCTYPE html> <html lang="zh-cn">  <head>     <meta http-equiv="Access-Control-Allow-Ori
+③观测记录-标签 | HTTP=200 | {"code":0,"message":"0","ttl":1,"data":[{"tag_id":19948768,"tag_name":"歌切","cover":"",
+④猫猫宇宙论-话题流 | HTTP=200 | {"code":0,"message":"0","ttl":1,"data":{"related_topics":{},"topic_card_list":{"has_more":
+⑤猫猫宇宙论-空间动态 | HTTP=412 | <!DOCTYPE html> <html lang="zh-cn">  <head>     <meta http-equiv="Access-Control-Allow-Ori
+⑥直播状态(对照) | HTTP=200 | {"code":0,"msg":"ok","message":"ok","data":{"uid":2138961136,"room_id":1727074031,"short_i
