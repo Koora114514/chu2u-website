@@ -1,0 +1,13 @@
+时间(UTC): 2026-09-14 15:54:26
+HTTP状态码: 200
+返回内容前300字:
+{"code":0,"msg":"ok","message":"ok","data":{"uid":2138961136,"room_id":1727074031,"short_id":0,"attention":17821,"online":251198,"is_portrait":false,"description":"","live_status":1,"area_id":371,"parent_area_id":9,"parent_area_name":"虚拟主播","old_area_id":6,"background":"","title":"开开心�
+---
+投稿接口 HTTP状态码: 412
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Access-Control-Allow-Origin" content="*" />
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=0.5)">
+    <meta http-equiv
