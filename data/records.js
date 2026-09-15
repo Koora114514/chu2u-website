@@ -31,7 +31,12 @@
    - 新一期追加到数组末尾（期号 +1），旧期不动；往期条目封面放
      chu2u/site/images/records/archive/（issue{n}.jpg + item{n}-{k}.jpg），
      本期沿用 images/records/ 下已载入的文件；封面统一 16:9 中心裁切
-     480x270 JPEG（条目卡左图右文，图块显示约 128x72，不用更大）。 */
+     480x270 JPEG（条目卡左图右文，图块显示约 128x72，不用更大）。
+   - 选稿要「羽啾强相关」（2026-09-16 用户纠正）：条目优先收羽啾本人的
+     直播名场面切片（尤其是当周大事件），不要全挑联动/关系向内容。
+   - 更新本文件后，把 index.html 里 data/records.js 那个 <script src> 的
+     ?v= 后面 8 位日期改成今天（YYYYMMDD）——缓存版本号，不改浏览器会
+     继续显示旧数据。 */
 window.CHU2U_RECORDS = [
   { no:1, tag:"初投稿 · 出道", title:"来自 n 次观测地的第一条信号",
     range:"2026.08.05 – 2026.08.09", cover:"images/works/work-1.jpg", stamp:"记录·入库",

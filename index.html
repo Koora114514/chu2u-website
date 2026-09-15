@@ -309,7 +309,7 @@
              自动生成两份：schedule-week.png（静止显示 570px 无损）、
              schedule-week-full.png（无损原图，悬停与单击大图共用）；
              同时把上方「更新于 X年X月X日」改成抓取/上传那天的日期 -->
-        <img id="weekImg" src="images/schedule-week.png" alt="本周周表照片" referrerpolicy="no-referrer">
+        <img id="weekImg" src="images/schedule-week.png?v=20260916" alt="本周周表照片" referrerpolicy="no-referrer">
         <div class="wk-q" id="weekFail" hidden>？</div>
       </div>
     </div>
@@ -531,20 +531,20 @@
   </div>
 </div>
 
-<!-- 观测记录数据（每周一自动更新维护；内容见该文件的注释说明） -->
-<script src="data/records.js"></script>
-<!-- 猫猫宇宙论特辑！数据（每周一自动更新维护；内容见该文件的注释说明） -->
-<script src="data/nyanya.js"></script>
+<!-- 观测记录数据（每周一自动更新维护；内容见该文件的注释说明；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
+<script src="data/records.js?v=20260916"></script>
+<!-- 猫猫宇宙论特辑！数据（每周一自动更新维护；内容见该文件的注释说明；?v= 同上） -->
+<script src="data/nyanya.js?v=20260916"></script>
 <!-- 嘘，这是啾啾和宇宙猫的秘密 · 彩蛋数据（手动维护，用 维护\彩蛋手动更新.ps1 或直接改该文件） -->
-<script src="data/secrets.js"></script>
+<script src="data/secrets.js?v=20260916"></script>
 <!-- 実績？カッコいいでしょ！· 成就数据（手动维护，用 维护\成就手动更新.ps1 或直接改该文件） -->
-<script src="data/achieves.js"></script>
+<script src="data/achieves.js?v=20260916"></script>
 <!-- 悬浮飘窗按钮的文案与跳转链接（手动维护，用 维护\飘窗手动更新.ps1 或直接改该文件） -->
-<script src="data/floatbtn.js"></script>
+<script src="data/floatbtn.js?v=20260916"></script>
 <!-- 设计元素数据（手动维护，可用 维护\维护台 编辑） -->
-<script src="data/design.js"></script>
+<script src="data/design.js?v=20260916"></script>
 <!-- 作品展柜数据（手动维护，可用 维护\维护台 编辑） -->
-<script src="data/works.js"></script>
+<script src="data/works.js?v=20260916"></script>
 <script>
 /* ============================================================
    CHU2U 像素个人站 JS —— 全部功能
@@ -1028,8 +1028,8 @@
     var KEY  = "chu2u-week-v2";          /* 远程抓取缓存 {id, img, ts, week} */
     var DKEY = "chu2u-week-drop";        /* 拖入图片缓存 {img, ts} */
     var UID = "2138961136";
-    var LOCAL = "images/schedule-week.png";      /* 静止显示版（570px，PNG 无损；CSS 轻微模糊柔化锯齿） */
-    var FULL  = "images/schedule-week-full.png"; /* 无损原图（悬停与单击大图共用） */
+    var LOCAL = "images/schedule-week.png?v=20260916";      /* 静止显示版（570px，PNG 无损；CSS 轻微模糊柔化锯齿）；?v= 由维护脚本换图时自动改日期，绕过浏览器缓存 */
+    var FULL  = "images/schedule-week-full.png?v=20260916"; /* 无损原图（悬停与单击大图共用） */
     var when    = document.getElementById("planWhen");
     var img     = document.getElementById("weekImg");
     var fail    = document.getElementById("weekFail");

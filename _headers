@@ -32,6 +32,10 @@
 /images/*
   Cache-Control: public, max-age=604800
 
+# 周表每周都会换，绝不能长期缓存——每次都问一下有没有新版（须放在 /images/* 之前）
+/images/schedule-week*.png
+  Cache-Control: public, max-age=0, must-revalidate
+
 /music/*
   Cache-Control: public, max-age=604800
 

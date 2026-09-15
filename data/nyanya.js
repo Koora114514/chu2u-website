@@ -22,7 +22,10 @@
    - 只收质量高的作品（人工把关「优秀」）；新条目前插到数组开头，
      总条数上限 48，超出删掉最旧条目。
    - 预览图本地缓存在 chu2u/site/images/nyan/，统一 4:3（672x504）：
-     按 4:3 中心裁切后 Pillow LANCZOS 缩放，图片不拉伸变形。 */
+     按 4:3 中心裁切后 Pillow LANCZOS 缩放，图片不拉伸变形。
+   - 更新本文件后，把 index.html 里 data/nyanya.js 那个 <script src> 的
+     ?v= 后面 8 位日期改成今天（YYYYMMDD）——缓存版本号，不改浏览器会
+     继续显示旧数据。 */
 window.CHU2U_CAT_UPDATED = "2026-09-14";
 window.CHU2U_CAT = [
   {kind:"art", uid:"3494373633297224", link:"https://www.bilibili.com/opus/1248327936773193753", cover:"images/nyan/a8.jpg",
