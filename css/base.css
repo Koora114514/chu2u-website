@@ -602,11 +602,11 @@ body.dark .wk-date{background:var(--olive-deep);color:#10102a}
   transition:transform .22s ease;
 }
 .wk-photo:hover .wk-pic{transform:rotate(0deg)}  /* 悬停回正 */
-/* 静止时加 0.4px 轻微模糊柔化锯齿（不影响可读），悬停去模糊并自动换无损原图 */
-.wk-pic img{display:block;width:570px;max-width:100%;height:auto;filter:blur(.4px);transition:transform .22s ease,filter .22s ease}
+/* 2026-09-16：图片升为 1140px（2 倍素材）后不再需要 0.4px 模糊柔化锯齿（那会让文字发虚），
+   静止态直接清晰显示；悬停自动换无损原图 */
+.wk-pic img{display:block;width:570px;max-width:100%;height:auto;transition:transform .22s ease}
 /* 原图缩小显示时改用平滑缩放（覆盖全站像素风设置），保证悬停与单击大图的画质 */
 .wk-pic img,#weekModal .wk-modal-box img{image-rendering:auto}
-.wk-photo:hover .wk-pic img{filter:none}
 .wk-photo:hover img{transform:scale(1.07)}
 .wk-q{font-size:84px;color:var(--ink);animation:blink 2.6s steps(1) infinite;padding:34px 0}
 .wk-foot{display:flex;justify-content:flex-end;align-items:center;gap:12px}
