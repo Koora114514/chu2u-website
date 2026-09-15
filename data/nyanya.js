@@ -23,8 +23,12 @@
      总条数上限 48，超出删掉最旧条目。
    - 预览图本地缓存在 chu2u/site/images/nyan/，统一 4:3（672x504）：
      按 4:3 中心裁切后 Pillow LANCZOS 缩放，图片不拉伸变形。 */
-window.CHU2U_CAT_UPDATED = "2026-09-12";
+window.CHU2U_CAT_UPDATED = "2026-09-14";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"3494373633297224", link:"https://www.bilibili.com/opus/1248327936773193753", cover:"images/nyan/a8.jpg",
+   t:"呃，顶萌来了，你们聊", d:"残星下的悼亡曲", date:"2026年9月15日"},
+  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1247591706363166721", cover:"images/nyan/a10.jpg",
+   t:"好可爱一羽啾", d:"海圻圻圻", date:"2026年9月14日"},
   {kind:"video", uid:"3747549391359135", link:"https://www.bilibili.com/video/BV189Y86WEge/", cover:"images/nyan/v3.jpg",
    t:"羽啾只是在伸出手指", d:"核对插座电量", date:"2026年9月10日"},
   {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245748516848926727", cover:"images/nyan/a2.jpg",
