@@ -36,7 +36,10 @@
      直播名场面切片（尤其是当周大事件），不要全挑联动/关系向内容。
    - 更新本文件后，把 index.html 里 data/records.js 那个 <script src> 的
      ?v= 后面 8 位日期改成今天（YYYYMMDD）——缓存版本号，不改浏览器会
-     继续显示旧数据。 */
+     继续显示旧数据。
+   - 若重做某期时覆盖了已有文件名的封面（如 issue6.jpg、item6-1.jpg），
+     把该期的封面引用 URL 也加上 ?v=日期（见第 6 期写法），否则浏览器
+     会继续用缓存的旧封面。 */
 window.CHU2U_RECORDS = [
   { no:1, tag:"初投稿 · 出道", title:"来自 n 次观测地的第一条信号",
     range:"2026.08.05 – 2026.08.09", cover:"images/works/work-1.jpg", stamp:"记录·入库",
@@ -120,18 +123,18 @@ window.CHU2U_RECORDS = [
        t:"万粉纪念 · 界隈の動物園", d:"粉丝数早在 8 月 16 日就已破万；本周发布万粉纪念视频《界隈の動物園》并开播万粉纪念回，动物园正式开张。", date:"9月2日"}
     ] },
   { no:6, tag:"啾啾被捕记", title:"星际嫌疑犯啾啾，当场逮捕！",
-    range:"2026.09.07 – 2026.09.13", cover:"images/records/issue6.jpg", stamp:"记录·入库",
+    range:"2026.09.07 – 2026.09.13", cover:"images/records/issue6.jpg?v=20260916", stamp:"记录·入库",
     lead:"本周啾啾的直播排得满满：9 月 9 日午后锐评小松绿的色图集，咬牙切齿又念念不忘；9 月 10 日晚 287 四人满月特别联动，羽圣开源自曝「洗澡站着尿尿」，同接冲到 7000+；9 月 13 日更是大事件——啾啾在直播里被宇宙猫们「当场逮捕」，通缉、抓走、探监一气呵成，下播时门口的敲门声把观众乐得不行。同一天还有人把「裸子植物」之争做成了琵琶曲，羽啾 vs 小松绿，连乐器都在磕。",
     items:[
-      {kind:"video", uid:"2073578410", link:"https://www.bilibili.com/video/BV1npYq6ZE14/", cover:"images/records/item6-1.jpg",
+      {kind:"video", uid:"2073578410", link:"https://www.bilibili.com/video/BV1npYq6ZE14/", cover:"images/records/item6-1.jpg?v=20260916",
        cat:"二创 · FANMADE", t:"琵琶曲丨根本没有这种同期", d:"「裸子植物」之争被做成琵琶曲，羽啾 vs 小松绿——同期情谊连乐器都在磕。", date:"9月13日 · 看切片 →"},
-      {kind:"video", uid:"336666910", link:"https://www.bilibili.com/video/BV1HvY369EGY/", cover:"images/records/item6-2.jpg",
+      {kind:"video", uid:"336666910", link:"https://www.bilibili.com/video/BV1HvY369EGY/", cover:"images/records/item6-2.jpg?v=20260916",
        cat:"直播切片 · CLIP", t:"感谢羽圣开源！洗澡站立派自曝", d:"羽啾自爆洗澡站着尿尿：什么叫你们也都是？——宇宙猫们纷纷坦白。", date:"9月10日 · 看切片 →"},
-      {kind:"video", uid:"7172219", link:"https://www.bilibili.com/video/BV1byYW6KE7Z/", cover:"images/records/item6-3.jpg",
+      {kind:"video", uid:"7172219", link:"https://www.bilibili.com/video/BV1byYW6KE7Z/", cover:"images/records/item6-3.jpg?v=20260916",
        cat:"直播切片 · CLIP", t:"羽啾评价小松绿的色图", d:"「看到好多小松绿的色图，有点咬牙切齿了，她图里好多人啊。」", date:"9月9日 · 看切片 →"},
-      {kind:"video", uid:"290736390", link:"https://www.bilibili.com/video/BV1DcYv6NEDg/", cover:"images/records/item6-4.jpg",
+      {kind:"video", uid:"290736390", link:"https://www.bilibili.com/video/BV1DcYv6NEDg/", cover:"images/records/item6-4.jpg?v=20260916",
        cat:"直播切片 · CLIP", t:"星际嫌疑犯羽啾chu2u已被逮捕", d:"本台主持四时小路持续为您报道：啾啾被通缉、被抓走，枝堇妈妈赶来探监。", date:"9月13日 · 看切片 →"},
-      {kind:"video", uid:"3546635254630711", link:"https://www.bilibili.com/video/BV1GqYv66Epq/", cover:"images/records/item6-5.jpg",
+      {kind:"video", uid:"3546635254630711", link:"https://www.bilibili.com/video/BV1GqYv66Epq/", cover:"images/records/item6-5.jpg?v=20260916",
        cat:"直播切片 · CLIP", t:"神人下播小剧情：谁呀这么没素质！", d:"下播时门口传来敲门声——羽啾已被通缉、随后被抓走，神人小剧情。", date:"9月13日 · 看切片 →"},
       {kind:"milestone", num:"7千+", unit:"同接达成", cat:"里程碑 · MILESTONE",
        t:"287 满月联动 · 7000+ 同接", d:"满月特别联动直播间人气峰值突破 7000，287 名场面之夜。", date:"9月10日"}
