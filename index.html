@@ -199,9 +199,9 @@
   <div class="about reveal">
     <div class="photo">
       <span class="badge">羽啾CHU2U · 出道立绘</span>
-      <!-- 🎨 素材配置：出道立绘（点击可放大预览；图片放 site/images/探险啾-立绘.png） -->
+      <!-- 🎨 素材配置：出道立绘（点击可放大预览；图片放 site/images/探险啾-立绘.png，2× 显示尺寸 760×1258，用根目录 探险啾.png 原图重采样生成，原件勿动） -->
       <div class="avatar-big" id="avatarBig" role="button" tabindex="0" aria-label="羽啾chu2u 出道立绘，点击在新标签页查看高清原图">
-        <img src="images/探险啾-立绘.png" alt="羽啾chu2u 出道立绘">
+        <img src="images/探险啾-立绘.png?v=20260916" alt="羽啾chu2u 出道立绘">
       </div>
     </div>
     <div class="info">
@@ -673,7 +673,7 @@
     var stage = root.querySelector(".cc-stage");
     // 🎨 素材配置：立绘数据（按此顺序轮切；没有图用 q:true 显示大像素问号；新增立绘直接在数组里加）
     var SLIDES = [
-      { img: "images/探险啾.png", alt: "探险啾", cap: "外出考察ing · 探险啾！" },
+      { img: "images/探险啾.png?v=20260916", alt: "探险啾", cap: "外出考察ing · 探险啾！" },
       { img: "images/宅尼特啾.png", alt: "宅尼特啾", cap: "好舒服啊~ · 家里蹲啾" },
       { q: true, cap: "我是谁？· 你猜啾！" }
     ];
@@ -1379,12 +1379,12 @@
     check();
   })();
 
-  /* ---------- 立绘点击：新标签页打开主文件夹里的源文件原图（100% 原始分辨率） ---------- */
+  /* ---------- 立绘点击：新标签页打开 2× 高清素材（根目录原图别动，改素材就重新生成 site/images/探险啾-立绘.png） ---------- */
   (function(){
     var trig = document.getElementById("avatarBig");
     if(!trig) return;
     function view(){
-      window.open("images/探险啾-立绘.png", "_blank");   /* 用站内本地文件，别再指向站点外的路径 */
+      window.open("images/探险啾-立绘.png?v=20260916", "_blank");   /* 用站内本地文件，别再指向站点外的路径 */
     }
     trig.addEventListener("click", view);
     trig.addEventListener("keydown", function(e){
