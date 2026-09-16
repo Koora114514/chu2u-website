@@ -1,7 +1,533 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-15 02:29:57   共 87 首（另有手写占位 0 条）
+// 生成时间：2026-09-17 00:56:07   共 100 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
+ {
+  "key": "713035738",
+  "title": "Kajitsu",
+  "titleShazam": "Kajitsu",
+  "artist": "AKASAKI",
+  "artistSearch": "AKASAKI",
+  "album": "AKASAKI - 2024",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 4,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1bEtG6dErt",
+    "start": 0,
+    "end": 112,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1bEtG6dErt",
+    "start": 150,
+    "end": 187,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 5825,
+    "end": 5937,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 6350,
+    "end": 6387,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "music/713035738.m4a",
+  "cover": "images/song/713035738.jpg",
+  "audioStatus": "ok",
+  "dur": 309.4
+ },
+ {
+  "key": "614290581",
+  "title": "冷やしネギ蕎麦",
+  "titleShazam": "Chilled Chinese Noodles with Green Onion",
+  "artist": "Cody・Lee",
+  "artistSearch": "Cody・Lee",
+  "album": "heartbeat, love letter and kindness",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 1850,
+    "end": 2012,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 4725,
+    "end": 4937,
+    "votes": 9,
+    "evidence": "shazam×9"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "music/614290581.m4a",
+  "cover": "images/song/614290581.jpg",
+  "audioStatus": "ok",
+  "dur": 79.7
+ },
+ {
+  "key": "409876735",
+  "title": "住在天狼星的那个人",
+  "titleShazam": "住在天狼星的那个人",
+  "artist": "OHMYMEITING",
+  "artistSearch": "OHMYMEITING",
+  "album": "别担心!我不是坏人 - EP",
+  "lang": "中文",
+  "tags": [
+   "华语流行"
+  ],
+  "genres": [
+   "Mandopop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 950,
+    "end": 987,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "840162814",
+  "title": "JANE DOE",
+  "titleShazam": "JANE DOE",
+  "artist": "Kenshi Yonezu & Hikaru Utada",
+  "artistSearch": "Kenshi Yonezu & Hikaru Utada",
+  "album": "JANE DOE - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 1650,
+    "end": 1762,
+    "votes": 4,
+    "evidence": "shazam×4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6",
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 6,
+    "title": "JANE DOE",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-08",
+    "play": 1266,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "667063722",
+  "title": "花 feat 花譜",
+  "titleShazam": "Flower feat. KAF",
+  "artist": "Guiano",
+  "artistSearch": "Guiano",
+  "album": "The Traditional Themes Of Natural Beauty In Japanese Aesthetics",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 2775,
+    "end": 2887,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "713987630",
+  "title": "Z__",
+  "titleShazam": "Z__",
+  "artist": "avaraya",
+  "artistSearch": "avaraya",
+  "album": "Z__ - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 2950,
+    "end": 3162,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7",
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 7,
+    "title": "かなしばりに遭ったら",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-16",
+    "play": 748,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "817466570",
+  "title": "The Sound About Petals",
+  "titleShazam": "The Sound About Petals",
+  "artist": "avaraya",
+  "artistSearch": "avaraya",
+  "album": "The Sound About Petals - Single",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 3200,
+    "end": 3387,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "710183321",
+  "title": "Emoji",
+  "titleShazam": "Emoji",
+  "artist": "Wonderful opportunity! & Kagamine Rin",
+  "artistSearch": "Wonderful opportunity! & Kagamine Rin",
+  "album": "WANOPO!VOL.20",
+  "lang": "日语",
+  "tags": [
+   "流行"
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 3400,
+    "end": 3562,
+    "votes": 7,
+    "evidence": "shazam×7"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "374177461",
+  "title": "スーサイドパレヱド",
+  "titleShazam": "スーサイドパレヱド",
+  "artist": "Yurry Canon",
+  "artistSearch": "Yurry Canon",
+  "album": "",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 4375,
+    "end": 4512,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "545964637",
+  "title": "我愛你",
+  "titleShazam": "Wo Ai Ni",
+  "artist": "Cody・Lee",
+  "artistSearch": "Cody・Lee",
+  "album": "Seikatsu no news",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 4575,
+    "end": 4712,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "804102241",
+  "title": "Kaiju",
+  "titleShazam": "Kaiju",
+  "artist": "sakanaction",
+  "artistSearch": "sakanaction",
+  "album": "Kaiju - Single",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 5050,
+    "end": 5237,
+    "votes": 4,
+    "evidence": "shazam×4"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "512756237",
+  "title": "Ghost In A Flower",
+  "titleShazam": "Ghost In A Flower",
+  "artist": "Yorushika",
+  "artistSearch": "Yorushika",
+  "album": "Plagiarism",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 5550,
+    "end": 5762,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "545347724",
+  "title": "Hunch Gray",
+  "titleShazam": "Hunch Gray",
+  "artist": "ZUTOMAYO",
+  "artistSearch": "ZUTOMAYO",
+  "album": "Gusare",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 6400,
+    "end": 6637,
+    "votes": 9,
+    "evidence": "shazam×9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=14",
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 14,
+    "title": "勘ぐれい（灰心感）",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-16",
+    "play": 748,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=14"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "712922746",
+  "title": "TAIDADA",
+  "titleShazam": "TAIDADA",
+  "artist": "ZUTOMAYO",
+  "artistSearch": "ZUTOMAYO",
+  "album": "KEISOUDO",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 6700,
+    "end": 6812,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
  {
   "key": "628144417",
   "title": "Chinokate",
@@ -381,48 +907,6 @@ window.CHU2U_SONGS = [
   "dur": 206.1
  },
  {
-  "key": "713035738",
-  "title": "Kajitsu",
-  "titleShazam": "Kajitsu",
-  "artist": "AKASAKI",
-  "artistSearch": "AKASAKI",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 0,
-    "end": 112,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 150,
-    "end": 187,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/713035738.m4a",
-  "cover": "images/song/713035738.jpg",
-  "audioStatus": "ok",
-  "dur": 309.4
- },
- {
   "key": "819655673",
   "title": "顔",
   "titleShazam": "Alter Ego",
@@ -780,9 +1264,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/313675447.m4a",
+  "cover": "images/song/313675447.jpg",
+  "audioStatus": "ok",
+  "dur": 323.8
  },
  {
   "key": "896206970",
