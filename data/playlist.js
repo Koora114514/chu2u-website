@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-17 00:56:07   共 100 首（另有手写占位 0 条）
+// 生成时间：2026-09-18 00:40:41   共 101 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -75,9 +75,17 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 2,
+  "singCount": 4,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 1825,
+    "end": 1987,
+    "votes": 6,
+    "evidence": "shazam×6"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -85,6 +93,14 @@ window.CHU2U_SONGS = [
     "end": 2012,
     "votes": 5,
     "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 4650,
+    "end": 4887,
+    "votes": 10,
+    "evidence": "shazam×10"
    },
    {
     "date": "2026-09-16",
@@ -103,39 +119,6 @@ window.CHU2U_SONGS = [
   "dur": 79.7
  },
  {
-  "key": "409876735",
-  "title": "住在天狼星的那个人",
-  "titleShazam": "住在天狼星的那个人",
-  "artist": "OHMYMEITING",
-  "artistSearch": "OHMYMEITING",
-  "album": "别担心!我不是坏人 - EP",
-  "lang": "中文",
-  "tags": [
-   "华语流行"
-  ],
-  "genres": [
-   "Mandopop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 950,
-    "end": 987,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
   "key": "840162814",
   "title": "JANE DOE",
   "titleShazam": "JANE DOE",
@@ -150,9 +133,17 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 3,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 1350,
+    "end": 1412,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -160,6 +151,14 @@ window.CHU2U_SONGS = [
     "end": 1762,
     "votes": 4,
     "evidence": "shazam×4"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 1675,
+    "end": 1762,
+    "votes": 3,
+    "evidence": "shazam×3"
    }
   ],
   "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6",
@@ -174,85 +173,10 @@ window.CHU2U_SONGS = [
     "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6"
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "667063722",
-  "title": "花 feat 花譜",
-  "titleShazam": "Flower feat. KAF",
-  "artist": "Guiano",
-  "artistSearch": "Guiano",
-  "album": "The Traditional Themes Of Natural Beauty In Japanese Aesthetics",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 2775,
-    "end": 2887,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "713987630",
-  "title": "Z__",
-  "titleShazam": "Z__",
-  "artist": "avaraya",
-  "artistSearch": "avaraya",
-  "album": "Z__ - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 2950,
-    "end": 3162,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7",
-  "clips": [
-   {
-    "bvid": "BV18Xew65Ee9",
-    "page": 7,
-    "title": "かなしばりに遭ったら",
-    "author": "千束和泷奈贴贴贴",
-    "date": "2026-09-16",
-    "play": 748,
-    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7"
-   }
-  ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/840162814.m4a",
+  "cover": "images/song/840162814.jpg",
+  "audioStatus": "ok",
+  "dur": 236.7
  },
  {
   "key": "817466570",
@@ -269,9 +193,17 @@ window.CHU2U_SONGS = [
    "Anime"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 3,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 3175,
+    "end": 3262,
+    "votes": 4,
+    "evidence": "shazam×4"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -279,6 +211,14 @@ window.CHU2U_SONGS = [
     "end": 3387,
     "votes": 5,
     "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 3350,
+    "end": 3387,
+    "votes": 2,
+    "evidence": "shazam×2"
    }
   ],
   "link": "",
@@ -286,6 +226,142 @@ window.CHU2U_SONGS = [
   "src": "",
   "cover": "",
   "audioStatus": "missing"
+ },
+ {
+  "key": "409876735",
+  "title": "住在天狼星的那个人",
+  "titleShazam": "住在天狼星的那个人",
+  "artist": "OHMYMEITING",
+  "artistSearch": "OHMYMEITING",
+  "album": "别担心!我不是坏人 - EP",
+  "lang": "中文",
+  "tags": [
+   "华语流行"
+  ],
+  "genres": [
+   "Mandopop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 900,
+    "end": 962,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 950,
+    "end": 987,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "music/409876735.m4a",
+  "cover": "images/song/409876735.jpg",
+  "audioStatus": "ok",
+  "dur": 269.8
+ },
+ {
+  "key": "667063722",
+  "title": "花 feat 花譜",
+  "titleShazam": "Flower feat. KAF",
+  "artist": "Guiano",
+  "artistSearch": "Guiano",
+  "album": "The Traditional Themes Of Natural Beauty In Japanese Aesthetics",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 2700,
+    "end": 2912,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 2775,
+    "end": 2887,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "music/667063722.m4a",
+  "cover": "images/song/667063722.jpg",
+  "audioStatus": "ok",
+  "dur": 206.5
+ },
+ {
+  "key": "713987630",
+  "title": "Z__",
+  "titleShazam": "Z__",
+  "artist": "avaraya",
+  "artistSearch": "avaraya",
+  "album": "Z__ - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1F1Yf6pEtg",
+    "start": 2950,
+    "end": 3162,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 2950,
+    "end": 3162,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7",
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 7,
+    "title": "かなしばりに遭ったら",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-16",
+    "play": 748,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7"
+   }
+  ],
+  "src": "music/713987630.m4a",
+  "cover": "images/song/713987630.jpg",
+  "audioStatus": "ok",
+  "dur": 222.0
  },
  {
   "key": "710183321",
@@ -302,7 +378,7 @@ window.CHU2U_SONGS = [
    "Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-16",
   "sings": [
    {
@@ -312,13 +388,22 @@ window.CHU2U_SONGS = [
     "end": 3562,
     "votes": 7,
     "evidence": "shazam×7"
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 3400,
+    "end": 3462,
+    "votes": 2,
+    "evidence": "shazam×2"
    }
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/710183321.m4a",
+  "cover": "images/song/710183321.jpg",
+  "audioStatus": "ok",
+  "dur": 166.5
  },
  {
   "key": "374177461",
@@ -335,9 +420,17 @@ window.CHU2U_SONGS = [
    "Anime"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 4300,
+    "end": 4462,
+    "votes": 7,
+    "evidence": "shazam×7"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -349,9 +442,10 @@ window.CHU2U_SONGS = [
   ],
   "link": "",
   "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
+  "src": "music/374177461.m4a",
+  "cover": "images/song/374177461.jpg",
+  "audioStatus": "ok",
+  "dur": 191.0
  },
  {
   "key": "545964637",
@@ -368,9 +462,17 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 4500,
+    "end": 4637,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -401,9 +503,17 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-16",
   "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 4950,
+    "end": 5162,
+    "votes": 7,
+    "evidence": "shazam×7"
+   },
    {
     "date": "2026-09-16",
     "bvid": "BV1F1Yf6pEtg",
@@ -520,6 +630,39 @@ window.CHU2U_SONGS = [
     "end": 6812,
     "votes": 5,
     "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "494722986",
+  "title": "命に嫌われている",
+  "titleShazam": "Hated by Life",
+  "artist": "Iori Kanzaki",
+  "artistSearch": "Iori Kanzaki",
+  "album": "Blank Paper",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV168eF6pEbq",
+    "start": 3700,
+    "end": 3762,
+    "votes": 2,
+    "evidence": "shazam×2"
    }
   ],
   "link": "",
@@ -685,8 +828,17 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×2"
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE",
+  "link": "https://www.bilibili.com/video/BV1KMeE6JEfu",
   "clips": [
+   {
+    "bvid": "BV1KMeE6JEfu",
+    "page": 1,
+    "title": "花の塔",
+    "author": "宵夜ChiTi",
+    "date": "2026-09-15",
+    "play": 307,
+    "url": "https://www.bilibili.com/video/BV1KMeE6JEfu"
+   },
    {
     "bvid": "BV1cNYi6HEAE",
     "page": 1,
