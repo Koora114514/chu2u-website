@@ -17,9 +17,9 @@ window.CHU2U_FLOATBTN_UPDATED = "2026-09-18";
 
 window.CHU2U_FLOATBTN = {
   icon: "🎧",
-  text: "一起来听！\n住在天狼星的那个人",
+  text: "一起来听！\n《住在天狼星的那个人》\n助力10W播放！",
   badge: "GO",
   href: "https://www.bilibili.com/video/BV1vyeP6tEqj/",
-  title: "一起来听！《住在天狼星的那个人》",
+  title: "一起来听！《住在天狼星的那个人》助力10W播放！",
   show: true
 };
