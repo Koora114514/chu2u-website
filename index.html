@@ -508,9 +508,9 @@
   <img src="images/飞船啾.png" alt="返回顶部">
 </button>
 <!-- 悬浮飘窗按钮：文案与跳转链接来自 data/floatbtn.js（手动维护，见该文件注释） -->
-<a class="float-btn" id="floatBtn" href="tetris.html" aria-label="去玩俄罗斯方块">
-  <span class="bf-ico">👽</span>
-  <span class="bf-txt">来玩一局<br>俄罗斯方块</span>
+<a class="float-btn" id="floatBtn" href="https://www.bilibili.com/video/BV1vyeP6tEqj/" target="_blank" rel="noopener" aria-label="一起来听！《住在天狼星的那个人》">
+  <span class="bf-ico">🎧</span>
+  <span class="bf-txt">一起来听！<br>住在天狼星的那个人</span>
   <span class="bf-badge">GO</span>
   <span class="bf-close" id="bfClose" role="button" tabindex="0" title="关掉这个飘窗" aria-label="关掉这个飘窗">×</span>
 </a>
@@ -1267,7 +1267,17 @@
       var cfg = window.CHU2U_FLOATBTN;
       if(!cfg) return;
       if(cfg.show === false){ el.hidden = true; return; }
-      if(cfg.href) el.setAttribute("href", cfg.href);
+      if(cfg.href){
+        el.setAttribute("href", cfg.href);
+        /* 外链新窗口打开（不把本站页面顶掉）；站内页面就原地跳转 */
+        if(/^https?:\/\//.test(cfg.href)){
+          el.setAttribute("target", "_blank");
+          el.setAttribute("rel", "noopener");
+        }else{
+          el.removeAttribute("target");
+          el.removeAttribute("rel");
+        }
+      }
       if(cfg.title) el.setAttribute("aria-label", cfg.title);
       var ico = el.querySelector(".bf-ico"),
           txt = el.querySelector(".bf-txt"),
