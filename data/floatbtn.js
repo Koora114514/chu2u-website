@@ -13,13 +13,13 @@
  * 注意：访客点过飘窗右上角的「×」关掉后，浏览器会记住（存本地），刷新也不再出现；
  *      想让它重新出现，在浏览器控制台执行 localStorage.removeItem("chu2u-floatbtn-closed")
  */
-window.CHU2U_FLOATBTN_UPDATED = "2026-09-13";
+window.CHU2U_FLOATBTN_UPDATED = "2026-09-18";
 
 window.CHU2U_FLOATBTN = {
-  icon: "👽",
-  text: "来玩一局\n俄罗斯方块",
+  icon: "🎧",
+  text: "一起来听！\n住在天狼星的那个人",
   badge: "GO",
-  href: "tetris.html",
-  title: "去玩俄罗斯方块",
+  href: "https://www.bilibili.com/video/BV1vyeP6tEqj/",
+  title: "一起来听！《住在天狼星的那个人》",
   show: true
 };
