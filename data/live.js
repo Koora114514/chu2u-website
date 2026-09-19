@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"突击!玩一会喜欢的游戏!!!","online":0,"area":"虚拟主播","start":1789840805,"checked":"2026-09-20 02:00:20"};
+window.CHU2U_LIVE={"live":false,"title":"突击!玩一会喜欢的游戏!!!","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-20 04:55:09"};
