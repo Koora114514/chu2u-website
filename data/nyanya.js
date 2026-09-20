@@ -26,8 +26,18 @@
    - 更新本文件后，把 index.html 里 data/nyanya.js 那个 <script src> 的
      ?v= 后面 8 位日期改成今天（YYYYMMDD）——缓存版本号，不改浏览器会
      继续显示旧数据。 */
-window.CHU2U_CAT_UPDATED = "2026-09-14";
+window.CHU2U_CAT_UPDATED = "2026-09-20";
 window.CHU2U_CAT = [
+  {kind:"video", uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
+   t:"【羽啾chu2u】杀戮尖塔2 角色Mod测试版发布！", d:"老美のNASA", date:"2026年9月20日"},
+  {kind:"video", uid:"199704632", link:"https://www.bilibili.com/video/BV1SzeD67EVR", cover:"images/nyan/v6.jpg",
+   t:"【误解向】【小松绿X羽啾】我从没有爱过你", d:"缓存文件", date:"2026年9月19日"},
+  {kind:"meme", uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1249212218989346823", cover:"images/nyan/m5.jpg",
+   t:"浏览器搜索chu2u.com 均可进站访问", d:"_可乐乐乐乐乐", date:"2026年9月18日"},
+  {kind:"art", uid:"91226097", link:"https://www.bilibili.com/opus/1248987824115417140", cover:"images/nyan/a12.jpg",
+   t:"分享图片", d:"自由高松灯", date:"2026年9月17日"},
+  {kind:"art", uid:"41664105", link:"https://www.bilibili.com/opus/1248499310253834249", cover:"images/nyan/a11.jpg",
+   t:"画师@狸SX 萌萌主播@羽啾chu2u", d:"-nolo-", date:"2026年9月16日"},
   {kind:"art", uid:"3494373633297224", link:"https://www.bilibili.com/opus/1248327936773193753", cover:"images/nyan/a8.jpg",
    t:"呃，顶萌来了，你们聊", d:"残星下的悼亡曲", date:"2026年9月15日"},
   {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1247591706363166721", cover:"images/nyan/a10.jpg",
