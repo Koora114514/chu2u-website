@@ -535,7 +535,7 @@
 <!-- 观测记录数据（每周一自动更新维护；内容见该文件的注释说明；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
 <script src="data/records.js?v=20260916"></script>
 <!-- 猫猫宇宙论特辑！数据（每周一自动更新维护；内容见该文件的注释说明；?v= 同上） -->
-<script src="data/nyanya.js?v=20260920"></script>
+<script src="data/nyanya.js?v=20260920a"></script>
 <!-- 嘘，这是啾啾和宇宙猫的秘密 · 彩蛋数据（手动维护，用 维护\彩蛋手动更新.ps1 或直接改该文件） -->
 <script src="data/secrets.js?v=20260916"></script>
 <!-- 実績？カッコいいでしょ！· 成就数据（手动维护，用 维护\成就手动更新.ps1 或直接改该文件） -->
@@ -1690,7 +1690,7 @@
     var BLOCKED = _d("aW9ubGNrbm1pb21ibGpibXZpb25sY25qbWxjYmlramtp").split(",");
     function blocked(uid){ return uid && BLOCKED.indexOf(String(uid)) >= 0; }
 
-    var KINDS = { video:"视频 · VIDEO", art:"绘画 · ART", meme:"表情包 · MEME" };
+    var KINDS = { video:"视频 · VIDEO", art:"绘画 · ART", meme:"表情包 · MEME", fanpower:"粉丝发电" };
     function cardEl(it){
       var el = document.createElement("a");
       el.className = "nyan-card";
@@ -1699,7 +1699,13 @@
       var im = document.createElement("img"); im.src = it.cover; im.alt = it.t;
       im.loading = "lazy"; im.referrerPolicy = "no-referrer";
       im.onerror = function(){ th.textContent = "🐱"; };
-      th.appendChild(im); el.appendChild(th);
+      th.appendChild(im);
+      if(it.pin){                      /* 置顶加精：卡片左上角 👑（2026-09-20 用户定） */
+        var pin = document.createElement("span"); pin.className = "pin-badge";
+        pin.textContent = "👑"; pin.title = "置顶加精";
+        th.appendChild(pin);
+      }
+      el.appendChild(th);
       var body = document.createElement("div"); body.className = "body";
       var cat = document.createElement("span"); cat.className = "cat"; cat.textContent = KINDS[it.kind] || "其他 · OTHER";
       var t = document.createElement("div"); t.className = "t"; t.textContent = it.t;
@@ -1712,6 +1718,8 @@
 
     /* 屏蔽用户的条目：静默跳过（只做一次，收起行与展开网格共用） */
     var list = CATS.filter(function(it){ return !blocked(it.uid); });
+    /* 置顶加精排最前（稳定排序，组内顺序不变；收起行与展开网格共用） */
+    list = list.sort(function(a, b){ return (b.pin ? 1 : 0) - (a.pin ? 1 : 0); });
 
     /* 收起视图：最新 6 条混排，一行 6 张卡 */
     for(var i = 0; i < Math.min(6, list.length); i++) rowEl.appendChild(cardEl(list[i]));

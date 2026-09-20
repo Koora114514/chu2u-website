@@ -825,6 +825,11 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .nyan-card .thumb{
   aspect-ratio:4/3;display:grid;place-items:center;font-size:34px;
   background:var(--olive-pale);border-bottom:3px solid var(--ink);
+  position:relative;                    /* 供置顶 👑 角标定位 */
+}
+.nyan-card .pin-badge{
+  position:absolute;top:4px;left:4px;font-size:15px;line-height:1;
+  filter:drop-shadow(0 1px 1px rgba(0,0,0,.55));pointer-events:none;z-index:1;
 }
 .nyan-card .thumb img{width:100%;height:100%;object-fit:cover;image-rendering:auto;display:block}
 .nyan-card .body{padding:17px 10px 17px;height:130px;overflow-y:auto}

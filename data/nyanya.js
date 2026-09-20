@@ -12,8 +12,15 @@
    - 本栏目只从 B 站话题「猫猫宇宙论」(topic_id=1345548) 抓取，
      展示话题里的优秀二创：绘画、二创视频、表情包。
    - 不收录：直播切片/回放（标题含 切片/直播/联动/回放 或判定为直播剪辑）、
+     纯剪辑类视频（2026-09-20 用户定：把直播片段重新剪一遍的「剪辑内容」不算粉丝二创，
+     如 误解向/合集/纯享/互动 等，标题含这类词的收前要仔细甄别）、
      风景照/纯壁纸、AI 绘图（标题/简介含 AI 字样）、羽啾本人（mid 2138961136）
      发的动态；《人是猫》这类创意二创归入视频类。
+   - 手工绘画默认入选（2026-09-20 用户定）：只要是手工绘制的二创图就收，
+     不再按完成度/质量筛「宁缺毋滥」——排除项只有 AI 图与照片。
+   - pin:true = 置顶加精（页面卡片左上角显示 👑，加精内容排最前）。
+   - kind 除了 video/art/meme，还可为 fanpower（「粉丝发电」tag，如 Mod、
+     站宣贴纸这类粉丝发电内容；fanpower 只在「全部」筛选里出现）。
    - 屏蔽名单（两位 B 站用户）与观测记录同一份，加密存在 index.html 里，
      页面运行时解密后自动过滤；这里的条目 uid 不要收录那两位用户。
    - 本人账号的 uid 字段一律写密文 "aWJqYm1vamI="（不写明文），
@@ -28,11 +35,9 @@
      继续显示旧数据。 */
 window.CHU2U_CAT_UPDATED = "2026-09-20";
 window.CHU2U_CAT = [
-  {kind:"video", uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
+  {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
    t:"【羽啾chu2u】杀戮尖塔2 角色Mod测试版发布！", d:"老美のNASA", date:"2026年9月20日"},
-  {kind:"video", uid:"199704632", link:"https://www.bilibili.com/video/BV1SzeD67EVR", cover:"images/nyan/v6.jpg",
-   t:"【误解向】【小松绿X羽啾】我从没有爱过你", d:"缓存文件", date:"2026年9月19日"},
-  {kind:"meme", uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1249212218989346823", cover:"images/nyan/m5.jpg",
+  {kind:"fanpower", pin:true, uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1249212218989346823", cover:"images/nyan/m5.jpg",
    t:"浏览器搜索chu2u.com 均可进站访问", d:"_可乐乐乐乐乐", date:"2026年9月18日"},
   {kind:"art", uid:"91226097", link:"https://www.bilibili.com/opus/1248987824115417140", cover:"images/nyan/a12.jpg",
    t:"分享图片", d:"自由高松灯", date:"2026年9月17日"},
@@ -62,8 +67,6 @@ window.CHU2U_CAT = [
    t:"羽啾本体被我找到了", d:"贰三3三", date:"2026年8月27日"},
   {kind:"art", uid:"299513326", link:"https://www.bilibili.com/opus/1239675085193740306", cover:"images/nyan/a7.jpg",
    t:"锡纸帽击穿", d:"猫头虫尾", date:"2026年8月23日"},
-  {kind:"video", uid:"49093035", link:"https://www.bilibili.com/video/BV1ACbi6DEHL/", cover:"images/nyan/v5.jpg",
-   t:"【小松绿|羽啾】“原来你是我最想留住的幸运”《小幸运》【虚空合唱】", d:"银河的鱼", date:"2026年8月17日"},
   {kind:"art", uid:"3546845108242875", link:"https://www.bilibili.com/opus/1237113665495236610", cover:"images/nyan/a6.jpg",
    t:"我说啾绿王朝了有人懂吗？", d:"小松绿智商低", date:"2026年8月16日"},
   {kind:"meme", uid:"702229167", link:"https://www.bilibili.com/opus/1236702001475092485", cover:"images/nyan/m4.jpg",
