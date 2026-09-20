@@ -1719,8 +1719,18 @@
 
     /* 屏蔽用户的条目：静默跳过（只做一次，收起行与展开网格共用） */
     var list = CATS.filter(function(it){ return !blocked(it.uid); });
-    /* 置顶加精排最前（稳定排序，组内顺序不变；收起行与展开网格共用） */
-    list = list.sort(function(a, b){ return (b.pin ? 1 : 0) - (a.pin ? 1 : 0); });
+    /* 排序（2026-09-20 用户定，收起行与展开网格共用）：
+       置顶加精的排最前；组内统一按动态发布时间从新到旧，不受数据文件里
+       的编辑顺序影响。日期解析不出来（乱填的）排到该组最后。 */
+    function dayOf(it){
+      var m = /(\d+)年(\d+)月(\d+)日/.exec(it.date || "");
+      if(!m) return 0;
+      return new Date(+m[1], +m[2] - 1, +m[3]).getTime();
+    }
+    list = list.sort(function(a, b){
+      if((a.pin ? 1 : 0) !== (b.pin ? 1 : 0)) return (b.pin ? 1 : 0) - (a.pin ? 1 : 0);
+      return dayOf(b) - dayOf(a);
+    });
 
     /* 收起视图：最新 6 条混排，一行 6 张卡 */
     for(var i = 0; i < Math.min(6, list.length); i++) rowEl.appendChild(cardEl(list[i]));
