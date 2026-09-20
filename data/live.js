@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"看看视频下下饭","online":202933,"area":"虚拟主播","start":1789912766,"checked":"2026-09-20 22:10:59"};
+window.CHU2U_LIVE={"live":false,"title":"不打游戏了随便唱唱！","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-21 01:28:38"};
