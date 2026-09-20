@@ -31,8 +31,9 @@
    - 预览图本地缓存在 chu2u/site/images/nyan/，统一 4:3（672x504）：
      按 4:3 中心裁切后 Pillow LANCZOS 缩放，图片不拉伸变形。
    - 更新本文件后，把 index.html 里 data/nyanya.js 那个 <script src> 的
-     ?v= 后面 8 位日期改成今天（YYYYMMDD）——缓存版本号，不改浏览器会
-     继续显示旧数据。 */
+     ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
+     不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
+     会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
 window.CHU2U_CAT_UPDATED = "2026-09-20";
 window.CHU2U_CAT = [
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
