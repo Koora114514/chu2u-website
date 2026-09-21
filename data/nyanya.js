@@ -34,8 +34,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-09-20";
+window.CHU2U_CAT_UPDATED = "2026-09-21";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1248241912842813445", cover:"images/nyan/a17.jpg",
+   t:"", d:"白濑玲_", date:"2026年9月15日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1247847162447921159", cover:"images/nyan/a18.jpg",
+   t:"", d:"白濑玲_", date:"2026年9月14日"},
+  {kind:"art", uid:"253472118", link:"//www.bilibili.com/opus/1241993903660335140", cover:"images/nyan/a19.jpg",
+   t:"", d:"仿佛有一束追光", date:"2026年8月29日"},
+  {kind:"art", uid:"21300440", link:"//www.bilibili.com/opus/1241989862138052624", cover:"images/nyan/a20.jpg",
+   t:"", d:"山月喵", date:"2026年8月29日"},
+  {kind:"art", uid:"400322054", link:"//www.bilibili.com/opus/1241983831984046115", cover:"images/nyan/a21.jpg",
+   t:"杂图", d:"因无", date:"2026年8月29日"},
+  {kind:"art", uid:"37571268", link:"//www.bilibili.com/opus/1234196351908052999", cover:"images/nyan/a22.jpg",
+   t:"有些都忘记是在哪里拍的了（）", d:"千叶Eikawa", date:"2026年8月8日"},
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
    t:"【羽啾chu2u】杀戮尖塔2 角色Mod测试版发布！", d:"老美のNASA", date:"2026年9月20日"},
   {kind:"fanpower", pin:true, uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1249212218989346823", cover:"images/nyan/m5.jpg",
