@@ -42,7 +42,7 @@ window.CHU2U_CAT = [
    t:"浏览器搜索chu2u.com 均可进站访问", d:"_可乐乐乐乐乐", date:"2026年9月18日"},
   {kind:"video", pin:true, uid:"3546957431704396", link:"https://www.bilibili.com/video/BV1myb76TEMx/", cover:"images/nyan/v1.jpg",
    t:"【羽啾chu2u】人是猫？！", d:"yuyu_925", date:"2026年9月6日"},
-  {kind:"art", pin:true, uid:"2420982", link:"https://www.bilibili.com/opus/1239943048228503559", cover:"images/nyan/a17.jpg",
+  {kind:"art", pin:true, uid:"2420982", link:"https://www.bilibili.com/opus/1239943048228503559", cover:"草稿图/a25.jpg",
    t:"（图帖·无文字，上传前请改标题）", d:"鱼豆腐盖飯", date:"2026年8月24日"},
   {kind:"art", uid:"91226097", link:"https://www.bilibili.com/opus/1248987824115417140", cover:"images/nyan/a12.jpg",
    t:"分享图片", d:"自由高松灯", date:"2026年9月17日"},
