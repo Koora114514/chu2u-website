@@ -140,19 +140,19 @@ window.CHU2U_RECORDS = [
       {kind:"milestone", num:"7千+", unit:"同接达成", cat:"里程碑 · MILESTONE",
        t:"287 满月联动 · 7000+ 同接", d:"满月特别联动直播间人气峰值突破 7000，287 名场面之夜。", date:"9月10日"}
     ] },
-  { no:7, tag:"第7期 · 周观测", title:"本周观测速报",
-    range:"2026.09.21 – 2026.09.27", cover:"images/records/issue7.jpg", stamp:"记录·入库",
-    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】到底要抽多少根 才能唱…》（播放 32370）。",
+  { no:7, tag:"戒烟回 · 深夜OW", title:"戒烟名场面与深夜的 OW",
+    range:"2026.09.14 – 2026.09.20", cover:"images/records/issue7.jpg", stamp:"记录·入库",
+    lead:"本周观测站信号密集：9 月 14 日戒烟回名场面——宇宙猫灵魂拷问「到底要抽多少根才能唱出如此深刻的戒烟」，「再见了所有的香烟」刷屏；周末深夜羽啾突击 OW，软糯小动静让宇宙猫直呼可爱；9 月 18 日娇喘音切片更让直播间瞬间被问号刷屏，切片作者连夜交作业。",
     items:[
       {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1LWe56XEZ8", cover:"images/records/item7-1.jpg",
-       cat:"直播切片 · CLIP", t:"【羽啾chu2u】到底要抽多少根 才能唱出如此深刻的戒烟", d:"【羽啾chu2u】到底要抽多少根 才能唱出如此深刻的戒烟", date:"9月14日 · 看切片 →"},
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】到底要抽多少根 才能唱出如此深刻的戒烟", d:"戒烟回名场面：宇宙猫灵魂拷问「到底要抽多少根」，才能唱出如此深刻的戒烟。", date:"9月14日 · 看切片 →"},
       {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1qYea6zEii", cover:"images/records/item7-2.jpg",
-       cat:"直播切片 · CLIP", t:"【羽啾chu2u】羽啾令人血脉喷张深夜ow环节", d:"【羽啾chu2u】羽啾令人血脉喷张深夜ow环节", date:"9月20日 · 看切片 →"},
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】羽啾令人血脉喷张深夜ow环节", d:"深夜突击 OW：软糯小啾的「血脉喷张」环节，小动静可爱到宇宙猫舍不得睡。", date:"9月20日 · 看切片 →"},
       {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1Roeh6PEXk", cover:"images/records/item7-3.jpg",
-       cat:"直播切片 · CLIP", t:"羽啾只是在玩OW【羽啾chu2u】", d:"羽啾只是在玩OW【羽啾chu2u】", date:"9月20日 · 看切片 →"},
+       cat:"直播切片 · CLIP", t:"羽啾只是在玩OW【羽啾chu2u】", d:"同夜另一视角：羽啾只是在玩 OW——但每一帧都是名场面。", date:"9月20日 · 看切片 →"},
       {kind:"video", uid:"4274203", link:"https://www.bilibili.com/video/BV1UWe66mEno", cover:"images/records/item7-4.jpg",
-       cat:"直播切片 · CLIP", t:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", d:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", date:"9月18日 · 看切片 →"},
+       cat:"直播切片 · CLIP", t:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", d:"羽啾调出娇喘音，直播间瞬间被问号刷屏——宇宙猫的手速跟不上耳朵。", date:"9月18日 · 看切片 →"},
       {kind:"video", uid:"777317", link:"https://www.bilibili.com/video/BV1XKei6CEwU", cover:"images/records/item7-5.jpg",
-       cat:"直播切片 · CLIP", t:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", d:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", date:"9月20日 · 看切片 →"}
+       cat:"直播切片 · CLIP", t:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", d:"切片作者「自用」系列新作：对不起啾啾，这回又要自用了。", date:"9月20日 · 看切片 →"}
     ] }
 ];
