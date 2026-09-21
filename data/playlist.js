@@ -1,7 +1,180 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-21 00:13:30   共 101 首（另有手写占位 0 条）
+// 生成时间：2026-09-21 23:09:33   共 105 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
+ {
+  "key": "157498072",
+  "title": "jai trouvé lamour",
+  "titleShazam": "J'ai trouvé l'amour",
+  "artist": "Sheena Ringo & Yasutaka Nakata",
+  "artistSearch": "Sheena Ringo & Yasutaka Nakata",
+  "album": "J'ai trouvé l'amour - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-20",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1GM8168EfW",
+    "start": 425,
+    "end": 587,
+    "votes": 6,
+    "evidence": "shazam×6"
+   },
+   {
+    "date": "2026-09-20",
+    "bvid": "BV1weeB6PEvy",
+    "start": 4700,
+    "end": 4887,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "538680271",
+  "title": "Kaikai Kitan",
+  "titleShazam": "Kaikai Kitan",
+  "artist": "EVE",
+  "artistSearch": "EVE",
+  "album": "Kaikai Kitan / Ao No Waltz",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-20",
+  "sings": [
+   {
+    "date": "2026-09-20",
+    "bvid": "BV1weeB6PEvy",
+    "start": 150,
+    "end": 187,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "569350683",
+  "title": "Only Me",
+  "titleShazam": "Only Me",
+  "artist": "Jameswvpav",
+  "artistSearch": "Jameswvpav",
+  "album": "Only Me - Single",
+  "lang": "中文",
+  "tags": [
+   "流行"
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-20",
+  "sings": [
+   {
+    "date": "2026-09-20",
+    "bvid": "BV1weeB6PEvy",
+    "start": 250,
+    "end": 287,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "40242673",
+  "title": "Gips",
+  "titleShazam": "Gips",
+  "artist": "Sheena Ringo",
+  "artistSearch": "Sheena Ringo",
+  "album": "Shouso Strip - Winning Strip",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-20",
+  "sings": [
+   {
+    "date": "2026-09-20",
+    "bvid": "BV1weeB6PEvy",
+    "start": 4050,
+    "end": 4362,
+    "votes": 8,
+    "evidence": "shazam×7"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "884723588",
+  "title": "Smoke and Blue",
+  "titleShazam": "Smoke and Blue",
+  "artist": "Necry Talkie",
+  "artistSearch": "Necry Talkie",
+  "album": "Smoke and Blue e.p. - EP",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-20",
+  "sings": [
+   {
+    "date": "2026-09-20",
+    "bvid": "BV1weeB6PEvy",
+    "start": 2100,
+    "end": 2137,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
  {
   "key": "713035738",
   "title": "Kajitsu",
@@ -3132,39 +3305,6 @@ window.CHU2U_SONGS = [
   "cover": "images/song/319857015.jpg",
   "audioStatus": "ok",
   "dur": 344.4
- },
- {
-  "key": "157498072",
-  "title": "jai trouvé lamour",
-  "titleShazam": "J'ai trouvé l'amour",
-  "artist": "Sheena Ringo & Yasutaka Nakata",
-  "artistSearch": "Sheena Ringo & Yasutaka Nakata",
-  "album": "J'ai trouvé l'amour - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 425,
-    "end": 587,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
  },
  {
   "key": "572844605",
