@@ -293,7 +293,7 @@
     <h2><span class="no">QUEST</span>每周计划</h2>
   </div>
   <div class="wk-head reveal">
-    <span class="wk-status"><span class="dot" aria-hidden="true"></span><span id="planWhen">更新于 <span class="wk-date">2026年9月16日</span></span></span>
+    <span class="wk-status"><span class="dot" aria-hidden="true"></span><span id="planWhen">更新于 <span class="wk-date">2026年9月21日</span></span></span>
     <h2 class="wk-title">本周计划</h2>
     <p class="wk-sub">周表内容来自主页置顶动态的第一张图，每周自动检查一次，置顶动态更新后自动抓取替换。</p>
     <ul class="wk-list">
@@ -310,7 +310,7 @@
              自动生成两份：schedule-week.png（静止显示 1140px 无损，页面按 570px 显示=2 倍素材高分屏不糊）、
              schedule-week-full.png（无损原图，悬停与单击大图共用）；
              同时把上方「更新于 X年X月X日」改成抓取/上传那天的日期 -->
-        <img id="weekImg" src="images/schedule-week.png?v=20260916b" alt="本周周表照片" referrerpolicy="no-referrer">
+        <img id="weekImg" src="images/schedule-week.png?v=202609212029" alt="本周周表照片" referrerpolicy="no-referrer">
         <div class="wk-q" id="weekFail" hidden>？</div>
       </div>
     </div>
@@ -1030,8 +1030,8 @@
     var KEY  = "chu2u-week-v2";          /* 远程抓取缓存 {id, img, ts, week} */
     var DKEY = "chu2u-week-drop";        /* 拖入图片缓存 {img, ts} */
     var UID = "2138961136";
-    var LOCAL = "images/schedule-week.png?v=20260916b";      /* 静止显示版（1140px 素材按 570px 显示）；?v= 由维护脚本换图时自动改日期，绕过浏览器缓存 */
-    var FULL  = "images/schedule-week-full.png?v=20260916b"; /* 无损原图（悬停与单击大图共用） */
+    var LOCAL = "images/schedule-week.png?v=202609212029";      /* 静止显示版（1140px 素材按 570px 显示）；?v= 由维护脚本换图时自动改日期，绕过浏览器缓存 */
+    var FULL  = "images/schedule-week-full.png?v=202609212029"; /* 无损原图（悬停与单击大图共用） */
     var when    = document.getElementById("planWhen");
     var img     = document.getElementById("weekImg");
     var fail    = document.getElementById("weekFail");
