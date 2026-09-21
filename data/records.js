@@ -139,5 +139,20 @@ window.CHU2U_RECORDS = [
        cat:"直播切片 · CLIP", t:"神人下播小剧情：谁呀这么没素质！", d:"下播时门口传来敲门声——羽啾已被通缉、随后被抓走，神人小剧情。", date:"9月13日 · 看切片 →"},
       {kind:"milestone", num:"7千+", unit:"同接达成", cat:"里程碑 · MILESTONE",
        t:"287 满月联动 · 7000+ 同接", d:"满月特别联动直播间人气峰值突破 7000，287 名场面之夜。", date:"9月10日"}
+    ] },
+  { no:7, tag:"第7期 · 周观测", title:"本周观测速报",
+    range:"2026.09.21 – 2026.09.27", cover:"images/records/issue7.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】到底要抽多少根 才能唱…》（播放 32370）。",
+    items:[
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1LWe56XEZ8", cover:"images/records/item7-1.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】到底要抽多少根 才能唱出如此深刻的戒烟", d:"【羽啾chu2u】到底要抽多少根 才能唱出如此深刻的戒烟", date:"9月14日 · 看切片 →"},
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1qYea6zEii", cover:"images/records/item7-2.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】羽啾令人血脉喷张深夜ow环节", d:"【羽啾chu2u】羽啾令人血脉喷张深夜ow环节", date:"9月20日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1Roeh6PEXk", cover:"images/records/item7-3.jpg",
+       cat:"直播切片 · CLIP", t:"羽啾只是在玩OW【羽啾chu2u】", d:"羽啾只是在玩OW【羽啾chu2u】", date:"9月20日 · 看切片 →"},
+      {kind:"video", uid:"4274203", link:"https://www.bilibili.com/video/BV1UWe66mEno", cover:"images/records/item7-4.jpg",
+       cat:"直播切片 · CLIP", t:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", d:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", date:"9月18日 · 看切片 →"},
+      {kind:"video", uid:"777317", link:"https://www.bilibili.com/video/BV1XKei6CEwU", cover:"images/records/item7-5.jpg",
+       cat:"直播切片 · CLIP", t:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", d:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", date:"9月20日 · 看切片 →"}
     ] }
 ];
