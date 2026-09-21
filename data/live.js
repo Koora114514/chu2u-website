@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"不打游戏了随便唱唱！","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-21 01:28:38"};
+window.CHU2U_LIVE={"live":true,"title":"来自夜晚的困倦电波信号...⭐","online":63102,"area":"虚拟主播","start":1789998510,"checked":"2026-09-21 21:53:23"};
