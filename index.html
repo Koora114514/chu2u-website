@@ -1295,17 +1295,12 @@
     })();
     if(el.hidden) return;
 
-    /* 右上角「×」：关掉并记住（存本地），不然每次刷新又蹦出来。
-       记的是「关掉时文案的版本号」（UPDATED）：之后文案一更新，飘窗自动重新出现；
-       旧版记的 "1" 对不上版本号，所以以前关过的人这次也会重新看到 */
-    var floatVer = window.CHU2U_FLOATBTN_UPDATED || "";
-    if(localStorage.getItem("chu2u-floatbtn-closed") === floatVer){ el.hidden = true; return; }
+    /* 右上角「×」：只把这一次关掉（不记本地）——每次刷新/重进主页，飘窗都会再出现 */
     var closeBtn = document.getElementById("bfClose");
     if(closeBtn){
       function doClose(e){
         e.preventDefault(); e.stopPropagation();
         el.hidden = true;
-        try{ localStorage.setItem("chu2u-floatbtn-closed", floatVer); }catch(err){}
       }
       closeBtn.addEventListener("click", doClose);
       closeBtn.addEventListener("keydown", function(e){
