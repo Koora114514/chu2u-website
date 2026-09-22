@@ -1952,3 +1952,138 @@ body.dark .hud-link.is-active{color:#f2f4e2;background-color:#2b2b56}
   .pl-row{column-gap:8px;row-gap:8px}
   .pl-row .pl-count2{min-width:0}
 }
+
+/* ============================================================
+   Index📕 V圈知识库（kb.html，2026-09-22 新增二级页；2026-09-22 用户定改纯索引：
+   行 = 词条名（20px）+ 成分 tag，点击直达萌娘百科，不展示正文、无浮层）
+   ============================================================ */
+.kb-card{padding:20px 22px 26px}
+.kb-tools{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.kb-search{
+  font-family:inherit;font-size:14px;color:var(--ink);
+  background:var(--panel);border:2px solid var(--ink);
+  box-shadow:2px 2px 0 rgba(48,48,48,.4);
+  padding:9px 12px;width:min(320px,100%);outline:none;
+}
+.kb-search:focus{border-color:var(--olive-deep)}
+.kb-count{margin-left:auto;font-size:14px;color:var(--ink-soft);letter-spacing:1px;white-space:nowrap}
+/* 首字索引条：横排可左右滚动（滚轮/手指拖动），配本站同款像素细滚动条 */
+.kb-index{
+  margin-top:14px;display:flex;gap:8px;overflow-x:auto;padding-bottom:10px;
+  scrollbar-width:thin;scrollbar-color:var(--olive) var(--panel);
+}
+.kb-index::-webkit-scrollbar{height:10px}
+.kb-index::-webkit-scrollbar-track{background:var(--panel);border:2px solid var(--ink)}
+.kb-index::-webkit-scrollbar-thumb{background:var(--olive);border:2px solid var(--ink)}
+.kb-chip{
+  flex:0 0 auto;font-family:inherit;font-size:14px;color:var(--ink);
+  background:var(--panel);border:2px solid var(--ink);
+  padding:4px 10px;cursor:pointer;letter-spacing:1px;
+}
+.kb-chip:hover{background:var(--olive-pale)}
+.kb-chip.on{background:var(--olive);color:var(--ink)}
+body.dark .kb-chip.on{background:var(--olive-deep);color:#10102a}
+.kb-chip b{color:var(--ink);opacity:.75;font-weight:normal;margin-left:4px}
+.kb-chip.on b{color:var(--ink);opacity:1}
+body.dark .kb-chip.on b{color:#10102a}
+/* 条目列表：每行 = 词条名（20px）+ 成分 tag 行（1-6 个）；整行是链接，点击直达萌娘百科 */
+.kb-list{
+  margin-top:12px;border:3px solid var(--ink);background:var(--panel);
+  box-shadow:6px 6px 0 rgba(48,48,48,.3);
+  max-height:560px;overflow-y:auto;overscroll-behavior:contain;
+  scrollbar-width:thin;scrollbar-color:var(--olive) var(--panel);
+}
+.kb-list::-webkit-scrollbar{width:10px}
+.kb-list::-webkit-scrollbar-track{background:var(--panel);border-left:2px solid var(--ink)}
+.kb-list::-webkit-scrollbar-thumb{background:var(--olive);border:2px solid var(--ink)}
+.kb-row{
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:6px;width:100%;
+  min-height:76px;      /* 统一行高：无 tag 的词条行也和有 tag 的行一样高（名称垂直居中），列表不参差 */
+  padding:10px 14px;border-bottom:3px solid var(--line);
+  background:none;font:inherit;color:inherit;cursor:pointer;text-align:left;
+  text-decoration:none;
+}
+.kb-row:last-child{border-bottom:0}
+.kb-row:hover{background:var(--olive-pale)}
+.kb-row:focus-visible{background:var(--olive-pale);outline:2px dashed var(--ink);outline-offset:-4px}
+.kb-row .kb-t{font-size:20px;line-height:1.4;letter-spacing:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.kb-tags{display:flex;flex-wrap:wrap;gap:6px}
+.kb-tag{
+  font-size:12px;line-height:1.4;color:var(--ink);background:var(--olive-pale);
+  border:1px solid var(--ink);padding:1px 8px;letter-spacing:1px;
+}
+.kb-empty{padding:36px 16px;text-align:center;font-size:14px;color:var(--ink-soft);letter-spacing:2px}
+.kb-more{padding:14px 16px;text-align:center;font-size:14px;color:var(--ink-soft)}
+/* 来源与许可说明卡 */
+.kb-note{padding:20px 24px}
+.kb-note p{font-size:14px;line-height:1.9;color:var(--ink-soft);margin:6px 0}
+.kb-note a{color:var(--olive-deep);text-decoration:underline;text-underline-offset:2px}
+.kb-note a:hover{background:var(--olive-pale)}
+
+/* ============================================================
+   Index📕 圆角+高光收尾（2026-09-23 用户定：栏目大卡片保持方角，
+   内部按键/标签/卡片一律倒圆角 + 顶部绘画式高光）
+   + 🏷 tag 筛选面板（分类 tab + 芯片区）
+   ============================================================ */
+.kb-chip{border-radius:12px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 45%,rgba(255,255,255,0) 70%);}
+body.dark .kb-chip{background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 45%,rgba(255,255,255,0) 70%);}
+.kb-tag{border-radius:8px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 45%,rgba(255,255,255,0) 70%);}
+body.dark .kb-tag{background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 45%,rgba(255,255,255,0) 70%);}
+/* tag 筛选开关（开 = 橄榄底选中态，与 px-btn.on 同款） */
+.kb-tagfilter-btn.on{background:var(--olive);color:var(--ink)}
+body.dark .kb-tagfilter-btn.on{background:var(--olive-deep);color:#10102a}
+/* tag 筛选面板：内层卡片 16px 圆角 + 高光 */
+.kb-tagpanel{
+  margin-top:12px;background:var(--olive-pale);border:3px solid var(--ink);
+  box-shadow:4px 4px 0 rgba(48,48,48,.3);
+  border-radius:16px;padding:14px 16px;
+  display:flex;flex-direction:column;gap:10px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.5),rgba(255,255,255,.15) 34%,rgba(255,255,255,0) 62%);
+}
+body.dark .kb-tagpanel{background-image:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.035) 34%,rgba(255,255,255,0) 62%)}
+/* 分类 tab 行：9 类全露脸（用户要一眼看到有几类）；窄屏自动折行 */
+.kb-cattabs{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:10px;border-bottom:3px solid var(--line)}
+.kb-cattab{
+  font-family:inherit;font-size:14px;line-height:1.4;color:var(--ink);
+  background-color:var(--panel);border:2px solid var(--ink);
+  padding:4px 10px;cursor:pointer;letter-spacing:1px;border-radius:12px;
+  background-image:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 45%,rgba(255,255,255,0) 70%);
+}
+body.dark .kb-cattab{background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 45%,rgba(255,255,255,0) 70%)}
+.kb-cattab:hover{background-color:var(--olive-pale)}
+.kb-cattab.on{background-color:var(--olive);color:var(--ink)}
+body.dark .kb-cattab.on{background-color:var(--olive-deep);color:#10102a}
+.kb-cattab b{color:var(--ink);opacity:.75;font-weight:normal;margin-left:4px}
+.kb-cattab.on b{color:var(--ink);opacity:1}
+body.dark .kb-cattab.on b{color:#10102a}
+/* 当前分类的 tag 芯片区：多出的滚轮上下浏览（像素细滚动条） */
+.kb-tagarea{
+  max-height:200px;overflow-y:auto;overscroll-behavior:contain;
+  display:flex;flex-wrap:wrap;gap:6px;align-content:flex-start;
+  padding-right:6px;
+  scrollbar-width:thin;scrollbar-color:var(--olive) var(--panel);
+}
+.kb-tagarea::-webkit-scrollbar{width:10px}
+.kb-tagarea::-webkit-scrollbar-track{background:var(--panel);border-left:2px solid var(--ink)}
+.kb-tagarea::-webkit-scrollbar-thumb{background:var(--olive);border:2px solid var(--ink)}
+.kb-tagchip{
+  font-family:inherit;font-size:12px;line-height:1.4;color:var(--ink);
+  border:2px solid var(--ink);
+  padding:2px 8px;cursor:pointer;letter-spacing:1px;border-radius:10px;
+  background-color:var(--panel);
+  background-image:linear-gradient(180deg,rgba(255,255,255,.42),rgba(255,255,255,.12) 45%,rgba(255,255,255,0) 70%);
+}
+body.dark .kb-tagchip{background-image:linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,.03) 45%,rgba(255,255,255,0) 70%)}
+.kb-tagchip:hover{background-color:var(--olive-pale)}
+.kb-tagchip.on{background-color:var(--olive);color:var(--ink)}
+body.dark .kb-tagchip.on{background-color:var(--olive-deep);color:#10102a}
+.kb-tagchip b{color:var(--ink);opacity:.75;font-weight:normal;margin-left:4px}
+.kb-tagchip.on b{color:var(--ink);opacity:1}
+body.dark .kb-tagchip.on b{color:#10102a}
+/* 手机端：面板收紧、芯片区别太高 */
+@media(max-width:640px){
+  .kb-tagpanel{padding:12px}
+  .kb-tagarea{max-height:40vh}
+}

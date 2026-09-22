@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来）
+   注意：只拦截「刷新」；「前进/后退」仍交给浏览器自己恢复位置，不然返回上一页会丢失阅读位置 */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
+<title>羽啾chu2u · Index📕</title>
+<meta name="description" content="羽啾chu2u 像素个人站 · V圈知识库索引（萌娘百科词条：首字索引浏览 / 全文搜索 / 随机一条，点击直达萌娘百科）">
+<link rel="icon" type="image/png" href="images/fumo啾.png">
+<!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
+<link rel="stylesheet" href="css/base.css?v=2026092300">
+</head>
+<body>
+<div class="contour-bg" aria-hidden="true"></div>
+<div class="dark-stars" aria-hidden="true"></div>
+
+<!-- ============ 顶部导航（站标 + B站主页 + 直播间状态） ============ -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo"><img src="images/喵啾.png" alt="羽啾chu2u"></span>
+      <span class="brand-text">
+        <b>羽啾chu2u</b>
+        <small>Index📕</small>
+        <i>Universe Observation Center</i>
+      </span>
+    </div>
+    <nav class="nav">
+      <!-- 像素时钟：选中的时区记在本地浏览器（静态部署也能用，纯前端） -->
+      <div class="pixel-clock" id="pixelClock">
+        <div class="pc-row">
+          <span class="pc-time" id="pcTime">--:--:--</span>
+          <span class="pc-date" id="pcDate">----.--.-- 周-</span>
+        </div>
+        <select class="pc-sel" id="pcTz" aria-label="选择时区" title="选择时区"></select>
+      </div>
+      <div class="bili-box">
+        <a class="px-btn nav-bili" href="https://space.bilibili.com/2138961136?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">进入B站主页</a>
+        <!-- 直播间开播状态：数据来自 data/live.js（每 2 分钟刷新）；整行点按直达直播间 -->
+        <div class="live-wrap">
+          <a class="live-line" id="liveLine" href="https://live.bilibili.com/1727074031" target="_blank" rel="noopener" title="点我直达啾啾的直播间">
+            <span class="live-dot" aria-hidden="true"></span><span id="liveLabel">状态获取中…</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 侧边栏：页间切换导航（图标悬停弹出放大文字；末位老美のNASA 外链） ============ -->
+<nav class="sidenav" aria-label="页面切换">
+  <a class="side-btn" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
+  <a class="side-btn" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
+  <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
+  <a class="side-btn is-here" href="kb.html" aria-label="Index📕"><img src="images/啥啾.png" alt=""><span class="side-label" aria-hidden="true">Index📕</span></a>
+  <a class="side-btn" href="https://chu2u.live/" target="_blank" rel="noopener" aria-label="老美のNASA"><img src="images/宇宙猫.png" alt=""><span class="side-label" aria-hidden="true">老美のNASA</span></a>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-hero reveal">
+      <span class="kicker">KNOWLEDGE BASE<small>MOEGIRL V-KB · 2026.08</small></span>
+      <h1>Index📕</h1>
+      <p class="sub">V 圈知识库——萌娘百科「虚拟UP主 · 虚拟偶像 · 虚拟歌手」分类下 2,572 个条目的索引（2026-08-31 快照）。可以按首字索引浏览、全文搜索，或者随机一条；点击词条直接跳转萌娘百科对应页面。<br>特别鸣谢 yuyu 提供的知识库，欢迎各位学习了解 V 圈知识库。</p>
+    </div>
+
+    <div class="sec-title reveal" id="kb">
+      <h2><span class="no">INDEX</span>知识库索引</h2>
+    </div>
+    <div class="pixel-card kb-card reveal">
+      <div class="kb-tools">
+        <input class="kb-search" id="kbSearch" type="search" placeholder="搜索条目名 / 正文内容…" aria-label="搜索知识库条目">
+        <button class="px-btn ghost" id="kbRandom" type="button">🎲 随机一条</button>
+        <button class="px-btn ghost kb-tagfilter-btn" id="kbTagFilterBtn" type="button" aria-pressed="false" aria-controls="kbTagPanel">🏷 tag 筛选</button>
+        <span class="kb-count" id="kbCount"></span>
+      </div>
+      <!-- tag 筛选面板：开关打开才显示；分类分栏，位于首字索引条上方 -->
+      <div class="kb-tagpanel" id="kbTagPanel" hidden aria-label="按 tag 筛选"></div>
+      <div class="kb-index" id="kbIndex" role="tablist" aria-label="首字索引"></div>
+      <div class="kb-list" id="kbList"><div class="kb-empty">正在加载知识库…</div></div>
+    </div>
+
+    <div class="sec-title reveal" id="notice">
+      <h2><span class="no">NOTICE</span>来源与许可</h2>
+    </div>
+    <div class="pixel-card kb-note reveal">
+      <p>本栏目收录萌娘百科《虚拟UP主》《虚拟偶像》《虚拟歌手》分类树下的公开条目，共 2,572 个主命名空间条目（2026-08-31 快照）；点击词条直达萌娘百科当前页面，以源站最新内容为准。</p>
+      <p>文本许可：<a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/" target="_blank" rel="noopener">CC BY-NC-SA 3.0 中国大陆</a>（署名 — 非商业性使用 — 相同方式共享）。禁止商业使用；修改或再发布须保持相同许可并保留署名。详见<a href="https://zh.moegirl.org.cn/萌娘百科:著作权信息" target="_blank" rel="noopener">萌娘百科著作权信息</a>。</p>
+      <p>萌娘百科内容信号为 use=reference、ai-train=no：本页只作词条索引与检索参考，请勿用于模型训练或建立训练语料。快照可能不完整或过时，涉及现实人物与争议事件时请回到<a href="https://zh.moegirl.org.cn/" target="_blank" rel="noopener">源页面</a>复核。</p>
+    </div>
+  </div>
+</main>
+
+<!-- 深浅色模式切换按钮（左下角） -->
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
+  <img class="tt-sun" src="images/得意啾.png" alt=""><img class="tt-moon" src="images/龙宫礼啾.png" alt="">
+</button>
+<!-- 返回顶部飞船按钮（右下角）：悬停上下浮动，点击垂直飞出并冒出像素气泡 -->
+<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
+  <img src="images/飞船啾.png" alt="返回顶部">
+</button>
+
+<script src="js/shared.js"></script>
+<!-- 知识库数据：两个分片共 2,572 条（由 维护\知识库构建.py 从萌娘百科快照 md 生成；
+     更新数据文件后记得同步 bump 下面两个 ?v= 版本号（当天+时分）） -->
+<script src="data/kb-0001.js?v=202609230151"></script>
+<script src="data/kb-0002.js?v=202609230151"></script>
+<script>
+/* ============ Index📕 V圈知识库（kb.html 页面脚本） ============
+   2026-09-22 用户定：纯索引形式——每行只显示词条名（20px）+ 成分 tag（1-6 个），
+   点击整行直达萌娘百科当前页面（新窗口）；不展示百科正文、无浮层；
+   🎲 随机一条 = 在索引列表里展示一条随机词条，点击后才跳转
+   2026-09-23 用户定：去掉「标题+正文/仅标题」范围键；新增 🏷 tag 筛选开关——
+   分类分栏面板放在首字索引条上方，点 tag chip 筛选、再点取消；
+   tag 筛选与搜索/首字组是「同时满足」关系；关掉开关自动清除筛选 */
+(function(){
+  "use strict";
+  var KB = window.CHU2U_KB || [];
+  var $ = function(id){ return document.getElementById(id); };
+  var listEl = $("kbList"), idxEl = $("kbIndex"), countEl = $("kbCount"),
+      searchEl = $("kbSearch"), randomBtn = $("kbRandom");
+  var tagBtn = $("kbTagFilterBtn"), tagPanel = $("kbTagPanel");
+
+  /* ---------- 首字分组：0-9 / A-Z / 汉字假名按字 / #（其他符号） ---------- */
+  var GROUPS = [], GROUP_MAP = {};
+  function groupKey(t){
+    var ch = t.charAt(0);
+    if(ch >= "0" && ch <= "9") return "0-9";
+    var c = ch.toUpperCase();
+    if(c >= "A" && c <= "Z") return c;
+    if(ch.charCodeAt(0) >= 0x1100) return ch;   /* CJK / 假名 / 谚文等按字分组 */
+    return "#";
+  }
+  function buildGroups(){
+    var map = {};
+    KB.forEach(function(e, i){ var k = groupKey(e.t || ""); (map[k] = map[k] || []).push(i); });
+    GROUPS = [];
+    Object.keys(map).forEach(function(k){
+      map[k].sort(function(a, b){ return (KB[a].t || "").localeCompare(KB[b].t || "", "zh"); });
+      GROUPS.push({k: k, items: map[k]});
+    });
+    GROUPS.sort(function(a, b){
+      if(a.k === "0-9") return -1; if(b.k === "0-9") return 1;
+      if(a.k === "#") return 1; if(b.k === "#") return -1;
+      return a.k < b.k ? -1 : 1;
+    });
+    GROUP_MAP = {};
+    GROUPS.forEach(function(g){ GROUP_MAP[g.k] = g; });
+  }
+
+  /* ---------- 首字索引 chips ---------- */
+  var curGroup = "";   /* "" = 全部 */
+  function renderIndex(){
+    var frag = document.createDocumentFragment();
+    function chip(k, label, n){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "kb-chip" + (curGroup === k ? " on" : "");
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", curGroup === k ? "true" : "false");
+      b.textContent = label;
+      var c = document.createElement("b");
+      c.textContent = String(n);
+      b.appendChild(c);
+      b.addEventListener("click", function(){ curGroup = k; renderIndex(); render(); });
+      return b;
+    }
+    frag.appendChild(chip("", "全部", KB.length));
+    GROUPS.forEach(function(g){ frag.appendChild(chip(g.k, g.k, g.items.length)); });
+    idxEl.innerHTML = "";
+    idxEl.appendChild(frag);
+  }
+
+  /* ---------- tag 分类面板（2026-09-23 用户定：9 类 tab 全露脸，点分类看该类的 tag 芯片；
+     分类在构建时按信息框字段归类，面板从数据里收集全部去重 tag——每个 tag 都有筛选键） ---------- */
+  var TAG_ORDER = ["社团·企划", "机构", "平台·媒体", "职业", "语言", "地区", "演唱", "粉丝勋章", "形象设计"];
+  var TAG_CATS = [];          /* [{k:分类, items:[{v:tag, n:条数}]}] */
+  var selCat = "";            /* 当前选中的分类 tab */
+  var selectedTag = null;     /* null = 不按 tag 筛 */
+  function hasTag(e, tag){
+    for(var i = 0; i < (e.g || []).length; i++){ if(e.g[i][1] === tag) return true; }
+    return false;
+  }
+  function buildTagPanel(){
+    var cats = {};
+    KB.forEach(function(e){
+      (e.g || []).forEach(function(pair){
+        var cat = pair[0], tag = pair[1];
+        if(!cat || !tag) return;
+        (cats[cat] = cats[cat] || {});
+        cats[cat][tag] = (cats[cat][tag] || 0) + 1;
+      });
+    });
+    TAG_CATS = [];
+    TAG_ORDER.concat(Object.keys(cats).filter(function(k){ return TAG_ORDER.indexOf(k) < 0; })).forEach(function(cat){
+      if(!cats[cat]) return;
+      var items = [];
+      Object.keys(cats[cat]).forEach(function(tag){ items.push({v: tag, n: cats[cat][tag]}); });
+      items.sort(function(a, b){ return b.n - a.n; });   /* 每类内按条数从多到少 */
+      TAG_CATS.push({k: cat, items: items});
+    });
+    selCat = TAG_CATS.length ? TAG_CATS[0].k : "";
+    renderTagPanel();
+  }
+  function renderTagPanel(){
+    var frag = document.createDocumentFragment();
+    /* 分类 tab 行：全部类一目了然，默认选中第一类 */
+    var tabsRow = document.createElement("div");
+    tabsRow.className = "kb-cattabs";
+    TAG_CATS.forEach(function(cat){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "kb-cattab" + (selCat === cat.k ? " on" : "");
+      b.setAttribute("aria-pressed", selCat === cat.k ? "true" : "false");
+      b.textContent = cat.k;
+      var n = document.createElement("b");
+      n.textContent = String(cat.items.length);
+      b.appendChild(n);
+      b.addEventListener("click", function(){
+        selCat = cat.k;
+        renderTagPanel();
+      });
+      tabsRow.appendChild(b);
+    });
+    frag.appendChild(tabsRow);
+    /* 当前分类的 tag 芯片区：多出的芯片滚轮上下浏览 */
+    var area = document.createElement("div");
+    area.className = "kb-tagarea";
+    var cur = null;
+    TAG_CATS.forEach(function(c){ if(c.k === selCat) cur = c; });
+    if(cur){
+      cur.items.forEach(function(it){
+        var c = document.createElement("button");
+        c.type = "button";
+        c.className = "kb-tagchip" + (selectedTag === it.v ? " on" : "");
+        c.setAttribute("aria-pressed", selectedTag === it.v ? "true" : "false");
+        c.textContent = it.v;
+        var b = document.createElement("b");
+        b.textContent = String(it.n);
+        c.appendChild(b);
+        c.addEventListener("click", function(){
+          selectedTag = (selectedTag === it.v ? null : it.v);   /* 再点同一个 = 取消 */
+          renderTagPanel();
+          render();
+        });
+        area.appendChild(c);
+      });
+    }
+    frag.appendChild(area);
+    tagPanel.innerHTML = "";
+    tagPanel.appendChild(frag);
+  }
+
+  /* ---------- 列表渲染：行 = 词条名 + 成分 tag，整行链接直达萌娘百科 ---------- */
+  var MAX_ROWS = 400;
+  var randomIdx = -1;   /* ≥0 = 展示随机那一条（展示完即清） */
+  function render(){
+    var q = searchEl.value.trim().toLowerCase();
+    var out = [], total;
+    if(randomIdx >= 0){
+      out = [{i: randomIdx}];
+      total = 1;
+      randomIdx = -1;
+    } else {
+      var titleHits = [], bodyHits = [];
+      KB.forEach(function(e, i){
+        if(selectedTag && !hasTag(e, selectedTag)) return;
+        if(q){
+          var t = (e.t || "").toLowerCase();
+          if(t.indexOf(q) >= 0){ titleHits.push({i: i}); return; }
+          if((e.c || "").toLowerCase().indexOf(q) >= 0) bodyHits.push({i: i});
+        } else if(curGroup === "" || groupKey(e.t || "") === curGroup){
+          titleHits.push({i: i});
+        }
+      });
+      out = titleHits.concat(bodyHits);
+      total = out.length;
+    }
+    var frag = document.createDocumentFragment();
+    out.slice(0, MAX_ROWS).forEach(function(o){
+      var e = KB[o.i];
+      var row = document.createElement("a");
+      row.className = "kb-row";
+      row.href = e.u || "#";
+      row.target = "_blank";
+      row.rel = "noopener";
+      row.title = "点击直达萌娘百科：" + e.t;
+      var t = document.createElement("span");
+      t.className = "kb-t";
+      t.textContent = e.t;
+      row.appendChild(t);
+      if(e.g && e.g.length){
+        var tags = document.createElement("span");
+        tags.className = "kb-tags";
+        e.g.forEach(function(pair){
+          var c = document.createElement("span");
+          c.className = "kb-tag";
+          c.textContent = pair[1];   /* 行内只显示 tag 值，分类在筛选面板里体现 */
+          tags.appendChild(c);
+        });
+        row.appendChild(tags);
+      }
+      frag.appendChild(row);
+    });
+    listEl.innerHTML = "";
+    listEl.appendChild(frag);
+    if(!out.length){
+      var empty = document.createElement("div");
+      empty.className = "kb-empty";
+      empty.textContent = q ? "没有找到相关条目，换一个关键词试试吧 ✦" : (selectedTag ? "没有符合条件的条目，换个 tag 试试吧 ✦" : "这个首字下还没有条目");
+      listEl.appendChild(empty);
+    } else if(out.length > MAX_ROWS){
+      var more = document.createElement("div");
+      more.className = "kb-more";
+      more.textContent = "还有 " + (out.length - MAX_ROWS) + " 条 · 换一个首字或输入关键词缩小范围";
+      listEl.appendChild(more);
+    }
+    countEl.textContent = "共 " + KB.length + " 条 · 显示 " + Math.min(out.length, MAX_ROWS) + " 条";
+    listEl.scrollTop = 0;
+  }
+
+  /* ---------- 事件绑定 ---------- */
+  randomBtn.addEventListener("click", function(){
+    searchEl.value = "";
+    curGroup = "";
+    selectedTag = null;
+    renderIndex();
+    renderTagPanel();
+    randomIdx = Math.floor(Math.random() * KB.length);
+    render();
+  });
+  var st = null;
+  searchEl.addEventListener("input", function(){
+    clearTimeout(st);
+    st = setTimeout(render, 180);
+  });
+  /* tag 筛选开关：开 = 面板展开；关 = 收起并清除筛选 */
+  tagBtn.addEventListener("click", function(){
+    var on = tagPanel.hidden;
+    tagPanel.hidden = !on;
+    tagBtn.classList.toggle("on", on);
+    tagBtn.setAttribute("aria-pressed", on ? "true" : "false");
+    if(!on){
+      selectedTag = null;
+      renderTagPanel();
+      render();
+    }
+  });
+
+  /* ---------- 启动 ---------- */
+  if(!KB.length){
+    listEl.innerHTML = "";
+    var empty = document.createElement("div");
+    empty.className = "kb-empty";
+    empty.textContent = "知识库数据加载失败：请确认 data/kb-0001.js 与 data/kb-0002.js 存在且完整";
+    listEl.appendChild(empty);
+    return;
+  }
+  buildGroups();
+  buildTagPanel();
+  renderIndex();
+  render();
+})();
+</script>
+<!-- ============ 底部滚动弹幕（黑底 + 应援色，单击复制） ============ -->
+<div class="danmu-bar" id="danmuBar" role="button" tabindex="0" title="单击复制" aria-label="单击复制这段文字">
+  <div class="danmu-track" id="danmuTrack"></div>
+</div>
+<script>
+(function(){
+  var TEXT = "aHR0cHM6Ly9hcHAubm90aW9uLmNvbS9wLzNhMDEyNWQxNDM4ODgwZDNiZjVhZWRhZGRhZDNmNGE0P3NvdXJjZT1jb3B5X2xpbms=";
+  var bar = document.getElementById("danmuBar");
+  var track = document.getElementById("danmuTrack");
+  if(!bar || !track) return;
+  var unit = TEXT + "　★　";
+  function fill(n){
+    var buf = [];
+    for(var i = 0; i < n; i++) buf.push(unit);
+    track.textContent = buf.join("");
+    return n;
+  }
+  function layout(){
+    // 先铺一遍估算份数，量出「一份」的真实宽度
+    var times = fill(Math.max(3, Math.ceil((window.innerWidth * 1.8) / (unit.length * 8)) + 1));
+    var unitW = track.scrollWidth / times;
+    if(!(unitW > 0)) return;
+    // 份数要够：左移一份后，剩下的仍能盖满视口，否则循环处会露空
+    var need = Math.ceil(window.innerWidth / unitW) + 1;
+    if(need > times){
+      times = fill(need);
+      unitW = track.scrollWidth / times;
+    }
+    // 每轮只左移「一份」的宽度 → 下一份正好补到同一位置，无缝无限循环
+    track.style.setProperty("--danmu-shift", unitW.toFixed(1) + "px");
+    // 1.2 倍速 = 约 66px/秒（2026-09-13 用户定）
+    track.style.animationDuration = Math.max(6, unitW / 66).toFixed(1) + "s";
+  }
+  layout();
+  window.addEventListener("resize", layout);
+  function feedback(ok){
+    bar.classList.add("done");
+    bar.setAttribute("title", ok ? "已复制 ✓" : "复制失败，请手动选中");
+    clearTimeout(bar._t);
+    bar._t = setTimeout(function(){
+      bar.classList.remove("done");
+      bar.setAttribute("title", "单击复制");
+    }, 1300);
+  }
+  function syncCopy(){
+    try{
+      var ta = document.createElement("textarea");
+      ta.value = TEXT; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta); return ok;
+    }catch(e){ return false; }
+  }
+  function copy(){
+    // 先给反馈再真正复制：同步 execCommand 在真实点击下最可靠，
+    // 失败才退到异步剪贴板 API（它返回 Promise，某些环境会一直挂着不结算——
+    // 那样点了就没任何反应，所以不能把它当首选）
+    feedback(true);
+    if(syncCopy()) return;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(TEXT).then(null, function(){ feedback(false); });
+    } else { feedback(false); }
+  }
+  bar.addEventListener("click", copy);
+  bar.addEventListener("keydown", function(e){
+    if(e.key === "Enter" || e.key === " "){ e.preventDefault(); copy(); }
+  });
+})();
+</script>
+<!-- ============ 导航栏像素时钟（时区存本地） ============ -->
+<script>
+(function(){
+  var el = document.getElementById("pixelClock");
+  if(!el) return;
+  var tEl = document.getElementById("pcTime"),
+      dEl = document.getElementById("pcDate"),
+      sEl = document.getElementById("pcTz");
+  /* 时区候选：值用 IANA 名称，交给 Intl 换算（不用手算偏移，夏令时也自动对） */
+  var ZONES = [
+    ["local", "本地时间"],
+    ["Asia/Shanghai", "北京 UTC+8"],
+    ["Asia/Tokyo", "东京 UTC+9"],
+    ["Asia/Seoul", "首尔 UTC+9"],
+    ["Asia/Singapore", "新加坡 UTC+8"],
+    ["Europe/London", "伦敦"],
+    ["Europe/Paris", "巴黎·柏林"],
+    ["Europe/Moscow", "莫斯科"],
+    ["America/New_York", "纽约"],
+    ["America/Los_Angeles", "洛杉矶"],
+    ["UTC", "UTC 世界时"]
+  ];
+  ZONES.forEach(function(z){
+    var o = document.createElement("option");
+    o.value = z[0]; o.textContent = z[1];
+    sEl.appendChild(o);
+  });
+  var saved = "local";
+  try{ saved = localStorage.getItem("chu2u-clock-tz") || "local"; }catch(e){}
+  var ok = false;
+  for(var i = 0; i < sEl.options.length; i++){ if(sEl.options[i].value === saved) ok = true; }
+  sEl.value = ok ? saved : "local";
+  sEl.addEventListener("change", function(){
+    try{ localStorage.setItem("chu2u-clock-tz", sEl.value); }catch(e){}
+    tick();
+  });
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  var cachedFmt = null, cachedTz = "";
+  function tick(){
+    var tz = sEl.value, now = new Date();
+    if(tz === "local"){
+      tEl.textContent = p2(now.getHours()) + ":" + p2(now.getMinutes()) + ":" + p2(now.getSeconds());
+      dEl.textContent = now.getFullYear() + "." + p2(now.getMonth() + 1) + "." + p2(now.getDate()) +
+                        " 周" + "日一二三四五六".charAt(now.getDay());
+      return;
+    }
+    try{
+      if(tz !== cachedTz){
+        cachedFmt = new Intl.DateTimeFormat("zh-CN", {
+          timeZone: tz, hour12: false, year: "numeric", month: "2-digit", day: "2-digit",
+          hour: "2-digit", minute: "2-digit", second: "2-digit", weekday: "short"
+        });
+        cachedTz = tz;
+      }
+      var o = {};
+      cachedFmt.formatToParts(now).forEach(function(x){ o[x.type] = x.value; });
+      var hh = (o.hour === "24" ? "00" : o.hour);   /* 有的环境午夜会返回 24 */
+      tEl.textContent = hh + ":" + o.minute + ":" + o.second;
+      dEl.textContent = o.year + "." + o.month + "." + o.day + " " + o.weekday;
+    }catch(e){
+      tEl.textContent = "--:--:--";
+      dEl.textContent = "时区不可用";
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+<!-- 顶栏实际高度写进 --topbar-h，供栏目标题的滚动偏移用（顶栏高度随断点变化） -->
+<script>
+(function(){
+  function sync(){
+    var tb = document.getElementById("topbar");
+    if(!tb) return;
+    document.documentElement.style.setProperty("--topbar-h",
+      Math.round(tb.getBoundingClientRect().height) + "px");
+  }
+  sync();
+  window.addEventListener("load", sync);
+  window.addEventListener("resize", sync);
+  if(window.ResizeObserver){ try{ new ResizeObserver(sync).observe(document.getElementById("topbar")); }catch(e){} }
+})();
+</script>
+</body>
+</html>

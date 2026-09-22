@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-22 00:06:25   共 105 首（另有手写占位 0 条）
+// 生成时间：2026-09-23 00:35:52   共 105 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -37,8 +37,36 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×6"
    }
   ],
-  "link": "",
-  "clips": [],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=3",
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 3,
+    "title": "熱愛発覚中",
+    "author": "宵夜ChiTi",
+    "date": "2026-09-21",
+    "play": 326,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=3"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 10,
+    "title": "熱愛発覚中",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-21",
+    "play": 1886,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=10"
+   },
+   {
+    "bvid": "BV1YGhh6WEw8",
+    "page": 1,
+    "title": "20262200_06_熱愛発覚中 - 椎名林檎, 中田ヤスタカ",
+    "author": "",
+    "date": "2026-09-21",
+    "play": 46,
+    "url": "https://www.bilibili.com/video/BV1YGhh6WEw8"
+   }
+  ],
   "src": "",
   "cover": "",
   "audioStatus": "missing"
@@ -136,8 +164,36 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×7"
    }
   ],
-  "link": "",
-  "clips": [],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B",
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 1,
+    "title": "ギブス",
+    "author": "宵夜ChiTi",
+    "date": "2026-09-21",
+    "play": 326,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 7,
+    "title": "石膏",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-21",
+    "play": 1886,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=7"
+   },
+   {
+    "bvid": "BV1YGhh6WEJb",
+    "page": 1,
+    "title": "20262200_04_ギブス - 椎名林檎",
+    "author": "",
+    "date": "2026-09-21",
+    "play": 29,
+    "url": "https://www.bilibili.com/video/BV1YGhh6WEJb"
+   }
+  ],
   "src": "",
   "cover": "",
   "audioStatus": "missing"
