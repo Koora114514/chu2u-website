@@ -22,7 +22,7 @@
 })();
 </script>
 <title>羽啾chu2u · Index📕</title>
-<meta name="description" content="羽啾chu2u 像素个人站 · V圈知识库索引（萌娘百科词条：首字索引浏览 / 全文搜索 / 随机一条，点击直达萌娘百科）">
+<meta name="description" content="羽啾chu2u 像素个人站 · V圈知识库索引（萌娘百科词条：首字索引浏览 / 词条名与tag搜索 / 随机一条，点击直达萌娘百科）">
 <link rel="icon" type="image/png" href="images/fumo啾.png">
 <!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
@@ -81,7 +81,7 @@
     <div class="page-hero reveal">
       <span class="kicker">KNOWLEDGE BASE<small>MOEGIRL V-KB · 2026.08</small></span>
       <h1>Index📕</h1>
-      <p class="sub">V 圈知识库——萌娘百科「虚拟UP主 · 虚拟偶像 · 虚拟歌手」分类下 2,572 个条目的索引（2026-08-31 快照）。可以按首字索引浏览、全文搜索，或者随机一条；点击词条直接跳转萌娘百科对应页面。<br>特别鸣谢yuyu提供的知识库，欢迎各位学习了解V全圈知识库。</p>
+      <p class="sub">V 圈知识库——萌娘百科「虚拟UP主 · 虚拟偶像 · 虚拟歌手」分类下 2,572 个条目的索引（2026-08-31 快照）。可以按首字索引浏览、搜索词条名与 tag，或者随机一条；点击词条直接跳转萌娘百科对应页面。<br>特别鸣谢yuyu提供的知识库，欢迎各位学习了解V全圈知识库。</p>
     </div>
 
     <div class="sec-title reveal" id="kb">
@@ -89,7 +89,7 @@
     </div>
     <div class="pixel-card kb-card reveal">
       <div class="kb-tools">
-        <input class="kb-search" id="kbSearch" type="search" placeholder="搜索条目名 / 正文内容…" aria-label="搜索知识库条目">
+        <input class="kb-search" id="kbSearch" type="search" placeholder="搜索条目名 / tag…" aria-label="搜索知识库条目">
         <button class="px-btn ghost" id="kbRandom" type="button">🎲 随机一条</button>
         <button class="px-btn ghost kb-tagfilter-btn" id="kbTagFilterBtn" type="button" aria-pressed="false" aria-controls="kbTagPanel">🏷 tag 筛选</button>
         <span class="kb-count" id="kbCount"></span>
@@ -123,8 +123,8 @@
 <script src="js/shared.js"></script>
 <!-- 知识库数据：两个分片共 2,572 条（由 维护\知识库构建.py 从萌娘百科快照 md 生成；
      更新数据文件后记得同步 bump 下面两个 ?v= 版本号（当天+时分）） -->
-<script src="data/kb-0001.js?v=202609230151"></script>
-<script src="data/kb-0002.js?v=202609230151"></script>
+<script src="data/kb-0001.js?v=202609230216"></script>
+<script src="data/kb-0002.js?v=202609230216"></script>
 <script>
 /* ============ Index📕 V圈知识库（kb.html 页面脚本） ============
    2026-09-22 用户定：纯索引形式——每行只显示词条名（20px）+ 成分 tag（1-6 个），
@@ -282,18 +282,21 @@
       total = 1;
       randomIdx = -1;
     } else {
-      var titleHits = [], bodyHits = [];
+      var hits = [];
       KB.forEach(function(e, i){
         if(selectedTag && !hasTag(e, selectedTag)) return;
         if(q){
+          /* 搜索范围 = 词条名 + tag（2026-09-23 用户定砍掉正文打包后，正文搜索随之取消） */
           var t = (e.t || "").toLowerCase();
-          if(t.indexOf(q) >= 0){ titleHits.push({i: i}); return; }
-          if((e.c || "").toLowerCase().indexOf(q) >= 0) bodyHits.push({i: i});
-        } else if(curGroup === "" || groupKey(e.t || "") === curGroup){
-          titleHits.push({i: i});
+          var gt = "";
+          (e.g || []).forEach(function(p){ gt += " " + p[1]; });
+          if(t.indexOf(q) < 0 && gt.toLowerCase().indexOf(q) < 0) return;
+        } else if(curGroup !== "" && groupKey(e.t || "") !== curGroup){
+          return;
         }
+        hits.push({i: i});
       });
-      out = titleHits.concat(bodyHits);
+      out = hits;
       total = out.length;
     }
     var frag = document.createDocumentFragment();
