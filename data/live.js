@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"来自夜晚的困倦电波信号...⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-22 00:48:24"};
+window.CHU2U_LIVE={"live":true,"title":"连接不上以太网是什么意思⭐","online":181100,"area":"虚拟主播","start":1790086957,"checked":"2026-09-22 22:34:25"};
