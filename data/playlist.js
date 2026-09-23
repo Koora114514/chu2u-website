@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-23 00:35:52   共 105 首（另有手写占位 0 条）
+// 生成时间：2026-09-24 00:15:30   共 105 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -1214,8 +1214,18 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×2"
    }
   ],
-  "link": "",
-  "clips": [],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3",
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 3,
+    "title": "My Dearest",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-23",
+    "play": 2441,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3"
+   }
+  ],
   "src": "",
   "cover": "images/song/54629931.jpg",
   "audioStatus": "ok",
