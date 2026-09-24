@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"连接不上以太网是什么意思⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-23 00:58:40"};
+window.CHU2U_LIVE={"live":true,"title":"下午de电波信号！⭐","online":0,"area":"虚拟主播","start":1790229479,"checked":"2026-09-24 13:57:59"};
