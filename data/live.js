@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"下午de电波信号！⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-24 16:35:18"};
+window.CHU2U_LIVE={"live":true,"title":"来吧6天30小时的传说⭐","online":175191,"area":"虚拟主播","start":1790265568,"checked":"2026-09-25 00:19:02"};
