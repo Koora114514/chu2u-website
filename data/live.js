@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"来吧6天30小时的传说⭐","online":175191,"area":"虚拟主播","start":1790265568,"checked":"2026-09-25 00:19:02"};
+window.CHU2U_LIVE={"live":false,"title":"来吧6天30小时的传说⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-25 03:38:00"};
