@@ -1,7 +1,460 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-25 00:19:36   共 105 首（另有手写占位 0 条）
+// 生成时间：2026-09-26 00:36:01   共 116 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
+ {
+  "key": "531647731",
+  "title": "食虫植物",
+  "titleShazam": "Carnivorous Plant",
+  "artist": "RIM",
+  "artistSearch": "RIM",
+  "album": "NEW ROMANCER",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1bEtG6dErt",
+    "start": 8025,
+    "end": 8062,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 1250,
+    "end": 1287,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14",
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 14,
+    "title": "食虫植物",
+    "author": "宵夜ChiTi",
+    "date": "2026-09-01",
+    "play": 618,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14"
+   }
+  ],
+  "src": "",
+  "cover": "images/song/531647731.jpg",
+  "audioStatus": "ok",
+  "dur": 171.0
+ },
+ {
+  "key": "547871050",
+  "title": "Beautiful World (Da Capo Version)",
+  "titleShazam": "Beautiful World (Da Capo Version)",
+  "artist": "Hikaru Utada",
+  "artistSearch": "Hikaru Utada",
+  "album": "One Last Kiss",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 2,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 4725,
+    "end": 4962,
+    "votes": 7,
+    "evidence": "shazam×7"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 5525,
+    "end": 5587,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "685697832",
+  "title": "Fragrance",
+  "titleShazam": "Fragrance",
+  "artist": "Mahiru & RINZO",
+  "artistSearch": "Mahiru & RINZO",
+  "album": "Handle",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 1300,
+    "end": 1512,
+    "votes": 8,
+    "evidence": "shazam×8"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "504811093",
+  "title": "アイハキミノモノ",
+  "titleShazam": "ai ha kimi no mono",
+  "artist": "Broken By The Scream",
+  "artistSearch": "Broken By The Scream",
+  "album": "Noisy Night Fever",
+  "lang": "日语",
+  "tags": [
+   "摇滚"
+  ],
+  "genres": [
+   "Rock"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 1850,
+    "end": 1937,
+    "votes": 4,
+    "evidence": "shazam×4"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "699719362",
+  "title": "Luna Say Maybe",
+  "titleShazam": "Luna Say Maybe",
+  "artist": "Hatsuboshi Gakuen & Temari Tsukimura",
+  "artistSearch": "Hatsuboshi Gakuen & Temari Tsukimura",
+  "album": "Luna Say Maybe - Single",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 2125,
+    "end": 2337,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6",
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 6,
+    "title": "Luna say maybe_初星学園, 美波, 月村手毬",
+    "author": "宵夜ChiTi",
+    "date": "2026-08-13",
+    "play": 1007,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "574969240",
+  "title": "Tondemo-Wonderz",
+  "titleShazam": "Tondemo-Wonderz",
+  "artist": "Sasakure.Uk",
+  "artistSearch": "Sasakure.Uk",
+  "album": "Mirai Eve",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 2900,
+    "end": 2987,
+    "votes": 4,
+    "evidence": "shazam×4"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "423135485",
+  "title": "ベースラインやってる 笑",
+  "titleShazam": "Can I Friend You On Bassbook? Lol",
+  "artist": "Nanahira & Camellia",
+  "artistSearch": "Nanahira & Camellia",
+  "album": "4Orce!",
+  "lang": "其他",
+  "tags": [
+   "电子"
+  ],
+  "genres": [
+   "Electronic"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 4325,
+    "end": 4537,
+    "votes": 6,
+    "evidence": "shazam×6"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "684737950",
+  "title": "Like an Idiot (8bit)",
+  "titleShazam": "Like an Idiot (8bit)",
+  "artist": "Kakizaki Yuta",
+  "artistSearch": "Kakizaki Yuta",
+  "album": "Kakizaki 8bit - EP",
+  "lang": "纯音乐",
+  "tags": [
+   "纯音乐"
+  ],
+  "genres": [
+   "Instrumental"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 4550,
+    "end": 4687,
+    "votes": 4,
+    "evidence": "shazam×4"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "831126584",
+  "title": "Sunfaded",
+  "titleShazam": "Sunfaded",
+  "artist": "Hatsuboshi Gakuen & Hiro Shinosawa",
+  "artistSearch": "Hatsuboshi Gakuen & Hiro Shinosawa",
+  "album": "Sunfaded - Single",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 5625,
+    "end": 5662,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5",
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 5,
+    "title": "サンフェーデッド_初星学園, 篠澤 広",
+    "author": "宵夜ChiTi",
+    "date": "2026-08-13",
+    "play": 1007,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "812321760",
+  "title": "Just The Two Of Us In This World",
+  "titleShazam": "Just The Two Of Us In This World",
+  "artist": "ano",
+  "artistSearch": "ano",
+  "album": "BONE BORN BOMB",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 6250,
+    "end": 6312,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19whm6NEh3?p=6",
+  "clips": [
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 6,
+    "title": "この世界に二人だけ",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-25",
+    "play": 129,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=6"
+   }
+  ],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "583985159",
+  "title": "きゅうくらりん",
+  "titleShazam": "Kyu-Kurarin",
+  "artist": "Iyowa",
+  "artistSearch": "Iyowa",
+  "album": "Watashi No Heritage",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 8175,
+    "end": 8362,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "850215283",
+  "title": "Looping the Rooms (feat. HATSUNE MIKU)",
+  "titleShazam": "Looping the Rooms (feat. HATSUNE MIKU)",
+  "artist": "Rusino",
+  "artistSearch": "Rusino",
+  "album": "Looping the Rooms / Lambent Aria (feat. HATSUNE MIKU) - Single",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 8425,
+    "end": 8462,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
  {
   "key": "157498072",
   "title": "jai trouvé lamour",
@@ -1796,50 +2249,6 @@ window.CHU2U_SONGS = [
   "src": "",
   "cover": "",
   "audioStatus": "missing"
- },
- {
-  "key": "531647731",
-  "title": "食虫植物",
-  "titleShazam": "Carnivorous Plant",
-  "artist": "RIM",
-  "artistSearch": "RIM",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 8025,
-    "end": 8062,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14",
-  "clips": [
-   {
-    "bvid": "BV1Mwt36UE7D",
-    "page": 14,
-    "title": "食虫植物",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14"
-   }
-  ],
-  "src": "",
-  "cover": "images/song/531647731.jpg",
-  "audioStatus": "ok",
-  "dur": 171.0
  },
  {
   "key": "604675219",
