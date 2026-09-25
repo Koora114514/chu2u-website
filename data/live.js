@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"虽然是歌杂但是虚虚的!⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-25 16:50:03"};
+window.CHU2U_LIVE={"live":true,"title":"为了kpi今天也是东方永夜抄...⭐","online":172219,"area":"虚拟主播","start":1790345020,"checked":"2026-09-25 22:15:43"};
