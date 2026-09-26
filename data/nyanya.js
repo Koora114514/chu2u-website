@@ -34,7 +34,7 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-09-21";
+window.CHU2U_CAT_UPDATED = "2026-09-26";
 window.CHU2U_CAT = [
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
    t:"【羽啾chu2u】杀戮尖塔2 角色Mod测试版发布！", d:"老美のNASA", date:"2026年9月20日"},
@@ -44,12 +44,22 @@ window.CHU2U_CAT = [
    t:"【羽啾chu2u】人是猫？！", d:"yuyu_925", date:"2026年9月6日"},
   {kind:"art", pin:true, uid:"2420982", link:"https://www.bilibili.com/opus/1239943048228503559", cover:"images/nyan/a25.jpg",
    t:"换了袜子", d:"鱼豆腐盖飯", date:"2026年8月24日"},
+  {kind:"art", uid:"137700370", link:"https://www.bilibili.com/opus/1252280049735827506", cover:"images/nyan/a26.jpg",
+   t:"羽啾chu2u", d:"黄鱼鼠条", date:"2026年9月26日"},
+  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1251989898898964483", cover:"images/nyan/a27.jpg",
+   t:"祝大家中秋快乐呀！", d:"海圻圻圻", date:"2026年9月25日"},
+  {kind:"art", uid:"23237220", link:"https://www.bilibili.com/opus/1251988120759435268", cover:"images/nyan/a28.jpg",
+   t:"宇宙猫月饼！应该是什么口味的？", d:"灲秘书", date:"2026年9月25日"},
+  {kind:"art", uid:"393767790", link:"https://www.bilibili.com/opus/1250566185955622917", cover:"images/nyan/a29.jpg",
+   t:"（图帖·无文字，上传前请改标题）", d:"瞬噬魔王点肠粉LZX", date:"2026年9月22日"},
   {kind:"art", uid:"91226097", link:"https://www.bilibili.com/opus/1248987824115417140", cover:"images/nyan/a12.jpg",
    t:"分享图片", d:"自由高松灯", date:"2026年9月17日"},
   {kind:"art", uid:"41664105", link:"https://www.bilibili.com/opus/1248499310253834249", cover:"images/nyan/a11.jpg",
    t:"画师@狸SX 萌萌主播@羽啾chu2u", d:"-nolo-", date:"2026年9月16日"},
   {kind:"art", uid:"3494373633297224", link:"https://www.bilibili.com/opus/1248327936773193753", cover:"images/nyan/a8.jpg",
    t:"呃，顶萌来了，你们聊", d:"残星下的悼亡曲", date:"2026年9月15日"},
+  {kind:"art", uid:"3747549391359135", link:"https://www.bilibili.com/opus/1247900269694418953", cover:"images/nyan/a30.jpg",
+   t:"课间", d:"核对插座电量", date:"2026年9月14日"},
   {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1247591706363166721", cover:"images/nyan/a10.jpg",
    t:"好可爱一羽啾", d:"海圻圻圻", date:"2026年9月14日"},
   {kind:"video", uid:"3747549391359135", link:"https://www.bilibili.com/video/BV189Y86WEge/", cover:"images/nyan/v3.jpg",
