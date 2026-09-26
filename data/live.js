@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"为了kpi今天也是东方永夜抄...⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-26 07:12:45"};
+window.CHU2U_LIVE={"live":true,"title":"⭐电波观测⭐","online":0,"area":"虚拟主播","start":1790430929,"checked":"2026-09-26 21:55:32"};
