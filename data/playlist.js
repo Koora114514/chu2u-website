@@ -1,7 +1,56 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-26 00:36:01   共 116 首（另有手写占位 0 条）
+// 生成时间：2026-09-27 00:21:52   共 118 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
+ {
+  "key": "547871050",
+  "title": "Beautiful World (Da Capo Version)",
+  "titleShazam": "Beautiful World (Da Capo Version)",
+  "artist": "Hikaru Utada",
+  "artistSearch": "Hikaru Utada",
+  "album": "One Last Kiss",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 3,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 4725,
+    "end": 4962,
+    "votes": 7,
+    "evidence": "shazam×7"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 4900,
+    "end": 4962,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Jchy6uER2",
+    "start": 5525,
+    "end": 5587,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
  {
   "key": "531647731",
   "title": "食虫植物",
@@ -55,47 +104,6 @@ window.CHU2U_SONGS = [
   "dur": 171.0
  },
  {
-  "key": "547871050",
-  "title": "Beautiful World (Da Capo Version)",
-  "titleShazam": "Beautiful World (Da Capo Version)",
-  "artist": "Hikaru Utada",
-  "artistSearch": "Hikaru Utada",
-  "album": "One Last Kiss",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 4725,
-    "end": 4962,
-    "votes": 7,
-    "evidence": "shazam×7"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 5525,
-    "end": 5587,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
   "key": "685697832",
   "title": "Fragrance",
   "titleShazam": "Fragrance",
@@ -110,7 +118,7 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
    {
@@ -120,6 +128,14 @@ window.CHU2U_SONGS = [
     "end": 1512,
     "votes": 8,
     "evidence": "shazam×8"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 1325,
+    "end": 1487,
+    "votes": 6,
+    "evidence": "shazam×6"
    }
   ],
   "link": "",
@@ -143,9 +159,17 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 1800,
+    "end": 1962,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
    {
     "date": "2026-09-25",
     "bvid": "BV1Jchy6uER2",
@@ -176,12 +200,20 @@ window.CHU2U_SONGS = [
    "Anime"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
    {
     "date": "2026-09-25",
     "bvid": "BV1Jchy6uER2",
+    "start": 2125,
+    "end": 2337,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
     "start": 2125,
     "end": 2337,
     "votes": 5,
@@ -219,7 +251,7 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
    {
@@ -229,6 +261,14 @@ window.CHU2U_SONGS = [
     "end": 2987,
     "votes": 4,
     "evidence": "shazam×4"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 2925,
+    "end": 3062,
+    "votes": 3,
+    "evidence": "shazam×3"
    }
   ],
   "link": "",
@@ -252,9 +292,17 @@ window.CHU2U_SONGS = [
    "Electronic"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 4275,
+    "end": 4512,
+    "votes": 6,
+    "evidence": "shazam×6"
+   },
    {
     "date": "2026-09-25",
     "bvid": "BV1Jchy6uER2",
@@ -285,7 +333,7 @@ window.CHU2U_SONGS = [
    "Instrumental"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-25",
   "sings": [
    {
@@ -295,6 +343,14 @@ window.CHU2U_SONGS = [
     "end": 4687,
     "votes": 4,
     "evidence": "shazam×4"
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 4550,
+    "end": 4662,
+    "votes": 5,
+    "evidence": "shazam×5"
    }
   ],
   "link": "",
@@ -447,6 +503,72 @@ window.CHU2U_SONGS = [
     "end": 8462,
     "votes": 2,
     "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "824146806",
+  "title": "HALO",
+  "titleShazam": "HALO",
+  "artist": "NOMELON NOLEMON",
+  "artistSearch": "NOMELON NOLEMON",
+  "album": "EYE",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 3075,
+    "end": 3237,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "617656557",
+  "title": "Astral Travel",
+  "titleShazam": "Astral Travel",
+  "artist": "Kikuo & Hatsune Miku",
+  "artistSearch": "Kikuo & Hatsune Miku",
+  "album": "Kikuo Miku 7",
+  "lang": "日语",
+  "tags": [
+   "流行"
+  ],
+  "genres": [
+   "Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GEhy6oESZ",
+    "start": 3675,
+    "end": 3912,
+    "votes": 7,
+    "evidence": "shazam×7"
    }
   ],
   "link": "",
