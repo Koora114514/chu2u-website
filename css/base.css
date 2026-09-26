@@ -1028,6 +1028,8 @@ footer .credit{margin-top:16px;font-size:14px;color:#777E70}
 .float-btn .bf-close:hover{background:var(--olive)}
 .float-btn .bf-close:active{transform:translate(2px,2px);box-shadow:none}
 .float-btn .bf-ico{font-size:26px}
+/* 飘窗文字里要加粗+下划线的那段（由 floatbtn.js 的 hl 字段指定） */
+.float-btn .bf-hl{font-weight:700;text-decoration:underline}
 .float-btn .bf-badge{
   width:30px;height:30px;display:grid;place-items:center;background:var(--olive);
   border:2px solid var(--ink);color:var(--ink);font-size:14px;

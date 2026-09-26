@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=2026092300">
+<link rel="stylesheet" href="css/base.css?v=202609261905">
 
 <!-- ============ 开屏动画（像素开机画面，⚙️可删除） ============ -->
 <div id="splash" role="dialog" aria-label="正在进入 羽啾chu2u 宇宙观测中心">
@@ -510,9 +510,9 @@
   <img src="images/飞船啾.png" alt="返回顶部">
 </button>
 <!-- 悬浮飘窗按钮：文案与跳转链接来自 data/floatbtn.js（手动维护，见该文件注释） -->
-<a class="float-btn" id="floatBtn" href="https://www.bilibili.com/video/BV1vyeP6tEqj/" target="_blank" rel="noopener" aria-label="一起来听！《住在天狼星的那个人》助力10W播放！">
+<a class="float-btn" id="floatBtn" href="https://www.bilibili.com/video/BV1NDhR61EL8/" target="_blank" rel="noopener" aria-label="一起来听！《恋人》助力10W播放！">
   <span class="bf-ico">🎧</span>
-  <span class="bf-txt">一起来听！<br>《住在天狼星的那个人》<br>助力10W播放！</span>
+  <span class="bf-txt">一起来听！<br><b class="bf-hl">《恋人》</b><br>助力10W播放！</span>
   <span class="bf-badge">GO</span>
   <span class="bf-close" id="bfClose" role="button" tabindex="0" title="关掉这个飘窗" aria-label="关掉这个飘窗">×</span>
 </a>
@@ -543,11 +543,11 @@
 <!-- 実績？カッコいいでしょ！· 成就数据（手动维护，用 维护\成就手动更新.ps1 或直接改该文件） -->
 <script src="data/achieves.js?v=20260916"></script>
 <!-- 悬浮飘窗按钮的文案与跳转链接（手动维护，用 维护\飘窗手动更新.ps1 或直接改该文件） -->
-<script src="data/floatbtn.js?v=20260919"></script>
+<script src="data/floatbtn.js?v=202609261905"></script>
 <!-- 设计元素数据（手动维护，可用 维护\维护台 编辑） -->
 <script src="data/design.js?v=20260917"></script>
 <!-- 作品展柜数据（手动维护，可用 维护\维护台 编辑） -->
-<script src="data/works.js?v=20260917"></script>
+<script src="data/works.js?v=202609261905"></script>
 <script>
 /* ============================================================
    CHU2U 像素个人站 JS —— 全部功能
@@ -1288,9 +1288,23 @@
       if(bd && cfg.badge) bd.textContent = cfg.badge;
       if(txt && cfg.text){
         txt.innerHTML = "";
+        /* hl = 要加粗+下划线的那段文字（如《恋人》）；没有就按普通文字渲染 */
+        var hl = cfg.hl ? String(cfg.hl) : "";
         String(cfg.text).split("\n").forEach(function(line, i){
           if(i) txt.appendChild(document.createElement("br"));
-          txt.appendChild(document.createTextNode(line));
+          if(hl && line.indexOf(hl) >= 0){
+            line.split(hl).forEach(function(part, j, arr){
+              if(j) {
+                var b = document.createElement("b");
+                b.className = "bf-hl";
+                b.textContent = hl;
+                txt.appendChild(b);
+              }
+              if(part) txt.appendChild(document.createTextNode(part));
+            });
+          }else{
+            txt.appendChild(document.createTextNode(line));
+          }
         });
       }
     })();
