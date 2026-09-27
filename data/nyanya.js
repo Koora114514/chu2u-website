@@ -36,7 +36,7 @@
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
 window.CHU2U_CAT_UPDATED = "2026-09-27";
 window.CHU2U_CAT = [
-  {kind:"video", pin:true, uid:"", link:"https://www.bilibili.com/video/BV1ksah6uE8H/?spm_id_from=333.1035.list.card_archive.click&vd_source=2570f11e8b42cd12fbe163d425e594b3", cover:"images/nyan/v8.jpg",
+  {kind:"video", pin:true, uid:"", link:"https://www.bilibili.com/video/BV1ksah6uE8H/?spm_id_from=333.1035.list.card_archive.click&vd_source=2570f11e8b42cd12fbe163d425e594b3", cover:"images/nyan/v9.jpg",
    t:"【GPT-6 Astra】羽啾的魔术之心/トリックハート/TRICK HEART", d:"白濑玲_", date:"20260927"},
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
    t:"【羽啾chu2u】杀戮尖塔2 角色Mod测试版发布！", d:"老美のNASA", date:"2026年9月20日"},
