@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-27 00:21:52   共 118 首（另有手写占位 0 条）
+// 生成时间：2026-09-28 00:26:47   共 122 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -1478,28 +1478,44 @@ window.CHU2U_SONGS = [
   "audioStatus": "missing"
  },
  {
-  "key": "628144417",
-  "title": "Chinokate",
-  "titleShazam": "Chinokate",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Magic Lantern",
+  "key": "322223782",
+  "title": "Kohakuironomachi Syanhaiganinoasa",
+  "titleShazam": "Kohakuironomachi Syanhaiganinoasa",
+  "artist": "Quruli",
+  "artistSearch": "Quruli",
+  "album": "Kohakuironomachi Syanhaiganinoasa - EP",
   "lang": "日语",
   "tags": [],
   "genres": [
    "Alternative"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 3,
   "lastSung": "2026-09-13",
   "sings": [
    {
+    "date": "2026-08-22",
+    "bvid": "BV1GM8168EfW",
+    "start": 5775,
+    "end": 6012,
+    "votes": 9,
+    "evidence": "shazam×9"
+   },
+   {
     "date": "2026-09-13",
     "bvid": "BV1t2Yv6eEtr",
-    "start": 500,
-    "end": 537,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "start": 0,
+    "end": 212,
+    "votes": 7,
+    "evidence": "shazam×7"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 0,
+    "end": 112,
+    "votes": 5,
+    "evidence": "shazam×5"
    }
   ],
   "link": "",
@@ -1507,6 +1523,56 @@ window.CHU2U_SONGS = [
   "src": "",
   "cover": "",
   "audioStatus": "missing"
+ },
+ {
+  "key": "861843252",
+  "title": "Brain Rot",
+  "titleShazam": "Brain Rot",
+  "artist": "Tokyo Manaka",
+  "artistSearch": "Tokyo Manaka",
+  "album": "Brain Rot - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 3,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1VH896XEye",
+    "start": 0,
+    "end": 112,
+    "votes": 5,
+    "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 1200,
+    "end": 1262,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 2800,
+    "end": 2837,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "images/song/861843252.jpg",
+  "audioStatus": "ok",
+  "dur": 124.8
  },
  {
   "key": "481454451",
@@ -1521,7 +1587,7 @@ window.CHU2U_SONGS = [
    "Alternative"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
    {
@@ -1531,6 +1597,14 @@ window.CHU2U_SONGS = [
     "end": 3112,
     "votes": 10,
     "evidence": "shazam×10"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 2875,
+    "end": 3087,
+    "votes": 6,
+    "evidence": "shazam×6"
    }
   ],
   "link": "",
@@ -1555,7 +1629,7 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
    {
@@ -1565,6 +1639,14 @@ window.CHU2U_SONGS = [
     "end": 3287,
     "votes": 5,
     "evidence": "shazam×5"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 3225,
+    "end": 3287,
+    "votes": 3,
+    "evidence": "shazam×3"
    }
   ],
   "link": "",
@@ -1589,9 +1671,17 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 3525,
+    "end": 3737,
+    "votes": 6,
+    "evidence": "shazam×6"
+   },
    {
     "date": "2026-09-13",
     "bvid": "BV1t2Yv6eEtr",
@@ -1622,7 +1712,7 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
    {
@@ -1632,6 +1722,14 @@ window.CHU2U_SONGS = [
     "end": 3837,
     "votes": 2,
     "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 3750,
+    "end": 3837,
+    "votes": 3,
+    "evidence": "shazam×3"
    }
   ],
   "link": "https://www.bilibili.com/video/BV1KMeE6JEfu",
@@ -1675,12 +1773,20 @@ window.CHU2U_SONGS = [
    "Rock"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
    {
     "date": "2026-09-13",
     "bvid": "BV1t2Yv6eEtr",
+    "start": 4150,
+    "end": 4237,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
     "start": 4150,
     "end": 4237,
     "votes": 2,
@@ -1709,12 +1815,20 @@ window.CHU2U_SONGS = [
    "Anime"
   ],
   "emoji": "🎵",
-  "singCount": 1,
+  "singCount": 2,
   "lastSung": "2026-09-13",
   "sings": [
    {
     "date": "2026-09-13",
     "bvid": "BV1t2Yv6eEtr",
+    "start": 5225,
+    "end": 5262,
+    "votes": 2,
+    "evidence": "shazam×2"
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
     "start": 5225,
     "end": 5262,
     "votes": 2,
@@ -1727,6 +1841,37 @@ window.CHU2U_SONGS = [
   "cover": "images/song/77982174.jpg",
   "audioStatus": "ok",
   "dur": 183.8
+ },
+ {
+  "key": "628144417",
+  "title": "Chinokate",
+  "titleShazam": "Chinokate",
+  "artist": "Yorushika",
+  "artistSearch": "Yorushika",
+  "album": "Magic Lantern",
+  "lang": "日语",
+  "tags": [],
+  "genres": [
+   "Alternative"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1t2Yv6eEtr",
+    "start": 500,
+    "end": 537,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
  },
  {
   "key": "827609207",
@@ -1873,6 +2018,138 @@ window.CHU2U_SONGS = [
   "cover": "images/song/714779054.jpg",
   "audioStatus": "ok",
   "dur": 206.1
+ },
+ {
+  "key": "691423485",
+  "title": "Color Your Night",
+  "titleShazam": "Color Your Night",
+  "artist": "Lotus Juice, Azumi Takahashi, ATLUS Sound Team & ATLUS GAME MUSIC",
+  "artistSearch": "Lotus Juice, Azumi Takahashi, ATLUS Sound Team & ATLUS GAME MUSIC",
+  "album": "Persona 3 Reload (Original Soundtrack)",
+  "lang": "日语",
+  "tags": [
+   "游戏"
+  ],
+  "genres": [
+   "Video Game"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 625,
+    "end": 687,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "548063774",
+  "title": "ダンスの理由",
+  "titleShazam": "Dance no Riyuu",
+  "artist": "Yurina Hirate",
+  "artistSearch": "Yurina Hirate",
+  "album": "Dance no Riyuu - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 1525,
+    "end": 1737,
+    "votes": 5,
+    "evidence": "shazam×5"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "577469219",
+  "title": "becoming potatoes feat 天馬司 鳳えむ 草薙寧々 神代類 初音ミク",
+  "titleShazam": "Becoming Potatoes (feat. 天馬司, 鳳えむ, 草薙寧々, 神代類 & 初音ミク)",
+  "artist": "ワンダーランズ×ショウタイム",
+  "artistSearch": "ワンダーランズ×ショウタイム",
+  "album": "The World Hasn't Even Started Yet / Becoming Potatoes (feat. 天馬司, 鳳えむ, 草薙寧々, 神代類 & Hatsune Miku) - Single",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 3875,
+    "end": 3912,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "54463417",
+  "title": "Ni Soku Ho Kou",
+  "titleShazam": "Ni Soku Ho Kou",
+  "artist": "DECO*27",
+  "artistSearch": "DECO*27",
+  "album": "Sou Ai Sei Ri Ron",
+  "lang": "日语",
+  "tags": [
+   "动画"
+  ],
+  "genres": [
+   "Anime"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1f4Yv67EUZ",
+    "start": 5125,
+    "end": 5162,
+    "votes": 2,
+    "evidence": "shazam×2"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
  },
  {
   "key": "819655673",
@@ -2531,40 +2808,6 @@ window.CHU2U_SONGS = [
   "cover": "images/song/486348831.jpg",
   "audioStatus": "ok",
   "dur": 246.5
- },
- {
-  "key": "861843252",
-  "title": "Brain Rot",
-  "titleShazam": "Brain Rot",
-  "artist": "Tokyo Manaka",
-  "artistSearch": "Tokyo Manaka",
-  "album": "Brain Rot - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 0,
-    "end": 112,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "images/song/861843252.jpg",
-  "audioStatus": "ok",
-  "dur": 124.8
  },
  {
   "key": "648650875",
@@ -3695,45 +3938,6 @@ window.CHU2U_SONGS = [
   "cover": "images/song/830762158.jpg",
   "audioStatus": "ok",
   "dur": 153.2
- },
- {
-  "key": "322223782",
-  "title": "Kohakuironomachi Syanhaiganinoasa",
-  "titleShazam": "Kohakuironomachi Syanhaiganinoasa",
-  "artist": "Quruli",
-  "artistSearch": "Quruli",
-  "album": "Kohakuironomachi Syanhaiganinoasa - EP",
-  "lang": "日语",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5775,
-    "end": 6012,
-    "votes": 9,
-    "evidence": "shazam×9"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 0,
-    "end": 212,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
  },
  {
   "key": "571603589",
