@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐电波观测⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-28 03:29:04"};
+window.CHU2U_LIVE={"live":true,"title":"⭐电波观测⭐","online":37520,"area":"虚拟主播","start":1790610969,"checked":"2026-09-28 23:59:24"};
