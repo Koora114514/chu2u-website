@@ -154,5 +154,20 @@ window.CHU2U_RECORDS = [
        cat:"直播切片 · CLIP", t:"羽啾调了个娇喘音，直播间瞬间被问号刷屏【羽啾chu2u】", d:"羽啾调出娇喘音，直播间瞬间被问号刷屏——宇宙猫的手速跟不上耳朵。", date:"9月18日 · 看切片 →"},
       {kind:"video", uid:"777317", link:"https://www.bilibili.com/video/BV1XKei6CEwU", cover:"images/records/item7-5.jpg",
        cat:"直播切片 · CLIP", t:"【自用】羽啾啾对不起这回我又要自用了【羽啾chu2u】", d:"切片作者「自用」系列新作：对不起啾啾，这回又要自用了。", date:"9月20日 · 看切片 →"}
+    ] },
+  { no:8, tag:"第8期 · 周观测", title:"本周观测速报",
+    range:"2026.09.21 – 2026.09.27", cover:"images/records/issue8.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】AUG是什么啊？弹幕：…》（播放 16831）。",
+    items:[
+      {kind:"video", uid:"1995222061", link:"https://www.bilibili.com/video/BV1xAaP6zEmS", cover:"images/records/item8-1.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】AUG是什么啊？弹幕：灰泽满", d:"【羽啾chu2u】AUG是什么啊？弹幕：灰泽满", date:"9月24日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1LPh66DEWx", cover:"images/records/item8-2.jpg",
+       cat:"直播切片 · CLIP", t:"“羽啾你再怎么引导 我都是白字来的”那我展示引导呢？【羽啾chu2u】", d:"“羽啾你再怎么引导 我都是白字来的”那我展示引导呢？【羽啾chu2u】", date:"9月22日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1Vkah6oEVg", cover:"images/records/item8-3.jpg",
+       cat:"联动 · COLLAB", t:"唉😔四时小路这么好,小松绿喜欢她也挺正常的吧🚬【羽啾chu2u】", d:"唉😔四时小路这么好,小松绿喜欢她也挺正常的吧🚬【羽啾chu2u】", date:"9月27日 · 看切片 →"},
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV1XXhk6RESY", cover:"images/records/item8-4.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】玩兰斯找不到风灵月影而被迫成为兰斯高手", d:"【羽啾chu2u】玩兰斯找不到风灵月影而被迫成为兰斯高手", date:"9月22日 · 看切片 →"},
+      {kind:"video", uid:"3546660217031342", link:"https://www.bilibili.com/video/BV1ikhQ6WEHx", cover:"images/records/item8-5.jpg",
+       cat:"联动 · COLLAB", t:"凌晨直播结束前的真情实感 我真的喜欢小松绿这样的人【羽啾chu2u】", d:"凌晨直播结束前的真情实感 我真的喜欢小松绿这样的人【羽啾chu2u】", date:"9月26日 · 看切片 →"}
     ] }
 ];
