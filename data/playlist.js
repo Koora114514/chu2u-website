@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-28 00:26:47   共 122 首（另有手写占位 0 条）
+// 生成时间：2026-09-29 00:17:49   共 122 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -220,8 +220,26 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×5"
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6",
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10",
   "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 10,
+    "title": "月说或许",
+    "author": "千束和泷奈贴贴贴",
+    "date": "2026-09-28",
+    "play": 8061,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10"
+   },
+   {
+    "bvid": "BV1ykae6WEyM",
+    "page": 1,
+    "title": "【雪は何色 / 雪为何色】- 羽啾chu2u / 直播歌切",
+    "author": "Innovation----",
+    "date": "2026-09-28",
+    "play": 247,
+    "url": "https://www.bilibili.com/video/BV1ykae6WEyM"
+   },
    {
     "bvid": "BV1sTgp6AEqv",
     "page": 6,
