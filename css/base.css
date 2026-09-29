@@ -511,12 +511,25 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
   .de-modal .de-pola-lg .de-body{max-height:30vh}
   .de-modal .de-pola-lg .de-q{font-size:110px}
 }
-/* 窄屏：依次收起外层卡片（尺寸不变，仍 1:1 无锯齿） */
-@media(max-width:820px){
+/* 窄屏：依次收起外层卡片（尺寸不变，仍 1:1 无锯齿）。
+   2026-09-29 照片区放大后整排变宽了（中+两次=714px、再加最外两角=942px），
+   断点跟着上调，免得卡片被容器裁掉。 */
+@media(max-width:1000px){
   .de-slot.is-l2,.de-slot.is-r2{display:none}
 }
-@media(max-width:640px){
+@media(max-width:780px){
   .de-slot.is-l1,.de-slot.is-r1{display:none}
+}
+/* 手机窄屏：只剩中间一张时，卡片仍比屏宽（386 > 屏宽-44），缩回上一版尺寸保证完整显示 */
+@media(max-width:520px){
+  .de-stage{height:346px}
+  .de-slot.is-c0 .de-pola{width:314px;height:314px}
+  .de-slot.is-c0 .de-pic{width:288px;height:216px}
+  .de-slot.is-c0 .de-pic img{width:288px;height:216px}
+  .de-slot.is-c0 .de-body{height:71px;padding:6px 9px 0}
+  .de-slot.is-c0 .de-title{font-size:12px}
+  .de-slot.is-c0 .de-text{font-size:11px}
+  .de-q{font-size:76px}
 }
 /* ---------- ② 俄罗斯方块 ---------- */
 .game-panel{position:relative;padding:26px;display:flex;flex-direction:column;gap:18px;
