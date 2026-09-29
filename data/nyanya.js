@@ -36,6 +36,18 @@
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
 window.CHU2U_CAT_UPDATED = "2026-09-29";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"3546839049571170", link:"//www.bilibili.com/opus/1252839254464135193", cover:"images/nyan/a31.jpg",
+   t:"做了镭射票", d:"魔法褥子", date:"2026年9月28日"},
+  {kind:"art", uid:"354415366", link:"//www.bilibili.com/opus/1252695050905714713", cover:"images/nyan/a32.jpg",
+   t:"羽啾 chu2u", d:"夜明けと蛍光", date:"2026年9月27日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1252671926835347473", cover:"images/nyan/a33.jpg",
+   t:"", d:"白濑玲_", date:"2026年9月27日"},
+  {kind:"art", uid:"2034200085", link:"//www.bilibili.com/opus/1248581979811610625", cover:"images/nyan/a34.jpg",
+   t:"神必MOD制作中，，，", d:"老美のNASA", date:"2026年9月16日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1248241912842813445", cover:"images/nyan/a35.jpg",
+   t:"", d:"白濑玲_", date:"2026年9月15日"},
+  {kind:"art", uid:"115098306", link:"//www.bilibili.com/opus/1242018616944099335", cover:"images/nyan/a36.jpg",
+   t:"", d:"鸡蛋灌饼GOGO", date:"2026年8月29日"},
   {kind:"video", pin:true, uid:"", link:"https://www.bilibili.com/video/BV1ksah6uE8H/?spm_id_from=333.1035.list.card_archive.click&vd_source=2570f11e8b42cd12fbe163d425e594b3", cover:"images/nyan/v9.jpg",
    t:"【GPT-6 Astra】羽啾的魔术之心/トリックハート/TRICK HEART", d:"白濑玲_", date:"2026年09月27日"},
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
