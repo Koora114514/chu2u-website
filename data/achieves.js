@@ -11,28 +11,13 @@
  *
  * 想加新成就：用 维护\成就手动更新.ps1（推荐），或者直接把新条目插进下面数组。
  */
-window.CHU2U_ACHIEVES_UPDATED = "2026-09-13";
+window.CHU2U_ACHIEVES_UPDATED = "2026-09-29";
 
 window.CHU2U_ACHIEVES = [
-  {
-    date: "2026.08.07",
-    icon: "🎬",
-    name: "首播！",
-    desc: "出道首播！"
-  },
-  {
-    date: "2026.08.10",
-    icon: "🚢",
-    name: "百舰达成！",
-    desc: "大航海人数达 100 人！"
-  },
-  {
-    date: "2026.08.16",
-    icon: "🎉",
-    name: "万粉达成！",
-    desc: "粉丝数成功到达 10000 粉丝！"
-  },
-  { date: "", icon: "", name: "未解锁", desc: "未解锁", locked: true },
-  { date: "", icon: "", name: "未解锁", desc: "未解锁", locked: true },
-  { date: "", icon: "", name: "未解锁", desc: "未解锁", locked: true }
+  {date:"2026.08.07", icon:"🎬", name:"首播！", desc:"出道首播！", locked:false},
+  {date:"2026.08.10", icon:"🚢", name:"百舰达成！", desc:"大航海人数达 100 人！", locked:false},
+  {date:"2026.08.16", icon:"🎉", name:"万粉达成！", desc:"粉丝数成功到达 10000 粉丝！", locked:false},
+  {date:"", icon:"", name:"未解锁", desc:"未解锁", locked:true},
+  {date:"", icon:"", name:"未解锁", desc:"未解锁", locked:true},
+  {date:"", icon:"", name:"未解锁", desc:"未解锁", locked:true},
 ];
