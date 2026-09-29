@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202609261905">
+<link rel="stylesheet" href="css/base.css?v=202609291930">
 
 <!-- ============ 开屏动画（像素开机画面，⚙️可删除） ============ -->
 <div id="splash" role="dialog" aria-label="正在进入 羽啾chu2u 宇宙观测中心">
@@ -545,7 +545,7 @@
 <!-- 悬浮飘窗按钮的文案与跳转链接（手动维护，用 维护\飘窗手动更新.ps1 或直接改该文件） -->
 <script src="data/floatbtn.js?v=202609261905"></script>
 <!-- 设计元素数据（手动维护，可用 维护\维护台 编辑） -->
-<script src="data/design.js?v=202609291859"></script>
+<script src="data/design.js?v=202609291930"></script>
 <!-- 作品展柜数据（手动维护，可用 维护\维护台 编辑） -->
 <script src="data/works.js?v=202609261920"></script>
 <script>
@@ -744,7 +744,10 @@
     var stage = root.querySelector(".de-stage");
     var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     // 🎨 素材配置：设计元素数据（按此顺序轮切；img 为 images/design/ 下文件名前缀，自动补 -c/-m/-s；locked:true = 压暗+大像素问号）
-    var DE_ITEMS = window.CHU2U_DESIGN || [];   /* 数据在 data/design.js（可用维护台编辑） */
+    var DE_ITEMS = window.CHU2U_DESIGN || [];   /* 数据在 data/design.js（可用猫猫管理台编辑） */
+    /* 图片带版本串：/images/* 缓存 7 天，换图后不加 ?v= 浏览器会一直吃旧图
+       （版本号 = design.js 里的 UPDATED，重做图片时把它改成当天即可） */
+    var DE_VER = window.CHU2U_DESIGN_UPDATED || "1";
     var N = DE_ITEMS.length, cur = 0, timer = null;
     var POS = { "is-l2":-2, "is-l1":-1, "is-c0":0, "is-r1":1, "is-r2":2 };
     var TIER = { "is-c0":"c", "is-l1":"m", "is-r1":"m", "is-l2":"s", "is-r2":"s" };
@@ -755,7 +758,7 @@
       var pic = document.createElement("div");
       pic.className = "de-pic";
       var im = document.createElement("img");
-      im.src = item.img + "-" + tier + ".png";
+      im.src = item.img + "-" + tier + ".png?v=" + DE_VER;
       im.alt = "「" + item.title + "」";
       if(item.locked) im.className = "is-locked";
       pic.appendChild(im);

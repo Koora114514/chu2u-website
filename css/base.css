@@ -433,44 +433,46 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .design-strip-head::after{content:"";flex:1;height:3px;background:var(--line)}
 
 /* ---------- 设计元素拍立得轮盘（DESIGN ELEMENTS，5 项轮切） ---------- */
-.de-carousel{position:relative;max-width:800px;margin:30px auto 0;display:flex;flex-direction:column;align-items:center;outline:none}
-.de-stage{position:relative;width:100%;height:346px;display:flex;align-items:center;justify-content:center;padding-top:12px}
+.de-carousel{position:relative;max-width:980px;margin:30px auto 0;display:flex;flex-direction:column;align-items:center;outline:none}
+.de-stage{position:relative;width:100%;height:410px;display:flex;align-items:center;justify-content:center;padding-top:12px}
 .de-slot{flex:0 0 auto;display:flex;align-items:center;justify-content:center;position:relative;transition:transform .18s,opacity .2s;cursor:pointer}
 .de-slot.is-c0{z-index:4}
 .de-slot.is-l1,.de-slot.is-r1{z-index:3;opacity:.6}
 .de-slot.is-l2,.de-slot.is-r2{z-index:2;opacity:.4}
-.de-slot.is-l1{margin-right:-34px;transform:rotate(-1.5deg)}
-.de-slot.is-r1{margin-left:-34px;transform:rotate(1.5deg)}
-.de-slot.is-l2{margin-right:-26px;transform:rotate(-3deg)}
-.de-slot.is-r2{margin-left:-26px;transform:rotate(3deg)}
+.de-slot.is-l1{margin-right:-42px;transform:rotate(-1.5deg)}
+.de-slot.is-r1{margin-left:-42px;transform:rotate(1.5deg)}
+.de-slot.is-l2{margin-right:-32px;transform:rotate(-3deg)}
+.de-slot.is-r2{margin-left:-32px;transform:rotate(3deg)}
 /* 拍立得相框：始终浅色（实体照片感）+ 顶部纸胶带 + 底部留白写介绍 */
 .de-pola{background:#fbfcf2;border:3px solid #303030;box-shadow:4px 4px 0 rgba(48,48,48,.4);padding:8px 8px 0;position:relative;display:flex;flex-direction:column;align-items:center}
-.de-pola::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:54px;height:16px;background:#d4da7b;border:2px solid #303030;z-index:3}
+.de-pola::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:68px;height:18px;background:#d4da7b;border:2px solid #303030;z-index:3}
 .de-pic{position:relative;overflow:hidden;background:#f0f2d8;border:2px solid #d5d9ad}
 .de-pic img{display:block;object-fit:contain;image-rendering:pixelated}
 .de-pic img.is-locked{filter:brightness(.32) contrast(1.05)}
-.de-q{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:76px;line-height:1;color:#fbfcf2;text-shadow:5px 5px 0 rgba(48,48,48,.85);animation:blink 2.6s steps(1) infinite}
+.de-q{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:95px;line-height:1;color:#fbfcf2;text-shadow:5px 5px 0 rgba(48,48,48,.85);animation:blink 2.6s steps(1) infinite}
 .de-body{width:100%;padding:7px 8px 9px;border-top:2px dashed #d5d9ad;margin-top:7px;overflow:hidden}
 .de-title{color:#8b9150;letter-spacing:1px;line-height:1.6}
 .de-text{color:#525859;line-height:1.6;text-indent:2em}
-/* 三档尺寸：拍立得统一 1:1 正方形卡片（中 314 / 次 170 / 小 122），照片区 4:3，图片按 1:1 重采样零缩放无锯齿 */
-.de-slot.is-c0 .de-pola{width:314px;height:314px}
-.de-slot.is-c0 .de-pic{width:288px;height:216px}
-.de-slot.is-c0 .de-pic img{width:288px;height:216px}
-.de-slot.is-c0 .de-body{height:71px;padding:6px 9px 0}
-.de-slot.is-c0 .de-title{font-size:12px}
-.de-slot.is-c0 .de-text{font-size:11px}
-.de-slot.is-l1 .de-pola,.de-slot.is-r1 .de-pola{width:170px;height:170px}
-.de-slot.is-l1 .de-pic,.de-slot.is-r1 .de-pic{width:144px;height:108px}
-.de-slot.is-l1 .de-pic img,.de-slot.is-r1 .de-pic img{width:144px;height:108px}
-.de-slot.is-l1 .de-body,.de-slot.is-r1 .de-body{height:38px;padding:3px 6px 0;margin-top:4px}
-.de-slot.is-l1 .de-title,.de-slot.is-r1 .de-title{font-size:10px}
-.de-slot.is-l1 .de-text,.de-slot.is-r1 .de-text{font-size:9px}
-.de-slot.is-l2 .de-pola,.de-slot.is-r2 .de-pola{width:122px;height:122px}
-.de-slot.is-l2 .de-pic,.de-slot.is-r2 .de-pic{width:96px;height:72px}
-.de-slot.is-l2 .de-pic img,.de-slot.is-r2 .de-pic img{width:96px;height:72px}
-.de-slot.is-l2 .de-body,.de-slot.is-r2 .de-body{height:27px;padding:2px 5px 0;margin-top:3px}
-.de-slot.is-l2 .de-title,.de-slot.is-r2 .de-title{font-size:8px}
+/* 三档尺寸：拍立得统一 1:1 正方形卡片（中 386 / 次 206 / 小 146），照片区 4:3。
+   2026-09-29 用户报「高清图变缩略图」→ 照片区整体放大 1.25 倍，
+   素材用主文件夹原图重采样（外套！从 5004px 原图出），中档 360×270 显示=1:1 零缩放 */
+.de-slot.is-c0 .de-pola{width:386px;height:386px}
+.de-slot.is-c0 .de-pic{width:360px;height:270px}
+.de-slot.is-c0 .de-pic img{width:360px;height:270px}
+.de-slot.is-c0 .de-body{height:95px;padding:7px 10px 0}
+.de-slot.is-c0 .de-title{font-size:13px}
+.de-slot.is-c0 .de-text{font-size:12px}
+.de-slot.is-l1 .de-pola,.de-slot.is-r1 .de-pola{width:206px;height:206px}
+.de-slot.is-l1 .de-pic,.de-slot.is-r1 .de-pic{width:180px;height:135px}
+.de-slot.is-l1 .de-pic img,.de-slot.is-r1 .de-pic img{width:180px;height:135px}
+.de-slot.is-l1 .de-body,.de-slot.is-r1 .de-body{height:53px;padding:4px 7px 0;margin-top:5px}
+.de-slot.is-l1 .de-title,.de-slot.is-r1 .de-title{font-size:11px}
+.de-slot.is-l1 .de-text,.de-slot.is-r1 .de-text{font-size:10px}
+.de-slot.is-l2 .de-pola,.de-slot.is-r2 .de-pola{width:146px;height:146px}
+.de-slot.is-l2 .de-pic,.de-slot.is-r2 .de-pic{width:120px;height:90px}
+.de-slot.is-l2 .de-pic img,.de-slot.is-r2 .de-pic img{width:120px;height:90px}
+.de-slot.is-l2 .de-body,.de-slot.is-r2 .de-body{height:39px;padding:3px 6px 0;margin-top:4px}
+.de-slot.is-l2 .de-title,.de-slot.is-r2 .de-title{font-size:9px}
 .de-slot.is-l2 .de-text,.de-slot.is-r2 .de-text{display:none}
 /* 悬停时介绍栏出现滚动条，可预览完整介绍（像素风滚动条） */
 .de-slot:hover .de-body{overflow-y:auto}
@@ -496,18 +498,18 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .de-modal-close{position:absolute;top:-16px;right:-16px;width:38px;height:38px;font-size:22px;line-height:1;cursor:pointer;background:#fbfcf2;color:#303030;border:3px solid #303030;box-shadow:3px 3px 0 rgba(48,48,48,.85);z-index:5;padding:0}
 .de-modal-close:hover{transform:translate(-1px,-1px)}
 .de-modal-close:active{transform:translate(2px,2px);box-shadow:none}
-.de-modal .de-pola-lg{width:426px;max-height:92vh;cursor:default;animation:pxShow .25s steps(4) forwards}
-.de-modal .de-pola-lg .de-pic{width:400px;height:300px;flex:0 0 auto}
-.de-modal .de-pola-lg .de-pic img{width:400px;height:300px}
-.de-modal .de-pola-lg .de-body{height:auto;min-height:0;max-height:38vh;overflow-y:auto;padding:10px 14px 12px;margin-top:9px}
+/* 点开的大图：2026-09-29 用户报「高清图变缩略图」→ 从固定 400×300 改成按图片本身清晰度显示，
+   最大 720×540（外套！这类原图大的就吃满，源图小的按自己的尺寸 1:1 显示，都不糊） */
+.de-modal .de-pola-lg{max-height:92vh;cursor:default;animation:pxShow .25s steps(4) forwards}
+.de-modal .de-pola-lg .de-pic{flex:0 0 auto}
+.de-modal .de-pola-lg .de-pic img{width:auto;height:auto;max-width:min(720px,86vw);max-height:60vh;image-rendering:auto}
+.de-modal .de-pola-lg .de-body{height:auto;min-height:0;max-height:22vh;overflow-y:auto;padding:10px 14px 12px;margin-top:9px}
 .de-modal .de-pola-lg .de-title{font-size:14px}
 .de-modal .de-pola-lg .de-text{font-size:14px}
-.de-modal .de-pola-lg .de-q{font-size:130px}
+.de-modal .de-pola-lg .de-q{font-size:180px}
 @media(max-width:560px){
-  .de-modal .de-pola-lg{width:266px}
-  .de-modal .de-pola-lg .de-pic{width:240px;height:180px}
-  .de-modal .de-pola-lg .de-pic img{width:240px;height:180px}
-  .de-modal .de-pola-lg .de-q{font-size:80px}
+  .de-modal .de-pola-lg .de-body{max-height:30vh}
+  .de-modal .de-pola-lg .de-q{font-size:110px}
 }
 /* 窄屏：依次收起外层卡片（尺寸不变，仍 1:1 无锯齿） */
 @media(max-width:820px){
