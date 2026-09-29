@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-09-29 00:17:49   共 122 首（另有手写占位 0 条）
+// 生成时间：2026-09-30 00:15:10   共 122 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -248,6 +248,15 @@ window.CHU2U_SONGS = [
     "date": "2026-08-13",
     "play": 1007,
     "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6"
+   },
+   {
+    "bvid": "BV1JLgp6oE3q",
+    "page": 12,
+    "title": "Luna say maybe",
+    "author": "紫炎Yukari_En",
+    "date": "2026-08-13",
+    "play": 337,
+    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=12"
    }
   ],
   "src": "",
@@ -414,6 +423,15 @@ window.CHU2U_SONGS = [
     "date": "2026-08-13",
     "play": 1007,
     "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5"
+   },
+   {
+    "bvid": "BV1JLgp6oE3q",
+    "page": 7,
+    "title": "サンフェーデッド",
+    "author": "紫炎Yukari_En",
+    "date": "2026-08-13",
+    "play": 337,
+    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=7"
    }
   ],
   "src": "",
@@ -1769,6 +1787,15 @@ window.CHU2U_SONGS = [
     "date": "2026-09-13",
     "play": 28,
     "url": "https://www.bilibili.com/video/BV1cNYi6HEAE"
+   },
+   {
+    "bvid": "BV1JLgp6oE3q",
+    "page": 14,
+    "title": "【安可】花の塔（半）",
+    "author": "紫炎Yukari_En",
+    "date": "2026-08-13",
+    "play": 337,
+    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=14"
    }
   ],
   "src": "",
