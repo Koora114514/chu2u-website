@@ -719,9 +719,10 @@
   (function(){
     var el = document.getElementById("typeText");
     if(!el) return;
-    // 🎨 素材配置：简介文字（"羽啾chu2u"会自动加大两号并高亮）
-    var full = "本站定期（并非定期）同步 羽啾chu2u 融入人类生活时的考察数据、翻唱情报与都市探险小故事。 宇宙猫们助力外星人啾啾接收外星电波，一起寻找回到母星的办法吧！！";
-    var HL = "羽啾chu2u";
+    /* 简介文字来自 data/profile.js 的 hero.typed（full = 整句，hl = 其中高亮加大的那串） */
+    var TYPED = ((window.CHU2U_PROFILE || {}).hero || {}).typed || {};
+    var full = TYPED.full || "";
+    var HL = TYPED.hl || "";
     var hlAt = full.indexOf(HL);
     function renderAll(){
       el.textContent = "";
@@ -757,16 +758,32 @@
     var slotC = document.getElementById("slotC");
     var slotR = document.getElementById("slotR");
     var capName = document.getElementById("capName");
-    var dots = root.querySelectorAll(".cc-dot");
+    var dotsBox = document.getElementById("ccDots");
     var prevBtn = root.querySelector(".cc-nav.prev");
     var nextBtn = root.querySelector(".cc-nav.next");
     var stage = root.querySelector(".cc-stage");
-    // 🎨 素材配置：立绘数据（按此顺序轮切；没有图用 q:true 显示大像素问号；新增立绘直接在数组里加）
-    var SLIDES = [
-      { img: "images/探险啾.png?v=20260916", alt: "探险啾", cap: "外出考察ing · 探险啾！" },
-      { img: "images/宅尼特啾.png", alt: "宅尼特啾", cap: "好舒服啊~ · 家里蹲啾" },
-      { q: true, cap: "我是谁？· 你猜啾！" }
-    ];
+    /* 立绘数据来自 data/profile.js 的 hero.slides（按数组顺序轮切；q:true = 大像素问号占位） */
+    var PVER = window.CHU2U_PROFILE_UPDATED || "1";
+    var SLIDES = (((window.CHU2U_PROFILE || {}).hero || {}).slides || []).map(function(s){
+      return {
+        img: s.img ? s.img + (s.img.indexOf("?") >= 0 ? "" : "?v=" + PVER) : "",
+        alt: s.alt || "", cap: s.cap || "", q: !!s.q
+      };
+    });
+    if(!SLIDES.length) return;                       /* 没配置就不跑，免得空轮播 */
+    /* 圆点按张数生成（加/减立绘时不用改 HTML） */
+    if(dotsBox){
+      dotsBox.textContent = "";
+      SLIDES.forEach(function(_, k){
+        var d = document.createElement("button");
+        d.className = "cc-dot" + (k === 0 ? " is-active" : "");
+        d.setAttribute("data-idx", k);
+        d.setAttribute("role", "tab");
+        d.setAttribute("aria-label", "第 " + (k + 1) + " 张");
+        dotsBox.appendChild(d);
+      });
+    }
+    var dots = root.querySelectorAll(".cc-dot");
     var N = SLIDES.length, cur = 0, timer = null;
     function fill(slot, item){
       slot.textContent = "";
@@ -1499,7 +1516,10 @@
     var trig = document.getElementById("avatarBig");
     if(!trig) return;
     function view(){
-      window.open("images/探险啾-立绘.png?v=20260916", "_blank");   /* 用站内本地文件，别再指向站点外的路径 */
+      /* 立绘路径来自 data/profile.js 的 about.avatar（用站内本地文件，别再指向站点外的路径） */
+      var AV = (((window.CHU2U_PROFILE || {}).about || {}).avatar) || "images/探险啾-立绘.png";
+      var AVV = window.CHU2U_PROFILE_UPDATED || "1";
+      window.open(AV + (AV.indexOf("?") >= 0 ? "" : "?v=" + AVV), "_blank");
     }
     trig.addEventListener("click", view);
     trig.addEventListener("keydown", function(e){
