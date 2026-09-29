@@ -36,6 +36,8 @@
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
 window.CHU2U_CAT_UPDATED = "2026-09-29";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"3546839049571170", link:"//www.bilibili.com/opus/1252839254464135193", cover:"images/nyan/a31.jpg",
+   t:"做了镭射票", d:"魔法褥子", date:"2026年9月28日"},
   {kind:"art", uid:"354415366", link:"//www.bilibili.com/opus/1252695050905714713", cover:"images/nyan/a32.jpg",
    t:"羽啾 chu2u", d:"夜明けと蛍光", date:"2026年9月27日"},
   {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1252671926835347473", cover:"images/nyan/a33.jpg",
