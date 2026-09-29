@@ -139,38 +139,23 @@
 <section class="hero">
   <div class="wrap">
     <div class="hero-left">
-      <!-- 🎨 素材配置：主标题上方的栏目名 + 英文翻译 -->
-      <span class="kicker">宇宙特典期刊<small>UNIVERSE SPECIAL EDITION</small></span>
-      <!-- 🎨 素材配置：主标题 -->
-      <h1>宇宙观测中心</h1>
+      <!-- 内容来自 data/profile.js（可用 维护\猫猫管理\ 的「🏠 首页与公开档案」页编辑） -->
+      <span class="kicker" id="heroKicker"></span>
+      <h1 id="heroTitle"></h1>
       <p class="sub"><span id="typeText"></span><span class="cursor" aria-hidden="true">▌</span></p>
-      <div class="meta">
-        <!-- 🎨 素材配置：状态 HUD 胶囊内容 -->
-        <span class="chip">🛸 所在地：<b>地球</b></span>
-        <span class="chip">👽 种族：<b>地球上的"外星人"</b></span>
-        <!-- 🎨 素材配置：应援色（悬停展示色卡） -->
-        <span class="chip chip-swatch">🎨 应援色 : <b>#d4da7b</b><span class="swatch" aria-hidden="true"></span></span>
-      </div>
-      <div class="cta">
-        <!-- 🎨 素材配置：按钮文字/链接 -->
-        <a class="px-btn" href="tetris.html">▶ 玩一局俄罗斯方块</a>
-        <a class="px-btn ghost" href="#works">📼 啾啾特辑！</a>
-        <a class="px-btn ghost" href="playlist.html">🎧 陪啾啾听！</a>
-        <a class="px-btn sky" href="https://space.bilibili.com/2138961136?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">📺 进入B站主页</a>
-        <!-- 🎨 素材配置：二创 tag 链接（主题色卡片，点击跳转B站话题页） -->
-        <a class="chip chip-tag" href="https://www.bilibili.com/v/topic/detail?topic_id=1345548&topic_name=%E7%8C%AB%E7%8C%AB%E5%AE%87%E5%AE%99%E8%AE%BA&spm_id_from=333.1369.opus.module_topic.click" target="_blank" rel="noopener">Tag: <b>＃猫猫宇宙论</b></a>
-      </div>
+      <div class="meta" id="heroMeta"></div>
+      <div class="cta" id="heroCta"></div>
     </div>
     <div class="hero-right">
-      <span class="floater f1" aria-hidden="true">👽</span>
-      <span class="floater f2" aria-hidden="true">🛸</span>
-      <span class="floater f3" aria-hidden="true">🌵</span>
-      <span class="floater f4" aria-hidden="true">✦</span>
-      <span class="butterfly" aria-hidden="true">🛸</span>
+      <span class="floater f1" aria-hidden="true" id="heroF1"></span>
+      <span class="floater f2" aria-hidden="true" id="heroF2"></span>
+      <span class="floater f3" aria-hidden="true" id="heroF3"></span>
+      <span class="floater f4" aria-hidden="true" id="heroF4"></span>
+      <span class="butterfly" aria-hidden="true" id="heroFly"></span>
 
       <figure class="character-carousel" id="charCarousel" aria-label="我的像素形象" tabindex="0">
         <div class="cc-stage">
-          <!-- 🎨 素材替换：立绘图片放 site/images/，JS 里 SLIDES 数组按顺序配置；两侧自动缩小+70%透明度 -->
+          <!-- 立绘轮播：图片与说明来自 data/profile.js 的 hero.slides，按数组顺序轮切 -->
           <div class="cc-slot is-left" id="slotL" aria-hidden="true"></div>
           <div class="cc-slot is-center" id="slotC"></div>
           <div class="cc-slot is-right" id="slotR" aria-hidden="true"></div>
@@ -178,13 +163,9 @@
         <button class="cc-nav prev" type="button" aria-label="上一张">‹</button>
         <button class="cc-nav next" type="button" aria-label="下一张">›</button>
         <figcaption class="cc-caption" aria-live="polite">
-          <span class="cc-cap-name" id="capName">外出考察ing · 探险啾！</span>
+          <span class="cc-cap-name" id="capName"></span>
         </figcaption>
-        <div class="cc-dots" role="tablist">
-          <button class="cc-dot is-active" data-idx="0" role="tab" aria-label="第 1 张"></button>
-          <button class="cc-dot" data-idx="1" role="tab" aria-label="第 2 张"></button>
-          <button class="cc-dot" data-idx="2" role="tab" aria-label="第 3 张"></button>
-        </div>
+        <div class="cc-dots" role="tablist" id="ccDots"></div>
         <div class="cc-hint" aria-hidden="true">← → 浏览</div>
       </figure>
     </div>
@@ -200,65 +181,19 @@
   </div>
   <div class="about reveal">
     <div class="photo">
-      <span class="badge">羽啾CHU2U · 出道立绘</span>
-      <!-- 🎨 素材配置：出道立绘（点击可放大预览；图片放 site/images/探险啾-立绘.png，2× 显示尺寸 760×1258，用根目录 探险啾.png 原图重采样生成，原件勿动） -->
+      <span class="badge" id="aboutBadge"></span>
+      <!-- 出道立绘：路径来自 data/profile.js 的 about.avatar（点击可新窗口看高清原图） -->
       <div class="avatar-big" id="avatarBig" role="button" tabindex="0" aria-label="羽啾chu2u 出道立绘，点击在新标签页查看高清原图">
-        <img src="images/探险啾-立绘.png?v=20260916" alt="羽啾chu2u 出道立绘">
+        <img id="avatarImg" src="" alt="羽啾chu2u 出道立绘">
       </div>
     </div>
     <div class="info">
-      <!-- 🎨 素材配置：名字 / 期数 / 身份 / 自我介绍 -->
-      <div class="name">羽啾 chu2u <em>VirtuaReal · 二十八期生</em></div>
-      <div class="species">诞生在地球的外星人！</div>
-      <p class="bio">「电波信号接收成功！大家好！我是羽啾chu2u（Chu! Chu!），是诞生在地球的外星人！名字的Chu2u念作Chu!Chu! 如果大家是这么叫我的话！会很开心的！」 本名叫灯羽啾，昵称是啾啾/chuchu（不觉得这很像什么任务代号吗！）! 兴趣是占卜！可以理解成我在解密外星信号吧！梦想是办3D回在舞台上唱歌！ 2026年8月5日开始活动，7日正式出道！</p>
-      <!-- 🎨 素材配置：档案资料表（生日超链接到人类月球日百科） -->
-      <dl class="p-list">
-        <dt>姓名</dt><dd>灯羽啾</dd>
-        <dt>身份</dt><dd>诞生在地球的外星人！</dd>
-        <dt>身高</dt><dd>152cm</dd>
-        <dt>生日</dt><dd><a href="https://baike.baidu.com/item/%E4%BA%BA%E7%B1%BB%E6%9C%88%E7%90%83%E6%97%A5/4337779" target="_blank" rel="noopener">7月20日</a><img class="bday-img" src="images/山田啾.png" alt="山田啾"></dd>
-        <dt>MBTI</dt><dd>ISFP</dd>
-        <dt>粉丝牌</dt><dd>宇宙猫</dd>
-        <dt>TAG</dt><dd>猫猫宇宙论</dd>
-        <dt>目标</dt><dd><span class="chip-mini">3W订阅！</span><span class="chip-mini">办3D回<img src="images/抱抱啾.png" alt="抱抱啾"></span><span class="chip-mini">做游戏（敬请期待）</span></dd>
-        <dt>羽啾喜恶表</dt>
-        <dd class="dd-full">
-          <!-- 🎨 素材配置：喜恶表（像素滚轮上下滑动查看） -->
-          <div class="scroll-box" tabindex="0">
-            <div class="sb-group">
-              <span class="sb-h">兴趣爱好</span>
-              <p>超自然事件 / 有隐喻的作品 / 日式恐游RPG / 休闲游戏 / 唱歌 / 画画</p>
-            </div>
-            <div class="sb-group">
-              <span class="sb-h">不擅长的事情</span>
-              <p>竞技游戏 / 魂类游戏. / 多人社交 / 运动 / 唱歌 / 画画</p>
-            </div>
-            <div class="sb-group">
-              <span class="sb-h">喜欢的系列</span>
-              <p>物语系列 / 型月系列 / 东方系列 / 鸣泣之时 / 海底囚人 / Milgram / 弹丸论破</p>
-            </div>
-            <div class="sb-group">
-              <span class="sb-h">喜欢的游戏</span>
-              <p><b>偏好！</b>海王星 / 宝可梦</p>
-              <p><b>打牌！</b>游戏王 / 影之诗</p>
-              <p><b>休闲！</b>动森 / 宝森 / 星露谷</p>
-              <p><b>剧情！</b>兰斯 / 人狼村 / DDLC</p>
-              <p><b>手游！</b>康帕斯 / 偶像大师sc</p>
-            </div>
-            <div class="sb-group">
-              <span class="sb-h">喜欢的作品</span>
-              <p><b>偏好！</b>点兔 / 来自深渊 / 学园孤岛 / 属性咖啡厅 / 悠哉日常大王 / 幸运星 / 波子汽水 / 蔷薇少女 / 侵略乌贼娘 / urara迷路帖 / 干支魂 / 国王排名 / 金牌得主 / 天体的秩序 / 魔法少女伊莉雅 / 魔保育 / 宝石宠物 / 天魔黑兔 / 漆黑的子弹 / 天使降临到我身 / 萝球社 / 游戏人生 / 街角魔族 / 龙王的工作 / 机巧少女不会受伤 / 小林家的龙女仆</p>
-              <p><b>特摄！</b>假面骑士fourze / 虫王战队超王者</p>
-              <p><b>甜甜！</b>无能的奈奈 / 晚安布布</p>
-              <p><b>剧情！</b>奇巧计程车 / 宝石之国 / 红辣椒</p>
-              <p><b>好看！</b>百合熊岚 / 魔法少女育成计划 / 春宵苦短少女前进吧</p>
-            </div>
-          </div>
-        </dd>
-      </dl>
-      <div class="tags">
-        <span>#外星人</span><span>#唱歌</span><span>#画画</span><span>#社恐</span><span>#萝莉</span><span>#VirtuaReal 二十八期</span>
-      </div>
+      <!-- 内容来自 data/profile.js 的 about 部分（可用 维护\猫猫管理\ 的「🏠 首页与公开档案」页编辑） -->
+      <div class="name" id="aboutName"></div>
+      <div class="species" id="aboutSpecies"></div>
+      <p class="bio" id="aboutBio"></p>
+      <dl class="p-list" id="aboutList"></dl>
+      <div class="tags" id="aboutTags"></div>
     </div>
   </div>
 
@@ -535,6 +470,8 @@
 </div>
 
 <!-- 观测记录数据（每周一自动更新维护；内容见该文件的注释说明；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
+<!-- 首页首屏 + 公开档案的内容数据（手动维护，用 维护\猫猫管理\ 的「🏠 首页与公开档案」页改） -->
+<script src="data/profile.js?v=202609292100"></script>
 <script src="data/records.js?v=202609291859"></script>
 <!-- 猫猫宇宙论特辑！数据（每周一自动更新维护；内容见该文件的注释说明；?v= 同上） -->
 <script src="data/nyanya.js?v=202609291915"></script>
@@ -555,6 +492,156 @@
 (function(){
   "use strict";
   var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---------- ⓪ 首屏 Hero + 啾！公开档案：内容全部来自 data/profile.js ---------- */
+  (function(){
+    var P = window.CHU2U_PROFILE;
+    if(!P) return;
+    var VER = window.CHU2U_PROFILE_UPDATED || "1";
+    function imgUrl(u){
+      if(!u) return "";
+      return u + (u.indexOf("?") >= 0 ? "" : "?v=" + VER);
+    }
+    function el(tag, cls, text){
+      var e = document.createElement(tag);
+      if(cls) e.className = cls;
+      if(text !== undefined) e.textContent = text;
+      return e;
+    }
+    function put(id, text){ var e = document.getElementById(id); if(e) e.textContent = text || ""; }
+
+    /* —— Hero 左半 —— */
+    var h = P.hero || {};
+    var kicker = document.getElementById("heroKicker");
+    if(kicker){
+      kicker.textContent = "";
+      kicker.appendChild(document.createTextNode(h.kicker || ""));
+      if(h.kickerEn) kicker.appendChild(el("small", null, h.kickerEn));
+    }
+    put("heroTitle", h.title);
+
+    var meta = document.getElementById("heroMeta");
+    if(meta){
+      meta.textContent = "";
+      (h.chips || []).forEach(function(c){
+        var s = el("span", "chip", (c.icon ? c.icon + " " : "") + (c.label || ""));
+        s.appendChild(el("b", null, c.value || ""));
+        meta.appendChild(s);
+      });
+      if(h.swatch){
+        var sw = el("span", "chip chip-swatch", h.swatch.label || "");
+        sw.appendChild(el("b", null, h.swatch.color || ""));
+        var box = el("span", "swatch");
+        box.setAttribute("aria-hidden", "true");
+        if(h.swatch.color) box.style.background = h.swatch.color;
+        sw.appendChild(box);
+        meta.appendChild(sw);
+      }
+    }
+
+    var cta = document.getElementById("heroCta");
+    if(cta){
+      cta.textContent = "";
+      (h.buttons || []).forEach(function(b){
+        var a = el("a", "px-btn" + (b.cls ? " " + b.cls : ""), b.text || "");
+        a.setAttribute("href", b.href || "#");
+        if(b.ext){ a.setAttribute("target", "_blank"); a.setAttribute("rel", "noopener"); }
+        cta.appendChild(a);
+      });
+      if(h.tagChip && h.tagChip.text){
+        var tc = el("a", "chip chip-tag");
+        var i = String(h.tagChip.text).indexOf("＃") >= 0 ? String(h.tagChip.text).indexOf("＃")
+                : String(h.tagChip.text).indexOf("#");
+        var whole = String(h.tagChip.text);
+        if(i >= 0){
+          tc.appendChild(document.createTextNode(whole.slice(0, i)));
+          tc.appendChild(el("b", null, whole.slice(i)));
+        }else{
+          tc.textContent = whole;
+        }
+        tc.setAttribute("href", h.tagChip.href || "#");
+        tc.setAttribute("target", "_blank"); tc.setAttribute("rel", "noopener");
+        cta.appendChild(tc);
+      }
+    }
+
+    /* —— Hero 右半：飘着的装饰 + 立绘轮播（轮播本体在后面那个 IIFE 里渲染） —— */
+    var fl = h.floaters || [];
+    ["heroF1","heroF2","heroF3","heroF4"].forEach(function(id, k){
+      put(id, fl[k] || "");
+    });
+    put("heroFly", h.butterfly || "");
+
+    /* —— 啾！公开档案 —— */
+    var a = P.about || {};
+    put("aboutBadge", a.badge);
+    var ai = document.getElementById("avatarImg");
+    if(ai && a.avatar) ai.src = imgUrl(a.avatar);
+    var nm = document.getElementById("aboutName");
+    if(nm){
+      nm.textContent = a.name || "";
+      if(a.nameEm) nm.appendChild(el("em", null, a.nameEm));
+    }
+    put("aboutSpecies", a.species);
+    put("aboutBio", a.bio);
+
+    var list = document.getElementById("aboutList");
+    if(list){
+      list.textContent = "";
+      (a.list || []).forEach(function(it){
+        list.appendChild(el("dt", null, it.k || ""));
+        var dd = el("dd");
+        if(it.link){
+          var link = el("a", null, it.link.text || "");
+          link.setAttribute("href", it.link.href || "#");
+          link.setAttribute("target", "_blank"); link.setAttribute("rel", "noopener");
+          dd.appendChild(link);
+          if(it.link.img){
+            var bimg = el("img", "bday-img");
+            bimg.src = imgUrl(it.link.img);
+            bimg.alt = it.link.text || "";
+            dd.appendChild(bimg);
+          }
+        }else if(it.chips){
+          (it.chips || []).forEach(function(c){
+            var ch = el("span", "chip-mini", c.t || "");
+            if(c.img){
+              var cimg = el("img");
+              cimg.src = imgUrl(c.img);
+              cimg.alt = "";
+              ch.appendChild(cimg);
+            }
+            dd.appendChild(ch);
+          });
+        }else if(it.special === "likes" && a.likes){
+          dd.className = "dd-full";
+          var box = el("div", "scroll-box");
+          box.setAttribute("tabindex", "0");
+          a.likes.forEach(function(g){
+            var grp = el("div", "sb-group");
+            grp.appendChild(el("span", "sb-h", g.h || ""));
+            (g.items || []).forEach(function(line){
+              var pp = el("p");
+              if(line.b) pp.appendChild(el("b", null, line.b));
+              pp.appendChild(document.createTextNode(line.t || ""));
+              grp.appendChild(pp);
+            });
+            box.appendChild(grp);
+          });
+          dd.appendChild(box);
+        }else{
+          dd.textContent = it.v || "";
+        }
+        list.appendChild(dd);
+      });
+    }
+
+    var tags = document.getElementById("aboutTags");
+    if(tags){
+      tags.textContent = "";
+      (a.tags || []).forEach(function(t){ tags.appendChild(el("span", null, t)); });
+    }
+  })();
 
   /* ---------- 通用 toast ---------- */
   function toast(msg){
