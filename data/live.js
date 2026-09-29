@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐电波观测⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-29 02:26:27"};
+window.CHU2U_LIVE={"live":true,"title":"⭐挑战吃薯片不被发现⭐","online":107408,"area":"虚拟主播","start":1790689805,"checked":"2026-09-29 22:02:13"};
