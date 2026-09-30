@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐挑战吃薯片不被发现⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-30 04:24:42"};
+window.CHU2U_LIVE={"live":true,"title":"⭐刚睡醒，困得⭐","online":105490,"area":"虚拟主播","start":1790748020,"checked":"2026-09-30 14:13:23"};
