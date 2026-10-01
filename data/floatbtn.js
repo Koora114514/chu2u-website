@@ -10,17 +10,18 @@
  *   title  鼠标悬停时的小提示 + 读屏软件读的话
  *   show   填 false = 这个飘窗干脆不显示
  *
- * 想改文案/换链接：用 维护\飘窗手动更新.ps1（推荐），或者直接改下面这几行。
+ * 本文件由云端 作品展柜+飘窗 自动更新引擎维护（新投稿时自动换歌）；
+ * 平时也可以手动改（维护\猫猫管理\ 的「主页飘窗」页 / 维护\飘窗手动更新.ps1）。
  * 注意：飘窗右上角的「×」只关掉这一次（不记本地）——访客每次刷新/重进主页都会再出现
  */
-window.CHU2U_FLOATBTN_UPDATED = "2026-09-26";
+window.CHU2U_FLOATBTN_UPDATED = "2026-10-01";
 
 window.CHU2U_FLOATBTN = {
   icon: "🎧",
-  text: "一起来听！\n《恋人》\n助力10W播放！",
-  hl: "《恋人》",
+  text: "一起来听！\n《我是一个尼古丁过敏的帅哥》\n新投稿上线！",
+  hl: "《我是一个尼古丁过敏的帅哥》",
   badge: "GO",
-  href: "https://www.bilibili.com/video/BV1NDhR61EL8/",
-  title: "一起来听！《恋人》助力10W播放！",
+  href: "https://www.bilibili.com/video/BV1cHa66AEHA/",
+  title: "一起来听！《我是一个尼古丁过敏的帅哥》新投稿上线！",
   show: true
 };
