@@ -1197,7 +1197,11 @@ body.dark #splash .splash-bar .fill{background:#d4da7b}
 /* 平时整键 60% 半透明：悬停恢复 100% + 图标放大 + 底色加深（--olive-mid 深浅色自适应）；当前页 .is-here 始终不透明 */
 /* 高光：顶部一条柔白渐变（绘画式光泽），深浅色各自配亮度；底色用 background-color，悬停/当前页只换色不换光 */
 .side-btn{position:relative;display:flex;align-items:center;gap:10px;height:44px;padding:0 16px 0 4px;cursor:pointer;opacity:.6;border:3px solid var(--ink);border-left:none;box-shadow:4px 4px 0 rgba(48,48,48,.35);background-color:var(--panel);background-image:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.14) 42%,rgba(255,255,255,0) 60%);--tip:var(--panel);transition:opacity .12s steps(3),background-color .12s steps(3)}
-.side-btn img{width:36px;height:36px;flex:0 0 auto;object-fit:contain;image-rendering:pixelated}
+/* 图标是 72px 平滑插画显示在 36px：必须 auto 平滑缩小。
+   2026-10-02 用户报「侧边栏锯齿感很强」——pixelated 最近邻 2:1 降采样会把
+   平滑插画的细线啃断、轮廓变台阶（与切换键/立绘/拍立得同一类问题，就剩这里没改）。
+   悬停 72px = 1:1 原尺寸，auto 对它无影响。 */
+.side-btn img{width:36px;height:36px;flex:0 0 auto;object-fit:contain;image-rendering:auto}
 /* 右端三角尖：::before 是墨色描边层（比填充层大一圈=3px 描边）、::after 是填充层（颜色跟随按键底色），两层都是阶梯像素斜边 */
 .side-btn::before{content:"";position:absolute;left:100%;top:50%;width:18px;height:30px;margin-top:-15px;background:var(--ink);clip-path:polygon(0 0,50% 0,50% 12.5%,100% 50%,50% 87.5%,50% 100%,0 100%)}
 .side-btn::after{content:"";position:absolute;left:calc(100% + 3px);top:50%;width:12px;height:24px;margin-top:-12px;background:var(--tip);clip-path:polygon(0 0,50% 0,50% 12.5%,100% 50%,50% 87.5%,50% 100%,0 100%)}
@@ -1630,8 +1634,11 @@ body.dark .side-btn.is-here::after{background:var(--olive-deep)}
 /* 当前页的左侧竖条照旧：改成贴在内层左边 */
 .side-btn.is-here{box-shadow:none}
 
-/* 修：旧的三角尖规则留下的 width/height 没被 inset 覆盖，会在左边留个残块 */
-.side-btn::before,.side-btn::after{width:auto;height:auto;margin:0;top:0;left:0;right:0;bottom:0}
+/* 修：旧的三角尖规则留下的 width/height/margin 没被覆盖，会捣乱 */
+.side-btn::before,.side-btn::after{width:auto;height:auto;margin:0}
+/* 2026-10-02：原来这里还带着 top/left/right/bottom:0，把 ::after 的 inset:3px
+   （四周内缩 3px、露出墨色描边）覆盖掉了——墨描边因此从来没渲染出来。
+   删掉那四个即可：::before 由上面的 inset:0 管、::after 由 inset:3px 管。 */
 
 /* 修 bug：旧的矩形 box-shadow 还在，会在五边形底下叠出一个方块——去掉，
    投影统一交给 filter:drop-shadow（跟着五边形走） */
