@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来）
+   注意：只拦截「刷新」；「前进/后退」仍交给浏览器自己恢复位置，不然返回上一页会丢失阅读位置 */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
+<title>羽啾chu2u · 探险日志！</title>
+<meta name="description" content="羽啾chu2u 像素个人站 · 羽啾探险日志（录播档案库：按日期归档、按类型分类，支持在线播放与 24h 连播电台）">
+<link rel="icon" type="image/png" href="images/fumo啾.png">
+<!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
+<link rel="stylesheet" href="css/base.css?v=202610030010">
+</head>
+<body>
+<div class="contour-bg" aria-hidden="true"></div>
+<div class="dark-stars" aria-hidden="true"></div>
+
+<!-- ============ 顶部导航（站标 + B站主页 + 直播间状态） ============ -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo"><img src="images/喵啾.png" alt="羽啾chu2u"></span>
+      <span class="brand-text">
+        <b>羽啾chu2u</b>
+        <small>羽啾探险日志！</small>
+        <i>Universe Observation Center</i>
+      </span>
+    </div>
+    <nav class="nav">
+      <!-- 像素时钟：选中的时区记在本地浏览器（静态部署也能用，纯前端） -->
+      <div class="pixel-clock" id="pixelClock">
+        <div class="pc-row">
+          <span class="pc-time" id="pcTime">--:--:--</span>
+          <span class="pc-date" id="pcDate">----.--.-- 周-</span>
+        </div>
+        <select class="pc-sel" id="pcTz" aria-label="选择时区" title="选择时区"></select>
+      </div>
+      <div class="bili-box">
+        <a class="px-btn nav-bili" href="https://space.bilibili.com/2138961136?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">进入B站主页</a>
+        <!-- 直播间开播状态：数据来自 data/live.js（计划任务每 2 分钟刷新）；整行点按直达直播间 -->
+        <div class="live-wrap">
+          <a class="live-line" id="liveLine" href="https://live.bilibili.com/1727074031" target="_blank" rel="noopener" title="点我直达啾啾的直播间">
+            <span class="live-dot" aria-hidden="true"></span><span id="liveLabel">状态获取中…</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 侧边栏：页间切换导航（图标悬停弹出放大文字；末位老美のNASA 外链） ============ -->
+<nav class="sidenav" aria-label="页面切换">
+  <a class="side-btn" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
+  <a class="side-btn" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
+  <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
+  <a class="side-btn is-here" href="log.html" aria-label="羽啾探险日志！"><img src="images/本本啾.png" alt=""><span class="side-label" aria-hidden="true">羽啾探险日志！</span></a>
+  <a class="side-btn" href="kb.html" aria-label="Index📕"><img src="images/啥啾.png" alt=""><span class="side-label" aria-hidden="true">Index📕</span></a>
+  <a class="side-btn" href="https://chu2u.live/" target="_blank" rel="noopener" aria-label="老美のNASA"><img src="images/宇宙猫.png" alt=""><span class="side-label" aria-hidden="true">老美のNASA</span></a>
+</nav>
+
+<main>
+  <div class="wrap">
+    <div class="page-hero reveal">
+      <span class="kicker">REPLAY STATION<small>CHU2U ADVENTURE LOG</small></span>
+      <h1>羽啾探险日志！</h1>
+      <p class="sub">这里是羽啾的录播探险档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一张卡就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
+    </div>
+
+    <!-- 分类筛选 + 连播开关 + 统计 -->
+    <div class="rp-tools reveal">
+      <div class="rp-filter" id="rpFilter" role="group" aria-label="分类筛选"></div>
+      <button class="px-btn ghost" id="rpCont" type="button" title="播完自动切下一场，循环播放">📻 24h 连播</button>
+      <span class="rp-stats" id="rpStats"></span>
+    </div>
+
+    <!-- 播放器面板（点卡片后出现；内嵌 B 站官方外链播放器，带宽走 B站CDN→访客，不占本站） -->
+    <div class="rp-player pixel-card reveal" id="rpPlayer" hidden>
+      <div class="phead">
+        <span class="pt" id="rpNow">—</span>
+        <div class="pbtns" id="rpPages"></div>
+        <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
+        <button class="px-btn rp-go" id="rpClose" type="button">✕ 收起</button>
+      </div>
+      <div class="rp-frame-wrap"><iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer"></iframe></div>
+    </div>
+
+    <!-- 录播列表 -->
+    <div class="rp-list reveal" id="rpList"></div>
+  </div>
+</div>
+
+<!-- 深浅色模式切换按钮（左下角） -->
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
+  <img class="tt-sun" src="images/得意啾.png" alt=""><img class="tt-moon" src="images/龙宫礼啾.png" alt="">
+</button>
+<!-- 返回顶部飞船按钮（右下角）：悬停上下浮动，点击垂直飞出并冒出像素气泡 -->
+<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
+  <img src="images/飞船啾.png" alt="返回顶部">
+</button>
+
+<!-- 录播站数据（每天自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
+<script src="data/replays.js?v=202610030008"></script>
+<script src="js/shared.js"></script>
+<script>
+/* 羽啾探险日志！录播站
+   数据在 data/replays.js（window.CHU2U_REPLAYS + window.CHU2U_REPLAY_TAGS）；
+   排序：置顶最前，组内按日期时间（y/mo/d/h/mi）新→旧；分类筛选按 tags 逗号串匹配。
+   播放器：B 站官方外链播放器 iframe，选分 P 用 page 参数切换；
+   24h 连播：计时器按 sec 播完自动切下一场循环（手动换 P 后计时会漂移，属已知限制），
+   另监听 postMessage 的 end 类事件提前切换（B 站事件格式不保证，收不到就靠计时器兜底）。 */
+(function(){
+  var REPLAYS = window.CHU2U_REPLAYS || [];
+  var TAGS = window.CHU2U_REPLAY_TAGS || [];
+  var list = REPLAYS.slice();
+  var cur = "all";
+  var playing = null, page = 1;
+  var cont = false, timer = null;
+
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  function tagArr(it){ return (it.tags || "").split(",").map(function(s){ return s.trim(); }).filter(Boolean); }
+
+  /* 排序：pin 优先，组内日期时间新→旧（数组顺序不承重） */
+  list.sort(function(a, b){
+    if((a.pin ? 1 : 0) !== (b.pin ? 1 : 0)) return (b.pin ? 1 : 0) - (a.pin ? 1 : 0);
+    var ka = [a.y||0, a.mo||0, a.d||0, a.h||0, a.mi||0], kb = [b.y||0, b.mo||0, b.d||0, b.h||0, b.mi||0];
+    for(var i = 0; i < 5; i++){ if(ka[i] !== kb[i]) return kb[i] - ka[i]; }
+    return 0;
+  });
+
+  /* ---------- 分类筛选 ---------- */
+  var filterEl = document.getElementById("rpFilter");
+  function chipBtn(label, key, on){
+    var b = document.createElement("button");
+    b.type = "button";
+    b.className = "kb-tagchip" + (on ? " on" : "");
+    b.textContent = label;
+    b.addEventListener("click", function(){
+      Array.prototype.forEach.call(filterEl.children, function(x){ x.classList.remove("on"); });
+      b.classList.add("on");
+      cur = key;
+      renderList();
+    });
+    return b;
+  }
+  filterEl.appendChild(chipBtn("全部", "all", true));
+  TAGS.forEach(function(tg){ if(tg) filterEl.appendChild(chipBtn(tg, tg, false)); });
+
+  /* ---------- 列表 ---------- */
+  var listEl = document.getElementById("rpList");
+  function fmtH(sec){ return sec ? (sec / 3600).toFixed(1) : "—"; }
+  function cardEl(it){
+    var el = document.createElement("div");
+    el.className = "rp-card";
+    var th = document.createElement("div"); th.className = "rp-thumb";
+    var im = document.createElement("img"); im.src = it.cover; im.alt = it.t || "";
+    im.loading = "lazy"; im.referrerPolicy = "no-referrer";
+    im.onerror = function(){ th.textContent = "🐱"; };
+    th.appendChild(im);
+
+    var info = document.createElement("div"); info.className = "rp-info";
+    var when = document.createElement("div"); when.className = "rp-when";
+    var b1 = document.createElement("b"); b1.textContent = it.y + "." + p2(it.mo) + "." + p2(it.d);
+    when.appendChild(b1);
+    when.appendChild(document.createTextNode(p2(it.h) + ":" + p2(it.mi)));
+    var t = document.createElement("div"); t.className = "rp-t"; t.textContent = it.t || "（无标题）";
+    var tags = document.createElement("div"); tags.className = "rp-tags";
+    tagArr(it).forEach(function(tg){
+      var s = document.createElement("span"); s.className = "rp-tag"; s.textContent = tg;
+      tags.appendChild(s);
+    });
+    info.appendChild(when); info.appendChild(t); info.appendChild(tags);
+
+    var meta = document.createElement("div"); meta.className = "rp-meta";
+    var dur = document.createElement("div"); dur.className = "rp-dur";
+    dur.textContent = fmtH(it.sec);
+    var sm = document.createElement("small"); sm.textContent = "小时"; dur.appendChild(sm);
+    meta.appendChild(dur);
+    if(it.pages > 0){
+      var pb = document.createElement("div"); pb.className = "rp-pbadge";
+      pb.textContent = it.pages + " 分P";
+      meta.appendChild(pb);
+    }
+    var go = document.createElement("button"); go.className = "px-btn rp-go"; go.type = "button";
+    go.textContent = "▶ 播放";
+    meta.appendChild(go);
+
+    el.appendChild(th); el.appendChild(info); el.appendChild(meta);
+    el.addEventListener("click", function(){ openPlayer(it, 1); });
+    return el;
+  }
+  function renderList(){
+    listEl.textContent = "";
+    var visible = list.filter(function(it){
+      return cur === "all" || tagArr(it).indexOf(cur) >= 0;
+    });
+    if(!visible.length){
+      var em = document.createElement("div"); em.className = "rp-empty";
+      em.textContent = "还没有录播档案～ 自动识别每天 9 点跑，也可以去管理台「抓最新录播」";
+      listEl.appendChild(em);
+    } else {
+      visible.forEach(function(it){ listEl.appendChild(cardEl(it)); });
+    }
+    var hours = visible.reduce(function(s, it){ return s + (it.sec || 0); }, 0);
+    document.getElementById("rpStats").textContent =
+      "共 " + visible.length + " 场 · 合计 " + (hours / 3600).toFixed(1) + " 小时";
+  }
+
+  /* ---------- 播放器 ---------- */
+  var player = document.getElementById("rpPlayer");
+  var frame = document.getElementById("rpFrame");
+  function openPlayer(it, pg){
+    playing = it;
+    page = pg || 1;
+    player.hidden = false;
+    document.getElementById("rpNow").textContent =
+      it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi) + " · " + (it.t || "录播");
+    document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + it.bvid;
+    renderPages();
+    frame.src = "https://player.bilibili.com/player.html?bvid=" + it.bvid + "&page=" + page + "&autoplay=1";
+    armTimer();
+    player.scrollIntoView({behavior: "smooth", block: "nearest"});
+  }
+  function renderPages(){
+    var box = document.getElementById("rpPages");
+    box.textContent = "";
+    if(!playing || !playing.pages || playing.pages < 2) return;
+    for(var i = 1; i <= playing.pages; i++){
+      (function(n){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "rp-pbtn" + (n === page ? " on" : "");
+        b.textContent = "P" + n;
+        b.addEventListener("click", function(e){
+          e.stopPropagation();
+          page = n;
+          frame.src = "https://player.bilibili.com/player.html?bvid=" + playing.bvid + "&page=" + page + "&autoplay=1";
+          renderPages();
+        });
+        box.appendChild(b);
+      })(i);
+    }
+  }
+  document.getElementById("rpClose").addEventListener("click", function(){
+    player.hidden = true;
+    clearTimer();
+    frame.src = "";              /* 清空 src = 停止播放 */
+    playing = null;
+  });
+
+  /* ---------- 24h 连播 ---------- */
+  var contBtn = document.getElementById("rpCont");
+  function clearTimer(){ if(timer){ clearTimeout(timer); timer = null; } }
+  function armTimer(){
+    clearTimer();
+    if(!cont || !playing || !playing.sec) return;
+    timer = setTimeout(advance, playing.sec * 1000 + 20000);   /* 总时长 + 20s 缓冲 */
+  }
+  function advance(){
+    /* 在「当前筛选顺序」里找当前这场后面的下一场，循环 */
+    if(!playing) return;
+    var visible = list.filter(function(it){
+      return cur === "all" || tagArr(it).indexOf(cur) >= 0;
+    });
+    var idx = -1;
+    for(var i = 0; i < visible.length; i++){ if(visible[i].bvid === playing.bvid){ idx = i; break; } }
+    var next = visible[(idx + 1) % visible.length];
+    if(next && next.bvid !== playing.bvid) openPlayer(next, 1);
+  }
+  contBtn.addEventListener("click", function(){
+    cont = !cont;
+    contBtn.classList.toggle("on", cont);
+    try{ localStorage.setItem("chu2u-rp-cont", cont ? "1" : "0"); }catch(e){}
+    if(cont){ if(playing) armTimer(); window.toast("24h 连播已开启：播完自动切下一场"); }
+    else { clearTimer(); window.toast("连播已关闭"); }
+  });
+  /* B 站播放器结束事件（postMessage 字段不保证，收到 end 类信号就提前切换；收不到靠计时器兜底） */
+  window.addEventListener("message", function(e){
+    if(!cont || !playing) return;
+    try{
+      var d = e.data;
+      if(d === "ended" || (d && typeof d === "object" &&
+         String(d.type || "").toLowerCase().indexOf("end") >= 0)){
+        advance();
+        armTimer();
+      }
+    }catch(err){}
+  });
+
+  /* 恢复连播开关状态（不自动播放） */
+  try{
+    if(localStorage.getItem("chu2u-rp-cont") === "1"){
+      cont = true;
+      contBtn.classList.add("on");
+    }
+  }catch(e){}
+
+  renderList();
+})();
+</script>
+
+<!-- ============ 底部滚动弹幕（黑底 + 应援色，单击复制） ============ -->
+<div class="danmu-bar" id="danmuBar" role="button" tabindex="0" title="单击复制" aria-label="单击复制这段文字">
+  <div class="danmu-track" id="danmuTrack"></div>
+</div>
+<script>
+(function(){
+  var TEXT = "aHR0cHM6Ly9hcHAubm90aW9uLmNvbS9wLzNhMDEyNWQxNDM4ODgwZDNiZjVhZWRhZGRhZDNmNGE0P3NvdXJjZT1jb3B5X2xpbms=";
+  var bar = document.getElementById("danmuBar");
+  var track = document.getElementById("danmuTrack");
+  if(!bar || !track) return;
+  var unit = TEXT + "　★　";
+  function fill(n){
+    var buf = [];
+    for(var i = 0; i < n; i++) buf.push(unit);
+    track.textContent = buf.join("");
+    return n;
+  }
+  function layout(){
+    // 先铺一遍估算份数，量出「一份」的真实宽度
+    var times = fill(Math.max(3, Math.ceil((window.innerWidth * 1.8) / (unit.length * 8)) + 1));
+    var unitW = track.scrollWidth / times;
+    if(!(unitW > 0)) return;
+    // 份数要够：左移一份后，剩下的仍能盖满视口，否则循环处会露空
+    var need = Math.ceil(window.innerWidth / unitW) + 1;
+    if(need > times){
+      times = fill(need);
+      unitW = track.scrollWidth / times;
+    }
+    // 每轮只左移「一份」的宽度 → 下一份正好补到同一位置，无缝无限循环
+    track.style.setProperty("--danmu-shift", unitW.toFixed(1) + "px");
+    // 1.2 倍速 = 约 66px/秒（2026-09-13 用户定）
+    track.style.animationDuration = Math.max(6, unitW / 66).toFixed(1) + "s";
+  }
+  layout();
+  window.addEventListener("resize", layout);
+  function feedback(ok){
+    bar.classList.add("done");
+    bar.setAttribute("title", ok ? "已复制 ✓" : "复制失败，请手动选中");
+    clearTimeout(bar._t);
+    bar._t = setTimeout(function(){
+      bar.classList.remove("done");
+      bar.setAttribute("title", "单击复制");
+    }, 1300);
+  }
+  function syncCopy(){
+    try{
+      var ta = document.createElement("textarea");
+      ta.value = TEXT; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta); return ok;
+    }catch(e){ return false; }
+  }
+  function copy(){
+    // 先给反馈再真正复制：同步 execCommand 在真实点击下最可靠，
+    // 失败才退到异步剪贴板 API（它返回 Promise，某些环境会一直挂着不结算——
+    // 那样点了就没任何反应，所以不能把它当首选）
+    feedback(true);
+    if(syncCopy()) return;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(TEXT).then(null, function(){ feedback(false); });
+    } else { feedback(false); }
+  }
+  bar.addEventListener("click", copy);
+  bar.addEventListener("keydown", function(e){
+    if(e.key === "Enter" || e.key === " "){ e.preventDefault(); copy(); }
+  });
+})();
+</script>
+<!-- ============ 导航栏像素时钟（时区存本地） ============ -->
+<script>
+(function(){
+  var el = document.getElementById("pixelClock");
+  if(!el) return;
+  var tEl = document.getElementById("pcTime"),
+      dEl = document.getElementById("pcDate"),
+      sEl = document.getElementById("pcTz");
+  /* 时区候选：值用 IANA 名称，交给 Intl 换算（不用手算偏移，夏令时也自动对） */
+  var ZONES = [
+    ["local", "本地时间"],
+    ["Asia/Shanghai", "北京 UTC+8"],
+    ["Asia/Tokyo", "东京 UTC+9"],
+    ["Asia/Seoul", "首尔 UTC+9"],
+    ["Asia/Singapore", "新加坡 UTC+8"],
+    ["Europe/London", "伦敦"],
+    ["Europe/Paris", "巴黎·柏林"],
+    ["Europe/Moscow", "莫斯科"],
+    ["America/New_York", "纽约"],
+    ["America/Los_Angeles", "洛杉矶"],
+    ["UTC", "UTC 世界时"]
+  ];
+  ZONES.forEach(function(z){
+    var o = document.createElement("option");
+    o.value = z[0]; o.textContent = z[1];
+    sEl.appendChild(o);
+  });
+  var saved = "local";
+  try{ saved = localStorage.getItem("chu2u-clock-tz") || "local"; }catch(e){}
+  var ok = false;
+  for(var i = 0; i < sEl.options.length; i++){ if(sEl.options[i].value === saved) ok = true; }
+  sEl.value = ok ? saved : "local";
+  sEl.addEventListener("change", function(){
+    try{ localStorage.setItem("chu2u-clock-tz", sEl.value); }catch(e){}
+    tick();
+  });
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  var cachedFmt = null, cachedTz = "";
+  function tick(){
+    var tz = sEl.value, now = new Date();
+    if(tz === "local"){
+      tEl.textContent = p2(now.getHours()) + ":" + p2(now.getMinutes()) + ":" + p2(now.getSeconds());
+      dEl.textContent = now.getFullYear() + "." + p2(now.getMonth() + 1) + "." + p2(now.getDate()) +
+                        " 周" + "日一二三四五六".charAt(now.getDay());
+      return;
+    }
+    try{
+      if(tz !== cachedTz){
+        cachedFmt = new Intl.DateTimeFormat("zh-CN", {
+          timeZone: tz, hour12: false, year: "numeric", month: "2-digit", day: "2-digit",
+          hour: "2-digit", minute: "2-digit", second: "2-digit", weekday: "short"
+        });
+        cachedTz = tz;
+      }
+      var o = {};
+      cachedFmt.formatToParts(now).forEach(function(x){ o[x.type] = x.value; });
+      var hh = (o.hour === "24" ? "00" : o.hour);   /* 有的环境午夜会返回 24 */
+      tEl.textContent = hh + ":" + o.minute + ":" + o.second;
+      dEl.textContent = o.year + "." + o.month + "." + o.day + " " + o.weekday;
+    }catch(e){
+      tEl.textContent = "--:--:--";
+      dEl.textContent = "时区不可用";
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
