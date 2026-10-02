@@ -2152,6 +2152,8 @@ body.dark .kb-tagchip.on b{color:#10102a}
 .rp-tag{font-size:11px;line-height:1.4;color:var(--ink);border:2px solid var(--olive-deep);
   border-radius:999px;padding:0 8px;letter-spacing:1px;background:var(--panel);
   white-space:nowrap}
+.rp-tag-none{font-size:11px;color:var(--ink-soft);letter-spacing:1px;white-space:nowrap;
+  border:2px dashed var(--ink-soft);border-radius:999px;padding:0 8px;opacity:.75}
 .rp-tag-more{font-size:11px;color:var(--ink-soft);line-height:1.4;white-space:nowrap}
 .rp-cell-dur{font-size:15px;color:var(--ink);text-align:left;white-space:nowrap}
 .rp-play{font-family:inherit;font-size:13px;padding:6px 14px;cursor:pointer;
@@ -2171,8 +2173,10 @@ body.dark .kb-tagchip.on b{color:#10102a}
 .rp-player .pt{font-size:14px;font-weight:700;flex:1;min-width:0;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rp-player .pbtns{display:flex;gap:6px;flex-wrap:wrap}
-.rp-frame-wrap{aspect-ratio:16/9;background:#000}
+.rp-frame-wrap{aspect-ratio:16/9;background:#000;display:grid;place-items:center}
 .rp-frame-wrap iframe{width:100%;height:100%;border:none;display:block}
+.rp-ph{color:rgba(255,255,255,.55);font-size:14px;letter-spacing:2px;line-height:2;
+  text-align:center;padding:0 14px}
 .rp-pbtn{font-family:inherit;font-size:12px;padding:4px 10px;cursor:pointer;
   background:var(--panel);color:var(--ink);border:2px solid var(--ink);border-radius:999px}
 .rp-pbtn.on{background:var(--olive-deep);color:var(--panel)}
@@ -2182,9 +2186,13 @@ body.dark .kb-tagchip.on b{color:#10102a}
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rp-now-meta{font-size:13px;color:var(--ink-soft);letter-spacing:1px;line-height:1.7;margin-top:4px}
 .rp-empty{color:var(--ink-soft);font-size:14px;padding:24px 0;text-align:center;letter-spacing:2px}
+/* 侧边栏常驻文字态（1151~1389px 视口）：左侧竖排导航会压住内容，给本页留出偏移 */
+@media (min-width:1151px) and (max-width:1389px){
+  .rp-wrap{padding-left:76px}
+}
 /* 窄屏：播放器栏移到列表下方；行网格收窄（tag 列藏进标题下方） */
 @media(max-width:1150px){
-  .rp-body{grid-template-columns:1fr}
+  .rp-body{grid-template-columns:1fr;padding-bottom:96px}
   .rp-rail{position:static;order:2}
 }
 @media(max-width:720px){

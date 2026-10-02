@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610030121">
+<link rel="stylesheet" href="css/base.css?v=202610030125">
 </head>
 <body>
 <div class="contour-bg" aria-hidden="true"></div>
@@ -78,7 +78,7 @@
 </nav>
 
 <main>
-  <div class="wrap">
+  <div class="wrap rp-wrap">
     <div class="page-hero reveal">
       <span class="kicker">REPLAY STATION<small>CHU2U ADVENTURE LOG</small></span>
       <h1>羽啾探险日志！</h1>
@@ -110,14 +110,17 @@
 
       <!-- 右侧播放器栏（宽屏吸顶；窄屏移到列表下方） -->
       <aside class="rp-rail">
-        <div class="rp-player pixel-card" id="rpPlayer" hidden>
+        <div class="rp-player pixel-card" id="rpPlayer">
           <div class="phead">
             <span class="pt" id="rpNow">—</span>
             <div class="pbtns" id="rpPages"></div>
             <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
             <button class="px-btn rp-go" id="rpClose" type="button">✕</button>
           </div>
-          <div class="rp-frame-wrap"><iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer"></iframe></div>
+          <div class="rp-frame-wrap">
+            <iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
+            <div class="rp-ph" id="rpPh">🎬 点一场录播<br>在这里播放 ⭐</div>
+          </div>
         </div>
         <div class="rp-now pixel-card" id="rpNowCard">
           <div class="rp-now-t">还没有播放任何录播</div>
@@ -220,9 +223,13 @@
     meta.textContent = it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi)
       + (it.pages > 0 ? " · " + it.pages + " 个分P" : "");
     info.appendChild(t); info.appendChild(meta);
-    /* 类型 tag（最多露 2 个，其余放 title） */
+    /* 类型 tag（最多露 2 个，其余放 title；没打分类的显示「未分类」） */
     var tags = document.createElement("div"); tags.className = "rp-cell-tags";
     var arr = tagArr(it);
+    if(!arr.length){
+      var none = document.createElement("span"); none.className = "rp-tag-none"; none.textContent = "未分类";
+      tags.appendChild(none);
+    }
     arr.slice(0, 2).forEach(function(tg){
       var s = document.createElement("span"); s.className = "rp-tag"; s.textContent = tg;
       tags.appendChild(s);
@@ -280,10 +287,12 @@
   /* ---------- 播放器（右侧栏） ---------- */
   var player = document.getElementById("rpPlayer");
   var frame = document.getElementById("rpFrame");
+  var ph = document.getElementById("rpPh");
   function openPlayer(it, pg){
     playing = it;
     curPage = pg || 1;
-    player.hidden = false;
+    ph.hidden = true;
+    frame.hidden = false;
     document.getElementById("rpNow").textContent =
       it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi) + " · " + (it.t || "录播");
     var nowCard = document.getElementById("rpNowCard");
@@ -319,9 +328,10 @@
     }
   }
   document.getElementById("rpClose").addEventListener("click", function(){
-    player.hidden = true;
     clearTimer();
     frame.src = "";              /* 清空 src = 停止播放 */
+    frame.hidden = true;
+    ph.hidden = false;
     playing = null;
   });
 
