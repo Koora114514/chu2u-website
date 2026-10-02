@@ -117,7 +117,9 @@ section[id]{scroll-margin-top:76px}
 #splash .ship-unit{position:absolute;inset:0;animation:shipBob 1s steps(4) infinite alternate}
 @keyframes shipBob{from{transform:translateY(-12px)}to{transform:translateY(12px)}}
 #splash .ship-unit img{
-  position:absolute;right:0;top:0;width:200px;height:195px;object-fit:contain;
+  position:absolute;right:0;top:0;width:208px;height:202px;object-fit:contain;
+  /* 208×202 = 原图 104×101 的整数 2 倍：像素小图整数倍放大保持锐利，
+     1.92 倍那种非整数放大在 pixelated 下全是锯齿（2026-10-02 目检发现） */
   image-rendering:pixelated;z-index:2;
 }
 /* 🎨 素材配置：像素彩虹尾迹（逐帧分析 彩虹猫动画.mp4 后复刻：

@@ -11,7 +11,7 @@
  *
  * 也可以在 维护\猫猫管理\ 的「🧭 设计元素」页用界面改（推荐，换图会自动生成四档尺寸）。
  */
-window.CHU2U_DESIGN_UPDATED = "2026-09-29 20:47";
+window.CHU2U_DESIGN_UPDATED = "2026-10-02 14:44";
 
 window.CHU2U_DESIGN = [
   { img:"images/design/项圈！", title:"项圈！", text:"脖子上的项圈其实搭载了能实时监测生命活动的AI！除了检测生命体征以外，它还会自己眨眼哦~！不信你跟它对视10秒！", locked:false },
