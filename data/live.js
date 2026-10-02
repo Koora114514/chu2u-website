@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐刚睡醒，困得⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-09-30 16:37:03"};
+window.CHU2U_LIVE={"live":true,"title":"⭐睡醒了，还是有点头痛!⭐","online":103076,"area":"虚拟主播","start":1790920635,"checked":"2026-10-02 14:13:01"};
