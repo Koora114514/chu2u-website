@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐睡醒了，还是有点头痛!⭐","online":103076,"area":"虚拟主播","start":1790920635,"checked":"2026-10-02 14:13:01"};
+window.CHU2U_LIVE={"live":false,"title":"⭐突击水时长走起⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-02 18:51:17"};
