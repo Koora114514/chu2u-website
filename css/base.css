@@ -447,7 +447,11 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .de-pola{background:#fbfcf2;border:3px solid #303030;box-shadow:4px 4px 0 rgba(48,48,48,.4);padding:8px 8px 0;position:relative;display:flex;flex-direction:column;align-items:center}
 .de-pola::before{content:"";position:absolute;top:-11px;left:50%;transform:translateX(-50%);width:68px;height:18px;background:#d4da7b;border:2px solid #303030;z-index:3}
 .de-pic{position:relative;overflow:hidden;background:#f0f2d8;border:2px solid #d5d9ad}
-.de-pic img{display:block;object-fit:contain;image-rendering:pixelated}
+/* 设计元素照片区是平滑插画（不是像素画）：必须 auto 平滑缩放。
+   2026-10-02 用户报「上传的 png 锯齿变严重」——这里原来写的是 pixelated（邻居取样），
+   图片放大后显示尺寸和图片尺寸不再是整数倍关系（相框 2px 边框 + 高分屏缩放），
+   非整数倍 × 邻居取样 = 轮廓锯齿。改成 auto 后任意缩放都平滑。 */
+.de-pic img{display:block;object-fit:contain;image-rendering:auto}
 .de-pic img.is-locked{filter:brightness(.32) contrast(1.05)}
 .de-q{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:95px;line-height:1;color:#fbfcf2;text-shadow:5px 5px 0 rgba(48,48,48,.85);animation:blink 2.6s steps(1) infinite}
 .de-body{width:100%;padding:7px 8px 9px;border-top:2px dashed #d5d9ad;margin-top:7px;overflow:hidden}
@@ -983,7 +987,7 @@ body.dark .secret{border-color:#2a2a4a}
   background:rgba(208,216,120,.12);border:2px solid var(--olive);overflow:hidden;
 }
 .sk-pic[hidden]{display:none}
-.sk-pic img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .12s}
+.sk-pic img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .12s;image-rendering:auto}
 .sk-pic:hover img{opacity:.82}
 .sk-pic-hint{
   position:absolute;left:0;right:0;bottom:0;padding:3px 6px;text-align:center;
