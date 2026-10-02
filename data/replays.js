@@ -84,5 +84,4 @@ window.CHU2U_REPLAYS = [
    y:2026, mo:9, d:6, h:16, mi:33, sec:1441, pages:1, tags:"", pin:false},
   {bvid:"BV1udb56AEhd", t:"遇见八尺大人！", cover:"images/replays/r029.jpg",
    y:2026, mo:9, d:5, h:23, mi:39, sec:8798, pages:2, tags:"", pin:false},
-
 ];
