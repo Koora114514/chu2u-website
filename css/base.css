@@ -2120,47 +2120,78 @@ body.dark .kb-tagchip.on b{color:#10102a}
 
 /* ============================================================
    ---------- 羽啾探险日志！录播站（log.html，2026-10-03 新增） ----------
-   排版结构参考「二十四时小路电台」：筛选 chips 行 → 工具行 → 列表（缩略图+
-   日期时间+标题+tag+时长+分P）→ 顶部内嵌播放器；配色走本站像素风
+   布局参考「二十四时小路电台」：表头+扁平列表（无卡片）+分页+搜索 +
+   右侧吸顶播放器栏；配色/圆角走本站像素风（展示框直角、操作件圆角）
    ============================================================ */
-.rp-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:18px 0 14px}
 .rp-filter{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 12px}
+.rp-tools{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 16px}
+.rp-search{display:flex;align-items:center;gap:8px;background:var(--panel);
+  border:2px solid var(--ink);padding:0 10px;height:38px;width:280px;max-width:100%}
+.rp-search span{opacity:.6;font-size:13px}
+.rp-search input{flex:1;border:none;background:none;color:var(--ink);font-size:13px;
+  font-family:inherit;outline:none;min-width:0}
 .rp-stats{color:var(--ink-soft);font-size:13px;letter-spacing:1px;margin-left:auto}
-.rp-player{margin:14px 0 20px}
-.rp-player .phead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;
-  padding:10px 12px;border-bottom:3px solid var(--ink)}
-.rp-player .pt{font-size:16px;font-weight:700;flex:1;min-width:200px}
-.rp-player .pbtns{display:flex;gap:8px;flex-wrap:wrap}
-.rp-frame-wrap{aspect-ratio:16/9;background:#000}
-.rp-frame-wrap iframe{width:100%;height:100%;border:none;display:block}
-.rp-list{display:flex;flex-direction:column;gap:12px}
-.rp-card{display:grid;grid-template-columns:160px 1fr auto;gap:14px;align-items:center;
-  background:var(--panel);border:3px solid var(--ink);box-shadow:4px 4px 0 rgba(48,48,48,.6);
-  padding:12px 14px;cursor:pointer;color:inherit;transition:transform .18s ease, box-shadow .18s ease}
-.rp-card:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 rgba(48,48,48,.6);border-color:var(--olive-deep)}
-.rp-thumb{aspect-ratio:16/9;width:160px;background:var(--olive-pale);
-  border:2px solid var(--ink);display:grid;place-items:center;font-size:30px;overflow:hidden}
+.rp-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:26px;align-items:start}
+.rp-head,.rp-row{display:grid;grid-template-columns:96px minmax(0,1fr) 112px 64px 92px;
+  gap:14px;align-items:center}
+.rp-head{font-size:13px;color:var(--ink-soft);letter-spacing:2px;padding:6px 12px;
+  border-bottom:2px solid var(--ink)}
+.rp-head .c-program{grid-column:1/3}
+.rp-row{padding:10px 12px;border-bottom:1px solid var(--ink);cursor:pointer}
+.rp-row:hover{background:var(--olive-pale)}
+.rp-thumb{width:96px;aspect-ratio:16/9;background:var(--olive-pale);
+  border:2px solid var(--ink);display:grid;place-items:center;font-size:22px;
+  overflow:hidden;position:relative}
 .rp-thumb img{width:100%;height:100%;object-fit:cover;image-rendering:auto;display:block}
 .rp-info{min-width:0}
-.rp-when{font-size:13px;color:var(--ink-soft);letter-spacing:1px;line-height:1.6}
-.rp-when b{color:var(--olive-deep);font-weight:700;margin-right:6px}
-.rp-t{font-size:16px;font-weight:700;line-height:1.5;margin:4px 0 6px}
-.rp-tags{display:flex;gap:6px;flex-wrap:wrap}
+.rp-row-t{font-size:16px;font-weight:700;line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-row-meta{font-size:13px;color:var(--ink-soft);letter-spacing:1px;line-height:1.6;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-cell-tags{display:flex;gap:4px;flex-wrap:wrap;min-width:0}
 .rp-tag{font-size:11px;line-height:1.4;color:var(--ink);border:2px solid var(--olive-deep);
-  border-radius:999px;padding:1px 9px;letter-spacing:1px;background:var(--panel)}
-.rp-meta{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
-.rp-dur{font-size:15px;font-weight:700;color:var(--ink)}
-.rp-dur small{font-size:11px;color:var(--ink-soft);font-weight:400;margin-left:2px}
-.rp-pbadge{font-size:12px;color:var(--ink);border:2px solid var(--ink);border-radius:999px;
-  padding:1px 9px;letter-spacing:1px;background:var(--olive-pale)}
-.rp-go{font-size:12px;padding:6px 14px}
-.rp-pbtn{font-family:inherit;font-size:13px;padding:6px 12px;cursor:pointer;
+  border-radius:999px;padding:0 8px;letter-spacing:1px;background:var(--panel);
+  white-space:nowrap}
+.rp-tag-more{font-size:11px;color:var(--ink-soft);line-height:1.4;white-space:nowrap}
+.rp-cell-dur{font-size:15px;color:var(--ink);text-align:left;white-space:nowrap}
+.rp-play{font-family:inherit;font-size:13px;padding:6px 14px;cursor:pointer;
+  background:var(--panel);color:var(--ink);border:2px solid var(--ink);border-radius:999px;
+  white-space:nowrap}
+.rp-play:hover{border-color:var(--olive-deep);transform:translate(-1px,-1px)}
+.rp-pager{display:flex;align-items:center;justify-content:flex-end;gap:10px;
+  padding:12px 4px 4px}
+.rp-pg-btn{font-family:inherit;font-size:15px;width:34px;height:34px;cursor:pointer;
+  background:var(--panel);color:var(--ink);border:2px solid var(--ink);border-radius:999px}
+.rp-pg-btn:disabled{opacity:.35;cursor:not-allowed}
+.rp-pg-txt{font-size:14px;color:var(--ink-soft);letter-spacing:1px}
+/* 右侧播放器栏：宽屏吸顶 */
+.rp-rail{position:sticky;top:90px;display:flex;flex-direction:column;gap:16px}
+.rp-player .phead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
+  padding:8px 10px;border-bottom:2px solid var(--ink)}
+.rp-player .pt{font-size:14px;font-weight:700;flex:1;min-width:0;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-player .pbtns{display:flex;gap:6px;flex-wrap:wrap}
+.rp-frame-wrap{aspect-ratio:16/9;background:#000}
+.rp-frame-wrap iframe{width:100%;height:100%;border:none;display:block}
+.rp-pbtn{font-family:inherit;font-size:12px;padding:4px 10px;cursor:pointer;
   background:var(--panel);color:var(--ink);border:2px solid var(--ink);border-radius:999px}
 .rp-pbtn.on{background:var(--olive-deep);color:var(--panel)}
+.rp-go{font-size:12px;padding:5px 10px}
+.rp-now{padding:12px 14px}
+.rp-now-t{font-size:15px;font-weight:700;line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rp-now-meta{font-size:13px;color:var(--ink-soft);letter-spacing:1px;line-height:1.7;margin-top:4px}
 .rp-empty{color:var(--ink-soft);font-size:14px;padding:24px 0;text-align:center;letter-spacing:2px}
+/* 窄屏：播放器栏移到列表下方；行网格收窄（tag 列藏进标题下方） */
+@media(max-width:1150px){
+  .rp-body{grid-template-columns:1fr}
+  .rp-rail{position:static;order:2}
+}
 @media(max-width:720px){
-  .rp-card{grid-template-columns:110px 1fr;grid-auto-rows:auto}
-  .rp-thumb{width:110px}
-  .rp-meta{grid-column:1/-1;flex-direction:row;justify-content:flex-end}
-  .rp-player .pt{min-width:120px}
+  .rp-head{display:none}
+  .rp-row{grid-template-columns:84px minmax(0,1fr) 56px 74px;gap:10px}
+  .rp-cell-tags{grid-column:2;display:flex}
+  .rp-thumb{width:84px}
+  .rp-play{font-size:11px;padding:5px 9px}
+  .rp-search{width:100%}
 }

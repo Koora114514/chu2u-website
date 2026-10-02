@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610030010">
+<link rel="stylesheet" href="css/base.css?v=202610030121">
 </head>
 <body>
 <div class="contour-bg" aria-hidden="true"></div>
@@ -82,29 +82,49 @@
     <div class="page-hero reveal">
       <span class="kicker">REPLAY STATION<small>CHU2U ADVENTURE LOG</small></span>
       <h1>羽啾探险日志！</h1>
-      <p class="sub">这里是羽啾的录播探险档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一张卡就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
+      <p class="sub">这里是羽啾的录播探险档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一场就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
     </div>
 
-    <!-- 分类筛选 + 连播开关 + 统计 -->
+    <!-- 分类筛选 chips -->
+    <div class="rp-filter reveal" id="rpFilter" role="group" aria-label="分类筛选"></div>
+
+    <!-- 搜索 + 连播开关 + 统计 -->
     <div class="rp-tools reveal">
-      <div class="rp-filter" id="rpFilter" role="group" aria-label="分类筛选"></div>
+      <div class="rp-search"><span aria-hidden="true">🔍</span><input id="rpSearch" type="text" placeholder="搜索标题 / 日期" aria-label="搜索标题或日期"></div>
       <button class="px-btn ghost" id="rpCont" type="button" title="播完自动切下一场，循环播放">📻 24h 连播</button>
       <span class="rp-stats" id="rpStats"></span>
     </div>
 
-    <!-- 播放器面板（点卡片后出现；内嵌 B 站官方外链播放器，带宽走 B站CDN→访客，不占本站） -->
-    <div class="rp-player pixel-card reveal" id="rpPlayer" hidden>
-      <div class="phead">
-        <span class="pt" id="rpNow">—</span>
-        <div class="pbtns" id="rpPages"></div>
-        <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
-        <button class="px-btn rp-go" id="rpClose" type="button">✕ 收起</button>
+    <div class="rp-body reveal">
+      <!-- 左主栏：表头 + 扁平列表 + 分页 -->
+      <div class="rp-main">
+        <div class="rp-head" aria-hidden="true">
+          <span class="c-program">节目</span>
+          <span class="c-type">类型</span>
+          <span class="c-dur">时长</span>
+          <span class="c-play">播放</span>
+        </div>
+        <div class="rp-list" id="rpList"></div>
+        <div class="rp-pager" id="rpPager"></div>
       </div>
-      <div class="rp-frame-wrap"><iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer"></iframe></div>
-    </div>
 
-    <!-- 录播列表 -->
-    <div class="rp-list reveal" id="rpList"></div>
+      <!-- 右侧播放器栏（宽屏吸顶；窄屏移到列表下方） -->
+      <aside class="rp-rail">
+        <div class="rp-player pixel-card" id="rpPlayer" hidden>
+          <div class="phead">
+            <span class="pt" id="rpNow">—</span>
+            <div class="pbtns" id="rpPages"></div>
+            <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
+            <button class="px-btn rp-go" id="rpClose" type="button">✕</button>
+          </div>
+          <div class="rp-frame-wrap"><iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer"></iframe></div>
+        </div>
+        <div class="rp-now pixel-card" id="rpNowCard">
+          <div class="rp-now-t">还没有播放任何录播</div>
+          <div class="rp-now-meta" id="rpNowMeta">点列表里的「▶ 播放」，或打开「24h 连播」当电台听 ⭐</div>
+        </div>
+      </aside>
+    </div>
   </div>
 </div>
 
@@ -117,13 +137,14 @@
   <img src="images/飞船啾.png" alt="返回顶部">
 </button>
 
-<!-- 录播站数据（每天自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
-<script src="data/replays.js?v=202610030046"></script>
+<!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
+<script src="data/replays.js?v=202610030010"></script>
 <script src="js/shared.js"></script>
 <script>
 /* 羽啾探险日志！录播站
    数据在 data/replays.js（window.CHU2U_REPLAYS + window.CHU2U_REPLAY_TAGS）；
    排序：置顶最前，组内按日期时间（y/mo/d/h/mi）新→旧；分类筛选按 tags 逗号串匹配。
+   布局参考「二十四时小路电台」：表头+扁平列表+分页+搜索 + 右侧吸顶播放器栏。
    播放器：B 站官方外链播放器 iframe，选分 P 用 page 参数切换；
    24h 连播：计时器按 sec 播完自动切下一场循环（手动换 P 后计时会漂移，属已知限制），
    另监听 postMessage 的 end 类事件提前切换（B 站事件格式不保证，收不到就靠计时器兜底）。 */
@@ -132,7 +153,9 @@
   var TAGS = window.CHU2U_REPLAY_TAGS || [];
   var list = REPLAYS.slice();
   var cur = "all";
-  var playing = null, page = 1;
+  var page = 1;
+  var PER_PAGE = 10;
+  var playing = null, curPage = 1;
   var cont = false, timer = null;
 
   function p2(n){ return (n < 10 ? "0" : "") + n; }
@@ -157,6 +180,7 @@
       Array.prototype.forEach.call(filterEl.children, function(x){ x.classList.remove("on"); });
       b.classList.add("on");
       cur = key;
+      page = 1;
       renderList();
     });
     return b;
@@ -164,78 +188,113 @@
   filterEl.appendChild(chipBtn("全部", "all", true));
   TAGS.forEach(function(tg){ if(tg) filterEl.appendChild(chipBtn(tg, tg, false)); });
 
-  /* ---------- 列表 ---------- */
+  /* ---------- 搜索 + 列表 + 分页 ---------- */
   var listEl = document.getElementById("rpList");
-  function fmtH(sec){ return sec ? (sec / 3600).toFixed(1) : "—"; }
-  function cardEl(it){
+  function visibleList(){
+    var q = (document.getElementById("rpSearch").value || "").trim().toLowerCase();
+    return list.filter(function(it){
+      if(cur !== "all" && tagArr(it).indexOf(cur) < 0) return false;
+      if(!q) return true;
+      var dateStr = it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi);
+      return (it.t || "").toLowerCase().indexOf(q) >= 0 || dateStr.indexOf(q) >= 0;
+    });
+  }
+  function rowEl(it){
     var el = document.createElement("div");
-    el.className = "rp-card";
+    el.className = "rp-row";
+    /* 缩略图（置顶的左上角挂 👑 红底小卡片，与猫猫宇宙论同款） */
     var th = document.createElement("div"); th.className = "rp-thumb";
     var im = document.createElement("img"); im.src = it.cover; im.alt = it.t || "";
     im.loading = "lazy"; im.referrerPolicy = "no-referrer";
     im.onerror = function(){ th.textContent = "🐱"; };
     th.appendChild(im);
-
+    if(it.pin){
+      var pin = document.createElement("span"); pin.className = "pin-badge";
+      pin.textContent = "👑"; pin.title = "置顶加精";
+      th.appendChild(pin);
+    }
+    /* 标题 + 元信息（日期时间 · 分P） */
     var info = document.createElement("div"); info.className = "rp-info";
-    var when = document.createElement("div"); when.className = "rp-when";
-    var b1 = document.createElement("b"); b1.textContent = it.y + "." + p2(it.mo) + "." + p2(it.d);
-    when.appendChild(b1);
-    when.appendChild(document.createTextNode(p2(it.h) + ":" + p2(it.mi)));
-    var t = document.createElement("div"); t.className = "rp-t"; t.textContent = it.t || "（无标题）";
-    var tags = document.createElement("div"); tags.className = "rp-tags";
-    tagArr(it).forEach(function(tg){
+    var t = document.createElement("div"); t.className = "rp-row-t"; t.textContent = it.t || "（无标题）";
+    var meta = document.createElement("div"); meta.className = "rp-row-meta";
+    meta.textContent = it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi)
+      + (it.pages > 0 ? " · " + it.pages + " 个分P" : "");
+    info.appendChild(t); info.appendChild(meta);
+    /* 类型 tag（最多露 2 个，其余放 title） */
+    var tags = document.createElement("div"); tags.className = "rp-cell-tags";
+    var arr = tagArr(it);
+    arr.slice(0, 2).forEach(function(tg){
       var s = document.createElement("span"); s.className = "rp-tag"; s.textContent = tg;
       tags.appendChild(s);
     });
-    info.appendChild(when); info.appendChild(t); info.appendChild(tags);
-
-    var meta = document.createElement("div"); meta.className = "rp-meta";
-    var dur = document.createElement("div"); dur.className = "rp-dur";
-    dur.textContent = fmtH(it.sec);
-    var sm = document.createElement("small"); sm.textContent = "小时"; dur.appendChild(sm);
-    meta.appendChild(dur);
-    if(it.pages > 0){
-      var pb = document.createElement("div"); pb.className = "rp-pbadge";
-      pb.textContent = it.pages + " 分P";
-      meta.appendChild(pb);
+    if(arr.length > 2){
+      tags.title = arr.join(" / ");
+      var more = document.createElement("span"); more.className = "rp-tag-more";
+      more.textContent = "+" + (arr.length - 2);
+      tags.appendChild(more);
     }
-    var go = document.createElement("button"); go.className = "px-btn rp-go"; go.type = "button";
-    go.textContent = "▶ 播放";
-    meta.appendChild(go);
-
-    el.appendChild(th); el.appendChild(info); el.appendChild(meta);
+    /* 时长（左对齐）+ 播放描边胶囊 */
+    var dur = document.createElement("div"); dur.className = "rp-cell-dur";
+    dur.textContent = it.sec ? (it.sec / 3600).toFixed(1) + "h" : "—";
+    var play = document.createElement("button"); play.className = "rp-play"; play.type = "button";
+    play.textContent = "▶ 播放";
+    el.appendChild(th); el.appendChild(info); el.appendChild(tags); el.appendChild(dur); el.appendChild(play);
     el.addEventListener("click", function(){ openPlayer(it, 1); });
     return el;
   }
   function renderList(){
+    var vis = visibleList();
+    var pages = Math.max(1, Math.ceil(vis.length / PER_PAGE));
+    if(page > pages) page = pages;
+    var slice = vis.slice((page - 1) * PER_PAGE, page * PER_PAGE);
     listEl.textContent = "";
-    var visible = list.filter(function(it){
-      return cur === "all" || tagArr(it).indexOf(cur) >= 0;
-    });
-    if(!visible.length){
+    if(!slice.length){
       var em = document.createElement("div"); em.className = "rp-empty";
-      em.textContent = "还没有录播档案～ 自动识别每天 9 点跑，也可以去管理台「抓最新录播」";
+      em.textContent = "没有匹配的录播～ 换个关键词或分类试试";
       listEl.appendChild(em);
     } else {
-      visible.forEach(function(it){ listEl.appendChild(cardEl(it)); });
+      slice.forEach(function(it){ listEl.appendChild(rowEl(it)); });
     }
-    var hours = visible.reduce(function(s, it){ return s + (it.sec || 0); }, 0);
+    /* 统计 + 分页 */
+    var hours = vis.reduce(function(s, it){ return s + (it.sec || 0); }, 0);
     document.getElementById("rpStats").textContent =
-      "共 " + visible.length + " 场 · 合计 " + (hours / 3600).toFixed(1) + " 小时";
+      "共 " + vis.length + " 场 · 合计 " + (hours / 3600).toFixed(1) + " 小时";
+    var pager = document.getElementById("rpPager");
+    pager.textContent = "";
+    if(pages > 1){
+      var prev = document.createElement("button"); prev.type = "button"; prev.className = "rp-pg-btn";
+      prev.textContent = "‹";
+      prev.disabled = page <= 1;
+      prev.addEventListener("click", function(){ page = Math.max(1, page - 1); renderList(); });
+      var txt = document.createElement("span"); txt.className = "rp-pg-txt";
+      txt.textContent = page + " / " + pages;
+      var next = document.createElement("button"); next.type = "button"; next.className = "rp-pg-btn";
+      next.textContent = "›";
+      next.disabled = page >= pages;
+      next.addEventListener("click", function(){ page = Math.min(pages, page + 1); renderList(); });
+      pager.appendChild(prev); pager.appendChild(txt); pager.appendChild(next);
+    }
   }
+  document.getElementById("rpSearch").addEventListener("input", function(){ page = 1; renderList(); });
 
-  /* ---------- 播放器 ---------- */
+  /* ---------- 播放器（右侧栏） ---------- */
   var player = document.getElementById("rpPlayer");
   var frame = document.getElementById("rpFrame");
   function openPlayer(it, pg){
     playing = it;
-    page = pg || 1;
+    curPage = pg || 1;
     player.hidden = false;
     document.getElementById("rpNow").textContent =
       it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi) + " · " + (it.t || "录播");
+    var nowCard = document.getElementById("rpNowCard");
+    nowCard.querySelector(".rp-now-t").textContent = it.t || "（无标题）";
+    nowCard.querySelector(".rp-now-meta").textContent =
+      it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi)
+      + (it.pages > 0 ? " · " + it.pages + " 个分P" : "")
+      + (it.sec ? " · 共 " + (it.sec / 3600).toFixed(1) + " 小时" : "");
     document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + it.bvid;
     renderPages();
-    frame.src = "https://player.bilibili.com/player.html?bvid=" + it.bvid + "&page=" + page + "&autoplay=1";
+    frame.src = "https://player.bilibili.com/player.html?bvid=" + it.bvid + "&page=" + curPage + "&autoplay=1";
     armTimer();
     player.scrollIntoView({behavior: "smooth", block: "nearest"});
   }
@@ -247,12 +306,12 @@
       (function(n){
         var b = document.createElement("button");
         b.type = "button";
-        b.className = "rp-pbtn" + (n === page ? " on" : "");
+        b.className = "rp-pbtn" + (n === curPage ? " on" : "");
         b.textContent = "P" + n;
         b.addEventListener("click", function(e){
           e.stopPropagation();
-          page = n;
-          frame.src = "https://player.bilibili.com/player.html?bvid=" + playing.bvid + "&page=" + page + "&autoplay=1";
+          curPage = n;
+          frame.src = "https://player.bilibili.com/player.html?bvid=" + playing.bvid + "&page=" + curPage + "&autoplay=1";
           renderPages();
         });
         box.appendChild(b);
@@ -275,11 +334,9 @@
     timer = setTimeout(advance, playing.sec * 1000 + 20000);   /* 总时长 + 20s 缓冲 */
   }
   function advance(){
-    /* 在「当前筛选顺序」里找当前这场后面的下一场，循环 */
+    /* 在「当前筛选+搜索顺序」里找当前这场后面的下一场，循环 */
     if(!playing) return;
-    var visible = list.filter(function(it){
-      return cur === "all" || tagArr(it).indexOf(cur) >= 0;
-    });
+    var visible = visibleList();
     var idx = -1;
     for(var i = 0; i < visible.length; i++){ if(visible[i].bvid === playing.bvid){ idx = i; break; } }
     var next = visible[(idx + 1) % visible.length];
