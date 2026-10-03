@@ -187,13 +187,21 @@
     var b = document.createElement("button");
     b.type = "button";
     b.className = "kb-tagchip" + (on ? " on" : "");
+    b.setAttribute("data-key", key);
     b.textContent = label;
     if(key !== "all"){                       /* 未选中的分类 chip 用各自分类色描边+文字 */
       b.style.borderColor = tagColor(key);
       b.style.color = tagColor(key);
     }
     b.addEventListener("click", function(){
-      Array.prototype.forEach.call(filterEl.children, function(x){ x.classList.remove("on"); });
+      Array.prototype.forEach.call(filterEl.children, function(x){
+        x.classList.remove("on");
+        var k = x.getAttribute("data-key");
+        if(k && k !== "all"){                /* 还原各自的分类色（切走选中态时别掉色） */
+          x.style.borderColor = tagColor(k);
+          x.style.color = tagColor(k);
+        }
+      });
       b.classList.add("on");
       b.style.borderColor = "";              /* 选中态回到站点统一橄榄实心 */
       b.style.color = "";
