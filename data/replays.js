@@ -25,6 +25,11 @@
      必须换新值，只用当天日期会撞上浏览器/Cloudflare 旧缓存。 */
 window.CHU2U_REPLAYS_UPDATED = "2026-10-03";
 window.CHU2U_REPLAY_TAGS = ["杂谈", "歌回", "游戏", "联动", "电台", "特别回", "突击", "水时长"];
+/* 分类配色（2026-10-03 用户定：特别回偏红、电台偏黄，其余参考电台软件；未知分类用灰色兜底） */
+window.CHU2U_REPLAY_TAG_COLORS = {
+  "杂谈": "#7d88a8", "歌回": "#d96a8c", "游戏": "#4d9e6f", "联动": "#d98a4b",
+  "电台": "#c99a3a", "特别回": "#d94b4b", "突击": "#4a9bc4", "水时长": "#8e8e96"
+};
 window.CHU2U_REPLAYS = [
   {bvid:"BV1Vyt66kED4", t:"刚睡醒好困好困好困", cover:"images/replays/r030.jpg",
    y:2026, mo:9, d:4, h:22, mi:52, sec:8807, pages:3, tags:"", pin:false},

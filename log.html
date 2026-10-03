@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610030125">
+<link rel="stylesheet" href="css/base.css?v=202610031655">
 </head>
 <body>
 <div class="contour-bg" aria-hidden="true"></div>
@@ -154,6 +154,15 @@
 (function(){
   var REPLAYS = window.CHU2U_REPLAYS || [];
   var TAGS = window.CHU2U_REPLAY_TAGS || [];
+  var TAGCOLORS = window.CHU2U_REPLAY_TAG_COLORS || {};
+  /* 分类配色（与数据文件同源；未知分类灰兜底） */
+  function tagColor(tg){ return TAGCOLORS[tg] || "#8e8e96"; }
+  function tagTint(hex, a){
+    var m = /^#?([0-9a-f]{6})$/i.exec(hex || "");
+    if(!m) return "rgba(142,142,150," + a + ")";
+    var n = parseInt(m[1], 16);
+    return "rgba(" + (n >> 16 & 255) + "," + (n >> 8 & 255) + "," + (n & 255) + "," + a + ")";
+  }
   var list = REPLAYS.slice();
   var cur = "all";
   var page = 1;
@@ -179,9 +188,15 @@
     b.type = "button";
     b.className = "kb-tagchip" + (on ? " on" : "");
     b.textContent = label;
+    if(key !== "all"){                       /* 未选中的分类 chip 用各自分类色描边+文字 */
+      b.style.borderColor = tagColor(key);
+      b.style.color = tagColor(key);
+    }
     b.addEventListener("click", function(){
       Array.prototype.forEach.call(filterEl.children, function(x){ x.classList.remove("on"); });
       b.classList.add("on");
+      b.style.borderColor = "";              /* 选中态回到站点统一橄榄实心 */
+      b.style.color = "";
       cur = key;
       page = 1;
       renderList();
@@ -232,6 +247,8 @@
     }
     arr.slice(0, 2).forEach(function(tg){
       var s = document.createElement("span"); s.className = "rp-tag"; s.textContent = tg;
+      var c = tagColor(tg);
+      s.style.borderColor = c; s.style.color = c; s.style.background = tagTint(c, 0.12);
       tags.appendChild(s);
     });
     if(arr.length > 2){
