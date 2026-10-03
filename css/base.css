@@ -2203,3 +2203,9 @@ body.dark .kb-tagchip.on b{color:#10102a}
   .rp-play{font-size:11px;padding:5px 9px}
   .rp-search{width:100%}
 }
+
+/* 播放器全屏态（2026-10-03）：卡片铺满屏幕、视频居中、黑底 */
+.rp-player:fullscreen{display:flex;flex-direction:column;background:#000;border:none;box-shadow:none}
+.rp-player:fullscreen .phead{background:var(--panel)}
+.rp-player:fullscreen .rp-frame-wrap{flex:1;aspect-ratio:auto;display:grid;place-items:center}
+.rp-player:fullscreen iframe{width:min(100%, calc((100vh - 68px) * 16 / 9));height:min(calc(100vh - 68px), calc(100vw * 9 / 16));}
