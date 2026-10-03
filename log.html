@@ -21,14 +21,14 @@
   setTimeout(toTop, 60); setTimeout(toTop, 300);
 })();
 </script>
-<title>羽啾chu2u · 探险日志！</title>
-<meta name="description" content="羽啾chu2u 像素个人站 · 羽啾探险日志（录播档案库：按日期归档、按类型分类，支持在线播放与 24h 连播电台）">
+<title>羽啾chu2u · 啾啾出勤记录！</title>
+<meta name="description" content="羽啾chu2u 像素个人站 · 啾啾出勤记录（录播档案库：按日期归档、按类型分类，支持在线播放与 24h 连播电台）">
 <link rel="icon" type="image/png" href="images/fumo啾.png">
 <!-- 像素字体（CDN 已验证可用；离线时自动回退 monospace） -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610032108">
+<link rel="stylesheet" href="css/base.css?v=202610040025">
 </head>
 <body>
 <div class="contour-bg" aria-hidden="true"></div>
@@ -41,7 +41,7 @@
       <span class="logo"><img src="images/喵啾.png" alt="羽啾chu2u"></span>
       <span class="brand-text">
         <b>羽啾chu2u</b>
-        <small>羽啾探险日志！</small>
+        <small>啾啾出勤记录！</small>
         <i>Universe Observation Center</i>
       </span>
     </div>
@@ -72,7 +72,7 @@
   <a class="side-btn" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
   <a class="side-btn" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
   <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
-  <a class="side-btn is-here" href="log.html" aria-label="羽啾探险日志！"><img src="images/本本啾.png" alt=""><span class="side-label" aria-hidden="true">羽啾探险日志！</span></a>
+  <a class="side-btn is-here" href="log.html" aria-label="啾啾出勤记录！"><img src="images/本本啾.png" alt=""><span class="side-label" aria-hidden="true">啾啾出勤记录！</span></a>
   <a class="side-btn" href="kb.html" aria-label="Index📕"><img src="images/啥啾.png" alt=""><span class="side-label" aria-hidden="true">Index📕</span></a>
   <a class="side-btn" href="https://chu2u.live/" target="_blank" rel="noopener" aria-label="老美のNASA"><img src="images/宇宙猫.png" alt=""><span class="side-label" aria-hidden="true">老美のNASA</span></a>
 </nav>
@@ -80,9 +80,9 @@
 <main>
   <div class="wrap rp-wrap">
     <div class="page-hero reveal">
-      <span class="kicker">REPLAY STATION<small>CHU2U ADVENTURE LOG</small></span>
-      <h1>羽啾探险日志！</h1>
-      <p class="sub">这里是羽啾的录播探险档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一场就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
+      <span class="kicker">ATTENDANCE LOG<small>CHU2U DAILY RECORD</small></span>
+      <h1>啾啾出勤记录！</h1>
+      <p class="sub">这里是啾啾的出勤记录档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一场就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
     </div>
 
     <!-- 分类筛选 chips -->
@@ -140,12 +140,14 @@
 <button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
   <img src="images/飞船啾.png" alt="返回顶部">
 </button>
+<!-- 右下角贴纸：开心唱歌（装饰用，原图画质；不拦截任何点击） -->
+<img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
 
 <!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
 <script src="data/replays.js?v=202610032100"></script>
 <script src="js/shared.js"></script>
 <script>
-/* 羽啾探险日志！录播站
+/* 啾啾出勤记录！录播站
    数据在 data/replays.js（window.CHU2U_REPLAYS + window.CHU2U_REPLAY_TAGS）；
    排序：置顶最前，组内按日期时间（y/mo/d/h/mi）新→旧；分类筛选按 tags 逗号串匹配。
    布局参考「二十四时小路电台」：表头+扁平列表+分页+搜索 + 右侧吸顶播放器栏。

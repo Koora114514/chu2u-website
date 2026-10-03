@@ -1615,13 +1615,12 @@ body.dark .side-btn:hover,body.dark .side-btn:focus-visible{background-image:lin
   padding:0 30px 0 12px;
   filter:drop-shadow(4px 4px 0 rgba(48,48,48,.35));
 }
-.side-btn::before{          /* 外层：墨色描边 */
-  content:"";position:absolute;inset:0;background:var(--ink);
-  clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%);
+.side-btn::before{          /* 2026-10-04 用户定：取消描边——墨色外层不再渲染 */
+  content:none;
 }
-.side-btn::after{           /* 内层：底色填充（四周内缩 3px，中间露出描边） */
-  content:"";position:absolute;inset:3px;background:var(--tip,var(--panel));
-  clip-path:polygon(0 0,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,0 100%);
+.side-btn::after{           /* 底色填充：直接铺满整个五边形（无描边） */
+  content:"";position:absolute;inset:0;background:var(--tip,var(--panel));
+  clip-path:polygon(0 0,calc(100% - 18px) 0,100% 50%,calc(100% - 18px) 100%,0 100%);
 }
 .side-btn img,.side-btn .side-label{position:relative;z-index:1}
 .side-btn:hover,.side-btn:focus-visible{
@@ -2131,7 +2130,9 @@ body.dark .kb-tagchip.on b{color:#10102a}
 .rp-search input{flex:1;border:none;background:none;color:var(--ink);font-size:13px;
   font-family:inherit;outline:none;min-width:0}
 .rp-stats{color:var(--ink-soft);font-size:13px;letter-spacing:1px;margin-left:auto}
-.rp-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:26px;align-items:start}
+/* 2026-10-04 用户定：播放器栏放大到 1.2 倍（320→384px）、与列表的间隔适当拉开（26→40px），
+   以页面中轴线居中分布；播放器栏 sticky 常驻右上（滚动时跟随） */
+.rp-body{display:grid;grid-template-columns:minmax(0,1fr) 384px;gap:40px;align-items:start}
 .rp-head,.rp-row{display:grid;grid-template-columns:96px minmax(0,1fr) 112px 64px 92px;
   gap:14px;align-items:center}
 .rp-head{font-size:13px;color:var(--ink-soft);letter-spacing:2px;padding:6px 12px;
@@ -2170,6 +2171,8 @@ body.dark .kb-tagchip.on b{color:#10102a}
 .rp-rail{position:sticky;top:90px;display:flex;flex-direction:column;gap:16px}
 .rp-player .phead{display:flex;align-items:center;gap:8px;flex-wrap:wrap;
   padding:8px 10px;border-bottom:2px solid var(--ink)}
+/* 2026-10-04 用户定：播放器卡片做小半径倒角（仅此卡，其余画框保持直角） */
+.rp-player{border-radius:10px;overflow:hidden}
 .rp-player .pt{font-size:14px;font-weight:700;flex:1;min-width:0;
   white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .rp-player .pbtns{display:flex;gap:6px;flex-wrap:wrap}
@@ -2205,7 +2208,15 @@ body.dark .kb-tagchip.on b{color:#10102a}
 }
 
 /* 播放器全屏态（2026-10-03）：卡片铺满屏幕、视频居中、黑底 */
-.rp-player:fullscreen{display:flex;flex-direction:column;background:#000;border:none;box-shadow:none}
+.rp-player:fullscreen{display:flex;flex-direction:column;background:#000;border:none;box-shadow:none;border-radius:0}
 .rp-player:fullscreen .phead{background:var(--panel)}
 .rp-player:fullscreen .rp-frame-wrap{flex:1;aspect-ratio:auto;display:grid;place-items:center}
 .rp-player:fullscreen iframe{width:min(100%, calc((100vh - 68px) * 16 / 9));height:min(calc(100vh - 68px), calc(100vw * 9 / 16));}
+
+/* ---------- 右下角贴纸：开心唱歌（2026-10-04 用户定；原图画质、装饰用途） ---------- */
+.rp-sticker{
+  position:fixed;right:78px;bottom:44px;width:200px;height:auto;z-index:400;
+  pointer-events:none;image-rendering:auto;
+  filter:drop-shadow(4px 4px 0 rgba(48,48,48,.18));
+}
+@media(max-width:1150px){.rp-sticker{display:none}}
