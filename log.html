@@ -28,9 +28,9 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610040205">
+<link rel="stylesheet" href="css/base.css?v=202610040231">
 </head>
-<body>
+<body class="page-log">
 <div class="contour-bg" aria-hidden="true"></div>
 <div class="dark-stars" aria-hidden="true"></div>
 
@@ -117,10 +117,11 @@
             <div class="pbtns" id="rpPages"></div>
             <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">在 B 站打开 ↗</a>
             <button class="px-btn ghost rp-go" id="rpFs" type="button" title="全屏观看（Esc 退出）">⛶ 全屏</button>
+            <button class="px-btn ghost rp-go" id="rpMute" type="button" title="切换声音（默认静音）">🔇 静音：开</button>
             <button class="px-btn rp-go" id="rpClose" type="button">✕</button>
           </div>
           <div class="rp-frame-wrap">
-            <iframe id="rpFrame" src="" title="录播播放器" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
+            <iframe id="rpFrame" src="" title="录播播放器" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
             <div class="rp-ph" id="rpPh">🎬 点一场录播<br>在这里播放 ⭐</div>
           </div>
         </div>
@@ -326,10 +327,32 @@
   /* ---------- 播放器（右侧栏） ---------- */
   var player = document.getElementById("rpPlayer");
   var frame = document.getElementById("rpFrame");
+  /* 静音开关：B站外链播放器原生支持 muted 参数。
+     默认静音（浏览器自动播放策略也要求静音起播；用户指示「维持默认静音状态」），
+     点开关切换当前这次的播放；跨域 iframe 无法中途改声音 → 用新参数重载（从头重播，已知限制） */
+  var muted = true;
+  var muteBtn = document.getElementById("rpMute");
+  function playerURL(bvid, pg){
+    return "https://player.bilibili.com/player.html?bvid=" + bvid + "&page=" + pg
+      + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1&muted=" + (muted ? "1" : "0");
+  }
+  function paintMute(){
+    muteBtn.textContent = muted ? "🔇 静音：开" : "🔊 静音：关";
+    muteBtn.title = muted ? "当前静音——点击开声音（从头重播）" : "当前有声——点击静音（从头重播）";
+  }
+  paintMute();
+  muteBtn.addEventListener("click", function(){
+    muted = !muted;
+    paintMute();
+    if(playing) frame.src = playerURL(playing.bvid, curPage);
+    if(window.toast) window.toast(muted ? "已静音" : "声音已开");
+  });
   var ph = document.getElementById("rpPh");
   function openPlayer(it, pg){
     playing = it;
     curPage = pg || 1;
+    muted = true;                /* 每场播放都从默认静音开始（用户定） */
+    paintMute();
     ph.hidden = true;
     frame.hidden = false;
     document.getElementById("rpNow").textContent =
@@ -342,8 +365,7 @@
       + (it.sec ? " · 共 " + (it.sec / 3600).toFixed(1) + " 小时" : "");
     document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + it.bvid;
     renderPages();
-    frame.src = "https://player.bilibili.com/player.html?bvid=" + it.bvid + "&page=" + curPage
-      + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1";
+    frame.src = playerURL(it.bvid, curPage);
     armTimer();
     player.scrollIntoView({behavior: "smooth", block: "nearest"});
   }
@@ -360,8 +382,7 @@
         b.addEventListener("click", function(e){
           e.stopPropagation();
           curPage = n;
-          frame.src = "https://player.bilibili.com/player.html?bvid=" + playing.bvid + "&page=" + curPage
-            + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1";
+          frame.src = playerURL(playing.bvid, curPage);
           renderPages();
         });
         box.appendChild(b);
