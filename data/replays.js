@@ -32,7 +32,7 @@ window.CHU2U_REPLAY_TAG_COLORS = {
 };
 window.CHU2U_REPLAYS = [
   {bvid:"BV1Vyt66kED4", t:"刚睡醒好困好困好困", cover:"images/replays/r030.jpg",
-   y:2026, mo:9, d:4, h:22, mi:52, sec:8807, pages:3, tags:""},
+   y:2026, mo:9, d:4, h:22, mi:52, sec:8807, pages:3, tags:"杂谈"},
   {bvid:"BV1p7ti6yE2o", t:"歌杂！接收大众电波信号中，，", cover:"images/replays/r030.jpg",
    y:2026, mo:9, d:4, h:15, mi:44, sec:8217, pages:2, tags:""},
   {bvid:"BV1qatf6YEHm", t:"练歌回！想学点大众中文歌！", cover:"images/replays/r030.jpg",
