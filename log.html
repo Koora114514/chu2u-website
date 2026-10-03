@@ -363,11 +363,24 @@
     else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
   });
   document.getElementById("rpClose").addEventListener("click", function(){
+    /* 全屏状态下点 ✕ = 只退出全屏，视频继续播（2026-10-04 用户定）；
+       非全屏时才是「收起播放器、停止播放」 */
+    if(document.fullscreenElement){
+      if(document.exitFullscreen) document.exitFullscreen();
+      return;
+    }
     clearTimer();
     frame.src = "";              /* 清空 src = 停止播放 */
     frame.hidden = true;
     ph.hidden = false;
     playing = null;
+  });
+  /* 悬停提示跟着全屏状态走，用户不会误解 ✕ 的含义 */
+  document.addEventListener("fullscreenchange", function(){
+    var fs = !!document.fullscreenElement;
+    document.getElementById("rpClose").title = fs ? "退出全屏（视频继续播）" : "收起播放器（停止播放）";
+    document.getElementById("rpFs").textContent = fs ? "⛶ 退出全屏" : "⛶ 全屏";
+    document.getElementById("rpFs").title = fs ? "退出全屏（Esc）" : "全屏观看（Esc 退出）";
   });
 
   /* ---------- 24h 连播 ---------- */

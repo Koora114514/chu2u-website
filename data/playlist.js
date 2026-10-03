@@ -1,7 +1,40 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-10-03 00:23:07   共 122 首（另有手写占位 0 条）
+// 生成时间：2026-10-04 00:13:07   共 123 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
+ {
+  "key": "439390801",
+  "title": "Haru Yo, Koi",
+  "titleShazam": "Haru Yo, Koi",
+  "artist": "Yumi Matsutoya",
+  "artistSearch": "Yumi Matsutoya",
+  "album": "The Dancing Sun",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-10-03",
+  "sings": [
+   {
+    "date": "2026-10-03",
+    "bvid": "BV1hLHq6VEAR",
+    "start": 325,
+    "end": 387,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
  {
   "key": "547871050",
   "title": "Beautiful World (Da Capo Version)",
