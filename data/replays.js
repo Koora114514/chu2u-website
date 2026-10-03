@@ -34,7 +34,7 @@ window.CHU2U_REPLAYS = [
   {bvid:"BV1Vyt66kED4", t:"刚睡醒好困好困好困", cover:"images/replays/r030.jpg",
    y:2026, mo:9, d:4, h:22, mi:52, sec:8807, pages:3, tags:"杂谈"},
   {bvid:"BV1p7ti6yE2o", t:"歌杂！接收大众电波信号中，，", cover:"images/replays/r030.jpg",
-   y:2026, mo:9, d:4, h:15, mi:44, sec:8217, pages:2, tags:""},
+   y:2026, mo:9, d:4, h:15, mi:44, sec:8217, pages:2, tags:"歌回"},
   {bvid:"BV1qatf6YEHm", t:"练歌回！想学点大众中文歌！", cover:"images/replays/r030.jpg",
    y:2026, mo:9, d:3, h:23, mi:43, sec:10874, pages:3, tags:""},
   {bvid:"BV14itD6ZE2A", t:"-【万粉三百舰纪念回！】来念念棉花糖吧！", cover:"images/replays/r031.jpg",
