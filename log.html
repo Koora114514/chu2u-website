@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610040025">
+<link rel="stylesheet" href="css/base.css?v=202610040205">
 </head>
 <body>
 <div class="contour-bg" aria-hidden="true"></div>
@@ -79,25 +79,26 @@
 
 <main>
   <div class="wrap rp-wrap">
-    <div class="page-hero reveal">
-      <span class="kicker">ATTENDANCE LOG<small>CHU2U DAILY RECORD</small></span>
-      <h1>啾啾出勤记录！</h1>
-      <p class="sub">这里是啾啾的出勤记录档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一场就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
-    </div>
-
-    <!-- 分类筛选 chips -->
-    <div class="rp-filter reveal" id="rpFilter" role="group" aria-label="分类筛选"></div>
-
-    <!-- 搜索 + 连播开关 + 统计 -->
-    <div class="rp-tools reveal">
-      <div class="rp-search"><span aria-hidden="true">🔍</span><input id="rpSearch" type="text" placeholder="搜索标题 / 日期" aria-label="搜索标题或日期"></div>
-      <button class="px-btn ghost" id="rpCont" type="button" title="播完自动切下一场，循环播放">📻 24h 连播</button>
-      <span class="rp-stats" id="rpStats"></span>
-    </div>
-
+    <!-- 两栏从页面顶部开始（左：标题+筛选+列表；右：播放器栏）——对齐 exe 的「右栏与左栏顶端齐平、常驻吸顶」 -->
     <div class="rp-body reveal">
-      <!-- 左主栏：表头 + 扁平列表 + 分页 -->
+      <!-- 左主栏：标题区 + 筛选 + 工具行 + 表头 + 扁平列表 + 分页 -->
       <div class="rp-main">
+        <div class="page-hero reveal">
+          <span class="kicker">ATTENDANCE LOG<small>CHU2U DAILY RECORD</small></span>
+          <h1>啾啾出勤记录！</h1>
+          <p class="sub" id="rpIntro">这里是啾啾的出勤记录档案库！她的每一场直播回放都按日期归档、按类型分类，<br>点一场就开始播放；打开「24h 连播」就能当电台一直听下去 ⭐</p>
+        </div>
+
+        <!-- 分类筛选 chips -->
+        <div class="rp-filter reveal" id="rpFilter" role="group" aria-label="分类筛选"></div>
+
+        <!-- 搜索 + 连播开关 + 统计 -->
+        <div class="rp-tools reveal">
+          <div class="rp-search"><span aria-hidden="true">🔍</span><input id="rpSearch" type="text" placeholder="搜索标题 / 日期" aria-label="搜索标题或日期"></div>
+          <button class="px-btn ghost" id="rpCont" type="button" title="播完自动切下一场，循环播放">📻 24h 连播</button>
+          <span class="rp-stats" id="rpStats"></span>
+        </div>
+
         <div class="rp-head" aria-hidden="true">
           <span class="c-program">节目</span>
           <span class="c-type">类型</span>
@@ -108,7 +109,7 @@
         <div class="rp-pager" id="rpPager"></div>
       </div>
 
-      <!-- 右侧播放器栏（宽屏吸顶；窄屏移到列表下方） -->
+      <!-- 右侧播放器栏（宽屏常驻吸顶、与导航栏留白；窄屏移到列表下方） -->
       <aside class="rp-rail">
         <div class="rp-player pixel-card" id="rpPlayer">
           <div class="phead">
@@ -130,7 +131,7 @@
       </aside>
     </div>
   </div>
-</div>
+</main>
 
 <!-- 深浅色模式切换按钮（左下角） -->
 <button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
@@ -144,7 +145,7 @@
 <img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
 
 <!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
-<script src="data/replays.js?v=202610032100"></script>
+<script src="data/replays.js?v=202610040218"></script>
 <script src="js/shared.js"></script>
 <script>
 /* 啾啾出勤记录！录播站
@@ -158,6 +159,16 @@
   var REPLAYS = window.CHU2U_REPLAYS || [];
   var TAGS = window.CHU2U_REPLAY_TAGS || [];
   var TAGCOLORS = window.CHU2U_REPLAY_TAG_COLORS || {};
+  /* 栏目介绍：数据在 replays.js 的 window.CHU2U_REPLAY_INTRO（管理台可编辑；\n 换行） */
+  (function(){
+    var intro = window.CHU2U_REPLAY_INTRO, el = document.getElementById("rpIntro");
+    if(!el || !intro) return;
+    el.textContent = "";
+    intro.split("\n").forEach(function(line, i){
+      if(i) el.appendChild(document.createElement("br"));
+      el.appendChild(document.createTextNode(line));
+    });
+  })();
   /* 分类配色（与数据文件同源；未知分类灰兜底） */
   function tagColor(tg){ return TAGCOLORS[tg] || "#8e8e96"; }
   function tagTint(hex, a){
@@ -570,6 +581,21 @@
   }
   tick();
   setInterval(tick, 1000);
+})();
+</script>
+<!-- 顶栏实际高度写进 --topbar-h，供播放器栏的吸顶留白用（顶栏高度随断点变化） -->
+<script>
+(function(){
+  function sync(){
+    var tb = document.getElementById("topbar");
+    if(!tb) return;
+    document.documentElement.style.setProperty("--topbar-h",
+      Math.round(tb.getBoundingClientRect().height) + "px");
+  }
+  sync();
+  window.addEventListener("load", sync);
+  window.addEventListener("resize", sync);
+  if(window.ResizeObserver){ try{ new ResizeObserver(sync).observe(document.getElementById("topbar")); }catch(e){} }
 })();
 </script>
 </body>
