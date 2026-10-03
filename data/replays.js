@@ -124,7 +124,7 @@ window.CHU2U_REPLAYS = [
   {bvid:"BV1Hsho63ELr", t:"⭐电波观测⭐P1", cover:"images/replays/r007.jpg",
    y:2026, mo:9, d:26, h:23, mi:11, sec:20070, pages:5, tags:"杂谈,水时长"},
   {bvid:"BV1GEhy6oESZ", t:"虽然是歌杂但是虚虚的!⭐", cover:"images/replays/r008.jpg",
-   y:2026, mo:9, d:25, h:15, mi:58, sec:8762, pages:2, tags:""},
+   y:2026, mo:9, d:25, h:15, mi:58, sec:8762, pages:2, tags:"歌回"},
   {bvid:"BV1oGaT6FEtS", t:"来吧7天30小时的传说⭐", cover:"images/replays/r009.jpg",
    y:2026, mo:9, d:24, h:1, mi:44, sec:12791, pages:3, tags:"突击,水时长"},
   {bvid:"BV1BraA69Ee2", t:"下午de电波信号！⭐", cover:"images/replays/r010.jpg",
