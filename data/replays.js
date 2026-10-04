@@ -33,6 +33,10 @@ window.CHU2U_REPLAY_TAG_COLORS = {
 /* 栏目介绍（显示在「啾啾出勤记录！」大标题下方；\n 换行；可在管理台「录播站」里编辑） */
 window.CHU2U_REPLAY_INTRO = "这里是啾啾的出勤记录档案库！该页面会每日上午十点自动收录新录播，若出现意外情况则会进行手动维护~\n单点一场即可播放，内容类型tag为个人粗略标记，如有异常请及时反馈！点击「24h 连播」就能当电台一直听下去 ⭐\n录播内容将以录播man芋泥咕咕茶为主，同时也推荐观看录播man：恩仙仙/录播酱从小就很可爱qwq";
 window.CHU2U_REPLAYS = [
+  {bvid:"BV1hLHq6VEAR", t:"⭐歌歌杂杂⭐", cover:"images/replays/r039.jpg",
+   y:2026, mo:10, d:3, h:22, mi:15, sec:8179, pages:3, tags:"", pin:false},
+  {bvid:"BV1Z5He6jEHb", t:"⭐突击水时长耍起⭐", cover:"images/replays/r039.jpg",
+   y:2026, mo:10, d:3, h:20, mi:52, sec:8539, pages:2, tags:"", pin:false},
   {bvid:"BV1Vyt66kED4", t:"刚睡醒好困好困好困", cover:"images/replays/r030.jpg",
    y:2026, mo:9, d:4, h:22, mi:52, sec:8807, pages:3, tags:"杂谈,电台"},
   {bvid:"BV1p7ti6yE2o", t:"歌杂！接收大众电波信号中，，", cover:"images/replays/r030.jpg",
