@@ -185,7 +185,7 @@
       <span class="badge" id="aboutBadge"></span>
       <!-- 出道立绘：路径来自 data/profile.js 的 about.avatar（点击可新窗口看高清原图） -->
       <div class="avatar-big" id="avatarBig" role="button" tabindex="0" aria-label="羽啾chu2u 出道立绘，点击在新标签页查看高清原图">
-        <img id="avatarImg" src="" alt="羽啾chu2u 出道立绘">
+        <img id="avatarImg" src="images/探险啾-立绘.png" alt="羽啾chu2u 出道立绘">
       </div>
     </div>
     <div class="info">
@@ -1922,9 +1922,14 @@
     if(!line) return;
     var label = document.getElementById("liveLabel");
     function apply(L){
+      /* 信任窗口 = 4 小时（2026-10-04 从 12 小时收紧）：
+         云端每 20 分钟抓一次、直播中还会每 25 分钟打一次心跳刷新「检查时间」，
+         所以健康状态下数据永远很新；一旦云端停摆（GitHub 定时任务被跳过、
+         额度耗尽等，2026-10-04 实测停过 5 小时），页面最多 4 小时就会改口
+         「未开播」——宁可保守也不谎报直播中。 */
       var fresh = false;
       if(L && L.checked){
-        try{ var tt = new Date(String(L.checked).replace(" ", "T")).getTime(); fresh = (Date.now() - tt) <= 12 * 60 * 60 * 1000; }catch(e){}
+        try{ var tt = new Date(String(L.checked).replace(" ", "T")).getTime(); fresh = (Date.now() - tt) <= 4 * 60 * 60 * 1000; }catch(e){}
       }
       var live = !!(L && L.live && fresh);   // 数据过期时最多只敢说「未开播」，绝不说还在直播
       line.classList.remove("is-live", "is-offline");
