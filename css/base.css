@@ -1954,6 +1954,14 @@ body.dark .hud-link.is-active{color:#f2f4e2;background-color:#2b2b56}
 .hud-exp{border:none !important;background-color:var(--olive-pale);border-radius:50%}
 .hud-exp:hover{background-color:var(--olive)}
 
+/* ★ HUD 长度拉长为原来的两倍（2026-10-04 用户定）：整条坐标条 170px → 340px。
+   只把行与行之间的空隙拉大（固定 2 倍高度 + space-between 均分），
+   每个栏目标题 / 收纳键 / 刻度的大小、间距、点击与触摸区域一律不动；
+   拉长出来的空隙不拦截指针（nav 整体 pointer-events:none，只在标题和收纳键上恢复 auto），
+   鼠标/手指点空隙会直接穿透到底下内容，操作性和触控不受影响。 */
+.hud-nav{height:340px;justify-content:space-between;pointer-events:none}
+.hud-link,.hud-exp{pointer-events:auto}
+
 /* ============================================================
    歌单：窄屏改「两行式」歌行（2026-09-14 按用户手机截图实测后修）
    ------------------------------------------------------------
