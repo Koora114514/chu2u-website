@@ -396,10 +396,16 @@
     </div>
   </div>
 
-  <!-- 往期观测：子栏目标题样式（与猫猫宇宙论特辑同款），内容由 JS 按 data/records.js 渲染 -->
+  <!-- 往期观测：子栏目标题样式（与猫猫宇宙论特辑同款），内容由 JS 按 data/records.js 渲染；
+       默认只露最新 3 期，更早的由 JS 收进折叠区，标题行右端的收纳键点一下展开/收起 -->
   <div class="sub-head reveal" id="archive">
     <span class="en-tag">PAST ISSUES</span><span class="sub-title">往期观测</span>
     <span class="sub-line"></span>
+    <!-- 收纳键：展开/收起更早的往期。放在标题行最右端（标题在左、键在右，跟猫猫宇宙论/作品展柜同款），
+         图标点阵由 JS 按状态填入；往期 ≤ 3 期时 JS 会把它整个藏掉 -->
+    <button class="works-toggle" id="arcToggle" type="button" title="展开更早的观测" aria-label="展开更早的观测" aria-expanded="false" aria-controls="arcFold">
+      <svg class="arc-toggle-ic" width="24" height="24" viewBox="0 0 12 12" aria-hidden="true"><g fill="currentColor"></g></svg>
+    </button>
   </div>
   <div class="archive reveal" id="recArchive"></div>
 </div>
@@ -1751,13 +1757,19 @@
       keyEl.addEventListener("click", togSlices);
     }
 
-    /* 往期列表：新→旧，点一下展开/收起该期内容 */
+    /* 往期列表：新→旧，点一下展开/收起该期内容
+       ★ 收纳（2026-10-04 用户定）：默认只露最新 3 期，更早的全部收进折叠区；
+         列表末尾出现一根跟往期行同款的「收纳条」，点一下展开/收起折叠区 */
+    var FOLD_AT = 3;                       /* 默认露出的期数（最新的 3 期） */
+    var foldBox = document.createElement("div");
+    foldBox.className = "arc-fold"; foldBox.id = "arcFold"; foldBox.hidden = true;
     for(var i = R.length - 2; i >= 0; i--){
       (function(isu){
+        var shown = R.length - 2 - i;      /* 显示序号：0 = 最新的那期往期 */
         var row = document.createElement("div");
         row.className = "arc"; row.setAttribute("role", "button"); row.tabIndex = 0;
         row.setAttribute("aria-expanded", "false");
-        if((R.length - 2 - i) % 2 === 1) row.classList.add("alt"); /* 深浅交替：隔一行深一档 */
+        if(shown % 2 === 1) row.classList.add("alt"); /* 深浅交替：隔一行深一档 */
         var idx = document.createElement("span"); idx.className = "idx"; idx.textContent = isu.no;
         var mid = document.createElement("span");
         var h3 = document.createElement("h3"); h3.textContent = isu.tag + " · " + isu.title;
@@ -1782,9 +1794,54 @@
         row.addEventListener("keydown", function(e){
           if(e.key === "Enter" || e.key === " "){ e.preventDefault(); tog(); }
         });
-        arcEl.appendChild(row);
-        arcEl.appendChild(detail);
+        var into = shown < FOLD_AT ? arcEl : foldBox;  /* 最新 3 期直接露，更早的进折叠区 */
+        into.appendChild(row);
+        into.appendChild(detail);
       })(R[i]);
+    }
+
+    /* 收纳键（在标题行最右端，标题在左、键在右）：展开/收起折叠区。
+       图标点阵与作品展柜/猫猫宇宙论同款——收起态放「<」点阵、展开态换成「v」点阵，
+       直接替换（不是两个图标藏起来切换），保证任何时候只有一个图标出现 */
+    var arcToggle = document.getElementById("arcToggle");
+    if(foldBox.childNodes.length){
+      arcEl.appendChild(foldBox);
+      var IC_LESS = /* 收起态「<」18 点阵 */
+        '<rect x="6" y="2" width="1" height="1"/><rect x="7" y="2" width="1" height="1"/>' +
+        '<rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/>' +
+        '<rect x="4" y="4" width="1" height="1"/><rect x="5" y="4" width="1" height="1"/>' +
+        '<rect x="3" y="5" width="1" height="1"/><rect x="4" y="5" width="1" height="1"/>' +
+        '<rect x="2" y="6" width="1" height="1"/><rect x="3" y="6" width="1" height="1"/>' +
+        '<rect x="3" y="7" width="1" height="1"/><rect x="4" y="7" width="1" height="1"/>' +
+        '<rect x="4" y="8" width="1" height="1"/><rect x="5" y="8" width="1" height="1"/>' +
+        '<rect x="5" y="9" width="1" height="1"/><rect x="6" y="9" width="1" height="1"/>' +
+        '<rect x="6" y="10" width="1" height="1"/><rect x="7" y="10" width="1" height="1"/>';
+      var IC_V = /* 展开态「v」18 点阵 */
+        '<rect x="5" y="2" width="1" height="1"/><rect x="6" y="2" width="1" height="1"/>' +
+        '<rect x="4" y="3" width="1" height="1"/><rect x="5" y="3" width="1" height="1"/><rect x="6" y="3" width="1" height="1"/><rect x="7" y="3" width="1" height="1"/>' +
+        '<rect x="3" y="4" width="1" height="1"/><rect x="4" y="4" width="1" height="1"/><rect x="7" y="4" width="1" height="1"/><rect x="8" y="4" width="1" height="1"/>' +
+        '<rect x="2" y="5" width="1" height="1"/><rect x="3" y="5" width="1" height="1"/><rect x="8" y="5" width="1" height="1"/><rect x="9" y="5" width="1" height="1"/>' +
+        '<rect x="1" y="6" width="1" height="1"/><rect x="2" y="6" width="1" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="10" y="6" width="1" height="1"/>';
+      var icG = arcToggle ? arcToggle.querySelector(".arc-toggle-ic g") : null;
+      if(icG) icG.innerHTML = IC_LESS;
+      function togFold(){
+        var willOpen = foldBox.hidden;   /* 现在收着 = 接下来展开 */
+        foldBox.hidden = !willOpen;
+        if(willOpen){
+          /* 收着的时候量不到高度：展开后把里面已打开的期内容重新量一次 */
+          var gs = foldBox.querySelectorAll(".arc-detail .grid");
+          for(var k = 0; k < gs.length; k++) fitScroll(gs[k]);
+        }
+        if(icG) icG.innerHTML = willOpen ? IC_V : IC_LESS;
+        if(arcToggle){
+          arcToggle.title = willOpen ? "收起更早的观测" : "展开更早的观测";
+          arcToggle.setAttribute("aria-label", arcToggle.title);
+          arcToggle.setAttribute("aria-expanded", willOpen ? "true" : "false");
+        }
+      }
+      if(arcToggle) arcToggle.addEventListener("click", togFold);
+    }else if(arcToggle){
+      arcToggle.hidden = true;   /* 往期 ≤ 3 期：没有可收纳的，收纳键整个不出现 */
     }
 
     /* 窗口尺寸变化后重新定高（隐藏中的网格量不到高度，展开时会再定一次） */

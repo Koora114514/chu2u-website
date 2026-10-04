@@ -824,7 +824,7 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .nyan-box{position:relative}
 .nyan-head,.sub-head{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-deep);letter-spacing:3px}
 .nyan-head .nyan-line,.sub-head .sub-line{flex:1;height:3px;background:var(--line)}
-.nyan-head .works-toggle{position:static;flex:0 0 auto}
+.nyan-head .works-toggle,.sub-head .works-toggle{position:static;flex:0 0 auto}
 .nyan-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:16px}
 .nyan-grid[hidden]{display:none}
 .nyan-filter{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
@@ -900,6 +900,10 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .issue .body .grid::-webkit-scrollbar-track,.arc-detail .grid::-webkit-scrollbar-track{background:var(--panel);border-left:2px solid var(--ink)}
 .issue .body .grid::-webkit-scrollbar-thumb,.arc-detail .grid::-webkit-scrollbar-thumb{background:var(--olive);border:2px solid var(--ink)}
 .arc-detail .rec-lead{padding-right:0;margin-bottom:2px}
+/* ★ 往期收纳（2026-10-04 用户定）：默认只露最新 3 期，更早的收进折叠区。
+   折叠区自己撑一套和列表一样的行距（16px），塞回列表中间看不出接缝；
+   展开/收起的收纳键不占列表位置，在子栏目标题行最右端（见 #arcToggle） */
+.arc-fold{display:flex;flex-direction:column;gap:16px}
 
 /* ---------- ⑥ 个人歌单（卡带播放器） ---------- */
 .radio{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px}
