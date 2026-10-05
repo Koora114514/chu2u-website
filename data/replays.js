@@ -23,7 +23,7 @@
    - 更新本文件后，把 log.html 里 data/replays.js 那个 <script src> 的
      ?v= 改成「今天+时分」（YYYYMMDDHHMM）——缓存版本号，同一天多次更新
      必须换新值，只用当天日期会撞上浏览器/Cloudflare 旧缓存。 */
-window.CHU2U_REPLAYS_UPDATED = "2026-10-04";
+window.CHU2U_REPLAYS_UPDATED = "2026-10-05";
 window.CHU2U_REPLAY_TAGS = ["杂谈", "歌回", "游戏", "联动", "电台", "特别回", "突击", "水时长"];
 /* 分类配色（2026-10-03 用户定：特别回偏红、电台偏黄，其余参考电台软件；未知分类用灰色兜底） */
 window.CHU2U_REPLAY_TAG_COLORS = {
@@ -33,6 +33,8 @@ window.CHU2U_REPLAY_TAG_COLORS = {
 /* 栏目介绍（显示在「啾啾出勤记录！」大标题下方；\n 换行；可在管理台「录播站」里编辑） */
 window.CHU2U_REPLAY_INTRO = "这里是啾啾的出勤记录档案库！该页面会每日上午十点自动收录新录播，若出现意外情况则会进行手动维护~\n单点一场即可播放，内容类型tag为个人粗略标记，如有异常请及时反馈！点击「24h 连播」就能当电台一直听下去 ⭐\n录播内容将以录播man芋泥咕咕茶为主，同时也推荐观看录播man：恩仙仙/录播酱从小就很可爱qwq";
 window.CHU2U_REPLAYS = [
+  {bvid:"BV1NtHj6yE8A", t:"⭐困困困⭐", cover:"images/replays/r040.jpg",
+   y:2026, mo:10, d:4, h:16, mi:8, sec:7830, pages:2, tags:"", pin:false},
   {bvid:"BV1hLHq6VEAR", t:"⭐歌歌杂杂⭐", cover:"images/replays/r039.jpg",
    y:2026, mo:10, d:3, h:22, mi:15, sec:8179, pages:3, tags:"", pin:false},
   {bvid:"BV1Z5He6jEHb", t:"⭐突击水时长耍起⭐", cover:"images/replays/r039.jpg",
