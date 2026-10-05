@@ -170,5 +170,20 @@ window.CHU2U_RECORDS = [
       {kind:"video", uid:"3546660217031342", link:"https://www.bilibili.com/video/BV1ikhQ6WEHx", cover:"images/records/item8-5.jpg",
        cat:"联动 · COLLAB", t:"凌晨直播结束前的真情实感 我真的喜欢小松绿这样的人【羽啾chu2u】", d:"凌晨直播结束前的真情实感 我真的喜欢小松绿这样的人【羽啾chu2u】", date:"9月26日 · 看切片 →"},
     ]},
-
+,
+  { no:9, tag:"第9期 · 周观测", title:"本周观测速报",
+    range:"2026.09.28 – 2026.10.04", cover:"images/records/issue9.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u x 小松绿Viridi…》（播放 17514）。",
+    items:[
+      {kind:"video", uid:"35391148", link:"https://www.bilibili.com/video/BV1aza76HEMw", cover:"images/records/item9-1.jpg",
+       cat:"联动 · COLLAB", t:"【羽啾chu2u x 小松绿Viridis】世界第一绿考一晚能喊多少句小松绿？", d:"【羽啾chu2u x 小松绿Viridis】世界第一绿考一晚能喊多少句小松绿？", date:"9月29日 · 看切片 →"},
+      {kind:"video", uid:"3546660217031342", link:"https://www.bilibili.com/video/BV1Z9aR6iEnE", cover:"images/records/item9-2.jpg",
+       cat:"联动 · COLLAB", t:"认识多年的网友来上海不跟我说 但认识两个月的小松绿会跟我说一声【羽啾chu2u】", d:"认识多年的网友来上海不跟我说 但认识两个月的小松绿会跟我说一声【羽啾chu2u】", date:"9月30日 · 看切片 →"},
+      {kind:"video", uid:"332623470", link:"https://www.bilibili.com/video/BV17ya56HEzS", cover:"images/records/item9-3.jpg",
+       cat:"直播切片 · CLIP", t:"神秘滴泪口罩女与xsl初见面❗️我一直盯着她👁️确实是一有机会就摸，或者就是一对视上我就马上摸xsl的手✋【羽啾chu2u】", d:"神秘滴泪口罩女与xsl初见面❗️我一直盯着她👁️确实是一有机会就摸，或者就是一对视上我就马上摸x…", date:"9月29日 · 看切片 →"},
+      {kind:"video", uid:"10323817", link:"https://www.bilibili.com/video/BV1v4aL6QEaj", cover:"images/records/item9-4.jpg",
+       cat:"联动 · COLLAB", t:"【羽啾chu2u】重力系羽啾！拿着餐刀抵着自己脖子，问小松绿你会永远喜欢我吗，不喜欢的话就去鼠", d:"【羽啾chu2u】重力系羽啾！拿着餐刀抵着自己脖子，问小松绿你会永远喜欢我吗，不喜欢的话就去鼠", date:"9月29日 · 看切片 →"},
+      {kind:"video", uid:"3546791903496550", link:"https://www.bilibili.com/video/BV12pHq6BEnc", cover:"images/records/item9-5.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】羽啾地雷属性大爆发，给妹妹吓得自爆了", d:"【羽啾chu2u】羽啾地雷属性大爆发，给妹妹吓得自爆了", date:"10月3日 · 看切片 →"}
+    ] }
 ];
