@@ -34,8 +34,14 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-09-29";
+window.CHU2U_CAT_UPDATED = "2026-10-05";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1255201877291696162", cover:"images/nyan/a37.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月4日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1254583891648315392", cover:"images/nyan/a38.jpg",
+   t:"尼古啾啾", d:"海圻圻圻", date:"2026年10月2日"},
+  {kind:"art", uid:"625636825", link:"//www.bilibili.com/opus/1252607158702309376", cover:"images/nyan/a39.jpg",
+   t:"带羽啾游青甘大环线", d:"CythereanEcho", date:"2026年9月27日"},
   {kind:"art", uid:"3546839049571170", link:"//www.bilibili.com/opus/1252839254464135193", cover:"images/nyan/a31.jpg",
    t:"做了镭射票", d:"魔法褥子", date:"2026年9月28日"},
   {kind:"art", uid:"354415366", link:"//www.bilibili.com/opus/1252695050905714713", cover:"images/nyan/a32.jpg",
