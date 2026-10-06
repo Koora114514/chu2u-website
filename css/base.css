@@ -2813,3 +2813,50 @@ body.dark #pbToggle{background-image:linear-gradient(180deg,#bfc56f,#8f9444)}
 body.dark .pl-panel,body.dark .pl-modal-card{background-image:linear-gradient(180deg,#1b1b38,#14142a);border-color:var(--olive-deep)}
 body.dark .pl-prow:hover{background:linear-gradient(90deg,#1b1b38,#22224a)}
 body.dark .pl-detail-table th{background:linear-gradient(180deg,#22224a,#2a2a52)}
+/* 我的歌单浮层里的歌单条目：不再套一层卡片（设计检查提示的 nested-cards），
+   改成扁平列表 + 分隔线，跟 v2.1 的橄榄细描边风格一致 */
+.pl-panel .pl-list-card{border:none;background:none;box-shadow:none;margin:0;
+  border-top:2px dashed #b7bc8a;padding-top:8px;border-radius:0}
+.pl-panel .pl-list-card:first-child{border-top:none;padding-top:2px}
+body.dark .pl-panel .pl-list-card{border-top-color:#3a3a5c}
+
+/* ---------- 哭啾按钮（2026-10-07 用户定）：像素块围成圆形，描边 #8b9150 ---------- */
+.cry-btn{
+  width:46px;height:46px;padding:0;cursor:pointer;flex:0 0 auto;
+  border:3px solid #8b9150;border-radius:50%;background:transparent;
+  background-image:linear-gradient(180deg,#fbfcf2,#d4da7b);
+  box-shadow:0 3px 0 rgba(139,145,80,.45);
+  clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%);
+  display:grid;place-items:center;transition:transform .15s cubic-bezier(.22,1,.36,1);
+}
+.cry-btn img{width:30px;height:30px;image-rendering:auto;display:block}
+.cry-btn:hover{transform:translateY(-3px)}
+.cry-btn:active{transform:translateY(1px) scale(.96)}
+body.dark .cry-btn{border-color:var(--olive-deep);background-image:linear-gradient(180deg,#1b1b38,#22224a)}
+/* 溅射的 emoji 粒子 */
+.cry-fx{position:fixed;z-index:9200;pointer-events:none;font-size:20px;line-height:1;
+  will-change:transform,opacity;animation:cryFly .95s steps(8) forwards}
+@keyframes cryFly{
+  from{transform:translate(0,0) scale(.6);opacity:1}
+  to{transform:translate(var(--dx),var(--dy)) scale(1.25) rotate(var(--rot));opacity:0}
+}
+@media(prefers-reduced-motion:reduce){.cry-fx{animation-duration:.3s}}
+/* 幸运签卡片 */
+.cry-card{
+  position:fixed;z-index:9200;left:50%;transform:translateX(-50%);bottom:150px;
+  width:min(420px,90vw);padding:14px 16px;
+  border:2px solid #8b9150;border-radius:18px;
+  background-image:linear-gradient(180deg,#fbfcf2,#e8ecc0);
+  box-shadow:0 6px 0 rgba(139,145,80,.45);
+  animation:cryPop .28s steps(5) forwards;
+}
+@keyframes cryPop{from{opacity:0;transform:translateX(-50%) translateY(14px)}to{opacity:1;transform:translateX(-50%) translateY(0)}}
+.cry-card .ck{font-size:12px;color:#79804a;letter-spacing:2px}
+.cry-card .cb{font-size:15px;line-height:2;margin:6px 0 10px;color:#303030}
+.cry-card .cs{font-size:13px;color:#4d5344;margin-bottom:8px}
+.cry-card .cr{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+body.dark .cry-card{border-color:var(--olive-deep);
+  background-image:linear-gradient(180deg,#1b1b38,#14142a);box-shadow:0 6px 0 rgba(0,0,0,.5)}
+body.dark .cry-card .ck{color:var(--olive-deep)}
+body.dark .cry-card .cb{color:var(--text,#e8e8f0)}
+body.dark .cry-card .cs{color:var(--ink-soft)}

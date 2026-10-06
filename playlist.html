@@ -91,6 +91,9 @@
       <button class="px-btn on" id="tabSongs" type="button" role="tab">🎵 总览</button>
       <button class="px-btn" id="tabHist" type="button" role="tab">📜 历史</button>
       <button class="px-btn" id="tabFavs" type="button" role="tab">⭐ 中意</button>
+      <button class="cry-btn" id="cryBtn" type="button" title="哭啾：抽个幸运签，顺便推首歌" aria-label="哭啾按钮：抽幸运签推歌">
+        <img src="images/哭啾.png" alt="">
+      </button>
     </div>
 
     <!-- ============ 总览：吸顶工具条 + 歌曲卡列表 ============ -->
@@ -1076,6 +1079,8 @@
   /* ---------- 事件接线 ---------- */
   document.addEventListener("click", function(ev){
     var t = ev.target;
+    if(t.closest("#cryBtn")){ cryBurst($("cryBtn")); cryCard(); return; }
+    if(t.closest("#cryCard") && !t.closest("#cryPlay") && !t.closest("#cryAgain") && !t.closest("#cryClose")) return;
     if(t.closest(".pl-song")) return;   /* 卡片单独处理 */
 
     if(t.closest("#pbToggle")){ toggle(); return; }
@@ -1290,6 +1295,77 @@
   });
 
   function renderAll(){ syncChips(); renderSongs(); renderHist(); renderFavs(); }
+
+  /* ---------- 哭啾按钮：emoji 溅射 + 幸运签 + 推歌（2026-10-07 用户定） ----------
+     按一下：从按钮位置炸出一圈外星/宇宙/行星/航空主题 emoji，同时弹一张幸运签卡片
+     （祝福语 + 随机推一首有音源的歌，可以直接点播）。 */
+  var CRY_EMOJI = ["👽","🛸","🚀","🌌","🪐","⭐","📡","🛰️","👾","🌠","☄️","🔭","🧑🚀","🌙","💫","🌍"];
+  var CRY_WORDS = [
+    "📡 信号已接收——宇宙人正在回复你的消息，稍等三个地球日 ✨",
+    "🛸 今晚有艘小飞船会从你窗边路过，记得抬头 ⭐",
+    "👽 外星人研究了你三天，结论是：这颗星球上最可爱的生物 ✅",
+    "🌌 你今天的烦恼，放到银河尺度看只有 0.0001 像素那么大 🌠",
+    "🪐 土星环里有你的一小块，任何难过都可以先寄存到那里",
+    "☄️ 彗星每隔几十年才来一次，你也是——所以别急着路过自己 ⭐",
+    "🚀 人类花了六十年才把脚印留在月球，你慢一点也没关系 🌙",
+    "🛰️ 卫星在天上绕了几万圈才拍到你这一格，值得好好保存 💫",
+    "🧑🚀 地面指挥中心：今天状态良好，可以出舱啦，宇宙猫 🐱",
+    "🔭 观测站报告：你的努力虽然慢，但确实在往星系中心移动 ⭐",
+    "🌍 从太空看下去没有国界也没有 KPI，只有一颗蓝蓝的球 💙",
+    "💫 累了就把自己挂在通信卫星上休息一会儿，信号不会断 📡",
+    "🐱 母性宇宙广播：你已经做得很好了，来吃点东西吧 🍚",
+    "🌙 月球上没有风，你可以在那里大声喊，不会有人听见 ⭐",
+    "📖 学习累了就抬头——天上有 1000 亿颗星星陪你一起熬 ✨"
+  ];
+  function cryBurst(btn){
+    var r = btn.getBoundingClientRect();
+    var cx = r.left + r.width/2, cy = r.top + r.height/2;
+    for(var i = 0; i < 18; i++){
+      var el = document.createElement("span");
+      el.className = "cry-fx";
+      el.textContent = CRY_EMOJI[i % CRY_EMOJI.length];
+      el.style.left = cx + "px";
+      el.style.top = cy + "px";
+      var ang = Math.random() * Math.PI * 2, dist = 80 + Math.random() * 190;
+      el.style.setProperty("--dx", Math.round(Math.cos(ang) * dist) + "px");
+      el.style.setProperty("--dy", Math.round(Math.sin(ang) * dist - 30) + "px");
+      el.style.setProperty("--rot", Math.round((Math.random() * 2 - 1) * 200) + "deg");
+      el.style.animationDelay = Math.round(i * 20) + "ms";
+      document.body.appendChild(el);
+      (function(node){ setTimeout(function(){ node.remove(); }, 1500); })(el);
+    }
+  }
+  function cryCard(){
+    var old = document.getElementById("cryCard");
+    if(old) old.remove();
+    var pool = SONGS.filter(hasAudio);
+    var s = pool.length ? pool[Math.floor(Math.random() * pool.length)] : null;
+    var w = CRY_WORDS[Math.floor(Math.random() * CRY_WORDS.length)];
+    var d = document.createElement("div");
+    d.className = "cry-card";
+    d.id = "cryCard";
+    d.innerHTML = '<div class="ck">🛸 宇宙信号 · 幸运签</div>' +
+      '<div class="cb">' + esc(w) + '</div>' +
+      (s ? '<div class="cs">今日推荐：《' + esc(s.title) + '》' + (s.artist ? " · " + esc(s.artist) : "") + '（唱过 ' + (s.singCount || 0) + ' 次）</div>' +
+        '<div class="cr"><button class="px-btn" id="cryPlay" type="button">▶ 就听这首</button>' +
+        '<button class="px-btn ghost" id="cryAgain" type="button">🎲 再抽一次</button>' +
+        '<button class="px-btn ghost" id="cryClose" type="button">收起</button></div>' : '');
+    document.body.appendChild(d);
+    var play = document.getElementById("cryPlay");
+    if(play && s) play.addEventListener("click", function(){
+      var titles = viewList().filter(hasAudio).map(function(x){ return x.title; });
+      var at = titles.indexOf(s.title);
+      if(at < 0){ titles = pool.map(function(x){ return x.title; }); at = titles.indexOf(s.title); }
+      setQueue(titles, at < 0 ? 0 : at);
+      d.remove();
+    });
+    var again = document.getElementById("cryAgain");
+    if(again) again.addEventListener("click", function(){ cryBurst($("cryBtn")); cryCard(); });
+    var close = document.getElementById("cryClose");
+    if(close) close.addEventListener("click", function(){ d.remove(); });
+    clearTimeout(cryCard._tm);
+    cryCard._tm = setTimeout(function(){ d.remove(); }, 15000);
+  }
 
   /* ---------- 初始化 ---------- */
   syncChips();
