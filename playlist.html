@@ -371,6 +371,7 @@
     shuffle: null, shufflePos: 0,
     dragging: false,  /* 拖进度条时不要被 timeupdate 覆盖 */
     retried: false,   /* 音频加载失败重试过一次没有 */
+    blob: null,       /* 整首取下来的 blob URL（见 loadTrack） */
     wantPlay: false   /* 想播但被浏览器拦下时的标记 */
   };
   audio.volume = Math.min(1, Math.max(0, (getS(KEYS.vol, 80) || 80) / 100));
@@ -444,6 +445,58 @@
     if(state.mode === "random") buildShuffle();
     playCurrent();
   }
+  /* 取整首再播（2026-10-07）：音频托管在 Cloudflare Pages 的「直传」项目上，
+     实测那个管线不支持 HTTP 分段请求（Range），直接播 URL 的话拖进度条会跳回开头。
+     整首取下来换成 blob URL 播放 → 拖动/跳转完全正常，还能顺手缓存到内存（1~4MB 而已）。
+     取失败就退回直接播原地址（至少能听）。 */
+  function loadTrack(s){
+    var url = audioUrl(s);
+    var want = s;
+    if(state.blob){ try{ URL.revokeObjectURL(state.blob); }catch(e){} state.blob = null; }
+    if(window.fetch){
+      fetch(url).then(function(r){
+        if(!r.ok) throw new Error("HTTP " + r.status);
+        return r.blob();
+      }).then(function(b){
+        if(curSong() !== want) return;               /* 已经切歌了，丢弃 */
+        state.blob = URL.createObjectURL(b);
+        startAudio(state.blob, want, url);
+      }).catch(function(){
+        if(curSong() !== want) return;
+        startAudio(url, want, url);                  /* 兜底：直接播原地址 */
+      });
+    }else{
+      startAudio(url, want, url);
+    }
+  }
+  function startAudio(src, s, fallbackUrl){
+    audio.src = src;
+    audio.load();
+    var p = audio.play();
+    state.wantPlay = true;
+    if(p && p.catch) p.catch(function(err){
+      state.wantPlay = false;
+      if(err && err.name === "NotAllowedError") toast("浏览器拦下了自动播放，点一下 ▶ 就能听 ⭐");
+      else if(src !== fallbackUrl){ audio.src = fallbackUrl; audio.load(); var q = audio.play(); if(q && q.catch) q.catch(function(){}); state.wantPlay = true; }
+      else toast("播放失败：" + (err && err.message ? err.message : "未知原因"));
+      paintPlayer();
+    });
+    recordPlay(s);
+    paintPlayer(); renderQueue();
+  }
+  function recordPlay(s){
+    if(!s) return;
+    addCount(s.title); addHist(s.title);
+    if(window.MediaSession && navigator.mediaSession){
+      try{
+        navigator.mediaSession.metadata = new MediaMetadata({title:s.title || "", artist:s.artist || "羽啾chu2u", album:"陪啾啾听！"});
+        navigator.mediaSession.setActionHandler("play", function(){ toggle(); });
+        navigator.mediaSession.setActionHandler("pause", function(){ toggle(); });
+        navigator.mediaSession.setActionHandler("previoustrack", function(){ step(-1); });
+        navigator.mediaSession.setActionHandler("nexttrack", function(){ step(1); });
+      }catch(e){}
+    }
+  }
   function playCurrent(countIt){
     var s = curSong();
     if(!s) return;
@@ -455,9 +508,7 @@
       return;
     }
     state.retried = false;
-    audio.src = audioUrl(s);
-    audio.load();
-    var p = audio.play();
+    loadTrack(s);
     state.wantPlay = true;
     if(p && p.catch) p.catch(function(err){
       state.wantPlay = false;
@@ -468,17 +519,6 @@
       }
       paintPlayer();
     });
-    if(countIt !== false){ addCount(s.title); addHist(s.title); }
-    if(window.MediaSession && navigator.mediaSession){
-      try{
-        navigator.mediaSession.metadata = new MediaMetadata({title:s.title || "", artist:s.artist || "羽啾chu2u", album:"陪啾啾听！"});
-        navigator.mediaSession.setActionHandler("play", function(){ toggle(); });
-        navigator.mediaSession.setActionHandler("pause", function(){ toggle(); });
-        navigator.mediaSession.setActionHandler("previoustrack", function(){ step(-1); });
-        navigator.mediaSession.setActionHandler("nexttrack", function(){ step(1); });
-      }catch(e){}
-    }
-    paintPlayer(); renderQueue();
   }
   function toggle(){
     var s = curSong();
@@ -491,7 +531,7 @@
     if(!hasAudio(s)){ toast("《" + s.title + "》暂时没有收录音源 🙇"); return; }
     if(audio.paused){
       state.retried = false;
-      if(!audio.src) audio.src = audioUrl(s);
+      if(!audio.src || !state.blob){ loadTrack(s); return; }
       var p = audio.play();
       state.wantPlay = true;
       if(p && p.catch) p.catch(function(){ state.wantPlay = false; paintPlayer(); });
