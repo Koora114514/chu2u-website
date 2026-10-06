@@ -1973,6 +1973,29 @@
   })();
 
 
+  /* ---------- 大屏补偿：窗口越宽整体放大一点（2026-10-06 用户定） ----------
+     背景：用户自己在 2K(2560×1440)@125% 下看（浏览器视口 2048 CSS px），觉得大小正合适；
+     换到 2K@100%（视口 2560）或 4K@100%（视口 3840）时，同样的页面会显得又小又空。
+     做法：以 2048 CSS px 为基准，视口更宽就把整页按 视口/2048 放大（最多 2 倍；2048 及以下不缩不放），
+     等价于浏览器自带的「页面缩放」——版式比例、字号、像素图一起放大，观感跟 2K@125% 对齐。
+     注意 clientWidth 会被 zoom 影响，所以先除以当前 zoom 还原出真实视口宽度，避免来回抖动。 */
+  (function(){
+    var REF = 2048, MAX = 2;
+    var root = document.documentElement;
+    function apply(){
+      /* 关键：先把 zoom 复位再量宽度——不然量到的是被 zoom 影响过的视口，
+         会出现「放大→量到变窄→缩回去→再放大」的来回抖动（实测踩过）。 */
+      root.style.zoom = "";
+      var raw = window.innerWidth || root.clientWidth || REF;
+      var z = Math.max(1, Math.min(MAX, raw / REF));
+      z = Math.round(z * 100) / 100;              /* 两位小数，避免亚像素抖动 */
+      if(z > 1.001) root.style.zoom = String(z);
+    }
+    apply();
+    window.addEventListener("resize", apply);
+    window.addEventListener("orientationchange", apply);
+  })();
+
   /* ---------- 直播间开播状态监控（读 data/live.js：本机计划任务每 2 分钟刷新，状态变化时由「自动上线」推送到线上。
        数据新鲜就照实显示；超过 12 小时没更新则一律显示「未开播」——宁可保守，也不谎报直播中） ---------- */
   (function(){
