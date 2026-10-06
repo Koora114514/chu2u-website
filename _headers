@@ -28,7 +28,7 @@
   #   connect-src self  = 页面只允许请求本站自己的资源（不向任何外部服务器发请求）
   #   frame-src player.bilibili.com = 探险日志页内嵌 B 站官方外链播放器（2026-10-03 起；
   #     视频流走 B站CDN→访客，不占本站带宽；不带这行 iframe 会被 default-src 'self' 拦掉）
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; media-src 'self' https://chu2u-music.pages.dev; connect-src 'self'; frame-ancestors 'self'; frame-src 'self' https://player.bilibili.com; base-uri 'self'; form-action 'none'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; media-src 'self' https://chu2u-music.pages.dev; connect-src 'self' https://chu2u-music.pages.dev; frame-ancestors 'self'; frame-src 'self' https://player.bilibili.com; base-uri 'self'; form-action 'none'; object-src 'none'
 
 # 图片和音频体积大、不会变，让浏览器长期缓存（第二次打开更快）
 /images/*
