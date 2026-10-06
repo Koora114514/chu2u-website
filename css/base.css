@@ -2559,3 +2559,155 @@ body.dark .pls-prog-fill{background:var(--olive-deep)}
   .rp-row.pls-row .pls-acts{grid-column:3/5;grid-row:2;justify-content:flex-end}
   .rp-row.pls-row .rp-play{font-size:11px;padding:5px 9px}
 }
+
+/* ============================================================
+   ---------- 陪啾啾听！v2（2026-10-07 重做：照参考站「小松绿的歌单」的布局与功能，美术换回像素风） ----------
+   参考站要点：卡片式歌曲列表（黑胶位 + 徽章 + 底部信息）、吸顶工具条、真实 <audio> 播放器
+   （底部胶囊条：真进度条可拖、音量、播放模式、播放队列、睡眠定时）、演唱详情弹窗、中意/历史/我的歌单。
+   本页样式全部 pl- 前缀，只作用于 playlist.html（不碰其他页面）。
+   ============================================================ */
+/* ---- 吸顶工具条 ---- */
+.pl-sticky{
+  position:sticky;top:calc(var(--topbar-h, 74px) + 8px);z-index:20;margin:0 0 14px;
+  background:var(--panel);border:3px solid var(--ink);box-shadow:6px 6px 0 rgba(48,48,48,.6);
+  padding:10px 12px;
+}
+.pl-row1{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pl-search{display:flex;align-items:center;gap:8px;background:var(--bg,#f4f6e0);
+  border:2px solid var(--ink);padding:0 10px;height:38px;flex:1 1 220px;min-width:180px}
+.pl-search input{flex:1;border:none;background:none;color:var(--ink);font-size:14px;
+  font-family:inherit;outline:none;min-width:0}
+.pl-search .pl-clear{border:none;background:none;color:var(--ink-soft);cursor:pointer;font-size:16px;
+  line-height:1;padding:0 2px}
+.pl-search .pl-clear:hover{color:var(--ink)}
+.pl-tools2{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px}
+.pl-meta{font-size:13px;color:var(--ink-soft);letter-spacing:1px;margin-top:8px}
+.pl-active{display:flex;align-items:center;gap:6px;flex-wrap:wrap;margin-top:8px}
+.pl-active[hidden]{display:none}
+
+/* ---- 歌曲卡（像素风） ---- */
+.pl-list{display:flex;flex-direction:column;gap:10px}
+.pl-song{
+  position:relative;padding:12px 14px;cursor:pointer;
+  background:var(--panel);border:3px solid var(--ink);box-shadow:4px 4px 0 rgba(48,48,48,.55);
+}
+.pl-song:hover{border-color:var(--olive-deep)}
+.pl-song.now{border-color:var(--olive-deep);box-shadow:4px 4px 0 var(--olive-deep)}
+.pl-song-top{display:flex;align-items:center;gap:12px}
+.pl-vinyl{
+  flex:0 0 52px;width:52px;height:52px;display:grid;place-items:center;overflow:hidden;
+  background:var(--olive-pale);border:2px solid var(--ink);font-size:24px;
+  image-rendering:auto;
+}
+.pl-vinyl img{width:100%;height:100%;object-fit:cover;display:block}
+.pl-song.now .pl-vinyl{animation:plSpin 3.2s linear infinite}
+@keyframes plSpin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.pl-song.now .pl-vinyl{animation:none}}
+.pl-song-main{flex:1 1 auto;min-width:0}
+.pl-song-name{font-size:16px;font-weight:700;line-height:1.5;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-song-sub{font-size:13px;color:var(--ink-soft);letter-spacing:1px;line-height:1.6;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pl-bars{display:inline-flex;align-items:flex-end;gap:2px;height:12px;margin-left:6px;vertical-align:-1px}
+.pl-bars i{width:3px;background:var(--olive-deep);display:block;animation:plBar .9s steps(3) infinite}
+.pl-bars i:nth-child(1){height:6px;animation-delay:0s}
+.pl-bars i:nth-child(2){height:11px;animation-delay:.15s}
+.pl-bars i:nth-child(3){height:8px;animation-delay:.3s}
+@keyframes plBar{0%,100%{transform:scaleY(.5)}50%{transform:scaleY(1)}}
+.pl-acts{display:flex;gap:6px;flex:0 0 auto}
+.pl-ib{width:34px;height:34px;padding:0;display:grid;place-items:center;cursor:pointer;
+  background:var(--panel);color:var(--ink);border:2px solid var(--ink);box-shadow:2px 2px 0 rgba(48,48,48,.5);
+  font-family:inherit;font-size:15px;line-height:1}
+.pl-ib:hover{background:var(--olive-pale)}
+.pl-ib.on{background:var(--olive)}
+.pl-ib:disabled{opacity:.4;cursor:not-allowed}
+.pl-badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:9px}
+.pl-badge{font-size:12px;line-height:1.6;padding:0 8px;border:2px solid var(--line);
+  background:var(--bg,#f4f6e0);color:var(--ink-soft);letter-spacing:1px;white-space:nowrap}
+button.pl-badge{cursor:pointer;font-family:inherit}
+button.pl-badge:hover{border-color:var(--olive-deep);color:var(--ink)}
+.pl-badge.lang{border-color:var(--olive-deep);color:var(--ink)}
+.pl-song-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;
+  margin-top:9px;font-size:12px;color:var(--ink-soft);letter-spacing:1px;flex-wrap:wrap}
+.pl-cut{margin-top:8px;font-size:12px;color:var(--ink-soft);letter-spacing:1px}
+.pl-cut a{color:var(--olive-deep);text-decoration:underline;text-underline-offset:3px}
+.pl-cut a:hover{color:var(--ink)}
+
+/* ---- 底部播放条（参考站的胶囊条，像素化） ---- */
+.pl-player{
+  position:fixed;left:50%;transform:translateX(-50%);bottom:44px;z-index:8600;
+  display:flex;align-items:center;gap:8px;width:min(980px,calc(100% - 24px));
+  background:var(--panel);border:3px solid var(--ink);box-shadow:6px 6px 0 rgba(48,48,48,.6);
+  padding:8px 12px;flex-wrap:wrap;
+}
+.pl-player[hidden]{display:none}
+.pb-info{flex:1 1 150px;min-width:0;display:flex;flex-direction:column;line-height:1.35}
+.pb-name{font-size:14px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb-artist{font-size:12px;color:var(--ink-soft);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pb-prog{display:flex;align-items:center;gap:8px;flex:2 1 260px;min-width:200px}
+.pb-prog input[type=range]{flex:1 1 auto;min-width:80px}
+.pb-time{font-size:12px;color:var(--ink-soft);font-variant-numeric:tabular-nums;white-space:nowrap}
+.pb-vol{display:flex;align-items:center;gap:6px;flex:0 1 130px;min-width:90px}
+.pb-vol input[type=range]{width:100%}
+input[type=range].pl-range{
+  -webkit-appearance:none;appearance:none;height:10px;background:rgba(139,145,80,.28);
+  box-shadow:inset 0 2px 0 rgba(48,48,48,.25);cursor:pointer;border:none;outline:none;
+}
+input[type=range].pl-range::-webkit-slider-thumb{
+  -webkit-appearance:none;width:14px;height:18px;background:var(--olive-deep);
+  border:2px solid var(--ink);box-shadow:1px 1px 0 rgba(48,48,48,.5);
+}
+input[type=range].pl-range::-moz-range-thumb{width:12px;height:16px;background:var(--olive-deep);
+  border:2px solid var(--ink);box-shadow:1px 1px 0 rgba(48,48,48,.5);border-radius:0}
+
+/* ---- 悬浮面板（播放队列 / 我的歌单） ---- */
+.pl-panel{
+  position:fixed;left:12px;bottom:120px;z-index:8600;width:min(330px,86vw);max-height:52vh;
+  display:flex;flex-direction:column;background:var(--panel);border:3px solid var(--ink);
+  box-shadow:6px 6px 0 rgba(48,48,48,.5);
+}
+.pl-panel[hidden]{display:none}
+.pl-panel-head{display:flex;align-items:center;gap:8px;padding:8px 10px;
+  border-bottom:2px solid var(--line);font-size:14px;font-weight:700}
+.pl-panel-head .sp{flex:1}
+.pl-panel-body{overflow-y:auto;padding:6px 8px 10px}
+.pl-prow{display:flex;align-items:center;gap:8px;padding:4px 6px;font-size:13px;cursor:pointer;
+  border-bottom:1px solid var(--line)}
+.pl-prow:hover{background:var(--olive-pale)}
+.pl-prow.now{color:var(--olive-deep);font-weight:700}
+.pl-prow .x{margin-left:auto;border:none;background:none;color:var(--ink-soft);cursor:pointer;font-size:15px}
+.pl-prow .x:hover{color:var(--ink)}
+
+/* ---- 弹窗（演唱详情 / 导出歌单 / 新建歌单） ---- */
+.pl-modal{position:fixed;inset:0;z-index:9000;display:flex;align-items:center;justify-content:center;
+  background:rgba(20,20,26,.55)}
+.pl-modal[hidden]{display:none}
+.pl-modal-card{background:var(--panel);border:3px solid var(--ink);box-shadow:8px 8px 0 rgba(48,48,48,.6);
+  padding:16px 18px;width:min(560px,92vw);max-height:86vh;overflow:auto}
+.pl-modal-card h3{margin:0 0 10px;font-size:18px}
+.pl-detail-table{width:100%;border-collapse:collapse;font-size:13px}
+.pl-detail-table th,.pl-detail-table td{border:1px solid var(--line);padding:5px 8px;text-align:left}
+.pl-detail-table th{background:var(--olive-pale);font-weight:700}
+.pl-modal-acts{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+
+/* ---- 历史页 ---- */
+.pl-day{font-size:14px;font-weight:700;color:var(--olive-deep);margin:12px 0 6px;letter-spacing:1px}
+
+/* 播放条常驻时给页面留出底部空间（不然最后几张卡永远被压住） */
+body.has-player{padding-bottom:130px}
+/* 页签吸顶（参考站的页签也是吸顶的），排在吸顶工具条之上 */
+.pl-tabs{position:sticky;top:calc(var(--topbar-h, 74px) + 4px);z-index:21;display:flex;gap:8px;flex-wrap:wrap;
+  background:var(--paper-bg,#f4f6e0);padding:6px 0}
+
+/* ---- 窄屏 ---- */
+@media(max-width:720px){
+  /* 手机上底部有三层：弹幕条 0-30 → 侧边栏横条 44 → 播放条 118（跟旧播放器一个规矩） */
+  .pl-player{width:calc(100% - 16px);bottom:118px;gap:6px;padding:6px 8px}
+  body.has-player{padding-bottom:230px}
+  .pb-info{flex:1 1 100%;order:-1}
+  .pb-vol{display:none}
+  .pl-player{max-height:46vh;overflow:auto}
+  .pl-vinyl{flex-basis:44px;width:44px;height:44px;font-size:20px}
+  .pl-song{padding:10px}
+  .pl-sticky{position:static}
+}

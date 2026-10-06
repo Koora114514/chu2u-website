@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610062111">
+<link rel="stylesheet" href="css/base.css?v=202610070101">
 </head>
 <body class="page-pl">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -79,149 +79,81 @@
 </nav>
 
 <main>
-  <div class="wrap rp-wrap">
-    <div class="rp-body reveal">
-      <!-- 左主栏：标题区 + 四个页面（歌单 / 历史 / 中意 / 我的歌单）+ 扁平列表 -->
-      <div class="rp-main">
-        <div class="page-hero reveal">
-          <span class="kicker">MUSIC CORNER<small>LISTEN WITH CHU2U</small></span>
-          <h1>陪啾啾听！</h1>
-          <p class="sub">这里是啾啾的电波接收站！她唱过的每一首歌都记在这里，<br>点一下就在右边开播——歌切优先，没有歌切就跳到那场录播里唱到的那一段 ⭐</p>
-        </div>
-
-        <!-- 页面切换（歌单 / 历史 / 中意 / 我的歌单） -->
-        <div class="pl-tabs reveal" role="tablist">
-          <button class="px-btn on" id="tabSongs" type="button" role="tab">🎵 歌单</button>
-          <button class="px-btn" id="tabHist" type="button" role="tab">📜 历史</button>
-          <button class="px-btn" id="tabFavs" type="button" role="tab">⭐ 中意</button>
-          <button class="px-btn" id="tabLists" type="button" role="tab">📚 我的歌单</button>
-        </div>
-
-        <!-- 歌单页：搜索 + 筛选入口 + 播放全部 + 导出歌单 -->
-        <div class="pl-view" id="viewSongs">
-          <div class="rp-tools reveal">
-            <div class="rp-search"><span aria-hidden="true">🔍</span><input id="plSearch" type="search" placeholder="搜索歌名 / 歌手 / 标签…" aria-label="搜索歌名、歌手或标签"></div>
-            <div class="pl-scope" id="plScope" role="group" aria-label="搜索范围">
-              <button class="pl-scope-btn on" type="button" data-scope="all">综合</button>
-              <button class="pl-scope-btn" type="button" data-scope="title">歌名</button>
-              <button class="pl-scope-btn" type="button" data-scope="artist">歌手</button>
-            </div>
-            <button class="px-btn ghost" id="plFavOnly" type="button" aria-pressed="false">💖 仅看中意</button>
-            <button class="px-btn ghost" id="plClipOnly" type="button" aria-pressed="false" title="只显示有 2~4 分钟干净歌切的歌（19 首）">🎬 只看有歌切</button>
-            <button class="px-btn ghost" id="plAdvBtn" type="button" aria-expanded="false" aria-controls="plAdvPanel">⭐ 高级筛选 ▾</button>
-            <button class="px-btn" id="plPlayAll" type="button">▶ 播放全部</button>
-            <button class="px-btn ghost" id="plShuffle" type="button">🔀 随机一首</button>
-            <button class="px-btn ghost" id="plExportSongs" type="button" title="导出成网易云 / QQ 音乐能用的歌单文本">⬇ 导出歌单</button>
-            <span class="rp-stats" id="plStats"></span>
-          </div>
-
-          <div class="pl-active" id="plActive"></div>
-
-          <div class="rp-head pls-head" aria-hidden="true">
-            <span class="c-program">歌曲</span>
-            <span class="c-type">标签</span>
-            <span class="c-play">播放</span>
-            <span class="c-act">操作</span>
-          </div>
-          <div class="rp-list" id="plSongList"></div>
-          <div class="rp-pager" id="plPager"></div>
-        </div>
-
-        <!-- 历史页：按天分组（哪天听了什么） -->
-        <div class="pl-view" id="viewHist" hidden>
-          <div class="rp-tools reveal">
-            <span class="pl-hint">每次点开都会记下「哪天听了什么」</span>
-            <button class="px-btn ghost" id="plHistPlayAll" type="button">▶ 播放全部</button>
-            <button class="px-btn ghost" id="plClearHist" type="button">🗑 清空历史</button>
-          </div>
-          <div class="rp-head pls-head" aria-hidden="true">
-            <span class="c-program">歌曲</span>
-            <span class="c-type">标签</span>
-            <span class="c-play">播放</span>
-            <span class="c-act">操作</span>
-          </div>
-          <div class="rp-list" id="plHistList"></div>
-          <div class="rp-pager" id="plPagerHist"></div>
-        </div>
-
-        <!-- 中意页：收藏清单 + 导出/导入存档 -->
-        <div class="pl-view" id="viewFavs" hidden>
-          <div class="rp-tools reveal">
-            <span class="pl-hint">收藏清单存在本地浏览器里，可导出存档备份</span>
-            <button class="px-btn ghost" id="plFavPlayAll" type="button">▶ 播放全部</button>
-            <button class="px-btn ghost" id="plExport" type="button">⬇ 导出存档</button>
-            <button class="px-btn ghost" id="plImport" type="button">⬆ 导入存档</button>
-            <input type="file" id="plImportFile" accept=".json,application/json" hidden>
-          </div>
-          <div class="rp-head pls-head" aria-hidden="true">
-            <span class="c-program">歌曲</span>
-            <span class="c-type">标签</span>
-            <span class="c-play">播放</span>
-            <span class="c-act">操作</span>
-          </div>
-          <div class="rp-list" id="plFavList"></div>
-          <div class="rp-pager" id="plPagerFav"></div>
-        </div>
-
-        <!-- 我的歌单页：自建歌单 -->
-        <div class="pl-view" id="viewLists" hidden>
-          <div class="rp-tools reveal">
-            <span class="pl-hint">自己建的小歌单，存在本地浏览器里</span>
-            <button class="px-btn" id="plNewList" type="button">＋ 新建歌单</button>
-          </div>
-          <div id="plListsBox"></div>
-        </div>
-      </div>
-
-      <!-- 右侧播放器栏（在线播放：B 站外链播放器；宽屏吸顶，窄屏落到列表下方） -->
-      <aside class="rp-rail">
-        <div class="rp-player pixel-card" id="rpPlayer">
-          <div class="phead">
-            <span class="pt" id="rpNow">—</span>
-            <select class="rp-sel" id="plSrcSel" aria-label="换一场（歌切 / 录播）"></select>
-            <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener" title="在B站打开这个视频">🎬 原视频</a>
-            <button class="px-btn ghost rp-go" id="rpFs" type="button" title="全屏观看（Esc 退出）">⛶ 全屏</button>
-            <button class="px-btn ghost rp-go" id="rpMute" type="button" title="切换声音（默认静音；跨域只能重载，会从头播）">🔇 静音：开</button>
-            <button class="px-btn ghost rp-go" id="rpAudio" type="button" title="只听音频：画面收起来（不是为了省流量，是听歌时不占地方）">🎧 只听音频</button>
-            <button class="px-btn rp-go" id="rpClose" type="button">✕</button>
-          </div>
-          <div class="rp-frame-wrap">
-            <iframe id="rpFrame" src="" title="歌曲播放器" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
-            <div class="rp-ph" id="rpPh">🎧 点一首歌<br>在这里播放 ⭐</div>
-          </div>
-        </div>
-
-        <!-- 正在播放卡：歌名信息 + 传输按键（按键带浮层，放这张卡里，别放会被裁的播放器卡） -->
-        <div class="rp-now pixel-card" id="rpNowCard">
-          <div class="rp-now-t" id="rpNowT">还没有播放任何歌曲</div>
-          <div class="rp-now-meta" id="rpNowMeta">点列表里的歌，或打开「▶ 播放全部」当电台听 ⭐</div>
-          <div class="pls-prog-wrap">
-            <div class="pls-prog" id="plProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-              <span class="pls-prog-fill" id="plProgFill"></span>
-            </div>
-            <span class="pls-prog-t"><span id="plProgNow">0:00</span> / <span id="plProgTotal">—</span></span>
-          </div>
-          <div class="pls-ctrl">
-            <button class="pbtn" id="plPrev" type="button" title="上一首" aria-label="上一首"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.8 2h1.8v8H1.8z"/><path d="M10.2 2v8L4.4 6z"/></svg></button>
-            <button class="pbtn play" id="plPlay" type="button" title="重播当前这首先" aria-label="重播"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.8 1.8 10 6 3.8 10.2Z"/></svg></button>
-            <button class="pbtn" id="plStop" type="button" title="停止播放" aria-label="停止"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3 3h6v6H3z"/></svg></button>
-            <button class="pbtn" id="plNext" type="button" title="下一首" aria-label="下一首"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M8.4 2h1.8v8H8.4z"/><path d="M1.8 2v8L7.6 6z"/></svg></button>
-            <button class="pbtn" id="plMode" type="button" aria-label="播放模式：顺序循环，点击切换"></button>
-            <button class="pbtn" id="plFav" type="button" aria-label="收藏到中意"><svg viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6 1.4 7.5 4.5 11 5 8.5 7.4 9.1 10.9 6 9.3 2.9 10.9 3.5 7.4 1 5 4.5 4.5z"/></svg></button>
-            <button class="pbtn" id="plQueueBtn" type="button" aria-label="播放列表"><svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.6 2.6h8.8v1.2H1.6zM1.6 5.4h8.8v1.2H1.6zM1.6 8.2h8.8v1.2H1.6z"/></svg></button>
-          </div>
-          <div class="pls-note">进度条按已知时长估算（拖/点可跳转，会重新缓冲几秒）；放完自动下一首；播放/暂停用 B 站播放器自带的 ⭐</div>
-        </div>
-      </aside>
+  <div class="wrap">
+    <div class="page-hero reveal">
+      <span class="kicker">MUSIC CORNER<small>LISTEN WITH CHU2U</small></span>
+      <h1>陪啾啾听！</h1>
+      <p class="sub">这里是啾啾的电波接收站！她唱过的每一首歌都收在这里，<br>点一下卡片就能直接在线听 ⭐ 播放条会一直挂在下面陪你逛～</p>
     </div>
+
+    <!-- 页面切换（总览 / 历史 / 中意；我的歌单是左下浮层） -->
+    <div class="pl-tabs reveal" role="tablist">
+      <button class="px-btn on" id="tabSongs" type="button" role="tab">🎵 总览</button>
+      <button class="px-btn" id="tabHist" type="button" role="tab">📜 历史</button>
+      <button class="px-btn" id="tabFavs" type="button" role="tab">⭐ 中意</button>
+    </div>
+
+    <!-- ============ 总览：吸顶工具条 + 歌曲卡列表 ============ -->
+    <section class="pl-view" id="viewSongs">
+      <div class="pl-sticky reveal">
+        <div class="pl-row1">
+          <div class="pl-scope" id="plScope" role="group" aria-label="搜索范围">
+            <button class="pl-scope-btn on" type="button" data-scope="all">综合</button>
+            <button class="pl-scope-btn" type="button" data-scope="title">歌名</button>
+            <button class="pl-scope-btn" type="button" data-scope="artist">歌手</button>
+          </div>
+          <label class="pl-search">
+            <span aria-hidden="true">🔍</span>
+            <input id="plSearch" type="search" placeholder="检索歌名 / 歌手 / 标签…" aria-label="检索歌名、歌手或标签">
+            <button class="pl-clear" id="plClear" type="button" title="清空搜索" aria-label="清空搜索">×</button>
+          </label>
+        </div>
+        <div class="pl-tools2">
+          <button class="px-btn ghost" id="plAdvBtn" type="button" aria-expanded="false" aria-controls="plAdvPanel">⭐ 高级筛选 ▾</button>
+          <button class="px-btn ghost" id="plFavOnly" type="button" aria-pressed="false">💖 仅看中意</button>
+          <button class="px-btn ghost" id="plClipOnly" type="button" aria-pressed="false" title="只显示有 2~4 分钟干净歌切的歌">🎬 只看有歌切</button>
+          <button class="px-btn ghost" id="plListsBtn" type="button" aria-expanded="false" aria-controls="plListsPanel">📚 我的歌单</button>
+          <button class="px-btn" id="plPlayAll" type="button">▶ 播放全部</button>
+          <button class="px-btn ghost" id="plShuffle" type="button">🔀 随机播放</button>
+          <button class="px-btn ghost" id="plExportSongs" type="button" title="导出成网易云 / QQ 音乐能用的歌单文本">⬇ 导出歌单</button>
+        </div>
+        <div class="pl-meta"><span id="plStats">—</span></div>
+        <div class="pl-active" id="plActive" hidden></div>
+      </div>
+      <div class="pl-list" id="plSongList"></div>
+    </section>
+
+    <!-- ============ 历史：按天分组，30 条一页 ============ -->
+    <section class="pl-view" id="viewHist" hidden>
+      <div class="pl-sticky reveal">
+        <div class="pl-tools2">
+          <button class="px-btn ghost" id="plHistPlayAll" type="button">▶ 播放全部</button>
+          <button class="px-btn ghost" id="plClearHist" type="button">🗑 清空历史</button>
+        </div>
+        <div class="pl-meta"><span id="plHistStats"></span></div>
+      </div>
+      <div id="plHistList"></div>
+      <div class="rp-pager" id="plPagerHist"></div>
+    </section>
+
+    <!-- ============ 中意：收藏清单 + 存档导出导入 ============ -->
+    <section class="pl-view" id="viewFavs" hidden>
+      <div class="pl-sticky reveal">
+        <div class="pl-tools2">
+          <button class="px-btn ghost" id="plFavPlayAll" type="button">▶ 播放全部</button>
+          <button class="px-btn ghost" id="plExport" type="button" title="把收藏/历史/自建歌单/次数打包成 JSON 备份">⬇ 导出存档</button>
+          <button class="px-btn ghost" id="plImport" type="button">⬆ 导入存档</button>
+          <input type="file" id="plImportFile" accept=".json,application/json" hidden>
+        </div>
+        <div class="pl-meta"><span id="plFavStats"></span></div>
+      </div>
+      <div id="plFavList"></div>
+      <div class="rp-pager" id="plPagerFav"></div>
+    </section>
   </div>
 </main>
 
-<!-- 右下角贴纸：开心唱歌（与「啾啾出勤记录」「羽啾碎碎念」同款位置/尺寸/画质；装饰用，不拦截任何点击） -->
-<img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
-
-<!-- 播放列表（队列）面板 -->
-<!-- ⭐ 高级筛选抽屉（点按钮才弹出，带遮罩的二级交互窗口） -->
+<!-- ============ 高级筛选抽屉 ============ -->
 <div class="pl-drawer-backdrop" id="plAdvBackdrop" hidden></div>
 <div class="pl-drawer" id="plAdvPanel" role="dialog" aria-modal="true" aria-labelledby="plAdvTitle" hidden>
   <div class="pl-drawer-head">
@@ -233,14 +165,15 @@
       <div class="pl-adv-k">排序方式</div>
       <div class="pl-adv-row" id="plSortRow">
         <button class="pl-chip on" type="button" data-sort="recent">最近演唱</button>
-        <button class="pl-chip" type="button" data-sort="heat">热度</button>
+        <button class="pl-chip" type="button" data-sort="heat">热度（唱过次数）</button>
+        <button class="pl-chip" type="button" data-sort="name">歌名</button>
       </div>
     </div>
     <div class="pl-adv-sec half">
       <div class="pl-adv-k">排序方向</div>
       <div class="pl-adv-row" id="plDirRow">
-        <button class="pl-chip on" type="button" data-dir="desc">降序</button>
-        <button class="pl-chip" type="button" data-dir="asc">升序</button>
+        <button class="pl-chip on" type="button" data-dir="desc">新→旧 / 高→低</button>
+        <button class="pl-chip" type="button" data-dir="asc">旧→新 / 低→高</button>
       </div>
     </div>
     <div class="pl-adv-sec full">
@@ -252,7 +185,7 @@
       <div class="pl-adv-row" id="plLangChips"></div>
     </div>
     <div class="pl-adv-sec full">
-      <div class="pl-adv-k">标签<span class="pl-adv-note">勾选后只显示对应标签，最多展示前 10 个热门标签</span></div>
+      <div class="pl-adv-k">标签<span class="pl-adv-note">勾选后只显示带这些标签的歌</span></div>
       <div class="pl-adv-row">
         <button class="pl-mini" id="plTagAll" type="button">标签全选</button>
         <button class="pl-mini" id="plTagNone" type="button">标签全不选</button>
@@ -260,11 +193,11 @@
       <div class="pl-adv-row" id="plTagChips"></div>
     </div>
     <div class="pl-adv-sec half">
-      <div class="pl-adv-k">次数预设</div>
+      <div class="pl-adv-k">唱过次数</div>
       <div class="pl-adv-row" id="plCountChips"></div>
     </div>
     <div class="pl-adv-sec half">
-      <div class="pl-adv-k">天数预设</div>
+      <div class="pl-adv-k">最近演唱</div>
       <div class="pl-adv-row" id="plDaysChips"></div>
     </div>
   </div>
@@ -274,42 +207,84 @@
   </div>
 </div>
 
-<div class="pl-queue" id="plQueue" hidden>
-  <div class="pl-queue-head"><span>📃 播放列表</span><button class="pbtn" id="plQueueClose" type="button" aria-label="关闭播放列表">×</button></div>
-  <div class="pl-queue-body" id="plQueueBody"></div>
+<!-- ============ 播放队列浮层 ============ -->
+<div class="pl-panel" id="plQueue" hidden>
+  <div class="pl-panel-head">
+    <span>📃 播放队列</span><span class="sp"></span>
+    <button class="pl-ib" id="plQueueClear" type="button" title="清空队列">🗑</button>
+    <button class="pl-ib" id="plQueueClose" type="button" title="收起">×</button>
+  </div>
+  <div class="pl-panel-body" id="plQueueBody"></div>
 </div>
 
-<!-- 移动端底部播放器（≤1150px 时右侧播放器那两张卡会被搬进这里；桌面隐藏） -->
-<div class="pls-mbar" id="plsMbar" role="region" aria-label="底部播放器"></div>
+<!-- ============ 我的歌单浮层 ============ -->
+<div class="pl-panel" id="plListsPanel" hidden>
+  <div class="pl-panel-head">
+    <span>📚 我的歌单</span><span class="sp"></span>
+    <button class="pl-ib" id="plNewList" type="button" title="新建歌单">＋</button>
+    <button class="pl-ib" id="plListsClose" type="button" title="收起">×</button>
+  </div>
+  <div class="pl-panel-body" id="plListsBody"></div>
+</div>
 
-<!-- 加入歌单菜单（点击行内 ＋ 弹出） -->
-<div class="pl-pop" id="plAddMenu" hidden style="position:fixed"></div>
+<!-- ============ 底部播放条（有歌在放才出现） ============ -->
+<div class="pl-player" id="plPlayer" hidden role="region" aria-label="音乐播放器">
+  <button class="pl-ib" id="pbPrev" type="button" title="上一首" aria-label="上一首">⏮</button>
+  <button class="pl-ib" id="pbToggle" type="button" title="播放 / 暂停" aria-label="播放或暂停">▶</button>
+  <button class="pl-ib" id="pbNext" type="button" title="下一首" aria-label="下一首">⏭</button>
+  <div class="pb-info">
+    <span class="pb-name" id="pbName">—</span>
+    <span class="pb-artist" id="pbArtist"></span>
+  </div>
+  <div class="pb-prog">
+    <span class="pb-time" id="pbCur">0:00</span>
+    <input class="pl-range" id="pbSeek" type="range" min="0" max="1000" step="1" value="0" aria-label="播放进度">
+    <span class="pb-time" id="pbDur">0:00</span>
+  </div>
+  <button class="pl-ib" id="pbMode" type="button" title="播放模式：列表循环" aria-label="播放模式">🔁</button>
+  <button class="pl-ib" id="pbFav" type="button" title="收藏到中意" aria-label="收藏">♡</button>
+  <button class="pl-ib" id="pbQueueBtn" type="button" title="播放队列" aria-label="播放队列">☰</button>
+  <div class="pb-vol">
+    <span aria-hidden="true">🔊</span>
+    <input class="pl-range" id="pbVol" type="range" min="0" max="100" step="1" value="80" aria-label="音量">
+  </div>
+</div>
 
-<!-- 导出歌单（给网易云 / QQ 音乐导入用；2026-10-06 用户要求） -->
-<div class="pl-dialog" id="plExportDlg" hidden>
-  <div class="pl-dialog-card pls-exp">
+<!-- ============ 演唱详情弹窗 ============ -->
+<div class="pl-modal" id="plDetailModal" hidden>
+  <div class="pl-modal-card">
+    <h3 id="plDetailTitle">演唱详情</h3>
+    <div class="pl-meta" id="plDetailSub"></div>
+    <div id="plDetailBody"></div>
+    <div class="pl-modal-acts"><button class="px-btn" id="plDetailOk" type="button">知道了</button></div>
+  </div>
+</div>
+
+<!-- ============ 导出歌单弹窗（给网易云 / QQ 音乐导入用） ============ -->
+<div class="pl-modal" id="plExportDlg" hidden>
+  <div class="pl-modal-card">
     <h3>⬇ 导出歌单</h3>
-    <div class="pls-exp-row">
-      <span class="pls-exp-k">范围</span>
+    <div class="pl-adv-sec">
+      <div class="pl-adv-k">范围</div>
       <div class="pl-adv-row" id="expScope">
         <button class="pl-chip on" type="button" data-scope="view">当前筛选（<span id="expN1">0</span> 首）</button>
         <button class="pl-chip" type="button" data-scope="all">全部（<span id="expN2">0</span> 首）</button>
         <button class="pl-chip" type="button" data-scope="fav">⭐ 中意（<span id="expN3">0</span> 首）</button>
       </div>
     </div>
-    <div class="pls-exp-row">
-      <span class="pls-exp-k">格式</span>
+    <div class="pl-adv-sec">
+      <div class="pl-adv-k">格式</div>
       <div class="pl-adv-row" id="expFormat">
         <button class="pl-chip on" type="button" data-fmt="txt">TXT：歌名 - 歌手</button>
         <button class="pl-chip" type="button" data-fmt="csv">CSV：歌名,歌手</button>
       </div>
     </div>
-    <pre class="pls-exp-prev" id="expPrev" aria-live="polite"></pre>
+    <pre class="pls-exp-prev" id="expPrev"></pre>
     <div class="pls-exp-note">
-      <b>QQ 音乐</b>：网页端「我的音乐 → 导入外部歌单」可以直接粘贴 TXT 文本（官方建议每段 100 首以内，所以下面按段分好，点一下复制粘贴即可）。<br>
-      <b>网易云音乐</b>：官方没有公开的文本粘贴入口，把导出的 TXT / CSV 交给 Soundiiz 这类迁移工具上传匹配就行。
+      <b>QQ 音乐</b>：网页端「我的音乐 → 导入外部歌单」可以直接粘贴 TXT（官方建议每段 100 首以内，下面按段分好了）。<br>
+      <b>网易云音乐</b>：官方没有公开的文本粘贴入口，把导出的 TXT / CSV 交给 Soundiiz 这类迁移工具上传即可。
     </div>
-    <div class="pl-dialog-acts">
+    <div class="pl-modal-acts">
       <button class="px-btn ghost" id="expCancel" type="button">取消</button>
       <button class="px-btn" id="expDownload" type="button">⬇ 下载文件</button>
     </div>
@@ -317,410 +292,284 @@
   </div>
 </div>
 
-<!-- 新建/重命名歌单对话框 -->
-<div class="pl-dialog" id="plDialog" hidden>
-  <div class="pl-dialog-card">
-    <h3 id="plDialogTitle">新建歌单</h3>
-    <input id="plDialogInput" type="text" maxlength="20" placeholder="歌单名字…" aria-label="歌单名字">
-    <div class="pl-dialog-acts">
-      <button class="px-btn ghost" id="plDialogCancel" type="button">取消</button>
-      <button class="px-btn" id="plDialogOk" type="button">确定</button>
+<!-- ============ 新建 / 重命名歌单弹窗 ============ -->
+<div class="pl-modal" id="plListDlg" hidden>
+  <div class="pl-modal-card">
+    <h3 id="plListDlgTitle">新建歌单</h3>
+    <label class="pl-search" style="margin:6px 0">
+      <input id="plListDlgInput" type="text" maxlength="20" placeholder="歌单名字…" aria-label="歌单名字">
+    </label>
+    <div class="pl-modal-acts">
+      <button class="px-btn ghost" id="plListDlgCancel" type="button">取消</button>
+      <button class="px-btn" id="plListDlgOk" type="button">确定</button>
     </div>
   </div>
 </div>
 
-<!-- 深浅色模式切换按钮（左下角） -->
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
-  <img class="tt-sun" src="images/得意啾.png" alt=""><img class="tt-moon" src="images/龙宫礼啾.png" alt="">
-</button>
-<!-- 返回顶部飞船按钮（右下角）：悬停上下浮动，点击垂直飞出并冒出像素气泡 -->
-<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
-  <img src="images/飞船啾.png" alt="返回顶部">
-</button>
+<!-- ============ 加入歌单选择弹窗 ============ -->
+<div class="pl-modal" id="plPickModal" hidden>
+  <div class="pl-modal-card">
+    <h3 id="plPickTitle">加入歌单</h3>
+    <div id="plPickBody"></div>
+    <div class="pl-modal-acts">
+      <button class="px-btn ghost" id="plPickCancel" type="button">取消</button>
+    </div>
+  </div>
+</div>
 
-<!-- 歌单数据（手动维护；字段说明见该文件注释；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
-<script src="data/playlist.js?v=202610060300"></script>
+<script src="data/playlist.js?v=202610070059"></script>
 <script src="js/shared.js?v=202610062121"></script>
 <script>
-/* 陪啾啾听！歌单应用
-   歌单内容维护在 data/playlist.js；收藏 / 历史 / 我的歌单 / 播放次数存在本地浏览器 localStorage；
-   中意页可导出 / 导入存档 JSON。歌曲没配 src 时用内置芯片音乐合成。 */
+/* 陪啾啾听！v2（2026-10-07 重做）
+   参考站「小松绿的歌单」的布局与功能：卡片式列表（黑胶位+徽章+底部信息）、吸顶工具条、
+   真实 <audio> 播放器（底部胶囊条：真进度条可拖、音量、播放模式、播放队列、睡眠定时）、
+   演唱详情弹窗、中意 / 历史 / 我的歌单；美术沿用本站像素风；「导出歌单」保留本站版本。
+   数据：data/playlist.js（window.CHU2U_SONGS，含 src=music/<key>.m4a 与真实 dur）；
+   本地存档键沿用 chu2u-pl-favs / hist / lists / counts（老存档不用迁移）。 */
 (function(){
   "use strict";
-  var SONGS = window.CHU2U_SONGS || [];
-  /* 播放器图标：全部用内联 SVG（2026-09-13 用户定「按键不要 emoji」，做成圆形图标键）。
-     要换图标改这里就行；viewBox 12×12、currentColor 着色，跟按键文字色一致。 */
-  var ICON = {
-    play:  '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.8 1.8 10 6 3.8 10.2Z"/></svg>',
-    pause: '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.2 2h2.1v8H3.2zM6.7 2h2.1v8H6.7z"/></svg>',
-    starOn:'<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.4 7.5 4.5 11 5 8.5 7.4 9.1 10.9 6 9.3 2.9 10.9 3.5 7.4 1 5 4.5 4.5z"/></svg>',
-    starOff:'<svg viewBox="0 0 12 12" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.3" d="M6 1.4 7.5 4.5 11 5 8.5 7.4 9.1 10.9 6 9.3 2.9 10.9 3.5 7.4 1 5 4.5 4.5z"/></svg>',
-    mode: [
-      '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.2 3.4h6.4V2l3 2.1-3 2.1V4.7H2.2zM9.8 8.6H3.4V10l-3-2.1 3-2.1v1.5h6.4z"/></svg>',
-      '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M6 1.6a4.4 4.4 0 1 1-3.9 2.4l1.3.6A3 3 0 1 0 6 3v1.7L3.4 3.2 6 .9z"/></svg>',
-      '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M1.4 3h2.2l4.4 6H10v1.4H7.2L2.8 4.4H1.4zM1.4 7.6h2.2l1.3-1.8.9 1.2-1.2 1.6H2.4zM7.8 3h2.2v1.4H8.5L7.2 6.1 6.3 4.9 7.3 3z"/></svg>'
-    ]
-  };
-  var MODE_TIPS = ["播放模式：歌单循环（顺序播完循环）", "播放模式：单曲循环", "播放模式：随机播放"];
+  var SONGS = (window.CHU2U_SONGS || []).filter(function(s){ return s && s.key; });
+  var $ = function(id){ return document.getElementById(id); };
 
   /* ---------- 本地存储 ---------- */
-  var KEYS = {favs:"chu2u-pl-favs", hist:"chu2u-pl-hist", lists:"chu2u-pl-lists", counts:"chu2u-pl-counts"};
+  var KEYS = {favs:"chu2u-pl-favs", hist:"chu2u-pl-hist", lists:"chu2u-pl-lists", counts:"chu2u-pl-counts", vol:"chu2u-pl-vol"};
   function getS(k, fb){ try{ var v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; }catch(e){ return fb; } }
   function setS(k, v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} }
-  var favs = getS(KEYS.favs, []);
-  var hist = getS(KEYS.hist, []);
-  var lists = getS(KEYS.lists, {});
-  var counts = getS(KEYS.counts, {});
-
-  function songByTitle(t){ for(var i = 0; i < SONGS.length; i++) if(SONGS[i].title === t) return SONGS[i]; return null; }
+  var favs = getS(KEYS.favs, []), hist = getS(KEYS.hist, []), lists = getS(KEYS.lists, {}), counts = getS(KEYS.counts, {});
   function isFav(t){ return favs.indexOf(t) >= 0; }
-  // 时长：优先音频库探测到的真实 dur，否则用录播里那一段的跨度估算（durOf 在下面定义）
-  function songDurOf(s){ return durOf(s).sec; }
-  function fmtDur(sec){
-    sec = Math.max(0, Math.round(sec));
-    var m = Math.floor(sec / 60), s = sec % 60;
-    return m + ":" + (s < 10 ? "0" : "") + s;
+  function songByTitle(t){ for(var i=0;i<SONGS.length;i++) if(SONGS[i].title===t) return SONGS[i]; return null; }
+  function songOf(s){ return s; }
+  function hasAudio(s){ return !!(s && s.src); }
+  function fmtTime(sec){
+    sec = Math.max(0, Math.floor(sec || 0));
+    return Math.floor(sec/60) + ":" + ((sec%60) < 10 ? "0" : "") + (sec%60);
   }
-  function esc(s){ return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
-  function emptyEl(txt){ var e = document.createElement("div"); e.className = "pl-empty"; e.textContent = txt; return e; }
-  function pxBtn(txt){ var b = document.createElement("button"); b.type = "button"; b.className = "px-btn"; b.textContent = txt; return b; }
-  function addCount(t){ counts[t] = (counts[t] || 0) + 1; setS(KEYS.counts, counts); }
-  /* 复制到剪贴板：file:// 下 navigator.clipboard 不一定可用，退化到 textarea + execCommand */
-  function copyText(txt){
-    function fallback(){
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+  function daysAgo(d){
+    if(!d) return "";
+    var t = Date.parse(d.replace(/-/g,"/") + " 00:00:00");
+    if(isNaN(t)) return "";
+    return Math.max(0, Math.round((Date.now() - t) / 86400000));
+  }
+  function toast(msg){ if(window.toast) window.toast(msg); }
+
+  /* ---------- 播放器（照参考站：一个 <audio> + 队列 + 三种模式） ---------- */
+  var audio = new Audio();
+  audio.preload = "metadata";
+  audio.setAttribute("playsinline", "");
+  audio.hidden = true;                 /* 挂进 DOM（有些浏览器对游离的 audio 处理不同），隐藏不影响出声 */
+  document.addEventListener("DOMContentLoaded", function(){ document.body.appendChild(audio); });
+  window.__plAudio = audio;            /* 方便本机调试/自动化测试读 currentTime */
+  var state = {
+    queue: [],        /* 队列里存歌名 */
+    index: -1,
+    mode: "list",     /* list | single | random */
+    shuffle: null, shufflePos: 0,
+    dragging: false,  /* 拖进度条时不要被 timeupdate 覆盖 */
+    retried: false,   /* 音频加载失败重试过一次没有 */
+    wantPlay: false   /* 想播但被浏览器拦下时的标记 */
+  };
+  audio.volume = Math.min(1, Math.max(0, (getS(KEYS.vol, 80) || 80) / 100));
+  if($("pbVol")) $("pbVol").value = Math.round(audio.volume * 100);
+  var MODES = ["list", "single", "random"];
+  var MODE_TIP = {list:"播放模式：列表循环", single:"播放模式：单曲循环", random:"播放模式：随机播放"};
+  var MODE_ICON = {list:"🔁", single:"🔂", random:"🔀"};
+  function cur(){ return state.queue[state.index] || null; }
+  function curSong(){ var t = cur(); return t ? songByTitle(t) : null; }
+  function playableQueue(){
+    return state.queue.filter(function(t){ var s = songByTitle(t); return s && hasAudio(s); });
+  }
+  function buildShuffle(){
+    var n = state.queue.length, a = [];
+    for(var i=0;i<n;i++) a.push(i);
+    for(var j=n-1;j>0;j--){ var k = Math.floor(Math.random()*(j+1)); var t=a[j]; a[j]=a[k]; a[k]=t; }
+    state.shuffle = a; state.shufflePos = 0;
+    var ci = state.queue.indexOf(cur());
+    var at = a.indexOf(ci);
+    if(at >= 0){ var tmp=a[0]; a[0]=a[at]; a[at]=tmp; state.shufflePos = 1; }
+  }
+  function audioUrl(s){
+    /* 音频托管在独立的 Pages 项目上（2026-10-07 用户定：不塞进主仓库、不绑卡）：
+       线上用 https://chu2u-music.pages.dev/music/<编号>.m4a；
+       双击本地文件（file://）时退回相对路径，离线也能听。
+       ?v= 是同一个 URL 撞上浏览器缓存时的换串兜底（参考站的 CDN 负缓存思路）。 */
+    var CDN = "https://chu2u-music.pages.dev/music/";
+    var base = (location.protocol === "file:")
+      ? s.src
+      : CDN + String(s.src || "").replace(/^music\//, "");
+    return base + (base.indexOf("?") >= 0 ? "&" : "?") + "v=" + (state.retried ? Date.now() : (s.key || "1"));
+  }
+  function paintPlayer(){
+    var s = curSong();
+    var bar = $("plPlayer");
+    if(!bar) return;
+    bar.hidden = !s;
+    document.body.classList.toggle("has-player", !!s);
+    if(!s) return;
+    $("pbName").textContent = s.title || "—";
+    $("pbArtist").textContent = s.artist || "";
+    $("pbToggle").textContent = (!audio.paused && state.wantPlay) ? "⏸" : "▶";
+    $("pbMode").textContent = MODE_ICON[state.mode];
+    $("pbMode").title = MODE_TIP[state.mode];
+    var f = $("pbFav");
+    f.textContent = isFav(s.title) ? "♥" : "♡";
+    f.classList.toggle("on", isFav(s.title));
+    var dur = isFinite(audio.duration) && audio.duration > 0 ? audio.duration : (s.dur || 0);
+    $("pbDur").textContent = fmtTime(dur);
+    if(!state.dragging){
+      $("pbSeek").value = dur ? Math.round((audio.currentTime || 0) / dur * 1000) : 0;
+      $("pbCur").textContent = fmtTime(audio.currentTime || 0);
+    }
+    markPlaying();
+  }
+  function markPlaying(){
+    var t = cur();
+    var nodes = document.querySelectorAll(".pl-song");
+    for(var i=0;i<nodes.length;i++){
+      var on = t && nodes[i].getAttribute("data-title") === t;
+      nodes[i].classList.toggle("now", !!on);
+      var btn = nodes[i].querySelector('[data-act="play"]');
+      if(btn) btn.textContent = (on && !audio.paused && state.wantPlay) ? "⏸" : "▶";
+    }
+  }
+  function setQueue(titles, startIndex){
+    var list = (titles || []).filter(function(t){ var s = songByTitle(t); return s && hasAudio(s); });
+    if(!list.length){ toast("这些歌暂时都没有可播的音源 🙇"); return; }
+    state.queue = list;
+    state.index = Math.max(0, Math.min(startIndex || 0, list.length - 1));
+    if(state.mode === "random") buildShuffle();
+    playCurrent();
+  }
+  function playCurrent(countIt){
+    var s = curSong();
+    if(!s) return;
+    if(!hasAudio(s)){
+      /* 参考站的规矩：绝不接着放上一首，直接停掉并说明 */
+      audio.pause(); audio.removeAttribute("src"); audio.load();
+      state.wantPlay = false; paintPlayer();
+      toast("《" + s.title + "》暂时没有收录音源 🙇");
+      return;
+    }
+    state.retried = false;
+    audio.src = audioUrl(s);
+    audio.load();
+    var p = audio.play();
+    state.wantPlay = true;
+    if(p && p.catch) p.catch(function(err){
+      state.wantPlay = false;
+      if(err && err.name === "NotAllowedError"){
+        toast("浏览器拦下了自动播放，点一下 ▶ 就能听 ⭐");
+      }else{
+        toast("播放失败：" + (err && err.message ? err.message : "未知原因"));
+      }
+      paintPlayer();
+    });
+    if(countIt !== false){ addCount(s.title); addHist(s.title); }
+    if(window.MediaSession && navigator.mediaSession){
       try{
-        var ta = document.createElement("textarea");
-        ta.value = txt;
-        ta.setAttribute("readonly", "");
-        ta.style.position = "fixed";
-        ta.style.left = "-9999px";
-        document.body.appendChild(ta);
-        ta.select();
-        var ok = document.execCommand("copy");
-        document.body.removeChild(ta);
-        return ok;
-      }catch(e){ return false; }
+        navigator.mediaSession.metadata = new MediaMetadata({title:s.title || "", artist:s.artist || "羽啾chu2u", album:"陪啾啾听！"});
+        navigator.mediaSession.setActionHandler("play", function(){ toggle(); });
+        navigator.mediaSession.setActionHandler("pause", function(){ toggle(); });
+        navigator.mediaSession.setActionHandler("previoustrack", function(){ step(-1); });
+        navigator.mediaSession.setActionHandler("nexttrack", function(){ step(1); });
+      }catch(e){}
     }
-    function done(ok){ toast(ok ? "已复制：" + txt : "复制失败，请手动选中"); }
-    if(navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(txt).then(function(){ done(true); },
-                                             function(){ done(fallback()); });
-    } else {
-      done(fallback());
-    }
+    paintPlayer(); renderQueue();
   }
+  function toggle(){
+    var s = curSong();
+    if(!s){
+      var l = viewList().filter(hasAudio);
+      if(!l.length){ toast("还没有能播的歌 🙇"); return; }
+      setQueue(l.map(function(x){ return x.title; }), 0);
+      return;
+    }
+    if(!hasAudio(s)){ toast("《" + s.title + "》暂时没有收录音源 🙇"); return; }
+    if(audio.paused){
+      state.retried = false;
+      if(!audio.src) audio.src = audioUrl(s);
+      var p = audio.play();
+      state.wantPlay = true;
+      if(p && p.catch) p.catch(function(){ state.wantPlay = false; paintPlayer(); });
+    }else{
+      audio.pause(); state.wantPlay = false;
+    }
+    paintPlayer();
+  }
+  function step(dir){
+    var n = state.queue.length;
+    if(!n) return;
+    if(state.mode === "random" && state.shuffle && n > 1){
+      state.shufflePos = (state.shufflePos + dir + n) % n;
+      state.index = state.shuffle[state.shufflePos];
+    }else{
+      state.index = (state.index + dir + n) % n;
+    }
+    playCurrent();
+  }
+  function jumpTo(i){
+    if(i < 0 || i >= state.queue.length) return;
+    state.index = i;
+    if(state.mode === "random" && state.shuffle){
+      var at = state.shuffle.indexOf(i);
+      if(at >= 0) state.shufflePos = at;
+    }
+    playCurrent();
+  }
+  function onEnded(){
+    if(state.mode === "single"){
+      audio.currentTime = 0;
+      var p = audio.play();
+      if(p && p.catch) p.catch(function(){});
+      return;
+    }
+    step(1);
+  }
+  audio.addEventListener("ended", onEnded);
+  audio.addEventListener("timeupdate", function(){ if(!state.dragging) paintPlayer(); });
+  audio.addEventListener("loadedmetadata", function(){ paintPlayer(); });
+  audio.addEventListener("play", function(){ state.wantPlay = true; paintPlayer(); });
+  audio.addEventListener("pause", function(){ state.wantPlay = false; paintPlayer(); });
+  audio.addEventListener("error", function(){
+    var s = curSong();
+    if(!s) return;
+    if(!state.retried && s.src){
+      state.retried = true;
+      audio.src = audioUrl(s);     /* 换一个查询串再来一次（缓存撞车兜底） */
+      audio.load();
+      var p = audio.play();
+      if(p && p.catch) p.catch(function(){});
+      toast("音频拉取受阻，正在换线路重试…");
+      return;
+    }
+    state.wantPlay = false; paintPlayer();
+    toast("《" + s.title + "》的音频加载失败，可能暂时没有收录 🙇");
+  });
+
+  /* ---------- 次数 / 历史 ---------- */
+  function addCount(t){ counts[t] = (counts[t]||0) + 1; setS(KEYS.counts, counts); }
   function addHist(t){
     var d = new Date();
-    function p(n){ return (n < 10 ? "0" : "") + n; }
-    hist.unshift({t: t, at: d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()) + " " + p(d.getHours()) + ":" + p(d.getMinutes())});
-    if(hist.length > 200) hist.length = 200;
+    function p2(n){ return (n<10?"0":"")+n; }
+    hist.unshift({t:t, at: d.getFullYear()+"-"+p2(d.getMonth()+1)+"-"+p2(d.getDate())+" "+p2(d.getHours())+":"+p2(d.getMinutes())});
+    if(hist.length > 300) hist.length = 300;
     setS(KEYS.hist, hist);
   }
 
-  /* ---------- 播放状态（2026-10-06 改版：B 站外链 iframe 在线播放） ----------
-     播放源两种：
-       ① clips[]：歌切合集的分P（2~4 分钟的干净单曲）→ bvid + page 参数；
-       ② sings[]：整场录播里她唱到的那一段 → bvid + t=<start 秒> 跳点
-          （当年只扫了 P1 的 cid，所以永远 page=1，URL 不能带 p 参数，否则时间点会解释错）。
-     默认「有歌切放歌切，没有放最近一场录播」；sings 数组是「老→新」升序，取最新要 reverse。
-     跨域 iframe 读不到播放进度 —— 所以本站没有进度条/暂停键，那两样直接用 B 站播放器自带的。 */
-  var cur = -1, playing = false, muted = false;   /* 2026-10-06 用户定：默认就开声音 */
-  var mode = 0;                       /* 0 顺序循环 / 1 单曲循环 / 2 随机 */
-  var queue = [], qIdx = -1;          /* 播放队列（存歌名，沿用旧结构） */
-  var srcList = [], srcIdx = 0, curSrc = null;   /* 当前歌的所有可选源 + 正在用的那条 */
-  var audioOnly = false;              /* 只听音频：画面收成 2×2（不是 display:none，隐藏会让播放停掉） */
-  var lastAdvAt = 0;                  /* 换歌冷却锁（防 postMessage 和时钟连跳两首） */
-  var PROBE_GAP = 25000;              /* 探针每 25 秒跳一次：sings 的 end 是下界，最多少算一个间隔 */
-  var MODE_TIPS = ["播放模式：顺序循环（听完自动下一首）", "播放模式：单曲循环", "播放模式：随机播放"];
-
-  function curSong(){ return (cur >= 0 && cur < SONGS.length) ? SONGS[cur] : null; }
-  function fmtClock(sec){
-    sec = Math.max(0, Math.round(sec || 0));
-    return Math.floor(sec / 60) + ":" + ((sec % 60) < 10 ? "0" : "") + (sec % 60);
-  }
-  /* 这首歌的长度：优先音频库探测到的真实 dur，否则用录播跨度估算（估的会在界面上标「约」） */
-  function durOf(s){
-    if(s && s.dur) return {sec: s.dur, est: false};
-    var g = (s && s.sings && s.sings.length) ? s.sings[s.sings.length - 1] : null;
-    return {sec: g ? Math.max(0, (g.end || 0) - (g.start || 0)) : 0, est: true};
-  }
-  /* 一首歌的所有播放来源：歌切在前，录播在后（新→旧） */
-  function sourcesOf(s){
-    var out = [], fb = durOf(s).sec;
-    (s.clips || []).forEach(function(c){
-      var page = c.page || 1;
-      out.push({
-        kind: "clip", bvid: c.bvid, page: page, t: 0, sec: s.dur || fb,
-        label: "🎬 歌切 · " + (c.title || "分P " + page) + (c.date ? "（" + c.date + "）" : ""),
-        openURL: c.url || ("https://www.bilibili.com/video/" + c.bvid + (page > 1 ? "?p=" + page : ""))
-      });
-    });
-    (s.sings || []).slice().reverse().forEach(function(g){
-      var st = g.start || 0;
-      out.push({
-        kind: "sing", bvid: g.bvid, page: 1, t: st, sec: Math.max(0, (g.end || 0) - st),
-        label: "🎙 " + (g.date || "").replace(/-/g, ".") + " " + fmtClock(st) + " 起" + (g.votes ? " · " + g.votes + " 票" : ""),
-        openURL: "https://www.bilibili.com/video/" + g.bvid + (st ? "?t=" + st : "")
-      });
-    });
-    return out;
-  }
-  function playerURL(src){
-    return "https://player.bilibili.com/player.html?bvid=" + src.bvid
-      + "&page=" + (src.page || 1)
-      + (src.t ? "&t=" + src.t : "")
-      + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1&muted=" + (muted ? "1" : "0");
-  }
-  /* 这一条源要播多久（秒）：歌切按真实时长 +8s 收尾；录播按识别跨度 +25s（探针间隔误差）+5s 缓冲 */
-  /* 进度条上显示的「总长」= 已知的歌曲长度（跳转范围也按它算，绝不越界——
-     越界的话 B 站播放器会当成无效时间点、直接从 0 重播，用户会以为「定位没反应」）；
-     自动切歌额外留的缓冲（探针误差等）走 advAfter()，不计进可跳范围 */
-  function totalOf(src){
-    return Math.max(1, src.sec || 0);
-  }
-  function advAfterOf(src){
-    return totalOf(src) + (src.kind === "sing" ? PROBE_GAP / 1000 : 8) + 5;
-  }
-
-  /* ---------- 播放核心（B 站外链 iframe） ---------- */
-  var frame = document.getElementById("rpFrame");
-  var ph = document.getElementById("rpPh");
-  /* 进度条 = 本地时钟估算（跨域读不到播放器真实进度，只能拿已知时长倒推）；
-     点/拖进度条 = 带新的 t 参数重载 iframe —— 真能跳，代价是重新缓冲几秒。
-     2026-10-06 用户报「播完不自动切下一首」：原因是原来靠 iframe 每次 load 重新武装计时器，
-     加载事件多来几次就把倒计时无限重置了 —— 现在改成时钟只锚定一次，时钟走到头就切歌。 */
-  var playStartAt = 0, playTotal = 0, advAfter = 0, progTimer = null, seekOffset = 0, anchored = false;
-  function progElapsed(){
-    if(!playTotal) return 0;
-    return Math.max(0, Math.min(playTotal, (Date.now() - playStartAt) / 1000));
-  }
-  /* fracOverride 用于拖动时预览；不传就按时钟算（无极调节：连续宽度，2026-10-06 用户定） */
-  function paintProg(fracOverride){
-    var el = progElapsed();
-    var f = (typeof fracOverride === "number") ? fracOverride : (playTotal ? (el / playTotal) : 0);
-    var box = document.getElementById("plProgFill");
-    if(box) box.style.width = (f * 100) + "%";
-    var now = document.getElementById("plProgNow");
-    if(now) now.textContent = fmtClock(f * (playTotal || 0));
-    var tot = document.getElementById("plProgTotal");
-    if(tot) tot.textContent = playTotal ? ("约 " + fmtClock(playTotal)) : "—";
-    var bar = document.getElementById("plProg");
-    if(bar) bar.setAttribute("aria-valuenow", String(Math.round(f * 100)));
-  }
-  function stopClock(){ if(progTimer){ clearInterval(progTimer); progTimer = null; } }
-  /* 起表：offset = 这次是从第几秒开始的（跳转后要用） */
-  function startClock(offset){
-    stopClock();
-    if(!playing || !curSrc){ playTotal = 0; paintProg(); return; }
-    playTotal = totalOf(curSrc);
-    advAfter = advAfterOf(curSrc);
-    seekOffset = Math.max(0, offset || 0);
-    playStartAt = Date.now() - seekOffset * 1000;
-    anchored = false;
-    paintProg();
-    progTimer = setInterval(function(){
-      if(!playing){ stopClock(); return; }
-      paintProg();
-      /* 进度条按「已知长度」走满；自动切歌要等 advAfter（多留一点，别把歌尾切掉） */
-      if(advAfter && (Date.now() - playStartAt) / 1000 >= advAfter) advance();
-    }, 500);
-  }
-  function advance(){
-    var now = Date.now();
-    if(now - lastAdvAt < 3000) return;   /* 冷却锁：postMessage 与时钟只认先到的那一个 */
-    lastAdvAt = now;
-    stopClock();
-    if(mode === 1){ playSong(cur, srcIdx, false); return; }   /* 单曲循环：重播同一条源，不记次数 */
-    playStep(1);
-  }
-  /* 跳转：歌切从 0 起算、录播从 start 起算，都是「源内偏移 + base」 */
-  function seekTo(frac){
-    if(!curSrc){ toast("先点一首歌再拖进度条 ⭐"); return; }
-    if(!playTotal) return;
-    /* 拖到最右边 = 这首就当放完了，直接按播放模式切下一首（2026-10-06 用户报：
-       原来拖到最右只跳到 98%，还要等那 30 秒「防切歌尾」的余量才切，看起来就像「拖到底不切」） */
-    if(frac >= 0.97){ advance(); return; }
-    /* 夹到 98%：留一点余量，免得正好跳到视频结尾之外（那样 B 站会从 0 重播） */
-    var off = Math.max(0, Math.min(0.98, frac)) * playTotal;
-    var base = curSrc.t || 0;
-    frame.src = playerURL({bvid: curSrc.bvid, page: curSrc.page, t: Math.round(base + off)});
-    playing = true; frame.hidden = false; ph.hidden = true;
-    startClock(off);
-    toast("跳到 " + fmtClock(off) + "（重新缓冲几秒）");
-  }
-  /* 播放（i：SONGS 下标或歌名；si：用第几条源，默认 0 = 歌切优先；count:false 不记次数/历史） */
-  function playSong(i, si, count){
-    var s = (typeof i === "number") ? SONGS[i] : songByTitle(i);
-    if(!s){ toast("这首歌不在歌单数据里"); return; }
-    cur = SONGS.indexOf(s);
-    srcList = sourcesOf(s);
-    if(!srcList.length){ toast("这首歌还没有可播的来源"); return; }
-    srcIdx = Math.max(0, Math.min(si || 0, srcList.length - 1));
-    curSrc = srcList[srcIdx];
-    paintMute();                         /* 声音沿用当前设置（默认开着） */
-    if(count !== false){ addCount(s.title); addHist(s.title); }
-    lastAdvAt = 0;
-    frame.hidden = false; ph.hidden = true;
-    frame.src = playerURL(curSrc);
-    playing = true;
-    paintNow(); renderSrcSel(); startClock(0);
-  }
-  /* 换一场：只换源不换歌，不记次数、不动收藏 */
-  function switchSource(idx){
-    var s = curSong();
-    if(!s || !srcList.length) return;
-    srcIdx = Math.max(0, Math.min(idx, srcList.length - 1));
-    curSrc = srcList[srcIdx];
-    paintMute();
-    lastAdvAt = 0;
-    frame.src = playerURL(curSrc);
-    playing = true; frame.hidden = false; ph.hidden = true;
-    paintNow(); renderSrcSel(); startClock(0);
-    toast("已切到：" + curSrc.label);
-  }
-  function stopPlay(){
-    playing = false;
-    stopClock();
-    playTotal = 0; paintProg();
-    try{ frame.src = ""; }catch(e){}
-    frame.hidden = true; ph.hidden = false;
-    paintNow();
-  }
-  function playStep(step){
-    var list = queue.length ? queue : viewList().map(function(s){ return s.title; });
-    if(!list.length){ toast("没有可播放的歌曲"); return; }
-    var i = (qIdx >= 0 && qIdx < list.length) ? qIdx : 0;
-    if(mode === 2 && list.length > 1){
-      var n;
-      do{ n = Math.floor(Math.random() * list.length); }while(n === i);
-      i = n;
-    } else {
-      i = (i + step + list.length) % list.length;
-    }
-    queue = list;
-    qIdx = i;
-    playSong(queue[i], 0, true);
-    renderQueue();
-  }
-  function playQueueIndex(i){
-    if(i < 0 || i >= queue.length) return;
-    qIdx = i;
-    playSong(queue[i], 0, true);
-  }
-  function setQueue(titles, i){
-    if(!titles || !titles.length){ toast("没有可播放的歌曲"); return; }
-    queue = titles.slice();
-    qIdx = Math.max(0, Math.min(i || 0, queue.length - 1));
-    playQueueIndex(qIdx);
-    renderQueue();
-  }
-
-  /* ---------- 后台照播，关掉页面才停（2026-10-06 用户最终定的规矩） ----------
-     需求原话：「点击播放器就能挂着响，只有我关掉界面才停」——
-     所以切标签/切窗口/最小化都**不打断**（浏览器本来就允许后台放声音），
-     连播时钟也照常走（挂着响的电台感）；
-     只有「前进/后退/关标签/关浏览器」这种真的离开页面，才 pagehide 掐断。
-     （注：如果整台浏览器是被"后台继续运行"模式留在进程里，声音会一直到那个进程退出为止，这由浏览器决定，网页管不了。） */
-  window.addEventListener("pagehide", function(){ stopPlay(); });
-
-  /* ---------- 播放器栏 UI ---------- */
-  function paintMute(){
-    var b = document.getElementById("rpMute");
-    b.textContent = muted ? "🔇 静音：开" : "🔊 静音：关";
-    b.title = muted ? "当前静音——点击开声音（跨域只能重载，会从头重播）"
-                    : "当前有声——点击静音（会从头重播）";
-  }
-  function paintNow(){
-    var s = curSong();
-    var tEl = document.getElementById("rpNowT");
-    var metaEl = document.getElementById("rpNowMeta");
-    document.getElementById("rpNow").textContent = s ? s.title : "—";
-    if(!s){
-      tEl.textContent = "还没有播放任何歌曲";
-      metaEl.textContent = "点列表里的歌，或打开「▶ 播放全部」当电台听 ⭐";
-    } else {
-      tEl.textContent = (s.emoji ? s.emoji + " " : "") + s.title;
-      var d = durOf(s), bits = [];
-      if(s.artist) bits.push(s.artist);
-      if(curSrc){
-        bits.push(curSrc.kind === "clip" ? "歌切" : "录播" + (curSrc.t ? " " + fmtClock(curSrc.t) + " 起" : ""));
-        bits.push((d.est ? "约 " : "") + fmtDur(d.sec || 0));
-      }
-      metaEl.textContent = bits.join(" · ") || "—";
-    }
-    var bil = document.getElementById("rpBili");
-    bil.href = curSrc ? curSrc.openURL : "#";
-    var fbtn = document.getElementById("plFav");
-    var has = !!s;
-    fbtn.classList.toggle("on", has && isFav(s.title));
-    ["plPlay", "plStop", "plPrev", "plNext", "plFav"].forEach(function(id){
-      document.getElementById(id).disabled = !has;
-    });
-    var mbtn = document.getElementById("plMode");
-    mbtn.innerHTML = ICON.mode[mode];
-    mbtn.title = MODE_TIPS[mode];
-    markPlayingRows();
-  }
-  /* 「换一场」下拉：按源重建（value 用下标——同一个 bvid 会被多首歌共用，不能拿 bvid 当值） */
-  function renderSrcSel(){
-    var sel = document.getElementById("plSrcSel");
-    sel.textContent = "";
-    if(!srcList.length){
-      var ph = document.createElement("option");       /* 还没选歌：别留个空框 */
-      ph.textContent = "🎧 还没选歌…";
-      ph.disabled = true; ph.selected = true;
-      sel.appendChild(ph);
-      return;
-    }
-    var gClip = document.createElement("optgroup"); gClip.label = "🎬 歌切（干净单曲）";
-    var gSing = document.createElement("optgroup"); gSing.label = "🎙 录播（新 → 旧）";
-    srcList.forEach(function(src, i){
-      var o = document.createElement("option");
-      o.value = String(i);
-      o.textContent = src.label;
-      (src.kind === "clip" ? gClip : gSing).appendChild(o);
-    });
-    if(gClip.children.length) sel.appendChild(gClip);
-    if(gSing.children.length) sel.appendChild(gSing);
-    sel.value = String(srcIdx);
-  }
-  function markPlayingRows(){
-    var t = curSong() ? curSong().title : null;
-    document.querySelectorAll(".pl-row").forEach(function(r){
-      r.classList.toggle("playing", t !== null && r.getAttribute("data-t") === t);
-    });
-    var qp = document.getElementById("plQueue");
-    if(!qp.hidden) renderQueue();
-  }
-
-  /* ---------- 筛选（筛选选项全部收在面板里） ----------
-     语言 / 标签是**多选**：一个都不选 = 不过滤（等同全选）；
-     次数/天数/二创是预设单选；排序方式 + 排序方向独立。 */
-  var filters = {
-    kw: "", scope: "all", favOnly: false,
-    sort: "recent", dir: "desc",
-    langs: [], tags: [],
-    count: "", days: "", clipOnly: false
-  };
-  var LANGS = [];
-  SONGS.forEach(function(s){ if(s.lang && LANGS.indexOf(s.lang) < 0) LANGS.push(s.lang); });
-  var TAG_FREQ = {};
-  SONGS.forEach(function(s){ (s.tags || []).forEach(function(tg){ TAG_FREQ[tg] = (TAG_FREQ[tg] || 0) + 1; }); });
-  // 标签最多展示前 10 个热门（按出现次数）
-  var TAGS = Object.keys(TAG_FREQ).sort(function(a, b){ return TAG_FREQ[b] - TAG_FREQ[a]; }).slice(0, 10);
-  var COUNT_PRESETS = [["", "全部"], ["ge1", "≥1次"], ["ge5", "≥5次"], ["ge10", "≥10次"], ["ge20", "≥20次"], ["only1", "仅1次"]];
-  var DAYS_PRESETS = [["d7", "近7天"], ["d30", "近30天"], ["d90", "近90天"], ["d90p", "90天以上"]];
-  var SORT_LABEL = {recent:"最近演唱", heat:"热度（唱过次数）", name:"歌名"};
-
+  /* ---------- 筛选状态 ---------- */
+  var filters = {kw:"", scope:"all", favOnly:false, clipOnly:false, sort:"recent", dir:"desc", langs:[], tags:[], count:"", days:""};
+  var LANGS = [], TAG_FREQ = {};
+  SONGS.forEach(function(s){
+    if(s.lang && LANGS.indexOf(s.lang) < 0) LANGS.push(s.lang);
+    (s.tags||[]).forEach(function(tg){ TAG_FREQ[tg] = (TAG_FREQ[tg]||0) + 1; });
+  });
+  var TAGS = Object.keys(TAG_FREQ).sort(function(a,b){ return TAG_FREQ[b]-TAG_FREQ[a]; }).slice(0, 10);
+  var COUNT_PRESETS = [["","全部"],["ge1","≥1次"],["ge5","≥5次"],["ge10","≥10次"],["ge20","≥20次"],["only1","仅1次"]];
+  var DAYS_PRESETS = [["d7","近7天"],["d30","近30天"],["d90","近90天"],["d90p","90天以上"]];
+  var SORT_TIP = {recent:"最近演唱", heat:"热度（唱过次数）", name:"歌名"};
   function singCountOf(s){ return s.singCount || 0; }
   function lastSungOf(s){ return s.lastSung || ""; }
-  function daysAgoOf(s){
-    var d = lastSungOf(s);
-    if(!d) return 99999;
-    var t = Date.parse(d + "T00:00:00");
-    if(isNaN(t)) return 99999;
-    return (Date.now() - t) / 86400000;
-  }
   function matchCount(s, preset){
     var n = singCountOf(s);
     if(preset === "ge1") return n >= 1;
@@ -731,22 +580,21 @@
     return true;
   }
   function matchDays(s, preset){
-    var a = daysAgoOf(s);
-    if(preset === "d7") return a <= 7;
-    if(preset === "d30") return a <= 30;
-    if(preset === "d90") return a <= 90;
-    if(preset === "d90p") return a > 90;
+    if(!preset) return true;
+    var d = daysAgo(lastSungOf(s));
+    if(d === "") return false;
+    if(preset === "d7") return d <= 7;
+    if(preset === "d30") return d <= 30;
+    if(preset === "d90") return d <= 90;
+    if(preset === "d90p") return d > 90;
     return true;
   }
   function matchKw(s){
-    if(!filters.kw) return true;
-    var k = filters.kw.toLowerCase();
-    var byTitle = (s.title || "").toLowerCase().indexOf(k) >= 0 ||
-                  (s.titleShazam || "").toLowerCase().indexOf(k) >= 0;
-    var byArtist = (s.artist || "").toLowerCase().indexOf(k) >= 0 ||
-                   (s.artistSearch || "").toLowerCase().indexOf(k) >= 0;
-    var byOther = (s.tags || []).join(" ").toLowerCase().indexOf(k) >= 0 ||
-                  (s.lang || "").toLowerCase().indexOf(k) >= 0;
+    var q = filters.kw.trim().toLowerCase();
+    if(!q) return true;
+    var byTitle = (s.title||"").toLowerCase().indexOf(q) >= 0;
+    var byArtist = (s.artist||"").toLowerCase().indexOf(q) >= 0;
+    var byOther = (s.tags||[]).join(" ").toLowerCase().indexOf(q) >= 0;
     if(filters.scope === "title") return byTitle;
     if(filters.scope === "artist") return byArtist;
     return byTitle || byArtist || byOther;
@@ -755,554 +603,354 @@
     var out = SONGS.slice();
     if(filters.langs.length) out = out.filter(function(s){ return filters.langs.indexOf(s.lang) >= 0; });
     if(filters.tags.length) out = out.filter(function(s){
-      return (s.tags || []).some(function(tg){ return filters.tags.indexOf(tg) >= 0; });
+      return (s.tags||[]).some(function(tg){ return filters.tags.indexOf(tg) >= 0; });
     });
     if(filters.favOnly) out = out.filter(function(s){ return isFav(s.title); });
+    if(filters.clipOnly) out = out.filter(function(s){ return (s.clips||[]).length > 0; });
     out = out.filter(function(s){ return matchCount(s, filters.count); });
     out = out.filter(function(s){ return matchDays(s, filters.days); });
-    if(filters.clipOnly) out = out.filter(function(s){ return !!(s.clips && s.clips.length); });
     out = out.filter(matchKw);
     var dir = filters.dir === "asc" ? 1 : -1;
-    if(filters.sort === "heat") out.sort(function(a, b){ return dir * (singCountOf(a) - singCountOf(b)); });
-    else if(filters.sort === "name") out.sort(function(a, b){ return dir * (a.title < b.title ? -1 : 1); });
-    else out.sort(function(a, b){                     // recent：最近演唱
+    if(filters.sort === "heat") out.sort(function(a,b){ return dir * (singCountOf(a) - singCountOf(b)); });
+    else if(filters.sort === "name") out.sort(function(a,b){ return dir * (a.title < b.title ? -1 : 1); });
+    else out.sort(function(a,b){
       var x = lastSungOf(a), y = lastSungOf(b);
       if(x === y) return dir * (singCountOf(a) - singCountOf(b));
       return dir * (x < y ? -1 : 1);
     });
     return out;
   }
-  function chipRow(boxId, items, isOn, cb, labelOf){
-    var box = document.getElementById(boxId);
+
+  /* ---------- 渲染歌曲卡 ---------- */
+  function songCardHtml(s){
+    var n = singCountOf(s), last = lastSungOf(s), d = daysAgo(last);
+    var badges = ['<button class="pl-badge" data-act="detail" title="看看她哪几场唱过">唱过 ' + n + ' 次</button>'];
+    if(s.lang) badges.push('<span class="pl-badge lang">' + esc(s.lang) + '</span>');
+    (s.tags||[]).slice(0,3).forEach(function(tg){ badges.push('<span class="pl-badge">' + esc(tg) + '</span>'); });
+    if(!hasAudio(s)) badges.push('<span class="pl-badge" title="没有收录到音源">暂无音源</span>');
+    var vinyl = s.cover
+      ? '<img src="' + esc(s.cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\'🎵\'))">'
+      : '<span aria-hidden="true">🎵</span>';
+    var cut = (s.clips && s.clips.length)
+      ? '<div class="pl-cut">🎬 歌切：<a href="' + esc(s.clips[0].url || "#") + '" target="_blank" rel="noopener">' + esc(s.clips[0].title || s.clips[0].bvid) + '</a>' +
+        (s.clips.length > 1 ? '（还有 ' + (s.clips.length-1) + ' 条）' : '') + '</div>'
+      : '';
+    return '<div class="pl-song" data-title="' + esc(s.title) + '">' +
+      '<div class="pl-song-top">' +
+        '<div class="pl-vinyl" data-act="play" title="点击播放 / 暂停">' + vinyl + '</div>' +
+        '<div class="pl-song-main">' +
+          '<div class="pl-song-name">' + esc(s.title || "（无标题）") + '<span class="pl-bars" hidden><i></i><i></i><i></i></span></div>' +
+          '<div class="pl-song-sub">' + esc(s.artist || "歌手未填写") + '</div>' +
+        '</div>' +
+        '<div class="pl-acts">' +
+          '<button class="pl-ib" data-act="play" type="button" title="播放 / 暂停">▶</button>' +
+          '<button class="pl-ib" data-act="add" type="button" title="加入我的歌单">＋</button>' +
+          '<button class="pl-ib' + (isFav(s.title) ? ' on' : '') + '" data-act="fav" type="button" title="收藏到中意">' + (isFav(s.title) ? '♥' : '♡') + '</button>' +
+        '</div>' +
+      '</div>' +
+      '<div class="pl-badges">' + badges.join("") + '</div>' +
+      '<div class="pl-song-bottom"><span>' +
+        (last ? ('最近：' + esc(last) + (d !== "" ? ' · 距今 ' + d + ' 天' : '')) : '还没记录到演唱时间') +
+        '</span><span>时长 ' + (s.dur ? fmtTime(s.dur) : "—") + '</span></div>' +
+      cut +
+    '</div>';
+  }
+  function renderSongs(){
+    var box = $("plSongList");
+    if(!box) return;
+    var list = viewList();
+    box.innerHTML = list.map(songCardHtml).join("") || '<div class="pl-empty">没有符合条件的歌曲 ✨</div>';
+    $("plStats").textContent = "共 " + SONGS.length + " 首 · 当前显示 " + list.length + " 首" +
+      (SONGS.filter(hasAudio).length ? "（" + SONGS.filter(hasAudio).length + " 首有音源）" : "");
+    renderActiveFilters();
+    markPlaying();
+  }
+  function renderHist(){
+    var box = $("plHistList");
+    if(!box) return;
+    if(!hist.length){ box.innerHTML = '<div class="pl-empty">还没听过歌，先去总览点一首吧 🎧</div>'; $("plHistStats").textContent = ""; return; }
+    var page = pages.hist, PER = 30;
+    var total = Math.max(1, Math.ceil(hist.length / PER));
+    if(page > total) pages.hist = page = total;
+    var slice = hist.slice((page-1)*PER, page*PER);
+    var html = "", lastDay = "";
+    slice.forEach(function(h){
+      var day = (h.at||"").slice(0,10);
+      if(day !== lastDay){
+        lastDay = day;
+        html += '<div class="pl-day">📅 ' + day.slice(5,7).replace(/^0/,"") + "月" + day.slice(8,10).replace(/^0/,"") + '日</div>';
+      }
+      var s = songByTitle(h.t);
+      if(s) html += songCardHtml(s);
+      else html += '<div class="pl-song"><div class="pl-song-top"><div class="pl-song-main">' +
+        '<div class="pl-song-name">' + esc(h.t) + '</div>' +
+        '<div class="pl-song-sub">' + esc((h.at||"").slice(11)) + ' 听过 · 歌已不在歌单里</div></div></div></div>';
+    });
+    box.innerHTML = html;
+    $("plHistStats").textContent = "共 " + hist.length + " 条 · 第 " + page + " / " + total + " 页";
+    buildPager("plPagerHist", page, total, function(p){ pages.hist = p; renderHist(); });
+    markPlaying();
+  }
+  function renderFavs(){
+    var box = $("plFavList");
+    if(!box) return;
+    var items = favs.map(songByTitle).filter(Boolean);
+    box.innerHTML = items.map(songCardHtml).join("") || '<div class="pl-empty">中意清单空空的，点 ♡ 收藏喜欢的歌吧 ⭐</div>';
+    $("plFavStats").textContent = "共 " + items.length + " 首";
+    buildPager("plPagerFav", 1, 1, null);
+    markPlaying();
+  }
+  var pages = {hist:1};
+  function buildPager(boxId, page, total, onGo){
+    var box = $(boxId);
+    if(!box) return;
+    box.textContent = "";
+    if(total <= 1) return;
+    var prev = document.createElement("button");
+    prev.type="button"; prev.className="rp-pg-btn"; prev.textContent="‹"; prev.disabled = page<=1;
+    prev.addEventListener("click", function(){ onGo(page-1); });
+    var txt = document.createElement("span");
+    txt.className="rp-pg-txt"; txt.textContent = page + " / " + total;
+    var next = document.createElement("button");
+    next.type="button"; next.className="rp-pg-btn"; next.textContent="›"; next.disabled = page>=total;
+    next.addEventListener("click", function(){ onGo(page+1); });
+    box.appendChild(prev); box.appendChild(txt); box.appendChild(next);
+  }
+
+  /* ---------- 已生效筛选 chips ---------- */
+  var COUNT_LABEL = {ge1:"≥1次", ge5:"≥5次", ge10:"≥10次", ge20:"≥20次", only1:"仅1次"};
+  var DAYS_LABEL = {d7:"近7天", d30:"近30天", d90:"近90天", d90p:"90天以上"};
+  function activeList(){
+    var out = [];
+    if(filters.kw) out.push({k:"kw", label:"关键词：" + filters.kw + "（" + ({all:"综合",title:"歌名",artist:"歌手"}[filters.scope]||"综合") + "）"});
+    if(filters.favOnly) out.push({k:"fav", label:"仅看中意"});
+    if(filters.clipOnly) out.push({k:"clip", label:"只看有歌切"});
+    filters.langs.forEach(function(l){ out.push({k:"lang", v:l, label:"语言：" + l}); });
+    filters.tags.forEach(function(t){ out.push({k:"tag", v:t, label:"标签：" + t}); });
+    if(filters.count) out.push({k:"count", label:"次数：" + (COUNT_LABEL[filters.count]||"")});
+    if(filters.days) out.push({k:"days", label:"演唱时间：" + (DAYS_LABEL[filters.days]||"")});
+    return out;
+  }
+  function renderActiveFilters(){
+    var box = $("plActive");
+    if(!box) return;
+    var list = activeList();
+    if(!list.length && filters.sort === "recent" && filters.dir === "desc"){ box.hidden = true; box.textContent = ""; return; }
+    box.hidden = false;
+    var html = list.map(function(it, i){
+      return '<span class="pl-badge">' + esc(it.label) + ' <button class="pl-clear" data-i="' + i + '" title="移除">×</button></span>';
+    }).join("");
+    if(filters.sort !== "recent" || filters.dir !== "desc"){
+      html += '<span class="pl-badge">排序：' + esc(SORT_TIP[filters.sort]||"") + (filters.dir === "asc" ? " · 升序" : " · 降序") + '</span>';
+    }
+    if(html) html += '<button class="px-btn ghost pl-mini" id="plClearAll" type="button">清空筛选</button>';
+    box.innerHTML = html;
+    box.querySelectorAll(".pl-clear").forEach(function(b){
+      b.addEventListener("click", function(){
+        var it = list[+b.getAttribute("data-i")];
+        if(!it) return;
+        if(it.k === "kw"){ filters.kw = ""; $("plSearch").value = ""; }
+        else if(it.k === "fav") filters.favOnly = false;
+        else if(it.k === "clip") filters.clipOnly = false;
+        else if(it.k === "lang") filters.langs = filters.langs.filter(function(x){ return x !== it.v; });
+        else if(it.k === "tag") filters.tags = filters.tags.filter(function(x){ return x !== it.v; });
+        else if(it.k === "count") filters.count = "";
+        else if(it.k === "days") filters.days = "";
+        syncChips(); renderSongs();
+      });
+    });
+    var clr = $("plClearAll");
+    if(clr) clr.addEventListener("click", resetFilters);
+  }
+
+  /* ---------- 抽屉里的按钮 ---------- */
+  function chipRow(boxId, items, isOn, cb){
+    var box = $(boxId);
     if(!box) return;
     box.innerHTML = "";
     items.forEach(function(it){
-      var val = it[0], label = labelOf ? labelOf(it) : it[1];
       var b = document.createElement("button");
-      b.type = "button";
-      b.className = "pl-chip" + (isOn(val) ? " on" : "");
-      b.textContent = label;
-      b.addEventListener("click", function(){ cb(val); });
+      b.type="button"; b.className = "pl-chip" + (isOn(it[0]) ? " on" : "");
+      b.textContent = it[1];
+      b.addEventListener("click", function(){ cb(it[0]); });
       box.appendChild(b);
     });
   }
-  function renderChips(){
-    chipRow("plLangChips", LANGS.map(function(l){ return [l, l]; }),
+  function syncChips(){
+    chipRow("plLangChips", LANGS.map(function(l){ return [l,l]; }),
       function(v){ return filters.langs.indexOf(v) >= 0; },
-      function(v){
-        var i = filters.langs.indexOf(v);
-        if(i >= 0) filters.langs.splice(i, 1); else filters.langs.push(v);
-        renderChips(); renderSongs();
-      });
-    chipRow("plTagChips", TAGS.map(function(t){ return [t, t]; }),
+      function(v){ var i = filters.langs.indexOf(v); if(i>=0) filters.langs.splice(i,1); else filters.langs.push(v); syncChips(); renderSongs(); });
+    chipRow("plTagChips", TAGS.map(function(t){ return [t,t]; }),
       function(v){ return filters.tags.indexOf(v) >= 0; },
-      function(v){
-        var i = filters.tags.indexOf(v);
-        if(i >= 0) filters.tags.splice(i, 1); else filters.tags.push(v);
-        renderChips(); renderSongs();
-      });
+      function(v){ var i = filters.tags.indexOf(v); if(i>=0) filters.tags.splice(i,1); else filters.tags.push(v); syncChips(); renderSongs(); });
     chipRow("plCountChips", COUNT_PRESETS,
       function(v){ return filters.count === v; },
-      function(v){ filters.count = v; renderChips(); renderSongs(); });
+      function(v){ filters.count = v; syncChips(); renderSongs(); });
     chipRow("plDaysChips", DAYS_PRESETS,
       function(v){ return filters.days === v; },
-      function(v){ filters.days = (filters.days === v) ? "" : v; renderChips(); renderSongs(); });
+      function(v){ filters.days = (filters.days === v) ? "" : v; syncChips(); renderSongs(); });
     document.querySelectorAll("#plSortRow [data-sort]").forEach(function(b){
       b.classList.toggle("on", b.getAttribute("data-sort") === filters.sort);
     });
     document.querySelectorAll("#plDirRow [data-dir]").forEach(function(b){
       b.classList.toggle("on", b.getAttribute("data-dir") === filters.dir);
     });
-    var dv = document.getElementById("plClipOnly");
-    if(dv) dv.classList.toggle("on", filters.clipOnly);
-    var fo = document.getElementById("plFavOnly");
-    if(fo){
-      fo.classList.toggle("on", filters.favOnly);
-      fo.setAttribute("aria-pressed", filters.favOnly ? "true" : "false");
-    }
-    renderActiveFilters();
-  }
-  /* 「已生效」胶囊栏：每个条件一颗胶囊，**点 × 可单独移除**（
-     不占垂直视野，直观呈现并支持单项移除）。排序不算筛选条件，单独文字提示。 */
-  var COUNT_LABEL = {ge1:"≥1次", ge5:"≥5次", ge10:"≥10次", ge20:"≥20次", only1:"仅1次"};
-  var DAYS_LABEL = {d7:"近7天", d30:"近30天", d90:"近90天", d90p:"90天以上"};
-  function activeList(){
-    var out = [];
-    if(filters.kw) out.push({kind:"kw", label:"关键词：" + filters.kw +
-      "（" + ({all:"综合", title:"歌名", artist:"歌手"}[filters.scope] || "综合") + "）"});
-    if(filters.favOnly) out.push({kind:"fav", label:"仅看中意"});
-    filters.langs.forEach(function(l){ out.push({kind:"lang", val:l, label:"语言：" + l}); });
-    filters.tags.forEach(function(t){ out.push({kind:"tag", val:t, label:"标签：" + t}); });
-    if(filters.count) out.push({kind:"count", label:"次数：" + (COUNT_LABEL[filters.count] || "")});
-    if(filters.days) out.push({kind:"days", label:"演唱时间：" + (DAYS_LABEL[filters.days] || "")});
-    if(filters.clipOnly) out.push({kind:"clip", label:"只看有歌切"});
-    return out;
-  }
-  function removeOne(it){
-    if(it.kind === "kw"){ filters.kw = ""; var si = document.getElementById("plSearch"); if(si) si.value = ""; }
-    else if(it.kind === "fav") filters.favOnly = false;
-    else if(it.kind === "lang") filters.langs = filters.langs.filter(function(x){ return x !== it.val; });
-    else if(it.kind === "tag") filters.tags = filters.tags.filter(function(x){ return x !== it.val; });
-    else if(it.kind === "count") filters.count = "";
-    else if(it.kind === "days") filters.days = "";
-    else if(it.kind === "clip") filters.clipOnly = false;
-    renderChips(); renderSongs();
-  }
-  function renderActiveFilters(){
-    var box = document.getElementById("plActive");
-    if(!box) return;
-    var list = activeList();
-    box.innerHTML = "";
-    if(!list.length && filters.sort === "recent" && filters.dir === "desc"){
-      box.hidden = true; return;                      // 全默认状态就不显示这条
-    }
-    box.hidden = false;
-    var k = document.createElement("span");
-    k.className = "pl-active-k";
-    k.textContent = "已生效：";
-    box.appendChild(k);
-    list.forEach(function(it){
-      var c = document.createElement("button");
-      c.type = "button";
-      c.className = "pl-active-chip";
-      c.title = "点一下移除这个条件";
-      var t = document.createElement("span");
-      t.textContent = it.label;
-      var x = document.createElement("span");
-      x.className = "pl-chip-x";
-      x.textContent = "×";
-      c.appendChild(t); c.appendChild(x);
-      c.addEventListener("click", function(){ removeOne(it); });
-      box.appendChild(c);
-    });
-    var st = document.createElement("span");
-    st.className = "pl-active-sort";
-    st.textContent = "排序：" + (SORT_LABEL[filters.sort] || "") + (filters.dir === "asc" ? " 升序" : " 降序");
-    box.appendChild(st);
-    if(list.length){
-      var cl = document.createElement("button");
-      cl.type = "button";
-      cl.className = "pl-mini";
-      cl.textContent = "清空筛选";
-      cl.addEventListener("click", resetFilters);
-      box.appendChild(cl);
-    }
+    var fo = $("plFavOnly");
+    if(fo){ fo.classList.toggle("on", filters.favOnly); fo.setAttribute("aria-pressed", filters.favOnly ? "true" : "false"); }
+    var co = $("plClipOnly");
+    if(co){ co.classList.toggle("on", filters.clipOnly); co.setAttribute("aria-pressed", filters.clipOnly ? "true" : "false"); }
   }
   function resetFilters(){
-    filters.kw = ""; filters.scope = "all"; filters.favOnly = false;
-    filters.langs = []; filters.tags = []; filters.count = ""; filters.days = "";
-    filters.clipOnly = false;
-    filters.sort = "recent"; filters.dir = "desc";
-    var si = document.getElementById("plSearch");
-    if(si) si.value = "";
-    document.querySelectorAll("#plScope [data-scope]").forEach(function(b){
-      b.classList.toggle("on", b.getAttribute("data-scope") === "all");
-    });
-    renderChips(); renderSongs();
+    filters.kw=""; filters.scope="all"; filters.favOnly=false; filters.clipOnly=false;
+    filters.sort="recent"; filters.dir="desc"; filters.langs=[]; filters.tags=[]; filters.count=""; filters.days="";
+    $("plSearch").value = "";
+    document.querySelectorAll("#plScope [data-scope]").forEach(function(x){ x.classList.toggle("on", x.getAttribute("data-scope")==="all"); });
+    syncChips(); renderSongs();
   }
 
-  /* ---------- 歌曲行（2026-10-06 扁平版，跟「啾啾出勤记录」同款） ----------
-     缩略图 | 歌名+歌手（第二行小字：最近演唱 / 唱过几次 / 听过几次） | 标签 | 时长 | ▶播放 | 📋★＋ */
-  function rowEl(s, opts){
-    opts = opts || {};
-    var d = document.createElement("div");
-    d.className = "rp-row pls-row";
-    d.setAttribute("data-t", s.title);
-    d.setAttribute("role", "button");
-    d.tabIndex = 0;
-    d.addEventListener("keydown", function(ev){ if(ev.key === "Enter") d.click(); });
-
-    /* 缩略图：有本地封面就用封面（72 首有），没有就退回 emoji（其余） */
-    var th = document.createElement("div");
-    th.className = "rp-thumb";
-    if(s.cover){
-      var im = document.createElement("img");
-      im.src = s.cover;
-      im.alt = "";
-      im.loading = "lazy";
-      im.referrerPolicy = "no-referrer";
-      im.onerror = function(){ th.textContent = s.emoji || "🎵"; };
-      th.appendChild(im);
-    } else {
-      th.textContent = s.emoji || "🎵";
-    }
-    d.appendChild(th);
-
-    /* 歌名 + 第二行小字 */
-    var info = document.createElement("div");
-    info.className = "rp-info";
-    var t = document.createElement("div");
-    t.className = "rp-row-t";
-    t.textContent = s.title;
-    var tip = [];
-    if(s.artist) tip.push("歌手：" + s.artist);
-    if(s.album) tip.push("专辑：" + s.album);
-    if(s.titleShazam && s.titleShazam !== s.title) tip.push("识别名：" + s.titleShazam);
-    if(tip.length) t.title = tip.join("\n");
-    var meta = document.createElement("div");
-    meta.className = "rp-row-meta";
-    var bits = [];
-    if(opts.extra) bits.push(opts.extra);              /* 历史页：HH:MM 听过 */
-    if(s.artist) bits.push(s.artist);
-    if(singCountOf(s) > 0) bits.push("唱过 " + singCountOf(s) + " 次");
-    var dd0 = durOf(s);
-    if(dd0.sec) bits.push((dd0.est ? "约 " : "") + fmtDur(dd0.sec));
-    if(lastSungOf(s)) bits.push("最近 " + lastSungOf(s).slice(5));   /* 省地方：只留 MM-DD */
-    meta.textContent = bits.join(" · ") || "—";
-    info.appendChild(t); info.appendChild(meta);
-    d.appendChild(info);
-
-    /* 标签：语言 + 分类，最多露 2 个，多的收成 +N（跟录播站同款） */
-    var tagsEl = document.createElement("div");
-    tagsEl.className = "rp-cell-tags";
-    var arr = (s.tags || []).slice();
-    if(s.lang) arr.unshift(s.lang);
-    if(!arr.length){
-      var none = document.createElement("span");
-      none.className = "rp-tag-none";
-      none.textContent = "未分类";
-      tagsEl.appendChild(none);
-    }
-    arr.slice(0, 2).forEach(function(tg){
-      var c = document.createElement("span");
-      c.className = "rp-tag";
-      c.textContent = tg;
-      tagsEl.appendChild(c);
-    });
-    if(arr.length > 2){
-      tagsEl.title = arr.join(" / ");
-      var more = document.createElement("span");
-      more.className = "rp-tag-more";
-      more.textContent = "+" + (arr.length - 2);
-      tagsEl.appendChild(more);
-    }
-    d.appendChild(tagsEl);
-
-    /* ▶ 播放（点击冒泡到整行 = 把当前列表设成队列、从这首开始放） */
-    var play = document.createElement("button");
-    play.type = "button";
-    play.className = "rp-play";
-    play.textContent = "▶ 播放";
-    d.appendChild(play);
-
-    /* 操作列：复制歌名 / 收藏 / 加入歌单（每行都占位，位置不跳） */
-    var acts = document.createElement("div");
-    acts.className = "pls-acts";
-    var cp = document.createElement("button");
-    cp.type = "button";
-    cp.className = "pl-mini-btn";
-    cp.textContent = "📋";
-    cp.title = "复制「歌名 - 歌手」";
-    cp.setAttribute("aria-label", "复制歌曲信息");
-    cp.addEventListener("click", function(ev){
-      ev.stopPropagation();
-      copyText(s.title + (s.artist ? " - " + s.artist : ""));
-    });
-    acts.appendChild(cp);
-    if(opts.showFav !== false){
-      var fav = document.createElement("button");
-      fav.type = "button";
-      fav.className = "pl-mini-btn" + (isFav(s.title) ? " on" : "");
-      fav.textContent = isFav(s.title) ? "★" : "☆";
-      fav.title = "收藏到中意 / 取消收藏";
-      fav.setAttribute("aria-label", "收藏到中意 / 取消收藏");
-      fav.addEventListener("click", function(ev){ ev.stopPropagation(); toggleFav(s.title); });
-      acts.appendChild(fav);
-    }
-    if(opts.showAdd !== false){
-      var add = document.createElement("button");
-      add.type = "button";
-      add.className = "pl-mini-btn";
-      add.textContent = "＋";
-      add.title = "加入歌单";
-      add.setAttribute("aria-label", "加入歌单");
-      add.addEventListener("click", function(ev){ ev.stopPropagation(); openAddMenu(ev, s.title); });
-      acts.appendChild(add);
-    }
-    d.appendChild(acts);
-
-    d.addEventListener("click", function(){
-      if(opts.titles && opts.titles.length) setQueue(opts.titles, opts.pos || 0);
-    });
-    return d;
-  }
-  function toggleFav(t){
-    var i = favs.indexOf(t);
-    if(i >= 0) favs.splice(i, 1); else favs.unshift(t);
-    setS(KEYS.favs, favs);
-    renderFavs(); renderSongs(); renderLists();
-    paintNow();
-    toast(isFav(t) ? "已收藏 ⭐" : "已取消收藏");
-  }
-
-  /* ---------- 各页渲染（统一：扁平行 + 分页，2026-10-06） ---------- */
-  var PER_PAGE = 20;
-  var pages = {songs: 1, hist: 1, favs: 1};
-  var lastSig = "";
-  function filterSig(){
-    return JSON.stringify([filters.kw, filters.scope, filters.favOnly, filters.sort, filters.dir,
-                           filters.langs, filters.tags, filters.count, filters.days, filters.clipOnly]);
-  }
-  function pageSlice(list, page){ return list.slice((page - 1) * PER_PAGE, page * PER_PAGE); }
-  function buildPager(boxId, page, totalPages, onGo){
-    var box = document.getElementById(boxId);
+  /* ---------- 队列面板 ---------- */
+  function renderQueue(){
+    var box = $("plQueueBody");
     if(!box) return;
-    box.textContent = "";
-    if(totalPages <= 1) return;
-    var prev = document.createElement("button");
-    prev.type = "button"; prev.className = "rp-pg-btn"; prev.textContent = "‹";
-    prev.setAttribute("aria-label", "上一页"); prev.disabled = page <= 1;
-    prev.addEventListener("click", function(){ onGo(page - 1); });
-    var txt = document.createElement("span");
-    txt.className = "rp-pg-txt"; txt.textContent = page + " / " + totalPages;
-    var next = document.createElement("button");
-    next.type = "button"; next.className = "rp-pg-btn"; next.textContent = "›";
-    next.setAttribute("aria-label", "下一页"); next.disabled = page >= totalPages;
-    next.addEventListener("click", function(){ onGo(page + 1); });
-    box.appendChild(prev); box.appendChild(txt); box.appendChild(next);
+    if(!state.queue.length){ box.innerHTML = '<div class="pl-empty">队列空空的</div>'; return; }
+    box.innerHTML = state.queue.map(function(t, i){
+      var s = songByTitle(t);
+      return '<div class="pl-prow' + (i === state.index ? ' now' : '') + '" data-i="' + i + '">' +
+        '<span>' + esc(t) + '</span><button class="x" data-x="' + i + '" title="移出队列">×</button></div>';
+    }).join("");
   }
-  /* 翻完页滚回列表顶部（避开顶栏） */
-  function backToTop(){
-    var bar = document.getElementById("topbar");
-    var main = document.querySelector(".rp-main");
-    if(!main) return;
-    var y = window.pageYOffset + main.getBoundingClientRect().top - ((bar ? bar.offsetHeight : 98) + 8);
-    window.scrollTo({top: Math.max(0, y), behavior: "smooth"});
-  }
-  function renderSongs(){
-    var box = document.getElementById("plSongList");
-    box.textContent = "";
-    /* 筛选/搜索/排序一变就回第一页（比对签名，省得每个筛选按钮都要记着重置） */
-    var sig = filterSig();
-    if(sig !== lastSig){ lastSig = sig; pages.songs = 1; }
-    var list = viewList();
-    var total = Math.max(1, Math.ceil(list.length / PER_PAGE));
-    if(pages.songs > total) pages.songs = total;
-    var stats = document.getElementById("plStats");
-    if(stats) stats.textContent = "共 " + list.length + " 首";
-    if(!list.length){
-      box.appendChild(emptyEl("没有符合条件的歌曲 ✨"));
-    } else {
-      var titles = list.map(function(s){ return s.title; });
-      pageSlice(list, pages.songs).forEach(function(s, i){
-        box.appendChild(rowEl(s, {titles: titles, pos: (pages.songs - 1) * PER_PAGE + i}));
-      });
-    }
-    buildPager("plPager", pages.songs, total, function(p){ pages.songs = p; renderSongs(); backToTop(); });
-    markPlayingRows();
-  }
-  function renderHist(){
-    var box = document.getElementById("plHistList");
-    box.textContent = "";
-    if(!hist.length){
-      box.appendChild(emptyEl("还没听过歌，先去歌单点一首吧 🎧"));
-      buildPager("plPagerHist", 1, 1, null);
-      return;
-    }
-    var total = Math.max(1, Math.ceil(hist.length / PER_PAGE));
-    if(pages.hist > total) pages.hist = total;
-    var titles = hist.map(function(h){ return h.t; });
-    var lastDay = "";
-    pageSlice(hist, pages.hist).forEach(function(h, i){
-      var idx = (pages.hist - 1) * PER_PAGE + i;
-      var s = songByTitle(h.t);
-      var day = h.at.slice(0, 10);
-      if(day !== lastDay){
-        lastDay = day;
-        var dh = document.createElement("div");
-        dh.className = "pl-day";
-        dh.textContent = "📅 " + parseInt(h.at.slice(5, 7), 10) + "月" + parseInt(h.at.slice(8, 10), 10) + "日";
-        box.appendChild(dh);
-      }
-      if(s){
-        box.appendChild(rowEl(s, {titles: titles, pos: idx, extra: h.at.slice(11) + " 听过", showAdd: false}));
-      } else {
-        var g = document.createElement("div");
-        g.className = "rp-row pls-row";
-        g.style.cursor = "default";
-        var gi = document.createElement("div");
-        gi.className = "rp-info";
-        var gt = document.createElement("div"); gt.className = "rp-row-t"; gt.textContent = h.t;
-        var gm = document.createElement("div"); gm.className = "rp-row-meta";
-        gm.textContent = h.at.slice(11) + " 听过 · 歌已不在歌单里";
-        gi.appendChild(gt); gi.appendChild(gm);
-        g.appendChild(gi);
-        box.appendChild(g);
-      }
-    });
-    buildPager("plPagerHist", pages.hist, total, function(p){ pages.hist = p; renderHist(); backToTop(); });
-    markPlayingRows();
-  }
-  function renderFavs(){
-    var box = document.getElementById("plFavList");
-    box.textContent = "";
-    var items = favs.map(function(t){ return songByTitle(t); }).filter(Boolean);
-    if(!items.length){
-      box.appendChild(emptyEl("中意清单空空的，点 ★ 收藏喜欢的歌吧 ⭐"));
-      buildPager("plPagerFav", 1, 1, null);
-      return;
-    }
-    var total = Math.max(1, Math.ceil(items.length / PER_PAGE));
-    if(pages.favs > total) pages.favs = total;
-    var titles = items.map(function(s){ return s.title; });
-    pageSlice(items, pages.favs).forEach(function(s, i){
-      box.appendChild(rowEl(s, {titles: titles, pos: (pages.favs - 1) * PER_PAGE + i}));
-    });
-    buildPager("plPagerFav", pages.favs, total, function(p){ pages.favs = p; renderFavs(); backToTop(); });
-    markPlayingRows();
-  }
+  /* ---------- 我的歌单面板 ---------- */
   function renderLists(){
-    var box = document.getElementById("plListsBox");
-    box.innerHTML = "";
+    var box = $("plListsBody");
+    if(!box) return;
     var names = Object.keys(lists);
-    if(!names.length){ box.appendChild(emptyEl("还没有歌单，点「＋ 新建歌单」建一个吧 📚")); return; }
-    names.forEach(function(nm){
+    if(!names.length){ box.innerHTML = '<div class="pl-empty">还没有歌单，点上面的 ＋ 建一个 📚</div>'; return; }
+    box.innerHTML = names.map(function(nm){
       var arr = lists[nm] || [];
-      var card = document.createElement("div");
-      card.className = "pl-list-card";
-      var head = document.createElement("div");
-      head.className = "pl-list-head";
-      var nmEl = document.createElement("span");
-      nmEl.className = "pl-lname";
-      nmEl.textContent = "📚 " + nm;
-      var cnt = document.createElement("span");
-      cnt.className = "pl-lcount";
-      cnt.textContent = arr.length + " 首";
-      var sp = document.createElement("span");
-      sp.className = "sp";
-      var playBtn = pxBtn("▶ 播放");
-      playBtn.addEventListener("click", function(){
-        if(arr.length) setQueue(arr.slice(), 0);
-        else toast("歌单里还没有歌");
-      });
-      var renBtn = pxBtn("✏ 重命名");
-      renBtn.addEventListener("click", function(){ openListDialog(nm); });
-      var delBtn = pxBtn("🗑 删除");
-      delBtn.addEventListener("click", function(){
-        if(!confirm("确定删除歌单「" + nm + "」？")) return;
-        delete lists[nm];
-        setS(KEYS.lists, lists);
-        renderLists();
-        toast("歌单已删除");
-      });
-      head.appendChild(nmEl); head.appendChild(cnt); head.appendChild(sp);
-      head.appendChild(playBtn); head.appendChild(renBtn); head.appendChild(delBtn);
-      card.appendChild(head);
-      if(!arr.length){
-        card.appendChild(emptyEl("歌单还空着，去歌单页点 ＋ 加歌吧"));
-      } else {
-        arr.forEach(function(t, i){
+      return '<div class="pl-list-card" data-nm="' + esc(nm) + '">' +
+        '<div class="pl-prow" style="font-weight:700">📚 ' + esc(nm) + ' · ' + arr.length + ' 首' +
+        '<span class="sp" style="flex:1"></span>' +
+        '<button class="pl-ib" data-listact="play" title="播放这个歌单">▶</button>' +
+        '<button class="pl-ib" data-listact="ren" title="重命名">✏</button>' +
+        '<button class="pl-ib" data-listact="del" title="删除">🗑</button></div>' +
+        arr.map(function(t){
           var s = songByTitle(t);
-          if(!s) return;
-          var r = rowEl(s, {titles: arr, pos: i, showFav: false});
-          var addBtn = r.querySelector(".pls-acts .pl-mini-btn:last-child");
-          if(addBtn){
-            addBtn.textContent = "×";
-            addBtn.title = "移出歌单";
-            addBtn.setAttribute("aria-label", "移出歌单");
-            addBtn.addEventListener("click", function(ev){
-              ev.stopPropagation();
-              var a2 = lists[nm] || [];
-              var j = a2.indexOf(t);
-              if(j >= 0) a2.splice(j, 1);
-              setS(KEYS.lists, lists);
-              renderLists();
-            });
-          }
-          card.appendChild(r);
-        });
-      }
-      box.appendChild(card);
-    });
-    markPlayingRows();
+          return '<div class="pl-prow" data-listplay="' + esc(t) + '">' + esc(t) + (s ? '' : '（已不在歌单里）') +
+            '<button class="x" data-listrm="' + esc(t) + '" title="移出歌单">×</button></div>';
+        }).join("") +
+      '</div>';
+    }).join("");
   }
-  function renderAll(){
-    renderChips();
-    renderSongs();
-    renderHist();
-    renderFavs();
-    renderLists();
-    markPlayingRows();
+  /* ---------- 演唱详情 ---------- */
+  function openDetail(s){
+    var box = $("plDetailModal");
+    if(!box) return;
+    $("plDetailTitle").textContent = s.title || "演唱详情";
+    var sings = (s.sings || []).slice().sort(function(a,b){ return (b.date||"") > (a.date||"") ? 1 : -1; });
+    $("plDetailSub").textContent = "共演唱 " + (singCountOf(s)) + " 次" + (s.artist ? " · 原唱：" + s.artist : "");
+    var rows = sings.map(function(g){
+      var link = "https://www.bilibili.com/video/" + g.bvid + (g.start ? "?t=" + g.start : "");
+      return '<tr><td>' + esc(g.date || "—") + '</td><td>' + fmtTime(g.start) + " – " + fmtTime(g.end) + '</td>' +
+        '<td><a href="' + esc(link) + '" target="_blank" rel="noopener">去B站看这一场 ↗</a></td></tr>';
+    }).join("");
+    $("plDetailBody").innerHTML = rows
+      ? '<table class="pl-detail-table"><thead><tr><th>日期</th><th>演唱时段</th><th>回放</th></tr></thead><tbody>' + rows + '</tbody></table>'
+      : '<div class="pl-empty">还没有记录到演唱场次</div>';
+    box.hidden = false;
   }
-
-  /* ---------- 加入歌单菜单 ---------- */
-  var addMenu = document.getElementById("plAddMenu");
-  var addTarget = "";
-  function openAddMenu(ev, title){
-    addTarget = title;
-    addMenu.innerHTML = "";
-    Object.keys(lists).forEach(function(nm){
-      var b = pxBtn(nm);
-      b.addEventListener("click", function(){
-        var arr = lists[nm] || [];
-        if(arr.indexOf(title) >= 0) toast("已在歌单「" + nm + "」里");
-        else { arr.push(title); setS(KEYS.lists, lists); toast("已加入「" + nm + "」"); }
-        addMenu.hidden = true;
-      });
-      addMenu.appendChild(b);
-    });
-    var nb = pxBtn("＋ 新建歌单…");
-    nb.addEventListener("click", function(){
-      addMenu.hidden = true;
-      openListDialog("", function(nm){
-        var arr = lists[nm] || [];
-        if(arr.indexOf(title) >= 0) toast("已在歌单「" + nm + "」里");
-        else { arr.push(title); setS(KEYS.lists, lists); toast("已加入「" + nm + "」"); }
-      });
-    });
-    addMenu.appendChild(nb);
-    var r = ev.target.getBoundingClientRect();
-    addMenu.style.left = Math.max(8, Math.min(window.innerWidth - 190, r.left)) + "px";
-    addMenu.style.top = Math.min(window.innerHeight - 170, r.bottom + 8) + "px";
-    addMenu.hidden = false;
-    ev.stopPropagation();
+  /* ---------- 导出歌单（本站版本，保留） ---------- */
+  var EXP_BATCH = 100, expScope = "view", expFmt = "txt";
+  function expList(){
+    if(expScope === "all") return SONGS.slice();
+    if(expScope === "fav") return favs.map(songByTitle).filter(Boolean);
+    return viewList();
   }
-
-  /* ---------- 新建/重命名歌单对话框 ---------- */
-  var dialogMode = "create", dialogOld = "";
-  function openListDialog(oldName, done){
-    dialogMode = oldName ? "rename" : "create";
-    dialogOld = oldName || "";
-    document.getElementById("plDialogTitle").textContent = oldName ? "重命名歌单" : "新建歌单";
-    var inp = document.getElementById("plDialogInput");
-    inp.value = oldName || "";
-    document.getElementById("plDialog").hidden = false;
-    inp.focus();
-    document.getElementById("plDialogOk").onclick = function(){
-      var nm = inp.value.replace(/^\s+|\s+$/g, "");
-      if(!nm){ toast("先给歌单起个名字吧"); return; }
-      if(dialogMode === "rename"){
-        if(nm !== dialogOld && lists[nm]){ toast("已经有同名歌单了"); return; }
-        var arr = lists[dialogOld] || [];
-        delete lists[dialogOld];
-        lists[nm] = arr;
-      } else {
-        if(lists[nm]){ toast("已经有同名歌单了"); return; }
-        lists[nm] = [];
-      }
-      setS(KEYS.lists, lists);
-      document.getElementById("plDialog").hidden = true;
-      renderLists();
-      toast(dialogMode === "rename" ? "已重命名" : "歌单已创建");
-      if(done) done(nm);
-    };
+  function expName(s){ return (s.titleShazam && s.titleShazam !== s.title) ? s.titleShazam : s.title; }
+  function expText(list, fmt){
+    return list.map(function(s){
+      var nm = String(expName(s) || "").replace(/[\r\n]+/g, " ").trim();
+      var ar = String(s.artist || "").replace(/[\r\n]+/g, " ").trim();
+      if(fmt === "csv") return '"' + nm.replace(/"/g,'""') + '","' + ar.replace(/"/g,'""') + '"';
+      return ar ? (nm + " - " + ar) : nm;
+    }).join("\r\n") + "\r\n";
   }
-  document.getElementById("plDialogCancel").onclick = function(){ document.getElementById("plDialog").hidden = true; };
-  document.getElementById("plDialogInput").addEventListener("keydown", function(ev){
-    if(ev.key === "Enter") document.getElementById("plDialogOk").click();
-  });
-
-  /* ---------- 导出 / 导入存档 ---------- */
-  function exportSave(){
-    var data = {favs: getS(KEYS.favs, []), hist: getS(KEYS.hist, []), lists: getS(KEYS.lists, {}), counts: getS(KEYS.counts, {})};
-    var blob = new Blob([JSON.stringify(data, null, 2)], {type: "application/json"});
+  function expDownload(){
+    var list = expList();
+    if(!list.length){ toast("这个范围里没有歌"); return; }
+    var isCsv = expFmt === "csv";
+    var text = (isCsv ? "﻿" : "") + expText(list, expFmt);
+    var d = new Date();
+    function p2(n){ return (n<10?"0":"")+n; }
+    var name = "chu2u-歌单-" + d.getFullYear() + p2(d.getMonth()+1) + p2(d.getDate()) + "." + (isCsv ? "csv" : "txt");
+    var blob = new Blob([text], {type: (isCsv ? "text/csv" : "text/plain") + ";charset=utf-8"});
     var url = URL.createObjectURL(blob);
     var a = document.createElement("a");
-    a.href = url;
-    a.download = "chu2u-陪啾啾听-存档.json";
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(function(){ URL.revokeObjectURL(url); }, 5000);
+    toast("歌单已导出 ⬇ " + list.length + " 首");
+  }
+  function renderExport(){
+    var list = expList();
+    $("expN1").textContent = viewList().length;
+    $("expN2").textContent = SONGS.length;
+    $("expN3").textContent = favs.map(songByTitle).filter(Boolean).length;
+    document.querySelectorAll("#expScope .pl-chip").forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-scope") === expScope); });
+    document.querySelectorAll("#expFormat .pl-chip").forEach(function(b){ b.classList.toggle("on", b.getAttribute("data-fmt") === expFmt); });
+    var lines = expText(list, expFmt).replace(/\r\n$/, "").split("\r\n");
+    $("expPrev").textContent = list.length ? ("共 " + list.length + " 首 · 前 3 行：\n" + lines.slice(0,3).join("\n")) : "这个范围里没有歌";
+    var box = $("expBatch");
+    box.textContent = "";
+    if(!list.length) return;
+    var tip = document.createElement("div");
+    tip.className = "pls-exp-tip";
+    box.appendChild(tip);
+    if(list.length <= EXP_BATCH){
+      tip.textContent = "可以直接复制整段，粘到 QQ 音乐「导入外部歌单」里：";
+      var b1 = document.createElement("button");
+      b1.type="button"; b1.className = "px-btn ghost"; b1.textContent = "📋 复制全部 " + list.length + " 首";
+      b1.addEventListener("click", function(){ copyText(expText(list, expFmt)); });
+      box.appendChild(b1);
+    }else{
+      tip.textContent = "超过 " + EXP_BATCH + " 首，按官方建议分段复制（每段粘一次）：";
+      for(var i=0;i<list.length;i+=EXP_BATCH){
+        (function(i){
+          var part = list.slice(i, i+EXP_BATCH);
+          var b = document.createElement("button");
+          b.type="button"; b.className = "px-btn ghost";
+          b.textContent = "📋 第 " + (Math.floor(i/EXP_BATCH)+1) + " 段（" + (i+1) + "-" + (i+part.length) + "）";
+          b.addEventListener("click", function(){ copyText(expText(part, expFmt)); });
+          box.appendChild(b);
+        })(i);
+      }
+    }
+  }
+  function copyText(txt){
+    function fallback(){
+      try{
+        var ta = document.createElement("textarea");
+        ta.value = txt; ta.setAttribute("readonly","");
+        ta.style.position="fixed"; ta.style.left="-9999px";
+        document.body.appendChild(ta); ta.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        return ok;
+      }catch(e){ return false; }
+    }
+    function done(ok){ toast(ok ? "已复制到剪贴板 ⭐" : "复制失败，请手动选中"); }
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){ done(true); }, function(){ done(fallback()); });
+    }else done(fallback());
+  }
+
+  /* ---------- 存档导出 / 导入（本地备份 JSON） ---------- */
+  function exportSave(){
+    var data = {favs:getS(KEYS.favs,[]), hist:getS(KEYS.hist,[]), lists:getS(KEYS.lists,{}), counts:getS(KEYS.counts,{})};
+    var blob = new Blob([JSON.stringify(data, null, 2)], {type:"application/json"});
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
+    a.href = url; a.download = "chu2u-陪啾啾听-存档.json";
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
     setTimeout(function(){ URL.revokeObjectURL(url); }, 5000);
     toast("存档已导出下载 ⬇");
   }
@@ -1315,404 +963,298 @@
         hist = Array.isArray(d.hist) ? d.hist : [];
         lists = (d.lists && typeof d.lists === "object") ? d.lists : {};
         counts = (d.counts && typeof d.counts === "object") ? d.counts : {};
-        setS(KEYS.favs, favs); setS(KEYS.hist, hist); setS(KEYS.lists, lists); setS(KEYS.counts, counts);
-        renderAll();
-        toast("存档导入成功 ✨");
+        setS(KEYS.favs,favs); setS(KEYS.hist,hist); setS(KEYS.lists,lists); setS(KEYS.counts,counts);
+        renderAll(); toast("存档导入成功 ✨");
       }catch(e){ toast("存档文件读不出来"); }
     };
     fr.readAsText(file);
   }
 
-  /* ---------- 导出歌单（给网易云 / QQ 音乐导入用，2026-10-06 用户要求） ----------
-     格式就用两个平台迁移工具通用的「歌名 - 歌手」（QQ 音乐网页端可直接粘贴整段文本）；
-     官方建议一段 100 首以内，所以自动按 100 首分段给「复制第 N 段」按钮。 */
-  var EXP_BATCH = 100;
-  var expScope = "view", expFmt = "txt";
-  function expList(){
-    if(expScope === "all") return SONGS.slice();
-    if(expScope === "fav") return favs.map(function(t){ return songByTitle(t); }).filter(Boolean);
-    return viewList();
+  /* ---------- 歌单（我的歌单）操作 ---------- */
+  var dlgOldName = "";
+  function openListDlg(oldName){
+    dlgOldName = oldName || "";
+    $("plListDlgTitle").textContent = oldName ? "重命名歌单" : "新建歌单";
+    $("plListDlgInput").value = oldName || "";
+    $("plListDlg").hidden = false;
+    setTimeout(function(){ $("plListDlgInput").focus(); }, 30);
   }
-  /* 曲名优先用 Shazam 识别名（更接近音乐平台里的正式曲名），跟歌单里显示的名字不同也没关系 */
-  function expName(s){
-    return (s.titleShazam && s.titleShazam !== s.title) ? s.titleShazam : s.title;
+  function submitListDlg(){
+    var nm = $("plListDlgInput").value.trim();
+    if(!nm){ toast("歌单名不能为空"); return; }
+    if(nm !== dlgOldName && lists[nm]){ toast("已经有同名歌单了"); return; }
+    if(dlgOldName && dlgOldName !== nm){ lists[nm] = lists[dlgOldName] || []; delete lists[dlgOldName]; }
+    else if(!lists[nm]) lists[nm] = [];
+    setS(KEYS.lists, lists);
+    $("plListDlg").hidden = true;
+    renderLists(); toast(dlgOldName ? "歌单已重命名" : "歌单已创建 📚");
   }
-  function expText(list, fmt){
-    return list.map(function(s){
-      var nm = String(expName(s) || "").replace(/[\r\n]+/g, " ").trim();
-      var ar = String(s.artist || "").replace(/[\r\n]+/g, " ").trim();
-      if(fmt === "csv") return '"' + nm.replace(/"/g, '""') + '","' + ar.replace(/"/g, '""') + '"';
-      return ar ? (nm + " - " + ar) : nm;
-    }).join("\r\n") + "\r\n";
+  function openPick(title){
+    var box = $("plPickBody");
+    $("plPickTitle").textContent = "把《" + title + "》加入…";
+    var names = Object.keys(lists);
+    box.innerHTML = names.length
+      ? names.map(function(nm){
+          return '<button class="px-btn ghost" data-pick="' + esc(nm) + '" style="margin:4px">📚 ' + esc(nm) + '</button>';
+        }).join("")
+      : '<div class="pl-empty">还没有歌单，先点「📚 我的歌单」里的 ＋ 建一个</div>';
+    $("plPickModal").hidden = false;
   }
-  function expDownload(){
-    var list = expList();
-    if(!list.length){ toast("这个范围里没有歌"); return; }
-    var isCsv = (expFmt === "csv");
-    var text = (isCsv ? "﻿" : "") + expText(list, expFmt);   /* CSV 加 BOM，Excel 打开中文不乱码 */
-    var d = new Date();
-    function p2(n){ return (n < 10 ? "0" : "") + n; }
-    var name = "chu2u-歌单-" + d.getFullYear() + p2(d.getMonth() + 1) + p2(d.getDate()) + "." + (isCsv ? "csv" : "txt");
-    var blob = new Blob([text], {type: (isCsv ? "text/csv" : "text/plain") + ";charset=utf-8"});
-    var url = URL.createObjectURL(blob);
-    var a = document.createElement("a");
-    a.href = url; a.download = name;
-    document.body.appendChild(a); a.click(); document.body.removeChild(a);
-    setTimeout(function(){ URL.revokeObjectURL(url); }, 5000);
-    toast("歌单已导出 ⬇ " + list.length + " 首");
-  }
-  function renderExport(){
-    var list = expList();
-    document.getElementById("expN1").textContent = viewList().length;
-    document.getElementById("expN2").textContent = SONGS.length;
-    document.getElementById("expN3").textContent = favs.map(function(t){ return songByTitle(t); }).filter(Boolean).length;
-    document.querySelectorAll("#expScope .pl-chip").forEach(function(b){
-      b.classList.toggle("on", b.getAttribute("data-scope") === expScope);
-    });
-    document.querySelectorAll("#expFormat .pl-chip").forEach(function(b){
-      b.classList.toggle("on", b.getAttribute("data-fmt") === expFmt);
-    });
-    var lines = expText(list, expFmt).replace(/\r\n$/, "").split("\r\n");
-    document.getElementById("expPrev").textContent =
-      list.length ? ("共 " + list.length + " 首 · 前 3 行：\n" + lines.slice(0, 3).join("\n")) : "这个范围里没有歌";
-    var box = document.getElementById("expBatch");
-    box.textContent = "";
-    if(!list.length) return;
-    var tip = document.createElement("div");
-    tip.className = "pls-exp-tip";
-    box.appendChild(tip);
-    if(list.length <= EXP_BATCH){
-      tip.textContent = "可以直接复制整段，粘到 QQ 音乐「导入外部歌单」里：";
-      var b1 = pxBtn("📋 复制全部 " + list.length + " 首");
-      b1.className = "px-btn ghost";
-      b1.addEventListener("click", function(){ copyText(expText(list, expFmt)); });
-      box.appendChild(b1);
-    } else {
-      tip.textContent = "超过 " + EXP_BATCH + " 首，按官方建议分段复制（每段粘一次）：";
-      for(var i = 0; i < list.length; i += EXP_BATCH){
-        (function(i){
-          var part = list.slice(i, i + EXP_BATCH);
-          var b = pxBtn("📋 第 " + (Math.floor(i / EXP_BATCH) + 1) + " 段（" + (i + 1) + "-" + (i + part.length) + "）");
-          b.className = "px-btn ghost";
-          b.addEventListener("click", function(){ copyText(expText(part, expFmt)); });
-          box.appendChild(b);
-        })(i);
-      }
+
+  /* ---------- 卡片点击派发 ---------- */
+  function handleCardClick(ev){
+    var card = ev.target.closest ? ev.target.closest(".pl-song") : null;
+    if(!card) return;
+    var title = card.getAttribute("data-title");
+    var s = songByTitle(title);
+    if(!s) return;
+    var actEl = ev.target.closest("[data-act]");
+    var act = actEl ? actEl.getAttribute("data-act") : null;
+    if(act === "fav"){
+      var i = favs.indexOf(title);
+      if(i >= 0) favs.splice(i,1); else favs.unshift(title);
+      setS(KEYS.favs, favs);
+      renderSongs(); renderFavs(); paintPlayer();
+      toast(isFav(title) ? "已收藏 ⭐" : "已取消收藏");
+      return;
+    }
+    if(act === "add"){ openPick(title); return; }
+    if(act === "detail"){ openDetail(s); return; }
+    if(act === "play" || !ev.target.closest("a,button")){
+      /* 整卡点击 / 播放键 = 播放或暂停（把当前筛选结果当队列） */
+      var inQueue = state.queue.indexOf(title);
+      if(inQueue >= 0 && inQueue === state.index){ toggle(); return; }
+      var titles = viewList().map(function(x){ return x.title; });
+      var at = titles.indexOf(title);
+      setQueue(titles, at < 0 ? 0 : at);
     }
   }
-  var expDlg = document.getElementById("plExportDlg");
-  document.getElementById("plExportSongs").addEventListener("click", function(){
-    renderExport();
-    expDlg.hidden = false;
-  });
-  document.getElementById("expCancel").addEventListener("click", function(){ expDlg.hidden = true; });
-  document.getElementById("expDownload").addEventListener("click", expDownload);
-  expDlg.addEventListener("click", function(ev){ if(ev.target === expDlg) expDlg.hidden = true; });
-  document.getElementById("expScope").addEventListener("click", function(ev){
-    var b = ev.target.closest("[data-scope]");
-    if(!b) return;
-    expScope = b.getAttribute("data-scope");
-    renderExport();
-  });
-  document.getElementById("expFormat").addEventListener("click", function(ev){
-    var b = ev.target.closest("[data-fmt]");
-    if(!b) return;
-    expFmt = b.getAttribute("data-fmt");
-    renderExport();
-  });
 
-  /* ---------- 睡眠定时：2026-10-06 用户定「关闭功能去掉、按键也去掉」——整段删除 ---------- */
+  /* ---------- 事件接线 ---------- */
+  document.addEventListener("click", function(ev){
+    var t = ev.target;
+    if(t.closest(".pl-song")) return;   /* 卡片单独处理 */
 
-  /* ---------- 播放列表（队列）面板 ---------- */
-  function renderQueue(){
-    var body = document.getElementById("plQueueBody");
-    body.innerHTML = "";
-    if(!queue.length){ body.appendChild(emptyEl("播放列表空空的")); return; }
-    queue.forEach(function(t, i){
-      var s = songByTitle(t);
-      var r = document.createElement("div");
-      r.className = "pl-qrow" + (i === qIdx ? " playing" : "");
-      var info = document.createElement("span");
-      info.className = "pl-info";
-      info.textContent = (s && s.emoji ? s.emoji + " " : "") + t;
-      var rm = document.createElement("button");
-      rm.type = "button";
-      rm.textContent = "×";
-      rm.title = "移出播放列表";
-      rm.setAttribute("aria-label", "移出播放列表");
-      rm.addEventListener("click", function(ev){
-        ev.stopPropagation();
-        queue.splice(i, 1);
-        if(i < qIdx) qIdx--;
-        else if(i === qIdx) qIdx = -1;
-        renderQueue();
+    if(t.closest("#pbToggle")){ toggle(); return; }
+    if(t.closest("#pbPrev")){ step(-1); return; }
+    if(t.closest("#pbNext")){ step(1); return; }
+    if(t.closest("#pbMode")){
+      state.mode = MODES[(MODES.indexOf(state.mode)+1) % MODES.length];
+      if(state.mode === "random") buildShuffle();
+      paintPlayer(); toast(MODE_TIP[state.mode]);
+      return;
+    }
+    if(t.closest("#pbFav")){
+      var s = curSong();
+      if(!s) return;
+      var i = favs.indexOf(s.title);
+      if(i >= 0) favs.splice(i,1); else favs.unshift(s.title);
+      setS(KEYS.favs, favs);
+      paintPlayer(); renderSongs();
+      toast(isFav(s.title) ? "已收藏 ⭐" : "已取消收藏");
+      return;
+    }
+    if(t.closest("#pbQueueBtn")){ var q = $("plQueue"); q.hidden = !q.hidden; if(!q.hidden) renderQueue(); return; }
+    if(t.closest("#plQueueClose")){ $("plQueue").hidden = true; return; }
+    if(t.closest("#plQueueClear")){ state.queue = []; state.index = -1; renderQueue(); return; }
+    var qrow = t.closest("[data-x]");
+    if(qrow){
+      var xi = +qrow.getAttribute("data-x");
+      state.queue.splice(xi, 1);
+      if(xi < state.index) state.index--;
+      else if(xi === state.index){ state.index = Math.min(state.index, state.queue.length-1); }
+      renderQueue(); return;
+    }
+    var qjump = t.closest(".pl-prow[data-i]");
+    if(qjump && !t.closest("[data-x]")){ jumpTo(+qjump.getAttribute("data-i")); return; }
+
+    if(t.closest("#plListsBtn")){ var lp = $("plListsPanel"); lp.hidden = !lp.hidden; $("plListsBtn").setAttribute("aria-expanded", lp.hidden ? "false" : "true"); if(!lp.hidden) renderLists(); return; }
+    if(t.closest("#plListsClose")){ $("plListsPanel").hidden = true; return; }
+    if(t.closest("#plNewList")){ openListDlg(""); return; }
+    var la = t.closest("[data-listact]");
+    if(la){
+      var card = la.closest(".pl-list-card");
+      var nm = card.getAttribute("data-nm");
+      var kind = la.getAttribute("data-listact");
+      if(kind === "play"){
+        var arr = (lists[nm] || []).filter(function(x){ return songByTitle(x); });
+        if(!arr.length){ toast("这个歌单里还没有歌"); return; }
+        setQueue(arr.slice(), 0);
+      }else if(kind === "ren") openListDlg(nm);
+      else{
+        if(!confirm("确定删除歌单「" + nm + "」？")) return;
+        delete lists[nm]; setS(KEYS.lists, lists); renderLists(); toast("歌单已删除");
+      }
+      return;
+    }
+    var lrm = t.closest("[data-listrm]");
+    if(lrm){
+      var nm2 = lrm.closest(".pl-list-card").getAttribute("data-nm");
+      var ti = (lists[nm2] || []).indexOf(lrm.getAttribute("data-listrm"));
+      if(ti >= 0) lists[nm2].splice(ti, 1);
+      setS(KEYS.lists, lists); renderLists(); return;
+    }
+    var lplay = t.closest("[data-listplay]");
+    if(lplay && !t.closest("[data-listrm]")){
+      var nm3 = lplay.closest(".pl-list-card").getAttribute("data-nm");
+      var arr3 = (lists[nm3] || []).filter(function(x){ return songByTitle(x); });
+      var at3 = arr3.indexOf(lplay.getAttribute("data-listplay"));
+      if(arr3.length) setQueue(arr3, at3 < 0 ? 0 : at3);
+      return;
+    }
+    var pick = t.closest("[data-pick]");
+    if(pick){
+      var nm4 = pick.getAttribute("data-pick");
+      var target = $("plPickTitle").textContent.replace(/^把《|》加入…$/g, "");
+      var batch = $("plPickTitle").getAttribute("data-batch");
+      var titles = batch ? JSON.parse(batch) : [target];
+      var added = 0;
+      titles.forEach(function(ti2){
+        var a = lists[nm4] || (lists[nm4] = []);
+        if(a.indexOf(ti2) < 0){ a.unshift(ti2); added++; }
       });
-      r.appendChild(info);
-      r.appendChild(rm);
-      r.addEventListener("click", function(){ playQueueIndex(i); });
-      body.appendChild(r);
+      setS(KEYS.lists, lists);
+      $("plPickModal").hidden = true;
+      renderLists();
+      toast(added ? ("已加入「" + nm4 + "」" + added + " 首 📚") : "这些歌都已经在这个歌单里了");
+      return;
+    }
+    if(t.closest("#plPickCancel")){ $("plPickModal").hidden = true; return; }
+    if(t.closest("#plDetailOk")){ $("plDetailModal").hidden = true; return; }
+
+    if(t.closest("#plAdvBtn")){ $("plAdvPanel").hidden = false; $("plAdvBackdrop").hidden = false; $("plAdvBtn").setAttribute("aria-expanded","true"); return; }
+    if(t.closest("#plAdvDone") || t.closest("#plAdvClose") || t.closest("#plAdvBackdrop")){
+      $("plAdvPanel").hidden = true; $("plAdvBackdrop").hidden = true; $("plAdvBtn").setAttribute("aria-expanded","false"); return;
+    }
+    if(t.closest("#plAdvReset")){ resetFilters(); return; }
+    if(t.closest("#plFavOnly")){ filters.favOnly = !filters.favOnly; syncChips(); renderSongs(); return; }
+    if(t.closest("#plClipOnly")){ filters.clipOnly = !filters.clipOnly; syncChips(); renderSongs(); return; }
+    if(t.closest("#plClear")){ filters.kw = ""; $("plSearch").value = ""; renderSongs(); return; }
+    if(t.closest("#plPlayAll")){
+      var l1 = viewList().filter(hasAudio);
+      if(!l1.length){ toast("列表里还没有能播的歌 🙇"); return; }
+      setQueue(l1.map(function(x){ return x.title; }), 0);
+      return;
+    }
+    if(t.closest("#plShuffle")){
+      var l2 = viewList().filter(hasAudio);
+      if(!l2.length){ toast("列表里还没有能播的歌 🙇"); return; }
+      setQueue(l2.map(function(x){ return x.title; }), Math.floor(Math.random()*l2.length));
+      return;
+    }
+    if(t.closest("#plHistPlayAll")){
+      var l3 = hist.map(function(h){ return h.t; }).filter(function(x){ return songByTitle(x) && hasAudio(songByTitle(x)); });
+      if(!l3.length){ toast("历史里还没有能播的歌"); return; }
+      setQueue(l3.slice(0, 60), 0);
+      return;
+    }
+    if(t.closest("#plFavPlayAll")){
+      var l4 = favs.filter(function(t2){ var s2 = songByTitle(t2); return s2 && hasAudio(s2); });
+      if(!l4.length){ toast("中意清单里还没有能播的歌"); return; }
+      setQueue(l4.slice(), 0);
+      return;
+    }
+    if(t.closest("#plClearHist")){
+      if(!confirm("确定清空全部历史记录？")) return;
+      hist = []; setS(KEYS.hist, hist); renderHist(); toast("历史已清空");
+      return;
+    }
+    if(t.closest("#plExport")){ exportSave(); return; }
+    if(t.closest("#plImport")){ $("plImportFile").click(); return; }
+    if(t.closest("#plExportSongs")){ renderExport(); $("plExportDlg").hidden = false; return; }
+    if(t.closest("#expCancel")){ $("plExportDlg").hidden = true; return; }
+    if(t.closest("#expDownload")){ expDownload(); return; }
+    var es = t.closest("#expScope [data-scope]");
+    if(es){ expScope = es.getAttribute("data-scope"); renderExport(); return; }
+    var ef = t.closest("#expFormat [data-fmt]");
+    if(ef){ expFmt = ef.getAttribute("data-fmt"); renderExport(); return; }
+    if(t.closest("#plListDlgCancel")){ $("plListDlg").hidden = true; return; }
+    if(t.closest("#plListDlgOk")){ submitListDlg(); return; }
+    if(t.closest("#tabSongs") || t.closest("#tabHist") || t.closest("#tabFavs")){
+      var key = t.closest("#tabSongs") ? "tabSongs" : (t.closest("#tabHist") ? "tabHist" : "tabFavs");
+      [["tabSongs","viewSongs"],["tabHist","viewHist"],["tabFavs","viewFavs"]].forEach(function(p){
+        $(p[0]).classList.toggle("on", p[0] === key);
+        $(p[1]).hidden = p[0] !== key;
+      });
+      if(key === "tabHist") renderHist();
+      if(key === "tabFavs") renderFavs();
+      return;
+    }
+  });
+  document.addEventListener("click", function(ev){
+    var card = ev.target.closest ? ev.target.closest(".pl-song") : null;
+    if(card) handleCardClick(ev);
+  });
+  document.addEventListener("keydown", function(ev){
+    if(ev.key === "Escape"){
+      ["plDetailModal","plExportDlg","plListDlg","plPickModal"].forEach(function(id){ $(id).hidden = true; });
+      $("plAdvPanel").hidden = true; $("plAdvBackdrop").hidden = true;
+      $("plQueue").hidden = true; $("plListsPanel").hidden = true;
+    }
+    if(ev.key === "Enter" && !$("plListDlg").hidden) submitListDlg();
+  });
+  var seek = $("pbSeek");
+  if(seek){
+    seek.addEventListener("pointerdown", function(){ state.dragging = true; });
+    seek.addEventListener("input", function(){
+      var s = curSong();
+      var dur = isFinite(audio.duration) && audio.duration > 0 ? audio.duration : (s && s.dur) || 0;
+      if(dur) $("pbCur").textContent = fmtTime(seek.value / 1000 * dur);
+    });
+    seek.addEventListener("change", function(){
+      var s = curSong();
+      var dur = isFinite(audio.duration) && audio.duration > 0 ? audio.duration : (s && s.dur) || 0;
+      if(dur) audio.currentTime = Math.min(dur - 0.2, Math.max(0, seek.value / 1000 * dur));
+      state.dragging = false;
+      paintPlayer();
     });
   }
-  var qPanel = document.getElementById("plQueue");
-  document.getElementById("plQueueBtn").addEventListener("click", function(){
-    qPanel.hidden = !qPanel.hidden;
-    if(!qPanel.hidden) renderQueue();
-  });
-  document.getElementById("plQueueClose").addEventListener("click", function(){ qPanel.hidden = true; });
-
-  /* ---------- 弹层收合 ---------- */
-  function closePopups(except){
-    [addMenu].forEach(function(m){ if(m && m !== except) m.hidden = true; });
+  var vol = $("pbVol");
+  if(vol){
+    vol.addEventListener("input", function(){
+      audio.volume = Math.min(1, Math.max(0, vol.value / 100));
+      setS(KEYS.vol, +vol.value);
+    });
   }
-  document.addEventListener("click", function(){ closePopups(null); });
-
-  /* ---------- ⭐ 高级筛选抽屉（点按钮才弹出，带遮罩的二级窗口） ---------- */
-  var advBtn = document.getElementById("plAdvBtn");
-  var advPanel = document.getElementById("plAdvPanel");
-  var advBackdrop = document.getElementById("plAdvBackdrop");
-  function advSet(open){
-    advPanel.hidden = !open;
-    advBackdrop.hidden = !open;
-    advBtn.setAttribute("aria-expanded", open ? "true" : "false");
-    document.body.classList.toggle("pl-drawer-open", open);
-  }
-  advBtn.addEventListener("click", function(ev){ ev.stopPropagation(); advSet(true); });
-  document.getElementById("plAdvDone").addEventListener("click", function(){ advSet(false); });
-  document.getElementById("plAdvClose").addEventListener("click", function(){ advSet(false); });
-  advBackdrop.addEventListener("click", function(){ advSet(false); });
-  document.addEventListener("keydown", function(ev){ if(ev.key === "Escape" && !advPanel.hidden) advSet(false); });
-  document.getElementById("plAdvReset").addEventListener("click", resetFilters);
-  document.querySelectorAll("#plSortRow [data-sort]").forEach(function(b){
-    b.addEventListener("click", function(){ filters.sort = b.getAttribute("data-sort"); renderChips(); renderSongs(); });
-  });
-  document.querySelectorAll("#plDirRow [data-dir]").forEach(function(b){
-    b.addEventListener("click", function(){ filters.dir = b.getAttribute("data-dir"); renderChips(); renderSongs(); });
-  });
+  var search = $("plSearch");
+  if(search) search.addEventListener("input", function(){ filters.kw = this.value; renderSongs(); });
   document.querySelectorAll("#plScope [data-scope]").forEach(function(b){
     b.addEventListener("click", function(){
       filters.scope = b.getAttribute("data-scope");
       document.querySelectorAll("#plScope [data-scope]").forEach(function(x){ x.classList.toggle("on", x === b); });
-      renderActiveFilters(); renderSongs();
+      renderSongs();
     });
   });
-  document.getElementById("plFavOnly").addEventListener("click", function(){
-    filters.favOnly = !filters.favOnly; renderChips(); renderSongs();
+  document.querySelectorAll("#plSortRow [data-sort]").forEach(function(b){
+    b.addEventListener("click", function(){ filters.sort = b.getAttribute("data-sort"); syncChips(); renderSongs(); });
   });
-  var clipOnlyBtn = document.getElementById("plClipOnly");
-  if(clipOnlyBtn) clipOnlyBtn.addEventListener("click", function(){
-    filters.clipOnly = !filters.clipOnly; renderChips(); renderSongs();
+  document.querySelectorAll("#plDirRow [data-dir]").forEach(function(b){
+    b.addEventListener("click", function(){ filters.dir = b.getAttribute("data-dir"); syncChips(); renderSongs(); });
   });
-  document.getElementById("plLangAll").addEventListener("click", function(){
-    filters.langs = LANGS.slice(); renderChips(); renderSongs();
-  });
-  document.getElementById("plLangNone").addEventListener("click", function(){
-    filters.langs = []; renderChips(); renderSongs();
-  });
-  document.getElementById("plTagAll").addEventListener("click", function(){
-    filters.tags = TAGS.slice(); renderChips(); renderSongs();
-  });
-  document.getElementById("plTagNone").addEventListener("click", function(){
-    filters.tags = []; renderChips(); renderSongs();
-  });
-  /* ---------- 进度条：点一下 / 拖一下都能跳（松手才真重载，免得拖一次重载十次） ---------- */
-  (function(){
-    var bar = document.getElementById("plProg");
-    if(!bar) return;
-    var dragging = false;
-    function frac(ev){
-      var r = bar.getBoundingClientRect();
-      return Math.max(0, Math.min(1, (ev.clientX - r.left) / Math.max(1, r.width)));
-    }
-    bar.addEventListener("pointerdown", function(ev){
-      if(!playTotal) return;
-      ev.preventDefault();
-      dragging = true;
-      bar.classList.add("dragging");
-      try{ bar.setPointerCapture(ev.pointerId); }catch(e){}
-      paintProg(frac(ev));
+  ["plLangAll:langs","plLangNone:langs","plTagAll:tags","plTagNone:tags"].forEach(function(pair){
+    var parts = pair.split(":"), id = parts[0], which = parts[1];
+    var el = $(id);
+    if(!el) return;
+    el.addEventListener("click", function(){
+      filters[which] = (id.indexOf("All") >= 0) ? (which === "langs" ? LANGS.slice() : TAGS.slice()) : [];
+      syncChips(); renderSongs();
     });
-    bar.addEventListener("pointermove", function(ev){
-      if(!dragging) return;
-      paintProg(frac(ev));
-    });
-    bar.addEventListener("pointerup", function(ev){
-      if(!dragging) return;
-      dragging = false;
-      bar.classList.remove("dragging");
-      seekTo(frac(ev));
-    });
-    bar.addEventListener("pointercancel", function(){ dragging = false; paintProg(); });
-    /* 键盘左右键一次跳 5% */
-    bar.addEventListener("keydown", function(ev){
-      if(!playTotal) return;
-      if(ev.key === "ArrowRight"){ ev.preventDefault(); seekTo(Math.min(1, progElapsed() / playTotal + .05)); }
-      if(ev.key === "ArrowLeft"){ ev.preventDefault(); seekTo(Math.max(0, progElapsed() / playTotal - .05)); }
-    });
-  })();
-
-  /* ---------- 旧进度条拖动已由上面这段取代（2026-10-06） ----------
-     B 站播放器在它自己的域名里，本站读不到 currentTime，做不了进度条与拖动定位；
-     要看进度 / 暂停，直接用播放器自带的控件就行。 */
-
-  /* ---------- 页面切换 ---------- */
-  var TABS = [["tabSongs", "viewSongs"], ["tabHist", "viewHist"], ["tabFavs", "viewFavs"], ["tabLists", "viewLists"]];
-  function switchTab(key){
-    TABS.forEach(function(p){
-      document.getElementById(p[0]).classList.toggle("on", p[0] === key);
-      document.getElementById(p[1]).hidden = p[0] !== key;
-    });
-    if(key === "tabHist") renderHist();
-    if(key === "tabFavs") renderFavs();
-    if(key === "tabLists") renderLists();
-  }
-  document.getElementById("tabSongs").addEventListener("click", function(){ switchTab("tabSongs"); });
-  document.getElementById("tabHist").addEventListener("click", function(){ switchTab("tabHist"); });
-  document.getElementById("tabFavs").addEventListener("click", function(){ switchTab("tabFavs"); });
-  document.getElementById("tabLists").addEventListener("click", function(){ switchTab("tabLists"); });
-
-  /* ---------- 控件接线（播放器：B 站外链 iframe，跨域只能「重播 / 停止 / 上下首」） ---------- */
-  document.getElementById("plPlay").addEventListener("click", function(){
-    if(cur < 0){                                   /* 还没选歌：把当前筛选结果当队列从头放 */
-      var l = viewList();
-      if(l.length) setQueue(l.map(function(s){ return s.title; }), 0);
-      return;
-    }
-    playSong(cur, srcIdx, false);                  /* 重播当前这首（不重复记次数） */
-    toast("从头重播 ⏮");
   });
-  document.getElementById("plStop").addEventListener("click", function(){ stopPlay(); toast("已停止 ⏹"); });
-  document.getElementById("plPrev").addEventListener("click", function(){ playStep(-1); });
-  document.getElementById("plNext").addEventListener("click", function(){ playStep(1); });
-  document.getElementById("plMode").addEventListener("click", function(){ mode = (mode + 1) % 3; paintNow(); toast(MODE_TIPS[mode]); });
-  document.getElementById("plFav").addEventListener("click", function(){ var s = curSong(); if(s) toggleFav(s.title); });
-  document.getElementById("plSrcSel").addEventListener("change", function(){ switchSource(parseInt(this.value, 10) || 0); });
-  document.getElementById("rpMute").addEventListener("click", function(){
-    muted = !muted; paintMute();
-    if(playing && curSrc){
-      frame.src = playerURL(curSrc);               /* 跨域改不了音量，只能带新参数重载（从头播） */
-      startClock(0);
-    }
-  });
-  document.getElementById("rpBili").addEventListener("click", function(ev){
-    if(!curSrc) ev.preventDefault();
-  });
-  document.getElementById("rpFs").addEventListener("click", function(){
-    var box = document.getElementById("rpPlayer");
-    if(document.fullscreenElement) document.exitFullscreen();
-    else if(box.requestFullscreen) box.requestFullscreen();
-    else if(box.webkitRequestFullscreen) box.webkitRequestFullscreen();
-  });
-  document.addEventListener("fullscreenchange", function(){
-    var fs = !!document.fullscreenElement;
-    document.getElementById("rpFs").textContent = fs ? "⛶ 退出全屏" : "⛶ 全屏";
-    document.getElementById("rpClose").textContent = fs ? "▾" : "✕";
-  });
-  document.getElementById("rpClose").addEventListener("click", function(){
-    if(document.fullscreenElement){ document.exitFullscreen(); return; }   /* 全屏中先退全屏，不停播 */
-    stopPlay();
-  });
-  /* iframe 加载完再武装连播计时器（loading 结束才起算，跨域也能收到 load 事件） */
-  /* iframe 加载完 = 视频真的开始放了，把时钟锚定一次（**只锚一次**，多锚会把倒计时无限重置） */
-  frame.addEventListener("load", function(){
-    if(!playing || !curSrc || anchored) return;
-    anchored = true;
-    playStartAt = Date.now() - seekOffset * 1000;
-    paintProg();
-  });
-  /* B 站播放器的结束事件（字段不保证，收到就提前切；收不到靠计时器兜底；advance 里有 3 秒冷却锁） */
-  window.addEventListener("message", function(ev){
-    if(!playing) return;
-    var d = ev.data;
-    if(d === "ended" || (d && typeof d === "object" && typeof d.type === "string" && d.type.indexOf("end") >= 0)){
-      advance();
-    }
-  });
-
-  document.getElementById("plPlayAll").addEventListener("click", function(){
-    var l = viewList();
-    if(!l.length){ toast("没有可播放的歌曲"); return; }
-    setQueue(l.map(function(s){ return s.title; }), 0);
-  });
-  document.getElementById("plShuffle").addEventListener("click", function(){
-    var l = viewList();
-    if(!l.length){ toast("没有可播放的歌曲"); return; }
-    setQueue(l.map(function(s){ return s.title; }), Math.floor(Math.random() * l.length));
-  });
-  document.getElementById("plHistPlayAll").addEventListener("click", function(){
-    if(!hist.length){ toast("还没有历史记录"); return; }
-    setQueue(hist.map(function(h){ return h.t; }), 0);
-  });
-  document.getElementById("plFavPlayAll").addEventListener("click", function(){
-    if(!favs.length){ toast("中意清单空空的"); return; }
-    setQueue(favs.slice(), 0);
-  });
-  document.getElementById("plClearHist").addEventListener("click", function(){
-    if(!confirm("确定清空全部历史记录？")) return;
-    hist = [];
-    setS(KEYS.hist, hist);
-    renderHist();
-    toast("历史已清空");
-  });
-  document.getElementById("plExport").addEventListener("click", exportSave);
-  document.getElementById("plImport").addEventListener("click", function(){ document.getElementById("plImportFile").click(); });
-  document.getElementById("plImportFile").addEventListener("change", function(){
+  var impFile = $("plImportFile");
+  if(impFile) impFile.addEventListener("change", function(){
     if(this.files && this.files[0]) importSave(this.files[0]);
     this.value = "";
   });
-  document.getElementById("plNewList").addEventListener("click", function(){ openListDialog(""); });
 
-  var search = document.getElementById("plSearch");
-  search.addEventListener("input", function(){ filters.kw = this.value; renderSongs(); });
-
-  /* ---------- 移动端：底部播放器（2026-10-06 用户定） ----------
-     窄屏把右侧播放器那两张卡搬进固定在底部的 #plsMbar（同一份 DOM，不复制控件、不重写逻辑）；
-     宽屏再搬回右侧栏。视频窗在手机上是小窗，点「▴画面」可切小/大两档——**不隐藏**，
-     因为 display:none 会让浏览器把 iframe 里的播放停掉。 */
-  var mbar = document.getElementById("plsMbar");
-  var rail = document.querySelector(".rp-rail");
-  var mq = window.matchMedia("(max-width:1150px)");
-  function placePlayer(){
-    /* 每样东西的「家」：窄屏都进底部播放器条，宽屏回右栏（队列浮层回 body） */
-    var home = {
-      rpPlayer: mq.matches ? mbar : rail,
-      rpNowCard: mq.matches ? mbar : rail,
-      plQueue: mq.matches ? mbar : document.body
-    };
-    Object.keys(home).forEach(function(id){
-      var el = document.getElementById(id);
-      if(el && el.parentNode !== home[id]) home[id].appendChild(el);
-    });
-    document.body.classList.toggle("pl-mobile", mq.matches);
-    audioOnly = mq.matches;          /* 手机端一律只听音频（2026-10-06 用户定：不要播视频） */
-    paintAudioBtn();
-  }
-  placePlayer();
-  if(mq.addEventListener) mq.addEventListener("change", placePlayer);
-  else if(mq.addListener) mq.addListener(placePlayer);
-  /* 🎧 只听音频：把画面收成 2×2（**不是 display:none**——隐藏会让浏览器把 iframe 里的播放停掉）；
-     手机端由 placePlayer() 强制开着，桌面端可以自己切回来 */
-  function paintAudioBtn(){
-    var b = document.getElementById("rpAudio");
-    b.textContent = audioOnly ? "🎬 显示画面" : "🎧 只听音频";
-    b.title = audioOnly ? "把画面放出来（视频）" : "只听音频：画面收起来，声音照放";
-    document.getElementById("rpPlayer").classList.toggle("audio-only", audioOnly);
-  }
-  document.getElementById("rpAudio").addEventListener("click", function(){
-    audioOnly = !audioOnly;
-    paintAudioBtn();
-    toast(audioOnly ? "已切成只听音频 🎧" : "画面放出来了 🎬");
-  });
+  function renderAll(){ syncChips(); renderSongs(); renderHist(); renderFavs(); }
 
   /* ---------- 初始化 ---------- */
-  renderChips();
+  syncChips();
   renderSongs();
-  paintMute();
-  renderSrcSel();     /* 先放一个「还没选歌…」占位，别留个空下拉框 */
-  paintAudioBtn();
-  paintNow();
-  placePlayer();
+  paintPlayer();
+  renderQueue();
+  renderLists();
 })();
-
 </script>
 
 <!-- 碎碎念数据 + 侧边栏 NEW 提示小标（2026-10-05：有未见的新动态时在碎碎念键上亮 NEW!） -->
