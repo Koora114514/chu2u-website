@@ -2882,3 +2882,20 @@ body.dark .cry-bubble .cb{color:#e8e8f0}
 body.dark .cry-bubble .cs,body.dark .cry-bubble .song .ar{color:var(--ink-soft)}
 body.dark .cry-bubble .song{background-image:linear-gradient(180deg,#1b1b38,#22224a);border-color:#3a3a5c}
 body.dark .cry-bubble .song .nm{color:#e8e8f0}
+/* ---------- 按压回弹（2026-10-07 用户定：模仿对标站「一压一弹」的受击反馈） ----------
+   对标站的做法：按钮 :active 缩到 0.92/0.96，配 --ease-elastic: cubic-bezier(.175,.885,.32,1.275)
+   —— 松手时带一点回弹过冲，手感像被按了一下。只作用于歌单页的控件，不动全站既有像素按键。 */
+.pl-tabs .px-btn, .pl-sticky .px-btn, .pl-ib, .cry-fab, .pl-song .pl-vinyl,
+.pl-badge, .pl-bubble .px-btn, .cry-bubble .px-btn{
+  transition:transform .18s cubic-bezier(.175,.885,.32,1.275),
+             box-shadow .18s ease, background-color .15s ease, border-color .15s ease;
+}
+.pl-tabs .px-btn:active, .pl-sticky .px-btn:active, .cry-bubble .px-btn:active{
+  transform:scale(.94);
+}
+.pl-ib:active{transform:scale(.9)}
+.pl-song .pl-vinyl:active{transform:scale(.92)}
+.pl-badge:active{transform:scale(.96)}
+/* 整卡按下也轻轻压一下（对标站卡片是 hover 上浮 + 按下回压） */
+.pl-song{transition:transform .18s cubic-bezier(.175,.885,.32,1.275), box-shadow .18s ease, border-color .18s ease}
+.pl-song:active{transform:translateY(-1px) scale(.995)}
