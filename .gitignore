@@ -10,3 +10,6 @@ desktop.ini
 
 # 日志
 *.log
+
+# impeccable live 模式的本地缓存（绝不能部署到公网，2026-10-05）
+.impeccable/

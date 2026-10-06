@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-10-04 00:13:07   共 123 首（另有手写占位 0 条）
+// 生成时间：2026-10-06 00:14:55   共 124 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -17,8 +17,8 @@ window.CHU2U_SONGS = [
    "J-Pop"
   ],
   "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-10-03",
+  "singCount": 2,
+  "lastSung": "2026-10-04",
   "sings": [
    {
     "date": "2026-10-03",
@@ -27,6 +27,47 @@ window.CHU2U_SONGS = [
     "end": 387,
     "votes": 3,
     "evidence": "shazam×3"
+   },
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1QtHi6LEz3",
+    "start": 175,
+    "end": 237,
+    "votes": 3,
+    "evidence": "shazam×3"
+   }
+  ],
+  "link": "",
+  "clips": [],
+  "src": "",
+  "cover": "",
+  "audioStatus": "missing"
+ },
+ {
+  "key": "662388465",
+  "title": "Samsa",
+  "titleShazam": "Samsa",
+  "artist": "Teniwoha",
+  "artistSearch": "Teniwoha",
+  "album": "Samsa - Single",
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
+  "genres": [
+   "J-Pop"
+  ],
+  "emoji": "🎵",
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1QtHi6LEz3",
+    "start": 550,
+    "end": 662,
+    "votes": 5,
+    "evidence": "shazam×5"
    }
   ],
   "link": "",

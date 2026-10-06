@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610042228">
+<link rel="stylesheet" href="css/base.css?v=202610061114">
 
 <!-- ============ 开屏动画（像素开机画面，⚙️可删除） ============ -->
 <div id="splash" role="dialog" aria-label="正在进入 羽啾chu2u 宇宙观测中心">
@@ -125,12 +125,13 @@
   </div>
 </header>
 
-<!-- ============ 侧边栏：页间切换导航（图标悬停弹出放大文字；末位老美のNASA 外链） ============ -->
+<!-- ============ 侧边栏：页间切换导航（顺序：观测中心 / 打块 / 陪啾啾听 / 出勤记录 / 碎碎念 / Index / 老美のNASA 外链） ============ -->
 <nav class="sidenav" aria-label="页面切换">
   <a class="side-btn is-here" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
   <a class="side-btn" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
   <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
   <a class="side-btn" href="log.html" aria-label="啾啾出勤记录！"><img src="images/本本啾.png?v=20261004" alt=""><span class="side-label" aria-hidden="true">啾啾出勤记录！</span></a>
+  <a class="side-btn" href="notes.html" aria-label="羽啾碎碎念！"><img src="images/side-得意啾.png" alt=""><span class="side-label" aria-hidden="true">羽啾碎碎念！</span><span class="dyn-new" hidden>NEW!</span></a>
   <a class="side-btn" href="kb.html" aria-label="Index📕"><img src="images/啥啾.png" alt=""><span class="side-label" aria-hidden="true">Index📕</span></a>
   <a class="side-btn" href="https://chu2u.live/" target="_blank" rel="noopener" aria-label="老美のNASA"><img src="images/宇宙猫.png" alt=""><span class="side-label" aria-hidden="true">老美のNASA</span></a>
 </nav>
@@ -479,7 +480,7 @@
 <!-- 观测记录数据（每周一自动更新维护；内容见该文件的注释说明；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
 <!-- 首页首屏 + 公开档案的内容数据（手动维护，用 维护\猫猫管理\ 的「🏠 首页与公开档案」页改） -->
 <script src="data/profile.js?v=202609292100"></script>
-<script src="data/records.js?v=202610051012"></script>
+<script src="data/records.js?v=202610061120"></script>
 <!-- 猫猫宇宙论特辑！数据（每周一自动更新维护；内容见该文件的注释说明；?v= 同上） -->
 <script src="data/nyanya.js?v=202610051005"></script>
 <!-- 嘘，这是啾啾和宇宙猫的秘密 · 彩蛋数据（手动维护，用 维护\彩蛋手动更新.ps1 或直接改该文件） -->
@@ -2027,6 +2028,25 @@
   })();
 })();
 </script>
+
+<!-- 碎碎念数据 + 侧边栏 NEW 提示小标（2026-10-05：有未见的新动态时在碎碎念键上亮 NEW!） -->
+<script src="data/dynamics.js?v=202610050205"></script>
+<script>
+(function(){
+  var latest = window.CHU2U_DYN_LATEST_ID || "";
+  var key = document.querySelector('.side-btn[href="notes.html"]');
+  var badge = key ? key.querySelector(".dyn-new") : null;
+  if(!badge || !latest) return;
+  var seen = "";
+  try{ seen = localStorage.getItem("chu2u-dyn-seen") || ""; }catch(e){}
+  if(seen === ""){ try{ localStorage.setItem("chu2u-dyn-seen", latest); }catch(e){} return; }
+  badge.hidden = (seen === latest);
+  key.addEventListener("click", function(){
+    try{ localStorage.setItem("chu2u-dyn-seen", window.CHU2U_DYN_LATEST_ID || latest); }catch(e){}
+  });
+})();
+</script>
+
 <!-- ============ 底部滚动弹幕（黑底 + 应援色，单击复制） ============ -->
 <div class="danmu-bar" id="danmuBar" role="button" tabindex="0" title="单击复制" aria-label="单击复制这段文字">
   <div class="danmu-track" id="danmuTrack"></div>

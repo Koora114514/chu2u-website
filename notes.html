@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+/* 刷新页面时回到页面最顶部（放在 head 里尽早执行，否则浏览器会先把上次的滚动位置恢复回来） */
+(function(){
+  var isReload = false;
+  try{
+    var e = performance.getEntriesByType && performance.getEntriesByType("navigation")[0];
+    isReload = e ? (e.type === "reload") : (performance.navigation && performance.navigation.type === 1);
+  }catch(err){}
+  if(!isReload) return;
+  try{ if("scrollRestoration" in history) history.scrollRestoration = "manual"; }catch(err){}
+  function toTop(){ try{ window.scrollTo(0, 0); }catch(err){} }
+  toTop();
+  document.addEventListener("DOMContentLoaded", toTop);
+  window.addEventListener("load", toTop);
+  setTimeout(toTop, 60); setTimeout(toTop, 300);
+})();
+</script>
+<title>羽啾chu2u · 羽啾碎碎念！</title>
+<meta name="description" content="羽啾chu2u 像素个人站 · 羽啾碎碎念（B站动态流：她的日常碎碎念，含转发/图片/视频动态）">
+<link rel="icon" type="image/png" href="images/fumo啾.png">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
+<link rel="stylesheet" href="css/base.css?v=202610061114">
+</head>
+<body class="page-log">
+<div class="contour-bg" aria-hidden="true"></div>
+<div class="dark-stars" aria-hidden="true"></div>
+
+<!-- ============ 顶部导航（站标 + B站主页 + 直播间状态） ============ -->
+<header class="topbar" id="topbar">
+  <div class="wrap">
+    <div class="brand">
+      <span class="logo"><img src="images/喵啾.png" alt="羽啾chu2u"></span>
+      <span class="brand-text">
+        <b>羽啾chu2u</b>
+        <small>羽啾碎碎念！</small>
+        <i>Universe Observation Center</i>
+      </span>
+    </div>
+    <nav class="nav">
+      <div class="pixel-clock" id="pixelClock">
+        <div class="pc-row">
+          <span class="pc-time" id="pcTime">--:--:--</span>
+          <span class="pc-date" id="pcDate">----.--.-- 周-</span>
+        </div>
+        <select class="pc-sel" id="pcTz" aria-label="选择时区" title="选择时区"></select>
+      </div>
+      <div class="bili-box">
+        <a class="px-btn nav-bili" href="https://space.bilibili.com/2138961136?spm_id_from=333.1387.follow.user_card.click" target="_blank" rel="noopener">进入B站主页</a>
+        <div class="live-wrap">
+          <a class="live-line" id="liveLine" href="https://live.bilibili.com/1727074031" target="_blank" rel="noopener" title="点我直达啾啾的直播间">
+            <span class="live-dot" aria-hidden="true"></span><span id="liveLabel">状态获取中…</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 侧边栏：页间切换导航（碎碎念按键带 NEW 提示小标） ============ -->
+<nav class="sidenav" aria-label="页面切换">
+  <a class="side-btn" href="index.html" aria-label="宇宙观测中心！"><img src="images/side-fumo.png" alt=""><span class="side-label" aria-hidden="true">宇宙观测中心！</span></a>
+  <a class="side-btn" href="tetris.html" aria-label="来！打块！"><img src="images/祈祷啾.png" alt=""><span class="side-label" aria-hidden="true">来！打块！</span></a>
+  <a class="side-btn" href="playlist.html" aria-label="陪啾啾听！"><img src="images/打CALL啾.png" alt=""><span class="side-label" aria-hidden="true">陪啾啾听！</span></a>
+  <a class="side-btn" href="log.html" aria-label="啾啾出勤记录！"><img src="images/本本啾.png" alt=""><span class="side-label" aria-hidden="true">啾啾出勤记录！</span></a>
+  <a class="side-btn is-here" href="notes.html" aria-label="羽啾碎碎念！"><img src="images/side-得意啾.png" alt=""><span class="side-label" aria-hidden="true">羽啾碎碎念！</span><span class="dyn-new" hidden>NEW!</span></a>
+  <a class="side-btn" href="kb.html" aria-label="Index📕"><img src="images/啥啾.png" alt=""><span class="side-label" aria-hidden="true">Index📕</span></a>
+  <a class="side-btn" href="https://chu2u.live/" target="_blank" rel="noopener" aria-label="老美のNASA"><img src="images/宇宙猫.png" alt=""><span class="side-label" aria-hidden="true">老美のNASA</span></a>
+</nav>
+
+<main>
+  <div class="wrap rp-wrap">
+    <div class="rp-body reveal">
+      <!-- 左主栏：标题区 + 资料卡 + 动态流 -->
+      <div class="rp-main">
+        <div class="page-hero reveal">
+          <span class="kicker">DAILY NOTES<small>CHU2U MURMURS</small></span>
+          <h1>羽啾碎碎念！</h1>
+          <p class="sub" id="dnSub"></p>
+        </div>
+
+        <!-- 资料卡 -->
+        <div class="dn-prof pixel-card reveal">
+          <img class="dn-avatar" id="dnAvatar" src="images/探险啾-立绘.png" alt="羽啾chu2u">
+          <div class="dn-prof-body">
+            <div class="dn-prof-name" id="dnName">羽啾chu2u</div>
+            <div class="dn-prof-sign" id="dnSign">来自 n 次观测地的宇宙人主播 ⭐</div>
+            <div class="dn-prof-stats"><span id="dnFans">粉丝 --</span>
+              <a class="dn-prof-link" href="https://space.bilibili.com/2138961136/dynamic" target="_blank" rel="noopener">在B站空间看更多 →</a></div>
+          </div>
+        </div>
+
+        <!-- 日期选择 + 翻页 + 统计（翻页居中对着动态气泡那一列） -->
+        <div class="dn-tools reveal">
+          <label class="dn-date-box" title="按日期筛选动态">
+            <span aria-hidden="true">📅</span>
+            <select id="dnDate" aria-label="按日期筛选动态"></select>
+          </label>
+          <div class="dn-pager dn-pager-top" id="dnPagerTop" aria-label="动态翻页"></div>
+          <span class="rp-stats" id="dnStats"></span>
+        </div>
+
+        <!-- 动态流 -->
+        <div class="dn-feed" id="dnFeed"></div>
+        <!-- 单页最后一条动态底部的翻页（同样对着气泡居中、无卡片底板） -->
+        <div class="dn-pager dn-pager-bot" id="dnPagerBottom" aria-label="动态翻页"></div>
+      </div>
+
+      <!-- 右侧播放器栏（与录播站同款：常驻吸顶、默认静音） -->
+      <aside class="rp-rail">
+        <div class="rp-player pixel-card" id="rpPlayer">
+          <div class="phead">
+            <span class="pt" id="rpNow">—</span>
+            <select class="rp-sel" id="rpSel" title="选一场录播播放" aria-label="选一场录播播放"></select>
+            <div class="pbtns" id="rpPages"></div>
+            <a class="px-btn ghost rp-go" id="rpBili" href="#" target="_blank" rel="noopener">B站 ↗</a>
+            <button class="px-btn ghost rp-go" id="rpMute" type="button" title="切换声音（默认静音）">🔇 静音：开</button>
+            <button class="px-btn ghost rp-go" id="rpFs" type="button" title="全屏观看（Esc 退出）">⛶ 全屏</button>
+            <button class="px-btn rp-go" id="rpClose" type="button">✕</button>
+          </div>
+          <div class="rp-frame-wrap">
+            <iframe id="rpFrame" src="" title="录播播放器" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
+            <div class="rp-ph" id="rpPh">🎬 选一场录播<br>在这里播放 ⭐</div>
+          </div>
+        </div>
+        <div class="rp-now pixel-card" id="rpNowCard">
+          <div class="rp-now-t">还没有播放任何录播</div>
+          <div class="rp-now-meta" id="rpNowMeta">在上方下拉框选一场，或直接点某条动态里的视频</div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<!-- 右下角贴纸：开心唱歌（与「啾啾出勤记录」同款位置/尺寸/画质；装饰用，不拦截任何点击） -->
+<img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
+
+<button class="theme-toggle" id="themeToggle" type="button" aria-label="切换到深色模式">
+  <img class="tt-sun" src="images/得意啾.png" alt=""><img class="tt-moon" src="images/龙宫礼啾.png" alt="">
+</button>
+<button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
+  <img src="images/飞船啾.png" alt="返回顶部">
+</button>
+
+<!-- 碎碎念数据（本机计划任务每天自动抓取 + 管理台可编辑；字段说明见该文件注释） -->
+<script src="data/notescfg.js?v=202610061033"></script>
+<script src="data/dynamics.js?v=202610061033"></script>
+<script src="data/replays.js?v=202610050205"></script>
+<script src="js/shared.js"></script>
+<script>
+/* 羽啾碎碎念！B站动态流
+   数据在 data/dynamics.js（window.CHU2U_DYN / CHU2U_DYN_PROFILE / CHU2U_DYN_LATEST_ID）；
+   版式参考「二十四时小路电台」微博页：资料卡 + 无头像动态流（时间戳→正文→媒体→引用块→互动行）；
+   日期选择 = 按动态日期筛选；右侧 = 录播播放器栏（与录播站同款，默认静音）。
+   NEW 提示：侧边栏碎碎念键上的 NEW! 小标——localStorage chu2u-dyn-seen 与
+   CHU2U_DYN_LATEST_ID 比对，首次访问记基线不显示，点按键清除。 */
+(function(){
+  var DYNS = window.CHU2U_DYN || [];
+  var PROFILE = window.CHU2U_DYN_PROFILE || {};
+  /* 页面配置（介绍文字 / 资料卡 / 动态头像）——由管理台维护，见 data/notescfg.js */
+  var CFG = window.CHU2U_NOTES_CFG || {};
+  function cfgStr(k, fb){ var v = CFG[k]; return (typeof v === "string" && v.trim()) ? v : (fb || ""); }
+  /* 介绍：配置里的换行符拆成 <br>（用 textContent + createElement，不 innerHTML，防注入） */
+  var NL = String.fromCharCode(10);
+  var FALLBACK_SUB = "这里是啾啾的日常碎碎念流——她 B 站动态的每一句话、每张图、每次转发都在这里，" +
+    "像微博一样顺着时间流下来 ⭐ 点右侧播放器还能一边听录播一边刷～";
+  (function(){
+    var el = document.getElementById("dnSub");
+    if(!el) return;
+    el.textContent = "";
+    cfgStr("heroSub", FALLBACK_SUB).split(NL).forEach(function(line, i){
+      if(i) el.appendChild(document.createElement("br"));
+      el.appendChild(document.createTextNode(line));
+    });
+  })();
+  var LATEST = window.CHU2U_DYN_LATEST_ID || "";
+  var REPLAYS = window.CHU2U_REPLAYS || [];
+
+  /* ---------- 资料卡（配置优先；留空 = 用 B 站接口抓来的） ---------- */
+  document.getElementById("dnName").textContent = cfgStr("profName", PROFILE.name || "羽啾chu2u");
+  document.getElementById("dnSign").textContent = cfgStr("profSign", PROFILE.sign || "");
+  var fansTxt = cfgStr("profFans", "");
+  if(!fansTxt && PROFILE.follower) fansTxt = "粉丝 " + Number(PROFILE.follower).toLocaleString("zh-CN");
+  document.getElementById("dnFans").textContent = fansTxt;
+  var avEl = document.getElementById("dnAvatar");
+  if(avEl) avEl.src = cfgStr("profAvatar", avEl.getAttribute("src"));
+
+  /* ---------- 日期选择 + 统计 ---------- */
+  var curDate = "all";
+  var dateSel = document.getElementById("dnDate");
+  function renderDateSelect(){
+    var days = [];
+    DYNS.forEach(function(x){
+      var d = (x.time || "").slice(0, 10);
+      if(d && days.indexOf(d) < 0) days.push(d);
+    });
+    days.sort().reverse();
+    dateSel.textContent = "";
+    var all = document.createElement("option");
+    all.value = "all"; all.textContent = "全部日期";
+    dateSel.appendChild(all);
+    days.forEach(function(d){
+      var o = document.createElement("option");
+      o.value = d; o.textContent = d;
+      dateSel.appendChild(o);
+    });
+  }
+  dateSel.addEventListener("change", function(){
+    curDate = dateSel.value;
+    page = 1;                     /* 换日期就回到第一页 */
+    renderFeed();
+  });
+
+  /* ---------- 动态流渲染 ---------- */
+  var feedEl = document.getElementById("dnFeed");
+  var TYPE_NAME = {"DYNAMIC_TYPE_DRAW":"图片动态", "DYNAMIC_TYPE_FORWARD":"转发",
+                   "DYNAMIC_TYPE_WORD":"文字动态", "DYNAMIC_TYPE_AV":"视频动态",
+                   "opus":"图文动态"};
+  function imgGridHtml(pics, opt){
+    if(!pics || !pics.length) return "";
+    opt = opt || {};
+    /* 转发带的图（2026-10-05 用户定）：最多 3 张，多的在第三张上盖 +N，点它跳动态页面 */
+    var shown = opt.max ? pics.slice(0, opt.max) : pics;
+    var rest = pics.length - shown.length;
+    var cls = "dn-grid dn-g" + Math.min(shown.length, 9);
+    var cells = shown.map(function(p, i){
+      /* 单图不放大到网格，按参考图走左对齐大图 */
+      var img = '<img src="' + (p || "") + '" alt="动态图片" loading="lazy" referrerpolicy="no-referrer">';
+      if(rest > 0 && i === shown.length - 1){
+        return '<span class="dn-cell">' + img +
+          '<a class="dn-more-pics" href="' + esc(opt.link || "#") + '" target="_blank" rel="noopener" title="还有 ' + rest + ' 张，去B站看">+' + rest + '</a></span>';
+      }
+      return img;
+    }).join("");
+    return '<div class="' + cls + '">' + cells + '</div>';
+  }
+  /* 气泡头像：与侧边栏「羽啾碎碎念！」同款得意啾（96px 源图按 48px 双倍整数缩小，不糊） */
+  var CHAT_AVATAR = cfgStr("chatAvatar", "images/得意啾.png");
+  function esc(s){
+    return String(s == null ? "" : s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+  /* 文本块 + 展开/收起（2026-10-05 用户定）：只露指定行数，超出的收起来，
+     下面跟一个主题色带下划线的「展开」键（深浅色模式自动跟随）；
+     行高是 2em，所以 7 行 = 14em、4 行 = 8em，直接按 em 卡高度 */
+  function textBlock(text, lines, cls){
+    return '<div class="' + (cls || "dn-text") + ' dn-clamp" style="--clamp-lines:' + lines + '">' + esc(text) + '</div>' +
+      '<button class="dn-more" type="button" hidden>展开</button>';
+  }
+  function cardHtml(it, i){
+    var media = "";
+    if(it.type === "DYNAMIC_TYPE_AV" && it.av_bvid){
+      media = '<a class="dn-av" href="https://www.bilibili.com/video/' + it.av_bvid + '" target="_blank" rel="noopener">' +
+        '<span class="dn-av-cover"><img src="' + (it.av_cover || "") + '" alt="" loading="lazy" referrerpolicy="no-referrer"></span>' +
+        '<span class="dn-av-body"><span class="dn-av-title">▶ ' + esc(it.av_title || "视频投稿") + '</span>' +
+        '<span class="dn-av-go">点击在B站观看 →</span></span></a>';
+    } else if((it.type === "DYNAMIC_TYPE_DRAW" || it.type === "opus")){
+      media = imgGridHtml(it.pics);
+    }
+    var fw = "";
+    if(it.type === "DYNAMIC_TYPE_FORWARD"){
+      /* 转发原文 = 气泡里的引用框（作者名一行 + 原文 + 原图），2026-10-05 用户定；
+         转发里的文字一律只露 4 行，超出给「展开」 */
+      fw = '<div class="dn-fw">' +
+        (it.fw_name ? '<div class="dn-fw-name">@' + esc(it.fw_name) + '</div>' : '') +
+        textBlock(it.fw_text || "（转发内容）", 4, "dn-fw-text") +
+        ((it.fw_pics || []).length ? imgGridHtml(it.fw_pics, {max:3, link:it.link}) : "") +
+        (it.av_bvid ? '<a class="dn-av" href="https://www.bilibili.com/video/' + it.av_bvid + '" target="_blank" rel="noopener"><span class="dn-av-title">▶ ' + esc(it.av_title || "视频投稿") + '</span></a>' : "") +
+        '</div>';
+    }
+    var typeName = TYPE_NAME[it.type] || "动态";
+    /* 聊天气泡版式（2026-10-05 用户定）：头像 + 昵称/时间头部，正文媒体装进气泡，
+       互动数据（转发/评论/赞）放气泡左下方；谁的都是同一个气泡宽度 */
+    return '<div class="dn-card' + (it.pin ? " dn-pin" : "") + '">' +
+      '<img class="dn-cav" src="' + CHAT_AVATAR + '" alt="" loading="lazy">' +
+      '<div class="dn-col">' +
+        '<div class="dn-head">' +
+          '<span class="dn-cname">' + esc(PROFILE.name || "羽啾chu2u") + '</span>' +
+          '<span class="dn-ctime">' + (it.pin ? "📌 置顶 · " : "") + esc(it.time) + ' · ' + typeName + '</span>' +
+        '</div>' +
+        '<div class="dn-bubble">' +
+          (it.text ? textBlock(it.text, it.type === "DYNAMIC_TYPE_FORWARD" ? 4 : 7) : "") +
+          media + fw +
+        '</div>' +
+        '<div class="dn-acts"><span>转发 ' + it.forward + '</span><span>评论 ' + it.comment + '</span><span>赞 ' + it.like + '</span>' +
+        '<a class="dn-goto" href="' + it.link + '" target="_blank" rel="noopener">在B站看 →</a></div>' +
+      '</div>' +
+      '</div>';
+  }
+  /* 翻页（2026-10-05 用户定）：一页 12 条，日期选择右边一个、最后一条动态底下再一个；
+     两个翻页键共用同一套逻辑，翻完自动回到动态流顶部 */
+  var PER_PAGE = 12;
+  var page = 1, totalPages = 1;
+  var pagerTop = document.getElementById("dnPagerTop");
+  var pagerBot = document.getElementById("dnPagerBottom");
+  function gotoPage(n){
+    page = Math.min(Math.max(1, n), totalPages);
+    renderFeed();
+    var bar = document.getElementById("topbar");
+    var off = (bar ? bar.offsetHeight : 98) + 14;
+    var y = window.pageYOffset + feedEl.getBoundingClientRect().top - off;
+    window.scrollTo({top: Math.max(0, y), behavior:"smooth"});
+  }
+  function buildPager(el){
+    if(!el) return;
+    el.textContent = "";
+    if(totalPages <= 1) return;               /* 只有一页就不占地方 */
+    var prev = document.createElement("button");
+    prev.type = "button"; prev.className = "dn-pg-btn"; prev.textContent = "‹";
+    prev.setAttribute("aria-label", "上一页");
+    prev.disabled = page <= 1;
+    prev.addEventListener("click", function(){ gotoPage(page - 1); });
+    var txt = document.createElement("span");
+    txt.className = "dn-pg-txt"; txt.textContent = page + " / " + totalPages;
+    var next = document.createElement("button");
+    next.type = "button"; next.className = "dn-pg-btn"; next.textContent = "›";
+    next.setAttribute("aria-label", "下一页");
+    next.disabled = page >= totalPages;
+    next.addEventListener("click", function(){ gotoPage(page + 1); });
+    el.appendChild(prev); el.appendChild(txt); el.appendChild(next);
+  }
+  /* 展开/收起：只给真的被截断的文本挂键（没截断的就把 clamp 摘掉、键藏起来） */
+  function setupClamps(){
+    Array.prototype.forEach.call(feedEl.querySelectorAll(".dn-clamp"), function(box){
+      var btn = box.nextElementSibling;
+      if(!btn || !btn.classList || !btn.classList.contains("dn-more")) return;
+      if(box.scrollHeight - box.clientHeight > 2){
+        btn.hidden = false;
+      } else {
+        box.classList.remove("dn-clamp");
+        btn.hidden = true;
+      }
+    });
+  }
+  feedEl.addEventListener("click", function(e){
+    var btn = e.target && e.target.closest ? e.target.closest(".dn-more") : null;
+    if(!btn) return;
+    var box = btn.previousElementSibling;
+    if(!box || !box.classList) return;
+    var open = box.classList.toggle("is-open");
+    btn.textContent = open ? "收起" : "展开";
+  });
+  function renderFeed(){
+    var vis = DYNS.filter(function(x){
+      if(curDate === "all") return true;
+      return (x.time || "").indexOf(curDate) === 0;
+    });
+    totalPages = Math.max(1, Math.ceil(vis.length / PER_PAGE));
+    if(page > totalPages) page = totalPages;
+    var slice = vis.slice((page - 1) * PER_PAGE, page * PER_PAGE);
+    feedEl.innerHTML = slice.map(cardHtml).join("") ||
+      '<div class="rp-empty">这一天没有动态～ 换个日期试试</div>';
+    document.getElementById("dnStats").textContent = "共 " + vis.length + " 条动态";
+    buildPager(pagerTop);
+    buildPager(pagerBot);
+    setupClamps();
+  }
+
+  /* ---------- 右侧录播播放器（与录播站同款逻辑） ---------- */
+  var frame = document.getElementById("rpFrame");
+  var ph = document.getElementById("rpPh");
+  var playing = null, curPage = 1, muted = true;
+  var muteBtn = document.getElementById("rpMute");
+  var sel = document.getElementById("rpSel");
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  function playerURL(bvid, pg){
+    return "https://player.bilibili.com/player.html?bvid=" + bvid + "&page=" + pg
+      + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1&muted=" + (muted ? "1" : "0");
+  }
+  function paintMute(){
+    muteBtn.textContent = muted ? "🔇 静音：开" : "🔊 静音：关";
+    muteBtn.title = muted ? "当前静音——点击开声音（从头重播）" : "当前有声——点击静音（从头重播）";
+  }
+  function renderSel(){
+    sel.textContent = "";
+    REPLAYS.slice().sort(function(a,b){
+      var ka=[a.y||0,a.mo||0,a.d||0,a.h||0,a.mi||0], kb=[b.y||0,b.mo||0,b.d||0,b.h||0,b.mi||0];
+      for(var i=0;i<5;i++){ if(ka[i]!==kb[i]) return kb[i]-ka[i]; }
+      return 0;
+    }).forEach(function(it){
+      var o = document.createElement("option");
+      o.value = it.bvid;
+      o.textContent = it.y + "." + p2(it.mo) + "." + p2(it.d) + " " + p2(it.h) + ":" + p2(it.mi) + " " + (it.t || "");
+      sel.appendChild(o);
+    });
+  }
+  function openPlayer(bvid, pg){
+    playing = REPLAYS.find(function(x){ return x.bvid === bvid; }) || null;
+    if(!playing) return;
+    curPage = pg || 1;
+    muted = true;
+    paintMute();
+    ph.hidden = true;
+    frame.hidden = false;
+    document.getElementById("rpNow").textContent =
+      playing.y + "." + p2(playing.mo) + "." + p2(playing.d) + " " + p2(playing.h) + ":" + p2(playing.mi) + " · " + (playing.t || "录播");
+    var nc = document.getElementById("rpNowCard");
+    nc.querySelector(".rp-now-t").textContent = playing.t || "（无标题）";
+    nc.querySelector(".rp-now-meta").textContent =
+      (playing.pages > 0 ? playing.pages + " 个分P · " : "") +
+      (playing.sec ? "共 " + (playing.sec / 3600).toFixed(1) + " 小时" : "");
+    document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + playing.bvid;
+    renderPages();
+    frame.src = playerURL(playing.bvid, curPage);
+    frame.scrollIntoView({behavior: "smooth", block: "nearest"});
+  }
+  function renderPages(){
+    var box = document.getElementById("rpPages");
+    box.textContent = "";
+    if(!playing || !playing.pages || playing.pages < 2) return;
+    for(var i = 1; i <= playing.pages; i++){
+      (function(n){
+        var b = document.createElement("button");
+        b.type = "button";
+        b.className = "rp-pbtn" + (n === curPage ? " on" : "");
+        b.textContent = "P" + n;
+        b.addEventListener("click", function(e){
+          e.stopPropagation();
+          curPage = n;
+          frame.src = playerURL(playing.bvid, curPage);
+          renderPages();
+        });
+        box.appendChild(b);
+      })(i);
+    }
+  }
+  sel.addEventListener("change", function(){
+    if(sel.value) openPlayer(sel.value, 1);
+  });
+  muteBtn.addEventListener("click", function(){
+    muted = !muted;
+    paintMute();
+    if(playing) frame.src = playerURL(playing.bvid, curPage);
+    if(window.toast) window.toast(muted ? "已静音" : "声音已开");
+  });
+  document.getElementById("rpFs").addEventListener("click", function(){
+    var el = document.getElementById("rpPlayer");
+    if(document.fullscreenElement){ document.exitFullscreen(); return; }
+    if(el.requestFullscreen) el.requestFullscreen();
+    else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
+  });
+  document.addEventListener("fullscreenchange", function(){
+    var fs = !!document.fullscreenElement;
+    document.getElementById("rpClose").title = fs ? "退出全屏（视频继续播）" : "收起播放器（停止播放）";
+    document.getElementById("rpFs").textContent = fs ? "⛶ 退出全屏" : "⛶ 全屏";
+  });
+  document.getElementById("rpClose").addEventListener("click", function(){
+    if(document.fullscreenElement){
+      if(document.exitFullscreen) document.exitFullscreen();
+      return;
+    }
+    frame.src = "";
+    frame.hidden = true;
+    ph.hidden = false;
+    playing = null;
+    sel.value = "";
+  });
+
+  /* ---------- NEW 提示小标（侧边栏碎碎念键） ---------- */
+  var badge = document.querySelector(".dyn-new");
+  function seenId(){
+    try{ return localStorage.getItem("chu2u-dyn-seen") || ""; }catch(e){ return ""; }
+  }
+  function setSeen(){
+    try{ localStorage.setItem("chu2u-dyn-seen", LATEST || ""); }catch(e){}
+  }
+  function paintBadge(){
+    if(!badge || !LATEST) return;
+    var s = seenId();
+    if(s === ""){ setSeen(); return; }      // 首次访问：记基线，不显示
+    badge.hidden = (s === LATEST);
+  }
+  paintBadge();
+  document.querySelector('.side-btn[href="notes.html"]').addEventListener("click", setSeen);
+
+  paintMute();
+  renderSel();
+  renderDateSelect();
+  renderFeed();
+})();
+</script>
+
+<!-- ============ 底部滚动弹幕（黑底 + 应援色，单击复制） ============ -->
+<div class="danmu-bar" id="danmuBar" role="button" tabindex="0" title="单击复制" aria-label="单击复制这段文字">
+  <div class="danmu-track" id="danmuTrack"></div>
+</div>
+<script>
+(function(){
+  var TEXT = "aHR0cHM6Ly9hcHAubm90aW9uLmNvbS9wLzNhMDEyNWQxNDM4ODgwZDNiZjVhZWRhZGRhZDNmNGE0P3NvdXJjZT1jb3B5X2xpbms=";
+  var bar = document.getElementById("danmuBar");
+  var track = document.getElementById("danmuTrack");
+  if(!bar || !track) return;
+  var unit = TEXT + "　★　";
+  function fill(n){
+    var buf = [];
+    for(var i = 0; i < n; i++) buf.push(unit);
+    track.textContent = buf.join("");
+    return n;
+  }
+  function layout(){
+    var times = fill(Math.max(3, Math.ceil((window.innerWidth * 1.8) / (unit.length * 8)) + 1));
+    var unitW = track.scrollWidth / times;
+    if(!(unitW > 0)) return;
+    var need = Math.ceil(window.innerWidth / unitW) + 1;
+    if(need > times){
+      times = fill(need);
+      unitW = track.scrollWidth / times;
+    }
+    track.style.setProperty("--danmu-shift", unitW.toFixed(1) + "px");
+    track.style.animationDuration = Math.max(6, unitW / 66).toFixed(1) + "s";
+  }
+  layout();
+  window.addEventListener("resize", layout);
+  function feedback(ok){
+    bar.classList.add("done");
+    bar.setAttribute("title", ok ? "已复制 ✓" : "复制失败，请手动选中");
+    clearTimeout(bar._t);
+    bar._t = setTimeout(function(){
+      bar.classList.remove("done");
+      bar.setAttribute("title", "单击复制");
+    }, 1300);
+  }
+  function syncCopy(){
+    try{
+      var ta = document.createElement("textarea");
+      ta.value = TEXT; ta.setAttribute("readonly", "");
+      ta.style.position = "fixed"; ta.style.left = "-9999px";
+      document.body.appendChild(ta); ta.select();
+      var ok = document.execCommand("copy");
+      document.body.removeChild(ta); return ok;
+    }catch(e){ return false; }
+  }
+  function copy(){
+    feedback(true);
+    if(syncCopy()) return;
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(TEXT).then(null, function(){ feedback(false); });
+    } else { feedback(false); }
+  }
+  bar.addEventListener("click", copy);
+  bar.addEventListener("keydown", function(e){
+    if(e.key === "Enter" || e.key === " "){ e.preventDefault(); copy(); }
+  });
+})();
+</script>
+<!-- ============ 导航栏像素时钟（时区存本地） ============ -->
+<script>
+(function(){
+  var el = document.getElementById("pixelClock");
+  if(!el) return;
+  var tEl = document.getElementById("pcTime"),
+      dEl = document.getElementById("pcDate"),
+      sEl = document.getElementById("pcTz");
+  var ZONES = [
+    ["local", "本地时间"],
+    ["Asia/Shanghai", "北京 UTC+8"],
+    ["Asia/Tokyo", "东京 UTC+9"],
+    ["Asia/Seoul", "首尔 UTC+9"],
+    ["Asia/Singapore", "新加坡 UTC+8"],
+    ["Europe/London", "伦敦"],
+    ["Europe/Paris", "巴黎·柏林"],
+    ["Europe/Moscow", "莫斯科"],
+    ["America/New_York", "纽约"],
+    ["America/Los_Angeles", "洛杉矶"],
+    ["UTC", "UTC 世界时"]
+  ];
+  ZONES.forEach(function(z){
+    var o = document.createElement("option");
+    o.value = z[0]; o.textContent = z[1];
+    sEl.appendChild(o);
+  });
+  var saved = "local";
+  try{ saved = localStorage.getItem("chu2u-clock-tz") || "local"; }catch(e){}
+  var ok = false;
+  for(var i = 0; i < sEl.options.length; i++){ if(sEl.options[i].value === saved) ok = true; }
+  sEl.value = ok ? saved : "local";
+  sEl.addEventListener("change", function(){
+    try{ localStorage.setItem("chu2u-clock-tz", sEl.value); }catch(e){}
+    tick();
+  });
+  function p2(n){ return (n < 10 ? "0" : "") + n; }
+  var cachedFmt = null, cachedTz = "";
+  function tick(){
+    var tz = sEl.value, now = new Date();
+    if(tz === "local"){
+      tEl.textContent = p2(now.getHours()) + ":" + p2(now.getMinutes()) + ":" + p2(now.getSeconds());
+      dEl.textContent = now.getFullYear() + "." + p2(now.getMonth() + 1) + "." + p2(now.getDate()) +
+                        " 周" + "日一二三四五六".charAt(now.getDay());
+      return;
+    }
+    try{
+      if(tz !== cachedTz){
+        cachedFmt = new Intl.DateTimeFormat("zh-CN", {
+          timeZone: tz, hour12: false, year: "numeric", month: "2-digit", day: "2-digit",
+          hour: "2-digit", minute: "2-digit", second: "2-digit", weekday: "short"
+        });
+        cachedTz = tz;
+      }
+      var o = {};
+      cachedFmt.formatToParts(now).forEach(function(x){ o[x.type] = x.value; });
+      var hh = (o.hour === "24" ? "00" : o.hour);
+      tEl.textContent = hh + ":" + o.minute + ":" + o.second;
+      dEl.textContent = o.year + "." + o.month + "." + o.day + " " + o.weekday;
+    }catch(e){
+      tEl.textContent = "--:--:--";
+      dEl.textContent = "时区不可用";
+    }
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+</script>
+</body>
+</html>
