@@ -2711,3 +2711,105 @@ body.has-player{padding-bottom:130px}
   .pl-song{padding:10px}
   .pl-sticky{position:static}
 }
+
+/* ============================================================
+   ---------- 陪啾啾听！v2.1 视觉调整（2026-10-07 用户定，参照对标站） ----------
+   要求原话：单曲/搜索框/播放器/播放列表/卡片「参考对标网站，做圆润的扁平化处理，减少黑色描边，
+   全屏状态增加一点透明度（透明度也参考对标网站），悬停动效也参考，然后都做一点渐变色彩：
+   从 #fbfcf2 向 #d4da7b 渐变，描边色选用 #8b9150 但描边不要太粗（浅色主题）；深色主题做对应变化；
+   整体还是要有像素风格」。
+   → 做法：描边 3px 墨黑 → 2px 橄榄 #8b9150；圆角 18px（对标站卡片同款）；底色改成
+     #fbfcf2→#d4da7b 的浅渐变；悬停上浮 + 阴影加深（沿用站内像素投影手感，不做模糊大光晕）；
+     播放条改成对标站的胶囊形；全屏时整块半透明。深色模式用对应的橄榄深色档。
+   ============================================================ */
+/* ---- 卡片 ---- */
+.pl-song{
+  border:2px solid #8b9150;border-radius:18px;
+  background-image:linear-gradient(180deg,#fbfcf2 0%,#f3f5dc 55%,#e8ecc0 100%);
+  box-shadow:0 3px 0 rgba(139,145,80,.35);
+  transition:transform .18s cubic-bezier(.22,1,.36,1), box-shadow .18s cubic-bezier(.22,1,.36,1), border-color .18s;
+}
+.pl-song:hover{
+  transform:translateY(-3px);
+  border-color:#79804a;
+  box-shadow:0 7px 0 rgba(139,145,80,.42);
+}
+.pl-song:active{transform:translateY(-1px)}
+.pl-song.now{
+  border-color:#8b9150;border-width:2px;
+  background-image:linear-gradient(180deg,#fbfcf2 0%,#eef0c8 60%,#dfe4a6 100%);
+  box-shadow:0 3px 0 #8b9150;
+}
+/* 黑胶位：圆一点、细描边 */
+.pl-vinyl{border:2px solid #8b9150;border-radius:12px;
+  background-image:linear-gradient(160deg,#fbfcf2,#e8ecc0)}
+/* 圆形小按键 */
+.pl-ib{border:2px solid #8b9150;border-radius:50%;
+  background-image:linear-gradient(180deg,#fbfcf2,#eef0c8);
+  box-shadow:0 2px 0 rgba(139,145,80,.4)}
+.pl-ib:hover{background-image:linear-gradient(180deg,#fbfcf2,#d4da7b)}
+.pl-ib.on{background-image:linear-gradient(180deg,#d4da7b,#c3c86c)}
+/* 徽章：小圆角、细描边 */
+.pl-badge{border:2px solid #8b9150;border-radius:10px;
+  background-image:linear-gradient(180deg,#fbfcf2,#eef0c8);color:#4d5344}
+.pl-badge.lang{border-color:#8b9150;color:#4d5344}
+button.pl-badge:hover{background-image:linear-gradient(180deg,#fbfcf2,#d4da7b)}
+/* 搜索框 / 吸顶工具条 */
+.pl-sticky{border:2px solid #8b9150;border-radius:16px;
+  background-image:linear-gradient(180deg,#fbfcf2,#eef0c8);
+  box-shadow:0 4px 0 rgba(139,145,80,.35)}
+.pl-search{border:2px solid #8b9150;border-radius:12px;
+  background-image:linear-gradient(180deg,#fbfcf2,#eef0c8)}
+.pl-scope{border-radius:12px;overflow:hidden}
+.pl-scope-btn{border-right:2px solid #b7bc8a}
+/* ---- 底部播放条：对标站那种胶囊 ---- */
+.pl-player{
+  border:2px solid #8b9150;border-radius:999px;
+  background-image:linear-gradient(180deg,rgba(251,252,242,.96),rgba(212,218,123,.92));
+  box-shadow:0 5px 0 rgba(139,145,80,.4);
+  backdrop-filter:blur(6px);
+}
+.pl-player .pl-ib{border-radius:50%}
+/* 播放条里的主键（播放/暂停）实心一点 */
+#pbToggle{background-image:linear-gradient(180deg,#d4da7b,#c3c86c);border-color:#8b9150}
+/* 进度条：细、圆头 */
+input[type=range].pl-range{height:8px;border-radius:999px;background:rgba(139,145,80,.25)}
+input[type=range].pl-range::-webkit-slider-thumb{width:14px;height:14px;border-radius:50%;
+  border:2px solid #8b9150;background:linear-gradient(180deg,#fbfcf2,#d4da7b)}
+input[type=range].pl-range::-moz-range-thumb{width:12px;height:12px;border-radius:50%;
+  border:2px solid #8b9150;background:#d4da7b}
+/* ---- 浮层 / 弹窗：圆润一点 ---- */
+.pl-panel{border:2px solid #8b9150;border-radius:16px;
+  background-image:linear-gradient(180deg,#fbfcf2,#f0f2d2);
+  box-shadow:0 5px 0 rgba(139,145,80,.4)}
+.pl-panel-head{border-bottom:2px solid #b7bc8a}
+.pl-prow{border-bottom:1px solid #cdd1a4;border-radius:8px}
+.pl-prow:hover{background:linear-gradient(90deg,#fbfcf2,#e8ecc0)}
+.pl-modal-card{border:2px solid #8b9150;border-radius:18px;
+  background-image:linear-gradient(180deg,#fbfcf2,#f0f2d2);
+  box-shadow:0 6px 0 rgba(139,145,80,.45)}
+.pl-detail-table th{background:linear-gradient(180deg,#fbfcf2,#d4da7b)}
+.pl-detail-table th,.pl-detail-table td{border:1px solid #b7bc8a}
+/* ---- 全屏（F 键 / 浏览器全屏）时整体淡一点，别太抢 ---- */
+:fullscreen .pl-player{opacity:.88;border-radius:0}
+:fullscreen .pl-song{opacity:.94}
+/* ---- 深色主题：同款结构、换深色档 ---- */
+body.dark .pl-song{
+  border-color:var(--olive-deep);
+  background-image:linear-gradient(180deg,#1b1b38 0%,#181830 60%,#14142a 100%);
+  box-shadow:0 3px 0 rgba(0,0,0,.5);
+}
+body.dark .pl-song:hover{border-color:var(--olive);box-shadow:0 7px 0 rgba(0,0,0,.55)}
+body.dark .pl-song.now{background-image:linear-gradient(180deg,#22224a,#1b1b3c);box-shadow:0 3px 0 var(--olive-deep)}
+body.dark .pl-vinyl{background-image:linear-gradient(160deg,#1b1b38,#14142a)}
+body.dark .pl-ib{border-color:var(--olive-deep);background-image:linear-gradient(180deg,#1b1b38,#14142a)}
+body.dark .pl-ib:hover{background-image:linear-gradient(180deg,#22224a,#1b1b3c)}
+body.dark .pl-badge{border-color:var(--olive-deep);background-image:linear-gradient(180deg,#1b1b38,#14142a);color:var(--ink-soft)}
+body.dark .pl-sticky{background-image:linear-gradient(180deg,#1b1b38,#14142a);border-color:var(--olive-deep)}
+body.dark .pl-search{background-image:linear-gradient(180deg,#1b1b38,#14142a);border-color:var(--olive-deep)}
+body.dark .pl-scope-btn{border-right-color:#3a3a5c}
+body.dark .pl-player{background-image:linear-gradient(180deg,rgba(27,27,56,.96),rgba(20,20,42,.94));border-color:var(--olive-deep)}
+body.dark #pbToggle{background-image:linear-gradient(180deg,#bfc56f,#8f9444)}
+body.dark .pl-panel,body.dark .pl-modal-card{background-image:linear-gradient(180deg,#1b1b38,#14142a);border-color:var(--olive-deep)}
+body.dark .pl-prow:hover{background:linear-gradient(90deg,#1b1b38,#22224a)}
+body.dark .pl-detail-table th{background:linear-gradient(180deg,#22224a,#2a2a52)}
