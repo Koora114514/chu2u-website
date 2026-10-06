@@ -356,7 +356,10 @@
 
   /* ---------- 播放器（照参考站：一个 <audio> + 队列 + 三种模式） ---------- */
   var audio = new Audio();
-  audio.preload = "metadata";
+  /* preload=auto：这首只有 1~4MB，一进页面就整首拉下来缓存 ——
+     托管方（Cloudflare Pages）默认不给音频做分段请求，整首缓存后拖动进度条才不会「跳回开头」，
+     顺带起播也更快（2026-10-07 实测：metadata 模式拖进度会重置到 0 秒）。 */
+  audio.preload = "auto";
   audio.setAttribute("playsinline", "");
   audio.hidden = true;                 /* 挂进 DOM（有些浏览器对游离的 audio 处理不同），隐藏不影响出声 */
   document.addEventListener("DOMContentLoaded", function(){ document.body.appendChild(audio); });
