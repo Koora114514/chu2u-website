@@ -1,5 +1,5 @@
 // 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-10-06 00:14:55   共 124 首（另有手写占位 0 条）
+// 生成时间：2026-10-07 00:13:54   共 124 首（另有手写占位 0 条）
 // 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
 window.CHU2U_SONGS = [
  {
@@ -1218,8 +1218,18 @@ window.CHU2U_SONGS = [
     "evidence": "shazam×3"
    }
   ],
-  "link": "",
-  "clips": [],
+  "link": "https://www.bilibili.com/video/BV1WkHo64E88",
+  "clips": [
+   {
+    "bvid": "BV1WkHo64E88",
+    "page": 1,
+    "title": "v4",
+    "author": "银河的鱼",
+    "date": "2026-10-06",
+    "play": 319,
+    "url": "https://www.bilibili.com/video/BV1WkHo64E88"
+   }
+  ],
   "src": "",
   "cover": "images/song/667063722.jpg",
   "audioStatus": "ok",
