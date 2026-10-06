@@ -622,6 +622,22 @@
     renderQueue();
   }
 
+  /* ---------- 切到后台就冻结（2026-10-06 用户报「我没点播放，它自己就开始放了」） ----------
+     原因：连播是本地时钟驱动的，页面切到别的标签/窗口后时钟照跑、一首接一首自动往下切，
+     回来就变成「我没点过，它自己在放」。现在页面一进后台就停表，回到前台再从原来的位置接着算，
+     这样：后台不会偷偷换歌，回来也不会因为超时而突然切一首。 */
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden){
+      hiddenElapsed = progElapsed();
+      hiddenAt = Date.now();
+      stopClock();
+    } else if(hiddenAt && playing && curSrc){
+      hiddenAt = 0;
+      startClock(hiddenElapsed);      /* 从刚才停下的位置接着走 */
+    }
+  });
+  var hiddenAt = 0, hiddenElapsed = 0;
+
   /* ---------- 播放器栏 UI ---------- */
   function paintMute(){
     var b = document.getElementById("rpMute");
