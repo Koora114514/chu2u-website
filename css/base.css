@@ -2830,23 +2830,23 @@ body.dark .pl-panel .pl-list-card{border-top-color:#3a3a5c}
   /* 2026-10-07 用户定：在 46px 基础上放大两倍（92px），再往左挪一个身位（right = 22 + 92 = 114px） */
   position:fixed;right:114px;bottom:126px;z-index:8500;
   width:92px;height:92px;padding:0;cursor:pointer;
-  border:4px solid #8b9150;border-radius:50%;
+  border:none;border-radius:50%;     /* 2026-10-07 用户定：描边去掉，只留一圈很细的渐变边 */
   background-image:linear-gradient(180deg,#fbfcf2,#d4da7b);
   box-shadow:0 4px 16px rgba(122,136,70,.35);
   display:grid;place-items:center;
   transition:transform .15s ease, box-shadow .15s ease;
   animation:cryBob 2.5s ease-in-out infinite;
 }
-.cry-fab img{width:76px;height:76px;border-radius:50%;display:block;image-rendering:auto}
+.cry-fab img{width:84px;height:84px;border-radius:50%;display:block;image-rendering:auto}   /* 留 4px 渐变细边 */
 .cry-fab:active{transform:scale(.92)}
 .cry-fab:hover{box-shadow:0 6px 20px rgba(122,136,70,.5)}
 @keyframes cryBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 @media(prefers-reduced-motion:reduce){.cry-fab{animation:none}}
-body.dark .cry-fab{border-color:var(--olive-deep);
+body.dark .cry-fab{
   background-image:linear-gradient(180deg,#1b1b38,#22224a);box-shadow:0 4px 16px rgba(0,0,0,.5)}
 /* 移动端：抬到播放条之上 */
 @media(max-width:720px){.cry-fab{right:104px;bottom:216px;width:72px;height:72px}
-  .cry-fab img{width:59px;height:59px}}
+  .cry-fab img{width:66px;height:66px}}   /* 手机端同样只留 3px 细边
 
 /* 星火粒子（对标站 .motion-spark-particle 的观感：小、慢、平滑） */
 .cry-spark{position:fixed;z-index:9200;pointer-events:none;line-height:1;
