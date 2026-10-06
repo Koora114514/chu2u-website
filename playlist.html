@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610061213">
+<link rel="stylesheet" href="css/base.css?v=202610061250">
 </head>
 <body class="page-pl">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -197,7 +197,7 @@
           <div class="rp-now-meta" id="rpNowMeta">点列表里的歌，或打开「▶ 播放全部」当电台听 ⭐</div>
           <div class="pls-prog-wrap">
             <div class="pls-prog" id="plProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-              <span class="pls-prog-cells" id="plProgCells"></span>
+              <span class="pls-prog-fill" id="plProgFill"></span>
             </div>
             <span class="pls-prog-t"><span id="plProgNow">0:00</span> / <span id="plProgTotal">—</span></span>
           </div>
@@ -340,7 +340,7 @@
 
 <!-- 歌单数据（手动维护；字段说明见该文件注释；?v= 日期每次更新数据时改成当天，绕过浏览器缓存） -->
 <script src="data/playlist.js?v=202610060300"></script>
-<script src="js/shared.js?v=202610061145"></script>
+<script src="js/shared.js?v=202610061250"></script>
 <script>
 /* 陪啾啾听！歌单应用
    歌单内容维护在 data/playlist.js；收藏 / 历史 / 我的歌单 / 播放次数存在本地浏览器 localStorage；
@@ -494,21 +494,12 @@
     if(!playTotal) return 0;
     return Math.max(0, Math.min(playTotal, (Date.now() - playStartAt) / 1000));
   }
-  var PROG_CELLS = 24;          /* 进度条 = 24 个像素格子（像素风色块） */
-  function buildProgCells(){
-    var box = document.getElementById("plProgCells");
-    if(!box || box.children.length) return;
-    for(var i = 0; i < PROG_CELLS; i++) box.appendChild(document.createElement("i"));
-  }
-  /* fracOverride 用于拖动时预览；不传就按时钟算 */
+  /* fracOverride 用于拖动时预览；不传就按时钟算（无极调节：连续宽度，2026-10-06 用户定） */
   function paintProg(fracOverride){
     var el = progElapsed();
     var f = (typeof fracOverride === "number") ? fracOverride : (playTotal ? (el / playTotal) : 0);
-    var box = document.getElementById("plProgCells");
-    if(box){
-      var lit = Math.round(f * PROG_CELLS);
-      for(var i = 0; i < box.children.length; i++) box.children[i].classList.toggle("on", i < lit);
-    }
+    var box = document.getElementById("plProgFill");
+    if(box) box.style.width = (f * 100) + "%";
     var now = document.getElementById("plProgNow");
     if(now) now.textContent = fmtClock(f * (playTotal || 0));
     var tot = document.getElementById("plProgTotal");
@@ -520,7 +511,6 @@
   /* 起表：offset = 这次是从第几秒开始的（跳转后要用） */
   function startClock(offset){
     stopClock();
-    buildProgCells();
     if(!playing || !curSrc){ playTotal = 0; paintProg(); return; }
     playTotal = totalOf(curSrc);
     advAfter = advAfterOf(curSrc);
@@ -1542,6 +1532,7 @@
       if(!playTotal) return;
       ev.preventDefault();
       dragging = true;
+      bar.classList.add("dragging");
       try{ bar.setPointerCapture(ev.pointerId); }catch(e){}
       paintProg(frac(ev));
     });
@@ -1552,6 +1543,7 @@
     bar.addEventListener("pointerup", function(ev){
       if(!dragging) return;
       dragging = false;
+      bar.classList.remove("dragging");
       seekTo(frac(ev));
     });
     bar.addEventListener("pointercancel", function(){ dragging = false; paintProg(); });

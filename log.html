@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610061213">
+<link rel="stylesheet" href="css/base.css?v=202610061250">
 </head>
 <body class="page-log">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -125,7 +125,7 @@
             <iframe id="rpFrame" src="" title="录播播放器" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
             <div class="pls-prog-wrap">
               <div class="pls-prog" id="rpProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                <span class="pls-prog-cells" id="rpProgCells"></span>
+                <span class="pls-prog-fill" id="rpProgFill"></span>
               </div>
               <span class="pls-prog-t"><span id="rpProgNow">0:00</span> / <span id="rpProgTotal">—</span></span>
             </div>
@@ -155,7 +155,7 @@
 
 <!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
 <script src="data/replays.js?v=202610061120"></script>
-<script src="js/shared.js?v=202610061145"></script>
+<script src="js/shared.js?v=202610061250"></script>
 <script>
 /* 啾啾出勤记录！录播站
    数据在 data/replays.js（window.CHU2U_REPLAYS + window.CHU2U_REPLAY_TAGS）；
@@ -360,7 +360,7 @@
   /* ---------- 进度条（2026-10-06 用户要求：录播台的播放器也加一个） ----------
      估算进度 + 点/拖跳转（带 t=秒 重载 iframe）；公共逻辑在 js/shared.js 的 window.chu2uProg */
   var prog = window.chu2uProg ? window.chu2uProg({
-    prog: "rpProg", cells: "rpProgCells", now: "rpProgNow", total: "rpProgTotal",
+    prog: "rpProg", fill: "rpProgFill", now: "rpProgNow", total: "rpProgTotal",
     seek: function(sec){
       if(!playing) return;
       frame.src = playerURL(playing.bvid, curPage) + "&t=" + sec;

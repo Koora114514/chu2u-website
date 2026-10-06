@@ -2509,16 +2509,17 @@ body.dark .rp-now{
 }
 .rp-frame-wrap .pls-prog-t{color:#f2f4e2}
 
-/* 进度条：一排像素格子（色块），走过的格子点亮 —— 比光滑进度条更像素风 */
+/* 进度条：无极调节（2026-10-06 用户定「不要一档一档的」）——
+   连续填充条，但保持像素风：平涂色块 + 顶部一条硬高光，不做模糊渐变 */
 .pls-prog-wrap{display:flex;align-items:center;gap:10px;margin-top:12px}
-.pls-prog{position:relative;flex:1 1 auto;display:flex;gap:2px;height:14px;cursor:pointer;
-  padding:2px;background:rgba(139,145,80,.18);box-shadow:2px 2px 0 rgba(139,145,80,.25)}
+.pls-prog{position:relative;flex:1 1 auto;height:14px;cursor:pointer;
+  padding:2px;background:rgba(139,145,80,.20);box-shadow:2px 2px 0 rgba(139,145,80,.25)}
 .pls-prog:focus-visible{outline:2px solid var(--olive-deep);outline-offset:2px}
-.pls-prog-cells{display:flex;gap:2px;flex:1 1 auto}
-.pls-prog-cells i{flex:1 1 0;background:rgba(139,145,80,.28);display:block}
-.pls-prog-cells i.on{background:var(--olive-deep);box-shadow:inset 0 2px 0 rgba(255,255,255,.45)}
-body.dark .pls-prog-cells i{background:rgba(191,197,111,.22)}
-body.dark .pls-prog-cells i.on{background:var(--olive-deep)}
+.pls-prog-fill{display:block;height:100%;width:0;background:var(--olive-deep);
+  box-shadow:inset 0 2px 0 rgba(255,255,255,.45);
+  transition:width .12s linear}
+.pls-prog.dragging .pls-prog-fill{transition:none}    /* 拖动时跟手，不要过渡 */
+body.dark .pls-prog-fill{background:var(--olive-deep)}
 .pls-prog-t{font-size:12px;color:var(--ink-soft);letter-spacing:1px;white-space:nowrap;
   font-variant-numeric:tabular-nums}
 
