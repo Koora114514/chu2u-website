@@ -2500,6 +2500,15 @@ body.dark .rp-now{
   box-shadow:2px 2px 0 rgba(139,145,80,.4);
 }
 .rp-pbtn.on{background:var(--olive-deep);color:var(--panel)}
+/* 录播站 / 动态站：进度条做成「视频画面上的浮层」（2026-10-06 用户定：只在视频界面上，不要像歌单那样独立一块）
+   贴在视频框底部，底下垫一层半透明深色，视频亮暗都看得清 */
+.rp-frame-wrap{position:relative}
+.rp-frame-wrap .pls-prog-wrap{
+  position:absolute;left:8px;right:8px;bottom:8px;z-index:3;margin:0;
+  padding:5px 8px;border-radius:10px;background:rgba(12,12,20,.55);
+}
+.rp-frame-wrap .pls-prog-t{color:#f2f4e2}
+
 /* 进度条：一排像素格子（色块），走过的格子点亮 —— 比光滑进度条更像素风 */
 .pls-prog-wrap{display:flex;align-items:center;gap:10px;margin-top:12px}
 .pls-prog{position:relative;flex:1 1 auto;display:flex;gap:2px;height:14px;cursor:pointer;

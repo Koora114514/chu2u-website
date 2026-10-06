@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610061114">
+<link rel="stylesheet" href="css/base.css?v=202610061213">
 </head>
 <body class="page-log">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -123,18 +123,19 @@
           </div>
           <div class="rp-frame-wrap">
             <iframe id="rpFrame" src="" title="录播播放器" allow="autoplay; fullscreen" allowfullscreen referrerpolicy="no-referrer" hidden></iframe>
+            <div class="pls-prog-wrap">
+              <div class="pls-prog" id="rpProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span class="pls-prog-cells" id="rpProgCells"></span>
+              </div>
+              <span class="pls-prog-t"><span id="rpProgNow">0:00</span> / <span id="rpProgTotal">—</span></span>
+            </div>
             <div class="rp-ph" id="rpPh">🎬 点一场录播<br>在这里播放 ⭐</div>
           </div>
         </div>
         <div class="rp-now pixel-card" id="rpNowCard">
           <div class="rp-now-t">还没有播放任何录播</div>
           <div class="rp-now-meta" id="rpNowMeta">点列表里的「▶ 播放」，或打开「24h 连播」当电台听 ⭐</div>
-          <div class="pls-prog-wrap">
-            <div class="pls-prog" id="rpProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-              <span class="pls-prog-cells" id="rpProgCells"></span>
-            </div>
-            <span class="pls-prog-t"><span id="rpProgNow">0:00</span> / <span id="rpProgTotal">—</span></span>
-          </div>
+
         </div>
       </aside>
     </div>
