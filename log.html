@@ -129,6 +129,12 @@
         <div class="rp-now pixel-card" id="rpNowCard">
           <div class="rp-now-t">还没有播放任何录播</div>
           <div class="rp-now-meta" id="rpNowMeta">点列表里的「▶ 播放」，或打开「24h 连播」当电台听 ⭐</div>
+          <div class="pls-prog-wrap">
+            <div class="pls-prog" id="rpProg" role="slider" tabindex="0" aria-label="播放进度（按已知时长估算，点或拖可跳转）" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span class="pls-prog-cells" id="rpProgCells"></span>
+            </div>
+            <span class="pls-prog-t"><span id="rpProgNow">0:00</span> / <span id="rpProgTotal">—</span></span>
+          </div>
         </div>
       </aside>
     </div>
@@ -349,6 +355,19 @@
     if(window.toast) window.toast(muted ? "已静音" : "声音已开");
   });
   var ph = document.getElementById("rpPh");
+
+  /* ---------- 进度条（2026-10-06 用户要求：录播台的播放器也加一个） ----------
+     估算进度 + 点/拖跳转（带 t=秒 重载 iframe）；公共逻辑在 js/shared.js 的 window.chu2uProg */
+  var prog = window.chu2uProg ? window.chu2uProg({
+    prog: "rpProg", cells: "rpProgCells", now: "rpProgNow", total: "rpProgTotal",
+    seek: function(sec){
+      if(!playing) return;
+      frame.src = playerURL(playing.bvid, curPage) + "&t=" + sec;
+      prog.run(playing.sec || 0, sec);
+      if(window.toast) toast("跳到 " + Math.floor(sec / 60) + ":" + ((sec % 60) < 10 ? "0" : "") + (sec % 60) + "（重新缓冲几秒）");
+    }
+  }) : null;
+
   function openPlayer(it, pg){
     playing = it;
     curPage = pg || 1;
@@ -367,6 +386,7 @@
     document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + it.bvid;
     renderPages();
     frame.src = playerURL(it.bvid, curPage);
+    if(prog) prog.run(it.sec || 0, 0);     /* 进度条重新起表（sec = 这场录播的总秒数） */
     armTimer();
     player.scrollIntoView({behavior: "smooth", block: "nearest"});
   }

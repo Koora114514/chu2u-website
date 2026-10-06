@@ -472,8 +472,14 @@
       + "&autoplay=1&high_quality=1&danmaku=0&as_wide=1&muted=" + (muted ? "1" : "0");
   }
   /* 这一条源要播多久（秒）：歌切按真实时长 +8s 收尾；录播按识别跨度 +25s（探针间隔误差）+5s 缓冲 */
+  /* 进度条上显示的「总长」= 已知的歌曲长度（跳转范围也按它算，绝不越界——
+     越界的话 B 站播放器会当成无效时间点、直接从 0 重播，用户会以为「定位没反应」）；
+     自动切歌额外留的缓冲（探针误差等）走 advAfter()，不计进可跳范围 */
   function totalOf(src){
-    return (src.sec || 0) + (src.kind === "sing" ? PROBE_GAP / 1000 : 8) + 5;
+    return Math.max(1, src.sec || 0);
+  }
+  function advAfterOf(src){
+    return totalOf(src) + (src.kind === "sing" ? PROBE_GAP / 1000 : 8) + 5;
   }
 
   /* ---------- 播放核心（B 站外链 iframe） ---------- */
@@ -483,7 +489,7 @@
      点/拖进度条 = 带新的 t 参数重载 iframe —— 真能跳，代价是重新缓冲几秒。
      2026-10-06 用户报「播完不自动切下一首」：原因是原来靠 iframe 每次 load 重新武装计时器，
      加载事件多来几次就把倒计时无限重置了 —— 现在改成时钟只锚定一次，时钟走到头就切歌。 */
-  var playStartAt = 0, playTotal = 0, progTimer = null, seekOffset = 0, anchored = false;
+  var playStartAt = 0, playTotal = 0, advAfter = 0, progTimer = null, seekOffset = 0, anchored = false;
   function progElapsed(){
     if(!playTotal) return 0;
     return Math.max(0, Math.min(playTotal, (Date.now() - playStartAt) / 1000));
@@ -517,6 +523,7 @@
     buildProgCells();
     if(!playing || !curSrc){ playTotal = 0; paintProg(); return; }
     playTotal = totalOf(curSrc);
+    advAfter = advAfterOf(curSrc);
     seekOffset = Math.max(0, offset || 0);
     playStartAt = Date.now() - seekOffset * 1000;
     anchored = false;
@@ -524,7 +531,8 @@
     progTimer = setInterval(function(){
       if(!playing){ stopClock(); return; }
       paintProg();
-      if(playTotal && progElapsed() >= playTotal - 0.3) advance();   /* 放完 → 按模式切下一首 */
+      /* 进度条按「已知长度」走满；自动切歌要等 advAfter（多留一点，别把歌尾切掉） */
+      if(advAfter && (Date.now() - playStartAt) / 1000 >= advAfter) advance();
     }, 500);
   }
   function advance(){
@@ -537,8 +545,10 @@
   }
   /* 跳转：歌切从 0 起算、录播从 start 起算，都是「源内偏移 + base」 */
   function seekTo(frac){
-    if(!curSrc || !playTotal) return;
-    var off = Math.max(0, Math.min(1, frac)) * playTotal;
+    if(!curSrc){ toast("先点一首歌再拖进度条 ⭐"); return; }
+    if(!playTotal) return;
+    /* 夹到 98%：留一点余量，免得正好跳到视频结尾之外（那样 B 站会从 0 重播） */
+    var off = Math.max(0, Math.min(0.98, frac)) * playTotal;
     var base = curSrc.t || 0;
     frame.src = playerURL({bvid: curSrc.bvid, page: curSrc.page, t: Math.round(base + off)});
     playing = true; frame.hidden = false; ph.hidden = true;

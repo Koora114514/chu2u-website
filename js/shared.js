@@ -111,6 +111,81 @@
     els.forEach(function(e){ io.observe(e); });
   })();
 
+
+  /* ---------- 通用播放器进度条（B 站外链播放器专用，2026-10-06） ----------
+     跨域读不到播放器真实进度 → 本地时钟按「已知时长」估算；
+     点/拖进度条 = 让调用方用新的 t=<秒> 重载 iframe（真能跳，代价是重新缓冲几秒）。
+     页面上先放好这几个元素：
+       <div class="pls-prog" id="xxProg"><span class="pls-prog-cells" id="xxProgCells"></span></div>
+       <span><span id="xxProgNow">0:00</span> / <span id="xxProgTotal">—</span></span>
+     cfg = { prog, cells, now, total,   // 元素 id
+             seek(sec) }                // 跳到第几秒（页面自己拼新的 iframe 地址）
+     返回 { run(sec), stop(), elapsed(), paint() }。 */
+  window.chu2uProg = function(cfg){
+    var bar = document.getElementById(cfg.prog);
+    var cells = document.getElementById(cfg.cells);
+    var nowEl = document.getElementById(cfg.now);
+    var totEl = document.getElementById(cfg.total);
+    if(!bar) return null;
+    var CELLS = 24, startAt = 0, total = 0, timer = null;
+    function fmt(sec){
+      sec = Math.max(0, Math.round(sec || 0));
+      return Math.floor(sec / 60) + ":" + ((sec % 60) < 10 ? "0" : "") + (sec % 60);
+    }
+    function elapsed(){ return total ? Math.max(0, Math.min(total, (Date.now() - startAt) / 1000)) : 0; }
+    function paint(f){
+      var frac = (typeof f === "number") ? f : (total ? elapsed() / total : 0);
+      if(cells){
+        if(!cells.children.length){
+          for(var i = 0; i < CELLS; i++) cells.appendChild(document.createElement("i"));
+        }
+        var lit = Math.round(frac * CELLS);
+        for(var k = 0; k < cells.children.length; k++) cells.children[k].classList.toggle("on", k < lit);
+      }
+      if(nowEl) nowEl.textContent = fmt(frac * (total || 0));
+      if(totEl) totEl.textContent = total ? ("约 " + fmt(total)) : "—";
+      bar.setAttribute("aria-valuenow", String(Math.round(frac * 100)));
+    }
+    function stop(){ if(timer){ clearInterval(timer); timer = null; } total = 0; paint(); }
+    /* run(总秒数, 从第几秒开始) —— 跳转后要把起点挪到跳过去的位置 */
+    function run(sec, offset){
+      if(timer){ clearInterval(timer); timer = null; }
+      total = Math.max(0, sec || 0);
+      startAt = Date.now() - Math.max(0, offset || 0) * 1000;
+      paint();
+      if(!total) return;
+      timer = setInterval(paint, 500);
+    }
+    function frac(ev){
+      var r = bar.getBoundingClientRect();
+      return Math.max(0, Math.min(1, (ev.clientX - r.left) / Math.max(1, r.width)));
+    }
+    var dragging = false;
+    bar.addEventListener("pointerdown", function(ev){
+      if(!total) return;
+      ev.preventDefault();
+      dragging = true;
+      try{ bar.setPointerCapture(ev.pointerId); }catch(e){}
+      paint(frac(ev));
+    });
+    bar.addEventListener("pointermove", function(ev){ if(dragging) paint(frac(ev)); });
+    bar.addEventListener("pointerup", function(ev){
+      if(!dragging) return;
+      dragging = false;
+      var f = Math.min(0.98, frac(ev));      /* 夹 98%：越界的话 B 站会当成无效时间点、从 0 重播 */
+      if(cfg.seek) cfg.seek(Math.round(f * total));
+    });
+    bar.addEventListener("pointercancel", function(){ dragging = false; paint(); });
+    bar.addEventListener("keydown", function(ev){
+      if(!total) return;
+      var d = ev.key === "ArrowRight" ? 0.05 : (ev.key === "ArrowLeft" ? -0.05 : 0);
+      if(!d) return;
+      ev.preventDefault();
+      if(cfg.seek) cfg.seek(Math.round(Math.max(0, Math.min(0.98, elapsed() / total + d)) * total));
+    });
+    return {run: run, stop: stop, elapsed: elapsed, paint: paint};
+  };
+
   /* ---------- 直播间开播状态监控（读 data/live.js：本机计划任务每 2 分钟刷新，状态变化时由「自动上线」推送到线上。
        数据新鲜就照实显示；超过 12 小时没更新则一律显示「未开播」——宁可保守，也不谎报直播中） ---------- */
   (function(){
