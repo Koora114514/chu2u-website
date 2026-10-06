@@ -612,23 +612,12 @@
     renderQueue();
   }
 
-  /* ---------- 切到后台就冻结（2026-10-06 用户报「我没点播放，它自己就开始放了」） ----------
-     原因：连播是本地时钟驱动的，页面切到别的标签/窗口后时钟照跑、一首接一首自动往下切，
-     回来就变成「我没点过，它自己在放」。现在页面一进后台就停表，回到前台再从原来的位置接着算，
-     这样：后台不会偷偷换歌，回来也不会因为超时而突然切一首。 */
-  document.addEventListener("visibilitychange", function(){
-    if(document.hidden){
-      hiddenElapsed = progElapsed();
-      hiddenAt = Date.now();
-      stopClock();
-      /* 2026-10-06 用户明确要求：切到别的页面/标签就自己中断，别在后台一直响 */
-      stopPlay();
-    } else if(hiddenAt && playing && curSrc){
-      hiddenAt = 0;
-      startClock(hiddenElapsed);      /* 从刚才停下的位置接着走 */
-    }
-  });
-  var hiddenAt = 0, hiddenElapsed = 0;
+  /* ---------- 后台照播，关掉页面才停（2026-10-06 用户最终定的规矩） ----------
+     需求原话：「点击播放器就能挂着响，只有我关掉界面才停」——
+     所以切标签/切窗口/最小化都**不打断**（浏览器本来就允许后台放声音），
+     连播时钟也照常走（挂着响的电台感）；
+     只有「前进/后退/关标签/关浏览器」这种真的离开页面，才 pagehide 掐断。
+     （注：如果整台浏览器是被"后台继续运行"模式留在进程里，声音会一直到那个进程退出为止，这由浏览器决定，网页管不了。） */
   window.addEventListener("pagehide", function(){ stopPlay(); });
 
   /* ---------- 播放器栏 UI ---------- */

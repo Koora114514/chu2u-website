@@ -478,7 +478,6 @@
     ph.hidden = false;
     playing = null;
   }
-  document.addEventListener("visibilitychange", function(){ if(document.hidden) stopPlayback(); });
   window.addEventListener("pagehide", function(){ stopPlayback(); });
   document.getElementById("rpClose").addEventListener("click", function(){
     if(document.fullscreenElement){
