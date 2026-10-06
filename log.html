@@ -154,7 +154,7 @@
 
 <!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
 <script src="data/replays.js?v=202610061120"></script>
-<script src="js/shared.js"></script>
+<script src="js/shared.js?v=202610061145"></script>
 <script>
 /* 啾啾出勤记录！录播站
    数据在 data/replays.js（window.CHU2U_REPLAYS + window.CHU2U_REPLAY_TAGS）；
@@ -404,6 +404,7 @@
           e.stopPropagation();
           curPage = n;
           frame.src = playerURL(playing.bvid, curPage);
+          if(prog) prog.run(playing.sec || 0, 0);   /* 换分P = 从这一P的 0 起算，进度条重新起表 */
           renderPages();
         });
         box.appendChild(b);
