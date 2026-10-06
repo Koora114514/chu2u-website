@@ -470,6 +470,16 @@
     document.getElementById("rpClose").title = fs ? "退出全屏（视频继续播）" : "收起播放器（停止播放）";
     document.getElementById("rpFs").textContent = fs ? "⛶ 退出全屏" : "⛶ 全屏";
   });
+  /* 真正停播（✕ 键 / 离开页面都走这条）——2026-10-06 用户定：切到别的页面就自己中断 */
+  function stopPlayback(){
+    frame.src = "";
+    if(prog) prog.stop();
+    frame.hidden = true;
+    ph.hidden = false;
+    playing = null;
+  }
+  document.addEventListener("visibilitychange", function(){ if(document.hidden) stopPlayback(); });
+  window.addEventListener("pagehide", function(){ stopPlayback(); });
   document.getElementById("rpClose").addEventListener("click", function(){
     if(document.fullscreenElement){
       if(document.exitFullscreen) document.exitFullscreen();

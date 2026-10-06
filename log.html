@@ -419,6 +419,20 @@
     if(el.requestFullscreen) el.requestFullscreen();
     else if(el.webkitRequestFullscreen) el.webkitRequestFullscreen();
   });
+  /* 真正停播：清空 iframe src（= 停止播放）+ 停掉连播计时器 + 收起画面。
+     ✕ 键、以及「切到别的页面/标签」都走这一条（2026-10-06 用户定：离开页面就自己中断） */
+  function stopPlayback(){
+    clearTimer();
+    frame.src = "";
+    if(prog) prog.stop();
+    frame.hidden = true;
+    ph.hidden = false;
+    playing = null;
+  }
+  /* 离开页面就停：切到别的标签/窗口（visibilitychange）、前进后退或关闭（pagehide）都断掉
+     —— 否则视频会在后台一直响，回来还可能接着放，用户会以为「自己就开始放了」 */
+  document.addEventListener("visibilitychange", function(){ if(document.hidden) stopPlayback(); });
+  window.addEventListener("pagehide", function(){ stopPlayback(); });
   document.getElementById("rpClose").addEventListener("click", function(){
     /* 全屏状态下点 ✕ = 只退出全屏，视频继续播（2026-10-04 用户定）；
        非全屏时才是「收起播放器、停止播放」 */

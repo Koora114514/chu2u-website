@@ -621,12 +621,15 @@
       hiddenElapsed = progElapsed();
       hiddenAt = Date.now();
       stopClock();
+      /* 2026-10-06 用户明确要求：切到别的页面/标签就自己中断，别在后台一直响 */
+      stopPlay();
     } else if(hiddenAt && playing && curSrc){
       hiddenAt = 0;
       startClock(hiddenElapsed);      /* 从刚才停下的位置接着走 */
     }
   });
   var hiddenAt = 0, hiddenElapsed = 0;
+  window.addEventListener("pagehide", function(){ stopPlay(); });
 
   /* ---------- 播放器栏 UI ---------- */
   function paintMute(){
