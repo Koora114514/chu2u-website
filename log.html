@@ -154,7 +154,7 @@
 <img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
 
 <!-- 录播站数据（每天 9 点自动识别 + 管理台人工编辑；字段说明见该文件注释；?v= 每次更新数据时改成「今天+时分」绕过缓存） -->
-<script src="data/replays.js?v=202610061120"></script>
+<script src="data/replays.js?v=202610061330"></script>
 <script src="js/shared.js?v=202610061250"></script>
 <script>
 /* 啾啾出勤记录！录播站
@@ -364,10 +364,23 @@
     seek: function(sec){
       if(!playing) return;
       frame.src = playerURL(playing.bvid, curPage) + "&t=" + sec;
-      prog.run(playing.sec || 0, sec);
+      prog.run(partSec(), sec);
       if(window.toast) toast("跳到 " + Math.floor(sec / 60) + ":" + ((sec % 60) < 10 ? "0" : "") + (sec % 60) + "（重新缓冲几秒）");
     }
   }) : null;
+
+
+  /* 当前正在播的这一P有多长（秒）——进度条总长按它算，不再用「全部分P之和」
+     （2026-10-06 用户报：分P视频的进度条和实际时间对不上。数据里 pdurs 是每个分P的时长，
+       例如 8179 秒那条其实是 651+5405+2123，P1 只有 10 分钟，用总和当总长就全错） */
+  function partSec(){
+    if(!playing) return 0;
+    var pds = String(playing.pdurs || "").split(",");
+    var d = parseInt(pds[(curPage || 1) - 1], 10);
+    if(d > 0) return d;
+    if(playing.pages > 0 && playing.sec) return Math.round(playing.sec / playing.pages);   /* 没分P数据就按平均估 */
+    return playing.sec || 0;
+  }
 
   function openPlayer(it, pg){
     playing = it;
@@ -387,7 +400,7 @@
     document.getElementById("rpBili").href = "https://www.bilibili.com/video/" + it.bvid;
     renderPages();
     frame.src = playerURL(it.bvid, curPage);
-    if(prog) prog.run(it.sec || 0, 0);     /* 进度条重新起表（sec = 这场录播的总秒数） */
+    if(prog) prog.run(partSec(), 0);       /* 进度条按「当前这一P」的时长起表 */
     armTimer();
     player.scrollIntoView({behavior: "smooth", block: "nearest"});
   }
@@ -405,7 +418,7 @@
           e.stopPropagation();
           curPage = n;
           frame.src = playerURL(playing.bvid, curPage);
-          if(prog) prog.run(playing.sec || 0, 0);   /* 换分P = 从这一P的 0 起算，进度条重新起表 */
+          if(prog) prog.run(partSec(), 0);   /* 换分P = 从这一P的 0 起算，进度条重新起表 */
           renderPages();
         });
         box.appendChild(b);
@@ -458,8 +471,8 @@
   function clearTimer(){ if(timer){ clearTimeout(timer); timer = null; } }
   function armTimer(){
     clearTimer();
-    if(!cont || !playing || !playing.sec) return;
-    timer = setTimeout(advance, playing.sec * 1000 + 20000);   /* 总时长 + 20s 缓冲 */
+    if(!cont || !playing || !partSec()) return;
+    timer = setTimeout(advance, partSec() * 1000 + 20000);   /* 当前这一P的时长 + 20s 缓冲（多分P不再等整场） */
   }
   function advance(){
     /* 在「当前筛选+搜索顺序」里找当前这场后面的下一场，循环 */

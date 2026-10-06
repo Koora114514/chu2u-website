@@ -537,6 +537,9 @@
   function seekTo(frac){
     if(!curSrc){ toast("先点一首歌再拖进度条 ⭐"); return; }
     if(!playTotal) return;
+    /* 拖到最右边 = 这首就当放完了，直接按播放模式切下一首（2026-10-06 用户报：
+       原来拖到最右只跳到 98%，还要等那 30 秒「防切歌尾」的余量才切，看起来就像「拖到底不切」） */
+    if(frac >= 0.97){ advance(); return; }
     /* 夹到 98%：留一点余量，免得正好跳到视频结尾之外（那样 B 站会从 0 重播） */
     var off = Math.max(0, Math.min(0.98, frac)) * playTotal;
     var base = curSrc.t || 0;
