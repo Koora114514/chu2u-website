@@ -352,11 +352,20 @@
     var open = box.classList.toggle("is-open");
     btn.textContent = open ? "收起" : "展开";
   });
+  /* 2026-10-06 用户定：动态更新后一律「时间最新在前」——
+     置顶的先放最上面，其余按发布时间新→旧（数据文件里的先后顺序不承重） */
+  function dynSort(a, b){
+    if(!!a.pin !== !!b.pin) return a.pin ? -1 : 1;
+    var ta = String(a.time || ""), tb = String(b.time || "");
+    if(ta === tb) return 0;
+    return ta > tb ? -1 : 1;     /* YYYY-MM-DD HH:MM 直接按字符串比 */
+  }
   function renderFeed(){
     var vis = DYNS.filter(function(x){
       if(curDate === "all") return true;
       return (x.time || "").indexOf(curDate) === 0;
     });
+    vis.sort(dynSort);
     totalPages = Math.max(1, Math.ceil(vis.length / PER_PAGE));
     if(page > totalPages) page = totalPages;
     var slice = vis.slice((page - 1) * PER_PAGE, page * PER_PAGE);
