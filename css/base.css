@@ -2828,25 +2828,29 @@ body.dark .pl-panel .pl-list-card{border-top-color:#3a3a5c}
      ① 「往左边靠一点」→ right 12px 档位改成 22px；② 「不要覆盖飞船啾的工作范围」
      → 飞船啾在 bottom:44px（占 44~96px）、播放条占 44~100px，所以这里取 126px 让出空间。 */
   /* 2026-10-07 用户定：在 46px 基础上放大两倍（92px），再往左挪一个身位（right = 22 + 92 = 114px） */
-  position:fixed;right:114px;bottom:126px;z-index:8500;
-  width:92px;height:92px;padding:0;cursor:pointer;
-  border:none;border-radius:50%;     /* 2026-10-07 用户定：描边去掉，只留一圈很细的渐变边 */
+  /* 漂浮交给外层 .cry-wrap（CSS 动画会盖掉 :active，所以两者必须分开写，不然按下去没反应） */
+  position:static;width:92px;height:92px;padding:0;cursor:pointer;
+  border:none;border-radius:50%;
   background-image:linear-gradient(180deg,#fbfcf2,#d4da7b);
   box-shadow:0 4px 16px rgba(122,136,70,.35);
   display:grid;place-items:center;
-  transition:transform .15s ease, box-shadow .15s ease;
-  animation:cryBob 2.5s ease-in-out infinite;
+  transition:transform .22s cubic-bezier(.175,.885,.32,1.275), box-shadow .15s ease;
 }
-.cry-fab img{width:84px;height:84px;border-radius:50%;display:block;image-rendering:auto}   /* 留 4px 渐变细边 */
-.cry-fab:active{transform:scale(.92)}
+/* 外层负责漂浮（对标站 gentleBob：2.5s 上下 6px） */
+.cry-wrap{position:fixed;right:114px;bottom:126px;z-index:8500;
+  animation:cryBob 2.5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.cry-wrap{animation:none}}
+.cry-fab img{width:88px;height:88px;border-radius:50%;display:block;image-rendering:auto}   /* 只留 2px 渐变细边 */
+.cry-fab:active{transform:scale(.86)}   /* 按下压缩、松手弹性回弹（受击反馈） */
 .cry-fab:hover{box-shadow:0 6px 20px rgba(122,136,70,.5)}
 @keyframes cryBob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
-@media(prefers-reduced-motion:reduce){.cry-fab{animation:none}}
+
 body.dark .cry-fab{
   background-image:linear-gradient(180deg,#1b1b38,#22224a);box-shadow:0 4px 16px rgba(0,0,0,.5)}
 /* 移动端：抬到播放条之上 */
-@media(max-width:720px){.cry-fab{right:104px;bottom:216px;width:72px;height:72px}
-  .cry-fab img{width:66px;height:66px}}   /* 手机端同样只留 3px 细边
+@media(max-width:720px){.cry-wrap{right:104px;bottom:216px}
+  .cry-fab{width:72px;height:72px}
+  .cry-fab img{width:68px;height:68px}}
 
 /* 星火粒子（对标站 .motion-spark-particle 的观感：小、慢、平滑） */
 .cry-spark{position:fixed;z-index:9200;pointer-events:none;line-height:1;
