@@ -1,4813 +1,11725 @@
-// 本文件由 维护/bin/publish.py 从 维护/歌库/songs.json 生成，请勿手改。
-// 生成时间：2026-10-07 00:56:18   共 124 首（另有手写占位 0 条）
-// 字段：key/title/artist/lang/tags/singCount/lastSung/clips[]/src/cover
+// 本文件由 维护/歌切曲库.py 从 歌切下载清单.json 生成，请勿手改。
+// 人工调整（改名/换音源/剔除）在 维护/歌库/曲库人工调整.json，改完重跑本脚本生效。
+// 生成时间：2026-10-07 22:59:37   共 249 首（只收歌切；同一首歌只留一个音源）
+// 字段：key/title/artist/lang/tags/tier/singCount/lastSung/sings[]/clips[]/link/src/dur/cover
 window.CHU2U_SONGS = [
  {
-  "key": "439390801",
-  "title": "Haru Yo, Koi",
-  "titleShazam": "Haru Yo, Koi",
-  "artist": "Yumi Matsutoya",
-  "artistSearch": "Yumi Matsutoya",
-  "album": "The Dancing Sun",
-  "lang": "日语",
+  "key": "BV1WkHo64E88_p1",
+  "title": "花",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
   "tags": [
-   "J-POP"
+   "精修"
   ],
-  "genres": [
-   "J-Pop"
-  ],
+  "genres": [],
   "emoji": "🎵",
-  "singCount": 2,
+  "tier": 3,
+  "singCount": 1,
+  "lastSung": "2026-10-06",
+  "sings": [
+   {
+    "date": "2026-10-06",
+    "bvid": "BV1WkHo64E88",
+    "start": 0,
+    "end": 213,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1WkHo64E88",
+    "page": 1,
+    "key": "BV1WkHo64E88_p1",
+    "tier": 3,
+    "title": "【羽啾chu2u|歌切精修】“何时才能知晓 自己也是美丽的呢”「花/Guiano/花谱」",
+    "author": "UP 49093035",
+    "date": "2026-10-06",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1WkHo64E88"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1WkHo64E88",
+  "src": "music/【羽啾chu2u_歌切精修】“何时才能知晓 自己也是美丽的呢”「花_Guiano_花谱」_BV1WkHo64E88_1.m4a",
+  "cover": "",
+  "dur": 213,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1e1Hq6XExm_p1",
+  "title": "夜明けと蛍",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 3,
   "lastSung": "2026-10-04",
   "sings": [
    {
-    "date": "2026-10-03",
-    "bvid": "BV1hLHq6VEAR",
-    "start": 325,
-    "end": 387,
-    "votes": 3,
-    "evidence": "shazam×3"
+    "date": "2026-08-18",
+    "bvid": "BV1e1Hq6XExm",
+    "start": 0,
+    "end": 316,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1e1Hq6XExm",
+    "start": 0,
+    "end": 316,
+    "votes": 0
    },
    {
     "date": "2026-10-04",
-    "bvid": "BV1QtHi6LEz3",
-    "start": 175,
-    "end": 237,
-    "votes": 3,
-    "evidence": "shazam×3"
+    "bvid": "BV1e1Hq6XExm",
+    "start": 0,
+    "end": 316,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "clips": [
+   {
+    "bvid": "BV1e1Hq6XExm",
+    "page": 1,
+    "key": "BV1e1Hq6XExm_p1",
+    "tier": 3,
+    "title": "【羽啾chu2u|歌切精修】“如果我想飞往地球的另一面呢”「夜明けと蛍/n-buna」",
+    "author": "UP 49093035",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1e1Hq6XExm"
+   },
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 4,
+    "key": "BV1is8G6zEXR_p4",
+    "tier": 1,
+    "title": "夜明けと蛍",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR?p=4"
+   },
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 5,
+    "key": "BV1fJHB6bEfF_p5",
+    "tier": 1,
+    "title": "夜明けと蛍",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=5"
+   },
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 17,
+    "key": "BV1bV8X6uEaS_p17",
+    "tier": 1,
+    "title": "夜明けと蛍",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=17"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1e1Hq6XExm",
+  "src": "music/【羽啾chu2u_歌切精修】“如果我想飞往地球的另一面呢”「夜明けと蛍_n-buna」_BV1e1Hq6XExm_1.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 316,
+  "audioStatus": "ok"
  },
  {
-  "key": "662388465",
-  "title": "Samsa",
-  "titleShazam": "Samsa",
-  "artist": "Teniwoha",
-  "artistSearch": "Teniwoha",
-  "album": "Samsa - Single",
-  "lang": "日语",
+  "key": "BV1KVak6jEfT_p1",
+  "title": "踊り子",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
   "tags": [
-   "J-POP"
+   "精修"
   ],
-  "genres": [
-   "J-Pop"
-  ],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 3,
+  "singCount": 3,
+  "lastSung": "2026-10-02",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1KVak6jEfT",
+    "start": 0,
+    "end": 226,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KVak6jEfT",
+    "start": 0,
+    "end": 226,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-02",
+    "bvid": "BV1KVak6jEfT",
+    "start": 0,
+    "end": 226,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KVak6jEfT",
+    "page": 1,
+    "key": "BV1KVak6jEfT_p1",
+    "tier": 3,
+    "title": "【羽啾chu2u|歌切精修】“为那不会凋零的爱意而歌唱”「踊り子/Vaundy」",
+    "author": "UP 49093035",
+    "date": "2026-10-02",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KVak6jEfT"
+   },
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 10,
+    "key": "BV18Xew65Ee9_p10",
+    "tier": 1,
+    "title": "踊り子",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=10"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 9,
+    "key": "BV1KNai6tEFf_p9",
+    "tier": 1,
+    "title": "踊り子",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KVak6jEfT",
+  "src": "music/【羽啾chu2u_歌切精修】“为那不会凋零的爱意而歌唱”「踊り子_Vaundy」_BV1KVak6jEfT_1.m4a",
+  "cover": "",
+  "dur": 226,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aFYA61EpJ_p1",
+  "title": "プロポーズ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 4,
+  "lastSung": "2026-10-01",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1aFYA61EpJ",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1aFYA61EpJ",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1aFYA61EpJ",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-01",
+    "bvid": "BV1aFYA61EpJ",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aFYA61EpJ",
+    "page": 1,
+    "key": "BV1aFYA61EpJ_p1",
+    "tier": 3,
+    "title": "【羽啾chu2u|歌切精修】“拜托了 温柔地拥住我”「プロポーズ/内緒のピアス/可不」",
+    "author": "UP 49093035",
+    "date": "2026-10-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aFYA61EpJ"
+   },
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 4,
+    "key": "BV1GWud6qEb7_p4",
+    "tier": 1,
+    "title": "プロポーズ",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=4"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 1,
+    "key": "BV1KNai6tEFf_p1",
+    "tier": 1,
+    "title": "プロポーズ（求婚）",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf"
+   },
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 12,
+    "key": "BV1mXhw6YEHk_p12",
+    "tier": 1,
+    "title": "プロポーズ",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aFYA61EpJ",
+  "src": "music/【羽啾chu2u_歌切精修】“拜托了 温柔地拥住我”「プロポーズ_内緒のピアス_可不」_BV1aFYA61EpJ_1.m4a",
+  "cover": "",
+  "dur": 234,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1s1hT6CEBR_p1",
+  "title": "二时3",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 1,
+  "lastSung": "2026-08-25",
+  "sings": [
+   {
+    "date": "2026-08-25",
+    "bvid": "BV1s1hT6CEBR",
+    "start": 0,
+    "end": 284,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1s1hT6CEBR",
+    "page": 1,
+    "key": "BV1s1hT6CEBR_p1",
+    "tier": 3,
+    "title": "二时3",
+    "author": "UP 317092649",
+    "date": "2026-08-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1s1hT6CEBR"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1s1hT6CEBR",
+  "src": "music/二时3_BV1s1hT6CEBR_1.m4a",
+  "cover": "",
+  "dur": 284,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Us8S6PExs_p1",
+  "title": "实验品",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 3,
+  "lastSung": "2026-08-23",
+  "sings": [
+   {
+    "date": "2026-08-23",
+    "bvid": "BV1Us8S6PExs",
+    "start": 0,
+    "end": 211,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-03",
+    "bvid": "BV1Us8S6PExs",
+    "start": 0,
+    "end": 211,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-22",
+    "bvid": "BV1Us8S6PExs",
+    "start": 0,
+    "end": 211,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Us8S6PExs",
+    "page": 1,
+    "key": "BV1Us8S6PExs_p1",
+    "tier": 3,
+    "title": "精切实验品",
+    "author": "UP 38087508",
+    "date": "2026-08-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Us8S6PExs"
+   },
+   {
+    "bvid": "BV1wMhz6FEYA",
+    "page": 1,
+    "key": "BV1wMhz6FEYA_p1",
+    "tier": 3,
+    "title": "精切实验品",
+    "author": "UP 38087508",
+    "date": "2026-09-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1wMhz6FEYA"
+   },
+   {
+    "bvid": "BV1hxtD6vE34",
+    "page": 1,
+    "key": "BV1hxtD6vE34_p1",
+    "tier": 3,
+    "title": "精切实验品",
+    "author": "UP 38087508",
+    "date": "2026-09-03",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hxtD6vE34"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Us8S6PExs",
+  "src": "music/精切实验品_BV1Us8S6PExs_1.m4a",
+  "cover": "",
+  "dur": 211,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1tn8w6aEGw_p1",
+  "title": "真殉情",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1tn8w6aEGw",
+    "start": 0,
+    "end": 203,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1tn8w6aEGw",
+    "page": 1,
+    "key": "BV1tn8w6aEGw_p1",
+    "tier": 3,
+    "title": "真殉情",
+    "author": "UP 317092649",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1tn8w6aEGw"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1tn8w6aEGw",
+  "src": "music/真殉情_BV1tn8w6aEGw_1.m4a",
+  "cover": "",
+  "dur": 203,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1zY8n6KEBg_p1",
+  "title": "不可幸力",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "精修"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 3,
+  "singCount": 3,
+  "lastSung": "2026-08-19",
+  "sings": [
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1zY8n6KEBg",
+    "start": 0,
+    "end": 207,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-19",
+    "bvid": "BV1zY8n6KEBg",
+    "start": 0,
+    "end": 207,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1zY8n6KEBg",
+    "start": 0,
+    "end": 207,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1zY8n6KEBg",
+    "page": 1,
+    "key": "BV1zY8n6KEBg_p1",
+    "tier": 3,
+    "title": "【羽啾chu2u】《不可幸力》精修纯享版",
+    "author": "UP 317092649",
+    "date": "2026-08-19",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1zY8n6KEBg"
+   },
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 1,
+    "key": "BV1is8G6zEXR_p1",
+    "tier": 1,
+    "title": "不可幸力",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR"
+   },
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 3,
+    "key": "BV1rPaX6AEqR_p3",
+    "tier": 1,
+    "title": "不可幸力",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1zY8n6KEBg",
+  "src": "music/【羽啾chu2u】《不可幸力》精修纯享版_BV1zY8n6KEBg_1.m4a",
+  "cover": "",
+  "dur": 207,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Jjas6nEZR_p1",
+  "title": "パレード(游行)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-27",
+  "sings": [
+   {
+    "date": "2026-09-27",
+    "bvid": "BV1Jjas6nEZR",
+    "start": 0,
+    "end": 296,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Jjas6nEZR",
+    "page": 1,
+    "key": "BV1Jjas6nEZR_p1",
+    "tier": 2,
+    "title": "パレード（游行）",
+    "author": "UP 297578981",
+    "date": "2026-09-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Jjas6nEZR"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Jjas6nEZR",
+  "src": "music/パレード（游行）_BV1Jjas6nEZR_1.m4a",
+  "cover": "",
+  "dur": 296,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Jjas6nEZR_p2",
+  "title": "エイミー",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-27",
+  "sings": [
+   {
+    "date": "2026-09-27",
+    "bvid": "BV1Jjas6nEZR",
+    "start": 0,
+    "end": 212,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Jjas6nEZR",
+    "page": 2,
+    "key": "BV1Jjas6nEZR_p2",
+    "tier": 2,
+    "title": "エイミー",
+    "author": "UP 297578981",
+    "date": "2026-09-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Jjas6nEZR?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Jjas6nEZR?p=2",
+  "src": "music/エイミー_BV1Jjas6nEZR_2.m4a",
+  "cover": "",
+  "dur": 212,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Jjas6nEZR_p4",
+  "title": "Magical Word(魔法咏唱)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-27",
+  "sings": [
+   {
+    "date": "2026-09-27",
+    "bvid": "BV1Jjas6nEZR",
+    "start": 0,
+    "end": 253,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Jjas6nEZR",
+    "page": 4,
+    "key": "BV1Jjas6nEZR_p4",
+    "tier": 2,
+    "title": "Magical Word(魔法咏唱)",
+    "author": "UP 297578981",
+    "date": "2026-09-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Jjas6nEZR?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Jjas6nEZR?p=4",
+  "src": "music/Magical Word(魔法咏唱)_BV1Jjas6nEZR_4.m4a",
+  "cover": "",
+  "dur": 253,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aJhY64EeD_p4",
+  "title": "ゴーストルール(幽灵法则)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1aJhY64EeD",
+    "start": 0,
+    "end": 207,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 4,
+    "key": "BV1aJhY64EeD_p4",
+    "tier": 2,
+    "title": "ゴーストルール(幽灵法则)",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aJhY64EeD?p=4",
+  "src": "music/ゴーストルール(幽灵法则)_BV1aJhY64EeD_4.m4a",
+  "cover": "",
+  "dur": 207,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aJhY64EeD_p5",
+  "title": "土星",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1aJhY64EeD",
+    "start": 0,
+    "end": 248,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 5,
+    "key": "BV1aJhY64EeD_p5",
+    "tier": 2,
+    "title": "土星",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aJhY64EeD?p=5",
+  "src": "music/土星_BV1aJhY64EeD_5.m4a",
+  "cover": "",
+  "dur": 248,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aJhY64EeD_p6",
+  "title": "遭难",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1aJhY64EeD",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 6,
+    "key": "BV1aJhY64EeD_p6",
+    "tier": 2,
+    "title": "遭难",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aJhY64EeD?p=6",
+  "src": "music/遭难_BV1aJhY64EeD_6.m4a",
+  "cover": "",
+  "dur": 199,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aJhY64EeD_p7",
+  "title": "石膏",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1aJhY64EeD",
+    "start": 0,
+    "end": 337,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 7,
+    "key": "BV1aJhY64EeD_p7",
+    "tier": 2,
+    "title": "石膏",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aJhY64EeD?p=7",
+  "src": "music/石膏_BV1aJhY64EeD_7.m4a",
+  "cover": "",
+  "dur": 337,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1aJhY64EeD_p8",
+  "title": "赤橙(听完结尾)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [
+   "高码率伴奏"
+  ],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 2,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1aJhY64EeD",
+    "start": 0,
+    "end": 297,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 8,
+    "key": "BV1aJhY64EeD_p8",
+    "tier": 2,
+    "title": "赤橙（听完结尾）",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1aJhY64EeD?p=8",
+  "src": "music/赤橙（听完结尾）_BV1aJhY64EeD_8.m4a",
+  "cover": "",
+  "dur": 297,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p1",
+  "title": "Cherry Pop(推荐)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
   "lastSung": "2026-10-04",
   "sings": [
    {
     "date": "2026-10-04",
-    "bvid": "BV1QtHi6LEz3",
-    "start": 550,
-    "end": 662,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 140,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 1,
+    "key": "BV1fJHB6bEfF_p1",
+    "tier": 1,
+    "title": "Cherry Pop(推荐)",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF",
+  "src": "music/Cherry Pop(推荐)_BV1fJHB6bEfF_1.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 140,
+  "audioStatus": "ok"
  },
  {
-  "key": "547871050",
-  "title": "Beautiful World (Da Capo Version)",
-  "titleShazam": "Beautiful World (Da Capo Version)",
-  "artist": "Hikaru Utada",
-  "artistSearch": "Hikaru Utada",
-  "album": "One Last Kiss",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
+  "key": "BV1fJHB6bEfF_p2",
+  "title": "要是被灰熊袭击了的话♡",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 241,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 2,
+    "key": "BV1fJHB6bEfF_p2",
+    "tier": 1,
+    "title": "要是被灰熊袭击了的话♡",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=2",
+  "src": "music/要是被灰熊袭击了的话♡_BV1fJHB6bEfF_2.m4a",
+  "cover": "",
+  "dur": 241,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p6",
+  "title": "DNA",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 126,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 6,
+    "key": "BV1fJHB6bEfF_p6",
+    "tier": 1,
+    "title": "DNA",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=6",
+  "src": "music/DNA_BV1fJHB6bEfF_6.m4a",
+  "cover": "",
+  "dur": 126,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p7",
+  "title": "帝国少女",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 253,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 7,
+    "key": "BV1fJHB6bEfF_p7",
+    "tier": 1,
+    "title": "帝国少女",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=7",
+  "src": "music/帝国少女_BV1fJHB6bEfF_7.m4a",
+  "cover": "",
+  "dur": 253,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p8",
+  "title": "海百合海底谭",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 235,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 8,
+    "key": "BV1fJHB6bEfF_p8",
+    "tier": 1,
+    "title": "海百合海底谭",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=8",
+  "src": "music/海百合海底谭_BV1fJHB6bEfF_8.m4a",
+  "cover": "",
+  "dur": 235,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p9",
+  "title": "マトリョシカ(俄罗斯套娃)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 198,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 9,
+    "key": "BV1fJHB6bEfF_p9",
+    "tier": 1,
+    "title": "マトリョシカ（俄罗斯套娃）",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=9",
+  "src": "music/マトリョシカ（俄罗斯套娃）_BV1fJHB6bEfF_9.m4a",
+  "cover": "",
+  "dur": 198,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p10",
+  "title": "花となれ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 260,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 10,
+    "key": "BV1fJHB6bEfF_p10",
+    "tier": 1,
+    "title": "花となれ",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=10",
+  "src": "music/花となれ_BV1fJHB6bEfF_10.m4a",
+  "cover": "",
+  "dur": 260,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p12",
+  "title": "ヒトガタ(啾半首)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 86,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 12,
+    "key": "BV1fJHB6bEfF_p12",
+    "tier": 1,
+    "title": "ヒトガタ(啾半首)",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=12",
+  "src": "music/ヒトガタ(啾半首)_BV1fJHB6bEfF_12.m4a",
+  "cover": "",
+  "dur": 86,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1fJHB6bEfF_p13",
+  "title": "1925",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-04",
+  "sings": [
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1fJHB6bEfF",
+    "start": 0,
+    "end": 192,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 13,
+    "key": "BV1fJHB6bEfF_p13",
+    "tier": 1,
+    "title": "1925",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=13",
+  "src": "music/1925_BV1fJHB6bEfF_13.m4a",
+  "cover": "",
+  "dur": 192,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ViaS6yEYE_p1",
+  "title": "球球李不要再造yzm黄桃了,也不要看辣里!😭",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-10-02",
+  "sings": [
+   {
+    "date": "2026-10-02",
+    "bvid": "BV1ViaS6yEYE",
+    "start": 0,
+    "end": 223,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ViaS6yEYE",
+    "page": 1,
+    "key": "BV1ViaS6yEYE_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】球球李不要再造yzm黄桃了，也不要看辣里！😭",
+    "author": "UP 297578981",
+    "date": "2026-10-02",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ViaS6yEYE"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ViaS6yEYE",
+  "src": "music/【羽啾chu2u】球球李不要再造yzm黄桃了，也不要看辣里！😭_BV1ViaS6yEYE_1.m4a",
+  "cover": "",
+  "dur": 223,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p1",
+  "title": "狂乱 Hey Kids!!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 245,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 1,
+    "key": "BV1rPaX6AEqR_p1",
+    "tier": 1,
+    "title": "狂乱 Hey Kids!!",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR",
+  "src": "music/狂乱 Hey Kids!!_BV1rPaX6AEqR_1.m4a",
+  "cover": "",
+  "dur": 245,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p2",
+  "title": "二息歩行",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 183,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 2,
+    "key": "BV1rPaX6AEqR_p2",
+    "tier": 1,
+    "title": "二息歩行",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=2",
+  "src": "music/二息歩行_BV1rPaX6AEqR_2.m4a",
+  "cover": "",
+  "dur": 183,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p5",
+  "title": "怪物",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 202,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 5,
+    "key": "BV1rPaX6AEqR_p5",
+    "tier": 1,
+    "title": "怪物",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=5",
+  "src": "music/怪物_BV1rPaX6AEqR_5.m4a",
+  "cover": "",
+  "dur": 202,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p6",
+  "title": "夜に駆ける",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 258,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 6,
+    "key": "BV1rPaX6AEqR_p6",
+    "tier": 1,
+    "title": "夜に駆ける",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=6",
+  "src": "music/夜に駆ける_BV1rPaX6AEqR_6.m4a",
+  "cover": "",
+  "dur": 258,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p7",
+  "title": "终有一日再会!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 200,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 7,
+    "key": "BV1rPaX6AEqR_p7",
+    "tier": 1,
+    "title": "终有一日再会！",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=7",
+  "src": "music/终有一日再会！_BV1rPaX6AEqR_7.m4a",
+  "cover": "",
+  "dur": 200,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p8",
+  "title": "境界の彼方",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 286,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 8,
+    "key": "BV1rPaX6AEqR_p8",
+    "tier": 1,
+    "title": "境界の彼方",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=8",
+  "src": "music/境界の彼方_BV1rPaX6AEqR_8.m4a",
+  "cover": "",
+  "dur": 286,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p9",
+  "title": "くちづけDiamond(亲吻钻石)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 232,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 9,
+    "key": "BV1rPaX6AEqR_p9",
+    "tier": 1,
+    "title": "くちづけDiamond(亲吻钻石)",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=9",
+  "src": "music/くちづけDiamond(亲吻钻石)_BV1rPaX6AEqR_9.m4a",
+  "cover": "",
+  "dur": 232,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1rPaX6AEqR_p10",
+  "title": "少年よ我に帰れ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1rPaX6AEqR",
+    "start": 0,
+    "end": 384,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 10,
+    "key": "BV1rPaX6AEqR_p10",
+    "tier": 1,
+    "title": "少年よ我に帰れ",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=10",
+  "src": "music/少年よ我に帰れ_BV1rPaX6AEqR_10.m4a",
+  "cover": "",
+  "dur": 384,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Uzao6REWL_p1",
+  "title": "KING",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1Uzao6REWL",
+    "start": 0,
+    "end": 134,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Uzao6REWL",
+    "page": 1,
+    "key": "BV1Uzao6REWL_p1",
+    "tier": 1,
+    "title": "KING",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Uzao6REWL"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Uzao6REWL",
+  "src": "music/KING_BV1Uzao6REWL_1.m4a",
+  "cover": "",
+  "dur": 134,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Uzao6REWL_p2",
+  "title": "Ham",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1Uzao6REWL",
+    "start": 0,
+    "end": 217,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Uzao6REWL",
+    "page": 2,
+    "key": "BV1Uzao6REWL_p2",
+    "tier": 1,
+    "title": "Ham",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Uzao6REWL?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Uzao6REWL?p=2",
+  "src": "music/Ham_BV1Uzao6REWL_2.m4a",
+  "cover": "",
+  "dur": 217,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Uzao6REWL_p4",
+  "title": "平行線(啾半首)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1Uzao6REWL",
+    "start": 0,
+    "end": 118,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Uzao6REWL",
+    "page": 4,
+    "key": "BV1Uzao6REWL_p4",
+    "tier": 1,
+    "title": "平行線（啾半首）",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Uzao6REWL?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Uzao6REWL?p=4",
+  "src": "music/平行線（啾半首）_BV1Uzao6REWL_4.m4a",
+  "cover": "",
+  "dur": 118,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Uzao6REWL_p5",
+  "title": "漆黑的子弹",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-30",
+  "sings": [
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1Uzao6REWL",
+    "start": 0,
+    "end": 258,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Uzao6REWL",
+    "page": 5,
+    "key": "BV1Uzao6REWL_p5",
+    "tier": 1,
+    "title": "漆黑的子弹",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Uzao6REWL?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Uzao6REWL?p=5",
+  "src": "music/漆黑的子弹_BV1Uzao6REWL_5.m4a",
+  "cover": "",
+  "dur": 258,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p3",
+  "title": "モニタリング(视奸)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 180,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 3,
+    "key": "BV1KNai6tEFf_p3",
+    "tier": 1,
+    "title": "モニタリング（视奸）",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=3",
+  "src": "music/モニタリング（视奸）_BV1KNai6tEFf_3.m4a",
+  "cover": "",
+  "dur": 180,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p4",
+  "title": "絶頂讃歌",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 179,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 4,
+    "key": "BV1KNai6tEFf_p4",
+    "tier": 1,
+    "title": "絶頂讃歌",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=4",
+  "src": "music/絶頂讃歌_BV1KNai6tEFf_4.m4a",
+  "cover": "",
+  "dur": 179,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p6",
+  "title": "雏鸟",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 6,
+    "key": "BV1KNai6tEFf_p6",
+    "tier": 1,
+    "title": "雏鸟",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=6",
+  "src": "music/雏鸟_BV1KNai6tEFf_6.m4a",
+  "cover": "",
+  "dur": 262,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p10",
+  "title": "月说或许",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 10,
+    "key": "BV1KNai6tEFf_p10",
+    "tier": 1,
+    "title": "月说或许",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10",
+  "src": "music/月说或许_BV1KNai6tEFf_10.m4a",
+  "cover": "",
+  "dur": 262,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p11",
+  "title": "幽霊みたい (feat. 歌愛ユキ)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 174,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 11,
+    "key": "BV1KNai6tEFf_p11",
+    "tier": 1,
+    "title": "幽霊みたい (feat. 歌愛ユキ)",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=11",
+  "src": "music/幽霊みたい (feat. 歌愛ユキ)_BV1KNai6tEFf_11.m4a",
+  "cover": "",
+  "dur": 174,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KNai6tEFf_p14",
+  "title": "カレンの清掃",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-28",
+  "sings": [
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1KNai6tEFf",
+    "start": 0,
+    "end": 224,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 14,
+    "key": "BV1KNai6tEFf_p14",
+    "tier": 1,
+    "title": "カレンの清掃",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=14"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=14",
+  "src": "music/カレンの清掃_BV1KNai6tEFf_14.m4a",
+  "cover": "",
+  "dur": 224,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19whm6NEh3_p3",
+  "title": "片方だけが燃えている",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 184,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 3,
+    "key": "BV19whm6NEh3_p3",
+    "tier": 1,
+    "title": "片方だけが燃えている",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19whm6NEh3?p=3",
+  "src": "music/片方だけが燃えている_BV19whm6NEh3_3.m4a",
+  "cover": "",
+  "dur": 184,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19whm6NEh3_p4",
+  "title": "庭園にて。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-25",
+  "sings": [
+   {
+    "date": "2026-09-25",
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 187,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-04",
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 187,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 4,
+    "key": "BV19whm6NEh3_p4",
+    "tier": 1,
+    "title": "庭園にて。",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=4"
+   },
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 14,
+    "key": "BV1fJHB6bEfF_p14",
+    "tier": 1,
+    "title": "庭園にて。",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=14"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19whm6NEh3?p=4",
+  "src": "music/庭園にて。_BV19whm6NEh3_4.m4a",
+  "cover": "",
+  "dur": 187,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19whm6NEh3_p7",
+  "title": "浮遊感UFO",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
   "singCount": 3,
   "lastSung": "2026-09-25",
   "sings": [
    {
     "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 4725,
-    "end": 4962,
-    "votes": 7,
-    "evidence": "shazam×7"
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 296,
+    "votes": 0
    },
    {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 4900,
-    "end": 4962,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "date": "2026-09-27",
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 296,
+    "votes": 0
    },
    {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 5525,
-    "end": 5587,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "531647731",
-  "title": "食虫植物",
-  "titleShazam": "Carnivorous Plant",
-  "artist": "RIM",
-  "artistSearch": "RIM",
-  "album": "NEW ROMANCER",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 8025,
-    "end": 8062,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 1250,
-    "end": 1287,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14",
-  "clips": [
-   {
-    "bvid": "BV1Mwt36UE7D",
-    "page": 14,
-    "title": "食虫植物",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14"
-   }
-  ],
-  "src": "music/531647731.m4a",
-  "cover": "images/song/531647731.jpg",
-  "audioStatus": "ok",
-  "dur": 171.0
- },
- {
-  "key": "685697832",
-  "title": "Fragrance",
-  "titleShazam": "Fragrance",
-  "artist": "Mahiru & RINZO",
-  "artistSearch": "Mahiru & RINZO",
-  "album": "Handle",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 1300,
-    "end": 1512,
-    "votes": 8,
-    "evidence": "shazam×8"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 1325,
-    "end": 1487,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "504811093",
-  "title": "アイハキミノモノ",
-  "titleShazam": "ai ha kimi no mono",
-  "artist": "Broken By The Scream",
-  "artistSearch": "Broken By The Scream",
-  "album": "Noisy Night Fever",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 1800,
-    "end": 1962,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 1850,
-    "end": 1937,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "699719362",
-  "title": "Luna Say Maybe",
-  "titleShazam": "Luna Say Maybe",
-  "artist": "Hatsuboshi Gakuen & Temari Tsukimura",
-  "artistSearch": "Hatsuboshi Gakuen & Temari Tsukimura",
-  "album": "Luna Say Maybe - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 2125,
-    "end": 2337,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 2125,
-    "end": 2337,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10",
-  "clips": [
-   {
-    "bvid": "BV1KNai6tEFf",
-    "page": 10,
-    "title": "月说或许",
-    "author": "千束和泷奈贴贴贴",
     "date": "2026-09-28",
-    "play": 8061,
-    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=10"
-   },
-   {
-    "bvid": "BV1ykae6WEyM",
-    "page": 1,
-    "title": "【雪は何色 / 雪为何色】- 羽啾chu2u / 直播歌切",
-    "author": "Innovation----",
-    "date": "2026-09-28",
-    "play": 247,
-    "url": "https://www.bilibili.com/video/BV1ykae6WEyM"
-   },
-   {
-    "bvid": "BV1sTgp6AEqv",
-    "page": 6,
-    "title": "Luna say maybe_初星学園, 美波, 月村手毬",
-    "author": "宵夜ChiTi",
-    "date": "2026-08-13",
-    "play": 1007,
-    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6"
-   },
-   {
-    "bvid": "BV1JLgp6oE3q",
-    "page": 12,
-    "title": "Luna say maybe",
-    "author": "紫炎Yukari_En",
-    "date": "2026-08-13",
-    "play": 337,
-    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=12"
+    "bvid": "BV19whm6NEh3",
+    "start": 0,
+    "end": 296,
+    "votes": 0
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "574969240",
-  "title": "Tondemo-Wonderz",
-  "titleShazam": "Tondemo-Wonderz",
-  "artist": "Sasakure.Uk",
-  "artistSearch": "Sasakure.Uk",
-  "album": "Mirai Eve",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 2900,
-    "end": 2987,
-    "votes": 4,
-    "evidence": "shazam×4"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 2925,
-    "end": 3062,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "423135485",
-  "title": "ベースラインやってる 笑",
-  "titleShazam": "Can I Friend You On Bassbook? Lol",
-  "artist": "Nanahira & Camellia",
-  "artistSearch": "Nanahira & Camellia",
-  "album": "4Orce!",
-  "lang": "其他",
-  "tags": [
-   "电子"
-  ],
-  "genres": [
-   "Electronic"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 4275,
-    "end": 4512,
-    "votes": 6,
-    "evidence": "shazam×6"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 4325,
-    "end": 4537,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "684737950",
-  "title": "Like an Idiot (8bit)",
-  "titleShazam": "Like an Idiot (8bit)",
-  "artist": "Kakizaki Yuta",
-  "artistSearch": "Kakizaki Yuta",
-  "album": "Kakizaki 8bit - EP",
-  "lang": "纯音乐",
-  "tags": [
-   "纯音乐"
-  ],
-  "genres": [
-   "Instrumental"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 4550,
-    "end": 4687,
-    "votes": 4,
-    "evidence": "shazam×4"
-   },
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 4550,
-    "end": 4662,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "831126584",
-  "title": "Sunfaded",
-  "titleShazam": "Sunfaded",
-  "artist": "Hatsuboshi Gakuen & Hiro Shinosawa",
-  "artistSearch": "Hatsuboshi Gakuen & Hiro Shinosawa",
-  "album": "Sunfaded - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 5625,
-    "end": 5662,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5",
-  "clips": [
-   {
-    "bvid": "BV1sTgp6AEqv",
-    "page": 5,
-    "title": "サンフェーデッド_初星学園, 篠澤 広",
-    "author": "宵夜ChiTi",
-    "date": "2026-08-13",
-    "play": 1007,
-    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5"
-   },
-   {
-    "bvid": "BV1JLgp6oE3q",
-    "page": 7,
-    "title": "サンフェーデッド",
-    "author": "紫炎Yukari_En",
-    "date": "2026-08-13",
-    "play": 337,
-    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=7"
-   }
-  ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "812321760",
-  "title": "Just The Two Of Us In This World",
-  "titleShazam": "Just The Two Of Us In This World",
-  "artist": "ano",
-  "artistSearch": "ano",
-  "album": "BONE BORN BOMB",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 6250,
-    "end": 6312,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV19whm6NEh3?p=6",
   "clips": [
    {
     "bvid": "BV19whm6NEh3",
-    "page": 6,
-    "title": "この世界に二人だけ",
-    "author": "千束和泷奈贴贴贴",
+    "page": 7,
+    "key": "BV19whm6NEh3_p7",
+    "tier": 1,
+    "title": "浮遊感UFO",
+    "author": "UP 297578981",
     "date": "2026-09-25",
-    "play": 129,
-    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=6"
-   }
-  ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "583985159",
-  "title": "きゅうくらりん",
-  "titleShazam": "Kyu-Kurarin",
-  "artist": "Iyowa",
-  "artistSearch": "Iyowa",
-  "album": "Watashi No Heritage",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 8175,
-    "end": 8362,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "850215283",
-  "title": "Looping the Rooms (feat. HATSUNE MIKU)",
-  "titleShazam": "Looping the Rooms (feat. HATSUNE MIKU)",
-  "artist": "Rusino",
-  "artistSearch": "Rusino",
-  "album": "Looping the Rooms / Lambent Aria (feat. HATSUNE MIKU) - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1Jchy6uER2",
-    "start": 8425,
-    "end": 8462,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "824146806",
-  "title": "HALO",
-  "titleShazam": "HALO",
-  "artist": "NOMELON NOLEMON",
-  "artistSearch": "NOMELON NOLEMON",
-  "album": "EYE",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 3075,
-    "end": 3237,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "617656557",
-  "title": "Astral Travel",
-  "titleShazam": "Astral Travel",
-  "artist": "Kikuo & Hatsune Miku",
-  "artistSearch": "Kikuo & Hatsune Miku",
-  "album": "Kikuo Miku 7",
-  "lang": "日语",
-  "tags": [
-   "流行"
-  ],
-  "genres": [
-   "Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-25",
-  "sings": [
-   {
-    "date": "2026-09-25",
-    "bvid": "BV1GEhy6oESZ",
-    "start": 3675,
-    "end": 3912,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "157498072",
-  "title": "jai trouvé lamour",
-  "titleShazam": "J'ai trouvé l'amour",
-  "artist": "Sheena Ringo & Yasutaka Nakata",
-  "artistSearch": "Sheena Ringo & Yasutaka Nakata",
-  "album": "J'ai trouvé l'amour - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-20",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 425,
-    "end": 587,
-    "votes": 6,
-    "evidence": "shazam×6"
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=7"
    },
    {
-    "date": "2026-09-20",
-    "bvid": "BV1weeB6PEvy",
-    "start": 4700,
-    "end": 4887,
-    "votes": 6,
-    "evidence": "shazam×6"
+    "bvid": "BV1Jjas6nEZR",
+    "page": 3,
+    "key": "BV1Jjas6nEZR_p3",
+    "tier": 2,
+    "title": "浮遊感UFO",
+    "author": "UP 297578981",
+    "date": "2026-09-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Jjas6nEZR?p=3"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 8,
+    "key": "BV1KNai6tEFf_p8",
+    "tier": 1,
+    "title": "浮遊感UFO",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=8"
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=3",
+  "link": "https://www.bilibili.com/video/BV19whm6NEh3?p=7",
+  "src": "music/浮遊感UFO_BV19whm6NEh3_7.m4a",
+  "cover": "",
+  "dur": 296,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19uaA61EBx_p1",
+  "title": "蜜月アン・ドゥ・トロワ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-24",
+  "sings": [
+   {
+    "date": "2026-09-24",
+    "bvid": "BV19uaA61EBx",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 1,
+    "key": "BV19uaA61EBx_p1",
+    "tier": 1,
+    "title": "蜜月アン・ドゥ・トロワ",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19uaA61EBx",
+  "src": "music/蜜月アン・ドゥ・トロワ_BV19uaA61EBx_1.m4a",
+  "cover": "",
+  "dur": 247,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19uaA61EBx_p2",
+  "title": "春泥棒",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-24",
+  "sings": [
+   {
+    "date": "2026-09-24",
+    "bvid": "BV19uaA61EBx",
+    "start": 0,
+    "end": 288,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 2,
+    "key": "BV19uaA61EBx_p2",
+    "tier": 1,
+    "title": "春泥棒",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=2"
+   },
+   {
+    "bvid": "BV1GuaA62Ebg",
+    "page": 1,
+    "key": "BV1GuaA62Ebg_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】春泥棒——粉丝点唱精品",
+    "author": "UP 38087508",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GuaA62Ebg"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19uaA61EBx?p=2",
+  "src": "music/春泥棒_BV19uaA61EBx_2.m4a",
+  "cover": "",
+  "dur": 288,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19uaA61EBx_p4",
+  "title": "海の幽霊",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-24",
+  "sings": [
+   {
+    "date": "2026-09-24",
+    "bvid": "BV19uaA61EBx",
+    "start": 0,
+    "end": 233,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 4,
+    "key": "BV19uaA61EBx_p4",
+    "tier": 1,
+    "title": "海の幽霊",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19uaA61EBx?p=4",
+  "src": "music/海の幽霊_BV19uaA61EBx_4.m4a",
+  "cover": "",
+  "dur": 233,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV19uaA61EBx_p7",
+  "title": "以上、n番観測地からお届けしました。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-24",
+  "sings": [
+   {
+    "date": "2026-09-24",
+    "bvid": "BV19uaA61EBx",
+    "start": 0,
+    "end": 155,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 7,
+    "key": "BV19uaA61EBx_p7",
+    "tier": 1,
+    "title": "以上、n番観測地からお届けしました。",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV19uaA61EBx?p=7",
+  "src": "music/以上、n番観測地からお届けしました。_BV19uaA61EBx_7.m4a",
+  "cover": "",
+  "dur": 155,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p1",
+  "title": "粛聖!! ロリ神レクイエム☆",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 271,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 1,
+    "key": "BV1Lvhp6iETo_p1",
+    "tier": 1,
+    "title": "粛聖!! ロリ神レクイエム☆",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo",
+  "src": "music/粛聖!! ロリ神レクイエム☆_BV1Lvhp6iETo_1.m4a",
+  "cover": "",
+  "dur": 271,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p2",
+  "title": "愛して愛して愛して",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 252,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 2,
+    "key": "BV1Lvhp6iETo_p2",
+    "tier": 1,
+    "title": "愛して愛して愛して",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=2",
+  "src": "music/愛して愛して愛して_BV1Lvhp6iETo_2.m4a",
+  "cover": "",
+  "dur": 252,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p3",
+  "title": "My Dearest",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 337,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 3,
+    "key": "BV1Lvhp6iETo_p3",
+    "tier": 1,
+    "title": "My Dearest",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3",
+  "src": "music/My Dearest_BV1Lvhp6iETo_3.m4a",
+  "cover": "",
+  "dur": 337,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p4",
+  "title": "Departures ~あなたにおくるアイの歌~",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 251,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 4,
+    "key": "BV1Lvhp6iETo_p4",
+    "tier": 1,
+    "title": "Departures ~あなたにおくるアイの歌~",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=4",
+  "src": "music/Departures ~あなたにおくるアイの歌~_BV1Lvhp6iETo_4.m4a",
+  "cover": "",
+  "dur": 251,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p5",
+  "title": "福音 (feat. SHIKI)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 191,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 5,
+    "key": "BV1Lvhp6iETo_p5",
+    "tier": 1,
+    "title": "福音 (feat. SHIKI)",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=5",
+  "src": "music/福音 (feat. SHIKI)_BV1Lvhp6iETo_5.m4a",
+  "cover": "",
+  "dur": 191,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p6",
+  "title": "ミュージックミュージック",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 212,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 212,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 6,
+    "key": "BV1Lvhp6iETo_p6",
+    "tier": 1,
+    "title": "ミュージックミュージック",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=6"
+   },
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 4,
+    "key": "BV1fJHB6bEfF_p4",
+    "tier": 1,
+    "title": "ミュージックミュージック",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=6",
+  "src": "music/ミュージックミュージック_BV1Lvhp6iETo_6.m4a",
+  "cover": "",
+  "dur": 212,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p7",
+  "title": "イイコと妖狐",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 230,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 7,
+    "key": "BV1Lvhp6iETo_p7",
+    "tier": 1,
+    "title": "イイコと妖狐",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=7",
+  "src": "music/イイコと妖狐_BV1Lvhp6iETo_7.m4a",
+  "cover": "",
+  "dur": 230,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Lvhp6iETo_p8",
+  "title": "星が瞬くこんな夜に",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-23",
+  "sings": [
+   {
+    "date": "2026-09-23",
+    "bvid": "BV1Lvhp6iETo",
+    "start": 0,
+    "end": 265,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Lvhp6iETo",
+    "page": 8,
+    "key": "BV1Lvhp6iETo_p8",
+    "tier": 1,
+    "title": "星が瞬くこんな夜に",
+    "author": "UP 297578981",
+    "date": "2026-09-23",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=8",
+  "src": "music/星が瞬くこんな夜に_BV1Lvhp6iETo_8.m4a",
+  "cover": "",
+  "dur": 265,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV11Ahz6aEMj_p1",
+  "title": "今晚是软糯困困啾,用萌音唱歌也太可爱了吧!小脸突然糊上来,我节奏真有点不对了!😰",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-22",
+  "sings": [
+   {
+    "date": "2026-09-22",
+    "bvid": "BV11Ahz6aEMj",
+    "start": 0,
+    "end": 282,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV11Ahz6aEMj",
+    "page": 1,
+    "key": "BV11Ahz6aEMj_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】今晚是软糯困困啾，用萌音唱歌也太可爱了吧！小脸突然糊上来，我节奏真有点不对了！😰",
+    "author": "UP 297578981",
+    "date": "2026-09-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV11Ahz6aEMj"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV11Ahz6aEMj",
+  "src": "music/【羽啾chu2u】今晚是软糯困困啾，用萌音唱歌也太可爱了吧！小脸突然糊上来，我节奏真有点不对了！😰_BV11Ahz6aEMj_1.m4a",
+  "cover": "",
+  "dur": 282,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p1",
+  "title": "ギブス",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 327,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 1,
+    "key": "BV1VKhB6kE5B_p1",
+    "tier": 1,
+    "title": "ギブス",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B",
+  "src": "music/ギブス_BV1VKhB6kE5B_1.m4a",
+  "cover": "",
+  "dur": 327,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p3",
+  "title": "熱愛発覚中",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 205,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 205,
+    "votes": 0
+   }
+  ],
   "clips": [
    {
     "bvid": "BV1VKhB6kE5B",
     "page": 3,
+    "key": "BV1VKhB6kE5B_p3",
+    "tier": 1,
     "title": "熱愛発覚中",
-    "author": "宵夜ChiTi",
+    "author": "UP 4378290",
     "date": "2026-09-21",
-    "play": 326,
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=3"
    },
    {
     "bvid": "BV1aJhY64EeD",
     "page": 10,
+    "key": "BV1aJhY64EeD_p10",
+    "tier": 2,
     "title": "熱愛発覚中",
-    "author": "千束和泷奈贴贴贴",
+    "author": "UP 297578981",
     "date": "2026-09-21",
-    "play": 1886,
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=3",
+  "src": "music/熱愛発覚中_BV1VKhB6kE5B_3.m4a",
+  "cover": "",
+  "dur": 205,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p4",
+  "title": "二時間だけのバカンス",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 268,
+    "votes": 0
    },
    {
-    "bvid": "BV1YGhh6WEw8",
-    "page": 1,
-    "title": "20262200_06_熱愛発覚中 - 椎名林檎, 中田ヤスタカ",
-    "author": "",
     "date": "2026-09-21",
-    "play": 46,
-    "url": "https://www.bilibili.com/video/BV1YGhh6WEw8"
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 268,
+    "votes": 0
    }
   ],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "538680271",
-  "title": "Kaikai Kitan",
-  "titleShazam": "Kaikai Kitan",
-  "artist": "EVE",
-  "artistSearch": "EVE",
-  "album": "Kaikai Kitan / Ao No Waltz",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-20",
-  "sings": [
-   {
-    "date": "2026-09-20",
-    "bvid": "BV1weeB6PEvy",
-    "start": 150,
-    "end": 187,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "569350683",
-  "title": "Only Me",
-  "titleShazam": "Only Me",
-  "artist": "Jameswvpav",
-  "artistSearch": "Jameswvpav",
-  "album": "Only Me - Single",
-  "lang": "中文",
-  "tags": [
-   "流行"
-  ],
-  "genres": [
-   "Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-20",
-  "sings": [
-   {
-    "date": "2026-09-20",
-    "bvid": "BV1weeB6PEvy",
-    "start": 250,
-    "end": 287,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "40242673",
-  "title": "Gips",
-  "titleShazam": "Gips",
-  "artist": "Sheena Ringo",
-  "artistSearch": "Sheena Ringo",
-  "album": "Shouso Strip - Winning Strip",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-20",
-  "sings": [
-   {
-    "date": "2026-09-20",
-    "bvid": "BV1weeB6PEvy",
-    "start": 4050,
-    "end": 4362,
-    "votes": 8,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B",
   "clips": [
    {
     "bvid": "BV1VKhB6kE5B",
-    "page": 1,
-    "title": "ギブス",
-    "author": "宵夜ChiTi",
+    "page": 4,
+    "key": "BV1VKhB6kE5B_p4",
+    "tier": 1,
+    "title": "二時間だけのバカンス_只有两小时的假期",
+    "author": "UP 4378290",
     "date": "2026-09-21",
-    "play": 326,
-    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B"
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=4"
    },
    {
     "bvid": "BV1aJhY64EeD",
-    "page": 7,
-    "title": "石膏",
-    "author": "千束和泷奈贴贴贴",
+    "page": 11,
+    "key": "BV1aJhY64EeD_p11",
+    "tier": 2,
+    "title": "二時間だけのバカンス",
+    "author": "UP 297578981",
     "date": "2026-09-21",
-    "play": 1886,
-    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=7"
-   },
-   {
-    "bvid": "BV1YGhh6WEJb",
-    "page": 1,
-    "title": "20262200_04_ギブス - 椎名林檎",
-    "author": "",
-    "date": "2026-09-21",
-    "play": 29,
-    "url": "https://www.bilibili.com/video/BV1YGhh6WEJb"
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=11"
    }
   ],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=4",
+  "src": "music/二時間だけのバカンス_只有两小时的假期_BV1VKhB6kE5B_4.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 268,
+  "audioStatus": "ok"
  },
  {
-  "key": "884723588",
-  "title": "Smoke and Blue",
-  "titleShazam": "Smoke and Blue",
-  "artist": "Necry Talkie",
-  "artistSearch": "Necry Talkie",
-  "album": "Smoke and Blue e.p. - EP",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
+  "key": "BV1VKhB6kE5B_p6",
+  "title": "幽霊東京",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-20",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-21",
   "sings": [
    {
-    "date": "2026-09-20",
-    "bvid": "BV1weeB6PEvy",
-    "start": 2100,
-    "end": 2137,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "713035738",
-  "title": "Kajitsu",
-  "titleShazam": "Kajitsu",
-  "artist": "AKASAKI",
-  "artistSearch": "AKASAKI",
-  "album": "AKASAKI - 2024",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 4,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
     "start": 0,
-    "end": 112,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "end": 185,
+    "votes": 0
    },
    {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 150,
-    "end": 187,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 5825,
-    "end": 5937,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 6350,
-    "end": 6387,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 185,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "music/713035738.m4a",
-  "cover": "images/song/713035738.jpg",
-  "audioStatus": "ok",
-  "dur": 309.4
- },
- {
-  "key": "614290581",
-  "title": "冷やしネギ蕎麦",
-  "titleShazam": "Chilled Chinese Noodles with Green Onion",
-  "artist": "Cody・Lee",
-  "artistSearch": "Cody・Lee",
-  "album": "heartbeat, love letter and kindness",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 4,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 1825,
-    "end": 1987,
-    "votes": 6,
-    "evidence": "shazam×6"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 1850,
-    "end": 2012,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 4650,
-    "end": 4887,
-    "votes": 10,
-    "evidence": "shazam×10"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 4725,
-    "end": 4937,
-    "votes": 9,
-    "evidence": "shazam×9"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/614290581.m4a",
-  "cover": "images/song/614290581.jpg",
-  "audioStatus": "ok",
-  "dur": 79.7
- },
- {
-  "key": "840162814",
-  "title": "JANE DOE",
-  "titleShazam": "JANE DOE",
-  "artist": "Kenshi Yonezu & Hikaru Utada",
-  "artistSearch": "Kenshi Yonezu & Hikaru Utada",
-  "album": "JANE DOE - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 3,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 1350,
-    "end": 1412,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 1650,
-    "end": 1762,
-    "votes": 4,
-    "evidence": "shazam×4"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 1675,
-    "end": 1762,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6",
   "clips": [
    {
-    "bvid": "BV1ewbG6hEKV",
+    "bvid": "BV1VKhB6kE5B",
     "page": 6,
-    "title": "JANE DOE",
-    "author": "千束和泷奈贴贴贴",
-    "date": "2026-09-08",
-    "play": 1266,
-    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6"
-   }
-  ],
-  "src": "music/840162814.m4a",
-  "cover": "images/song/840162814.jpg",
-  "audioStatus": "ok",
-  "dur": 236.7
- },
- {
-  "key": "817466570",
-  "title": "The Sound About Petals",
-  "titleShazam": "The Sound About Petals",
-  "artist": "avaraya",
-  "artistSearch": "avaraya",
-  "album": "The Sound About Petals - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 3,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 3175,
-    "end": 3262,
-    "votes": 4,
-    "evidence": "shazam×4"
+    "key": "BV1VKhB6kE5B_p6",
+    "tier": 1,
+    "title": "幽霊東京",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=6"
    },
    {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 3200,
-    "end": 3387,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 3350,
-    "end": 3387,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "bvid": "BV1aJhY64EeD",
+    "page": 3,
+    "key": "BV1aJhY64EeD_p3",
+    "tier": 2,
+    "title": "幽霊東京",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=3"
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=6",
+  "src": "music/幽霊東京_BV1VKhB6kE5B_6.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 185,
+  "audioStatus": "ok"
  },
  {
-  "key": "409876735",
-  "title": "住在天狼星的那个人",
-  "titleShazam": "住在天狼星的那个人",
-  "artist": "OHMYMEITING",
-  "artistSearch": "OHMYMEITING",
-  "album": "别担心!我不是坏人 - EP",
-  "lang": "中文",
-  "tags": [
-   "华语流行"
-  ],
-  "genres": [
-   "Mandopop"
-  ],
+  "key": "BV1VKhB6kE5B_p7",
+  "title": "ビビデバ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
   "sings": [
    {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 900,
-    "end": 962,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 950,
-    "end": 987,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 82,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "music/409876735.m4a",
-  "cover": "images/song/409876735.jpg",
-  "audioStatus": "ok",
-  "dur": 269.8
- },
- {
-  "key": "667063722",
-  "title": "花 feat 花譜",
-  "titleShazam": "Flower feat. KAF",
-  "artist": "Guiano",
-  "artistSearch": "Guiano",
-  "album": "The Traditional Themes Of Natural Beauty In Japanese Aesthetics",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 2700,
-    "end": 2912,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 2775,
-    "end": 2887,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1WkHo64E88",
   "clips": [
    {
-    "bvid": "BV1WkHo64E88",
-    "page": 1,
-    "title": "v4",
-    "author": "银河的鱼",
-    "date": "2026-10-06",
-    "play": 319,
-    "url": "https://www.bilibili.com/video/BV1WkHo64E88"
+    "bvid": "BV1VKhB6kE5B",
+    "page": 7,
+    "key": "BV1VKhB6kE5B_p7",
+    "tier": 1,
+    "title": "ビビデバ",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=7"
    }
   ],
-  "src": "music/667063722.m4a",
-  "cover": "images/song/667063722.jpg",
-  "audioStatus": "ok",
-  "dur": 206.5
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=7",
+  "src": "music/ビビデバ_BV1VKhB6kE5B_7.m4a",
+  "cover": "",
+  "dur": 82,
+  "audioStatus": "ok"
  },
  {
-  "key": "713987630",
-  "title": "Z__",
-  "titleShazam": "Z__",
-  "artist": "avaraya",
-  "artistSearch": "avaraya",
-  "album": "Z__ - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
+  "key": "BV1VKhB6kE5B_p8",
+  "title": "MOTTAI",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 77,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 8,
+    "key": "BV1VKhB6kE5B_p8",
+    "tier": 1,
+    "title": "MOTTAI",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=8",
+  "src": "music/MOTTAI_BV1VKhB6kE5B_8.m4a",
+  "cover": "",
+  "dur": 77,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p9",
+  "title": "天天天国地獄国",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 219,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 219,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 9,
+    "key": "BV1VKhB6kE5B_p9",
+    "tier": 1,
+    "title": "天天天国地獄国",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=9"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 1,
+    "key": "BV1aJhY64EeD_p1",
+    "tier": 2,
+    "title": "天天天国地獄国",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=9",
+  "src": "music/天天天国地獄国_BV1VKhB6kE5B_9.m4a",
+  "cover": "",
+  "dur": 219,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p11",
+  "title": "ちきゅう大爆発",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 83,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 11,
+    "key": "BV1VKhB6kE5B_p11",
+    "tier": 1,
+    "title": "ちきゅう大爆発",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=11",
+  "src": "music/ちきゅう大爆発_BV1VKhB6kE5B_11.m4a",
+  "cover": "",
+  "dur": 83,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p12",
+  "title": "霞がついてくる",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 201,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 201,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 12,
+    "key": "BV1VKhB6kE5B_p12",
+    "tier": 1,
+    "title": "霞がついてくる",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=12"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 14,
+    "key": "BV1aJhY64EeD_p14",
+    "tier": 2,
+    "title": "霞がついてくる",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=14"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=12",
+  "src": "music/霞がついてくる_BV1VKhB6kE5B_12.m4a",
+  "cover": "",
+  "dur": 201,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p15",
+  "title": "new world (feat. ヰ世界情緒)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 358,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 15,
+    "key": "BV1VKhB6kE5B_p15",
+    "tier": 1,
+    "title": "new world (feat. ヰ世界情緒)",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=15"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=15",
+  "src": "music/new world (feat. ヰ世界情緒)_BV1VKhB6kE5B_15.m4a",
+  "cover": "",
+  "dur": 358,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p16",
+  "title": "出来心",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 71,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 16,
+    "key": "BV1VKhB6kE5B_p16",
+    "tier": 1,
+    "title": "出来心",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=16"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=16",
+  "src": "music/出来心_BV1VKhB6kE5B_16.m4a",
+  "cover": "",
+  "dur": 71,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p18",
+  "title": "サターン",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 231,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 18,
+    "key": "BV1VKhB6kE5B_p18",
+    "tier": 1,
+    "title": "サターン",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=18"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=18",
+  "src": "music/サターン_BV1VKhB6kE5B_18.m4a",
+  "cover": "",
+  "dur": 231,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p20",
+  "title": "Magia",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 304,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 20,
+    "key": "BV1VKhB6kE5B_p20",
+    "tier": 1,
+    "title": "Magia",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=20"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=20",
+  "src": "music/Magia_BV1VKhB6kE5B_20.m4a",
+  "cover": "",
+  "dur": 304,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1VKhB6kE5B_p21",
+  "title": "HELP!!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-21",
+  "sings": [
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1VKhB6kE5B",
+    "start": 0,
+    "end": 276,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 21,
+    "key": "BV1VKhB6kE5B_p21",
+    "tier": 1,
+    "title": "HELP!!",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=21"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=21",
+  "src": "music/HELP!!_BV1VKhB6kE5B_21.m4a",
+  "cover": "",
+  "dur": 276,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p1",
+  "title": "君は水、私は魚",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
   "singCount": 2,
   "lastSung": "2026-09-16",
   "sings": [
    {
     "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 2950,
-    "end": 3162,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 244,
+    "votes": 0
    },
    {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 2950,
-    "end": 3162,
-    "votes": 6,
-    "evidence": "shazam×6"
+    "date": "2026-09-25",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 244,
+    "votes": 0
    }
   ],
-  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7",
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 1,
+    "key": "BV18Xew65Ee9_p1",
+    "tier": 1,
+    "title": "君は水、私は魚",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9"
+   },
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 8,
+    "key": "BV19whm6NEh3_p8",
+    "tier": 1,
+    "title": "君は水、私は魚",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9",
+  "src": "music/君は水、私は魚_BV18Xew65Ee9_1.m4a",
+  "cover": "",
+  "dur": 244,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p2",
+  "title": "住在天狼星的那个人",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 260,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 2,
+    "key": "BV18Xew65Ee9_p2",
+    "tier": 1,
+    "title": "住在天狼星的那个人",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=2",
+  "src": "music/住在天狼星的那个人_BV18Xew65Ee9_2.m4a",
+  "cover": "",
+  "dur": 260,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p6",
+  "title": "ときどきどきどき(心跳不已)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 110,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 6,
+    "key": "BV18Xew65Ee9_p6",
+    "tier": 1,
+    "title": "ときどきどきどき（心跳不已）",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=6",
+  "src": "music/ときどきどきどき（心跳不已）_BV18Xew65Ee9_6.m4a",
+  "cover": "",
+  "dur": 110,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p7",
+  "title": "かなしばりに遭ったら",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 218,
+    "votes": 0
+   }
+  ],
   "clips": [
    {
     "bvid": "BV18Xew65Ee9",
     "page": 7,
+    "key": "BV18Xew65Ee9_p7",
+    "tier": 1,
     "title": "かなしばりに遭ったら",
-    "author": "千束和泷奈贴贴贴",
+    "author": "UP 297578981",
     "date": "2026-09-16",
-    "play": 748,
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7"
    }
   ],
-  "src": "music/713987630.m4a",
-  "cover": "images/song/713987630.jpg",
-  "audioStatus": "ok",
-  "dur": 222.0
- },
- {
-  "key": "710183321",
-  "title": "Emoji",
-  "titleShazam": "Emoji",
-  "artist": "Wonderful opportunity! & Kagamine Rin",
-  "artistSearch": "Wonderful opportunity! & Kagamine Rin",
-  "album": "WANOPO!VOL.20",
-  "lang": "日语",
-  "tags": [
-   "流行"
-  ],
-  "genres": [
-   "Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 3400,
-    "end": 3562,
-    "votes": 7,
-    "evidence": "shazam×7"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 3400,
-    "end": 3462,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/710183321.m4a",
-  "cover": "images/song/710183321.jpg",
-  "audioStatus": "ok",
-  "dur": 166.5
- },
- {
-  "key": "374177461",
-  "title": "スーサイドパレヱド",
-  "titleShazam": "スーサイドパレヱド",
-  "artist": "Yurry Canon",
-  "artistSearch": "Yurry Canon",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 4300,
-    "end": 4462,
-    "votes": 7,
-    "evidence": "shazam×7"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 4375,
-    "end": 4512,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/374177461.m4a",
-  "cover": "images/song/374177461.jpg",
-  "audioStatus": "ok",
-  "dur": 191.0
- },
- {
-  "key": "545964637",
-  "title": "我愛你",
-  "titleShazam": "Wo Ai Ni",
-  "artist": "Cody・Lee",
-  "artistSearch": "Cody・Lee",
-  "album": "Seikatsu no news",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 4500,
-    "end": 4637,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 4575,
-    "end": 4712,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/545964637.m4a",
-  "cover": "images/song/545964637.jpg",
-  "audioStatus": "ok",
-  "dur": 292.1
- },
- {
-  "key": "804102241",
-  "title": "Kaiju",
-  "titleShazam": "Kaiju",
-  "artist": "sakanaction",
-  "artistSearch": "sakanaction",
-  "album": "Kaiju - Single",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 4950,
-    "end": 5162,
-    "votes": 7,
-    "evidence": "shazam×7"
-   },
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 5050,
-    "end": 5237,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/804102241.m4a",
-  "cover": "images/song/804102241.jpg",
-  "audioStatus": "ok",
-  "dur": 269.1
- },
- {
-  "key": "512756237",
-  "title": "Ghost In A Flower",
-  "titleShazam": "Ghost In A Flower",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Plagiarism",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 5550,
-    "end": 5762,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=7",
+  "src": "music/かなしばりに遭ったら_BV18Xew65Ee9_7.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 218,
+  "audioStatus": "ok"
  },
  {
-  "key": "545347724",
-  "title": "Hunch Gray",
-  "titleShazam": "Hunch Gray",
-  "artist": "ZUTOMAYO",
-  "artistSearch": "ZUTOMAYO",
-  "album": "Gusare",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
+  "key": "BV18Xew65Ee9_p8",
+  "title": "鏡花水月",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
   "lastSung": "2026-09-16",
   "sings": [
    {
     "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 6400,
-    "end": 6637,
-    "votes": 9,
-    "evidence": "shazam×9"
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 261,
+    "votes": 0
    }
   ],
-  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=14",
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 8,
+    "key": "BV18Xew65Ee9_p8",
+    "tier": 1,
+    "title": "鏡花水月",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=8",
+  "src": "music/鏡花水月_BV18Xew65Ee9_8.m4a",
+  "cover": "",
+  "dur": 261,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p9",
+  "title": "怪獣",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 254,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 9,
+    "key": "BV18Xew65Ee9_p9",
+    "tier": 1,
+    "title": "怪獣",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=9",
+  "src": "music/怪獣_BV18Xew65Ee9_9.m4a",
+  "cover": "",
+  "dur": 254,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p11",
+  "title": "藍二乗",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 264,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 11,
+    "key": "BV18Xew65Ee9_p11",
+    "tier": 1,
+    "title": "藍二乗",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=11",
+  "src": "music/藍二乗_BV18Xew65Ee9_11.m4a",
+  "cover": "",
+  "dur": 264,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p12",
+  "title": "stay with me",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 321,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 12,
+    "key": "BV18Xew65Ee9_p12",
+    "tier": 1,
+    "title": "stay with me",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=12",
+  "src": "music/stay with me_BV18Xew65Ee9_12.m4a",
+  "cover": "",
+  "dur": 321,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p13",
+  "title": "魔女",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 271,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 271,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 13,
+    "key": "BV18Xew65Ee9_p13",
+    "tier": 1,
+    "title": "魔女",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=13"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 7,
+    "key": "BV1KNai6tEFf_p7",
+    "tier": 1,
+    "title": "魔女",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=13",
+  "src": "music/魔女_BV18Xew65Ee9_13.m4a",
+  "cover": "",
+  "dur": 271,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV18Xew65Ee9_p14",
+  "title": "勘ぐれい(灰心感)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-16",
+  "sings": [
+   {
+    "date": "2026-09-16",
+    "bvid": "BV18Xew65Ee9",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   }
+  ],
   "clips": [
    {
     "bvid": "BV18Xew65Ee9",
     "page": 14,
+    "key": "BV18Xew65Ee9_p14",
+    "tier": 1,
     "title": "勘ぐれい（灰心感）",
-    "author": "千束和泷奈贴贴贴",
+    "author": "UP 297578981",
     "date": "2026-09-16",
-    "play": 748,
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=14"
    }
   ],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV18Xew65Ee9?p=14",
+  "src": "music/勘ぐれい（灰心感）_BV18Xew65Ee9_14.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 247,
+  "audioStatus": "ok"
  },
  {
-  "key": "712922746",
-  "title": "TAIDADA",
-  "titleShazam": "TAIDADA",
-  "artist": "ZUTOMAYO",
-  "artistSearch": "ZUTOMAYO",
-  "album": "KEISOUDO",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV1F1Yf6pEtg",
-    "start": 6700,
-    "end": 6812,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "494722986",
-  "title": "命に嫌われている",
-  "titleShazam": "Hated by Life",
-  "artist": "Iori Kanzaki",
-  "artistSearch": "Iori Kanzaki",
-  "album": "Blank Paper",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-16",
-  "sings": [
-   {
-    "date": "2026-09-16",
-    "bvid": "BV168eF6pEbq",
-    "start": 3700,
-    "end": 3762,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "322223782",
-  "title": "Kohakuironomachi Syanhaiganinoasa",
-  "titleShazam": "Kohakuironomachi Syanhaiganinoasa",
-  "artist": "Quruli",
-  "artistSearch": "Quruli",
-  "album": "Kohakuironomachi Syanhaiganinoasa - EP",
-  "lang": "日语",
+  "key": "BV1KMeE6JEfu_p2",
+  "title": "SLEEPWALK",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
   "tags": [],
-  "genres": [
-   "Alternative"
-  ],
+  "genres": [],
   "emoji": "🎵",
-  "singCount": 3,
-  "lastSung": "2026-09-13",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
   "sings": [
    {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5775,
-    "end": 6012,
-    "votes": 9,
-    "evidence": "shazam×9"
-   },
-   {
     "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
+    "bvid": "BV1KMeE6JEfu",
     "start": 0,
-    "end": 212,
-    "votes": 7,
-    "evidence": "shazam×7"
+    "end": 109,
+    "votes": 0
    },
    {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
+    "date": "2026-09-15",
+    "bvid": "BV1KMeE6JEfu",
     "start": 0,
-    "end": 112,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "end": 109,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "861843252",
-  "title": "Brain Rot",
-  "titleShazam": "Brain Rot",
-  "artist": "Tokyo Manaka",
-  "artistSearch": "Tokyo Manaka",
-  "album": "Brain Rot - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 3,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 0,
-    "end": 112,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 1200,
-    "end": 1262,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 2800,
-    "end": 2837,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/861843252.m4a",
-  "cover": "images/song/861843252.jpg",
-  "audioStatus": "ok",
-  "dur": 124.8
- },
- {
-  "key": "481454451",
-  "title": "飛行艇",
-  "titleShazam": "Hikoutei",
-  "artist": "King Gnu",
-  "artistSearch": "King Gnu",
-  "album": "Ceremony",
-  "lang": "日语",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 2875,
-    "end": 3112,
-    "votes": 10,
-    "evidence": "shazam×10"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 2875,
-    "end": 3087,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/481454451.m4a",
-  "cover": "images/song/481454451.jpg",
-  "audioStatus": "ok",
-  "dur": 261.7
- },
- {
-  "key": "620726933",
-  "title": "恋愛脳",
-  "titleShazam": "Love Brain",
-  "artist": "NANAOAKARI",
-  "artistSearch": "NANAOAKARI",
-  "album": "Love Brain / Higasa",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 3150,
-    "end": 3287,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 3225,
-    "end": 3287,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/620726933.m4a",
-  "cover": "images/song/620726933.jpg",
-  "audioStatus": "ok",
-  "dur": 192.4
- },
- {
-  "key": "481322592",
-  "title": "Amy",
-  "titleShazam": "Amy",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Elma",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 3525,
-    "end": 3737,
-    "votes": 6,
-    "evidence": "shazam×6"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 3550,
-    "end": 3737,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "619979076",
-  "title": "花の塔",
-  "titleShazam": "Tower of Flower",
-  "artist": "Sayuri",
-  "artistSearch": "Sayuri",
-  "album": "Sanketsu-girl",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 3750,
-    "end": 3837,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 3750,
-    "end": 3837,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1KMeE6JEfu",
   "clips": [
    {
     "bvid": "BV1KMeE6JEfu",
-    "page": 1,
-    "title": "花の塔",
-    "author": "宵夜ChiTi",
+    "page": 2,
+    "key": "BV1KMeE6JEfu_p2",
+    "tier": 1,
+    "title": "SLEEPWALK",
+    "author": "UP 4378290",
     "date": "2026-09-15",
-    "play": 307,
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=2"
+   },
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 2,
+    "key": "BV1cNYi6HEAE_p2",
+    "tier": 1,
+    "title": "SLEEPWALK",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=2",
+  "src": "music/SLEEPWALK_BV1KMeE6JEfu_2.m4a",
+  "cover": "",
+  "dur": 109,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KMeE6JEfu_p3",
+  "title": "さよーならまたいつか!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1KMeE6JEfu",
+    "start": 0,
+    "end": 204,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1KMeE6JEfu",
+    "start": 0,
+    "end": 204,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KMeE6JEfu",
+    "page": 3,
+    "key": "BV1KMeE6JEfu_p3",
+    "tier": 1,
+    "title": "さよーならまたいつか！- Sayonara",
+    "author": "UP 4378290",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=3"
+   },
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 3,
+    "key": "BV1cNYi6HEAE_p3",
+    "tier": 1,
+    "title": "さよーならまたいつか！（终有一日再会！）",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=3",
+  "src": "music/さよーならまたいつか！- Sayonara_BV1KMeE6JEfu_3.m4a",
+  "cover": "",
+  "dur": 204,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1KMeE6JEfu_p4",
+  "title": "キャットフード",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1KMeE6JEfu",
+    "start": 0,
+    "end": 291,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1KMeE6JEfu",
+    "start": 0,
+    "end": 291,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1KMeE6JEfu",
+    "page": 4,
+    "key": "BV1KMeE6JEfu_p4",
+    "tier": 1,
+    "title": "キャットフード",
+    "author": "UP 4378290",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=4"
+   },
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 4,
+    "key": "BV1cNYi6HEAE_p4",
+    "tier": 1,
+    "title": "キャットフード（猫粮）",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=4",
+  "src": "music/キャットフード_BV1KMeE6JEfu_4.m4a",
+  "cover": "",
+  "dur": 291,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1vceV6UEWU_p1",
+  "title": "NIGHT DANCER",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-03",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 211,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 211,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 1,
+    "key": "BV1vceV6UEWU_p1",
+    "tier": 1,
+    "title": "NIGHT DANCER",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU"
+   },
+   {
+    "bvid": "BV1bvtX6TE4s",
+    "page": 1,
+    "key": "BV1bvtX6TE4s_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】Night Dancer——9.2晚 万粉纪念回睡前小曲",
+    "author": "UP 38087508",
+    "date": "2026-09-03",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bvtX6TE4s"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1vceV6UEWU",
+  "src": "music/NIGHT DANCER_BV1vceV6UEWU_1.m4a",
+  "cover": "",
+  "dur": 211,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1vceV6UEWU_p3",
+  "title": "たぶん(大概)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 256,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 3,
+    "key": "BV1vceV6UEWU_p3",
+    "tier": 1,
+    "title": "たぶん(大概)",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1vceV6UEWU?p=3",
+  "src": "music/たぶん(大概)_BV1vceV6UEWU_3.m4a",
+  "cover": "",
+  "dur": 256,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1vceV6UEWU_p4",
+  "title": "たばこ(烟草)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 336,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 4,
+    "key": "BV1vceV6UEWU_p4",
+    "tier": 1,
+    "title": "たばこ（烟草）",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1vceV6UEWU?p=4",
+  "src": "music/たばこ（烟草）_BV1vceV6UEWU_4.m4a",
+  "cover": "",
+  "dur": 336,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1vceV6UEWU_p5",
+  "title": "ハゼ馳せる果てるまで",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 239,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 239,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 5,
+    "key": "BV1vceV6UEWU_p5",
+    "tier": 1,
+    "title": "ハゼ馳せる果てるまで",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU?p=5"
+   },
+   {
+    "bvid": "BV1Uzao6REWL",
+    "page": 3,
+    "key": "BV1Uzao6REWL_p3",
+    "tier": 1,
+    "title": "ハゼ馳せる果てるまで",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Uzao6REWL?p=3"
+   },
+   {
+    "bvid": "BV1bZeL6EEUz",
+    "page": 1,
+    "key": "BV1bZeL6EEUz_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】ハゼ馳せる果てるまで——9.14爽唱Ed",
+    "author": "UP 38087508",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bZeL6EEUz"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1vceV6UEWU?p=5",
+  "src": "music/ハゼ馳せる果てるまで_BV1vceV6UEWU_5.m4a",
+  "cover": "",
+  "dur": 239,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1vceV6UEWU_p6",
+  "title": "勘冴えて悔しいわ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-15",
+  "sings": [
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 235,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1vceV6UEWU",
+    "start": 0,
+    "end": 235,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 6,
+    "key": "BV1vceV6UEWU_p6",
+    "tier": 1,
+    "title": "勘冴えて悔しいわ",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU?p=6"
+   },
+   {
+    "bvid": "BV1p1eW6bEJ8",
+    "page": 1,
+    "key": "BV1p1eW6bEJ8_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】勘冴えて悔しいわ——9.14ED尾刀",
+    "author": "UP 38087508",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1p1eW6bEJ8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1vceV6UEWU?p=6",
+  "src": "music/勘冴えて悔しいわ_BV1vceV6UEWU_6.m4a",
+  "cover": "",
+  "dur": 235,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p6",
+  "title": "アンダーカバー(潜行)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 194,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 6,
+    "key": "BV1cNYi6HEAE_p6",
+    "tier": 1,
+    "title": "アンダーカバー(潜行)",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=6",
+  "src": "music/アンダーカバー(潜行)_BV1cNYi6HEAE_6.m4a",
+  "cover": "",
+  "dur": 194,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p7",
+  "title": "悪くないもん(我又没有错)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 158,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 7,
+    "key": "BV1cNYi6HEAE_p7",
+    "tier": 1,
+    "title": "悪くないもん(我又没有错)",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=7",
+  "src": "music/悪くないもん(我又没有错)_BV1cNYi6HEAE_7.m4a",
+  "cover": "",
+  "dur": 158,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p8",
+  "title": "アンビリカル(脐带)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 177,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 8,
+    "key": "BV1cNYi6HEAE_p8",
+    "tier": 1,
+    "title": "アンビリカル(脐带)",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=8",
+  "src": "music/アンビリカル(脐带)_BV1cNYi6HEAE_8.m4a",
+  "cover": "",
+  "dur": 177,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p9",
+  "title": "モザイクロール(马赛克卷)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 156,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 9,
+    "key": "BV1cNYi6HEAE_p9",
+    "tier": 1,
+    "title": "モザイクロール(马赛克卷)",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=9",
+  "src": "music/モザイクロール(马赛克卷)_BV1cNYi6HEAE_9.m4a",
+  "cover": "",
+  "dur": 156,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p10",
+  "title": "INTERNET OVERDOSE(互联网重度依赖)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 197,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 10,
+    "key": "BV1cNYi6HEAE_p10",
+    "tier": 1,
+    "title": "INTERNET OVERDOSE（互联网重度依赖）",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=10",
+  "src": "music/INTERNET OVERDOSE（互联网重度依赖）_BV1cNYi6HEAE_10.m4a",
+  "cover": "",
+  "dur": 197,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1cNYi6HEAE_p11",
+  "title": "INTERNET YAMERO(快远离互联网)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1cNYi6HEAE",
+    "start": 0,
+    "end": 260,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 11,
+    "key": "BV1cNYi6HEAE_p11",
+    "tier": 1,
+    "title": "INTERNET YAMERO（快远离互联网）",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=11",
+  "src": "music/INTERNET YAMERO（快远离互联网）_BV1cNYi6HEAE_11.m4a",
+  "cover": "",
+  "dur": 260,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1gpYo68EBT_p1",
+  "title": "👽啾皇很开心!今天亲亲大放送了🥰🥰🥰今天还有啾啾的小巧思节目,🐱🐱记得来看噢!👽❤️🐱",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-13",
+  "sings": [
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1gpYo68EBT",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1gpYo68EBT",
+    "page": 1,
+    "key": "BV1gpYo68EBT_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】👽啾皇很开心！今天亲亲大放送了🥰🥰🥰今天还有啾啾的小巧思节目，🐱🐱记得来看噢！👽❤️🐱",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1gpYo68EBT"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1gpYo68EBT",
+  "src": "music/【羽啾chu2u】👽啾皇很开心！今天亲亲大放送了🥰🥰🥰今天还有啾啾的小巧思节目，🐱🐱记得来看噢！👽❤️🐱_BV1gpYo68EBT_1.m4a",
+  "cover": "",
+  "dur": 247,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1xdYx6qEke_p1",
+  "title": "ヒバナ(火花)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-09",
+  "sings": [
+   {
+    "date": "2026-09-09",
+    "bvid": "BV1xdYx6qEke",
+    "start": 0,
+    "end": 206,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1xdYx6qEke",
+    "page": 1,
+    "key": "BV1xdYx6qEke_p1",
+    "tier": 1,
+    "title": "ヒバナ（火花）",
+    "author": "UP 297578981",
+    "date": "2026-09-09",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1xdYx6qEke"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1xdYx6qEke",
+  "src": "music/ヒバナ（火花）_BV1xdYx6qEke_1.m4a",
+  "cover": "",
+  "dur": 206,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1xdYx6qEke_p3",
+  "title": "フォニイ(伪物)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-09",
+  "sings": [
+   {
+    "date": "2026-09-09",
+    "bvid": "BV1xdYx6qEke",
+    "start": 0,
+    "end": 194,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1xdYx6qEke",
+    "page": 3,
+    "key": "BV1xdYx6qEke_p3",
+    "tier": 1,
+    "title": "フォニイ(伪物)",
+    "author": "UP 297578981",
+    "date": "2026-09-09",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1xdYx6qEke?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1xdYx6qEke?p=3",
+  "src": "music/フォニイ(伪物)_BV1xdYx6qEke_3.m4a",
+  "cover": "",
+  "dur": 194,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1oCYn6uEn3_p1",
+  "title": "星座になれたら",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-09",
+  "sings": [
+   {
+    "date": "2026-09-09",
+    "bvid": "BV1oCYn6uEn3",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1oCYn6uEn3",
+    "page": 1,
+    "key": "BV1oCYn6uEn3_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】星座になれたら——9.8日早台，唱的好棒的一首",
+    "author": "UP 38087508",
+    "date": "2026-09-09",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1oCYn6uEn3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1oCYn6uEn3",
+  "src": "music/【羽啾chu2u】星座になれたら——9.8日早台，唱的好棒的一首_BV1oCYn6uEn3_1.m4a",
+  "cover": "",
+  "dur": 262,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV15KYn6vEeC_p1",
+  "title": "灰かぶり",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-09",
+  "sings": [
+   {
+    "date": "2026-09-09",
+    "bvid": "BV15KYn6vEeC",
+    "start": 0,
+    "end": 225,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV15KYn6vEeC",
+    "page": 1,
+    "key": "BV15KYn6vEeC_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】灰かぶり——唱的太痞帅了吧🤤感觉只要有出轨的念头就要被刀了有感觉吗",
+    "author": "UP 38087508",
+    "date": "2026-09-09",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV15KYn6vEeC"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV15KYn6vEeC",
+  "src": "music/【羽啾chu2u】灰かぶり——唱的太痞帅了吧🤤感觉只要有出轨的念头就要被刀了有感觉吗_BV15KYn6vEeC_1.m4a",
+  "cover": "",
+  "dur": 225,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p1",
+  "title": "打上花火",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 270,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 1,
+    "key": "BV1ewbG6hEKV_p1",
+    "tier": 1,
+    "title": "打上花火",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV",
+  "src": "music/打上花火_BV1ewbG6hEKV_1.m4a",
+  "cover": "",
+  "dur": 270,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p2",
+  "title": "灰姑娘(灰かぶり)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 220,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 2,
+    "key": "BV1ewbG6hEKV_p2",
+    "tier": 1,
+    "title": "灰姑娘(灰かぶり)",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=2",
+  "src": "music/灰姑娘(灰かぶり)_BV1ewbG6hEKV_2.m4a",
+  "cover": "",
+  "dur": 220,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p3",
+  "title": "Snow halation",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 235,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 3,
+    "key": "BV1ewbG6hEKV_p3",
+    "tier": 1,
+    "title": "Snow halation",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=3",
+  "src": "music/Snow halation_BV1ewbG6hEKV_3.m4a",
+  "cover": "",
+  "dur": 235,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p4",
+  "title": "STARTDASH!!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 251,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 4,
+    "key": "BV1ewbG6hEKV_p4",
+    "tier": 1,
+    "title": "STARTDASH!!",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=4",
+  "src": "music/STARTDASH!!_BV1ewbG6hEKV_4.m4a",
+  "cover": "",
+  "dur": 251,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p5",
+  "title": "KICK BACK",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 83,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 5,
+    "key": "BV1ewbG6hEKV_p5",
+    "tier": 1,
+    "title": "KICK BACK",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=5",
+  "src": "music/KICK BACK_BV1ewbG6hEKV_5.m4a",
+  "cover": "",
+  "dur": 83,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p6",
+  "title": "JANE DOE",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 84,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 6,
+    "key": "BV1ewbG6hEKV_p6",
+    "tier": 1,
+    "title": "JANE DOE",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=6",
+  "src": "music/JANE DOE_BV1ewbG6hEKV_6.m4a",
+  "cover": "",
+  "dur": 84,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p7",
+  "title": "空の箱",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 181,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 7,
+    "key": "BV1ewbG6hEKV_p7",
+    "tier": 1,
+    "title": "空の箱",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=7",
+  "src": "music/空の箱_BV1ewbG6hEKV_7.m4a",
+  "cover": "",
+  "dur": 181,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p8",
+  "title": "吉他与孤独与蓝色星球",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 226,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 8,
+    "key": "BV1ewbG6hEKV_p8",
+    "tier": 1,
+    "title": "吉他与孤独与蓝色星球",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=8",
+  "src": "music/吉他与孤独与蓝色星球_BV1ewbG6hEKV_8.m4a",
+  "cover": "",
+  "dur": 226,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p9",
+  "title": "若能化作星座",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 243,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 9,
+    "key": "BV1ewbG6hEKV_p9",
+    "tier": 1,
+    "title": "若能化作星座",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=9",
+  "src": "music/若能化作星座_BV1ewbG6hEKV_9.m4a",
+  "cover": "",
+  "dur": 243,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p10",
+  "title": "泪水落下(ティアドロップス)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 85,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 10,
+    "key": "BV1ewbG6hEKV_p10",
+    "tier": 1,
+    "title": "泪水落下(ティアドロップス)",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=10",
+  "src": "music/泪水落下(ティアドロップス)_BV1ewbG6hEKV_10.m4a",
+  "cover": "",
+  "dur": 85,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ewbG6hEKV_p11",
+  "title": "互联网重度依赖(INTERNET OVERDOSE)†升天††升天††升天†",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-08",
+  "sings": [
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1ewbG6hEKV",
+    "start": 0,
+    "end": 229,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ewbG6hEKV",
+    "page": 11,
+    "key": "BV1ewbG6hEKV_p11",
+    "tier": 1,
+    "title": "互联网重度依赖(INTERNET OVERDOSE)†升天††升天††升天†",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ewbG6hEKV?p=11",
+  "src": "music/互联网重度依赖(INTERNET OVERDOSE)†升天††升天††升天†_BV1ewbG6hEKV_11.m4a",
+  "cover": "",
+  "dur": 229,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1RhbJ69E54_p1",
+  "title": "樱之子",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-06",
+  "sings": [
+   {
+    "date": "2026-09-06",
+    "bvid": "BV1RhbJ69E54",
+    "start": 0,
+    "end": 245,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1RhbJ69E54",
+    "page": 1,
+    "key": "BV1RhbJ69E54_p1",
+    "tier": 1,
+    "title": "樱之子",
+    "author": "UP 38087508",
+    "date": "2026-09-06",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1RhbJ69E54"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1RhbJ69E54",
+  "src": "music/樱之子_BV1RhbJ69E54_1.m4a",
+  "cover": "",
+  "dur": 245,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p2",
+  "title": "怪獣の花唄",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 222,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-30",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 222,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 2,
+    "key": "BV1hNtB6hELD_p2",
+    "tier": 1,
+    "title": "怪獣の花唄",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=2"
+   },
+   {
+    "bvid": "BV1rPaX6AEqR",
+    "page": 4,
+    "key": "BV1rPaX6AEqR_p4",
+    "tier": 1,
+    "title": "怪獣の花唄",
+    "author": "UP 297578981",
+    "date": "2026-09-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1rPaX6AEqR?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=2",
+  "src": "music/怪獣の花唄_BV1hNtB6hELD_2.m4a",
+  "cover": "",
+  "dur": 222,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p3",
+  "title": "花占い",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 206,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 3,
+    "key": "BV1hNtB6hELD_p3",
+    "tier": 1,
+    "title": "花占い",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=3",
+  "src": "music/花占い_BV1hNtB6hELD_3.m4a",
+  "cover": "",
+  "dur": 206,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p5",
+  "title": "ロミオとシンデレラ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 279,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-24",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 279,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 5,
+    "key": "BV1hNtB6hELD_p5",
+    "tier": 1,
+    "title": "ロミオとシンデレラ",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=5"
+   },
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 5,
+    "key": "BV19uaA61EBx_p5",
+    "tier": 1,
+    "title": "ロミオとシンデレラ",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=5",
+  "src": "music/ロミオとシンデレラ_BV1hNtB6hELD_5.m4a",
+  "cover": "",
+  "dur": 279,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p6",
+  "title": "メルヘル小惑星",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 95,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 6,
+    "key": "BV1hNtB6hELD_p6",
+    "tier": 1,
+    "title": "メルヘル小惑星",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=6",
+  "src": "music/メルヘル小惑星_BV1hNtB6hELD_6.m4a",
+  "cover": "",
+  "dur": 95,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p7",
+  "title": "忘れないでベイベー",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 120,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-24",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 120,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 7,
+    "key": "BV1hNtB6hELD_p7",
+    "tier": 1,
+    "title": "忘れないでベイベー",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=7"
+   },
+   {
+    "bvid": "BV1G7aT6oEWX",
+    "page": 1,
+    "key": "BV1G7aT6oEWX_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】忘れないでベイベー——这是个魔法，是你永远不会忘了我🎵9.24午台ED",
+    "author": "UP 38087508",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1G7aT6oEWX"
+   },
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 3,
+    "key": "BV19uaA61EBx_p3",
+    "tier": 1,
+    "title": "忘れないでベイベー",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=7",
+  "src": "music/忘れないでベイベー_BV1hNtB6hELD_7.m4a",
+  "cover": "",
+  "dur": 120,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p8",
+  "title": "大好きだよ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 88,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 8,
+    "key": "BV1hNtB6hELD_p8",
+    "tier": 1,
+    "title": "大好きだよ",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=8",
+  "src": "music/大好きだよ_BV1hNtB6hELD_8.m4a",
+  "cover": "",
+  "dur": 88,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p9",
+  "title": "グッバイ宣言",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 77,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-09",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 77,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 9,
+    "key": "BV1hNtB6hELD_p9",
+    "tier": 1,
+    "title": "グッバイ宣言",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=9"
+   },
+   {
+    "bvid": "BV1xdYx6qEke",
+    "page": 2,
+    "key": "BV1xdYx6qEke_p2",
+    "tier": 1,
+    "title": "グッバイ宣言(再见宣言)",
+    "author": "UP 297578981",
+    "date": "2026-09-09",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1xdYx6qEke?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=9",
+  "src": "music/グッバイ宣言_BV1hNtB6hELD_9.m4a",
+  "cover": "",
+  "dur": 77,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1hNtB6hELD_p10",
+  "title": "春雷",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-04",
+  "sings": [
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1hNtB6hELD",
+    "start": 0,
+    "end": 290,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 10,
+    "key": "BV1hNtB6hELD_p10",
+    "tier": 1,
+    "title": "春雷",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1hNtB6hELD?p=10",
+  "src": "music/春雷_BV1hNtB6hELD_10.m4a",
+  "cover": "",
+  "dur": 290,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p1",
+  "title": "小夜子(Cover 初音ミク-みきとP)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-08-30",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 256,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 256,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 1,
+    "key": "BV1eTtg6xESw_p1",
+    "tier": 1,
+    "title": "小夜子（Cover 初音ミク-みきとP）",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw"
+   },
+   {
+    "bvid": "BV1Bd426vE4E",
+    "page": 1,
+    "key": "BV1Bd426vE4E_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】小夜子（吉他版）——有点小伤感啾",
+    "author": "UP 38087508",
+    "date": "2026-08-30",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Bd426vE4E"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw",
+  "src": "music/小夜子（Cover 初音ミク-みきとP）_BV1eTtg6xESw_1.m4a",
+  "cover": "",
+  "dur": 256,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p2",
+  "title": "人生は夢だらけ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 5,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-08",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 2,
+    "key": "BV1eTtg6xESw_p2",
+    "tier": 1,
+    "title": "人生は夢だらけ",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=2"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 9,
+    "key": "BV1aJhY64EeD_p9",
+    "tier": 2,
+    "title": "人生は夢だらけ",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=9"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 2,
+    "key": "BV1VKhB6kE5B_p2",
+    "tier": 1,
+    "title": "人生は夢だらけ",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=2"
+   },
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 4,
+    "key": "BV18Xew65Ee9_p4",
+    "tier": 1,
+    "title": "人生は夢だらけ",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=4"
+   },
+   {
+    "bvid": "BV1RKbT6pEUD",
+    "page": 1,
+    "key": "BV1RKbT6pEUD_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】人生は夢だらけ——9.7 ED 生活的酸楚，也是美梦的一环",
+    "author": "UP 38087508",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1RKbT6pEUD"
+   },
+   {
+    "bvid": "BV1A9bK6aEc5",
+    "page": 1,
+    "key": "BV1A9bK6aEc5_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】满月回唱《人生は夢だらけ》真给🐱听大了！我怎么在天上飞啊🤯🤯🤯！再说一遍🐱✋宇宙无敌！",
+    "author": "UP 297578981",
+    "date": "2026-09-08",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1A9bK6aEc5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=2",
+  "src": "music/人生は夢だらけ_BV1eTtg6xESw_2.m4a",
+  "cover": "",
+  "dur": 199,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p3",
+  "title": "ブレインロット",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 125,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 3,
+    "key": "BV1eTtg6xESw_p3",
+    "tier": 1,
+    "title": "ブレインロット",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=3",
+  "src": "music/ブレインロット_BV1eTtg6xESw_3.m4a",
+  "cover": "",
+  "dur": 125,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p4",
+  "title": "シニカル・シニカル (feat. Such)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 176,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 176,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 4,
+    "key": "BV1eTtg6xESw_p4",
+    "tier": 1,
+    "title": "シニカル・シニカル (feat. Such)",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=4"
+   },
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 9,
+    "key": "BV19whm6NEh3_p9",
+    "tier": 1,
+    "title": "シニカル・シニカル (feat. Such)",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=4",
+  "src": "music/シニカル・シニカル (feat. Such)_BV1eTtg6xESw_4.m4a",
+  "cover": "",
+  "dur": 176,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p5",
+  "title": "薄ら氷心中",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 182,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 182,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 182,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 5,
+    "key": "BV1eTtg6xESw_p5",
+    "tier": 1,
+    "title": "薄ら氷心中",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=5"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 12,
+    "key": "BV1aJhY64EeD_p12",
+    "tier": 2,
+    "title": "薄ら氷心中",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=12"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 5,
+    "key": "BV1VKhB6kE5B_p5",
+    "tier": 1,
+    "title": "薄ら氷心中",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=5",
+  "src": "music/薄ら氷心中_BV1eTtg6xESw_5.m4a",
+  "cover": "",
+  "dur": 182,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p6",
+  "title": "糸",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 212,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 6,
+    "key": "BV1eTtg6xESw_p6",
+    "tier": 1,
+    "title": "糸",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=6",
+  "src": "music/糸_BV1eTtg6xESw_6.m4a",
+  "cover": "",
+  "dur": 212,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p7",
+  "title": "ナイトルール",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 7,
+    "key": "BV1eTtg6xESw_p7",
+    "tier": 1,
+    "title": "ナイトルール",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=7",
+  "src": "music/ナイトルール_BV1eTtg6xESw_7.m4a",
+  "cover": "",
+  "dur": 234,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p8",
+  "title": "恋愛裁判",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 220,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 8,
+    "key": "BV1eTtg6xESw_p8",
+    "tier": 1,
+    "title": "恋愛裁判",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=8"
+   },
+   {
+    "bvid": "BV1YDtY6sEbz",
+    "page": 1,
+    "key": "BV1YDtY6sEbz_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】恋愛裁判——終身刑で償う覚悟、死ぬまで君だけを守るよ",
+    "author": "UP 38087508",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1YDtY6sEbz"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=8",
+  "src": "music/恋愛裁判_BV1eTtg6xESw_8.m4a",
+  "cover": "",
+  "dur": 220,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1eTtg6xESw_p9",
+  "title": "ヴァンパイア (Cover)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1eTtg6xESw",
+    "start": 0,
+    "end": 181,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1eTtg6xESw",
+    "page": 9,
+    "key": "BV1eTtg6xESw_p9",
+    "tier": 1,
+    "title": "ヴァンパイア (Cover)",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1eTtg6xESw?p=9"
+   },
+   {
+    "bvid": "BV18otY6nEfq",
+    "page": 1,
+    "key": "BV18otY6nEfq_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】ヴァンパイア——游戏＆歌回ed",
+    "author": "UP 38087508",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18otY6nEfq"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1eTtg6xESw?p=9",
+  "src": "music/ヴァンパイア (Cover)_BV1eTtg6xESw_9.m4a",
+  "cover": "",
+  "dur": 181,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p1",
+  "title": "ビビビビ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 236,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 1,
+    "key": "BV1Mwt36UE7D_p1",
+    "tier": 1,
+    "title": "ビビビビ",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D",
+  "src": "music/ビビビビ_BV1Mwt36UE7D_1.m4a",
+  "cover": "",
+  "dur": 236,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p2",
+  "title": "あなたしか見えないの",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 201,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 2,
+    "key": "BV1Mwt36UE7D_p2",
+    "tier": 1,
+    "title": "あなたしか見えないの",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=2",
+  "src": "music/あなたしか見えないの_BV1Mwt36UE7D_2.m4a",
+  "cover": "",
+  "dur": 201,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p3",
+  "title": "三日月ステップ(ごめ言えremix)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 189,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 3,
+    "key": "BV1Mwt36UE7D_p3",
+    "tier": 1,
+    "title": "三日月ステップ(ごめ言えremix)",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=3",
+  "src": "music/三日月ステップ(ごめ言えremix)_BV1Mwt36UE7D_3.m4a",
+  "cover": "",
+  "dur": 189,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p4",
+  "title": "CH4NGE (feat. 可不)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 133,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 4,
+    "key": "BV1Mwt36UE7D_p4",
+    "tier": 1,
+    "title": "CH4NGE (feat. 可不)",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=4",
+  "src": "music/CH4NGE (feat. 可不)_BV1Mwt36UE7D_4.m4a",
+  "cover": "",
+  "dur": 133,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p5",
+  "title": "踊",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 103,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 5,
+    "key": "BV1Mwt36UE7D_p5",
+    "tier": 1,
+    "title": "踊",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=5",
+  "src": "music/踊_BV1Mwt36UE7D_5.m4a",
+  "cover": "",
+  "dur": 103,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p6",
+  "title": "のぼれ!すすめ!高い塔",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 315,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 6,
+    "key": "BV1Mwt36UE7D_p6",
+    "tier": 1,
+    "title": "のぼれ！すすめ！高い塔",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=6",
+  "src": "music/のぼれ！すすめ！高い塔_BV1Mwt36UE7D_6.m4a",
+  "cover": "",
+  "dur": 315,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p7",
+  "title": "mosi mosi",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 174,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 7,
+    "key": "BV1Mwt36UE7D_p7",
+    "tier": 1,
+    "title": "mosi mosi_",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=7",
+  "src": "music/mosi mosi__BV1Mwt36UE7D_7.m4a",
+  "cover": "",
+  "dur": 174,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p8",
+  "title": "少女レイ (いよわRemix)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 250,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 8,
+    "key": "BV1Mwt36UE7D_p8",
+    "tier": 1,
+    "title": "少女レイ (いよわRemix)",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=8",
+  "src": "music/少女レイ (いよわRemix)_BV1Mwt36UE7D_8.m4a",
+  "cover": "",
+  "dur": 250,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p9",
+  "title": "バカになって",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 74,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 9,
+    "key": "BV1Mwt36UE7D_p9",
+    "tier": 1,
+    "title": "バカになって",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=9",
+  "src": "music/バカになって_BV1Mwt36UE7D_9.m4a",
+  "cover": "",
+  "dur": 74,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p10",
+  "title": "ズッ友",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 279,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 10,
+    "key": "BV1Mwt36UE7D_p10",
+    "tier": 1,
+    "title": "ズッ友",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=10",
+  "src": "music/ズッ友_BV1Mwt36UE7D_10.m4a",
+  "cover": "",
+  "dur": 279,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p11",
+  "title": "日々カルチャア",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 208,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 11,
+    "key": "BV1Mwt36UE7D_p11",
+    "tier": 1,
+    "title": "日々カルチャア",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=11",
+  "src": "music/日々カルチャア_BV1Mwt36UE7D_11.m4a",
+  "cover": "",
+  "dur": 208,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p12",
+  "title": "死にたいひまわり",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 12,
+    "key": "BV1Mwt36UE7D_p12",
+    "tier": 1,
+    "title": "死にたいひまわり",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=12",
+  "src": "music/死にたいひまわり_BV1Mwt36UE7D_12.m4a",
+  "cover": "",
+  "dur": 238,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p13",
+  "title": "法螺話",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 200,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 200,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 200,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 13,
+    "key": "BV1Mwt36UE7D_p13",
+    "tier": 1,
+    "title": "法螺話",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=13"
+   },
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 2,
+    "key": "BV19whm6NEh3_p2",
+    "tier": 1,
+    "title": "法螺話",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=2"
+   },
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 5,
+    "key": "BV18Xew65Ee9_p5",
+    "tier": 1,
+    "title": "法螺話",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=13",
+  "src": "music/法螺話_BV1Mwt36UE7D_13.m4a",
+  "cover": "",
+  "dur": 200,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p14",
+  "title": "食虫植物",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 160,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 160,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 14,
+    "key": "BV1Mwt36UE7D_p14",
+    "tier": 1,
+    "title": "食虫植物",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14"
+   },
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 1,
+    "key": "BV19whm6NEh3_p1",
+    "tier": 1,
+    "title": "食虫植物",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=14",
+  "src": "music/食虫植物_BV1Mwt36UE7D_14.m4a",
+  "cover": "",
+  "dur": 160,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Mwt36UE7D_p15",
+  "title": "わたしの線香",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-09-01",
+  "sings": [
+   {
+    "date": "2026-09-01",
+    "bvid": "BV1Mwt36UE7D",
+    "start": 0,
+    "end": 134,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Mwt36UE7D",
+    "page": 15,
+    "key": "BV1Mwt36UE7D_p15",
+    "tier": 1,
+    "title": "わたしの線香",
+    "author": "UP 4378290",
+    "date": "2026-09-01",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=15"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=15",
+  "src": "music/わたしの線香_BV1Mwt36UE7D_15.m4a",
+  "cover": "",
+  "dur": 134,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p1",
+  "title": "異星にいこうね (feat. 星界)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 169,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 1,
+    "key": "BV1mXhw6YEHk_p1",
+    "tier": 1,
+    "title": "異星にいこうね (feat. 星界)",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk",
+  "src": "music/異星にいこうね (feat. 星界)_BV1mXhw6YEHk_1.m4a",
+  "cover": "",
+  "dur": 169,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p2",
+  "title": "ノーチラス",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 237,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 2,
+    "key": "BV1mXhw6YEHk_p2",
+    "tier": 1,
+    "title": "ノーチラス",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=2",
+  "src": "music/ノーチラス_BV1mXhw6YEHk_2.m4a",
+  "cover": "",
+  "dur": 237,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p3",
+  "title": "言って。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 243,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 3,
+    "key": "BV1mXhw6YEHk_p3",
+    "tier": 1,
+    "title": "言って。",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=3",
+  "src": "music/言って。_BV1mXhw6YEHk_3.m4a",
+  "cover": "",
+  "dur": 243,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p4",
+  "title": "五月は花緑青の窓辺から",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 187,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 4,
+    "key": "BV1mXhw6YEHk_p4",
+    "tier": 1,
+    "title": "五月は花緑青の窓辺から",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=4",
+  "src": "music/五月は花緑青の窓辺から_BV1mXhw6YEHk_4.m4a",
+  "cover": "",
+  "dur": 187,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p7",
+  "title": "ベノム",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 88,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 7,
+    "key": "BV1mXhw6YEHk_p7",
+    "tier": 1,
+    "title": "ベノム",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=7",
+  "src": "music/ベノム_BV1mXhw6YEHk_7.m4a",
+  "cover": "",
+  "dur": 88,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p8",
+  "title": "都落ち",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 167,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 8,
+    "key": "BV1mXhw6YEHk_p8",
+    "tier": 1,
+    "title": "都落ち",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=8",
+  "src": "music/都落ち_BV1mXhw6YEHk_8.m4a",
+  "cover": "",
+  "dur": 167,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p9",
+  "title": "だから僕は音楽を辞めた",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 243,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 243,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 9,
+    "key": "BV1mXhw6YEHk_p9",
+    "tier": 1,
+    "title": "だから僕は音楽を辞めた",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=9"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 16,
+    "key": "BV1aJhY64EeD_p16",
+    "tier": 2,
+    "title": "だから僕は音楽を辞めた",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=16"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=9",
+  "src": "music/だから僕は音楽を辞めた_BV1mXhw6YEHk_9.m4a",
+  "cover": "",
+  "dur": 243,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p10",
+  "title": "晴る",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 273,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 10,
+    "key": "BV1mXhw6YEHk_p10",
+    "tier": 1,
+    "title": "晴る",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=10",
+  "src": "music/晴る_BV1mXhw6YEHk_10.m4a",
+  "cover": "",
+  "dur": 273,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p11",
+  "title": "MILABO",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 11,
+    "key": "BV1mXhw6YEHk_p11",
+    "tier": 1,
+    "title": "MILABO",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=11",
+  "src": "music/MILABO_BV1mXhw6YEHk_11.m4a",
+  "cover": "",
+  "dur": 261,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p13",
+  "title": "グリズリーに襲われたら♡",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 236,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 13,
+    "key": "BV1mXhw6YEHk_p13",
+    "tier": 1,
+    "title": "グリズリーに襲われたら♡",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=13",
+  "src": "music/グリズリーに襲われたら♡_BV1mXhw6YEHk_13.m4a",
+  "cover": "",
+  "dur": 236,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1mXhw6YEHk_p14",
+  "title": "愛♡スクリ~ム!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-27",
+  "sings": [
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1mXhw6YEHk",
+    "start": 0,
+    "end": 258,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 14,
+    "key": "BV1mXhw6YEHk_p14",
+    "tier": 1,
+    "title": "愛♡スクリ～ム！",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=14"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=14",
+  "src": "music/愛♡スクリ～ム！_BV1mXhw6YEHk_14.m4a",
+  "cover": "",
+  "dur": 258,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p1",
+  "title": "アンビバレント",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 4,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 247,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 1,
+    "key": "BV1bV8X6uEaS_p1",
+    "tier": 1,
+    "title": "アンビバレント",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 2,
+    "key": "BV1aJhY64EeD_p2",
+    "tier": 2,
+    "title": "アンビバレント",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=2"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 13,
+    "key": "BV1KNai6tEFf_p13",
+    "tier": 1,
+    "title": "アンビバレント",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=13"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 13,
+    "key": "BV1VKhB6kE5B_p13",
+    "tier": 1,
+    "title": "アンビバレント",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS",
+  "src": "music/アンビバレント_BV1bV8X6uEaS_1.m4a",
+  "cover": "",
+  "dur": 247,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p2",
+  "title": "雲と幽霊",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 297,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 2,
+    "key": "BV1bV8X6uEaS_p2",
+    "tier": 1,
+    "title": "雲と幽霊",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=2",
+  "src": "music/雲と幽霊_BV1bV8X6uEaS_2.m4a",
+  "cover": "",
+  "dur": 297,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p3",
+  "title": "八月、某、月明かり",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 277,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 3,
+    "key": "BV1bV8X6uEaS_p3",
+    "tier": 1,
+    "title": "八月、某、月明かり",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=3",
+  "src": "music/八月、某、月明かり_BV1bV8X6uEaS_3.m4a",
+  "cover": "",
+  "dur": 277,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p4",
+  "title": "シル・ヴ・プレジデント",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 82,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 82,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 4,
+    "key": "BV1bV8X6uEaS_p4",
+    "tier": 1,
+    "title": "シル・ヴ・プレジデント",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=4"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 10,
+    "key": "BV1VKhB6kE5B_p10",
+    "tier": 1,
+    "title": "シル・ヴ・プレジデント",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=4",
+  "src": "music/シル・ヴ・プレジデント_BV1bV8X6uEaS_4.m4a",
+  "cover": "",
+  "dur": 82,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p5",
+  "title": "多分、風。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 585,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 5,
+    "key": "BV1bV8X6uEaS_p5",
+    "tier": 1,
+    "title": "多分、風。",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=5",
+  "src": "music/多分、風。_BV1bV8X6uEaS_5.m4a",
+  "cover": "",
+  "dur": 585,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p6",
+  "title": "踊れオーケストラ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 6,
+    "key": "BV1bV8X6uEaS_p6",
+    "tier": 1,
+    "title": "踊れオーケストラ",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=6",
+  "src": "music/踊れオーケストラ_BV1bV8X6uEaS_6.m4a",
+  "cover": "",
+  "dur": 238,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p7",
+  "title": "トンデモワンダーズ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 63,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 7,
+    "key": "BV1bV8X6uEaS_p7",
+    "tier": 1,
+    "title": "トンデモワンダーズ",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=7",
+  "src": "music/トンデモワンダーズ_BV1bV8X6uEaS_7.m4a",
+  "cover": "",
+  "dur": 63,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p8",
+  "title": "ようこそジャパリパークへ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 132,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 8,
+    "key": "BV1bV8X6uEaS_p8",
+    "tier": 1,
+    "title": "ようこそジャパリパークへ",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=8",
+  "src": "music/ようこそジャパリパークへ_BV1bV8X6uEaS_8.m4a",
+  "cover": "",
+  "dur": 132,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p9",
+  "title": "メルト (かぐや ver.)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 9,
+    "key": "BV1bV8X6uEaS_p9",
+    "tier": 1,
+    "title": "メルト (かぐや ver.)",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=9",
+  "src": "music/メルト (かぐや ver.)_BV1bV8X6uEaS_9.m4a",
+  "cover": "",
+  "dur": 238,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p10",
+  "title": "花 feat. 花譜",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-16",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 10,
+    "key": "BV1bV8X6uEaS_p10",
+    "tier": 1,
+    "title": "花 feat. 花譜",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=10"
+   },
+   {
+    "bvid": "BV18Xew65Ee9",
+    "page": 3,
+    "key": "BV18Xew65Ee9_p3",
+    "tier": 1,
+    "title": "花 feat. 花譜",
+    "author": "UP 297578981",
+    "date": "2026-09-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV18Xew65Ee9?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=10",
+  "src": "music/花 feat. 花譜_BV1bV8X6uEaS_10.m4a",
+  "cover": "",
+  "dur": 199,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p11",
+  "title": "風 feat. 理芽",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 184,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 11,
+    "key": "BV1bV8X6uEaS_p11",
+    "tier": 1,
+    "title": "風 feat. 理芽",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=11",
+  "src": "music/風 feat. 理芽_BV1bV8X6uEaS_11.m4a",
+  "cover": "",
+  "dur": 184,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p12",
+  "title": "月(Live)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 217,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-24",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 217,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 12,
+    "key": "BV1bV8X6uEaS_p12",
+    "tier": 1,
+    "title": "月(Live)",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=12"
+   },
+   {
+    "bvid": "BV19uaA61EBx",
+    "page": 6,
+    "key": "BV19uaA61EBx_p6",
+    "tier": 1,
+    "title": "月(Live)",
+    "author": "UP 297578981",
+    "date": "2026-09-24",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19uaA61EBx?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=12",
+  "src": "music/月(Live)_BV1bV8X6uEaS_12.m4a",
+  "cover": "",
+  "dur": 217,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p13",
+  "title": "刀ピー Dilemma🎶~",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 217,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 13,
+    "key": "BV1bV8X6uEaS_p13",
+    "tier": 1,
+    "title": "刀ピー Dilemma🎶~",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=13",
+  "src": "music/刀ピー Dilemma🎶~_BV1bV8X6uEaS_13.m4a",
+  "cover": "",
+  "dur": 217,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p14",
+  "title": "君が生まれた日",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 122,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 122,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 14,
+    "key": "BV1bV8X6uEaS_p14",
+    "tier": 1,
+    "title": "君が生まれた日",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=14"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 14,
+    "key": "BV1VKhB6kE5B_p14",
+    "tier": 1,
+    "title": "君が生まれた日",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=14"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=14",
+  "src": "music/君が生まれた日_BV1bV8X6uEaS_14.m4a",
+  "cover": "",
+  "dur": 122,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p15",
+  "title": "忘れてしまえ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 233,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 15,
+    "key": "BV1bV8X6uEaS_p15",
+    "tier": 1,
+    "title": "忘れてしまえ",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=15"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=15",
+  "src": "music/忘れてしまえ_BV1bV8X6uEaS_15.m4a",
+  "cover": "",
+  "dur": 233,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1bV8X6uEaS_p16",
+  "title": "IRIS OUT",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1bV8X6uEaS",
+    "start": 0,
+    "end": 156,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1bV8X6uEaS",
+    "page": 16,
+    "key": "BV1bV8X6uEaS_p16",
+    "tier": 1,
+    "title": "IRIS OUT",
+    "author": "UP 4378290",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=16"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1bV8X6uEaS?p=16",
+  "src": "music/IRIS OUT_BV1bV8X6uEaS_16.m4a",
+  "cover": "",
+  "dur": 156,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Tihj6rEBw_p1",
+  "title": "僕は頑張るよっ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-26",
+  "sings": [
+   {
+    "date": "2026-08-26",
+    "bvid": "BV1Tihj6rEBw",
+    "start": 0,
+    "end": 306,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Tihj6rEBw",
+    "page": 1,
+    "key": "BV1Tihj6rEBw_p1",
+    "tier": 1,
+    "title": "僕は頑張るよっ",
+    "author": "UP 38087508",
+    "date": "2026-08-26",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Tihj6rEBw"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Tihj6rEBw",
+  "src": "music/僕は頑張るよっ_BV1Tihj6rEBw_1.m4a",
+  "cover": "",
+  "dur": 306,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p1",
+  "title": "J'ai Trouvé L'amour",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 213,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 1,
+    "key": "BV1MH816DEjd_p1",
+    "tier": 1,
+    "title": "J'ai Trouvé L'amour",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd",
+  "src": "music/J'ai Trouvé L'amour_BV1MH816DEjd_1.m4a",
+  "cover": "",
+  "dur": 213,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p2",
+  "title": "とても素敵な六月でした",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 278,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 2,
+    "key": "BV1MH816DEjd_p2",
+    "tier": 1,
+    "title": "とても素敵な六月でした",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=2",
+  "src": "music/とても素敵な六月でした_BV1MH816DEjd_2.m4a",
+  "cover": "",
+  "dur": 278,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p3",
+  "title": "君の神様になりたい。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 255,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 255,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 3,
+    "key": "BV1MH816DEjd_p3",
+    "tier": 1,
+    "title": "君の神様になりたい。",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=3"
+   },
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 11,
+    "key": "BV1fJHB6bEfF_p11",
+    "tier": 1,
+    "title": "君の神様になりたい。",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=3",
+  "src": "music/君の神様になりたい。_BV1MH816DEjd_3.m4a",
+  "cover": "",
+  "dur": 255,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p4",
+  "title": "深海のリトルクライ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 249,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 4,
+    "key": "BV1MH816DEjd_p4",
+    "tier": 1,
+    "title": "深海のリトルクライ",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=4",
+  "src": "music/深海のリトルクライ_BV1MH816DEjd_4.m4a",
+  "cover": "",
+  "dur": 249,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p5",
+  "title": "エルマ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 231,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 5,
+    "key": "BV1MH816DEjd_p5",
+    "tier": 1,
+    "title": "エルマ",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=5",
+  "src": "music/エルマ_BV1MH816DEjd_5.m4a",
+  "cover": "",
+  "dur": 231,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p6",
+  "title": "离去之原",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 93,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 6,
+    "key": "BV1MH816DEjd_p6",
+    "tier": 1,
+    "title": "离去之原",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=6",
+  "src": "music/离去之原_BV1MH816DEjd_6.m4a",
+  "cover": "",
+  "dur": 93,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p7",
+  "title": "花に亡霊",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 242,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 7,
+    "key": "BV1MH816DEjd_p7",
+    "tier": 1,
+    "title": "花に亡霊",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=7",
+  "src": "music/花に亡霊_BV1MH816DEjd_7.m4a",
+  "cover": "",
+  "dur": 242,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p8",
+  "title": "又三郎",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 230,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 230,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 8,
+    "key": "BV1MH816DEjd_p8",
+    "tier": 1,
+    "title": "又三郎",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=8"
+   },
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 5,
+    "key": "BV1mXhw6YEHk_p5",
+    "tier": 1,
+    "title": "又三郎",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=5"
+   },
+   {
+    "bvid": "BV1RV8S6rEAK",
+    "page": 1,
+    "key": "BV1RV8S6rEAK_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】又三郎-8.22歌杂",
+    "author": "UP 38087508",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1RV8S6rEAK"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=8",
+  "src": "music/又三郎_BV1MH816DEjd_8.m4a",
+  "cover": "",
+  "dur": 230,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p9",
+  "title": "爆弾魔",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 70,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 9,
+    "key": "BV1MH816DEjd_p9",
+    "tier": 1,
+    "title": "爆弾魔",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=9",
+  "src": "music/爆弾魔_BV1MH816DEjd_9.m4a",
+  "cover": "",
+  "dur": 70,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p10",
+  "title": "花と水飴、最終電車",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 84,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 10,
+    "key": "BV1MH816DEjd_p10",
+    "tier": 1,
+    "title": "花と水飴、最終電車",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=10",
+  "src": "music/花と水飴、最終電車_BV1MH816DEjd_10.m4a",
+  "cover": "",
+  "dur": 84,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p11",
+  "title": "Alice in 冷凍庫",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 342,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 11,
+    "key": "BV1MH816DEjd_p11",
+    "tier": 1,
+    "title": "Alice in 冷凍庫",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=11",
+  "src": "music/Alice in 冷凍庫_BV1MH816DEjd_11.m4a",
+  "cover": "",
+  "dur": 342,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p12",
+  "title": "アスノヨゾラ哨戒班",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 180,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-27",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 180,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 12,
+    "key": "BV1MH816DEjd_p12",
+    "tier": 1,
+    "title": "アスノヨゾラ哨戒班",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=12"
+   },
+   {
+    "bvid": "BV1mXhw6YEHk",
+    "page": 6,
+    "key": "BV1mXhw6YEHk_p6",
+    "tier": 1,
+    "title": "アスノヨゾラ哨戒班",
+    "author": "UP 4378290",
+    "date": "2026-08-27",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=12",
+  "src": "music/アスノヨゾラ哨戒班_BV1MH816DEjd_12.m4a",
+  "cover": "",
+  "dur": 180,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1MH816DEjd_p13",
+  "title": "Beautiful World",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-22",
+  "sings": [
+   {
+    "date": "2026-08-22",
+    "bvid": "BV1MH816DEjd",
+    "start": 0,
+    "end": 500,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1MH816DEjd",
+    "page": 13,
+    "key": "BV1MH816DEjd_p13",
+    "tier": 1,
+    "title": "Beautiful World",
+    "author": "UP 4378290",
+    "date": "2026-08-22",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=13",
+  "src": "music/Beautiful World_BV1MH816DEjd_13.m4a",
+  "cover": "",
+  "dur": 500,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1Xd8P6LEZv_p1",
+  "title": "8月24日 (1)(1)",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-21",
+  "sings": [
+   {
+    "date": "2026-08-21",
+    "bvid": "BV1Xd8P6LEZv",
+    "start": 0,
+    "end": 227,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1Xd8P6LEZv",
+    "page": 1,
+    "key": "BV1Xd8P6LEZv_p1",
+    "tier": 1,
+    "title": "8月24日 (1)(1)",
+    "author": "UP 38087508",
+    "date": "2026-08-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1Xd8P6LEZv"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1Xd8P6LEZv",
+  "src": "music/8月24日 (1)(1)_BV1Xd8P6LEZv_1.m4a",
+  "cover": "",
+  "dur": 227,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1AM8H6GE2v_p1",
+  "title": "月亮代表我的心",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1AM8H6GE2v",
+    "start": 0,
+    "end": 199,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1AM8H6GE2v",
+    "page": 1,
+    "key": "BV1AM8H6GE2v_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】月亮代表我的心",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1AM8H6GE2v"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1AM8H6GE2v",
+  "src": "music/【羽啾chu2u】月亮代表我的心_BV1AM8H6GE2v_1.m4a",
+  "cover": "",
+  "dur": 199,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p1",
+  "title": "メクルメ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 193,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 1,
+    "key": "BV1ix8c6uEpC_p1",
+    "tier": 1,
+    "title": "メクルメ",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC",
+  "src": "music/メクルメ_BV1ix8c6uEpC_1.m4a",
+  "cover": "",
+  "dur": 193,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p2",
+  "title": "napori",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 272,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 2,
+    "key": "BV1ix8c6uEpC_p2",
+    "tier": 1,
+    "title": "napori",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=2",
+  "src": "music/napori_BV1ix8c6uEpC_2.m4a",
+  "cover": "",
+  "dur": 272,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p3",
+  "title": "恋風邪にのせて",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 251,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 251,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 3,
+    "key": "BV1ix8c6uEpC_p3",
+    "tier": 1,
+    "title": "恋風邪にのせて",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=3"
+   },
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 4,
+    "key": "BV1hNtB6hELD_p4",
+    "tier": 1,
+    "title": "恋風邪にのせて",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=3",
+  "src": "music/恋風邪にのせて_BV1ix8c6uEpC_3.m4a",
+  "cover": "",
+  "dur": 251,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p4",
+  "title": "物語りのワルツ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 4,
+    "key": "BV1ix8c6uEpC_p4",
+    "tier": 1,
+    "title": "物語りのワルツ",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=4"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 12,
+    "key": "BV1KNai6tEFf_p12",
+    "tier": 1,
+    "title": "物語りのワルツ",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=4",
+  "src": "music/物語りのワルツ_BV1ix8c6uEpC_4.m4a",
+  "cover": "",
+  "dur": 238,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p5",
+  "title": "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 103,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 5,
+    "key": "BV1ix8c6uEpC_p5",
+    "tier": 1,
+    "title": "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=5",
+  "src": "music/トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ_BV1ix8c6uEpC_5.m4a",
+  "cover": "",
+  "dur": 103,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p6",
+  "title": "oblivious",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 320,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 320,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 320,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 6,
+    "key": "BV1ix8c6uEpC_p6",
+    "tier": 1,
+    "title": "oblivious",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=6"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 15,
+    "key": "BV1aJhY64EeD_p15",
+    "tier": 2,
+    "title": "oblivious",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=15"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 19,
+    "key": "BV1VKhB6kE5B_p19",
+    "tier": 1,
+    "title": "oblivious",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=19"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=6",
+  "src": "music/oblivious_BV1ix8c6uEpC_6.m4a",
+  "cover": "",
+  "dur": 320,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1ix8c6uEpC_p7",
+  "title": "愛言葉",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1ix8c6uEpC",
+    "start": 0,
+    "end": 295,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 7,
+    "key": "BV1ix8c6uEpC_p7",
+    "tier": 1,
+    "title": "愛言葉",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=7",
+  "src": "music/愛言葉_BV1ix8c6uEpC_7.m4a",
+  "cover": "",
+  "dur": 295,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1x28A6YEYB_p1",
+  "title": "懺悔録",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-20",
+  "sings": [
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1x28A6YEYB",
+    "start": 0,
+    "end": 207,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1x28A6YEYB",
+    "page": 1,
+    "key": "BV1x28A6YEYB_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】和她一起下班回家吧《懺悔録》（黒木渚）",
+    "author": "UP 317092649",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1x28A6YEYB"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1x28A6YEYB",
+  "src": "music/【羽啾chu2u】和她一起下班回家吧《懺悔録》（黒木渚）_BV1x28A6YEYB_1.m4a",
+  "cover": "",
+  "dur": 207,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1n78G65EMT_p1",
+  "title": "Untitled",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-18",
+  "sings": [
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1n78G65EMT",
+    "start": 0,
+    "end": 244,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1n78G65EMT",
+    "page": 1,
+    "key": "BV1n78G65EMT_p1",
+    "tier": 1,
+    "title": "Untitled",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1n78G65EMT"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1n78G65EMT",
+  "src": "music/Untitled_BV1n78G65EMT_1.m4a",
+  "cover": "",
+  "dur": 244,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1is8G6zEXR_p2",
+  "title": "コタツから眺める世界地図",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-08-18",
+  "sings": [
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1is8G6zEXR",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1is8G6zEXR",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1is8G6zEXR",
+    "start": 0,
+    "end": 234,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 2,
+    "key": "BV1is8G6zEXR_p2",
+    "tier": 1,
+    "title": "コタツから眺める世界地図",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR?p=2"
+   },
+   {
+    "bvid": "BV1KMeE6JEfu",
+    "page": 5,
+    "key": "BV1KMeE6JEfu_p5",
+    "tier": 1,
+    "title": "コタツから眺める世界地図",
+    "author": "UP 4378290",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KMeE6JEfu?p=5"
+   },
+   {
+    "bvid": "BV1cNYi6HEAE",
+    "page": 5,
+    "key": "BV1cNYi6HEAE_p5",
+    "tier": 1,
+    "title": "コタツから眺める世界地図(从被炉注视世界地图)",
+    "author": "UP 297578981",
+    "date": "2026-09-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1cNYi6HEAE?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1is8G6zEXR?p=2",
+  "src": "music/コタツから眺める世界地図_BV1is8G6zEXR_2.m4a",
+  "cover": "",
+  "dur": 234,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1is8G6zEXR_p3",
+  "title": "不为人知的鹅妈妈童谣",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-18",
+  "sings": [
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1is8G6zEXR",
+    "start": 0,
+    "end": 127,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 3,
+    "key": "BV1is8G6zEXR_p3",
+    "tier": 1,
+    "title": "不为人知的鹅妈妈童谣",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1is8G6zEXR?p=3",
+  "src": "music/不为人知的鹅妈妈童谣_BV1is8G6zEXR_3.m4a",
+  "cover": "",
+  "dur": 127,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1is8G6zEXR_p6",
+  "title": "寝言は寝て言え",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-18",
+  "sings": [
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1is8G6zEXR",
+    "start": 0,
+    "end": 239,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 6,
+    "key": "BV1is8G6zEXR_p6",
+    "tier": 1,
+    "title": "寝言は寝て言え",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1is8G6zEXR?p=6",
+  "src": "music/寝言は寝て言え_BV1is8G6zEXR_6.m4a",
+  "cover": "",
+  "dur": 239,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p1",
+  "title": "日不落",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 225,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 1,
+    "key": "BV1UTb96uEqs_p1",
+    "tier": 1,
+    "title": "日不落",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs",
+  "src": "music/日不落_BV1UTb96uEqs_1.m4a",
+  "cover": "",
+  "dur": 225,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p3",
+  "title": "世界上的另一个我",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 238,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 3,
+    "key": "BV1UTb96uEqs_p3",
+    "tier": 1,
+    "title": "世界上的另一个我",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=3",
+  "src": "music/世界上的另一个我_BV1UTb96uEqs_3.m4a",
+  "cover": "",
+  "dur": 238,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p4",
+  "title": "太聪明",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 260,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-03",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 260,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 4,
+    "key": "BV1UTb96uEqs_p4",
+    "tier": 1,
+    "title": "太聪明",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=4"
+   },
+   {
+    "bvid": "BV1tDtf6nEvT",
+    "page": 1,
+    "key": "BV1tDtf6nEvT_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】太聪明",
+    "author": "UP 4378290",
+    "date": "2026-09-03",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1tDtf6nEvT"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=4",
+  "src": "music/太聪明_BV1UTb96uEqs_4.m4a",
+  "cover": "",
+  "dur": 260,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p5",
+  "title": "体面",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 255,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 5,
+    "key": "BV1UTb96uEqs_p5",
+    "tier": 1,
+    "title": "体面",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=5",
+  "src": "music/体面_BV1UTb96uEqs_5.m4a",
+  "cover": "",
+  "dur": 255,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p6",
+  "title": "给你一瓶魔法药水",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 256,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 6,
+    "key": "BV1UTb96uEqs_p6",
+    "tier": 1,
+    "title": "给你一瓶魔法药水",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=6",
+  "src": "music/给你一瓶魔法药水_BV1UTb96uEqs_6.m4a",
+  "cover": "",
+  "dur": 256,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p7",
+  "title": "不眠之夜",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 137,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 7,
+    "key": "BV1UTb96uEqs_p7",
+    "tier": 1,
+    "title": "不眠之夜",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=7",
+  "src": "music/不眠之夜_BV1UTb96uEqs_7.m4a",
+  "cover": "",
+  "dur": 137,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p8",
+  "title": "爱的供养",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 212,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 8,
+    "key": "BV1UTb96uEqs_p8",
+    "tier": 1,
+    "title": "爱的供养",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=8",
+  "src": "music/爱的供养_BV1UTb96uEqs_8.m4a",
+  "cover": "",
+  "dur": 212,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p9",
+  "title": "隐形的翅膀",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 215,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 9,
+    "key": "BV1UTb96uEqs_p9",
+    "tier": 1,
+    "title": "隐形的翅膀",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=9",
+  "src": "music/隐形的翅膀_BV1UTb96uEqs_9.m4a",
+  "cover": "",
+  "dur": 215,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p10",
+  "title": "爱情讯息",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 123,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 10,
+    "key": "BV1UTb96uEqs_p10",
+    "tier": 1,
+    "title": "爱情讯息",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=10",
+  "src": "music/爱情讯息_BV1UTb96uEqs_10.m4a",
+  "cover": "",
+  "dur": 123,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p11",
+  "title": "小幸运",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 254,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 11,
+    "key": "BV1UTb96uEqs_p11",
+    "tier": 1,
+    "title": "小幸运",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=11",
+  "src": "music/小幸运_BV1UTb96uEqs_11.m4a",
+  "cover": "",
+  "dur": 254,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p12",
+  "title": "爱人错过",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 286,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 12,
+    "key": "BV1UTb96uEqs_p12",
+    "tier": 1,
+    "title": "爱人错过",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=12",
+  "src": "music/爱人错过_BV1UTb96uEqs_12.m4a",
+  "cover": "",
+  "dur": 286,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p13",
+  "title": "追光者Live",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 216,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 13,
+    "key": "BV1UTb96uEqs_p13",
+    "tier": 1,
+    "title": "追光者Live",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=13",
+  "src": "music/追光者Live_BV1UTb96uEqs_13.m4a",
+  "cover": "",
+  "dur": 216,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p14",
+  "title": "勾指起誓",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 185,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 185,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 14,
+    "key": "BV1UTb96uEqs_p14",
+    "tier": 1,
+    "title": "勾指起誓",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=14"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 2,
+    "key": "BV1KNai6tEFf_p2",
+    "tier": 1,
+    "title": "勾指起誓",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=14",
+  "src": "music/勾指起誓_BV1UTb96uEqs_14.m4a",
+  "cover": "",
+  "dur": 185,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p15",
+  "title": "寄明月",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 230,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 15,
+    "key": "BV1UTb96uEqs_p15",
+    "tier": 1,
+    "title": "寄明月",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=15"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=15",
+  "src": "music/寄明月_BV1UTb96uEqs_15.m4a",
+  "cover": "",
+  "dur": 230,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p16",
+  "title": "云·原神",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 53,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 16,
+    "key": "BV1UTb96uEqs_p16",
+    "tier": 1,
+    "title": "《云·原神》动画短片——第二篇",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=16"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=16",
+  "src": "music/《云·原神》动画短片——第二篇_BV1UTb96uEqs_16.m4a",
+  "cover": "",
+  "dur": 53,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1UTb96uEqs_p17",
+  "title": "雨爱",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-16",
+  "sings": [
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1UTb96uEqs",
+    "start": 0,
+    "end": 124,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 17,
+    "key": "BV1UTb96uEqs_p17",
+    "tier": 1,
+    "title": "雨爱",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=17"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1UTb96uEqs?p=17",
+  "src": "music/雨爱_BV1UTb96uEqs_17.m4a",
+  "cover": "",
+  "dur": 124,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1j6uf6WE8R_p1",
+  "title": "Bad Apple自制动画",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-14",
+  "sings": [
+   {
+    "date": "2026-08-14",
+    "bvid": "BV1j6uf6WE8R",
+    "start": 0,
+    "end": 320,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1j6uf6WE8R",
+    "page": 1,
+    "key": "BV1j6uf6WE8R_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】Bad Apple自制动画",
+    "author": "UP 317092649",
+    "date": "2026-08-14",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1j6uf6WE8R"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1j6uf6WE8R",
+  "src": "music/【羽啾chu2u】Bad Apple自制动画_BV1j6uf6WE8R_1.m4a",
+  "cover": "",
+  "dur": 320,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p1",
+  "title": "SOS",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 237,
+    "votes": 0
+   },
+   {
+    "date": "2026-10-04",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 237,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 1,
+    "key": "BV1sTgp6AEqv_p1",
+    "tier": 1,
+    "title": "SOS_幸村恵理",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv"
+   },
+   {
+    "bvid": "BV1fJHB6bEfF",
+    "page": 3,
+    "key": "BV1fJHB6bEfF_p3",
+    "tier": 1,
+    "title": "SOS(喜多。。。)",
+    "author": "UP 297578981",
+    "date": "2026-10-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1fJHB6bEfF?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv",
+  "src": "music/SOS_幸村恵理_BV1sTgp6AEqv_1.m4a",
+  "cover": "",
+  "dur": 237,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p2",
+  "title": "月之光永远之影",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 277,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 2,
+    "key": "BV1sTgp6AEqv_p2",
+    "tier": 1,
+    "title": "月之光永远之影",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=2",
+  "src": "music/月之光永远之影_BV1sTgp6AEqv_2.m4a",
+  "cover": "",
+  "dur": 277,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p3",
+  "title": "砂のこども",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 3,
+    "key": "BV1sTgp6AEqv_p3",
+    "tier": 1,
+    "title": "砂のこども_水瀬ましろ",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=3",
+  "src": "music/砂のこども_水瀬ましろ_BV1sTgp6AEqv_3.m4a",
+  "cover": "",
+  "dur": 261,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p4",
+  "title": "Bad Apple!!",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 315,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 4,
+    "key": "BV1sTgp6AEqv_p4",
+    "tier": 1,
+    "title": "Bad Apple!!_のみこ",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=4"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=4",
+  "src": "music/Bad Apple!!_のみこ_BV1sTgp6AEqv_4.m4a",
+  "cover": "",
+  "dur": 315,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p5",
+  "title": "サンフェーデッド",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 209,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-18",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 209,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 5,
+    "key": "BV1sTgp6AEqv_p5",
+    "tier": 1,
+    "title": "サンフェーデッド_初星学園, 篠澤 広",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5"
+   },
+   {
+    "bvid": "BV1is8G6zEXR",
+    "page": 5,
+    "key": "BV1is8G6zEXR_p5",
+    "tier": 1,
+    "title": "サンフェーデッド",
+    "author": "UP 4378290",
+    "date": "2026-08-18",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1is8G6zEXR?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=5",
+  "src": "music/サンフェーデッド_初星学園, 篠澤 広_BV1sTgp6AEqv_5.m4a",
+  "cover": "",
+  "dur": 209,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p6",
+  "title": "Luna say maybe",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 6,
+    "key": "BV1sTgp6AEqv_p6",
+    "tier": 1,
+    "title": "Luna say maybe_初星学園, 美波, 月村手毬",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=6",
+  "src": "music/Luna say maybe_初星学園, 美波, 月村手毬_BV1sTgp6AEqv_6.m4a",
+  "cover": "",
+  "dur": 262,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p7",
+  "title": "ロックンロールは鳴り止まないっ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 218,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 218,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 7,
+    "key": "BV1sTgp6AEqv_p7",
+    "tier": 1,
+    "title": "ロックンロールは鳴り止まないっ_神聖かまってちゃん",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=7"
+   },
+   {
+    "bvid": "BV1bjeL6jEzq",
+    "page": 1,
+    "key": "BV1bjeL6jEzq_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】ロックンロールは鳴り止まないっ——爽！⚡嗷！！⚡",
+    "author": "UP 38087508",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1bjeL6jEzq"
+   },
+   {
+    "bvid": "BV1vceV6UEWU",
+    "page": 2,
+    "key": "BV1vceV6UEWU_p2",
+    "tier": 1,
+    "title": "ロックンロールは鳴り止まないっ",
+    "author": "UP 297578981",
+    "date": "2026-09-15",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1vceV6UEWU?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=7",
+  "src": "music/ロックンロールは鳴り止まないっ_神聖かまってちゃん_BV1sTgp6AEqv_7.m4a",
+  "cover": "",
+  "dur": 218,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p8",
+  "title": "不可解",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 276,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-28",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 276,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 8,
+    "key": "BV1sTgp6AEqv_p8",
+    "tier": 1,
+    "title": "不可解_花譜",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=8"
+   },
+   {
+    "bvid": "BV1KNai6tEFf",
+    "page": 5,
+    "key": "BV1KNai6tEFf_p5",
+    "tier": 1,
+    "title": "不可解",
+    "author": "UP 297578981",
+    "date": "2026-09-28",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1KNai6tEFf?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=8",
+  "src": "music/不可解_花譜_BV1sTgp6AEqv_8.m4a",
+  "cover": "",
+  "dur": 276,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p9",
+  "title": "ゲシュタルト",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 198,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 9,
+    "key": "BV1sTgp6AEqv_p9",
+    "tier": 1,
+    "title": "ゲシュタルト_花譜",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=9",
+  "src": "music/ゲシュタルト_花譜_BV1sTgp6AEqv_9.m4a",
+  "cover": "",
+  "dur": 198,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p10",
+  "title": "カタオモイ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 208,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 10,
+    "key": "BV1sTgp6AEqv_p10",
+    "tier": 1,
+    "title": "カタオモイ_玖了个玖",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=10"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=10",
+  "src": "music/カタオモイ_玖了个玖_BV1sTgp6AEqv_10.m4a",
+  "cover": "",
+  "dur": 208,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p11",
+  "title": "田中愛愛愛子",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 179,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 11,
+    "key": "BV1sTgp6AEqv_p11",
+    "tier": 1,
+    "title": "田中愛愛愛子_大森靖子",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=11"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=11",
+  "src": "music/田中愛愛愛子_大森靖子_BV1sTgp6AEqv_11.m4a",
+  "cover": "",
+  "dur": 179,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p12",
+  "title": "この世界に二人だけ",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 223,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 223,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 12,
+    "key": "BV1sTgp6AEqv_p12",
+    "tier": 1,
+    "title": "この世界に二人だけ_ano",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=12"
+   },
+   {
+    "bvid": "BV19whm6NEh3",
+    "page": 6,
+    "key": "BV19whm6NEh3_p6",
+    "tier": 1,
+    "title": "この世界に二人だけ",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=6"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=12",
+  "src": "music/この世界に二人だけ_ano_BV1sTgp6AEqv_12.m4a",
+  "cover": "",
+  "dur": 223,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p13",
+  "title": "ちゅ、多様性。",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 189,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 13,
+    "key": "BV1sTgp6AEqv_p13",
+    "tier": 1,
+    "title": "ちゅ、多様性。_ano",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=13",
+  "src": "music/ちゅ、多様性。_ano_BV1sTgp6AEqv_13.m4a",
+  "cover": "",
+  "dur": 189,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1sTgp6AEqv_p14",
+  "title": "花の塔",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-08-13",
+  "sings": [
+   {
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 134,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 134,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-15",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 134,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1sTgp6AEqv",
+    "page": 14,
+    "key": "BV1sTgp6AEqv_p14",
+    "tier": 1,
+    "title": "花の塔_さユり",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=14"
+   },
+   {
+    "bvid": "BV1KMeE6JEfu",
+    "page": 1,
+    "key": "BV1KMeE6JEfu_p1",
+    "tier": 1,
+    "title": "花の塔",
+    "author": "UP 4378290",
+    "date": "2026-09-15",
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV1KMeE6JEfu"
    },
    {
     "bvid": "BV1cNYi6HEAE",
     "page": 1,
+    "key": "BV1cNYi6HEAE_p1",
+    "tier": 1,
     "title": "花の塔",
-    "author": "千束和泷奈贴贴贴",
+    "author": "UP 297578981",
     "date": "2026-09-13",
-    "play": 28,
+    "play": 0,
     "url": "https://www.bilibili.com/video/BV1cNYi6HEAE"
-   },
-   {
-    "bvid": "BV1JLgp6oE3q",
-    "page": 14,
-    "title": "【安可】花の塔（半）",
-    "author": "紫炎Yukari_En",
-    "date": "2026-08-13",
-    "play": 337,
-    "url": "https://www.bilibili.com/video/BV1JLgp6oE3q?p=14"
    }
   ],
-  "src": "music/619979076.m4a",
-  "cover": "images/song/619979076.jpg",
-  "audioStatus": "ok",
-  "dur": 275.9
- },
- {
-  "key": "456120608",
-  "title": "Sleepwalk",
-  "titleShazam": "Sleepwalk",
-  "artist": "hitorie",
-  "artistSearch": "hitorie",
-  "album": "HOWLS",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 4150,
-    "end": 4237,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 4150,
-    "end": 4237,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/456120608.m4a",
-  "cover": "images/song/456120608.jpg",
-  "audioStatus": "ok",
-  "dur": 244.2
- },
- {
-  "key": "77982174",
-  "title": "Clover.Club (feat. Hatsune Miku)",
-  "titleShazam": "Clover.Club (feat. Hatsune Miku)",
-  "artist": "Yuuyu",
-  "artistSearch": "Yuuyu",
-  "album": "Clover.Club (feat. Hatsune Miku) - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 5225,
-    "end": 5262,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 5225,
-    "end": 5262,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/77982174.m4a",
-  "cover": "images/song/77982174.jpg",
-  "audioStatus": "ok",
-  "dur": 183.8
- },
- {
-  "key": "628144417",
-  "title": "Chinokate",
-  "titleShazam": "Chinokate",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Magic Lantern",
-  "lang": "日语",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 500,
-    "end": 537,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=14",
+  "src": "music/花の塔_さユり_BV1sTgp6AEqv_14.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 134,
+  "audioStatus": "ok"
  },
  {
-  "key": "827609207",
-  "title": "cat food feat 花里みのり 桐谷遥 桃井愛莉 日野森雫 hatsune miku",
-  "titleShazam": "Cat Food (feat. 花里みのり, 桐谷遥, 桃井愛莉, 日野森雫 & Hatsune Miku)",
-  "artist": "MORE MORE JUMP!",
-  "artistSearch": "MORE MORE JUMP!",
-  "album": "MORE MORE JUMP! SEKAI ALBUM vol.3",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 5425,
-    "end": 5587,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/827609207.m4a",
-  "cover": "images/song/827609207.jpg",
-  "audioStatus": "ok",
-  "dur": 209.1
- },
- {
-  "key": "54629931",
-  "title": "My Dearest",
-  "titleShazam": "My Dearest",
-  "artist": "supercell",
-  "artistSearch": "supercell",
-  "album": "My Dearest",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 5725,
-    "end": 5762,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3",
-  "clips": [
-   {
-    "bvid": "BV1Lvhp6iETo",
-    "page": 3,
-    "title": "My Dearest",
-    "author": "千束和泷奈贴贴贴",
-    "date": "2026-09-23",
-    "play": 2441,
-    "url": "https://www.bilibili.com/video/BV1Lvhp6iETo?p=3"
-   }
-  ],
-  "src": "music/54629931.m4a",
-  "cover": "images/song/54629931.jpg",
-  "audioStatus": "ok",
-  "dur": 338.7
- },
- {
-  "key": "623160006",
-  "title": "Future Eve (feat. Hatsune Miku)",
-  "titleShazam": "Future Eve (feat. Hatsune Miku)",
-  "artist": "Sasakure.Uk",
-  "artistSearch": "Sasakure.Uk",
-  "album": "Mirai Eve",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 6325,
-    "end": 6487,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/623160006.m4a",
-  "cover": "images/song/623160006.jpg",
-  "audioStatus": "ok",
-  "dur": 219.1
- },
- {
-  "key": "714779054",
-  "title": "Summering",
-  "titleShazam": "Summering",
-  "artist": "Jin",
-  "artistSearch": "Jin",
-  "album": "BLUE BACK",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1t2Yv6eEtr",
-    "start": 6525,
-    "end": 6687,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/714779054.m4a",
-  "cover": "images/song/714779054.jpg",
-  "audioStatus": "ok",
-  "dur": 206.1
- },
- {
-  "key": "691423485",
-  "title": "Color Your Night",
-  "titleShazam": "Color Your Night",
-  "artist": "Lotus Juice, Azumi Takahashi, ATLUS Sound Team & ATLUS GAME MUSIC",
-  "artistSearch": "Lotus Juice, Azumi Takahashi, ATLUS Sound Team & ATLUS GAME MUSIC",
-  "album": "Persona 3 Reload (Original Soundtrack)",
-  "lang": "日语",
-  "tags": [
-   "游戏"
-  ],
-  "genres": [
-   "Video Game"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 625,
-    "end": 687,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "548063774",
-  "title": "ダンスの理由",
-  "titleShazam": "Dance no Riyuu",
-  "artist": "Yurina Hirate",
-  "artistSearch": "Yurina Hirate",
-  "album": "Dance no Riyuu - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 1525,
-    "end": 1737,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "577469219",
-  "title": "becoming potatoes feat 天馬司 鳳えむ 草薙寧々 神代類 初音ミク",
-  "titleShazam": "Becoming Potatoes (feat. 天馬司, 鳳えむ, 草薙寧々, 神代類 & 初音ミク)",
-  "artist": "ワンダーランズ×ショウタイム",
-  "artistSearch": "ワンダーランズ×ショウタイム",
-  "album": "The World Hasn't Even Started Yet / Becoming Potatoes (feat. 天馬司, 鳳えむ, 草薙寧々, 神代類 & Hatsune Miku) - Single",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 3875,
-    "end": 3912,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "54463417",
-  "title": "Ni Soku Ho Kou",
-  "titleShazam": "Ni Soku Ho Kou",
-  "artist": "DECO*27",
-  "artistSearch": "DECO*27",
-  "album": "Sou Ai Sei Ri Ron",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-13",
-  "sings": [
-   {
-    "date": "2026-09-13",
-    "bvid": "BV1f4Yv67EUZ",
-    "start": 5125,
-    "end": 5162,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "819655673",
-  "title": "顔",
-  "titleShazam": "Alter Ego",
-  "artist": "Ave Mujica",
-  "artistSearch": "Ave Mujica",
+  "key": "BV1sTgp6AEqv_p15",
+  "title": "愛言葉III",
+  "titleShazam": "",
+  "artist": "未填写",
   "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 350,
-    "end": 437,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/819655673.m4a",
-  "cover": "images/song/819655673.jpg",
-  "audioStatus": "ok",
-  "dur": 242.2
- },
- {
-  "key": "52823061",
-  "title": "小さな恋のうた",
-  "titleShazam": "Chiisana Koi No Uta (Solo Version) (DMD Single)",
-  "artist": "Yui Aragaki",
-  "artistSearch": "Yui Aragaki",
-  "album": "",
-  "lang": "其他",
-  "tags": [
-   "流行"
-  ],
-  "genres": [
-   "Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 500,
-    "end": 537,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/52823061.m4a",
-  "cover": "images/song/52823061.jpg",
-  "audioStatus": "ok",
-  "dur": 330.8
- },
- {
-  "key": "483097856",
-  "title": "Juzoku-Furitta-",
-  "titleShazam": "Juzoku-Furitta-",
-  "artist": "koyori",
-  "artistSearch": "koyori",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "电子"
-  ],
-  "genres": [
-   "Electronic"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 1175,
-    "end": 1237,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "319008818",
-  "title": "Save The Night (Dub Mix)",
-  "titleShazam": "Save The Night (Dub Mix)",
-  "artist": "Evanton",
-  "artistSearch": "Evanton",
-  "album": "",
-  "lang": "其他",
+  "lang": "",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
-  "lastSung": "2026-09-01",
+  "lastSung": "2026-08-13",
   "sings": [
    {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 1675,
-    "end": 1712,
-    "votes": 2,
-    "evidence": "shazam×2"
+    "date": "2026-08-13",
+    "bvid": "BV1sTgp6AEqv",
+    "start": 0,
+    "end": 240,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "698844168",
-  "title": "All I Can See Is You",
-  "titleShazam": "All I Can See Is You",
-  "artist": "r-906",
-  "artistSearch": "r-906",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 1725,
-    "end": 1812,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=2",
   "clips": [
    {
-    "bvid": "BV1Mwt36UE7D",
-    "page": 2,
-    "title": "あなたしか見えないの",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=2"
-   }
-  ],
-  "src": "music/698844168.m4a",
-  "cover": "images/song/698844168.jpg",
-  "audioStatus": "ok",
-  "dur": 222.5
- },
- {
-  "key": "811154744",
-  "title": "天天天国地獄国",
-  "titleShazam": "Tententengokujigokugoku",
-  "artist": "Aiobahn +81, Nanahira & Pmarusama",
-  "artistSearch": "Aiobahn +81, Nanahira & Pmarusama",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 2450,
-    "end": 2537,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/811154744.m4a",
-  "cover": "images/song/811154744.jpg",
-  "audioStatus": "ok",
-  "dur": 226.6
- },
- {
-  "key": "616467694",
-  "title": "CH4NGE (Instrumental)",
-  "titleShazam": "CH4NGE (Instrumental)",
-  "artist": "Giga",
-  "artistSearch": "Giga",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 2975,
-    "end": 3062,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=4",
-  "clips": [
-   {
-    "bvid": "BV1Mwt36UE7D",
-    "page": 4,
-    "title": "CH4NGE (feat. 可不)",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=4"
-   }
-  ],
-  "src": "music/616467694.m4a",
-  "cover": "images/song/616467694.jpg",
-  "audioStatus": "ok",
-  "dur": 135.6
- },
- {
-  "key": "896484099",
-  "title": "青のすみか cover",
-  "titleShazam": "Where Our Blue Is (Cover)",
-  "artist": "millsage",
-  "artistSearch": "millsage",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 4050,
-    "end": 4112,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "565901209",
-  "title": "Odo",
-  "titleShazam": "Odo",
-  "artist": "Ado",
-  "artistSearch": "Ado",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 4150,
-    "end": 4312,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=5",
-  "clips": [
-   {
-    "bvid": "BV1Mwt36UE7D",
-    "page": 5,
-    "title": "踊",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=5"
-   }
-  ],
-  "src": "music/565901209.m4a",
-  "cover": "images/song/565901209.jpg",
-  "audioStatus": "ok",
-  "dur": 202.3
- },
- {
-  "key": "313675447",
-  "title": "Nobore! Susume! Takai Tou",
-  "titleShazam": "Nobore! Susume! Takai Tou",
-  "artist": "KikuoHana",
-  "artistSearch": "KikuoHana",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 4425,
-    "end": 4662,
-    "votes": 8,
-    "evidence": "shazam×8"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/313675447.m4a",
-  "cover": "images/song/313675447.jpg",
-  "audioStatus": "ok",
-  "dur": 323.8
- },
- {
-  "key": "896206970",
-  "title": "everscape",
-  "titleShazam": "everscape",
-  "artist": "millsage",
-  "artistSearch": "millsage",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 4900,
-    "end": 5062,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/896206970.m4a",
-  "cover": "images/song/896206970.jpg",
-  "audioStatus": "ok",
-  "dur": 275.6
- },
- {
-  "key": "869988140",
-  "title": "mosi mosi?",
-  "titleShazam": "mosi mosi?",
-  "artist": "sasane",
-  "artistSearch": "sasane",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "流行"
-  ],
-  "genres": [
-   "Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 5600,
-    "end": 5762,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/869988140.m4a",
-  "cover": "images/song/869988140.jpg",
-  "audioStatus": "ok",
-  "dur": 26.8
- },
- {
-  "key": "480448829",
-  "title": "少女レイ",
-  "titleShazam": "Shojo Rei",
-  "artist": "mikitoP",
-  "artistSearch": "mikitoP",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 6125,
-    "end": 6162,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/480448829.m4a",
-  "cover": "images/song/480448829.jpg",
-  "audioStatus": "ok",
-  "dur": 289.7
- },
- {
-  "key": "804260475",
-  "title": "Shinitai Himawari",
-  "titleShazam": "Shinitai Himawari",
-  "artist": "Shinsei kamattechan",
-  "artistSearch": "Shinsei kamattechan",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 7375,
-    "end": 7462,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "604675219",
-  "title": "わたしの線香",
-  "titleShazam": "My Incense",
-  "artist": "KAF & Maigo Hanyuu",
-  "artistSearch": "KAF & Maigo Hanyuu",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 8350,
-    "end": 8487,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=15",
-  "clips": [
-   {
-    "bvid": "BV1Mwt36UE7D",
+    "bvid": "BV1sTgp6AEqv",
     "page": 15,
-    "title": "わたしの線香",
-    "author": "宵夜ChiTi",
-    "date": "2026-09-01",
-    "play": 618,
-    "url": "https://www.bilibili.com/video/BV1Mwt36UE7D?p=15"
+    "key": "BV1sTgp6AEqv_p15",
+    "tier": 1,
+    "title": "愛言葉III_DECO_27, 初音ミク",
+    "author": "UP 4378290",
+    "date": "2026-08-13",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=15"
    }
   ],
-  "src": "music/604675219.m4a",
-  "cover": "images/song/604675219.jpg",
-  "audioStatus": "ok",
-  "dur": 154.3
- },
- {
-  "key": "303578234",
-  "title": "Xy&Z",
-  "titleShazam": "Xy&Z",
-  "artist": "Satoshi (CV: Rica Matsumoto)",
-  "artistSearch": "Satoshi (CV: Rica Matsumoto)",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-09-01",
-  "sings": [
-   {
-    "date": "2026-09-01",
-    "bvid": "BV1bEtG6dErt",
-    "start": 8525,
-    "end": 8587,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/303578234.m4a",
-  "cover": "images/song/303578234.jpg",
-  "audioStatus": "ok",
-  "dur": 91.4
- },
- {
-  "key": "650468955",
-  "title": "Algernon",
-  "titleShazam": "Algernon",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Magic Lantern",
-  "lang": "日语",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 5550,
-    "end": 5612,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 5700,
-    "end": 5787,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/650468955.m4a",
-  "cover": "images/song/650468955.jpg",
-  "audioStatus": "ok",
-  "dur": 251.9
- },
- {
-  "key": "486348831",
-  "title": "グリズリーに襲われたら",
-  "titleShazam": "Grizzly Ni Osowaretara",
-  "artist": "Kamiyado",
-  "artistSearch": "Kamiyado",
-  "album": "Grizzly Ni Osowaretara - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 7500,
-    "end": 7587,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 7675,
-    "end": 7712,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/486348831.m4a",
-  "cover": "images/song/486348831.jpg",
-  "audioStatus": "ok",
-  "dur": 246.5
- },
- {
-  "key": "648650875",
-  "title": "Take You to an Alien",
-  "titleShazam": "Take You to an Alien",
-  "artist": "Iyowa",
-  "artistSearch": "Iyowa",
-  "album": "Films, Sunny Spots, Graduations",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 250,
-    "end": 312,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1sTgp6AEqv?p=15",
+  "src": "music/愛言葉III_DECO_27, 初音ミク_BV1sTgp6AEqv_15.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 240,
+  "audioStatus": "ok"
  },
  {
-  "key": "835399392",
-  "title": "Doomer",
-  "titleShazam": "Doomer",
-  "artist": "Tokyo Manaka",
-  "artistSearch": "Tokyo Manaka",
-  "album": "Doomer - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
+  "key": "BV1GWud6qEb7_p1",
+  "title": "非国民的ヒーロー",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
+  "tier": 1,
+  "singCount": 3,
+  "lastSung": "2026-08-10",
   "sings": [
    {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 350,
-    "end": 487,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 292,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-20",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 292,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-25",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 292,
+    "votes": 0
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1ZhtS6GEG7",
   "clips": [
    {
-    "bvid": "BV1ZhtS6GEG7",
+    "bvid": "BV1GWud6qEb7",
     "page": 1,
-    "title": "【啾半首】ドゥーマー —— 9.2万粉回困音ed",
-    "author": "",
-    "date": "2026-09-03",
-    "play": 135,
-    "url": "https://www.bilibili.com/video/BV1ZhtS6GEG7"
-   }
-  ],
-  "src": "music/835399392.m4a",
-  "cover": "images/song/835399392.jpg",
-  "audioStatus": "ok",
-  "dur": 157.4
- },
- {
-  "key": "490248749",
-  "title": "Nautilus",
-  "titleShazam": "Nautilus",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Elma",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
+    "key": "BV1GWud6qEb7_p1",
+    "tier": 1,
+    "title": "非国民的ヒーロー",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7"
+   },
    {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 1075,
-    "end": 1237,
-    "votes": 5,
-    "evidence": "shazam×5"
+    "bvid": "BV19whm6NEh3",
+    "page": 5,
+    "key": "BV19whm6NEh3_p5",
+    "tier": 1,
+    "title": "非国民的ヒーロー",
+    "author": "UP 297578981",
+    "date": "2026-09-25",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19whm6NEh3?p=5"
+   },
+   {
+    "bvid": "BV1ix8c6uEpC",
+    "page": 8,
+    "key": "BV1ix8c6uEpC_p8",
+    "tier": 1,
+    "title": "非国民的ヒーロー",
+    "author": "UP 4378290",
+    "date": "2026-08-20",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1ix8c6uEpC?p=8"
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7",
+  "src": "music/非国民的ヒーロー_BV1GWud6qEb7_1.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 292,
+  "audioStatus": "ok"
  },
  {
-  "key": "461523873",
-  "title": "五月は花緑青の窓辺から",
-  "titleShazam": "五月は花緑青の窓辺から",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "だから僕は音楽を辞めた",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
+  "key": "BV1GWud6qEb7_p2",
+  "title": "Flamingo",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
-  "lastSung": "2026-08-26",
+  "lastSung": "2026-08-10",
   "sings": [
    {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 1950,
-    "end": 2062,
-    "votes": 3,
-    "evidence": "shazam×3"
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 192,
+    "votes": 0
    }
   ],
-  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=4",
   "clips": [
    {
-    "bvid": "BV1mXhw6YEHk",
-    "page": 4,
-    "title": "五月は花緑青の窓辺から",
-    "author": "宵夜ChiTi",
-    "date": "2026-08-27",
-    "play": 416,
-    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=4"
+    "bvid": "BV1GWud6qEb7",
+    "page": 2,
+    "key": "BV1GWud6qEb7_p2",
+    "tier": 1,
+    "title": "Flamingo",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=2"
    }
   ],
-  "src": "music/461523873.m4a",
-  "cover": "images/song/461523873.jpg",
-  "audioStatus": "ok",
-  "dur": 185.1
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=2",
+  "src": "music/Flamingo_BV1GWud6qEb7_2.m4a",
+  "cover": "",
+  "dur": 192,
+  "audioStatus": "ok"
  },
  {
-  "key": "65338245",
-  "title": "あなたに出会わなければ 夏雪冬花",
-  "titleShazam": "Anatani Deawanakereba Kasetsutouka",
-  "artist": "Aimer",
-  "artistSearch": "Aimer",
-  "album": "Sleepless Nights",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 2175,
-    "end": 2462,
-    "votes": 8,
-    "evidence": "shazam×8"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/65338245.m4a",
-  "cover": "images/song/65338245.jpg",
-  "audioStatus": "ok",
-  "dur": 360.5
- },
- {
-  "key": "595959840",
-  "title": "Promise",
-  "titleShazam": "Promise",
-  "artist": "Da-iCE",
-  "artistSearch": "Da-iCE",
-  "album": "REVERSi",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 2525,
-    "end": 2762,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/595959840.m4a",
-  "cover": "images/song/595959840.jpg",
-  "audioStatus": "ok",
-  "dur": 273.4
- },
- {
-  "key": "481323686",
-  "title": "Rain with Cappuccino",
-  "titleShazam": "Rain with Cappuccino",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Elma",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 3050,
-    "end": 3262,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/481323686.m4a",
-  "cover": "images/song/481323686.jpg",
-  "audioStatus": "ok",
-  "dur": 269.5
- },
- {
-  "key": "237044391",
-  "title": "アスノヨゾラ哨戒班",
-  "titleShazam": "Night Sky Patrol of Tomorrow",
-  "artist": "Orangestar",
-  "artistSearch": "Orangestar",
-  "album": "Mikansei Eight Beats",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 3400,
-    "end": 3437,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/237044391.m4a",
-  "cover": "images/song/237044391.jpg",
-  "audioStatus": "ok",
-  "dur": 163.6
- },
- {
-  "key": "660336982",
-  "title": "Miyakoochi",
-  "titleShazam": "Miyakoochi",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Magic Lantern",
-  "lang": "日语",
+  "key": "BV1GWud6qEb7_p3",
+  "title": "丸の内サディステック",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
   "tags": [],
-  "genres": [
-   "Alternative"
-  ],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
-  "lastSung": "2026-08-26",
+  "lastSung": "2026-08-10",
   "sings": [
    {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 3750,
-    "end": 3937,
-    "votes": 8,
-    "evidence": "shazam×8"
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 215,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "music/660336982.m4a",
-  "cover": "images/song/660336982.jpg",
-  "audioStatus": "ok",
-  "dur": 264.2
- },
- {
-  "key": "686305943",
-  "title": "Sunny",
-  "titleShazam": "Sunny",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "second person",
-  "lang": "日语",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 4325,
-    "end": 4537,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=10",
   "clips": [
    {
-    "bvid": "BV1mXhw6YEHk",
+    "bvid": "BV1GWud6qEb7",
+    "page": 3,
+    "key": "BV1GWud6qEb7_p3",
+    "tier": 1,
+    "title": "丸の内サディステック",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=3"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=3",
+  "src": "music/丸の内サディステック_BV1GWud6qEb7_3.m4a",
+  "cover": "",
+  "dur": 215,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p5",
+  "title": "无法原谅",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 159,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 5,
+    "key": "BV1GWud6qEb7_p5",
+    "tier": 1,
+    "title": "无法原谅",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=5"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=5",
+  "src": "music/无法原谅_BV1GWud6qEb7_5.m4a",
+  "cover": "",
+  "dur": 159,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p6",
+  "title": "恋人",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 4,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   },
+   {
+    "date": "2026-08-16",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 261,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 6,
+    "key": "BV1GWud6qEb7_p6",
+    "tier": 1,
+    "title": "恋人",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=6"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 17,
+    "key": "BV1aJhY64EeD_p17",
+    "tier": 2,
+    "title": "恋人",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=17"
+   },
+   {
+    "bvid": "BV1VKhB6kE5B",
+    "page": 17,
+    "key": "BV1VKhB6kE5B_p17",
+    "tier": 1,
+    "title": "恋人",
+    "author": "UP 4378290",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1VKhB6kE5B?p=17"
+   },
+   {
+    "bvid": "BV1UTb96uEqs",
+    "page": 2,
+    "key": "BV1UTb96uEqs_p2",
+    "tier": 1,
+    "title": "恋人",
+    "author": "UP 4378290",
+    "date": "2026-08-16",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1UTb96uEqs?p=2"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=6",
+  "src": "music/恋人_BV1GWud6qEb7_6.m4a",
+  "cover": "",
+  "dur": 261,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p7",
+  "title": "普通朋友",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 253,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 7,
+    "key": "BV1GWud6qEb7_p7",
+    "tier": 1,
+    "title": "普通朋友",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=7"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=7",
+  "src": "music/普通朋友_BV1GWud6qEb7_7.m4a",
+  "cover": "",
+  "dur": 253,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p8",
+  "title": "红色高跟鞋",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 208,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 8,
+    "key": "BV1GWud6qEb7_p8",
+    "tier": 1,
+    "title": "红色高跟鞋",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=8"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=8",
+  "src": "music/红色高跟鞋_BV1GWud6qEb7_8.m4a",
+  "cover": "",
+  "dur": 208,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p9",
+  "title": "梦回还",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 252,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 9,
+    "key": "BV1GWud6qEb7_p9",
+    "tier": 1,
+    "title": "梦回还",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=9"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=9",
+  "src": "music/梦回还_BV1GWud6qEb7_9.m4a",
+  "cover": "",
+  "dur": 252,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p10",
+  "title": "鳥の詩",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 353,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
     "page": 10,
-    "title": "晴る",
-    "author": "宵夜ChiTi",
-    "date": "2026-08-27",
-    "play": 416,
-    "url": "https://www.bilibili.com/video/BV1mXhw6YEHk?p=10"
+    "key": "BV1GWud6qEb7_p10",
+    "tier": 1,
+    "title": "鳥の詩",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=10"
    }
   ],
-  "src": "music/686305943.m4a",
-  "cover": "images/song/686305943.jpg",
-  "audioStatus": "ok",
-  "dur": 270.9
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=10",
+  "src": "music/鳥の詩_BV1GWud6qEb7_10.m4a",
+  "cover": "",
+  "dur": 353,
+  "audioStatus": "ok"
  },
  {
-  "key": "664459294",
-  "title": "Setting Sun",
-  "titleShazam": "Setting Sun",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Setting Sun - Single",
-  "lang": "日语",
+  "key": "BV1GWud6qEb7_p11",
+  "title": "秒針を噛む",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
   "tags": [],
-  "genres": [
-   "Alternative"
-  ],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
-  "lastSung": "2026-08-26",
+  "lastSung": "2026-08-10",
   "sings": [
    {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 4625,
-    "end": 4712,
-    "votes": 4,
-    "evidence": "shazam×4"
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 256,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "music/664459294.m4a",
-  "cover": "images/song/664459294.jpg",
-  "audioStatus": "ok",
-  "dur": 207.1
- },
- {
-  "key": "528878171",
-  "title": "Milabo",
-  "titleShazam": "Milabo",
-  "artist": "ZUTOMAYO",
-  "artistSearch": "ZUTOMAYO",
-  "album": "Gusare",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 4875,
-    "end": 5137,
-    "votes": 11,
-    "evidence": "shazam×11"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/528878171.m4a",
-  "cover": "images/song/528878171.jpg",
-  "audioStatus": "ok",
-  "dur": 268.3
- },
- {
-  "key": "339731574",
-  "title": "太陽系デスコ",
-  "titleShazam": "Solar System Disco",
-  "artist": "Nayutan Seijin",
-  "artistSearch": "Nayutan Seijin",
-  "album": "Nayutan Sei Kara No Buttai Y",
-  "lang": "其他",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 6100,
-    "end": 6312,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/339731574.m4a",
-  "cover": "images/song/339731574.jpg",
-  "audioStatus": "ok",
-  "dur": 203.4
- },
- {
-  "key": "78017880",
-  "title": "Switch On!",
-  "titleShazam": "Switch On!",
-  "artist": "Anna Tsuchiya",
-  "artistSearch": "Anna Tsuchiya",
-  "album": "Switchon - EP",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 6400,
-    "end": 6487,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/78017880.m4a",
-  "cover": "images/song/78017880.jpg",
-  "audioStatus": "ok",
-  "dur": 210.4
- },
- {
-  "key": "158244061",
-  "title": "一番の宝物",
-  "titleShazam": "My Most Precious Treasure",
-  "artist": "karuta & VISUAL ARTS / Key",
-  "artistSearch": "karuta & VISUAL ARTS / Key",
-  "album": "Angel Beats! Original Soundtrack",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 6725,
-    "end": 6812,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/158244061.m4a",
-  "cover": "images/song/158244061.jpg",
-  "audioStatus": "ok",
-  "dur": 358.4
- },
- {
-  "key": "601662214",
-  "title": "Want to Be Cremated",
-  "titleShazam": "Want to Be Cremated",
-  "artist": "Abuse",
-  "artistSearch": "Abuse",
-  "album": "Karma (A) Darma",
-  "lang": "其他",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 6950,
-    "end": 7162,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/601662214.m4a",
-  "cover": "images/song/601662214.jpg",
-  "audioStatus": "ok",
-  "dur": 257.2
- },
- {
-  "key": "807356066",
-  "title": "愛 スクリ ム",
-  "titleShazam": "AI SCREAM!",
-  "artist": "AiScReam",
-  "artistSearch": "AiScReam",
-  "album": "AI SCREAM! - EP",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-26",
-  "sings": [
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 7775,
-    "end": 7937,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/807356066.m4a",
-  "cover": "images/song/807356066.jpg",
-  "audioStatus": "ok",
-  "dur": 262.0
- },
- {
-  "key": "432109980",
-  "title": "202",
-  "titleShazam": "202",
-  "artist": "Lovely Summer Chan",
-  "artistSearch": "Lovely Summer Chan",
-  "album": "LSC",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 1875,
-    "end": 1987,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 2075,
-    "end": 2162,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/432109980.m4a",
-  "cover": "images/song/432109980.jpg",
-  "audioStatus": "ok",
-  "dur": 378.0
- },
- {
-  "key": "680156343",
-  "title": "春日影 mygo ver",
-  "titleShazam": "Haruhikage (MyGO!!!!! ver.)",
-  "artist": "MyGO!!!!!",
-  "artistSearch": "MyGO!!!!!",
-  "album": "MEISEKIHA",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 2625,
-    "end": 2662,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 2775,
-    "end": 2812,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/680156343.m4a",
-  "cover": "images/song/680156343.jpg",
-  "audioStatus": "ok",
-  "dur": 546.9
- },
- {
-  "key": "78236290",
-  "title": "Last Summer Whisper",
-  "titleShazam": "Last Summer Whisper",
-  "artist": "Anri",
-  "artistSearch": "Anri",
-  "album": "Heaven Beach",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 3925,
-    "end": 3962,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 4075,
-    "end": 4162,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/78236290.m4a",
-  "cover": "images/song/78236290.jpg",
-  "audioStatus": "ok",
-  "dur": 298.4
- },
- {
-  "key": "434172460",
-  "title": "Shiori",
-  "titleShazam": "Shiori",
-  "artist": "CreepHyp",
-  "artistSearch": "CreepHyp",
-  "album": "Nakitakunaruhodo Ureshii Hibini",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 600,
-    "end": 812,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "462203233",
-  "title": "Yellow",
-  "titleShazam": "Yellow",
-  "artist": "YOH KAMIYAMA",
-  "artistSearch": "YOH KAMIYAMA",
-  "album": "Shiawase Na Otona",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 850,
-    "end": 987,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/462203233.m4a",
-  "cover": "images/song/462203233.jpg",
-  "audioStatus": "ok",
-  "dur": 180.1
- },
- {
-  "key": "361186480",
-  "title": "雲と幽霊",
-  "titleShazam": "雲と幽霊",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "夏草が邪魔をする",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 1075,
-    "end": 1362,
-    "votes": 10,
-    "evidence": "shazam×10"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/361186480.m4a",
-  "cover": "images/song/361186480.jpg",
-  "audioStatus": "ok",
-  "dur": 315.5
- },
- {
-  "key": "461523872",
-  "title": "八月 某 月明かり",
-  "titleShazam": "八月、某、月明かり",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "だから僕は音楽を辞めた",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 1450,
-    "end": 1637,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/461523872.m4a",
-  "cover": "images/song/461523872.jpg",
-  "audioStatus": "ok",
-  "dur": 282.2
- },
- {
-  "key": "638097474",
-  "title": "錠剤",
-  "titleShazam": "tablet",
-  "artist": "TOOBOE",
-  "artistSearch": "TOOBOE",
-  "album": "Stupid dog",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 2900,
-    "end": 2987,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/638097474.m4a",
-  "cover": "images/song/638097474.jpg",
-  "audioStatus": "ok",
-  "dur": 205.7
- },
- {
-  "key": "210210409",
-  "title": "Dreamin Chuchu (feat. Megurine Luka & Hatsune Miku)",
-  "titleShazam": "Dreamin Chuchu (feat. Megurine Luka & Hatsune Miku)",
-  "artist": "emon(Tes.)",
-  "artistSearch": "emon(Tes.)",
-  "album": "Dreamin Chuchu (feat. Megurine Luka & Hatsune Miku) - Single",
-  "lang": "日语",
-  "tags": [
-   "舞曲"
-  ],
-  "genres": [
-   "Dance"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 3625,
-    "end": 3662,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/210210409.m4a",
-  "cover": "images/song/210210409.jpg",
-  "audioStatus": "ok",
-  "dur": 243.0
- },
- {
-  "key": "332483731",
-  "title": "Tabun Kaze",
-  "titleShazam": "Tabun Kaze",
-  "artist": "sakanaction",
-  "artistSearch": "sakanaction",
-  "album": "834.194",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 4425,
-    "end": 4687,
-    "votes": 11,
-    "evidence": "shazam×11"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/332483731.m4a",
-  "cover": "images/song/332483731.jpg",
-  "audioStatus": "ok",
-  "dur": 299.6
- },
- {
-  "key": "65945350",
-  "title": "Yoru No Odoriko",
-  "titleShazam": "Yoru No Odoriko",
-  "artist": "sakanaction",
-  "artistSearch": "sakanaction",
-  "album": "Sakanaction",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 4825,
-    "end": 5012,
-    "votes": 8,
-    "evidence": "shazam×8"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/65945350.m4a",
-  "cover": "images/song/65945350.jpg",
-  "audioStatus": "ok",
-  "dur": 16.9
- },
- {
-  "key": "364564393",
-  "title": "Youkoso Japari Park E (Instrumental)",
-  "titleShazam": "Youkoso Japari Park E (Instrumental)",
-  "artist": "Masayoshi Ooishi",
-  "artistSearch": "Masayoshi Ooishi",
-  "album": "Parallel World - EP",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 5450,
-    "end": 5562,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "858010707",
-  "title": "Melt (Kaguya Ver.) [Cpk! Remix]",
-  "titleShazam": "Melt (Kaguya Ver.) [Cpk! Remix]",
-  "artist": "ryo (supercell) & Kaguya(cv.Yuko Natsuyoshi)",
-  "artistSearch": "ryo (supercell) & Kaguya(cv.Yuko Natsuyoshi)",
-  "album": "Ex-Otogibanashi - EP",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 5650,
-    "end": 5862,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/858010707.m4a",
-  "cover": "images/song/858010707.jpg",
-  "audioStatus": "ok",
-  "dur": 271.6
- },
- {
-  "key": "499194794",
-  "title": "過去を喰らう",
-  "titleShazam": "Eat The Past",
-  "artist": "KAF",
-  "artistSearch": "KAF",
-  "album": "Observation",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 7425,
-    "end": 7512,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/499194794.m4a",
-  "cover": "images/song/499194794.jpg",
-  "audioStatus": "ok",
-  "dur": 245.0
- },
- {
-  "key": "830762158",
-  "title": "IRIS OUT",
-  "titleShazam": "IRIS OUT",
-  "artist": "Kenshi Yonezu",
-  "artistSearch": "Kenshi Yonezu",
-  "album": "IRIS OUT - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-25",
-  "sings": [
-   {
-    "date": "2026-08-25",
-    "bvid": "BV1FChG6nEhA",
-    "start": 7850,
-    "end": 7987,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/830762158.m4a",
-  "cover": "images/song/830762158.jpg",
-  "audioStatus": "ok",
-  "dur": 153.2
- },
- {
-  "key": "571603589",
-  "title": "Matasaburo",
-  "titleShazam": "Matasaburo",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "Magic Lantern",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 4800,
-    "end": 4862,
-    "votes": 3,
-    "evidence": "shazam×3"
-   },
-   {
-    "date": "2026-08-26",
-    "bvid": "BV1VH896XEye",
-    "start": 2800,
-    "end": 2937,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/571603589.m4a",
-  "cover": "images/song/571603589.jpg",
-  "audioStatus": "ok",
-  "dur": 258.8
- },
- {
-  "key": "467627686",
-  "title": "サイコグラム",
-  "titleShazam": "サイコグラム",
-  "artist": "DECO*27",
-  "artistSearch": "DECO*27",
-  "album": "アンドロイドガール",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 1600,
-    "end": 1712,
-    "votes": 5,
-    "evidence": "shazam×5"
-   },
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 2125,
-    "end": 2162,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/467627686.m4a",
-  "cover": "images/song/467627686.jpg",
-  "audioStatus": "ok",
-  "dur": 224.4
- },
- {
-  "key": "461523881",
-  "title": "エルマ",
-  "titleShazam": "エルマ",
-  "artist": "Yorushika",
-  "artistSearch": "Yorushika",
-  "album": "だから僕は音楽を辞めた",
-  "lang": "日语",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 3675,
-    "end": 3812,
-    "votes": 4,
-    "evidence": "shazam×4"
-   },
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 4350,
-    "end": 4412,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/461523881.m4a",
-  "cover": "images/song/461523881.jpg",
-  "audioStatus": "ok",
-  "dur": 217.8
- },
- {
-  "key": "319857015",
-  "title": "alice in 冷凍庫",
-  "titleShazam": "Alice in Freezer",
-  "artist": "Orangestar",
-  "artistSearch": "Orangestar",
-  "album": "Seaside Soliloquies",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 2,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 7450,
-    "end": 7512,
-    "votes": 2,
-    "evidence": "shazam×2"
-   },
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 7625,
-    "end": 7712,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/319857015.m4a",
-  "cover": "images/song/319857015.jpg",
-  "audioStatus": "ok",
-  "dur": 344.4
- },
- {
-  "key": "572844605",
-  "title": "とても素敵な六月でした",
-  "titleShazam": "Totemo Sutekina Rokugatsu Deshita",
-  "artist": "Eight",
-  "artistSearch": "Eight",
-  "album": "Cobalt Blue No Hakuchumu",
-  "lang": "其他",
-  "tags": [
-   "摇滚"
-  ],
-  "genres": [
-   "Rock"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 650,
-    "end": 937,
-    "votes": 8,
-    "evidence": "shazam×8"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/572844605.m4a",
-  "cover": "images/song/572844605.jpg",
-  "audioStatus": "ok",
-  "dur": 284.8
- },
- {
-  "key": "77855995",
-  "title": "夢をかなえてドラえもん",
-  "titleShazam": "夢をかなえてドラえもん",
-  "artist": "mao",
-  "artistSearch": "mao",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 1450,
-    "end": 1537,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/77855995.m4a",
-  "cover": "images/song/77855995.jpg",
-  "audioStatus": "ok",
-  "dur": 245.3
- },
- {
-  "key": "61949669",
-  "title": "深海のリトルクライ feat 土岐麻子",
-  "titleShazam": "Little Cry of the Abyss (feat. Asako Toki)",
-  "artist": "Sasakure.Uk",
-  "artistSearch": "Sasakure.Uk",
-  "album": "The Fantastic Reality of Aesop",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 2350,
-    "end": 2512,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/61949669.m4a",
-  "cover": "images/song/61949669.jpg",
-  "audioStatus": "ok",
-  "dur": 179.8
- },
- {
-  "key": "718691506",
-  "title": "あんたなんて tv size ver",
-  "titleShazam": "Antanante. (TV Size Version)",
-  "artist": "Riria.",
-  "artistSearch": "Riria.",
-  "album": "Antanante. - EP",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 2975,
-    "end": 3012,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "600442056",
-  "title": "我的悲傷是水做的 作者版",
-  "titleShazam": "Bad Bad Water",
-  "artist": "ChiliChill",
-  "artistSearch": "ChiliChill",
-  "album": "I Feel Hungry Every Night",
-  "lang": "中文",
-  "tags": [
-   "华语流行"
-  ],
-  "genres": [
-   "Mandopop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 3175,
-    "end": 3262,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/600442056.m4a",
-  "cover": "images/song/600442056.jpg",
-  "audioStatus": "ok",
-  "dur": 243.6
- },
- {
-  "key": "701897468",
-  "title": "責任集合体",
-  "titleShazam": "●Utlaws",
-  "artist": "masarada",
-  "artistSearch": "masarada",
-  "album": "●Utlaws - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 3325,
-    "end": 3512,
-    "votes": 5,
-    "evidence": "shazam×5"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "music/701897468.m4a",
-  "cover": "images/song/701897468.jpg",
-  "audioStatus": "ok",
-  "dur": 209.9
- },
- {
-  "key": "474692776",
-  "title": "君色に染まる",
-  "titleShazam": "君色に染まる",
-  "artist": "TOKOTOKO/NishizawasanP",
-  "artistSearch": "TOKOTOKO/NishizawasanP",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 3950,
-    "end": 4112,
-    "votes": 6,
-    "evidence": "shazam×6"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "77889898",
-  "title": "歌に形はないけれど",
-  "titleShazam": "Uta Ni Katachi Wa Nai Keredo",
-  "artist": "doriko",
-  "artistSearch": "doriko",
-  "album": "Uta Ni Katachi Wa Nai Keredo - Single",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5150,
-    "end": 5212,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "702302842",
-  "title": "Selfish",
-  "titleShazam": "Selfish",
-  "artist": "Yuika",
-  "artistSearch": "Yuika",
-  "album": "Longing for navy blue",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5225,
-    "end": 5262,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "208874331",
-  "title": "吉原ラメント",
-  "titleShazam": "Yoshiwararamento",
-  "artist": "Kuroneko",
-  "artistSearch": "Kuroneko",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5275,
-    "end": 5362,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "86752665",
-  "title": "ギガンティックo t n feat 鏡音レン",
-  "titleShazam": "ギガンティックO.T.N feat.鏡音レン",
-  "artist": "GigaP",
-  "artistSearch": "GigaP",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5400,
-    "end": 5462,
-    "votes": 3,
-    "evidence": "shazam×3"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "248845729",
-  "title": "ネトゲ廃人シュプレヒコール feat 初音ミク",
-  "titleShazam": "ネトゲ廃人シュプレヒコール feat.初音ミク",
-  "artist": "Satsuki ga Tenkomori",
-  "artistSearch": "Satsuki ga Tenkomori",
-  "album": "",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 5475,
-    "end": 5762,
-    "votes": 7,
-    "evidence": "shazam×7"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "688248805",
-  "title": "Kesou",
-  "titleShazam": "Kesou",
-  "artist": "Miraidempa",
-  "artistSearch": "Miraidempa",
-  "album": "Init",
-  "lang": "其他",
-  "tags": [],
-  "genres": [
-   "Alternative"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 6100,
-    "end": 6237,
-    "votes": 4,
-    "evidence": "shazam×4"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "432109982",
-  "title": "Suisei",
-  "titleShazam": "Suisei",
-  "artist": "Lovely Summer Chan",
-  "artistSearch": "Lovely Summer Chan",
-  "album": "LSC",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 6350,
-    "end": 6562,
-    "votes": 9,
-    "evidence": "shazam×9"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "659517725",
-  "title": "花曇り",
-  "titleShazam": "hanagumori",
-  "artist": "CHIAKI SATO",
-  "artistSearch": "CHIAKI SATO",
-  "album": "BUTTERFLY EFFECT",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 8250,
-    "end": 8287,
-    "votes": 2,
-    "evidence": "shazam×2"
-   }
-  ],
-  "link": "",
-  "clips": [],
-  "src": "",
-  "cover": "",
-  "audioStatus": "missing"
- },
- {
-  "key": "46105712",
-  "title": "Beautiful World",
-  "titleShazam": "Beautiful World",
-  "artist": "Hikaru Utada",
-  "artistSearch": "Hikaru Utada",
-  "album": "Beautiful World / Kiss & Cry - EP",
-  "lang": "日语",
-  "tags": [
-   "J-POP"
-  ],
-  "genres": [
-   "J-Pop"
-  ],
-  "emoji": "🎵",
-  "singCount": 1,
-  "lastSung": "2026-08-22",
-  "sings": [
-   {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 8325,
-    "end": 8587,
-    "votes": 8,
-    "evidence": "shazam×8"
-   }
-  ],
-  "link": "https://www.bilibili.com/video/BV1MH816DEjd?p=13",
   "clips": [
    {
-    "bvid": "BV1MH816DEjd",
-    "page": 13,
-    "title": "Beautiful World",
-    "author": "宵夜ChiTi",
-    "date": "2026-08-22",
-    "play": 634,
-    "url": "https://www.bilibili.com/video/BV1MH816DEjd?p=13"
+    "bvid": "BV1GWud6qEb7",
+    "page": 11,
+    "key": "BV1GWud6qEb7_p11",
+    "tier": 1,
+    "title": "秒針を噛む",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=11"
    }
   ],
-  "src": "",
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=11",
+  "src": "music/秒針を噛む_BV1GWud6qEb7_11.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 256,
+  "audioStatus": "ok"
  },
  {
-  "key": "695998269",
-  "title": "Wrong World",
-  "titleShazam": "Wrong World",
-  "artist": "TOGENASHI TOGEARI",
-  "artistSearch": "TOGENASHI TOGEARI",
-  "album": "TOGENASHI",
-  "lang": "日语",
-  "tags": [
-   "动画"
-  ],
-  "genres": [
-   "Anime"
-  ],
+  "key": "BV1GWud6qEb7_p12",
+  "title": "君の知らない物語",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
   "emoji": "🎵",
+  "tier": 1,
   "singCount": 1,
-  "lastSung": "2026-08-22",
+  "lastSung": "2026-08-10",
   "sings": [
    {
-    "date": "2026-08-22",
-    "bvid": "BV1GM8168EfW",
-    "start": 8625,
-    "end": 8787,
-    "votes": 4,
-    "evidence": "shazam×4"
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 362,
+    "votes": 0
    }
   ],
-  "link": "",
-  "clips": [],
-  "src": "",
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 12,
+    "key": "BV1GWud6qEb7_p12",
+    "tier": 1,
+    "title": "君の知らない物語",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=12"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=12",
+  "src": "music/君の知らない物語_BV1GWud6qEb7_12.m4a",
   "cover": "",
-  "audioStatus": "missing"
+  "dur": 362,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p13",
+  "title": "PDD",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 224,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 13,
+    "key": "BV1GWud6qEb7_p13",
+    "tier": 1,
+    "title": "PDD",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=13",
+  "src": "music/PDD_BV1GWud6qEb7_13.m4a",
+  "cover": "",
+  "dur": 224,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p14",
+  "title": "キミの記憶",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 345,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-04",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 345,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 14,
+    "key": "BV1GWud6qEb7_p14",
+    "tier": 1,
+    "title": "キミの記憶",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=14"
+   },
+   {
+    "bvid": "BV1hNtB6hELD",
+    "page": 1,
+    "key": "BV1hNtB6hELD_p1",
+    "tier": 1,
+    "title": "キミの記憶",
+    "author": "UP 4378290",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1hNtB6hELD"
+   },
+   {
+    "bvid": "BV19Etz66Eit",
+    "page": 1,
+    "key": "BV19Etz66Eit_p1",
+    "tier": 1,
+    "title": "【羽啾chu2u】キミの記憶——9.4日下歌回",
+    "author": "UP 38087508",
+    "date": "2026-09-04",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV19Etz66Eit"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=14",
+  "src": "music/キミの記憶_BV1GWud6qEb7_14.m4a",
+  "cover": "",
+  "dur": 345,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p15",
+  "title": "Virtual to LIVE",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 1,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 265,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 15,
+    "key": "BV1GWud6qEb7_p15",
+    "tier": 1,
+    "title": "Virtual to LIVE",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=15"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=15",
+  "src": "music/Virtual to LIVE_BV1GWud6qEb7_15.m4a",
+  "cover": "",
+  "dur": 265,
+  "audioStatus": "ok"
+ },
+ {
+  "key": "BV1GWud6qEb7_p16",
+  "title": "ポルターガイスト",
+  "titleShazam": "",
+  "artist": "未填写",
+  "album": "",
+  "lang": "",
+  "tags": [],
+  "genres": [],
+  "emoji": "🎵",
+  "tier": 1,
+  "singCount": 2,
+  "lastSung": "2026-08-10",
+  "sings": [
+   {
+    "date": "2026-08-10",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   },
+   {
+    "date": "2026-09-21",
+    "bvid": "BV1GWud6qEb7",
+    "start": 0,
+    "end": 262,
+    "votes": 0
+   }
+  ],
+  "clips": [
+   {
+    "bvid": "BV1GWud6qEb7",
+    "page": 16,
+    "key": "BV1GWud6qEb7_p16",
+    "tier": 1,
+    "title": "ポルターガイスト",
+    "author": "UP 4378290",
+    "date": "2026-08-10",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1GWud6qEb7?p=16"
+   },
+   {
+    "bvid": "BV1aJhY64EeD",
+    "page": 13,
+    "key": "BV1aJhY64EeD_p13",
+    "tier": 2,
+    "title": "ポルターガイスト",
+    "author": "UP 297578981",
+    "date": "2026-09-21",
+    "play": 0,
+    "url": "https://www.bilibili.com/video/BV1aJhY64EeD?p=13"
+   }
+  ],
+  "link": "https://www.bilibili.com/video/BV1GWud6qEb7?p=16",
+  "src": "music/ポルターガイスト_BV1GWud6qEb7_16.m4a",
+  "cover": "",
+  "dur": 262,
+  "audioStatus": "ok"
  }
 ];
