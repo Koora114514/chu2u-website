@@ -3059,8 +3059,12 @@ body.page-pl .pl-list{
 .pl-vinyl-disc{
   width:44px;height:44px;border-radius:50%;position:relative;
   display:grid;place-items:center;
-  background:radial-gradient(circle,#2d3323 25%,#191e13 28%,#363e2a 48%,#1b2014 68%,#323927 92%);
-  box-shadow:0 3px 8px rgba(0,0,0,.35);
+  /* 碟面：底色一直是黑的，沟槽的「高光」全部走灰白（2026-10-08 用户定），不带橄榄绿味。
+     上面那层斜向高光抄参考站整机版黑胶（workshop 那张卡）的 ::before 反光。 */
+  background-image:
+    linear-gradient(135deg,rgba(255,255,255,.16) 0%,rgba(255,255,255,0) 42%,rgba(255,255,255,.10) 100%),
+    radial-gradient(circle,#2f2f2f 25%,#191919 28%,#383838 48%,#1b1b1b 68%,#333333 92%);
+  box-shadow:0 3px 8px rgba(0,0,0,.35), inset 0 0 0 1.5px rgba(255,255,255,.40);
 }
 .pl-vinyl-core{
   width:18px;height:18px;border-radius:50%;display:grid;place-items:center;
@@ -3155,12 +3159,13 @@ body.dark .pl-vinyl{
   background-image:linear-gradient(135deg,#1b1b38,#14142a);
   box-shadow:0 4px 12px rgba(0,0,0,.45), inset 0 1px 2px rgba(255,255,255,.10);
 }
+/* 唱片本体：深浅色档共用上面那一套（2026-10-08 用户定「不论深浅模式都要一直保持黑色」，
+   高光一律灰白），深色档只把投影换成黑色档、再补一道极细的灰白边光勾轮廓。 */
 body.dark .pl-vinyl-disc{
-  background:radial-gradient(circle,#3a4230 25%,#22281a 28%,#454e35 48%,#242a1c 68%,#3d452e 92%);
-  box-shadow:0 3px 8px rgba(0,0,0,.55);
+  box-shadow:0 3px 8px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.38), 0 0 0 1px rgba(255,255,255,.18);
 }
 body.dark .pl-song.playing .pl-vinyl-disc{
-  box-shadow:0 3px 8px rgba(0,0,0,.55), 0 0 14px rgba(191,197,111,.55);
+  box-shadow:0 3px 8px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.38), 0 0 14px rgba(191,197,111,.55);
 }
 body.dark .pl-song.playing .pl-vinyl::before{border-color:rgba(191,197,111,.55)}
 body.dark .pl-song.playing .pl-vinyl::after{border-color:rgba(232,184,144,.35)}
@@ -3194,6 +3199,32 @@ body.dark .pl-song::after{
   60%{opacity:.45}
   100%{transform:scale(1.28);opacity:0}
 }
+/* ------------------------------------------------------------
+   ---------- 第五轮补丁：深色档描边与播放器主键对比度（2026-10-08 用户反馈） ----------
+   用户原话：「深色模式描边颜色不符合深色主题 改一下 播放器的描边也是 然后播放器的播放
+   暂停按钮颜色也不符合深色主题 对比度也不高影响识别」。逐项实测后发现深色档里有几处还是
+   浅色主题的颜色没跟着换，一起修：
+     ① 播放中的卡片描边 = var(--olive)：深色档里 --olive 反而是「暗橄榄」#8f9444，压在深靛
+        底上糊成一条，跟同页其它描边（一律 --olive-deep #bfc56f）不一致 → 换 --olive-deep。
+     ② 播放条自己的硬投影、条里各个圆键的投影，还是浅色档的 rgba(139,145,80,.4)（亮橄榄）；
+        深色档按全站规矩换成黑色投影（其它卡片/浮层都是 rgba(0,0,0,.5x)）。
+     ③ 播放/暂停主键：描边还是浅色档的 #8b9150，字色却是 --ink 的浅灰 #b4b4c0 —— 浅灰压亮橄榄
+        对比度约 1.5:1，⏸ 基本看不清（用户说的「影响识别」）。按全站深色档实心主键的统一做法
+        （body.dark.page-pl … .px-btn:not(.ghost){background:var(--olive-deep);color:#10102a}）
+        改成「亮橄榄底 + 深靛字」，描边一并拉回 --olive-deep。
+     ④ 进度条 / 音量条：轨道 25% 橄榄在深底上几乎看不见，滑块描边也是浅色档 #8b9150 → 一起换。
+   只动深色档，浅色档一行没碰。
+   ------------------------------------------------------------ */
+body.dark .pl-song.playing{border-color:var(--olive-deep)}
+body.dark .pl-player{border-color:var(--olive-deep);box-shadow:0 5px 0 rgba(0,0,0,.55)}
+body.dark .pl-player .pl-ib{box-shadow:0 2px 0 rgba(0,0,0,.45)}
+body.dark #pbToggle{border-color:var(--olive-deep);color:#10102a}
+body.dark input[type=range].pl-range{
+  background:rgba(191,197,111,.30);box-shadow:inset 0 2px 0 rgba(0,0,0,.45)}
+body.dark input[type=range].pl-range::-webkit-slider-thumb{
+  border-color:var(--olive-deep);background:linear-gradient(180deg,#e6eab8,#bfc56f)}
+body.dark input[type=range].pl-range::-moz-range-thumb{
+  border-color:var(--olive-deep);background:#bfc56f}
 /* ---- 关掉动效（系统开了「减少动态效果」时只保留静态外观） ---- */
 @media(prefers-reduced-motion:reduce){
   .pl-song.playing .pl-vinyl-disc{animation:none}
