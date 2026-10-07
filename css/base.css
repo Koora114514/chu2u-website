@@ -2695,9 +2695,9 @@ input[type=range].pl-range::-moz-range-thumb{width:12px;height:16px;background:v
 
 /* 播放条常驻时给页面留出底部空间（不然最后几张卡永远被压住） */
 body.has-player{padding-bottom:130px}
-/* 页签吸顶（参考站的页签也是吸顶的），排在吸顶工具条之上 */
-.pl-tabs{position:sticky;top:calc(var(--topbar-h, 74px) + 4px);z-index:21;display:flex;gap:8px;flex-wrap:wrap;
-  background:var(--paper-bg,#f4f6e0);padding:6px 0}
+/* 页签（2026-10-07 第三轮：取消吸顶）——原来页签吸顶 z-index 更高，滚动时正好把吸顶工具条
+   的「范围键+搜索框」那一行盖住（用户截图反馈「下拉后搜索就不见了」）。滚动时保留搜索行更重要。 */
+.pl-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 12px}
 
 /* ---- 窄屏 ---- */
 @media(max-width:720px){
@@ -2914,3 +2914,79 @@ body.dark .cry-bubble .song .nm{color:#e8e8f0}
   padding:8px 0 10px;
 }
 body.dark .pl-sticky{background:var(--bg,#07071c);background-image:none;border:none;box-shadow:none}
+
+/* ============================================================
+   ---------- 陪啾啾听！第三轮：工具条扁平化（2026-10-07 用户定） ----------
+   要求原话：「搜索框区域取消描边、做阴影效果提高立体感即可，整体做成相对扁平化的像素风格；
+   字号和按键缩到对标站（图三）那种紧凑尺寸」。做法：工具条内所有控件（页签/范围键/搜索框/
+   按键/筛选 chips）一律去描边 → 扁平色块 + 硬偏移小投影（沿用站内像素投影手感，不做模糊光晕）；
+   字号 14→12、内边距收紧；选中态/主键用橄榄实心块区分。深色主题用对应深色档。
+   只作用于歌单页（body.page-pl），其它页面的 .px-btn 一律不动。
+   ============================================================ */
+body.page-pl .pl-tabs .px-btn,
+body.page-pl .pl-sticky .px-btn{
+  font-size:12px;padding:5px 12px;letter-spacing:1px;
+  border:none;border-radius:999px;
+  background:var(--panel);color:var(--ink-soft);
+  box-shadow:2px 2px 0 rgba(139,145,80,.35);
+}
+body.page-pl .pl-tabs .px-btn:hover,
+body.page-pl .pl-sticky .px-btn:hover{
+  background:var(--olive-pale);color:var(--ink);
+  transform:translate(-1px,-1px);box-shadow:3px 3px 0 rgba(139,145,80,.5);
+}
+body.page-pl .pl-tabs .px-btn.on,
+body.page-pl .pl-sticky .px-btn.on,
+body.page-pl .pl-sticky .px-btn[aria-pressed="true"]{
+  background:var(--olive);color:var(--ink);font-weight:700;
+}
+/* 工具行里的主键（▶ 播放全部）：实心橄榄 */
+body.page-pl .pl-sticky .pl-tools2 .px-btn:not(.ghost){
+  background:var(--olive);color:var(--ink);font-weight:700;
+}
+/* 范围键（综合/歌名/歌手）：无描边分段胶囊 */
+body.page-pl .pl-scope{
+  border:none;border-radius:999px;overflow:hidden;
+  background:var(--panel);box-shadow:2px 2px 0 rgba(139,145,80,.35);
+  height:32px;
+}
+body.page-pl .pl-scope-btn{
+  font-size:12px;padding:0 13px;border:none;letter-spacing:1px;color:var(--ink-soft);
+}
+body.page-pl .pl-scope-btn + .pl-scope-btn{border-left:1px solid var(--line)}
+body.page-pl .pl-scope-btn:hover{background:var(--olive-pale)}
+body.page-pl .pl-scope-btn.on{background:var(--olive);color:var(--ink);font-weight:700}
+/* 搜索框：凹槽式扁平（内投影做深度，无描边） */
+body.page-pl .pl-search{
+  border:none;border-radius:999px;height:32px;padding:0 12px;
+  background:var(--panel);
+  box-shadow:inset 2px 2px 0 rgba(139,145,80,.22);
+}
+body.page-pl .pl-search:focus-within{box-shadow:inset 2px 2px 0 rgba(139,145,80,.48)}
+body.page-pl .pl-search input{font-size:13px}
+body.page-pl .pl-search .pl-clear{font-size:14px}
+/* 行距/统计/已生效 chips 一起收紧 */
+body.page-pl .pl-sticky{padding:6px 0 8px}
+body.page-pl .pl-tools2{gap:7px;margin-top:7px}
+body.page-pl .pl-meta{font-size:12px;margin-top:6px;letter-spacing:1px}
+body.page-pl .pl-active{margin-top:6px;padding-top:6px;border-top-width:1px}
+body.page-pl .pl-active-chip{border:none;box-shadow:1px 1px 0 rgba(139,145,80,.3)}
+/* ---- 深色主题 ---- */
+body.dark.page-pl .pl-tabs .px-btn,
+body.dark.page-pl .pl-sticky .px-btn{
+  background:#1b1b38;color:var(--ink-soft);box-shadow:2px 2px 0 rgba(0,0,0,.45);
+}
+body.dark.page-pl .pl-tabs .px-btn:hover,
+body.dark.page-pl .pl-sticky .px-btn:hover{background:#22224a;color:var(--ink)}
+body.dark.page-pl .pl-tabs .px-btn.on,
+body.dark.page-pl .pl-sticky .px-btn.on,
+body.dark.page-pl .pl-sticky .px-btn[aria-pressed="true"],
+body.dark.page-pl .pl-sticky .pl-tools2 .px-btn:not(.ghost){
+  background:var(--olive-deep);color:#10102a;
+}
+body.dark.page-pl .pl-scope{background:#1b1b38;box-shadow:2px 2px 0 rgba(0,0,0,.45)}
+body.dark.page-pl .pl-scope-btn + .pl-scope-btn{border-left-color:#3a3a5c}
+body.dark.page-pl .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
+body.dark.page-pl .pl-search{background:#14142a;box-shadow:inset 2px 2px 0 rgba(0,0,0,.55)}
+body.dark.page-pl .pl-search:focus-within{box-shadow:inset 2px 2px 0 rgba(191,197,111,.35)}
+body.dark.page-pl .pl-active-chip{background:#22224a;box-shadow:1px 1px 0 rgba(0,0,0,.4)}
