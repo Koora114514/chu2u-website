@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐种地耍起⭐","online":110072,"area":"虚拟主播","start":1791386499,"checked":"2026-10-08 01:19:57"};
+window.CHU2U_LIVE={"live":false,"title":"⭐种地耍起⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-08 03:48:02"};
