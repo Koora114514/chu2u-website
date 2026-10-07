@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610072104">
+<link rel="stylesheet" href="css/base.css?v=202610072115">
 </head>
 <body class="page-pl">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -1589,6 +1589,22 @@
   }
   tick();
   setInterval(tick, 1000);
+})();
+</script>
+<!-- 顶栏实际高度写进 --topbar-h，供吸顶工具条留白用（顶栏高度随断点变化；本页之前缺这段，
+     吸顶工具条用了 74px 兜底值、比真实顶栏矮一截，滚动时被顶栏盖住——2026-10-07 用户报，补上） -->
+<script>
+(function(){
+  function sync(){
+    var tb = document.getElementById("topbar");
+    if(!tb) return;
+    document.documentElement.style.setProperty("--topbar-h",
+      Math.round(tb.getBoundingClientRect().height) + "px");
+  }
+  sync();
+  window.addEventListener("load", sync);
+  window.addEventListener("resize", sync);
+  if(window.ResizeObserver){ try{ new ResizeObserver(sync).observe(document.getElementById("topbar")); }catch(e){} }
 })();
 </script>
 </body>

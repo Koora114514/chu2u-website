@@ -2990,3 +2990,33 @@ body.dark.page-pl .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
 body.dark.page-pl .pl-search{background:#14142a;box-shadow:inset 2px 2px 0 rgba(0,0,0,.55)}
 body.dark.page-pl .pl-search:focus-within{box-shadow:inset 2px 2px 0 rgba(191,197,111,.35)}
 body.dark.page-pl .pl-active-chip{background:#22224a;box-shadow:1px 1px 0 rgba(0,0,0,.4)}
+
+/* ============================================================
+   ---------- 陪啾啾听！第四轮：工具条卡片化 + 列表去大容器（2026-10-07 用户定） ----------
+   用户原话：「搜索框（工具条）被导航栏覆盖了一部分，得调整到下面一点；这个搜索框的卡片
+   做倒角，顺便也做个阴影提高立体感」「歌曲卡片后面的卡片去掉」。
+   ① 吸顶偏移的根因：playlist.html 缺 --topbar-h 测量脚本 → 用 74px 兜底（真实顶栏约
+      95px）→ 滚动时卡片上沿被顶栏盖住。已补脚本（与 log.html 同款），留白再加到 10px。
+   ② 工具条改回卡片观感：16px 倒角 + 5px 硬偏移投影（保留不透明底色，滚动不糊字），
+      深色用深色档；内边距补回左右 12px（卡片内容不要贴着圆角）。
+   ③ 歌曲列表的大容器（.pl-list 的 3px 黑框 + 实心底 + 大投影）整个去掉——它本来就没有
+      内滚动（v2 的 fitSongList 已不在页面里），纯装饰框；歌曲卡片直接落在页面底色上。
+   ============================================================ */
+body.page-pl .pl-sticky{
+  border-radius:16px;
+  background:var(--panel);
+  background-image:linear-gradient(180deg,
+    rgba(255,255,255,.55) 0, rgba(255,255,255,.55) 4px, rgba(255,255,255,0) 4px);   /* 像素风平涂高光带 */
+  box-shadow:6px 6px 0 rgba(139,145,80,.40);
+  top:calc(var(--topbar-h, 74px) + 10px);
+  padding:10px 12px;
+}
+body.dark.page-pl .pl-sticky{
+  background:#14142e;
+  background-image:linear-gradient(180deg,
+    rgba(255,255,255,.07) 0, rgba(255,255,255,.07) 4px, rgba(255,255,255,0) 4px);
+  box-shadow:6px 6px 0 rgba(0,0,0,.55);
+}
+body.page-pl .pl-list{
+  border:none;background:none;box-shadow:none;overflow:visible;margin-top:10px;
+}
