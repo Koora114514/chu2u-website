@@ -2905,3 +2905,12 @@ body.dark .cry-bubble .song .nm{color:#e8e8f0}
 /* 整卡按下也轻轻压一下（对标站卡片是 hover 上浮 + 按下回压） */
 .pl-song{transition:transform .18s cubic-bezier(.175,.885,.32,1.275), box-shadow .18s ease, border-color .18s ease}
 .pl-song:active{transform:translateY(-1px) scale(.995)}
+/* 2026-10-07 用户定：去掉歌单列表上方那个「大卡片」（搜索 + 按键那一条），只留每首歌的小卡片。
+   做法：吸顶工具条不再画卡片（无描边/无投影/无圆角），只保留一层不透明页面底色，滚动时文字不糊。 */
+.pl-sticky{
+  border:none;border-radius:0;box-shadow:none;
+  background:var(--paper-bg,#f4f6e0);
+  background-image:none;
+  padding:8px 0 10px;
+}
+body.dark .pl-sticky{background:var(--bg,#07071c);background-image:none;border:none;box-shadow:none}
