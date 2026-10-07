@@ -1,13 +1,13 @@
 // 本文件由 维护/歌切曲库.py 从 歌切下载清单.json 生成，请勿手改。
 // 人工调整（改名/换音源/剔除）在 维护/歌库/曲库人工调整.json，改完重跑本脚本生效。
-// 生成时间：2026-10-08 00:27:32   共 241 首（只收歌切；同一首歌只留一个音源）
+// 生成时间：2026-10-08 01:42:38   共 241 首（只收歌切；同一首歌只留一个音源）
 // 字段：key/title/artist/lang/tags/tier/singCount/lastSung/sings[]/clips[]/link/src/dur/cover
 window.CHU2U_SONGS = [
  {
   "key": "BV1WkHo64E88_p1",
-  "title": "花",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "花 feat. 花譜",
+  "titleShazam": "花 feat. 花譜",
+  "artist": "Guiano/花譜",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -48,9 +48,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1e1Hq6XExm_p1",
-  "title": "夜明けと蛍",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "夜明けと蛍 arrange ver.",
+  "titleShazam": "夜明けと蛍 arrange ver.",
+  "artist": "n-buna",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -139,12 +139,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1KVak6jEfT_p1",
   "title": "踊り子",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "踊り子",
+  "artist": "Vaundy",
   "album": "",
   "lang": "日语",
   "tags": [
-   "精修"
+   "精修",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -218,12 +219,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1aFYA61EpJ_p1",
   "title": "プロポーズ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "プロポーズ",
+  "artist": "内緒のピアス/可不",
   "album": "",
   "lang": "日语",
   "tags": [
-   "精修"
+   "精修",
+   "术力口",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -401,8 +404,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1s1hT6CEBR_p1",
   "title": "二時間だけのバカンス",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "二時間だけのバカンス",
+  "artist": "宇多田ヒカル/椎名林檎",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -480,12 +483,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Us8S6PExs_p1",
   "title": "熱愛発覚中",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "熱愛発覚中",
+  "artist": "椎名林檎/中田ヤスタカ",
   "album": "",
   "lang": "日语",
   "tags": [
-   "精修"
+   "精修",
+   "摇滚",
+   "电子",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -559,12 +565,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1tn8w6aEGw_p1",
   "title": "薄ら氷心中",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "薄ら氷心中",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
   "tags": [
-   "精修"
+   "精修",
+   "摇滚",
+   "电子",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -656,12 +665,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1zY8n6KEBg_p1",
   "title": "不可幸力",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "不可幸力",
+  "artist": "Vaundy",
   "album": "",
   "lang": "日语",
   "tags": [
-   "精修"
+   "精修",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -820,13 +830,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Jjas6nEZR_p4",
-  "title": "Magical Word(魔法咏唱)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "Magical Word",
+  "titleShazam": "Magical Word",
+  "artist": "P丸様。/TeddyLoid",
   "album": "",
   "lang": "日语",
   "tags": [
-   "高码率伴奏"
+   "高码率伴奏",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -863,13 +874,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1aJhY64EeD_p4",
-  "title": "ゴーストルール(幽灵法则)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ゴーストルール",
+  "titleShazam": "ゴーストルール",
+  "artist": "花たん",
   "album": "",
   "lang": "日语",
   "tags": [
-   "高码率伴奏"
+   "高码率伴奏",
+   "术力口",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -906,13 +919,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1aJhY64EeD_p5",
-  "title": "土星",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "サターン",
+  "titleShazam": "サターン",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
   "tags": [
-   "高码率伴奏"
+   "高码率伴奏",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -992,13 +1006,16 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1aJhY64EeD_p7",
-  "title": "石膏",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ギブス",
+  "titleShazam": "ギブス",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
   "tags": [
-   "高码率伴奏"
+   "高码率伴奏",
+   "摇滚",
+   "电子",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -1035,13 +1052,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1aJhY64EeD_p8",
-  "title": "赤橙(听完结尾)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "赤橙",
+  "titleShazam": "赤橙",
+  "artist": "ACIDMAN",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [
-   "高码率伴奏"
+   "高码率伴奏",
+   "摇滚"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -1078,12 +1096,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1fJHB6bEfF_p1",
-  "title": "Cherry Pop(推荐)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "チェリーポップ",
+  "titleShazam": "チェリーポップ",
+  "artist": "DECO*27/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1202,11 +1222,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1fJHB6bEfF_p7",
   "title": "帝国少女",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "帝国少女",
+  "artist": "火西肆",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1242,12 +1264,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1fJHB6bEfF_p8",
-  "title": "海百合海底谭",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ウミユリ海底譚",
+  "titleShazam": "ウミユリ海底譚",
+  "artist": "初音ミク/n-buna",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1283,12 +1308,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1fJHB6bEfF_p9",
-  "title": "マトリョシカ(俄罗斯套娃)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "マトリョシカ",
+  "titleShazam": "マトリョシカ",
+  "artist": "米津玄師/初音ミク/GUMI",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1325,11 +1352,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1fJHB6bEfF_p10",
   "title": "花となれ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "花となれ",
+  "artist": "Yunosuke",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1366,11 +1395,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1fJHB6bEfF_p13",
   "title": "1925",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "1925",
+  "artist": "T-POCKET/初音ミク",
   "album": "",
-  "lang": "其他",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1407,8 +1438,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1rPaX6AEqR_p1",
   "title": "狂乱 Hey Kids!!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "狂乱 Hey Kids!!",
+  "artist": "RAISE A SUILEN",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -1448,11 +1479,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1rPaX6AEqR_p2",
   "title": "二息歩行",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "二息歩行",
+  "artist": "DECO*27/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1489,8 +1522,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1rPaX6AEqR_p5",
   "title": "怪物",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "怪物",
+  "artist": "YOASOBI",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -1529,11 +1562,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1rPaX6AEqR_p6",
-  "title": "夜に駆ける",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "YOASOBI - 蜜雪冰城に駆ける",
+  "titleShazam": "YOASOBI - 蜜雪冰城に駆ける",
+  "artist": "61爱吃西瓜",
   "album": "",
-  "lang": "日语",
+  "lang": "中文",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -1570,11 +1603,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1rPaX6AEqR_p7",
-  "title": "终有一日再会!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "さよーならまたいつか！",
+  "titleShazam": "さよーならまたいつか！",
+  "artist": "化步",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -1612,8 +1645,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1rPaX6AEqR_p8",
   "title": "境界の彼方",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "境界の彼方",
+  "artist": "茅原実里",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -1694,11 +1727,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1rPaX6AEqR_p10",
   "title": "少年よ我に帰れ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "少年よ我に帰れ",
+  "artist": "やくしまるえつこ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1735,10 +1770,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Uzao6REWL_p1",
   "title": "KING",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "KING",
+  "artist": "kanaria/GUMI",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -1776,11 +1811,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Uzao6REWL_p2",
   "title": "Ham",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Ham",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1816,12 +1853,16 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Uzao6REWL_p5",
-  "title": "漆黑的子弹",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "black bullet",
+  "titleShazam": "black bullet",
+  "artist": "fripSide",
   "album": "",
-  "lang": "中文",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "摇滚",
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1857,12 +1898,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1KNai6tEFf_p3",
-  "title": "モニタリング(视奸)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "モニタリング",
+  "titleShazam": "モニタリング",
+  "artist": "DECO*27/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -1899,8 +1942,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1KNai6tEFf_p4",
   "title": "絶頂讃歌",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "絶頂讃歌",
+  "artist": "和ぬか",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -1939,11 +1982,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1KNai6tEFf_p6",
-  "title": "雏鸟",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "雛鳥",
+  "titleShazam": "雛鳥",
+  "artist": "花譜",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -1980,11 +2023,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1KNai6tEFf_p10",
-  "title": "月说或许",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "Luna say maybe",
+  "titleShazam": "Luna say maybe",
+  "artist": "初星学園/美波/月村手毬",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -2063,11 +2106,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1KNai6tEFf_p14",
   "title": "カレンの清掃",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "カレンの清掃",
+  "artist": "香椎モイミ/星界",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2103,12 +2148,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV19whm6NEh3_p3",
-  "title": "片方だけが燃えている",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "「片方だけが燃えている」 (花譜 Cover)",
+  "titleShazam": "「片方だけが燃えている」 (花譜 Cover)",
+  "artist": "ueil/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2145,10 +2192,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19whm6NEh3_p4",
   "title": "庭園にて。",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "庭園にて。",
+  "artist": "早凉",
   "album": "",
-  "lang": "日语",
+  "lang": "中文",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -2204,11 +2251,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19whm6NEh3_p7",
   "title": "浮遊感UFO",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "浮遊感UFO",
+  "artist": "月ノ美兎",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2281,11 +2330,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19uaA61EBx_p1",
   "title": "蜜月アン・ドゥ・トロワ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "蜜月アン・ドゥ・トロワ",
+  "artist": "DATEKEN/鏡音リン",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2322,11 +2373,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19uaA61EBx_p2",
   "title": "春泥棒",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "春泥棒",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2374,8 +2428,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19uaA61EBx_p4",
   "title": "海の幽霊",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "海の幽霊",
+  "artist": "剑士",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -2415,8 +2469,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV19uaA61EBx_p7",
   "title": "以上、n番観測地からお届けしました。",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "以上、n番観測地からお届けしました。",
+  "artist": "ナースロボ＿タイプＴ/佐藤乃子",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -2456,11 +2510,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Lvhp6iETo_p1",
   "title": "粛聖!! ロリ神レクイエム☆",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "粛聖!! ロリ神レクイエム☆",
+  "artist": "しぐれうい",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2497,11 +2553,16 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Lvhp6iETo_p2",
   "title": "愛して愛して愛して",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "愛して愛して愛して",
+  "artist": "きくお/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "摇滚",
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2537,9 +2598,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Lvhp6iETo_p3",
-  "title": "My Dearest",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "「My Dearest」",
+  "titleShazam": "「My Dearest」",
+  "artist": "咲间妮娜Official",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -2580,12 +2641,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Lvhp6iETo_p4",
-  "title": "Departures ~あなたにおくるアイの歌~",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "Departures〜あなたにおくるアイの歌〜",
+  "titleShazam": "Departures〜あなたにおくるアイの歌〜",
+  "artist": "EGOIST",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "动画",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2622,11 +2686,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Lvhp6iETo_p5",
   "title": "福音 (feat. SHIKI)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "福音 (feat. SHIKI)",
+  "artist": "wotaku/SHIKI",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2722,11 +2788,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Lvhp6iETo_p7",
   "title": "イイコと妖狐",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "イイコと妖狐",
+  "artist": "きくお/绮萱",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2762,9 +2832,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Lvhp6iETo_p8",
-  "title": "星が瞬くこんな夜に",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "星が瞬くこんな夜に ~ゲームVer.~",
+  "titleShazam": "星が瞬くこんな夜に ~ゲームVer.~",
+  "artist": "supercell",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -2804,11 +2874,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p1",
   "title": "ギブス",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ギブス",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -2985,8 +3059,8 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1VKhB6kE5B_p9",
-  "title": "天天天国地獄国",
-  "titleShazam": "",
+  "title": "天天天国地獄国 (feat. ななひら & P丸様。)",
+  "titleShazam": "天天天国地獄国 (feat. ななひら & P丸様。)",
   "artist": "未填写",
   "album": "",
   "lang": "日语",
@@ -3047,11 +3121,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p11",
   "title": "ちきゅう大爆発",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ちきゅう大爆発",
+  "artist": "P丸様。",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3088,11 +3164,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p12",
   "title": "霞がついてくる",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "霞がついてくる",
+  "artist": "ヰ世界情緒",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3229,11 +3307,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p18",
   "title": "サターン",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "サターン",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3270,11 +3350,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p20",
   "title": "Magia",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Magia",
+  "artist": "Kalafina",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "动画",
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3311,11 +3395,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1VKhB6kE5B_p21",
   "title": "HELP!!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "HELP!!",
+  "artist": "Kobo Kanaeru",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3453,9 +3539,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV18Xew65Ee9_p6",
-  "title": "ときどきどきどき(心跳不已)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ときどきどきどき",
+  "titleShazam": "ときどきどきどき",
+  "artist": "ゆーり(Yuri)",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -3495,11 +3581,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV18Xew65Ee9_p7",
   "title": "かなしばりに遭ったら",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "かなしばりに遭ったら",
+  "artist": "AiR",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3536,11 +3624,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV18Xew65Ee9_p8",
   "title": "鏡花水月",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "鏡花水月",
+  "artist": "まふまふ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3577,11 +3667,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV18Xew65Ee9_p9",
   "title": "怪獣",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "怪獣",
+  "artist": "サカナクション",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -3658,11 +3750,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV18Xew65Ee9_p12",
-  "title": "stay with me",
-  "titleShazam": "",
+  "title": "真夜中のドア at I SCREAM LIVE2",
+  "titleShazam": "真夜中のドア at I SCREAM LIVE2",
   "artist": "未填写",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -3700,8 +3792,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV18Xew65Ee9_p13",
   "title": "魔女",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "魔女",
+  "artist": "花譜",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -3758,9 +3850,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV18Xew65Ee9_p14",
-  "title": "勘ぐれい(灰心感)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "勘ぐれい",
+  "titleShazam": "勘ぐれい",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -3860,9 +3952,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1KMeE6JEfu_p3",
-  "title": "さよーならまたいつか!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "さよーならまたいつか！- Sayonara",
+  "titleShazam": "さよーならまたいつか！- Sayonara",
+  "artist": "米津玄師",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -4037,12 +4129,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1vceV6UEWU_p3",
-  "title": "たぶん(大概)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "たぶん",
+  "titleShazam": "たぶん",
+  "artist": "YOASOBI",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4120,11 +4215,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1vceV6UEWU_p5",
   "title": "ハゼ馳せる果てるまで",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ハゼ馳せる果てるまで",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4190,11 +4287,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1vceV6UEWU_p6",
   "title": "勘冴えて悔しいわ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "勘冴えて悔しいわ",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4248,9 +4347,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1cNYi6HEAE_p6",
-  "title": "アンダーカバー(潜行)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "アンダーカバー",
+  "titleShazam": "アンダーカバー",
+  "artist": "天海由梨奈",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -4289,9 +4388,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1cNYi6HEAE_p7",
-  "title": "悪くないもん(我又没有错)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "悪くないもん",
+  "titleShazam": "悪くないもん",
+  "artist": "香里有佐",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -4330,9 +4429,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1cNYi6HEAE_p8",
-  "title": "アンビリカル(脐带)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "アンビリカル (Off Voice)",
+  "titleShazam": "アンビリカル (Off Voice)",
+  "artist": "相坂優歌",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -4471,11 +4570,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1cNYi6HEAE_p11",
-  "title": "INTERNET YAMERO(快远离互联网)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "INTERNET YAMERO",
+  "titleShazam": "INTERNET YAMERO",
+  "artist": "永雏塔菲",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -4512,12 +4611,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1xdYx6qEke_p1",
-  "title": "ヒバナ(火花)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ヒバナ",
+  "titleShazam": "ヒバナ",
+  "artist": "DECO*27/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4553,12 +4654,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1xdYx6qEke_p3",
-  "title": "フォニイ(伪物)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "フォニイ",
+  "titleShazam": "フォニイ",
+  "artist": "可不/ツミキ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4595,11 +4698,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1oCYn6uEn3_p1",
   "title": "星座になれたら",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "星座になれたら",
+  "artist": "結束バンド",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "动画",
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4636,8 +4743,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV15KYn6vEeC_p1",
   "title": "灰かぶり",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "灰かぶり",
+  "artist": "十明",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -4677,11 +4784,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ewbG6hEKV_p1",
   "title": "打上花火",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "打上花火",
+  "artist": "Daoko/米津玄師",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4717,12 +4827,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ewbG6hEKV_p2",
-  "title": "灰姑娘(灰かぶり)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "灰かぶり",
+  "titleShazam": "灰かぶり",
+  "artist": "十明",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4759,11 +4871,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ewbG6hEKV_p3",
   "title": "Snow halation",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Snow halation",
+  "artist": "μ's",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4799,12 +4913,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ewbG6hEKV_p4",
-  "title": "STARTDASH!!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "START:DASH!!",
+  "titleShazam": "START:DASH!!",
+  "artist": "μ's",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4841,11 +4957,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ewbG6hEKV_p5",
   "title": "KICK BACK",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "KICK BACK",
+  "artist": "米津玄師",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4925,11 +5044,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ewbG6hEKV_p7",
   "title": "空の箱",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "空の箱",
+  "artist": "TOGENASHITOGEARI",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "电子"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -4965,12 +5086,16 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ewbG6hEKV_p8",
-  "title": "吉他与孤独与蓝色星球",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ギターと孤独と蒼い惑星-Anime Ver.-",
+  "titleShazam": "ギターと孤独と蒼い惑星-Anime Ver.-",
+  "artist": "結束バンド",
   "album": "",
-  "lang": "中文",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "动画",
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5006,12 +5131,16 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ewbG6hEKV_p9",
-  "title": "若能化作星座",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "星座になれたら",
+  "titleShazam": "星座になれたら",
+  "artist": "結束バンド",
   "album": "",
-  "lang": "中文",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "动画",
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5047,12 +5176,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ewbG6hEKV_p10",
-  "title": "泪水落下(ティアドロップス)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ティアドロップス",
+  "titleShazam": "ティアドロップス",
+  "artist": "Poppin'Party",
   "album": "",
-  "lang": "日语",
-  "tags": [],
+  "lang": "中文",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5088,11 +5219,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1RhbJ69E54_p1",
-  "title": "樱之子",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "桜の子（樱之子）",
+  "titleShazam": "桜の子（樱之子）",
+  "artist": "米拉依Mirai/ギリギリ雾乃",
   "album": "",
-  "lang": "中文",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -5130,11 +5261,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1hNtB6hELD_p2",
   "title": "怪獣の花唄",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "怪獣の花唄",
+  "artist": "Vaundy",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5229,12 +5362,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1hNtB6hELD_p5",
-  "title": "ロミオとシンデレラ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "【EOE/柚恩】ロミオとシンデレラ（罗密欧与辛德瑞拉）",
+  "titleShazam": "【EOE/柚恩】ロミオとシンデレラ（罗密欧与辛德瑞拉）",
+  "artist": "柚恩周报",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5330,11 +5465,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1hNtB6hELD_p7",
   "title": "忘れないでベイベー",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "忘れないでベイベー",
+  "artist": "七音阿卡莉",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5441,11 +5578,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1hNtB6hELD_p9",
   "title": "グッバイ宣言",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "グッバイ宣言",
+  "artist": "Chinozo/v flower",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5500,11 +5639,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1hNtB6hELD_p10",
   "title": "春雷",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "春雷",
+  "artist": "米津玄師",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -5600,8 +5742,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1eTtg6xESw_p2",
   "title": "人生は夢だらけ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "人生は夢だらけ",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -5724,10 +5866,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1eTtg6xESw_p3",
   "title": "ブレインロット",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ブレインロット",
+  "artist": "東京真中",
   "album": "",
-  "lang": "日语",
+  "lang": "中文",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -5865,11 +6007,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1eTtg6xESw_p7",
   "title": "ナイトルール",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ナイトルール",
+  "artist": "可不/煮ル果実",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6051,11 +6195,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p2",
   "title": "あなたしか見えないの",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "あなたしか見えないの",
+  "artist": "r-906/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6133,11 +6280,12 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p4",
   "title": "CH4NGE (feat. 可不)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "CH4NGE (feat. 可不)",
+  "artist": "Giga/可不",
   "album": "",
   "lang": "日语",
   "tags": [
+   "术力口",
    "J-POP"
   ],
   "genres": [],
@@ -6216,12 +6364,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Mwt36UE7D_p6",
-  "title": "のぼれ!すすめ!高い塔",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "のぼれ！すすめ！高い塔",
+  "titleShazam": "のぼれ！すすめ！高い塔",
+  "artist": "花たん",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6257,12 +6407,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Mwt36UE7D_p7",
-  "title": "mosi mosi",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "mosi mosi?",
+  "titleShazam": "mosi mosi?",
+  "artist": "楽音",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6299,11 +6452,12 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p8",
   "title": "少女レイ (いよわRemix)",
-  "titleShazam": "",
+  "titleShazam": "少女レイ (いよわRemix)",
   "artist": "未填写",
   "album": "",
   "lang": "日语",
   "tags": [
+   "术力口",
    "动画"
   ],
   "genres": [],
@@ -6383,11 +6537,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p10",
   "title": "ズッ友",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ズッ友",
+  "artist": "神聖かまってちゃん",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6506,8 +6662,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p13",
   "title": "法螺話",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "法螺話",
+  "artist": "理芽",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -6583,8 +6739,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1Mwt36UE7D_p14",
   "title": "食虫植物",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "食虫植物",
+  "artist": "理芽",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -6687,11 +6843,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p1",
   "title": "異星にいこうね (feat. 星界)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "異星にいこうね (feat. 星界)",
+  "artist": "いよわ/星界",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6728,8 +6886,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p2",
   "title": "ノーチラス",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ノーチラス",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -6810,12 +6968,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p4",
   "title": "五月は花緑青の窓辺から",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "五月は花緑青の窓辺から",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
   "tags": [
-   "摇滚"
+   "摇滚",
+   "J-POP"
   ],
   "genres": [],
   "emoji": "🎵",
@@ -6853,11 +7012,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p7",
   "title": "ベノム",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ベノム",
+  "artist": "Kairiki Bear/flower",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6894,11 +7056,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p8",
   "title": "都落ち",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "都落ち",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6935,11 +7100,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p9",
   "title": "だから僕は音楽を辞めた",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "だから僕は音楽を辞めた",
+  "artist": "名夜Naaya",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -6994,8 +7161,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1mXhw6YEHk_p10",
   "title": "晴る",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "晴る",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7034,9 +7201,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1mXhw6YEHk_p11",
-  "title": "MILABO",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "【AI若叶睦cover】MILABO (灯球)",
+  "titleShazam": "【AI若叶睦cover】MILABO (灯球)",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -7160,8 +7327,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p1",
   "title": "アンビバレント",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "アンビバレント",
+  "artist": "ヰ世界情緒/笹川真生",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7298,11 +7465,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p3",
   "title": "八月、某、月明かり",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "八月、某、月明かり",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7339,8 +7509,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p4",
   "title": "シル・ヴ・プレジデント",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "シル・ヴ・プレジデント",
+  "artist": "P丸様。/ナナホシ管弦楽団",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7398,11 +7568,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p5",
   "title": "多分、風。",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "多分、風。",
+  "artist": "サカナクション",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7439,11 +7611,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p6",
   "title": "踊れオーケストラ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "踊れオーケストラ",
+  "artist": "YASUHIRO/IA",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7480,11 +7655,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p7",
   "title": "トンデモワンダーズ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "トンデモワンダーズ",
+  "artist": "sasakure.UK/初音ミク/KAITO",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7521,11 +7698,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p8",
   "title": "ようこそジャパリパークへ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ようこそジャパリパークへ",
+  "artist": "オーイシマサヨシ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7561,12 +7740,15 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1bV8X6uEaS_p9",
-  "title": "メルト (かぐや ver.)",
-  "titleShazam": "",
+  "title": "メルト (かぐや ver.) [CPK! Remix]",
+  "titleShazam": "メルト (かぐや ver.) [CPK! Remix]",
   "artist": "未填写",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7603,8 +7785,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p10",
   "title": "花 feat. 花譜",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "花 feat. 花譜",
+  "artist": "Guiano/花譜",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7702,8 +7884,8 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1bV8X6uEaS_p12",
-  "title": "月(Live)",
-  "titleShazam": "",
+  "title": "月",
+  "titleShazam": "月",
   "artist": "未填写",
   "album": "",
   "lang": "日语",
@@ -7803,11 +7985,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p14",
   "title": "君が生まれた日",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "君が生まれた日",
+  "artist": "鹿乃",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -7862,8 +8047,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1bV8X6uEaS_p15",
   "title": "忘れてしまえ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "忘れてしまえ",
+  "artist": "花譜",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7945,9 +8130,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Tihj6rEBw_p1",
-  "title": "僕は頑張るよっ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "僕は頑張るよっ feat. ano",
+  "titleShazam": "僕は頑張るよっ feat. ano",
+  "artist": "神聖かまってちゃん/ano",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -7986,11 +8171,11 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1MH816DEjd_p1",
-  "title": "J'ai Trouvé L'amour",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "熱愛発覚中",
+  "titleShazam": "熱愛発覚中",
+  "artist": "椎名林檎/中田ヤスタカ",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -8027,12 +8212,13 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1MH816DEjd_p2",
-  "title": "とても素敵な六月でした",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "とても素敵な六月でした (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&初音ミク)",
+  "titleShazam": "とても素敵な六月でした (feat. 宵崎奏&朝比奈まふゆ&東雲絵名&暁山瑞希&初音ミク)",
+  "artist": "25時、ナイトコードで。",
   "album": "",
-  "lang": "其他",
+  "lang": "日语",
   "tags": [
+   "术力口",
    "摇滚"
   ],
   "genres": [],
@@ -8130,11 +8316,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p4",
   "title": "深海のリトルクライ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "深海のリトルクライ",
+  "artist": "sasakure.UK/土岐麻子",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8255,8 +8443,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p7",
   "title": "花に亡霊",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "花に亡霊",
+  "artist": "Tsubaki椿",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -8296,11 +8484,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p8",
   "title": "又三郎",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "又三郎",
+  "artist": "ヨルシカ",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8407,11 +8598,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p10",
   "title": "花と水飴、最終電車",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "花と水飴、最終電車",
+  "artist": "n-buna/初音ミク",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "术力口",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8448,8 +8642,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p11",
   "title": "Alice in 冷凍庫",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Alice in 冷凍庫",
+  "artist": "めありー/Orangestar",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -8491,8 +8685,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1MH816DEjd_p12",
   "title": "アスノヨゾラ哨戒班",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "アスノヨゾラ哨戒班",
+  "artist": "Orangestar/IA",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -8551,9 +8745,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1MH816DEjd_p13",
-  "title": "Beautiful World",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "Beautiful World-ARIS&SORA（翻自 宇多田光）",
+  "titleShazam": "Beautiful World-ARIS&SORA（翻自 宇多田光）",
+  "artist": "宇多田ヒカル",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -8594,12 +8788,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1Xd8P6LEZv_p1",
-  "title": "8月24日 (1)(1)",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "寝言は寝て言え",
+  "titleShazam": "寝言は寝て言え",
+  "artist": "月ノ美兎",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8717,12 +8913,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1ix8c6uEpC_p2",
-  "title": "napori",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "踊り子",
+  "titleShazam": "踊り子",
+  "artist": "Vaundy",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8759,11 +8957,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ix8c6uEpC_p3",
   "title": "恋風邪にのせて",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "恋風邪にのせて",
+  "artist": "Vaundy",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -8877,8 +9077,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ix8c6uEpC_p5",
   "title": "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "トウキョウ・シャンディ・ランデヴ feat. 花譜, ツミキ",
+  "artist": "MAISONdes/花譜/ツミキ",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -8918,11 +9118,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1ix8c6uEpC_p6",
   "title": "oblivious",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "oblivious",
+  "artist": "Kalafina",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "动画",
+   "摇滚",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9035,9 +9239,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1x28A6YEYB_p1",
-  "title": "懺悔録",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "【AI初华cover】忏悔录",
+  "titleShazam": "【AI初华cover】忏悔录",
+  "artist": "沙卡依Sakai",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -9076,12 +9280,16 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1n78G65EMT_p1",
-  "title": "Untitled",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "ツギハギスタッカート",
+  "titleShazam": "ツギハギスタッカート",
+  "artist": "とあ/初音ミク",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "术力口",
+   "动画",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9194,12 +9402,14 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1is8G6zEXR_p3",
-  "title": "不为人知的鹅妈妈童谣",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "アンノウン・マザーグース",
+  "titleShazam": "アンノウン・マザーグース",
+  "artist": "wowaka/初音ミク",
   "album": "",
-  "lang": "中文",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "术力口"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9277,11 +9487,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p1",
   "title": "日不落",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "日不落",
+  "artist": "AnkeR0619",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9318,8 +9530,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p3",
   "title": "世界上的另一个我",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "世界上的另一个我",
+  "artist": "阿肆/郭采洁",
   "album": "",
   "lang": "中文",
   "tags": [],
@@ -9359,11 +9571,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p4",
   "title": "太聪明",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "太聪明",
+  "artist": "陈绮贞",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9418,11 +9632,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p5",
   "title": "体面",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "体面",
+  "artist": "奈二喵",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9459,11 +9675,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p6",
   "title": "给你一瓶魔法药水",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "给你一瓶魔法药水",
+  "artist": "告五人",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9500,11 +9719,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p7",
   "title": "不眠之夜",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "不眠之夜",
+  "artist": "张杰/HOYO-MiX",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9541,8 +9762,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p8",
   "title": "爱的供养",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "爱的供养",
+  "artist": "杨幂",
   "album": "",
   "lang": "中文",
   "tags": [],
@@ -9705,11 +9926,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p12",
   "title": "爱人错过",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "爱人错过",
+  "artist": "Takagi3Lover",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9787,11 +10010,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p14",
   "title": "勾指起誓",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "勾指起誓",
+  "artist": "洛天依Official/ilem",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9845,9 +10070,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1UTb96uEqs_p15",
-  "title": "寄明月",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "寄明月<中华娘>",
+  "titleShazam": "寄明月<中华娘>",
+  "artist": "SING女团",
   "album": "",
   "lang": "中文",
   "tags": [],
@@ -9886,9 +10111,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1UTb96uEqs_p16",
-  "title": "云·原神",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "欸？大狗",
+  "titleShazam": "欸？大狗",
+  "artist": "0",
   "album": "",
   "lang": "中文",
   "tags": [],
@@ -9928,11 +10153,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1UTb96uEqs_p17",
   "title": "雨爱",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "雨爱",
+  "artist": "杨丞琳",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -9969,10 +10196,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p1",
   "title": "SOS",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "SOS",
+  "artist": "幸村恵理",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -10110,11 +10337,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p4",
   "title": "Bad Apple!!",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Bad Apple!!",
+  "artist": "のみこ",
   "album": "",
-  "lang": "英语",
-  "tags": [],
+  "lang": "日语",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10150,9 +10379,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1sTgp6AEqv_p5",
-  "title": "サンフェーデッド",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "[AI宵绮奏]  サンフェーデッド",
+  "titleShazam": "[AI宵绮奏]  サンフェーデッド",
+  "artist": "东方是什么動漫",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -10210,8 +10439,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p6",
   "title": "Luna say maybe",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Luna say maybe",
+  "artist": "初星学園/美波/月村手毬",
   "album": "",
   "lang": "日语",
   "tags": [
@@ -10253,11 +10482,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p7",
   "title": "ロックンロールは鳴り止まないっ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ロックンロールは鳴り止まないっ",
+  "artist": "神聖かまってちゃん",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10323,8 +10554,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p8",
   "title": "不可解",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "不可解",
+  "artist": "花譜",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -10382,8 +10613,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p9",
   "title": "ゲシュタルト",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ゲシュタルト",
+  "artist": "花譜",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -10423,11 +10654,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p10",
   "title": "カタオモイ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "カタオモイ",
+  "artist": "Aimer",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "动画",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10464,11 +10698,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p11",
   "title": "田中愛愛愛子",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "田中愛愛愛子",
+  "artist": "大森靖子",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10505,11 +10741,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p12",
   "title": "この世界に二人だけ",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "この世界に二人だけ",
+  "artist": "ano",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10564,11 +10802,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p13",
   "title": "ちゅ、多様性。",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ちゅ、多様性。",
+  "artist": "ano",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10605,11 +10845,12 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1sTgp6AEqv_p14",
   "title": "花の塔",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "花の塔",
+  "artist": "さユり",
   "album": "",
   "lang": "日语",
   "tags": [
+   "J-POP",
    "摇滚"
   ],
   "genres": [],
@@ -10725,11 +10966,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p1",
   "title": "非国民的ヒーロー",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "非国民的ヒーロー",
+  "artist": "大森靖子",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -10802,10 +11045,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p2",
   "title": "Flamingo",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "Flamingo",
+  "artist": "黑猫大少爷",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -10843,8 +11086,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p3",
   "title": "丸の内サディステック",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "丸の内サディステック",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -10925,11 +11168,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p6",
   "title": "恋人",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "恋人",
+  "artist": "程天河",
   "album": "",
-  "lang": "日语",
-  "tags": [],
+  "lang": "中文",
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -11020,11 +11265,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p7",
   "title": "普通朋友",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "普通朋友",
+  "artist": "陶喆",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -11061,11 +11309,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p8",
   "title": "红色高跟鞋",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "红色高跟鞋",
+  "artist": "蔡健雅",
   "album": "",
   "lang": "中文",
-  "tags": [],
+  "tags": [
+   "华语流行"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -11101,9 +11351,9 @@ window.CHU2U_SONGS = [
  },
  {
   "key": "BV1GWud6qEb7_p9",
-  "title": "梦回还",
-  "titleShazam": "",
-  "artist": "未填写",
+  "title": "梦回还 (TV size)",
+  "titleShazam": "梦回还 (TV size)",
+  "artist": "呦猫UNEKO",
   "album": "",
   "lang": "中文",
   "tags": [],
@@ -11143,11 +11393,14 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p10",
   "title": "鳥の詩",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "鳥の詩",
+  "artist": "Lia",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "动画",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -11184,11 +11437,13 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p11",
   "title": "秒針を噛む",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "秒針を噛む",
+  "artist": "ずっと真夜中でいいのに。",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
@@ -11225,8 +11480,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p12",
   "title": "君の知らない物語",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "君の知らない物語",
+  "artist": "supercell",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -11307,8 +11562,8 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p14",
   "title": "キミの記憶",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "キミの記憶",
+  "artist": "川村ゆみ/アトラスサウンドチーム",
   "album": "",
   "lang": "日语",
   "tags": [],
@@ -11377,10 +11632,10 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p15",
   "title": "Virtual to LIVE",
-  "titleShazam": "",
+  "titleShazam": "Virtual to LIVE",
   "artist": "未填写",
   "album": "",
-  "lang": "英语",
+  "lang": "日语",
   "tags": [],
   "genres": [],
   "emoji": "🎵",
@@ -11418,11 +11673,15 @@ window.CHU2U_SONGS = [
  {
   "key": "BV1GWud6qEb7_p16",
   "title": "ポルターガイスト",
-  "titleShazam": "",
-  "artist": "未填写",
+  "titleShazam": "ポルターガイスト",
+  "artist": "椎名林檎",
   "album": "",
   "lang": "日语",
-  "tags": [],
+  "tags": [
+   "摇滚",
+   "电子",
+   "J-POP"
+  ],
   "genres": [],
   "emoji": "🎵",
   "tier": 1,
