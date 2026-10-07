@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610072115">
+<link rel="stylesheet" href="css/base.css?v=202610081200">
 </head>
 <body class="page-pl">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -161,6 +161,8 @@
 <button class="to-top" id="toTop" type="button" aria-label="返回页面顶部">
   <img src="images/飞船啾.png" alt="返回顶部">
 </button>
+<!-- 右下角贴纸：开心唱歌（与「啾啾出勤记录」同款位置/尺寸/画质；装饰用，不拦截任何点击） -->
+<img class="rp-sticker" src="images/开心唱歌.png" alt="" aria-hidden="true">
 
 <!-- 右下角悬浮：哭啾（像头像框一样把方图裁成圆形；按下去炸一圈小星火，点气泡里的「抽取今日幸运签」才出今日幸运歌） -->
 <div class="cry-wrap">
@@ -444,13 +446,19 @@
     markPlaying();
   }
   function markPlaying(){
+    /* .now = 当前这首（描边高亮，暂停时也留着）；.playing = 真的在响
+       —— 唱片旋转 / 声波扩散 / 音轨柱 / 颜色加深都挂在 .playing 上，暂停就一起收（2026-10-08 用户定）。
+       选择器必须限定成圆形播放键 .pl-ib：以前用 [data-act="play"] 会先命中排在前面的黑胶那一格，
+       把唱片内容整个替换成 ▶ 再让它转 —— 就是用户反馈的「播放按钮旋转很奇怪」，这里一并修掉。 */
     var t = cur();
+    var playing = !!t && !audio.paused && state.wantPlay;
     var nodes = document.querySelectorAll(".pl-song");
     for(var i=0;i<nodes.length;i++){
       var on = t && nodes[i].getAttribute("data-title") === t;
       nodes[i].classList.toggle("now", !!on);
-      var btn = nodes[i].querySelector('[data-act="play"]');
-      if(btn) btn.textContent = (on && !audio.paused && state.wantPlay) ? "⏸" : "▶";
+      nodes[i].classList.toggle("playing", !!(on && playing));
+      var btn = nodes[i].querySelector('.pl-ib[data-act="play"]');
+      if(btn) btn.textContent = (on && playing) ? "⏸" : "▶";
     }
   }
   function setQueue(titles, startIndex){
@@ -687,9 +695,11 @@
     if(s.lang) badges.push('<span class="pl-badge lang">' + esc(s.lang) + '</span>');
     (s.tags||[]).slice(0,3).forEach(function(tg){ badges.push('<span class="pl-badge">' + esc(tg) + '</span>'); });
     if(!hasAudio(s)) badges.push('<span class="pl-badge" title="没有收录到音源">暂无音源</span>');
-    var vinyl = s.cover
-      ? '<img src="' + esc(s.cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(document.createTextNode(\'🎵\'))">'
-      : '<span aria-hidden="true">🎵</span>';
+    /* 黑胶唱片的中心标签（2026-10-08 用户定：换成银河 emoji；有真封面时优先显示封面） */
+    var core = s.cover
+      ? '<img src="' + esc(s.cover) + '" alt="" loading="lazy" referrerpolicy="no-referrer">'
+      : '🌌';
+    var vinyl = '<div class="pl-vinyl-disc"><span class="pl-vinyl-core" aria-hidden="true">' + core + '</span></div>';
     var cut = (s.clips && s.clips.length)
       ? '<div class="pl-cut">🎬 歌切：<a href="' + esc(s.clips[0].url || "#") + '" target="_blank" rel="noopener">' + esc(s.clips[0].title || s.clips[0].bvid) + '</a>' +
         (s.clips.length > 1 ? '（还有 ' + (s.clips.length-1) + ' 条）' : '') + '</div>'
@@ -698,7 +708,8 @@
       '<div class="pl-song-top">' +
         '<div class="pl-vinyl" data-act="play" title="点击播放 / 暂停">' + vinyl + '</div>' +
         '<div class="pl-song-main">' +
-          '<div class="pl-song-name">' + esc(s.title || "（无标题）") + '<span class="pl-bars" hidden><i></i><i></i><i></i></span></div>' +
+          /* 音轨特效：常驻结构、CSS 只在 .playing 时点亮（不绑音频频率，纯 CSS 律动） */
+          '<div class="pl-song-name"><span class="pl-name-text">' + esc(s.title || "（无标题）") + '</span><span class="pl-bars" aria-hidden="true"><i></i><i></i><i></i></span></div>' +
           '<div class="pl-song-sub">' + esc(s.artist || "歌手未填写") + '</div>' +
         '</div>' +
         '<div class="pl-acts">' +
@@ -1426,12 +1437,85 @@
     if(close) close.addEventListener("click", function(){ d.remove(); });
   }
 
+  /* ---------- 卡片全向 3D 悬停（2026-10-08 用户定：直接套参考站的动效） ----------
+     照 js/motion.js 的 initCard3DTilt 搬过来：元素自身 perspective(1000px) + 位移 + 倾斜 + 微放大，
+     再叠一层跟着光标跑的光斑；进入 0.12s（跟手）、离开 0.38s（回弹）。
+     矩形只在移入那一下量一次、并且用 rAF 合并写入 —— 参考站为此专门在滚动时先清掉倾斜，
+     避免每次 mousemove 都同步读布局。 */
+  function initCardTilt(){
+    if(window.matchMedia){
+      if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      if(window.matchMedia("(hover: none)").matches) return;   /* 触屏没有 hover，不必空转 */
+    }
+    var active = null, rect = null, rafId = 0, mx = 0, my = 0;
+    function cancel(){ if(rafId){ cancelAnimationFrame(rafId); rafId = 0; } }
+    function set(k, v){ if(active) active.style.setProperty(k, v); }
+    function apply(){
+      rafId = 0;
+      if(!active || !active.isConnected){ active = null; rect = null; return; }
+      if(!rect || rect.width <= 0 || rect.height <= 0) return;
+      var px = (mx - rect.left) / rect.width - .5;        /* -0.5 ~ 0.5 */
+      var py = (my - rect.top) / rect.height - .5;
+      px = Math.max(-.6, Math.min(.6, px));
+      py = Math.max(-.6, Math.min(.6, py));
+      set("--tx", (px * 5.6).toFixed(1) + "px");          /* 左右跟手 ±2.8px */
+      set("--ty", (-2.6 + py * 2.4).toFixed(1) + "px");   /* 上下永远浮着：-3.8 ~ -1.4px */
+      set("--tz", "4.5px");
+      set("--rx", (-py * 3.5).toFixed(2) + "deg");        /* 倾斜最大 3.5°，克制不晃 */
+      set("--ry", (px * 3.5).toFixed(2) + "deg");
+      set("--sc", "1.012");
+      set("--glare-opacity", "0.85");
+      set("--glare-x", ((px + .5) * 100).toFixed(1) + "%");
+      set("--glare-y", ((py + .5) * 100).toFixed(1) + "%");
+    }
+    function reset(card){
+      if(!card) return;
+      card.classList.remove("pl-tilt");
+      card.style.setProperty("--card-trans-dur", ".38s");
+      card.style.setProperty("--card-trans-ease", "cubic-bezier(.22,1,.36,1)");
+      card.style.setProperty("--tx", "0px");
+      card.style.setProperty("--ty", "0px");
+      card.style.setProperty("--tz", "0px");
+      card.style.setProperty("--rx", "0deg");
+      card.style.setProperty("--ry", "0deg");
+      card.style.setProperty("--sc", "1");
+      card.style.setProperty("--glare-opacity", "0");
+    }
+    function clear(){
+      if(active){ reset(active); active = null; rect = null; }
+      cancel();
+    }
+    document.addEventListener("mousemove", function(e){
+      var card = e.target && e.target.closest ? e.target.closest(".pl-song") : null;
+      if(!card){ clear(); return; }
+      if(active !== card){
+        if(active) reset(active);
+        cancel();
+        active = card;
+        card.classList.add("pl-tilt");
+        rect = card.getBoundingClientRect();
+        card.style.setProperty("--card-trans-dur", ".12s");
+        card.style.setProperty("--card-trans-ease", "cubic-bezier(.2,.8,.25,1)");
+      }
+      mx = e.clientX; my = e.clientY;
+      if(!rafId) rafId = requestAnimationFrame(apply);
+    }, {passive:true});
+    document.addEventListener("mouseleave", clear, {passive:true});
+    window.addEventListener("blur", clear, {passive:true});
+    window.addEventListener("scroll", clear, {passive:true});
+    window.addEventListener("resize", function(){
+      if(active && active.isConnected) rect = active.getBoundingClientRect();
+    }, {passive:true});
+    document.addEventListener("visibilitychange", function(){ if(document.hidden) clear(); });
+  }
+
   /* ---------- 初始化 ---------- */
   syncChips();
   renderSongs();
   paintPlayer();
   renderQueue();
   renderLists();
+  initCardTilt();
 })();
 </script>
 
