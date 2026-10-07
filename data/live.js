@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐宇宙电波连线中⭐","online":235985,"area":"虚拟主播","start":1791376228,"checked":"2026-10-07 21:17:00"};
+window.CHU2U_LIVE={"live":true,"title":"⭐宇宙电波连线中⭐","online":231514,"area":"虚拟主播","start":1791376228,"checked":"2026-10-07 21:57:36"};
