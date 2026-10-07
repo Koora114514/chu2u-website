@@ -1,6 +1,6 @@
 // 本文件由 维护/歌切曲库.py 从 歌切下载清单.json 生成，请勿手改。
 // 人工调整（改名/换音源/剔除）在 维护/歌库/曲库人工调整.json，改完重跑本脚本生效。
-// 生成时间：2026-10-08 01:42:38   共 241 首（只收歌切；同一首歌只留一个音源）
+// 生成时间：2026-10-08 03:38:48   共 241 首（只收歌切；同一首歌只留一个音源）
 // 字段：key/title/artist/lang/tags/tier/singCount/lastSung/sings[]/clips[]/link/src/dur/cover
 window.CHU2U_SONGS = [
  {
@@ -11173,7 +11173,7 @@ window.CHU2U_SONGS = [
   "album": "",
   "lang": "中文",
   "tags": [
-   "J-POP"
+   "中文"
   ],
   "genres": [],
   "emoji": "🎵",
