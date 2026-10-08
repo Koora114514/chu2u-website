@@ -28,7 +28,7 @@
      字体极小，改同源后并入 _headers 长缓存，CSP 也不再需要放行 jsdelivr。 -->
 <link rel="preload" href="fonts/fusion-pixel-12px-proportional-sc-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/base.css?v=202610082316">
+<link rel="stylesheet" href="css/base.css?v=202610082354">
 
 <!-- ============ 开屏动画（像素开机画面，⚙️可删除） ============ -->
 <div id="splash" role="dialog" aria-label="正在进入 羽啾chu2u 宇宙观测中心">
@@ -351,7 +351,7 @@
 
   <div class="issue reveal" id="recIssue">
     <div class="cover">
-      <img id="recCover" src="" alt="本期封面">
+      <img id="recCover" alt="本期封面">
       <div class="cover-text">
         <!-- 🎨 素材配置：期号/标题/日期/总结/条目 全在 chu2u/site/data/records.js 维护 -->
         <div class="ct-issue" id="recTag">…</div>
@@ -841,6 +841,10 @@
       if(Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
       dx = 0;
     }, {passive:true});
+    /* 2026-10-08 补：浏览器判定这次触摸其实是页面滚动时，发的是 touchcancel 而不是 touchend。
+       原来没接这个事件 → dragging 一直留着 true、dx 留着旧值（要等下一次 touchstart 才被覆盖），
+       横滑就时灵时不灵。接上 touchcancel 把拖动状态每次清干净。 */
+    stage.addEventListener("touchcancel", function(){ dragging = false; dx = 0; }, {passive:true});
     render();
     if(!reduce) timer = setInterval(function(){ go(cur + 1); }, 5000);
   })();
@@ -961,6 +965,10 @@
       if(Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1));
       dx = 0;
     }, {passive:true});
+    /* 2026-10-08 补：浏览器判定这次触摸其实是页面滚动时，发的是 touchcancel 而不是 touchend。
+       原来没接这个事件 → dragging 一直留着 true、dx 留着旧值（要等下一次 touchstart 才被覆盖），
+       横滑就时灵时不灵。接上 touchcancel 把拖动状态每次清干净。 */
+    stage.addEventListener("touchcancel", function(){ dragging = false; dx = 0; }, {passive:true});
     render();
     if(!reduce) timer = setInterval(function(){ go(cur + 1); }, 5000);
   })();

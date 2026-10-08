@@ -19,6 +19,10 @@
   --olive-pale:#eef0c8;
   --olive-mid:#e3e6a8;
   --sky:#b0c8e8;
+  /* 2026-10-08 补：这个 token 一直被 var(--danger,#e13a2e) 引用却从没定义过，
+     等于永远吃兜底值。顺便把值调深一档 —— 原来的 #e13a2e 配白字只有 4.3:1，
+     10px 加粗小标够不着 AA；换成 #c02a1e（4.9:1）仍是 B 站那口红。 */
+  --danger:#c02a1e;
   --line:#d5d9ad;
   --dark-bg:#303030;
   --dark-text:#D6DDC9;
@@ -1285,7 +1289,9 @@ body.dark .px-btn.on{background:var(--olive-deep);color:#10102a}
   box-shadow:2px 2px 0 rgba(48,48,48,.4);
   padding:9px 12px;width:min(300px,100%);outline:none;
 }
-.pl-search:focus{border-color:var(--olive-deep)}
+/* 2026-10-08：原来写的是 :focus —— .pl-search 是 <label>，永远不可能拿到焦点，这条是死规则。
+   改成 :focus-within，里面那个 input 一聚焦就生效。 */
+.pl-search:focus-within{border-color:var(--olive-ink);box-shadow:0 0 0 2px var(--olive-ink)}
 .pl-hint{font-size:14px;color:var(--ink-soft);letter-spacing:1px;margin-right:auto}
 /* 无音源提示：贴在「随机一首」右边（margin-left:auto 把它推到该行最右） */
 .pl-nosrc-hint{font-size:14px;color:var(--ink-soft);letter-spacing:0;line-height:1.5;margin-left:auto}
@@ -1871,7 +1877,7 @@ body.dark .pixel-clock{background-image:linear-gradient(180deg,rgba(255,255,255,
 @media(max-width:520px){
   .brand-text i{display:none}
   .nav-btn{font-size:11px;padding:3px 6px}
-  .pixel-clock{padding:2px 6px}
+  .pixel-clock{padding:4px 7px}   /* 2026-10-08：原来是 2px，3px 描边里只剩不到 1px 空隙，太挤 */
   .pc-time{font-size:12px}
 }
 
@@ -2308,11 +2314,13 @@ body.dark .dn-prof{box-shadow:0 6px 18px rgba(0,0,0,.55)}
    翻页键对着动态气泡那一列居中、不带卡片底板 */
 .dn-tools{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
   gap:12px;margin:0 0 14px}
-.dn-date-box{display:flex;align-items:center;gap:8px;background:#8b9150;color:#fff;
-  border:none;border-radius:12px;padding:0 12px;height:38px;
+/* 2026-10-08：原来硬写 #8b9150 底 + #fff 字 = 3.45:1（浅色档；深色档早就改成深墨字了）。
+   改成和 .chip-tag / .px-btn.on 同一套「橄榄底 + 墨字」= 8.87:1，顺便拿到 44px 触控高度。 */
+.dn-date-box{display:flex;align-items:center;gap:8px;background:var(--olive);color:var(--ink);
+  border:none;border-radius:12px;padding:0 12px;height:44px;
   box-shadow:4px 4px 0 rgba(48,48,48,.30);justify-self:start}
 .dn-date-box span{opacity:.9;font-size:13px}
-.dn-date-box select{border:none;background:none;color:inherit;font-size:13px;
+.dn-date-box select{border:none;background:none;color:inherit;font-size:13px;height:100%;
   font-family:inherit;outline:none;cursor:pointer}
 /* 下拉弹层在系统里是浅底，固定深字浅底，深浅色模式都不会白字压白底 */
 .dn-date-box option{color:#303030;background:#fbfcf2}
@@ -3102,7 +3110,8 @@ body.page-pl .pl-list{
 /* 播放中：碟子带着中心 emoji 一起转（3.8s，跟参考站一致） */
 .pl-song.playing .pl-vinyl-disc{
   animation:plVinylSpin 3.8s linear infinite;
-  box-shadow:0 3px 8px rgba(0,0,0,.35), 0 0 14px rgba(139,145,80,.65);
+  box-shadow:0 3px 8px rgba(0,0,0,.35), 0 0 0 3px rgba(139,145,80,.65);  /* 2026-10-08 零模糊铁律：原来的 0 0 14px 是零偏移彩色光晕（文档里写明禁止的「模糊软阴影」），
+     改成 0 0 0 Npx 的实心像素光环 —— 一样是「在播」高亮，但零模糊、更像像素画。 */
 }
 @keyframes plVinylSpin{
   0%{transform:rotate(0deg)}
@@ -3150,7 +3159,7 @@ body.page-pl .pl-list{
   border-color:#79804a;
   background-image:linear-gradient(180deg,
     rgba(240,243,205,.70) 0%, rgba(214,221,148,.70) 60%, rgba(197,206,120,.70) 100%);
-  box-shadow:0 3px 0 #8b9150, 0 0 18px rgba(139,145,80,.35);
+  box-shadow:0 3px 0 #8b9150, 0 0 0 4px rgba(139,145,80,.45);
 }
 /* ---- ④ 悬停：全向 3D 跟随（照参考站 initCard3DTilt） ---- */
 .pl-song{
@@ -3190,7 +3199,7 @@ body.dark .pl-vinyl-disc{
   box-shadow:0 3px 8px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.38), 0 0 0 1px rgba(255,255,255,.18);
 }
 body.dark .pl-song.playing .pl-vinyl-disc{
-  box-shadow:0 3px 8px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.38), 0 0 14px rgba(191,197,111,.55);
+  box-shadow:0 3px 8px rgba(0,0,0,.55), inset 0 0 0 1.5px rgba(255,255,255,.38), 0 0 0 3px rgba(191,197,111,.55);
 }
 body.dark .pl-song.playing .pl-vinyl::before{border-color:rgba(191,197,111,.55)}
 body.dark .pl-song.playing .pl-vinyl::after{border-color:rgba(232,184,144,.35)}
@@ -3204,7 +3213,7 @@ body.dark .pl-song.playing{
   border-color:var(--olive);
   background-image:linear-gradient(180deg,
     rgba(16,16,38,.70) 0%, rgba(12,12,30,.70) 60%, rgba(9,9,24,.70) 100%);
-  box-shadow:0 3px 0 var(--olive-deep), 0 0 20px rgba(191,197,111,.30);
+  box-shadow:0 3px 0 var(--olive-deep), 0 0 0 4px rgba(191,197,111,.40);
 }
 body.dark .pl-song::after{
   background:radial-gradient(circle 190px at var(--glare-x,50%) var(--glare-y,50%),
@@ -3282,3 +3291,46 @@ body.dark input[type=range].pl-range::-moz-range-thumb{
 @media(max-width:1150px){
   .hero .wrap{max-width:1500px}
 }
+
+/* ============================================================
+   2026-10-08 技术审计修复 ③：触控热区（P2）+ 拖拽面（P2）
+   ============================================================ */
+
+/* ---- 触控热区：把小于 44px 的控件撑到 44px ----
+   实测（390px 视口）原来有多小：顶栏 .nav-btn 82×25、时区 .pc-sel 56×16、
+   直播状态 .live-line 81×15、轮播圆点 .cc-dot 10×10、轮播箭头 .cc-nav 40×40、
+   底部横条 .side-btn 38px 高、歌曲行三个操作键 40×40。
+   两种做法：
+     ① <a> / <button> 这类能吃伪元素的 —— 用 ::after 把命中区撑到 44px，
+        视觉尺寸和排版一点不动（顶栏本来就挤，真加高会把头部顶得更厚）；
+     ② <select> 不能吃伪元素 —— 只能真给 min-height。
+   ⚠ 只在触屏（pointer:coarse）或窄屏生效，桌面鼠标端的紧凑观感保持不变。 */
+@media (pointer:coarse),(max-width:720px){
+  /* ① 伪元素撑命中区（不改变任何视觉尺寸） */
+  .nav-btn,.live-line,.cc-dot{position:relative}
+  .nav-btn::after,.live-line::after{
+    content:"";position:absolute;left:-2px;right:-2px;top:50%;height:44px;transform:translateY(-50%);
+  }
+  /* 圆点：竖向撑到 44px，横向各扩 4px 正好吃掉 9px 的间距，不压到隔壁 */
+  .cc-dot::after{content:"";position:absolute;left:-4px;right:-4px;top:50%;height:44px;transform:translateY(-50%)}
+
+  /* ② 表单控件：真加高 */
+  .pc-sel{min-height:44px;padding:6px 8px}
+  .rp-sel{min-height:44px}
+  .pl-scope-btn{min-height:44px;display:inline-flex;align-items:center}
+
+  /* ③ 本来就差一点的按键 */
+  .cc-nav{width:44px;height:44px}
+  .side-btn{min-height:44px}
+  .pl-row .pl-link,.pl-row .pl-fav,.pl-row .pl-add{width:44px;height:44px}
+
+  /* 进度条：横拖时别让页面跟着滚。滑条本身只有几 px 高，误伤面很小。 */
+  input[type=range].pl-range{touch-action:none}
+}
+
+/* ---- 拖拽面：横滑交给脚本，竖滑留给页面滚动 ----
+   .cc-stage（立绘轮播）和 .de-stage（设计元素轮盘）都靠 touchstart/touchmove 自己算位移。
+   没写 touch-action 时，浏览器会先判定这是一次页面滚动、然后把触摸「抢走」（触发 touchcancel
+   而不是 touchend），横滑就时灵时不灵。pan-y = 竖滑仍归浏览器、横滑归我们。
+   .ach-timebox 那边早就用了 touch-action:none（它两个方向都要自己处理），不用动。 */
+.cc-stage,.de-stage{touch-action:pan-y}

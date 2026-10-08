@@ -28,7 +28,7 @@
      字体极小，改同源后并入 _headers 长缓存，CSP 也不再需要放行 jsdelivr。 -->
 <link rel="preload" href="fonts/fusion-pixel-12px-proportional-sc-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="css/base.css?v=202610082316">
+<link rel="stylesheet" href="css/base.css?v=202610082354">
 </head>
 <body class="page-pl">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -1285,6 +1285,14 @@
       state.dragging = false;
       paintPlayer();
     });
+    /* 2026-10-08 补：state.dragging 原来只在 change 里清。触摸被浏览器中断、或按下去但值没变，
+       change 不触发 → dragging 永远 true，而它门控着 timeupdate 里的 paintPlayer()，
+       结果进度条再也不跟着播放走。pointerup / pointercancel 兜底清一次。 */
+    function endSeekDrag(){
+      if(state.dragging){ state.dragging = false; paintPlayer(); }
+    }
+    seek.addEventListener("pointerup", endSeekDrag);
+    seek.addEventListener("pointercancel", endSeekDrag);
   }
   var vol = $("pbVol");
   if(vol){
