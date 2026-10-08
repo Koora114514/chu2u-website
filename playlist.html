@@ -175,7 +175,7 @@
 <div class="pl-drawer-backdrop" id="plAdvBackdrop" hidden></div>
 <div class="pl-drawer" id="plAdvPanel" role="dialog" aria-modal="true" aria-labelledby="plAdvTitle" hidden>
   <div class="pl-drawer-head">
-    <h3 id="plAdvTitle">⭐ 高级筛选</h3>
+    <h2 id="plAdvTitle">⭐ 高级筛选</h2>
     <button class="pl-drawer-close" id="plAdvClose" type="button" title="关闭筛选" aria-label="关闭筛选">×</button>
   </div>
   <div class="pl-drawer-body">
@@ -269,9 +269,9 @@
 </div>
 
 <!-- ============ 演唱详情弹窗 ============ -->
-<div class="pl-modal" id="plDetailModal" hidden>
+<div class="pl-modal" id="plDetailModal" role="dialog" aria-modal="true" aria-labelledby="plDetailTitle" hidden>
   <div class="pl-modal-card">
-    <h3 id="plDetailTitle">演唱详情</h3>
+    <h2 id="plDetailTitle">演唱详情</h2>
     <div class="pl-meta" id="plDetailSub"></div>
     <div id="plDetailBody"></div>
     <div class="pl-modal-acts"><button class="px-btn" id="plDetailOk" type="button">知道了</button></div>
@@ -279,9 +279,9 @@
 </div>
 
 <!-- ============ 导出歌单弹窗（给网易云 / QQ 音乐导入用） ============ -->
-<div class="pl-modal" id="plExportDlg" hidden>
+<div class="pl-modal" id="plExportDlg" role="dialog" aria-modal="true" aria-labelledby="plExportTitle" hidden>
   <div class="pl-modal-card">
-    <h3>⬇ 导出歌单</h3>
+    <h2 id="plExportTitle">⬇ 导出歌单</h2>
     <div class="pl-adv-sec">
       <div class="pl-adv-k">范围</div>
       <div class="pl-adv-row" id="expScope">
@@ -311,9 +311,9 @@
 </div>
 
 <!-- ============ 新建 / 重命名歌单弹窗 ============ -->
-<div class="pl-modal" id="plListDlg" hidden>
+<div class="pl-modal" id="plListDlg" role="dialog" aria-modal="true" aria-labelledby="plListDlgTitle" hidden>
   <div class="pl-modal-card">
-    <h3 id="plListDlgTitle">新建歌单</h3>
+    <h2 id="plListDlgTitle">新建歌单</h2>
     <label class="pl-search" style="margin:6px 0">
       <input id="plListDlgInput" type="text" maxlength="20" placeholder="歌单名字…" aria-label="歌单名字">
     </label>
@@ -325,9 +325,9 @@
 </div>
 
 <!-- ============ 加入歌单选择弹窗 ============ -->
-<div class="pl-modal" id="plPickModal" hidden>
+<div class="pl-modal" id="plPickModal" role="dialog" aria-modal="true" aria-labelledby="plPickTitle" hidden>
   <div class="pl-modal-card">
-    <h3 id="plPickTitle">加入歌单</h3>
+    <h2 id="plPickTitle">加入歌单</h2>
     <div id="plPickBody"></div>
     <div class="pl-modal-acts">
       <button class="px-btn ghost" id="plPickCancel" type="button">取消</button>

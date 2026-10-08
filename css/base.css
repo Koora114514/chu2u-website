@@ -7,7 +7,10 @@
   --bg:#f4f6e0;
   --panel:#fbfcf2;
   --ink:#303030;
-  --ink-soft:#525859;
+  /* 2026-10-09 微调：#525859 压在页底渐变段 #c3c86c 上只有 4.07:1，差一点够不到 AA。
+     只压暗两档（val 35%→32%，色相 189 不动），最差情况就变成 4.53:1，
+     奶油面板上从 7.01 → 7.79:1。次级文字的观感几乎不变，层级也没被拉平。 */
+  --ink-soft:#4c5152;
   --olive:#d4da7b;
   --olive-deep:#8b9150;
   /* ☆ 2026-10-08 新增：橄榄深档作为「文字色」在浅底上只有 3.05:1，不到 WCAG AA 的 4.5:1
@@ -1382,7 +1385,7 @@ body.dark .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
   to{transform:translate(-50%,-50%) scale(1);opacity:1}
 }
 .pl-drawer-head{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:3px solid var(--line)}
-.pl-drawer-head h3{margin:0;font-size:16px;letter-spacing:2px;color:var(--ink)}
+.pl-drawer-head h2{margin:0;font-size:16px;letter-spacing:2px;color:var(--ink)}
 .pl-drawer-close{width:32px;height:32px;font-size:20px;line-height:1;cursor:pointer;background:var(--panel);color:var(--ink);border:2px solid var(--ink);box-shadow:2px 2px 0 rgba(48,48,48,.5)}
 .pl-drawer-close:hover{background:var(--olive)}
 /* 内容区：滚轮上下滑动预览，配本站同款像素细滚动条
@@ -1465,7 +1468,7 @@ body.dark .pl-clip.main{background:var(--olive-deep);color:#10102a}
 .pl-dialog{position:fixed;inset:0;z-index:8800;display:flex;align-items:center;justify-content:center;background:rgba(48,48,48,.35)}
 .pl-dialog[hidden]{display:none}
 .pl-dialog-card{background:var(--panel);border:3px solid var(--ink);box-shadow:8px 8px 0 rgba(48,48,48,.5);padding:18px;width:min(380px,90vw);display:flex;flex-direction:column;gap:12px}
-.pl-dialog-card h3{font-size:16px;letter-spacing:2px}
+.pl-dialog-card h2{font-size:16px;letter-spacing:2px}
 .pl-dialog-card input{font-family:inherit;font-size:14px;padding:9px 12px;border:2px solid var(--ink);background:var(--panel);outline:none}
 .pl-dialog-card input:focus{border-color:var(--olive-deep)}
 .pl-dialog-acts{display:flex;gap:10px;justify-content:flex-end}
@@ -2717,7 +2720,7 @@ input[type=range].pl-range::-moz-range-thumb{width:12px;height:16px;background:v
 .pl-modal[hidden]{display:none}
 .pl-modal-card{background:var(--panel);border:3px solid var(--ink);box-shadow:8px 8px 0 rgba(48,48,48,.6);
   padding:16px 18px;width:min(560px,92vw);max-height:86vh;overflow:auto}
-.pl-modal-card h3{margin:0 0 10px;font-size:18px}
+.pl-modal-card h2{margin:0 0 10px;font-size:18px}
 .pl-detail-table{width:100%;border-collapse:collapse;font-size:13px}
 .pl-detail-table th,.pl-detail-table td{border:1px solid var(--line);padding:5px 8px;text-align:left}
 .pl-detail-table th{background:var(--olive-pale);font-weight:700}
