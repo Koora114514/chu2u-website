@@ -10,6 +10,12 @@
   --ink-soft:#525859;
   --olive:#d4da7b;
   --olive-deep:#8b9150;
+  /* ☆ 2026-10-08 新增：橄榄深档作为「文字色」在浅底上只有 3.05:1，不到 WCAG AA 的 4.5:1
+     （首页实测 19 处超标：章节小标 ARCHIVE/QUEST、en-tag、nyan-title、ct-issue、cc-cap-name…）。
+     深档本身还兼任描边/图标/底色，那些角色观感是对的、不要动，所以文字单独拆一个更深的档：
+     #64664b 保持同一色相（hue 65）只压亮度，最浅的奶油面上 5.73:1、浅橄榄 chip 上 4.56:1，
+     页底最深的渐变段也有 3.33:1（仍在站点自定「≥3 可读」的线以上），肉眼仍是橄榄不是褐色。 */
+  --olive-ink:#64664b;
   --olive-pale:#eef0c8;
   --olive-mid:#e3e6a8;
   --sky:#b0c8e8;
@@ -257,10 +263,16 @@ body.dark .nav-egg .crack{stroke:#303030}
 
 /* ---------- Hero 首屏 ---------- */
 .hero{padding:56px 0 20px;position:relative;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center;max-width:1500px}
+/* ☆ 2026-10-08 修「书签栏压住 hero 主标题」：
+   原来这里的 max-width:1500px 盖掉了基础 .wrap 的 1060px —— 视口 < 1500px 时 wrap 撑满全宽，
+   内容左缘塌回 22px，正好钻进 165px 宽的书签栏底下（1440/1440×1100/1280/1151 实测标题被压 143px）。
+   左右两条浮动轨道各占 ≈191px，所以改成「居中 + 两侧各留 191px」的取值：min() 让它
+   在宽屏时仍是 1500px（1920 及以上外观完全不变），在中间宽度才自动收窄躲开轨道。
+   ≤1150px 时书签栏变底部横条、右侧 HUD 隐藏，两侧无轨道，恢复全宽（见文件末尾同一日期的媒体查询）。 */
+.hero .wrap{display:grid;grid-template-columns:1.08fr 1fr;gap:48px;align-items:center;max-width:min(1500px, calc(100% - 382px))}
 .hero-left{max-width:600px}
 .kicker{
-  display:inline-block;font-size:12px;letter-spacing:3px;color:var(--olive-deep);
+  display:inline-block;font-size:12px;letter-spacing:3px;color:var(--olive-ink);
   border:3px solid var(--olive-deep);background:var(--panel);
   box-shadow:4px 4px 0 rgba(48,48,48,.85);
   padding:6px 16px;margin-bottom:24px;
@@ -271,18 +283,18 @@ body.dark .nav-egg .crack{stroke:#303030}
   text-shadow:5px 5px 0 var(--olive);
 }
 .hero-left .sub{margin-top:20px;color:var(--ink-soft);font-size:14px;line-height:1.9;min-height:54px}
-.hero-left .sub .cursor{display:inline-block;animation:blink 1s steps(1) infinite;color:var(--olive-deep)}
+.hero-left .sub .cursor{display:inline-block;animation:blink 1s steps(1) infinite;color:var(--olive-ink)}
 .hero-left .meta{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
 .chip{
   font-size:12px;color:var(--ink-soft);background:var(--panel);
   border:3px solid var(--ink);box-shadow:3px 3px 0 rgba(48,48,48,.6);
   padding:5px 12px;
 }
-.chip b{color:var(--olive-deep)}
+.chip b{color:var(--olive-ink)}
 /* kicker 的英文翻译小字 */
 .kicker small{font-size:12px;color:var(--ink-soft);letter-spacing:1px;margin-left:10px}
 /* 打字机简介中的高亮词（羽啾chu2u）：加大两号+突出色 */
-.hero-left .sub .hl{font-size:18px;color:var(--olive-deep);border-bottom:2px solid var(--olive)}
+.hero-left .sub .hl{font-size:18px;color:var(--olive-ink);border-bottom:2px solid var(--olive)}
 /* 应援色 chip：悬停下沉并展开色卡 */
 .chip-swatch{display:inline-flex;align-items:center;gap:6px;cursor:default}
 .chip-swatch .swatch{width:0;height:12px;background:#d4da7b;border:2px solid var(--ink);transition:width .15s steps(3)}
@@ -293,7 +305,10 @@ body.dark .nav-egg .crack{stroke:#303030}
 .chip-tag b{color:var(--ink)}
 .chip-tag:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 rgba(48,48,48,.6)}
 .chip-tag:active{transform:translate(3px,3px);box-shadow:none}
-body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
+/* 2026-10-08 改：深色档原来配 #f2f4e2 亮字，压在橄榄底（#8f9444）上只有 2.90:1。
+   浅色档这枚 chip 用的是 var(--ink) 深墨字（见上一条），深色档照同一套逻辑改深墨字：5.74:1。
+   和 .px-btn 实心键是同一个毛病 —— 深色模式下橄榄底本来偏暗，亮字必翻车。 */
+body.dark .chip-tag,body.dark .chip-tag b{color:#10102a}
 .hero-left .cta{margin-top:26px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 
 /* ---------- 头像轮播（右侧） ---------- */
@@ -319,7 +334,7 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .cc-slot.is-center img{animation:bob 1.2s steps(2) infinite}
 /* 立绘源图升到 2× 后，三槽都是非整数缩小，pixelated 会发碎 → 全用 auto 平滑（2026-09-16 两侧 / 2026-09-18 中间） */
 .cc-slot .avatar-q{
-  font-size:260px;line-height:1;color:var(--olive-deep);
+  font-size:260px;line-height:1;color:var(--olive-ink);
   text-shadow:8px 8px 0 var(--olive);
   animation:bob 1.2s steps(2) infinite;
 }
@@ -339,7 +354,7 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
   background:var(--panel);border:3px solid var(--ink);box-shadow:3px 3px 0 rgba(48,48,48,.85);
   padding:5px 16px;
 }
-.cc-cap-name{color:var(--olive-deep)}
+.cc-cap-name{color:var(--olive-ink)}
 .cc-cap-dot{opacity:.55}
 .cc-cap-sub{color:var(--ink-soft)}
 .cc-dots{margin-top:12px;display:flex;gap:9px}
@@ -358,15 +373,15 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 /* ---------- 像素分隔线 ---------- */
 .pixel-divider{display:flex;align-items:center;justify-content:center;gap:10px;margin:30px 0 6px}
 .pixel-divider::before,.pixel-divider::after{content:"";height:3px;width:120px;background:var(--line)}
-.pixel-divider span{font-size:12px;color:var(--olive-deep);animation:blink 2.4s steps(1) infinite}
+.pixel-divider span{font-size:12px;color:var(--olive-ink);animation:blink 2.4s steps(1) infinite}
 
 /* ---------- 板块标题 ---------- */
 .sec-title{display:flex;align-items:baseline;justify-content:space-between;margin:48px 0 18px;gap:12px;flex-wrap:wrap;scroll-margin-top:74px}
 .sec-title h2{font-size:24px;letter-spacing:2px;display:flex;align-items:baseline;gap:10px}
-.sec-title h2::before{content:"◆";font-size:12px;color:var(--olive-deep);animation:blink 2.4s steps(1) infinite}
-.sec-title h2 .no{font-size:12px;color:var(--olive-deep);letter-spacing:3px}
+.sec-title h2::before{content:"◆";font-size:12px;color:var(--olive-ink);animation:blink 2.4s steps(1) infinite}
+.sec-title h2 .no{font-size:12px;color:var(--olive-ink);letter-spacing:3px}
 .sec-title .more{font-size:14px;color:var(--ink-soft);white-space:nowrap}
-.sec-title .more:hover{color:var(--olive-deep)}
+.sec-title .more:hover{color:var(--olive-ink)}
 
 /* ---------- ① 关于我：角色档案卡 ---------- */
 .about{
@@ -391,18 +406,18 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .about .photo .avatar-big{cursor:zoom-in}
 .about .photo .badge{
   position:absolute;left:14px;top:14px;z-index:2;background:var(--panel);
-  border:2px solid var(--ink);padding:3px 10px;color:var(--olive-deep);letter-spacing:2px;
+  border:2px solid var(--ink);padding:3px 10px;color:var(--olive-ink);letter-spacing:2px;
 }
 .about .info{padding:30px 30px;display:flex;flex-direction:column;justify-content:center}
 .about .info .name{font-size:24px;letter-spacing:2px}
-.about .info .name em{font-style:normal;font-size:14px;color:var(--olive-deep);margin-left:10px;letter-spacing:2px}
-.about .info .species{font-size:14px;color:var(--olive-deep);margin-top:2px;letter-spacing:2px}
+.about .info .name em{font-style:normal;font-size:14px;color:var(--olive-ink);margin-left:10px;letter-spacing:2px}
+.about .info .species{font-size:14px;color:var(--olive-ink);margin-top:2px;letter-spacing:2px}
 .about .info .bio{margin-top:14px;color:var(--ink-soft)}
 /* 档案资料表（两列；生日超链接+山田啾小图） */
 .p-list{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:5px 14px;font-size:14px}
-.p-list dt{color:var(--olive-deep);letter-spacing:1px}
+.p-list dt{color:var(--olive-ink);letter-spacing:1px}
 .p-list dd{color:var(--ink-soft);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.p-list dd a{color:var(--olive-deep);border-bottom:2px solid var(--olive);text-decoration:none}
+.p-list dd a{color:var(--olive-ink);border-bottom:2px solid var(--olive);text-decoration:none}
 .p-list dd a:hover{background:var(--olive-pale)}
 .p-list .bday-img{height:44px;width:auto;image-rendering:pixelated}
 .chip-mini{display:inline-flex;align-items:center;font-size:14px;background:var(--olive-pale);color:var(--ink);border:2px solid var(--ink);padding:1px 8px;white-space:nowrap;flex-shrink:0}
@@ -420,18 +435,18 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .scroll-box{scrollbar-width:thin;scrollbar-color:var(--olive) var(--panel)}
 .scroll-box .sb-group{margin-bottom:10px}
 .scroll-box .sb-group:last-child{margin-bottom:0}
-.scroll-box .sb-h{display:inline-block;color:var(--olive-deep);border-bottom:2px solid var(--olive);margin-bottom:4px;letter-spacing:1px}
+.scroll-box .sb-h{display:inline-block;color:var(--olive-ink);border-bottom:2px solid var(--olive);margin-bottom:4px;letter-spacing:1px}
 .scroll-box p{line-height:1.8}
-.scroll-box p b{color:var(--olive-deep);font-weight:normal}
+.scroll-box p b{color:var(--olive-ink);font-weight:normal}
 .tags{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
 .tags span{
-  font-size:14px;background:var(--olive-pale);color:var(--olive-deep);
+  font-size:14px;background:var(--olive-pale);color:var(--olive-ink);
   border:2px solid var(--ink);padding:3px 12px;
 }
 .tags span:hover{background:var(--olive)}
 
 /* 成就徽章 ×3 */
-.design-strip-head{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-deep);letter-spacing:3px}
+.design-strip-head{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-ink);letter-spacing:3px}
 .design-strip-head::after{content:"";flex:1;height:3px;background:var(--line)}
 
 /* ---------- 设计元素拍立得轮盘（DESIGN ELEMENTS，5 项轮切） ---------- */
@@ -457,7 +472,7 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .de-pic img.is-locked{filter:brightness(.32) contrast(1.05)}
 .de-q{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:95px;line-height:1;color:#fbfcf2;text-shadow:5px 5px 0 rgba(48,48,48,.85);animation:blink 2.6s steps(1) infinite}
 .de-body{width:100%;padding:7px 8px 9px;border-top:2px dashed #d5d9ad;margin-top:7px;overflow:hidden}
-.de-title{color:#8b9150;letter-spacing:1px;line-height:1.6}
+.de-title{color:var(--olive-ink);letter-spacing:1px;line-height:1.6}
 .de-text{color:#525859;line-height:1.6;text-indent:2em}
 /* 三档尺寸：拍立得统一 1:1 正方形卡片（中 386 / 次 206 / 小 146），照片区 4:3。
    2026-09-29 用户报「高清图变缩略图」→ 照片区整体放大 1.25 倍，
@@ -557,7 +572,7 @@ body.dark .chip-tag,body.dark .chip-tag b{color:#f2f4e2}
 .side-top{display:flex;flex-direction:column;gap:14px}
 .hud{padding:14px 16px;font-size:12px}
 .hud .row{display:flex;justify-content:space-between;padding:2px 0}
-.hud .row b{color:var(--olive-deep);font-size:12px;letter-spacing:2px}
+.hud .row b{color:var(--olive-ink);font-size:12px;letter-spacing:2px}
 .hi-wrap{display:flex;align-items:center;gap:6px}
 .hi-reset{width:22px;height:22px;font-size:12px;line-height:1;cursor:pointer;background:var(--panel);border:2px solid var(--ink);padding:0;color:var(--ink-soft)}
 .hi-reset:active{background:var(--olive);color:var(--ink)}
@@ -612,7 +627,7 @@ body.dark .vbtn[data-act="hard"]:active{background:#a6ac58}
 body.dark .wk-date{background:var(--olive-deep);color:#10102a}
 .wk-list{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:8px}
 .wk-list li{color:var(--ink-soft);display:flex;gap:8px;align-items:baseline}
-.wk-list li::before{content:"▸";color:var(--olive-deep)}
+.wk-list li::before{content:"▸";color:var(--olive-ink)}
 /* 周表照片（无画框，只展示图片；常驻向右抬高 5° 摆放，悬停回正并放大，单击看大图） */
 .wk-area{max-width:600px;margin:28px auto 0;display:flex;flex-direction:column;align-items:stretch;gap:20px}
 .wk-photo{
@@ -634,7 +649,7 @@ body.dark .wk-date{background:var(--olive-deep);color:#10102a}
 .wk-photo:hover img{transform:scale(1.07)}
 .wk-q{font-size:84px;color:var(--ink);animation:blink 2.6s steps(1) infinite;padding:34px 0}
 .wk-foot{display:flex;justify-content:flex-end;align-items:center;gap:12px}
-.wk-open{display:inline-block;font-size:14px;color:var(--olive-deep);border:2px solid var(--olive-deep);padding:6px 14px;text-decoration:none}
+.wk-open{display:inline-block;font-size:14px;color:var(--olive-ink);border:2px solid var(--olive-deep);padding:6px 14px;text-decoration:none}
 .wk-open:hover{background:var(--olive);color:var(--ink)}
 /* 周表大图浮层（复用 .de-modal 骨架）：整屏看图——JS 把原图再放大 1.2 倍（不超过屏幕），无边框无滚动条 */
 #weekModal{padding:0}
@@ -656,7 +671,7 @@ body.dark .wk-date{background:var(--olive-deep);color:#10102a}
 /* 展柜容器：右上角放展开/收起按键（单个像素图标、无文字）；滑块视图与全部投稿网格互切 */
 .works-box{position:relative;margin-top:16px}
 .works-toggle{position:absolute;right:2px;top:-38px;padding:4px;border:none;background:none;color:var(--ink-soft);cursor:pointer;line-height:0;z-index:2}
-.works-toggle:hover{color:var(--olive-deep)}
+.works-toggle:hover{color:var(--olive-ink)}
 .works-toggle:active{transform:translate(1px,1px)}
 .works-toggle:focus-visible{outline:2px dashed var(--ink);outline-offset:2px}
 /* 滑块视图：左右像素箭头 + 可视窗口；轨道由 JS 平移，产生「卡牌划出」的切换效果 */
@@ -665,7 +680,7 @@ body.dark .wk-date{background:var(--olive-deep);color:#10102a}
 .works-view{flex:1;overflow:hidden;padding:12px 8px 16px}
 .works-track{display:flex;gap:18px;transition:transform .32s cubic-bezier(.22,1,.36,1);will-change:transform}
 .works-arrow{flex:0 0 auto;padding:6px;border:none;background:none;color:var(--ink-soft);cursor:pointer;line-height:0}
-.works-arrow:hover{color:var(--olive-deep)}
+.works-arrow:hover{color:var(--olive-ink)}
 .works-arrow:active{transform:translate(1px,1px)}
 .works-arrow:focus-visible{outline:2px dashed var(--ink);outline-offset:2px}
 .works-arrow[disabled]{opacity:.3;cursor:default;color:var(--ink-soft)}
@@ -693,7 +708,7 @@ body.dark .works-new .new-txt{color:var(--ink);text-shadow:-1px -1px 0 #f4f4f4,1
 .work-card .cover{height:150px;display:grid;place-items:center;font-size:56px;background:var(--olive-pale);border-bottom:3px solid var(--ink)}
 .work-card .cover img{width:100%;height:100%;object-fit:cover;image-rendering:auto}
 .work-card .body{padding:14px 16px 18px}
-.work-card .cat{font-size:14px;color:var(--olive-deep);letter-spacing:2px}
+.work-card .cat{font-size:14px;color:var(--olive-ink);letter-spacing:2px}
 .work-card .t{font-size:16px;font-weight:700;letter-spacing:1px;margin:6px 0 6px;line-height:1.5}
 .work-card .d{font-size:14px;color:var(--ink-soft);line-height:1.8}
 /* 空白卡：封面 = 深橄榄底 + 闪烁像素问号，标题「魔法正在生成中~」，不可点击 */
@@ -719,12 +734,12 @@ body.dark .works-new .new-txt{color:var(--ink);text-shadow:-1px -1px 0 #f4f4f4,1
 }
 /* 成就子栏目：HUD 时间轴（单根刻度线 + 中央游标）+ 三卡舞台（中间大、两侧 60% 透明度）；拖动无极循环、松手吸附最近一张卡 */
 /* 成就子标题样式与 DESIGN ELEMENTS · 设计元素 相同：橄榄色小标题 + 右侧横线 */
-.ach-title{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-deep);letter-spacing:3px}
+.ach-title{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-ink);letter-spacing:3px}
 .ach-title::after{content:"";flex:1;height:3px;background:var(--line)}
 .ach-timebox{margin-top:10px;position:relative;outline:none;touch-action:none;user-select:none;-webkit-user-select:none}
 /* 复位按钮：像素重新加载图标，无画框无背景，点击回到最早的成就 */
 .ach-reset{position:absolute;right:0;top:0;padding:4px;border:none;background:none;color:var(--ink-soft);cursor:pointer;line-height:0;z-index:2}
-.ach-reset:hover{color:var(--olive-deep)}
+.ach-reset:hover{color:var(--olive-ink)}
 .ach-reset:active{transform:translate(1px,1px)}
 .ach-reset:focus-visible{outline:2px dashed var(--ink);outline-offset:2px}
 /* HUD 时间轴：两端渐隐 + 一根横线 + 中央 ▼ 游标；刻度带由 JS 铺开（成就列表重复 21 份实现无限循环） */
@@ -738,7 +753,7 @@ body.dark .works-new .new-txt{color:var(--ink);text-shadow:-1px -1px 0 #f4f4f4,1
 .ach-tick .lbl{font-size:14px;color:var(--ink-soft);letter-spacing:1px}
 /* 最早时间点 = 起点：得意啾站在线上当起始标记（96px 高清图按 48px 显示，Fant 平滑缩放无锯齿） */
 .ach-mascot{display:block;width:48px;height:48px;image-rendering:auto;filter:drop-shadow(2px 2px 0 rgba(48,48,48,.4))}
-.ach-axis-cursor{position:absolute;left:50%;top:30px;transform:translateX(-50%);font-size:22px;line-height:1;color:var(--olive-deep);text-shadow:3px 3px 0 rgba(48,48,48,.45);pointer-events:none}
+.ach-axis-cursor{position:absolute;left:50%;top:30px;transform:translateX(-50%);font-size:22px;line-height:1;color:var(--olive-ink);text-shadow:3px 3px 0 rgba(48,48,48,.45);pointer-events:none}
 /* 三卡舞台：中间大、两侧缩小 88% + 60% 透明度；点两侧卡片翻到那张 */
 .ach-stage{display:flex;align-items:flex-start;justify-content:center;gap:18px;padding:18px 0 8px;overflow:hidden}
 .ach-slot{width:230px;flex:0 0 230px;transition:opacity .2s,transform .2s}
@@ -781,7 +796,7 @@ body.dark .works-new .new-txt{color:var(--ink);text-shadow:-1px -1px 0 #f4f4f4,1
   box-shadow:4px 4px 0 rgba(48,48,48,.35);
 }
 body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
-.issue .cover .ct-issue{font-size:14px;letter-spacing:4px;color:var(--olive-deep)}
+.issue .cover .ct-issue{font-size:14px;letter-spacing:4px;color:var(--olive-ink)}
 .issue .cover h3{font-size:24px;letter-spacing:2px;margin-top:8px}
 .issue .cover p{font-size:14px;color:var(--ink-soft);margin-top:6px}
 /* 🎨 素材替换：期号/标题/日期/总结/条目 在 data/records.js 维护 */
@@ -789,7 +804,7 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 /* 本期总结段：14px 正文，右侧给「记录·入库」印章让位 */
 .rec-lead{font-size:14px;line-height:1.9;color:var(--ink-soft);padding-right:140px}
 .issue .body .stamp{
-  position:absolute;top:14px;right:20px;color:var(--olive-deep);
+  position:absolute;top:14px;right:20px;color:var(--olive-ink);
   border:3px solid var(--olive-deep);padding:4px 12px;font-size:14px;letter-spacing:3px;
   transform:rotate(-3deg);box-shadow:3px 3px 0 rgba(48,48,48,.3);
 }
@@ -806,11 +821,11 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 /* 里程碑卡：无图，大数字 + 单位小字（ ms-num） */
 .item .ms-num{
   grid-column:1;grid-row:1/5;width:128px;height:72px;display:flex;align-items:center;justify-content:center;
-  background:var(--olive-pale);border:2px solid var(--ink);color:var(--olive-deep);
+  background:var(--olive-pale);border:2px solid var(--ink);color:var(--olive-ink);
 }
 .item .ms-num em{font-style:normal;font-size:30px;font-weight:700;letter-spacing:1px}
 .item .ms-num small{font-size:13px;margin-left:6px;letter-spacing:1px}
-.item .cat{grid-column:2;grid-row:1;font-size:14px;color:var(--olive-deep);letter-spacing:2px}
+.item .cat{grid-column:2;grid-row:1;font-size:14px;color:var(--olive-ink);letter-spacing:2px}
 .item .cat::before{content:"★ ";color:var(--olive)}
 .item .t{grid-column:2;grid-row:2;font-size:16px;letter-spacing:1px;margin:2px 0 0}
 .item .d{grid-column:2;grid-row:3;color:var(--ink-soft);line-height:1.7}
@@ -822,14 +837,18 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 /* 猫猫宇宙论特辑：话题优秀二创子栏目
    收起态 = 最新 6 条混排一行 6 卡（无筛选）；展开态 = 分类筛选 + 只露 3 行、多出的滚轮上下浏览 */
 .nyan-box{position:relative}
-.nyan-head,.sub-head{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-deep);letter-spacing:3px}
+.nyan-head,.sub-head{margin-top:34px;display:flex;align-items:center;gap:12px;font-size:16px;color:var(--olive-ink);letter-spacing:3px}
 .nyan-head .nyan-line,.sub-head .sub-line{flex:1;height:3px;background:var(--line)}
 .nyan-head .works-toggle,.sub-head .works-toggle{position:static;flex:0 0 auto}
 .nyan-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:16px}
 .nyan-grid[hidden]{display:none}
 .nyan-filter{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
 .nyan-filter .px-btn{background:var(--panel)}
-.nyan-filter .px-btn.on{background:var(--olive-deep);color:var(--panel);transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(48,48,48,.85)}
+/* 2026-10-08 改：这是全站唯一一处「选中态」没照 DESIGN.md 的规矩来 ——
+   文档写的是「筛选 chip 选中 = 橄榄实底 + 墨字」，别的筛选键（.px-btn.on / .pl-chip.on / .pbtn.on）
+   也都是 olive + ink。只有这里用了橄榄深档底 + 面板浅字，实测 3.2:1，连 AA 的一半都不到。
+   改回统一写法后 = 8.9:1，选中态外观也和其它栏目一致了。 */
+.nyan-filter .px-btn.on{background:var(--olive);color:var(--ink);transform:translate(3px,3px);box-shadow:2px 2px 0 rgba(48,48,48,.85)}
 /* 展开区：滚轮容器只露 3 行卡高（JS 按实际卡高计算），配像素风细滚动条 */
 .nyan-scroll{overflow-y:auto;padding-right:6px;margin-top:12px}
 .nyan-scroll .nyan-grid{margin-top:0}
@@ -859,7 +878,7 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 /* 文字区字号整体调小、排版收紧：分类 11px、标题 12px、作者+日期再小一号 11px；
    height 固定 130px（比原来多两行），上下各留半行空白、内容不顶边，
    略长放不下时区域内滚轮上下滚动查阅 */
-.nyan-card .cat{font-size:11px;color:var(--olive-deep);letter-spacing:2px;line-height:1.4}
+.nyan-card .cat{font-size:11px;color:var(--olive-ink);letter-spacing:2px;line-height:1.4}
 .nyan-card .cat::before{content:"★ ";color:var(--olive)}
 .nyan-card .t{font-size:12px;font-weight:700;line-height:1.45;margin:3px 0 2px}
 .nyan-card .d{font-size:11px;color:var(--ink-soft);letter-spacing:1px;line-height:1.45}
@@ -884,12 +903,12 @@ body.dark .issue .cover .cover-text{background:rgba(29,31,26,.84)}
 .arc .idx{
   flex:0 0 auto;min-width:44px;height:44px;padding:0 10px;display:grid;place-items:center;
   font-size:16px;font-weight:700;
-  background:var(--olive-pale);border:2px solid var(--ink);color:var(--olive-deep);
+  background:var(--olive-pale);border:2px solid var(--ink);color:var(--olive-ink);
 }
 .arc:hover .idx{background:var(--olive);color:var(--ink)}
 .arc h3{font-size:16px;letter-spacing:1px}
 .arc p{font-size:14px;color:var(--ink-soft);margin-top:2px}
-.arc .arrow{margin-left:auto;color:var(--olive-deep);font-size:20px;transition:transform .15s}
+.arc .arrow{margin-left:auto;color:var(--olive-ink);font-size:20px;transition:transform .15s}
 .arc.open .arrow{transform:rotate(90deg)}
 .arc-detail{
   padding:20px 22px 24px;background:var(--panel);
@@ -1154,7 +1173,7 @@ footer .credit{margin-top:16px;font-size:14px;color:#777E70}
 body.dark{
   background:#07071c fixed;
   --bg:#07071c;--panel:#14142e;--ink:#b4b4c0;--ink-soft:#878795;
-  --olive:#8f9444;--olive-deep:#bfc56f;--olive-pale:#26264a;--olive-mid:#1f1f3e;
+  --olive:#8f9444;--olive-deep:#bfc56f;--olive-ink:#bfc56f;--olive-pale:#26264a;--olive-mid:#1f1f3e;
   --line:#3f3f56;--sky:#5f7f9e;--dark-bg:#04041a;--dark-text:#c6c6d2;
 }
 body.dark .contour-bg{display:none}
@@ -1178,7 +1197,13 @@ body.dark .spd-btn{background:#2c2c58}
 body.dark .hero-left h1{text-shadow:5px 5px 0 #05051a}
 body.dark #toast{background:#b4b4c0;color:#14142e}
 /* 深色模式：按钮文字在深黄绿底上保持明亮；启动画面文字保持亮黄绿 */
+/* 深色模式按键字色（2026-10-08）
+   原来一刀切 #f2f4e2：面板底的 ghost 键很好，但实心橄榄底的中 CTA 只有 2.90:1。
+   拆开处理——实心键（含 .on/.sky）改深墨字，面板底的 ghost 键维持原亮字：
+     实心 olive #8f9444 + #10102a = 5.74:1 ； ghost panel #14142e + #f2f4e2 = 16.1:1。
+   ⚠ 必须排除 .ghost，否则面板底按键会变成「深字压深底」＝ 1.04:1，几乎隐形。 */
 body.dark .px-btn{color:#f2f4e2}
+body.dark .px-btn:not(.ghost){color:#10102a}
 body.dark #splash .splash-sub,
 body.dark #splash .splash-status{color:#d4da7b}
 body.dark #splash .splash-bar .fill{background:#d4da7b}
@@ -1267,7 +1292,7 @@ body.dark .px-btn.on{background:var(--olive-deep);color:#10102a}
 @media(max-width:760px){.pl-nosrc-hint{margin-left:0;flex-basis:100%}}
 .pl-sort-wrap{position:relative}
 .pl-chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:8px}
-.pl-chip-k{font-size:14px;color:var(--olive-deep);letter-spacing:2px;margin-right:2px}
+.pl-chip-k{font-size:14px;color:var(--olive-ink);letter-spacing:2px;margin-right:2px}
 .pl-chip{
   font-family:inherit;font-size:14px;color:var(--ink-soft);
   background:var(--panel);border:2px solid var(--ink);
@@ -1294,7 +1319,7 @@ body.dark .pl-chip.on{background:var(--olive-deep);color:#10102a}
 .pl-row .pl-name{font-size:16px;color:var(--ink);letter-spacing:1px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .pl-row .pl-singer{font-size:13px;color:var(--ink-soft);letter-spacing:0}
 .pl-row .pl-tags{display:flex;gap:6px;margin-top:5px;flex-wrap:wrap}
-.pl-row .pl-tag{font-size:12px;color:var(--olive-deep);background:var(--olive-pale);border:1px solid var(--ink);padding:0 6px;letter-spacing:1px}
+.pl-row .pl-tag{font-size:12px;color:var(--olive-ink);background:var(--olive-pale);border:1px solid var(--ink);padding:0 6px;letter-spacing:1px}
 .pl-row .pl-tag.pl-lang{background:var(--panel);color:var(--ink-soft)}
 /* 复制歌曲信息：带下划线的文字按钮，放在播放次数前面；
    字号 12px 比次数（14px）小一号；给次数预留 5 位数宽度（单曲循环到 ×10000 也不挤跑布局） */
@@ -1306,7 +1331,7 @@ body.dark .pl-chip.on{background:var(--olive-deep);color:#10102a}
 .pl-row .pl-copy:hover{color:var(--ink);background:var(--olive-pale)}
 /* 次数位固定宽度：按「×99999」五个数字算（4.4em），
    这样无论有没有播放记录、次数多少位，「复制歌曲信息」和后面的按钮都不会左右移动 */
-.pl-row .pl-count2{font-size:14px;color:var(--olive-deep);flex:0 0 auto;letter-spacing:1px;min-width:4.4em;text-align:right;white-space:nowrap}
+.pl-row .pl-count2{font-size:14px;color:var(--olive-ink);flex:0 0 auto;letter-spacing:1px;min-width:4.4em;text-align:right;white-space:nowrap}
 .pl-row .pl-link{flex:0 0 auto;width:32px;height:32px;display:grid;place-items:center;font-size:14px;background:var(--panel);border:2px solid var(--ink);box-shadow:2px 2px 0 rgba(48,48,48,.5)}
 .pl-row .pl-link:hover{background:var(--olive)}
 .pl-row .pl-dur{font-size:14px;color:var(--ink-soft);flex:0 0 auto}
@@ -1314,7 +1339,7 @@ body.dark .pl-chip.on{background:var(--olive-deep);color:#10102a}
 .pl-fav:hover,.pl-add:hover{background:var(--olive-pale)}
 .pl-fav.on{background:var(--olive)}
 .pl-empty{padding:34px 16px;text-align:center;font-size:14px;color:var(--ink-soft);letter-spacing:2px}
-.pl-day{display:flex;align-items:center;gap:10px;margin:16px 0 8px;font-size:14px;color:var(--olive-deep);letter-spacing:2px}
+.pl-day{display:flex;align-items:center;gap:10px;margin:16px 0 8px;font-size:14px;color:var(--olive-ink);letter-spacing:2px}
 .pl-day::after{content:"";flex:1;height:3px;background:var(--line)}
 .pl-day:first-child{margin-top:0}
 /* ---------- 歌单页新增：搜索范围 / 高级筛选面板 / 已生效条 / 歌切（2026-09-13  改造） ---------- */
@@ -1325,7 +1350,7 @@ body.dark .pl-chip.on{background:var(--olive-deep);color:#10102a}
 .pl-scope-btn.on{background:var(--olive);color:var(--ink)}
 body.dark .pl-scope-btn.on{background:var(--olive-deep);color:#10102a}
 .pl-adv-sec{display:flex;flex-direction:column;gap:6px}
-.pl-adv-k{font-size:14px;color:var(--olive-deep);letter-spacing:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.pl-adv-k{font-size:14px;color:var(--olive-ink);letter-spacing:2px;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .pl-adv-note{font-size:12px;color:var(--ink-soft);letter-spacing:0}
 .pl-adv-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 /* ⭐ 高级筛选抽屉：二级交互窗口（带遮罩，点按钮才弹出）
@@ -1375,7 +1400,7 @@ body.pl-drawer-open{overflow:hidden}
 .pl-mini:hover{background:var(--olive)}
 /* 「已生效」胶囊栏：每颗胶囊点一下就移除该条件（每个条件可单独移除） */
 .pl-active{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:10px;padding-top:8px;border-top:2px dashed var(--line);font-size:12px}
-.pl-active-k{color:var(--olive-deep);letter-spacing:1px}
+.pl-active-k{color:var(--olive-ink);letter-spacing:1px}
 .pl-active-chip{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:12px;cursor:pointer;background:var(--olive-pale);border:1px solid var(--ink);padding:2px 8px;color:var(--ink);letter-spacing:0}
 .pl-active-chip:hover{background:var(--olive)}
 .pl-chip-x{font-size:13px;line-height:1;color:var(--ink-soft)}
@@ -1402,7 +1427,7 @@ body.dark .pl-clip.main{background:var(--olive-deep);color:#10102a}
 .pl-pop .px-btn{font-size:14px;padding:8px 12px;text-align:center;white-space:nowrap}
 #plSortMenu{left:0;top:calc(100% + 8px)}
 .pl-timer-wrap{position:relative;display:flex;align-items:center;gap:6px}
-.pl-count{font-size:14px;color:var(--olive-deep);min-width:44px;white-space:nowrap}
+.pl-count{font-size:14px;color:var(--olive-ink);min-width:44px;white-space:nowrap}
 .pl-timer-menu{right:0;bottom:calc(100% + 10px)}
 /* 播放列表（队列）面板 */
 .pl-queue{
@@ -1935,7 +1960,7 @@ body.dark .hud-link.is-active{color:#10102a;background-color:var(--olive-deep)}
 
 /* 子栏目标题的英文小标（2026-09-13 用户定：页面加、HUD 里不加）
    样式跟主标题的 ARCHIVE/QUEST 那套一致（12px 橄榄色 字距 3px） */
-.en-tag{font-size:12px;color:var(--olive-deep);letter-spacing:3px;white-space:nowrap}
+.en-tag{font-size:12px;color:var(--olive-ink);letter-spacing:3px;white-space:nowrap}
 
 /* HUD 间距/透明度/悬停效果（2026-09-13 用户定）
    · 间距继续拉大
@@ -2062,7 +2087,7 @@ body.dark .kb-chip.on b{color:#10102a}
 /* 来源与许可说明卡 */
 .kb-note{padding:20px 24px}
 .kb-note p{font-size:14px;line-height:1.9;color:var(--ink-soft);margin:6px 0}
-.kb-note a{color:var(--olive-deep);text-decoration:underline;text-underline-offset:2px}
+.kb-note a{color:var(--olive-ink);text-decoration:underline;text-underline-offset:2px}
 .kb-note a:hover{background:var(--olive-pale)}
 
 /* ============================================================
@@ -2278,7 +2303,7 @@ body.dark .dn-prof{box-shadow:0 6px 18px rgba(0,0,0,.55)}
 .dn-prof-sign{font-size:13px;color:var(--ink-soft);line-height:1.7}
 .dn-prof-stats{font-size:13px;margin-top:4px;color:var(--ink-soft);display:flex;gap:14px;flex-wrap:wrap}
 .dn-prof-stats b{color:var(--ink);font-weight:700}
-.dn-prof-link{color:var(--olive-deep);letter-spacing:1px}
+.dn-prof-link{color:var(--olive-ink);letter-spacing:1px}
 /* 日期筛选 + 翻页工具行（2026-10-05 用户定：日期键倒角、#8b9150 填充、无描边、加投影；
    翻页键对着动态气泡那一列居中、不带卡片底板 */
 .dn-tools{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;
@@ -2299,7 +2324,7 @@ body.dark .dn-date-box{background:var(--olive-deep);color:#10102a}
 .dn-pager-bot{padding:14px 0 4px;margin-left:60px}
 .dn-pg-btn{font-family:inherit;font-size:22px;line-height:1;width:34px;height:34px;
   padding:0;cursor:pointer;background:none;border:none;border-radius:999px;
-  color:var(--olive-deep)}
+  color:var(--olive-ink)}
 .dn-pg-btn:hover:not(:disabled){background:rgba(139,145,80,.18);color:var(--ink)}
 .dn-pg-btn:disabled{opacity:.3;cursor:not-allowed}
 .dn-pg-txt{font-size:13px;color:var(--ink-soft);letter-spacing:1px;
@@ -2328,7 +2353,7 @@ body.dark .dn-bubble{box-shadow:0 4px 14px rgba(0,0,0,.5)}
 .dn-clamp.is-open{max-height:none}
 .dn-more{display:block;margin:0;padding:0;background:none;border:none;cursor:pointer;
   font-family:inherit;font-size:13px;line-height:2;letter-spacing:1px;
-  color:var(--olive-deep);text-decoration:underline;text-underline-offset:3px}
+  color:var(--olive-ink);text-decoration:underline;text-underline-offset:3px}
 .dn-more:hover{color:var(--ink)}
 /* 图片网格（单图左对齐大图；多图 3 列方格） */
 .dn-grid{display:grid;gap:8px;margin-top:12px}
@@ -2363,11 +2388,11 @@ body.dark .dn-bubble{box-shadow:0 4px 14px rgba(0,0,0,.5)}
 .dn-av-cover{flex:0 0 96px;aspect-ratio:16/9;overflow:hidden;border:none;border-radius:8px}
 .dn-av-cover img{width:100%;height:100%;object-fit:cover;image-rendering:auto}
 .dn-av-title{font-size:13px;font-weight:700;line-height:1.7;display:block}
-.dn-av-go{font-size:12px;color:var(--olive-deep);letter-spacing:1px}
+.dn-av-go{font-size:12px;color:var(--olive-ink);letter-spacing:1px}
 /* 互动行：气泡左下方（转发 N / 评论 N / 赞 N + 右侧外链） */
 .dn-acts{display:flex;gap:18px;align-items:center;margin:10px 0 0 4px;flex-wrap:wrap;
   font-size:13px;color:var(--ink-soft)}
-.dn-goto{margin-left:auto;color:var(--olive-deep);letter-spacing:1px}
+.dn-goto{margin-left:auto;color:var(--olive-ink);letter-spacing:1px}
 .dn-goto:hover{color:var(--ink)}
 /* 侧边栏 NEW 提示小标（作品展柜同款红色像素感小标） */
 .side-btn .dyn-new{position:absolute;top:-6px;right:-4px;z-index:3;
@@ -2630,7 +2655,7 @@ button.pl-badge:hover{border-color:var(--olive-deep);color:var(--ink)}
 .pl-song-bottom{display:flex;justify-content:space-between;gap:10px;align-items:center;
   margin-top:9px;font-size:12px;color:var(--ink-soft);letter-spacing:1px;flex-wrap:wrap}
 .pl-cut{margin-top:8px;font-size:12px;color:var(--ink-soft);letter-spacing:1px}
-.pl-cut a{color:var(--olive-deep);text-decoration:underline;text-underline-offset:3px}
+.pl-cut a{color:var(--olive-ink);text-decoration:underline;text-underline-offset:3px}
 .pl-cut a:hover{color:var(--ink)}
 
 /* ---- 底部播放条（参考站的胶囊条，像素化） ---- */
@@ -2674,7 +2699,7 @@ input[type=range].pl-range::-moz-range-thumb{width:12px;height:16px;background:v
 .pl-prow{display:flex;align-items:center;gap:8px;padding:4px 6px;font-size:13px;cursor:pointer;
   border-bottom:1px solid var(--line)}
 .pl-prow:hover{background:var(--olive-pale)}
-.pl-prow.now{color:var(--olive-deep);font-weight:700}
+.pl-prow.now{color:var(--olive-ink);font-weight:700}
 .pl-prow .x{margin-left:auto;border:none;background:none;color:var(--ink-soft);cursor:pointer;font-size:15px}
 .pl-prow .x:hover{color:var(--ink)}
 
@@ -2691,7 +2716,7 @@ input[type=range].pl-range::-moz-range-thumb{width:12px;height:16px;background:v
 .pl-modal-acts{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
 
 /* ---- 历史页 ---- */
-.pl-day{font-size:14px;font-weight:700;color:var(--olive-deep);margin:12px 0 6px;letter-spacing:1px}
+.pl-day{font-size:14px;font-weight:700;color:var(--olive-ink);margin:12px 0 6px;letter-spacing:1px}
 
 /* 播放条常驻时给页面留出底部空间（不然最后几张卡永远被压住） */
 body.has-player{padding-bottom:130px}
@@ -3234,4 +3259,26 @@ body.dark input[type=range].pl-range::-moz-range-thumb{
   .pl-song.playing .pl-bars i:nth-child(1){height:16px}
   .pl-song.playing .pl-bars i:nth-child(2){height:6px}
   .pl-song.playing .pl-bars i:nth-child(3){height:11px}
+}
+
+/* ============================================================
+   2026-10-08 技术审计修复 ②：焦点圈 + hero 移动端复位
+   ============================================================ */
+
+/* ---- 键盘焦点圈（WCAG 2.4.7）----
+   这三个元素都是 tabindex="0" 可聚焦、且各自绑了键盘操作（方向键翻轮播 / 翻时间轴），
+   但样式里只有 outline:none、没有任何替代——键盘 Tab 过去屏幕上一点变化都没有，
+   用户根本不知道焦点在哪。站内 .works-toggle 已有现成的虚线描边写法，这里统一成同一套。
+   顺带补 .character-carousel/.de-carousel：≤880px 时箭头本来就常显，焦点再无别的提示。 */
+.ach-timebox:focus-visible,
+.character-carousel:focus-visible,
+.de-carousel:focus-visible{
+  outline:2px dashed var(--ink);outline-offset:2px;
+}
+
+/* ---- hero 移动端复位 ----
+   ≤1150px 书签栏已换成底部横条（见「响应式：侧边栏换底部条」一节）、右侧 HUD 也隐藏，
+   左右两侧不再有浮动轨道，hero 恢复全宽取值，不然会被上面那条 calc(100% - 382px) 白扣掉 382px。 */
+@media(max-width:1150px){
+  .hero .wrap{max-width:1500px}
 }

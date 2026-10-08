@@ -23,10 +23,11 @@
 <title>羽啾chu2u · 羽啾碎碎念！</title>
 <meta name="description" content="羽啾chu2u 像素个人站 · 羽啾碎碎念（B站动态流：她的日常碎碎念，含转发/图片/视频动态）">
 <link rel="icon" type="image/png" href="images/fumo啾.png">
-<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/fusion-pixel-12px-proportional-sc@5/400.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/press-start-2p@5/400.css">
-<link rel="stylesheet" href="css/base.css?v=202610072115">
+<!-- 像素字体：自托管（2026-10-08）。原来从 cdn.jsdelivr.net 拉，受众在境内一旦被拦就整站掉字。
+     字体极小，改同源后并入 _headers 长缓存，CSP 也不再需要放行 jsdelivr。 -->
+<link rel="preload" href="fonts/fusion-pixel-12px-proportional-sc-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="css/base.css?v=202610082316">
 </head>
 <body class="page-log">
 <div class="contour-bg" aria-hidden="true"></div>
@@ -229,6 +230,25 @@
   var TYPE_NAME = {"DYNAMIC_TYPE_DRAW":"图片动态", "DYNAMIC_TYPE_FORWARD":"转发",
                    "DYNAMIC_TYPE_WORD":"文字动态", "DYNAMIC_TYPE_AV":"视频动态",
                    "opus":"图文动态"};
+  /* ---------- 显示用派生图（2026-10-08）----------
+     碎碎念里有 4 张 5438×9000（48.9MP、单张近 10MB）的原图，而格子只有 ≈134px 宽 ——
+     过采样 40 倍，手机解码一张要吃近 200MB 位图，一条动态最多 18 张，足以把移动端标签页压垮。
+     规则：原件一个字节都不动（素材保护锁 /「画质不得降低」），显示统一指向 images/dyn/th/ 下的
+     960px WebP 派生图（64 张合计 97.6MB → 3.4MB）。派生图缺失时 onerror 回退原图，
+     所以新抓进来的动态即使还没生成派生图也照常显示，只是慢一点。
+     ⚠ 新图片的派生图由维护流程生成（最长边 >1200px 的才需要）；原图仍在 images/dyn/ 原位。 */
+  function thumbSrc(p){
+    return String(p || "").replace(/^(images\/dyn\/)([^/]+)\.(jpe?g|png|webp)$/i, "$1th/$2.webp");
+  }
+  /* 派生图缺失 → 回退原图。error 事件不冒泡，所以必须挂在捕获阶段做代理 */
+  feedEl.addEventListener("error", function(e){
+    var el = e.target;
+    if(!el || el.tagName !== "IMG" || !el.dataset || !el.dataset.orig) return;
+    var orig = el.dataset.orig;
+    delete el.dataset.orig;
+    el.src = orig;
+  }, true);
+
   function imgGridHtml(pics, opt){
     if(!pics || !pics.length) return "";
     opt = opt || {};
@@ -238,7 +258,10 @@
     var cls = "dn-grid dn-g" + Math.min(shown.length, 9);
     var cells = shown.map(function(p, i){
       /* 单图不放大到网格，按参考图走左对齐大图 */
-      var img = '<img src="' + (p || "") + '" alt="动态图片" loading="lazy" referrerpolicy="no-referrer">';
+      var full = p || "";
+      var th = thumbSrc(full);
+      var img = '<img src="' + th + '"' + (th !== full ? ' data-orig="' + esc(full) + '"' : "") +
+        ' alt="动态图片" loading="lazy" referrerpolicy="no-referrer">';
       if(rest > 0 && i === shown.length - 1){
         return '<span class="dn-cell">' + img +
           '<a class="dn-more-pics" href="' + esc(opt.link || "#") + '" target="_blank" rel="noopener" title="还有 ' + rest + ' 张，去B站看">+' + rest + '</a></span>';

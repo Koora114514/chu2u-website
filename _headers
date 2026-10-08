@@ -24,14 +24,21 @@
   # 内容安全策略：白名单制，只允许加载下面列出的东西
   #   'self'            = 本站自己的文件（脚本/样式/图片/音频/字体）
   #   'unsafe-inline'   = 允许页面内联的 <script>/<style>（本站脚本都写在页面里，必须开）
-  #   cdn.jsdelivr.net  = 唯一的第三方，只有像素字体
+  #   （2026-10-08）像素字体改自托管后，全站已经没有任何第三方静态资源，
+  #     所以 style-src / font-src 里的 cdn.jsdelivr.net 已删除 —— CSP 现在是纯 'self'，
+  #     唯一的跨域口子只剩下面 music 域名和 B 站播放器。
   #   connect-src self  = 页面只允许请求本站自己的资源（不向任何外部服务器发请求）
   #   frame-src player.bilibili.com = 探险日志页内嵌 B 站官方外链播放器（2026-10-03 起；
   #     视频流走 B站CDN→访客，不占本站带宽；不带这行 iframe 会被 default-src 'self' 拦掉）
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; media-src 'self' https://chu2u-music.pages.dev; connect-src 'self' https://chu2u-music.pages.dev; frame-ancestors 'self'; frame-src 'self' https://player.bilibili.com; base-uri 'self'; form-action 'none'; object-src 'none'
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self' https://chu2u-music.pages.dev; connect-src 'self' https://chu2u-music.pages.dev; frame-ancestors 'self'; frame-src 'self' https://player.bilibili.com; base-uri 'self'; form-action 'none'; object-src 'none'
 
 # 图片和音频体积大、不会变，让浏览器长期缓存（第二次打开更快）
 /images/*
+  Cache-Control: public, max-age=604800
+
+# 像素字体（2026-10-08 起自托管）：也是「不常变」的大文件，同样长期缓存。
+#   注意：换字体文件时要么改文件名、要么在引用处加 ?v=，否则访客会继续吃这 7 天的缓存。
+/fonts/*
   Cache-Control: public, max-age=604800
 
 # 周表每周都会换，绝不能长期缓存——每次都问一下有没有新版（须放在 /images/* 之前）

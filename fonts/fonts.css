@@ -1,0 +1,43 @@
+/* ============================================================
+   像素字体自托管（2026-10-08）
+   ------------------------------------------------------------
+   原来两个字体都从 cdn.jsdelivr.net 现拉：
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/...">
+   问题有两层：
+     ① 受众在境内，jsdelivr 一慢或被拦，全站标题立刻掉回 monospace ——
+        正是 DESIGN.md 最怕的「用系统字体渲染标题会瞬间掉气质」；
+     ② 它是渲染阻塞的第三方请求，且给 CSP 留了一个白名单口子。
+   字体本身很小（像素字笔画简单、压缩率极高），改成同源托管后并入 _headers 的长缓存，
+   顺带把 CSP 收干净（style-src / font-src 不再需要放行 jsdelivr）。
+
+   ⚠ 关于「Fusion Pixel 是不是只有拉丁」：@fontsource 把这份文件标成 latin 子集，
+     但它内部带完整汉字点阵——实测用 canvas 渲染「宇」，它和 monospace / YaHei / SimSun
+     的像素结果全都不同，说明中文确实走的是像素字，不要被文件名误导。
+     另外原包 CSS 没写 unicode-range，这里也照旧不写，保持「全字符集接管」的原行为。
+
+   ⚠ 换字体时：直接替换 fonts/ 下的同名文件即可，页面不用动。
+     （字体文件名不带版本号，靠 _headers 里 /fonts/* 的长缓存；换字后建议改文件名或
+       在引用处加 ?v= ，否则访客可能继续吃旧缓存。）
+   ============================================================ */
+
+/* 本站两款字体都是「真点阵」，必须关抗锯齿，见 base.css 的 The No-Smoothing Rule */
+
+/* 中文主体：全站正文 / 标题 / 侧栏（原 @fontsource/fusion-pixel-12px-proportional-sc@5） */
+@font-face{
+  font-family:'Fusion Pixel 12px Proportional SC';
+  font-style:normal;
+  font-display:swap;
+  font-weight:400;
+  src:url(./fusion-pixel-12px-proportional-sc-400.woff2) format('woff2');
+}
+
+/* 英文 8-bit 小标 / 点阵符号（原 @fontsource/press-start-2p@5）
+   unicode-range 与原包 latin 子集逐字对齐，保证行为与改前完全一致 */
+@font-face{
+  font-family:'Press Start 2P';
+  font-style:normal;
+  font-display:swap;
+  font-weight:400;
+  src:url(./press-start-2p-400.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
