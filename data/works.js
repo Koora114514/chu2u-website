@@ -10,7 +10,7 @@
  * 也可以在 维护\猫猫管理\ 的「啾啾特辑 · 作品展柜」页用界面改（推荐，能一键查新投稿）。
  * 数组顺序 = 滑块显示顺序，最新的放最后（末尾会自动追加一张「魔法正在生成中」空白卡）。
  */
-window.CHU2U_WORKS_UPDATED = "2026-10-01";
+window.CHU2U_WORKS_UPDATED = "2026-10-10";
 
 window.CHU2U_WORKS = [
   {t:"【初投稿】Os-宇宙人", link:"https://www.bilibili.com/video/BV1MGuw6LEYa/", cover:"images/works/work-1.jpg", date:"2026.08.05", type:"video"},
@@ -21,4 +21,5 @@ window.CHU2U_WORKS = [
   {t:"【chu2u】你的心里到底有没有我们⁉️/住在天狼星的那个人", link:"https://www.bilibili.com/video/BV1vyeP6tEqj/", cover:"images/works/work-6.jpg", date:"2026.09.17", type:"video"},
   {t:"【chu2u】凶手和恋人都喜欢事后回现场/恋人", link:"https://www.bilibili.com/video/BV1NDhR61EL8/", cover:"images/works/work-7.jpg", date:"2026.09.26", type:"video"},
   {t:"我是一个尼古丁过敏的帅哥", link:"https://www.bilibili.com/video/BV1cHa66AEHA/", cover:"images/works/work-8.jpg", date:"2026.10.01", type:"video"},
+  {t:"【chu2u】羽爱", link:"https://www.bilibili.com/video/BV1pGpv6hEnN/", cover:"images/works/work-9.jpg", date:"2026.10.10", type:"video"},
 ];
