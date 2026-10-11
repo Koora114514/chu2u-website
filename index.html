@@ -1167,7 +1167,21 @@
     var hiReady = false;
     var hiImg = new Image();       /* 预载无损原图：加载成功才在悬停时切换，避免闪烁 */
     hiImg.onload = function(){ hiReady = true; };
-    hiImg.src = FULL;
+    /* 无损原图有 1.2MB，页面一打开就抢带宽会拖慢首屏（尤其国内直连 Cloudflare 时）。
+       改成「周表区快滚进屏幕了才开始下载」——访客滚到那儿时通常已经下好，悬停照样不闪。
+       浏览器太老不支持 IntersectionObserver 时，退回「整页加载完再补下」。 */
+    var hiAsked = false;
+    function loadHi(){ if(hiAsked) return; hiAsked = true; hiImg.src = FULL; }
+    if("IntersectionObserver" in window){
+      var hiObs = new IntersectionObserver(function(es){
+        for(var i = 0; i < es.length; i++){
+          if(es[i].isIntersecting){ loadHi(); hiObs.disconnect(); break; }
+        }
+      }, { rootMargin: "600px 0px" });   /* 提前 600px 就开始下，滚到时基本已就绪 */
+      hiObs.observe(photo);
+    }else{
+      window.addEventListener("load", function(){ setTimeout(loadHi, 1200); });
+    }
 
     function fmt(d){ return d.getFullYear() + "年" + (d.getMonth()+1) + "月" + d.getDate() + "日"; }
     function setStatus(txt){ when.textContent = txt; }
