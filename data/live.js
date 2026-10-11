@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐虚虚弱弱电台⭐","online":0,"area":"虚拟主播","start":1791723997,"checked":"2026-10-11 21:08:01"};
+window.CHU2U_LIVE={"live":false,"title":"⭐虚虚弱弱电台⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-11 22:22:01"};
