@@ -32,6 +32,18 @@
   #     视频流走 B站CDN→访客，不占本站带宽；不带这行 iframe 会被 default-src 'self' 拦掉）
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data:; media-src 'self' https://chu2u-music.pages.dev; connect-src 'self' https://chu2u-music.pages.dev; frame-ancestors 'self'; frame-src 'self' https://player.bilibili.com; base-uri 'self'; form-action 'none'; object-src 'none'
 
+# ⚠ 长缓存的通用前提（2026-10-11 补充）：被长缓存的资源，引用处都必须带 ?v= 版本号，
+#    内容一变版本号就变 = 网址变了 = 浏览器自然会重新下载，绝不会吃到旧内容。
+#    本站在这一点上是齐的：css/js/图片/字体/数据文件全部带 ?v=，只有 data/live.js 不带，
+#    但它由页面用 Date.now() 拼地址、每次都是新网址，本来就不吃缓存。
+#
+# ⚠ 关于周表图（2026-10-11 修正）：以前这里有一条 /images/schedule-week*.png 的「不缓存」规则，
+#    注释还写着「须放在 /images/* 之前」。但 Cloudflare 的规则不是「谁在前谁生效」——
+#    路径同时命中多条规则时，同名响应头是【逗号拼接】的，拼出来会变成
+#    "max-age=604800, ... max-age=0" 这种自相矛盾的头，浏览器多半取第一个值（=缓存 7 天），
+#    结果反而让每周的新周表看不见。现在这条规则已删除，周表图跟其它图片一样长缓存，
+#    靠 ?v= 版本号保证换图后立刻生效——周表更新.ps1 与猫猫管理台「周表」页都会自动改 ?v=。
+
 # 图片和音频体积大、不会变，让浏览器长期缓存（第二次打开更快）
 /images/*
   Cache-Control: public, max-age=604800
@@ -41,16 +53,22 @@
 /fonts/*
   Cache-Control: public, max-age=604800
 
-# 周表每周都会换，绝不能长期缓存——每次都问一下有没有新版（须放在 /images/* 之前）
-/images/schedule-week*.png
-  Cache-Control: public, max-age=0, must-revalidate
-
 /music/*
   Cache-Control: public, max-age=604800
 
-# 页面和数据文件每次都要问一下有没有新版（保证维护程序更新后能立刻看到）
+# 样式与脚本：同样带 ?v=，可以放心长缓存（改样式记得同步升 ?v=，见 base.css 引用处）
+/css/*
+  Cache-Control: public, max-age=604800
+
+/js/*
+  Cache-Control: public, max-age=604800
+
+# 页面本身必须每次确认有没有新版（页面上写着各资源的 ?v= 版本号，它就是缓存的开关）
 /*.html
   Cache-Control: public, max-age=0, must-revalidate
 
+# 数据文件同样全部带 ?v=：内容更新时维护程序会改版本号，改完网址就变，
+#   所以这里长缓存不会让访客看到旧内容，却能省掉「每次打开页面都问一遍这 9 个文件」的往返。
+#   例外是 data/live.js（直播状态）——它不带 ?v=，由页面拼 Date.now() 地址，每次都是新网址，不受影响。
 /data/*
-  Cache-Control: public, max-age=0, must-revalidate
+  Cache-Control: public, max-age=604800

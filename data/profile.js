@@ -24,7 +24,7 @@
  * 注意：UPDATED **兼作立绘/配图的缓存版本号**（页面给图片地址加的 ?v= 就是它，
  *      图片缓存 7 天）——换图后要改成新的时间，猫猫管理台会自动做。
  */
-window.CHU2U_PROFILE_UPDATED = "2026-09-29 21:00";
+window.CHU2U_PROFILE_UPDATED = "2026-10-11 23:53";
 
 window.CHU2U_PROFILE = {
  "hero": {
@@ -104,7 +104,7 @@ window.CHU2U_PROFILE = {
  },
  "about": {
   "badge": "羽啾CHU2U · 出道立绘",
-  "avatar": "images/探险啾-立绘.png",
+  "avatar": "images/探险啾-立绘.webp",
   "name": "羽啾 chu2u",
   "nameEm": "VirtuaReal · 二十八期生",
   "species": "诞生在地球的外星人！",

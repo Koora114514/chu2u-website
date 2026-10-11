@@ -186,7 +186,7 @@
       <span class="badge" id="aboutBadge"></span>
       <!-- 出道立绘：路径来自 data/profile.js 的 about.avatar（点击可新窗口看高清原图） -->
       <div class="avatar-big" id="avatarBig" role="button" tabindex="0" aria-label="羽啾chu2u 出道立绘，点击在新标签页查看高清原图">
-        <img id="avatarImg" src="images/探险啾-立绘.png" alt="羽啾chu2u 出道立绘">
+        <img id="avatarImg" src="images/探险啾-立绘.webp" alt="羽啾chu2u 出道立绘">
       </div>
     </div>
     <div class="info">
@@ -248,7 +248,7 @@
              自动生成两份：schedule-week.png（静止显示 1140px 无损，页面按 570px 显示=2 倍素材高分屏不糊）、
              schedule-week-full.png（无损原图，悬停与单击大图共用）；
              同时把上方「更新于 X年X月X日」改成抓取/上传那天的日期 -->
-        <img id="weekImg" src="images/schedule-week.png?v=202610011828" alt="本周周表照片" referrerpolicy="no-referrer">
+        <img id="weekImg" src="images/schedule-week.png?v=202610011828" alt="本周周表照片" referrerpolicy="no-referrer" loading="lazy" decoding="async">
         <div class="wk-q" id="weekFail" hidden>？</div>
       </div>
     </div>
@@ -1541,13 +1541,17 @@
     check();
   })();
 
-  /* ---------- 立绘点击：新标签页打开 2× 高清素材（根目录原图别动，改素材就重新生成 site/images/探险啾-立绘.png） ---------- */
+  /* ---------- 立绘点击：新标签页打开 2× 高清素材（根目录原图别动，改素材就重新生成 site/images/探险啾-立绘.webp）
+     ⚠ 2026-10-11 起大图统一用 WebP（q90，已目检确认观感与原 PNG 无差别，尺寸与透明通道完全一致）。
+       换素材时别只生成 .png——要从根目录原图 LANCZOS 重采样成 760×1258，存成 .webp，
+       命令：python -c "from PIL import Image; Image.open(r'<原图>').convert('RGBA').resize((760,1258), Image.LANCZOS).save(r'site/images/探险啾-立绘.webp','WEBP',quality=90,method=6,exact=True)"
+       旧的 .png 原件保留在 images/ 里当回滚用（页面已不引用），别删。 ---------- */
   (function(){
     var trig = document.getElementById("avatarBig");
     if(!trig) return;
     function view(){
       /* 立绘路径来自 data/profile.js 的 about.avatar（用站内本地文件，别再指向站点外的路径） */
-      var AV = (((window.CHU2U_PROFILE || {}).about || {}).avatar) || "images/探险啾-立绘.png";
+      var AV = (((window.CHU2U_PROFILE || {}).about || {}).avatar) || "images/探险啾-立绘.webp";
       var AVV = window.CHU2U_PROFILE_UPDATED || "1";
       window.open(AV + (AV.indexOf("?") >= 0 ? "" : "?v=" + AVV), "_blank");
     }
