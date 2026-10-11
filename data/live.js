@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐水一小时时长！⭐","online":0,"area":"虚拟主播","start":1791730244,"checked":"2026-10-11 22:52:01"};
+window.CHU2U_LIVE={"live":false,"title":"⭐水一小时时长！⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-12 00:26:00"};
