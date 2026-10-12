@@ -34,8 +34,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-10-05";
+window.CHU2U_CAT_UPDATED = "2026-10-12";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1257662893558595588", cover:"images/nyan/a40.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月11日"},
+  {kind:"art", uid:"296292552", link:"//www.bilibili.com/opus/1257600633695895604", cover:"images/nyan/a41.jpg",
+   t:"很烂的偷摸画一个", d:"Cube-Hato", date:"2026年10月10日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1256350656519733268", cover:"images/nyan/a42.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月7日"},
+  {kind:"art", uid:"475817687", link:"//www.bilibili.com/opus/1255997507120398336", cover:"images/nyan/a43.jpg",
+   t:"画了绿白", d:"vertsgh", date:"2026年10月6日"},
+  {kind:"art", uid:"351007984", link:"//www.bilibili.com/opus/1255745980968468482", cover:"images/nyan/a44.jpg",
+   t:"宇宙最强🐱✋️", d:"糖分补足", date:"2026年10月5日"},
+  {kind:"art", uid:"393767790", link:"//www.bilibili.com/opus/1255399308371427347", cover:"images/nyan/a45.jpg",
+   t:"", d:"瞬噬魔王点肠粉LZX", date:"2026年10月5日"},
   {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1255201877291696162", cover:"images/nyan/a37.jpg",
    t:"", d:"白濑玲_", date:"2026年10月4日"},
   {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1254583891648315392", cover:"images/nyan/a38.jpg",
