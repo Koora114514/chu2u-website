@@ -187,7 +187,6 @@ window.CHU2U_RECORDS = [
       {kind:"video", uid:"35391148", link:"https://www.bilibili.com/video/BV1aza76HEMw/", cover:"images/records/item9-5.jpg",
        cat:"二创 · FANMADE", t:"【羽啾chu2u x 小松绿Viridis】世界第一绿考一晚能喊多少句小松绿？", d:"绿考大挑战：统计向二创——羽啾一晚到底能喊多少句「小松绿」。", date:"9月29日 · 看切片 →"},
     ]},
-,
   { no:10, tag:"第10期 · 周观测", title:"本周观测速报",
     range:"2026.10.05 – 2026.10.11", cover:"images/records/issue10.jpg", stamp:"记录·入库",
     lead:"本周观测站收到 5 条信号，最热的是《臭被子天天让小松绿盖你，扫不扫啊【羽啾c…》（播放 29535）。",

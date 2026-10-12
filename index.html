@@ -1754,8 +1754,12 @@
       });
     }
 
-    /* 本期卡片：数组最后一项 = 最新一期 */
-    var latest = R[R.length - 1];
+    /* 本期卡片：数组最后一项 = 最新一期。
+       ⚠ 2026-10-12：倒着找第一个真实条目，别直接取 R[R.length-1] ——
+          万一末位是数组空洞（多余逗号造成），整页渲染会当场崩掉。 */
+    var latest = null;
+    for(var li = R.length - 1; li >= 0; li--){ if(R[li]){ latest = R[li]; break; } }
+    latest = latest || {};
     if(coverEl){
       coverEl.src = latest.cover;
       coverEl.onerror = function(){ coverEl.style.display = "none"; };
@@ -1790,9 +1794,15 @@
     var FOLD_AT = 3;                       /* 默认露出的期数（最新的 3 期） */
     var foldBox = document.createElement("div");
     foldBox.className = "arc-fold"; foldBox.id = "arcFold"; foldBox.hidden = true;
+    /* ⚠ 2026-10-12 事故加固：这里原来直接用 R[i].no。云端追加新一期时多写了一个逗号，
+       在数组里留下空洞 → R[9] 是 undefined → 读 .no 抛异常 → 整段脚本中断，
+       首页「观测记录」之后的栏目全部不渲染（用户看到「主页只剩一半」）。
+       现在：跳过空洞，并用「实际渲染计数」算显示序号（保证深浅交替不错位）。 */
+    var shownCount = 0;
     for(var i = R.length - 2; i >= 0; i--){
       (function(isu){
-        var shown = R.length - 2 - i;      /* 显示序号：0 = 最新的那期往期 */
+        if(!isu) return;                   /* 数组空洞：静默跳过，绝不让整页崩掉 */
+        var shown = shownCount++;          /* 显示序号：0 = 最新的那期往期 */
         var row = document.createElement("div");
         row.className = "arc"; row.setAttribute("role", "button"); row.tabIndex = 0;
         row.setAttribute("aria-expanded", "false");
