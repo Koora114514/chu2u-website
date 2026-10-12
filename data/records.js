@@ -187,5 +187,20 @@ window.CHU2U_RECORDS = [
       {kind:"video", uid:"35391148", link:"https://www.bilibili.com/video/BV1aza76HEMw/", cover:"images/records/item9-5.jpg",
        cat:"二创 · FANMADE", t:"【羽啾chu2u x 小松绿Viridis】世界第一绿考一晚能喊多少句小松绿？", d:"绿考大挑战：统计向二创——羽啾一晚到底能喊多少句「小松绿」。", date:"9月29日 · 看切片 →"},
     ]},
-
+,
+  { no:10, tag:"第10期 · 周观测", title:"本周观测速报",
+    range:"2026.10.05 – 2026.10.11", cover:"images/records/issue10.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《臭被子天天让小松绿盖你，扫不扫啊【羽啾c…》（播放 29535）。",
+    items:[
+      {kind:"video", uid:"3493257038268887", link:"https://www.bilibili.com/video/BV1xCHs6iEt6", cover:"images/records/item10-1.jpg",
+       cat:"联动 · COLLAB", t:"臭被子天天让小松绿盖你，扫不扫啊【羽啾chu2u/小松绿Viridis】", d:"臭被子天天让小松绿盖你，扫不扫啊【羽啾chu2u/小松绿Viridis】", date:"10月5日 · 看切片 →"},
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1QKHd6wEhP", cover:"images/records/item10-2.jpg",
+       cat:"联动 · COLLAB", t:"【羽啾chu2u】载着够不到踏板的小萝莉羽啾在天上骑行的小松绿", d:"【羽啾chu2u】载着够不到踏板的小萝莉羽啾在天上骑行的小松绿", date:"10月9日 · 看切片 →"},
+      {kind:"video", uid:"3546896457009387", link:"https://www.bilibili.com/video/BV1U7pa68ERw", cover:"images/records/item10-3.jpg",
+       cat:"联动 · COLLAB", t:"小萌妹会谈——黑话合集(上)【犬绒Mofu/羽啾chu2u/小松绿Viridis】", d:"小萌妹会谈——黑话合集(上)【犬绒Mofu/羽啾chu2u/小松绿Viridis】", date:"10月10日 · 看切片 →"},
+      {kind:"video", uid:"527020128", link:"https://www.bilibili.com/video/BV1SQH26zE7x", cover:"images/records/item10-4.jpg",
+       cat:"直播切片 · CLIP", t:"【三理/羽啾/花礼/莉寇】原来羽啾真是理电池！为什么是羽啾chu2u，因为三理Mit3uri，给你理神爽到了；liko鼠姐：要不我们走吧", d:"【三理/羽啾/花礼/莉寇】原来羽啾真是理电池！为什么是羽啾chu2u，因为三理Mit3uri，给…", date:"10月8日 · 看切片 →"},
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1dVpP6bEsd", cover:"images/records/item10-5.jpg",
+       cat:"联动 · COLLAB", t:"【小松绿Viridis】这么软糯的羽啾chu2u 直播为什么会是那个声音？", d:"【小松绿Viridis】这么软糯的羽啾chu2u 直播为什么会是那个声音？", date:"10月6日 · 看切片 →"}
+    ] }
 ];
