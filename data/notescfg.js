@@ -14,6 +14,6 @@ window.CHU2U_NOTES_CFG = {
   "profName": "",
   "profSign": "虚拟艺人团体VirtuaReal成员，我们的目标是占领这里！商务合作请联系bd@vrp.live⭐",
   "profFans": "",
-  "profAvatar": "images/notes/profile-avatar.png?v=202610061033",
-  "chatAvatar": "images/notes/chat-avatar.png?v=202610061033"
+  "profAvatar": "images/notes/profile-avatar.webp?v=202610122202",
+  "chatAvatar": "images/notes/chat-avatar.webp?v=202610122202"
 };

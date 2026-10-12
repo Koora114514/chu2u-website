@@ -231,7 +231,7 @@
     <h2><span class="no">QUEST</span>每周计划</h2>
   </div>
   <div class="wk-head reveal">
-    <span class="wk-status"><span class="dot" aria-hidden="true"></span><span id="planWhen">更新于 <span class="wk-date">2026年10月1日</span></span></span>
+    <span class="wk-status"><span class="dot" aria-hidden="true"></span><span id="planWhen">更新于 <span class="wk-date">2026年10月12日</span></span></span>
     <h2 class="wk-title">本周计划</h2>
     <p class="wk-sub">周表内容来自主页置顶动态的第一张图，每周自动检查一次，置顶动态更新后自动抓取替换。</p>
     <ul class="wk-list">
@@ -244,11 +244,18 @@
   <div class="wk-area reveal">
     <div class="wk-photo" id="weekPhoto" role="button" tabindex="0" aria-label="本周周表照片，点击查看大图">
       <div class="wk-pic">
-        <!-- 🎨 素材配置：每周拿到置顶动态第一张照片后，运行 tools\周表图片处理.ps1 <原图>，
-             自动生成两份：schedule-week.png（静止显示 1140px 无损，页面按 570px 显示=2 倍素材高分屏不糊）、
-             schedule-week-full.png（无损原图，悬停与单击大图共用）；
+        <!-- 🎨 素材配置：每周拿到置顶动态第一张照片后，运行 tools\周表图片处理.ps1 <原图>。
+             产出四份文件，PNG 是「母版」、WebP 是给网页用的压缩副本（省 84% 体积）：
+               schedule-week.png      静止显示 1140px 无损（页面按 570px 显示 = 2 倍素材，高分屏不糊）
+               schedule-week-full.png 无损原图（悬停与单击大图共用）
+               schedule-week.webp     上面那份的 WebP 派生版 ← 页面实际加载的是它
+               schedule-week-full.webp 同理
+             ⚠ 这里的扩展名由 维护\周表更新.ps1 自动「收敛」成磁盘上真实存在的那个：
+               WebP 生成成功 → .webp；失败 → 自动退回 .png（内容不变，只是大一点）。
+               别手工把它改成 <picture> —— 浏览器的 <source> 优先级高于 <img src>，
+               会把下面那套「悬停换高清图」的状态机打死（实测改 img.src 完全失效）。
              同时把上方「更新于 X年X月X日」改成抓取/上传那天的日期 -->
-        <img id="weekImg" src="images/schedule-week.png?v=202610011828" alt="本周周表照片" referrerpolicy="no-referrer" loading="lazy" decoding="async">
+        <img id="weekImg" src="images/schedule-week.webp?v=202610122205" alt="本周周表照片" referrerpolicy="no-referrer" loading="lazy" decoding="async">
         <div class="wk-q" id="weekFail" hidden>？</div>
       </div>
     </div>
@@ -874,7 +881,7 @@
       var pic = document.createElement("div");
       pic.className = "de-pic";
       var im = document.createElement("img");
-      im.src = item.img + "-" + tier + ".png?v=" + DE_VER;
+      im.src = item.img + "-" + tier + ".webp?v=" + DE_VER;   /* 2026-10-12 起四档存 WebP（体积省 84%） */
       im.alt = "「" + item.title + "」";
       if(item.locked) im.className = "is-locked";
       pic.appendChild(im);
@@ -1154,8 +1161,8 @@
     var KEY  = "chu2u-week-v2";          /* 远程抓取缓存 {id, img, ts, week} */
     var DKEY = "chu2u-week-drop";        /* 拖入图片缓存 {img, ts} */
     var UID = "2138961136";
-    var LOCAL = "images/schedule-week.png?v=202610011828";      /* 静止显示版（1140px 素材按 570px 显示）；?v= 由维护脚本换图时自动改日期，绕过浏览器缓存 */
-    var FULL  = "images/schedule-week-full.png?v=202610011828"; /* 无损原图（悬停与单击大图共用） */
+    var LOCAL = "images/schedule-week.webp?v=202610122205";      /* 静止显示版（1140px 素材按 570px 显示）；?v= 由维护脚本换图时自动改日期，绕过浏览器缓存 */
+    var FULL  = "images/schedule-week-full.webp?v=202610122205"; /* 无损原图（悬停与单击大图共用） */
     var when    = document.getElementById("planWhen");
     var img     = document.getElementById("weekImg");
     var fail    = document.getElementById("weekFail");
