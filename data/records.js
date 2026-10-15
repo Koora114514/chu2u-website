@@ -201,5 +201,28 @@ window.CHU2U_RECORDS = [
        cat:"直播切片 · CLIP", t:"【三理/羽啾/花礼/莉寇】原来羽啾真是理电池！为什么是羽啾chu2u，因为三理Mit3uri，给你理神爽到了；liko鼠姐：要不我们走吧", d:"【三理/羽啾/花礼/莉寇】原来羽啾真是理电池！为什么是羽啾chu2u，因为三理Mit3uri，给…", date:"10月8日 · 看切片 →"},
       {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1dVpP6bEsd", cover:"images/records/item10-5.jpg",
        cat:"联动 · COLLAB", t:"【小松绿Viridis】这么软糯的羽啾chu2u 直播为什么会是那个声音？", d:"【小松绿Viridis】这么软糯的羽啾chu2u 直播为什么会是那个声音？", date:"10月6日 · 看切片 →"}
+    ] },
+  { no:11, tag:"五人线下聚会", title:"爱陆阴地 · 五人线下聚会",
+    range:"2026.10.12 – 2026.10.18", cover:"images/records/issue11.jpg", stamp:"记录·入库",
+    lead:"10 月 12 日晚，羽啾再造新梗——「恨海情天？不如爱陆阴地！」，宇宙猫全站首创；同晚「宇宙猫往啾姐的迈巴赫里扔钢镚」冲上本周热度榜首，评论区金句频出。14 日外星萝莉黑话不断，全体观众化身黄金矿工使劲凿凿凿；「扫啾羽叫」的极高纯度夹子音更让宇宙猫直呼顶不住。10 月 15 日大事件：羽啾与花礼、莉蔻、未知夜、能能五人线下聚会，比身高、查颜色、求婚名场面轮番上演。",
+    items:[
+      {kind:"milestone", num:"5人", unit:"线下聚会", cat:"里程碑 · MILESTONE",
+       t:"羽啾 × 花礼 · 莉蔻 · 未知夜 · 能能 线下会面",
+       d:"10 月 15 日，羽啾与花礼、莉蔻、未知夜、能能五人线下聚会：身高大比较（莉蔻＞羽啾≥花礼）、查颜色、求婚名场面轮番上演。", date:"10月15日"},,
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV11gpZ6cEeZ/", cover:"images/records/item11-1.jpg",
+       cat:"直播切片 · CLIP", t:"宇宙🐱又在往啾姐的迈巴赫里扔钢镚了【羽啾chu2u】",
+       d:"「宇宙猫又在往啾姐的迈巴赫里扔钢镚」——吃 SC 名场面，评论区金句频出，本周热度第一。", date:"10月13日 · 看切片 →"},,
+      {kind:"video", uid:"657516", link:"https://www.bilibili.com/video/BV1aspQ64Ewe/", cover:"images/records/item11-2.jpg",
+       cat:"直播切片 · CLIP", t:"震撼首发！外星萝莉再造新梗：恨海情天？不如爱陆阴地！",
+       d:"羽啾再造新梗：恨海情天？不如爱陆阴地！宇宙猫全站首创，震撼首发。", date:"10月12日 · 看切片 →"},,
+      {kind:"video", uid:"657516", link:"https://www.bilibili.com/video/BV1Shpk6hEXs/", cover:"images/records/item11-3.jpg",
+       cat:"直播切片 · CLIP", t:"玛雅大姐！外星萝莉黑话不断，全体观众化身黄金矿工使劲凿凿凿，太黄暴了！",
+       d:"外星萝莉黑话不断，全体观众化身黄金矿工使劲凿凿凿——太黄暴了，玛雅大姐！", date:"10月14日 · 看切片 →"},,
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1rzpm6hEdL/", cover:"images/records/item11-4.jpg",
+       cat:"直播切片 · CLIP", t:"扫啾羽叫，吃红色sc后展示极高纯度夹子音的羽啾【羽啾chu2u】",
+       d:"扫啾羽叫：吃红色 SC 后展示极高纯度夹子音的羽啾，宇宙猫直呼顶不住。", date:"10月14日 · 看切片 →"},,
+      {kind:"video", uid:"180865397", link:"https://www.bilibili.com/video/BV1pFWc6vEdK/", cover:"images/records/item11-5.jpg",
+       cat:"联动 · COLLAB", t:"【花礼】没法像两年前那样串的意气风发，拆弹也畏首畏尾；对以前的自己害怕了",
+       d:"花礼自白：没法像两年前那样串的意气风发，拆弹也畏首畏尾——对以前的自己害怕了。", date:"10月13日 · 看切片 →"}
     ] }
 ];
