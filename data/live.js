@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐随随便便优哉游哉⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-15 05:47:56"};
+window.CHU2U_LIVE={"live":true,"title":"⭐爱，死亡，和外星人⭐","online":179328,"area":"虚拟主播","start":1792245006,"checked":"2026-10-17 23:43:04"};
