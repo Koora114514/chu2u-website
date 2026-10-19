@@ -36,17 +36,17 @@ window.CHU2U_REPLAY_TAG_COLORS = {
 /* 栏目介绍（显示在「啾啾出勤记录！」大标题下方；\n 换行；可在管理台「录播站」里编辑） */
 window.CHU2U_REPLAY_INTRO = "这里是啾啾的出勤记录档案库！该页面会每日上午十点自动收录新录播，若出现意外情况则会进行手动维护~\n单点一场即可播放，内容类型tag为个人粗略标记，如有异常请及时反馈！点击「24h 连播」就能当电台一直听下去 ⭐\n录播内容将以录播man芋泥咕咕茶为主，同时也推荐观看录播man：恩仙仙/录播酱从小就很可爱qwq";
 window.CHU2U_REPLAYS = [
-  {bvid:"BV1PLnV6AEUv", t:"⭐电电台台⭐（下半歌回）", cover:"images/replays/r055.jpg",
+  {bvid:"BV1PLnV6AEUv", t:"⭐电电台台⭐（下半歌回）", cover:"images/replays/r073.jpg",
    y:2026, mo:10, d:18, h:23, mi:23, sec:11016, pages:3, pdurs:"", tags:"电台,歌回"},
-  {bvid:"BV1LuJB6JEiz", t:"⭐爱，死亡，和外星人⭐", cover:"images/replays/r056.jpg",
+  {bvid:"BV1LuJB6JEiz", t:"⭐爱，死亡，和外星人⭐", cover:"images/replays/r074.jpg",
    y:2026, mo:10, d:17, h:23, mi:43, sec:10672, pages:2, pdurs:"", tags:"游戏"},
-  {bvid:"BV1cMJ96KEEp", t:"⭐突突击击⭐", cover:"images/replays/r057.jpg",
+  {bvid:"BV1cMJ96KEEp", t:"⭐突突击击⭐", cover:"images/replays/r075.jpg",
    y:2026, mo:10, d:16, h:16, mi:29, sec:3994, pages:1, pdurs:"", tags:"杂谈"},
-  {bvid:"BV11ipB6rEAy", t:"⭐睡不着，突一下!⭐（学中文）", cover:"images/replays/r058.jpg",
+  {bvid:"BV11ipB6rEAy", t:"⭐睡不着，突一下!⭐（学中文）", cover:"images/replays/r076.jpg",
    y:2026, mo:10, d:14, h:3, mi:4, sec:8237, pages:2, pdurs:"", tags:"突击,歌回"},
-  {bvid:"BV1bQHH6YE5e", t:"⭐突击突击突击突击⭐", cover:"images/replays/r059.jpg",
+  {bvid:"BV1bQHH6YE5e", t:"⭐突击突击突击突击⭐", cover:"images/replays/r077.jpg",
    y:2026, mo:10, d:5, h:13, mi:10, sec:2606, pages:2, pdurs:"", tags:"突击,杂谈"},
-  {bvid:"BV1NtHj6yE8A", t:"⭐困困困⭐", cover:"images/replays/r060.jpg",
+  {bvid:"BV1NtHj6yE8A", t:"⭐困困困⭐", cover:"images/replays/r078.jpg",
    y:2026, mo:10, d:4, h:16, mi:8, sec:7830, pages:2, pdurs:"", tags:"杂谈"},
   {bvid:"BV1hLHq6VEAR", t:"⭐歌歌杂杂⭐", cover:"images/replays/r039.jpg",
    y:2026, mo:10, d:3, h:22, mi:15, sec:8179, pages:3, pdurs:"", tags:"歌回,杂谈"},
