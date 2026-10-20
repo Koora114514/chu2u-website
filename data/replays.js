@@ -26,7 +26,7 @@
    - 更新本文件后，把 log.html 里 data/replays.js 那个 <script src> 的
      ?v= 改成「今天+时分」（YYYYMMDDHHMM）——缓存版本号，同一天多次更新
      必须换新值，只用当天日期会撞上浏览器/Cloudflare 旧缓存。 */
-window.CHU2U_REPLAYS_UPDATED = "2026-10-19";
+window.CHU2U_REPLAYS_UPDATED = "2026-10-20";
 window.CHU2U_REPLAY_TAGS = ["杂谈", "歌回", "游戏", "联动", "电台", "特别回", "突击", "水时长"];
 /* 分类配色（2026-10-03 用户定：特别回偏红、电台偏黄，其余参考电台软件；未知分类用灰色兜底） */
 window.CHU2U_REPLAY_TAG_COLORS = {
@@ -36,6 +36,26 @@ window.CHU2U_REPLAY_TAG_COLORS = {
 /* 栏目介绍（显示在「啾啾出勤记录！」大标题下方；\n 换行；可在管理台「录播站」里编辑） */
 window.CHU2U_REPLAY_INTRO = "这里是啾啾的出勤记录档案库！该页面会每日上午十点自动收录新录播，若出现意外情况则会进行手动维护~\n单点一场即可播放，内容类型tag为个人粗略标记，如有异常请及时反馈！点击「24h 连播」就能当电台一直听下去 ⭐\n录播内容将以录播man芋泥咕咕茶为主，同时也推荐观看录播man：恩仙仙/录播酱从小就很可爱qwq";
 window.CHU2U_REPLAYS = [
+  {bvid:"BV19AJR6tEQZ", t:"⭐杂杂⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:19, h:23, mi:51, sec:16174, pages:3, pdurs:"5403,5405,5366", tags:"", pin:false},
+  {bvid:"BV1gZpR6aENC", t:"⭐水一小时时长！⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:12, h:23, mi:55, sec:19930, pages:5, pdurs:"5401,3677,5402,5401,49", tags:"", pin:false},
+  {bvid:"BV1xzpJ6oE1o", t:"⭐水一小时时长！⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:11, h:0, mi:41, sec:5621, pages:2, pdurs:"5402,219", tags:"", pin:false},
+  {bvid:"BV1xppn6tEDa", t:"⭐虚虚弱弱电台⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:11, h:22, mi:45, sec:4489, pages:1, pdurs:"4489", tags:"", pin:false},
+  {bvid:"BV1n7pG6fE26", t:"⭐虚虚弱弱歌歌杂杂⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:10, h:23, mi:44, sec:9588, pages:2, pdurs:"5402,4186", tags:"", pin:false},
+  {bvid:"BV18Upt6XEcf", t:"⭐星露谷!!!⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:9, h:22, mi:55, sec:11704, pages:3, pdurs:"2252,5402,4050", tags:"", pin:false},
+  {bvid:"BV13KHd6AE2d", t:"⭐萌音歌杂有懂得吗⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:8, h:0, mi:49, sec:11905, pages:3, pdurs:"5401,5405,1099", tags:"", pin:false},
+  {bvid:"BV13KHy6YEFf", t:"⭐种地耍起⭐", cover:"images/replays/r079.jpg",
+   y:2026, mo:10, d:7, h:0, mi:26, sec:10646, pages:3, pdurs:"2928,5401,2317", tags:"", pin:false},
+  {bvid:"BV1yFH16xEUy", t:"⭐羽啾波波局⭐", cover:"images/replays/r080.jpg",
+   y:2026, mo:10, d:7, h:22, mi:22, sec:7587, pages:2, pdurs:"5403,2184", tags:"", pin:false},
+  {bvid:"BV1cWHk6VE2e", t:"⭐羽啾波波局⭐", cover:"images/replays/r080.jpg",
+   y:2026, mo:10, d:7, h:20, mi:4, sec:1189, pages:1, pdurs:"1189", tags:"", pin:false},
   {bvid:"BV1PLnV6AEUv", t:"⭐电电台台⭐（下半歌回）", cover:"images/replays/r073.jpg",
    y:2026, mo:10, d:18, h:23, mi:23, sec:11016, pages:3, pdurs:"", tags:"电台,歌回"},
   {bvid:"BV1LuJB6JEiz", t:"⭐爱，死亡，和外星人⭐", cover:"images/replays/r074.jpg",
