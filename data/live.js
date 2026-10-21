@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐美汁汁午台⭐","online":165206,"area":"虚拟主播","start":1792560224,"checked":"2026-10-21 13:53:47"};
+window.CHU2U_LIVE={"live":false,"title":"⭐随随便便聊天!⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-21 19:18:54"};
