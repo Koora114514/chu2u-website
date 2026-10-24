@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐芙娅之魂!⭐","online":153978,"area":"虚拟主播","start":1792847118,"checked":"2026-10-24 22:17:52"};
+window.CHU2U_LIVE={"live":true,"title":"⭐十二点陪伴系!!⭐","online":161874,"area":"虚拟主播","start":1792857573,"checked":"2026-10-25 01:30:01"};
