@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐十二点陪伴系!!⭐","online":161874,"area":"虚拟主播","start":1792857573,"checked":"2026-10-25 01:30:01"};
+window.CHU2U_LIVE={"live":false,"title":"⭐十二点陪伴系!!⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-10-25 03:45:37"};
