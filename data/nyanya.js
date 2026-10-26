@@ -34,8 +34,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-10-19";
+window.CHU2U_CAT_UPDATED = "2026-10-26";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"8032568", link:"//www.bilibili.com/opus/1262636658975571975", cover:"images/nyan/a111.jpg",
+   t:"宇宙人降临我身边？", d:"小云梦yume", date:"2026年10月24日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1261748287919095811", cover:"images/nyan/a112.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月22日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1259060849602986009", cover:"images/nyan/a113.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月14日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1257662893558595588", cover:"images/nyan/a114.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月11日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1256350656519733268", cover:"images/nyan/a115.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月7日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1255201877291696162", cover:"images/nyan/a116.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月4日"},
   {kind:"video", pin:true, uid:"", link:"https://www.bilibili.com/video/BV1ksah6uE8H/?spm_id_from=333.1035.list.card_archive.click&vd_source=2570f11e8b42cd12fbe163d425e594b3", cover:"images/nyan/v9.jpg",
    t:"【GPT-6 Astra】羽啾的魔术之心/トリックハート/TRICK HEART", d:"白濑玲_", date:"2026年09月27日"},
   {kind:"fanpower", pin:true, uid:"2034200085", link:"https://www.bilibili.com/video/BV1Pmeq6vEYu", cover:"images/nyan/v7.jpg",
