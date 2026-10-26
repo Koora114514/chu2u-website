@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐芙娅之魂!⭐","online":135569,"area":"虚拟主播","start":1793019502,"checked":"2026-10-26 21:31:20"};
+window.CHU2U_LIVE={"live":true,"title":"⭐疯狂水世界!启动!⭐","online":133674,"area":"虚拟主播","start":1793030339,"checked":"2026-10-27 03:32:21"};
