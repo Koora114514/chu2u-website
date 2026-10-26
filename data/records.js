@@ -224,5 +224,20 @@ window.CHU2U_RECORDS = [
       {kind:"video", uid:"180865397", link:"https://www.bilibili.com/video/BV1pFWc6vEdK/", cover:"images/records/item11-5.jpg",
        cat:"联动 · COLLAB", t:"【花礼】没法像两年前那样串的意气风发，拆弹也畏首畏尾；对以前的自己害怕了",
        d:"花礼自白：没法像两年前那样串的意气风发，拆弹也畏首畏尾——对以前的自己害怕了。", date:"10月13日 · 看切片 →"}
+    ] },
+  { no:12, tag:"第12期 · 周观测", title:"本周观测速报",
+    range:"2026.10.19 – 2026.10.25", cover:"images/records/issue12.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】原来有钱也无法让小松绿…》（播放 25075）。",
+    items:[
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1ACnq6wEER", cover:"images/records/item12-1.jpg",
+       cat:"联动 · COLLAB", t:"【羽啾chu2u】原来有钱也无法让小松绿爱上我吗😭太痛苦了😭太痛苦了😭", d:"【羽啾chu2u】原来有钱也无法让小松绿爱上我吗😭太痛苦了😭太痛苦了😭", date:"10月21日 · 看切片 →"},
+      {kind:"video", uid:"290736390", link:"https://www.bilibili.com/video/BV14Knp6FEon", cover:"images/records/item12-2.jpg",
+       cat:"联动 · COLLAB", t:"羽啾：我无所谓啊 小松绿：哼！羽啾：啊不行不行不行绝对不可以【小松绿Viridis/羽啾chu2u】", d:"羽啾：我无所谓啊 小松绿：哼！羽啾：啊不行不行不行绝对不可以【小松绿Viridis/羽啾chu2…", date:"10月22日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV11bnH6sEHL", cover:"images/records/item12-3.jpg",
+       cat:"直播切片 · CLIP", t:"扫啾羽叫，五分钟速通锻剑【羽啾chu2u】", d:"扫啾羽叫，五分钟速通锻剑【羽啾chu2u】", date:"10月22日 · 看切片 →"},
+      {kind:"video", uid:"4775035", link:"https://www.bilibili.com/video/BV1KLHG6TE7a", cover:"images/records/item12-4.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】杀戮尖塔2 角色Mod正式版发布！", d:"【羽啾chu2u】杀戮尖塔2 角色Mod正式版发布！", date:"10月25日 · 看切片 →"},
+      {kind:"video", uid:"290736390", link:"https://www.bilibili.com/video/BV11gnp64EyJ", cover:"images/records/item12-5.jpg",
+       cat:"联动 · COLLAB", t:"小松绿完全不生气哦！枝堇：那我可以白天谈小松绿晚上谈羽啾啊🤓【小松绿Viridis/羽啾chu2u/枝堇sumire/命依Mei】", d:"小松绿完全不生气哦！枝堇：那我可以白天谈小松绿晚上谈羽啾啊🤓【小松绿Viridis/羽啾chu2…", date:"10月22日 · 看切片 →"}
     ] }
 ];
