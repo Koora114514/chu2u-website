@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐外星人倦怠期...⭐","online":0,"area":"虚拟主播","start":1793109030,"checked":"2026-10-27 21:52:01"};
+window.CHU2U_LIVE={"live":true,"title":"⭐外星人倦怠期...⭐","online":136845,"area":"虚拟主播","start":1793109030,"checked":"2026-10-27 22:21:35"};
