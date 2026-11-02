@@ -34,8 +34,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-10-26";
+window.CHU2U_CAT_UPDATED = "2026-11-02";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1264511549657055238", cover:"images/nyan/a117.jpg",
+   t:"提前祝大家万圣节快乐", d:"海圻圻圻", date:"2026年10月29日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1264195959746723849", cover:"images/nyan/a118.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月28日"},
+  {kind:"art", uid:"91783", link:"//www.bilibili.com/opus/1263895183194325015", cover:"images/nyan/a119.jpg",
+   t:"陪一根", d:"人造BBX", date:"2026年10月27日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1263806144199000065", cover:"images/nyan/a120.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月27日"},
+  {kind:"art", uid:"297578981", link:"//www.bilibili.com/opus/1263767139440918528", cover:"images/nyan/a121.jpg",
+   t:"🤍", d:"千束和泷奈贴贴贴", date:"2026年10月27日"},
+  {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1263096456687910967", cover:"images/nyan/a122.jpg",
+   t:"", d:"白濑玲_", date:"2026年10月25日"},
   {kind:"art", uid:"8032568", link:"//www.bilibili.com/opus/1262636658975571975", cover:"images/nyan/a111.jpg",
    t:"宇宙人降临我身边？", d:"小云梦yume", date:"2026年10月24日"},
   {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1261748287919095811", cover:"images/nyan/a112.jpg",
@@ -120,16 +132,4 @@ window.CHU2U_CAT = [
    t:"七夕快乐", d:"小松绿智商低", date:"2026年8月19日"},
   {kind:"art", uid:"3546845108242875", link:"https://www.bilibili.com/opus/1237113665495236610", cover:"images/nyan/a6.jpg",
    t:"我说啾绿王朝了有人懂吗？", d:"小松绿智商低", date:"2026年8月16日"},
-  {kind:"meme", uid:"702229167", link:"https://www.bilibili.com/opus/1236702001475092485", cover:"images/nyan/m4.jpg",
-   t:"smoke中", d:"nakuu_骷", date:"2026年8月15日"},
-  {kind:"video", uid:"aWttamNobG5j", link:"https://www.bilibili.com/video/BV1j6uf6WE8R/", cover:"images/nyan/v2.jpg",
-   t:"【羽啾chu2u】Bad Apple自制动画", d:"此间风饮雪", date:"2026年8月14日"},
-  {kind:"art", uid:"1819467", link:"https://www.bilibili.com/opus/1235959049426567172", cover:"images/nyan/a14.jpg",
-   t:"┗|｀O′|┛ 嗷~~", d:"陈Drake-", date:"2026年8月13日"},
-  {kind:"art", uid:"5176714", link:"https://www.bilibili.com/opus/1235923753396863031", cover:"images/nyan/a16.jpg",
-   t:"👽1", d:"Bili_3001602573", date:"2026年8月13日"},
-  {kind:"meme", uid:"aWJqYm1vamI=", link:"https://www.bilibili.com/opus/1235381569597734931", cover:"images/nyan/m3.jpg",
-   t:"请大家多多支持羽啾chuuuuuu!!!", d:"_可乐乐乐乐乐", date:"2026年8月12日"},
-  {kind:"meme", uid:"490589965", link:"https://www.bilibili.com/opus/1235244444203089937", cover:"images/nyan/m1.jpg",
-   t:"羽啾EmoteLab表情包", d:"芋泥咕咕茶", date:"2026年8月11日"},
 ];
