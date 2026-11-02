@@ -239,5 +239,20 @@ window.CHU2U_RECORDS = [
        cat:"直播切片 · CLIP", t:"【羽啾chu2u】杀戮尖塔2 角色Mod正式版发布！", d:"【羽啾chu2u】杀戮尖塔2 角色Mod正式版发布！", date:"10月25日 · 看切片 →"},
       {kind:"video", uid:"290736390", link:"https://www.bilibili.com/video/BV11gnp64EyJ", cover:"images/records/item12-5.jpg",
        cat:"联动 · COLLAB", t:"小松绿完全不生气哦！枝堇：那我可以白天谈小松绿晚上谈羽啾啊🤓【小松绿Viridis/羽啾chu2u/枝堇sumire/命依Mei】", d:"小松绿完全不生气哦！枝堇：那我可以白天谈小松绿晚上谈羽啾啊🤓【小松绿Viridis/羽啾chu2…", date:"10月22日 · 看切片 →"}
+    ] },
+  { no:13, tag:"第13期 · 周观测", title:"本周观测速报",
+    range:"2026.10.26 – 2026.11.01", cover:"images/records/issue13.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】只能以朋友的身份问候一…》（播放 20296）。",
+    items:[
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV1qpxg6tE4A", cover:"images/records/item13-1.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】只能以朋友的身份问候一下，问一问最近还好吗身体怎么样", d:"【羽啾chu2u】只能以朋友的身份问候一下，问一问最近还好吗身体怎么样", date:"10月28日 · 看切片 →"},
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV196xN66EzF", cover:"images/records/item13-2.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】VR来了个枪女，羽啾打瓦高燃操作集锦，最早备战师徒杯S152之人", d:"【羽啾chu2u】VR来了个枪女，羽啾打瓦高燃操作集锦，最早备战师徒杯S152之人", date:"10月27日 · 看切片 →"},
+      {kind:"video", uid:"332623470", link:"https://www.bilibili.com/video/BV1UdxN68EEj", cover:"images/records/item13-3.jpg",
+       cat:"直播切片 · CLIP", t:"羽啾带你看《脑洞学生会》01-04【羽啾chu2u】", d:"羽啾带你看《脑洞学生会》01-04【羽啾chu2u】", date:"10月27日 · 看切片 →"},
+      {kind:"video", uid:"3493136061958689", link:"https://www.bilibili.com/video/BV1QcxG6nEbY", cover:"images/records/item13-4.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】本来想找栞栞要一个努努，结果栞栞以为我提督礼物要做努努", d:"【羽啾chu2u】本来想找栞栞要一个努努，结果栞栞以为我提督礼物要做努努", date:"10月28日 · 看切片 →"},
+      {kind:"video", uid:"495045064", link:"https://www.bilibili.com/video/BV11Rxc6yEHx", cover:"images/records/item13-5.jpg",
+       cat:"联动 · COLLAB", t:"小松绿被男的堵门送礼物 羽啾chu2u脸色不对了【小松绿/枝堇/羽啾】", d:"小松绿被男的堵门送礼物 羽啾chu2u脸色不对了【小松绿/枝堇/羽啾】", date:"10月29日 · 看切片 →"}
     ] }
 ];
