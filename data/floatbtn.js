@@ -14,14 +14,14 @@
  * 平时也可以手动改（维护\猫猫管理\ 的「主页飘窗」页 / 维护\飘窗手动更新.ps1）。
  * 注意：飘窗右上角的「×」只关掉这一次（不记本地）——访客每次刷新/重进主页都会再出现
  */
-window.CHU2U_FLOATBTN_UPDATED = "2026-10-26";
+window.CHU2U_FLOATBTN_UPDATED = "2026-11-02";
 
 window.CHU2U_FLOATBTN = {
   icon: "🎧",
-  text: "一起来听！\n《《当V后醒来》》\n新投稿上线！",
-  hl: "《《当V后醒来》》",
+  text: "一起来听！\n《S级粑 粑人》\n新投稿上线！",
+  hl: "《S级粑 粑人》",
   badge: "GO",
-  href: "https://www.bilibili.com/video/BV1U1no6hEcV/",
-  title: "一起来听！《《当V后醒来》》新投稿上线！",
+  href: "https://www.bilibili.com/video/BV1zQ4c66ETF/",
+  title: "一起来听！《S级粑 粑人》新投稿上线！",
   show: true
 };
