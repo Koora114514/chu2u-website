@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐多娜多娜一起作弊吧⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-11-06 04:48:49"};
+window.CHU2U_LIVE={"live":true,"title":"⭐初见!宝可梦紫!!!!⭐","online":81994,"area":"虚拟主播","start":1793973491,"checked":"2026-11-07 00:14:30"};
