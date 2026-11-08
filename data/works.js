@@ -26,4 +26,5 @@ window.CHU2U_WORKS = [
   {t:"S级粑 粑人", link:"https://www.bilibili.com/video/BV1zQ4c66ETF/", cover:"images/works/work-11.jpg", date:"2026.11.02", type:"video"},
   {t:"我说十年内无人能懂哥的操作好吧", link:"https://www.bilibili.com/video/BV1iK4K62EJb/", cover:"images/works/work-12.jpg", date:"2026.11.02", type:"video"},
   {t:"宝学弟妈中毒", link:"https://www.bilibili.com/video/BV1Nr4W62Eev/", cover:"images/works/work-13.jpg", date:"2026.11.08", type:"video"},
+  {t:"白白绿绿和好吧👋", link:"https://www.bilibili.com/video/BV1oPWJ6yE4z/", cover:"images/works/work-14.jpg", date:"2026.11.08", type:"video"},
 ];
