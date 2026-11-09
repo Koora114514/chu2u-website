@@ -254,5 +254,20 @@ window.CHU2U_RECORDS = [
        cat:"直播切片 · CLIP", t:"【羽啾chu2u】本来想找栞栞要一个努努，结果栞栞以为我提督礼物要做努努", d:"【羽啾chu2u】本来想找栞栞要一个努努，结果栞栞以为我提督礼物要做努努", date:"10月28日 · 看切片 →"},
       {kind:"video", uid:"495045064", link:"https://www.bilibili.com/video/BV11Rxc6yEHx", cover:"images/records/item13-5.jpg",
        cat:"联动 · COLLAB", t:"小松绿被男的堵门送礼物 羽啾chu2u脸色不对了【小松绿/枝堇/羽啾】", d:"小松绿被男的堵门送礼物 羽啾chu2u脸色不对了【小松绿/枝堇/羽啾】", date:"10月29日 · 看切片 →"}
+    ] },
+  { no:14, tag:"第14期 · 周观测", title:"本周观测速报",
+    range:"2026.11.02 – 2026.11.08", cover:"images/records/issue14.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《【羽啾chu2u】奈雪的茶?奈茶的雪!》（播放 13182）。",
+    items:[
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV1H84w6yEFc", cover:"images/records/item14-1.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】奈雪的茶?奈茶的雪!", d:"【羽啾chu2u】奈雪的茶?奈茶的雪!", date:"11月2日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1kP4g6eEsS", cover:"images/records/item14-2.jpg",
+       cat:"直播切片 · CLIP", t:"看宇宙猫娘刷激动大喊nice:这样才有理由下放撸狗烂梗【羽啾chu2u】", d:"看宇宙猫娘刷激动大喊nice:这样才有理由下放撸狗烂梗【羽啾chu2u】", date:"11月3日 · 看切片 →"},
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV1HVx96WEEV", cover:"images/records/item14-3.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】主播引导好厉害", d:"【羽啾chu2u】主播引导好厉害", date:"11月4日 · 看切片 →"},
+      {kind:"video", uid:"1422126040", link:"https://www.bilibili.com/video/BV1SqWE6AEUB", cover:"images/records/item14-4.jpg",
+       cat:"联动 · COLLAB", t:"【小松绿】羽啾和161私奔跳脸小松绿 绿神恐成小丑🤡", d:"【小松绿】羽啾和161私奔跳脸小松绿 绿神恐成小丑🤡", date:"11月8日 · 看切片 →"},
+      {kind:"video", uid:"21300440", link:"https://www.bilibili.com/video/BV16CWH6dEcu", cover:"images/records/item14-5.jpg",
+       cat:"联动 · COLLAB", t:"弥月难绷羽啾161合唱，到底喜欢哪个绿？🤣羽啾太多情了真不熟👋【弥月Mizuki】", d:"弥月难绷羽啾161合唱，到底喜欢哪个绿？🤣羽啾太多情了真不熟👋【弥月Mizuki】", date:"11月8日 · 看切片 →"}
     ] }
 ];
