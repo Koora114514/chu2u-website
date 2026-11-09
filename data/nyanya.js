@@ -35,8 +35,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-11-02";
+window.CHU2U_CAT_UPDATED = "2026-11-09";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1265773097469870087", cover:"images/nyan/a123.jpg",
+   t:"又是新的一月", d:"海圻圻圻", date:"2026年11月2日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1263923882137485320", cover:"images/nyan/a124.jpg",
+   t:"小羽啾快跟宇宙猫回家", d:"海圻圻圻", date:"2026年10月28日"},
+  {kind:"art", uid:"417365093", link:"//www.bilibili.com/opus/1259354913119404069", cover:"images/nyan/a125.jpg",
+   t:"正常吹风扇的小羽啾", d:"千矢咲", date:"2026年10月15日"},
+  {kind:"art", uid:"3546839049571170", link:"//www.bilibili.com/opus/1258702571980193809", cover:"images/nyan/a126.jpg",
+   t:"宇宙猫娘！震撼来袭！", d:"魔法褥子", date:"2026年10月13日"},
+  {kind:"meme", uid:"702229167", link:"//www.bilibili.com/opus/1236702001475092485", cover:"images/nyan/m6.jpg",
+   t:"", d:"nakuu_骷", date:"2026年8月15日"},
+  {kind:"meme", uid:"490589965", link:"//www.bilibili.com/opus/1235244444203089937", cover:"images/nyan/m7.jpg",
+   t:"羽啾EmoteLab表情包", d:"芋泥咕咕茶", date:"2026年8月11日"},
   {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1264511549657055238", cover:"images/nyan/a117.jpg",
    t:"提前祝大家万圣节快乐", d:"海圻圻圻", date:"2026年10月29日"},
   {kind:"art", uid:"775550", link:"//www.bilibili.com/opus/1264195959746723849", cover:"images/nyan/a118.jpg",
@@ -121,16 +133,4 @@ window.CHU2U_CAT = [
    t:"萌萌的q版羽啾", d:"海圻圻圻", date:"2026年9月8日"},
   {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245313071570747392", cover:"images/nyan/a3.jpg",
    t:"恭喜羽啾宝宝满月！", d:"海圻圻圻", date:"2026年9月7日"},
-  {kind:"art", uid:"3745037691129660", link:"https://www.bilibili.com/opus/1242707430901547027", cover:"images/nyan/a4.jpg",
-   t:"小画了下啾宝大头", d:"绫梓二号机", date:"2026年8月31日"},
-  {kind:"meme", uid:"32959784", link:"https://www.bilibili.com/opus/1241314581585854466", cover:"images/nyan/m2.jpg",
-   t:"约了表情包发一下", d:"霜枫醉弈", date:"2026年8月28日"},
-  {kind:"art", uid:"15656417", link:"https://www.bilibili.com/opus/1241104776742043698", cover:"images/nyan/a5.jpg",
-   t:"羽啾本体被我找到了", d:"贰三3三", date:"2026年8月27日"},
-  {kind:"art", uid:"299513326", link:"https://www.bilibili.com/opus/1239675085193740306", cover:"images/nyan/a7.jpg",
-   t:"锡纸帽击穿", d:"猫头虫尾", date:"2026年8月23日"},
-  {kind:"art", uid:"3546845108242875", link:"https://www.bilibili.com/opus/1238289713422401544", cover:"images/nyan/a18.jpg",
-   t:"七夕快乐", d:"小松绿智商低", date:"2026年8月19日"},
-  {kind:"art", uid:"3546845108242875", link:"https://www.bilibili.com/opus/1237113665495236610", cover:"images/nyan/a6.jpg",
-   t:"我说啾绿王朝了有人懂吗？", d:"小松绿智商低", date:"2026年8月16日"},
 ];
