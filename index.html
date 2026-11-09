@@ -378,7 +378,7 @@
     </div>
   </div>
 
-  <!-- 猫猫宇宙论特辑！子栏目：话题优秀二创（视频/绘画/表情包），内容由 JS 从 data/nyanya.js 渲染
+  <!-- 猫猫宇宙论特辑！子栏目：话题优秀二创（视频/绘画/AI生图/表情包），内容由 JS 从 data/nyanya.js 渲染
        收起态 = 最新 6 条混排；展开态 = 分类筛选 + 只露 3 行滚轮浏览；点卡片新窗口跳 B 站 -->
   <div class="nyan-box reveal" id="sub-nyan">
     <div class="nyan-head">
@@ -395,6 +395,7 @@
         <button class="px-btn on" type="button" data-k="all">全部</button>
         <button class="px-btn" type="button" data-k="video">视频</button>
         <button class="px-btn" type="button" data-k="art">绘画</button>
+        <button class="px-btn" type="button" data-k="ai">AI生图</button>
         <button class="px-btn" type="button" data-k="meme">表情包</button>
         <button class="px-btn" type="button" data-k="fanpower">粉丝发电</button>
       </div>
@@ -1916,7 +1917,7 @@
     var BLOCKED = _d("aW9ubGNrbm1pb21ibGpibXZpb25sY25qbWxjYmlramtp").split(",");
     function blocked(uid){ return uid && BLOCKED.indexOf(String(uid)) >= 0; }
 
-    var KINDS = { video:"视频 · VIDEO", art:"绘画 · ART", meme:"表情包 · MEME", fanpower:"粉丝发电" };
+    var KINDS = { video:"视频 · VIDEO", art:"绘画 · ART", ai:"AI生图 · AI ART", meme:"表情包 · MEME", fanpower:"粉丝发电" };
     function cardEl(it){
       var el = document.createElement("a");
       el.className = "nyan-card";
@@ -2003,7 +2004,7 @@
       if(expanded && !built){ buildGrid(); built = true; }
     });
 
-    /* 分类筛选：全部/视频/绘画/表情包，重渲染展开网格 */
+    /* 分类筛选：全部/视频/绘画/AI生图/表情包/粉丝发电，重渲染展开网格 */
     filterEl.addEventListener("click", function(e){
       var btn = e.target && e.target.closest ? e.target.closest("button[data-k]") : null;
       if(!btn || btn.getAttribute("data-k") === cur) return;
