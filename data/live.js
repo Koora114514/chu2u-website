@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐新封面面的⭐","online":73079,"area":"虚拟主播","start":1794377050,"checked":"2026-11-11 15:32:05"};
+window.CHU2U_LIVE={"live":false,"title":"⭐新封面面的⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-11-11 18:12:01"};
