@@ -10,18 +10,18 @@
  *   title  鼠标悬停时的小提示 + 读屏软件读的话
  *   show   填 false = 这个飘窗干脆不显示
  *
- * 本文件可由 维护\猫猫管理\ 的「主页飘窗」页维护，也可由云端 作品展柜+飘窗
- * 自动更新引擎维护（新投稿时自动换歌），或 维护\飘窗手动更新.ps1。
+ * 本文件由云端 作品展柜+飘窗 自动更新引擎维护（新投稿时自动换歌）；
+ * 平时也可以手动改（维护\猫猫管理\ 的「主页飘窗」页 / 维护\飘窗手动更新.ps1）。
  * 注意：飘窗右上角的「×」只关掉这一次（不记本地）——访客每次刷新/重进主页都会再出现
  */
-window.CHU2U_FLOATBTN_UPDATED = "2026-11-12";
+window.CHU2U_FLOATBTN_UPDATED = "2026-11-13";
 
 window.CHU2U_FLOATBTN = {
   icon: "🎧",
-  text: "一起来听！\n《INTERNET OVERDOSE》",
-  hl: "《INTERNET OVERDOSE》",
+  text: "一起来听！\n《人生は夢だらけ》\n新投稿上线！",
+  hl: "《人生は夢だらけ》",
   badge: "GO",
-  href: "https://www.bilibili.com/video/BV1FPWd6HETZ/?spm_id_from=333.1387.homepage.video_card.click",
-  title: "一起来听！《INTERNET OVERDOSE》！",
+  href: "https://www.bilibili.com/video/BV1oZWq6hE29/",
+  title: "一起来听！《人生は夢だらけ》新投稿上线！",
   show: true
 };
