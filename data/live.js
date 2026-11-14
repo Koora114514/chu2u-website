@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"⭐可可爱爱无忧无虑⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-11-13 16:18:00"};
+window.CHU2U_LIVE={"live":true,"title":"⭐和小松绿玩!!⭐","online":18666,"area":"虚拟主播","start":1794664572,"checked":"2026-11-14 21:58:01"};
