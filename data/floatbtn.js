@@ -14,14 +14,14 @@
  * 平时也可以手动改（维护\猫猫管理\ 的「主页飘窗」页 / 维护\飘窗手动更新.ps1）。
  * 注意：飘窗右上角的「×」只关掉这一次（不记本地）——访客每次刷新/重进主页都会再出现
  */
-window.CHU2U_FLOATBTN_UPDATED = "2026-11-13";
+window.CHU2U_FLOATBTN_UPDATED = "2026-11-15";
 
 window.CHU2U_FLOATBTN = {
   icon: "🎧",
-  text: "一起来听！\n《人生は夢だらけ》\n新投稿上线！",
-  hl: "《人生は夢だらけ》",
+  text: "一起来听！\n《终极考子测试 刷到个非常好玩bgm和背景素材 做着玩了（）》\n新投稿上线！",
+  hl: "《终极考子测试 刷到个非常好玩bgm和背景素材 做着玩了（）》",
   badge: "GO",
-  href: "https://www.bilibili.com/video/BV1oZWq6hE29/",
-  title: "一起来听！《人生は夢だらけ》新投稿上线！",
+  href: "https://www.bilibili.com/video/BV1ijsn6JE26/",
+  title: "一起来听！《终极考子测试 刷到个非常好玩bgm和背景素材 做着玩了（）》新投稿上线！",
   show: true
 };
