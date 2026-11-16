@@ -35,8 +35,20 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-11-09";
+window.CHU2U_CAT_UPDATED = "2026-11-16";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"3493257038268887", link:"//www.bilibili.com/opus/1270480416020627456", cover:"images/nyan/a127.jpg",
+   t:"100 Days", d:"十六契灵命异事务所", date:"2026年11月14日"},
+  {kind:"art", uid:"15378481", link:"//www.bilibili.com/opus/1270397729270398979", cover:"images/nyan/a128.jpg",
+   t:"👽", d:"久弥紀伊", date:"2026年11月14日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1270230569196716053", cover:"images/nyan/a129.jpg",
+   t:"不知不觉就百天了耶！", d:"海圻圻圻", date:"2026年11月14日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1267653713354293267", cover:"images/nyan/a130.jpg",
+   t:"倏忽秋逝，又是立冬", d:"海圻圻圻", date:"2026年11月7日"},
+  {kind:"art", uid:"32959784", link:"//www.bilibili.com/opus/1241314581585854466", cover:"images/nyan/a131.jpg",
+   t:"约了表情包发一下", d:"霜枫醉弈", date:"2026年8月28日"},
+  {kind:"art", uid:"299513326", link:"//www.bilibili.com/opus/1239675085193740306", cover:"images/nyan/a132.jpg",
+   t:"", d:"猫头虫尾", date:"2026年8月23日"},
   {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1265773097469870087", cover:"images/nyan/a123.jpg",
    t:"又是新的一月", d:"海圻圻圻", date:"2026年11月2日"},
   {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1263923882137485320", cover:"images/nyan/a124.jpg",
@@ -121,16 +133,4 @@ window.CHU2U_CAT = [
    t:"呃，顶萌来了，你们聊", d:"残星下的悼亡曲", date:"2026年9月15日"},
   {kind:"art", uid:"3747549391359135", link:"https://www.bilibili.com/opus/1247900269694418953", cover:"images/nyan/a30.jpg",
    t:"课间", d:"核对插座电量", date:"2026年9月14日"},
-  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1247591706363166721", cover:"images/nyan/a10.jpg",
-   t:"好可爱一羽啾", d:"海圻圻圻", date:"2026年9月14日"},
-  {kind:"video", uid:"3747549391359135", link:"https://www.bilibili.com/video/BV189Y86WEge/", cover:"images/nyan/v3.jpg",
-   t:"羽啾只是在伸出手指", d:"核对插座电量", date:"2026年9月10日"},
-  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245748516848926727", cover:"images/nyan/a2.jpg",
-   t:"羽啾比心🤍", d:"海圻圻圻", date:"2026年9月9日"},
-  {kind:"video", uid:"2034200085", link:"https://www.bilibili.com/video/BV11bbT6qEYz/", cover:"images/nyan/v4.jpg",
-   t:"！？合成大羽啾？！", d:"老美のNASA", date:"2026年9月8日"},
-  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245610833082318850", cover:"images/nyan/a1.jpg",
-   t:"萌萌的q版羽啾", d:"海圻圻圻", date:"2026年9月8日"},
-  {kind:"art", uid:"33747490", link:"https://www.bilibili.com/opus/1245313071570747392", cover:"images/nyan/a3.jpg",
-   t:"恭喜羽啾宝宝满月！", d:"海圻圻圻", date:"2026年9月7日"},
 ];
