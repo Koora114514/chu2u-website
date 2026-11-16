@@ -269,5 +269,20 @@ window.CHU2U_RECORDS = [
        cat:"联动 · COLLAB", t:"【小松绿】羽啾和161私奔跳脸小松绿 绿神恐成小丑🤡", d:"【小松绿】羽啾和161私奔跳脸小松绿 绿神恐成小丑🤡", date:"11月8日 · 看切片 →"},
       {kind:"video", uid:"21300440", link:"https://www.bilibili.com/video/BV16CWH6dEcu", cover:"images/records/item14-5.jpg",
        cat:"联动 · COLLAB", t:"弥月难绷羽啾161合唱，到底喜欢哪个绿？🤣羽啾太多情了真不熟👋【弥月Mizuki】", d:"弥月难绷羽啾161合唱，到底喜欢哪个绿？🤣羽啾太多情了真不熟👋【弥月Mizuki】", date:"11月8日 · 看切片 →"}
+    ] },
+  { no:15, tag:"第15期 · 周观测", title:"本周观测速报",
+    range:"2026.11.09 – 2026.11.15", cover:"images/records/issue15.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《好对劲的脸色啊 直播看羽啾绿绿白白和好投…》（播放 30953）。",
+    items:[
+      {kind:"video", uid:"495045064", link:"https://www.bilibili.com/video/BV1UtWg6TEKT", cover:"images/records/item15-1.jpg",
+       cat:"联动 · COLLAB", t:"好对劲的脸色啊 直播看羽啾绿绿白白和好投稿 看完桌子大残了【小松绿Viridis】", d:"好对劲的脸色啊 直播看羽啾绿绿白白和好投稿 看完桌子大残了【小松绿Viridis】", date:"11月10日 · 看切片 →"},
+      {kind:"video", uid:"504984608", link:"https://www.bilibili.com/video/BV12mWn6PE1v", cover:"images/records/item15-2.jpg",
+       cat:"直播切片 · CLIP", t:"【花礼】没懂下头羽啾说的“腰上绑气球🎈”，什么意思啊？😮我看得还是太少了", d:"【花礼】没懂下头羽啾说的“腰上绑气球🎈”，什么意思啊？😮我看得还是太少了", date:"11月9日 · 看切片 →"},
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV1PoW36TEkM", cover:"images/records/item15-3.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】我不想叫鹰角，它把小绿夺走了，唉如果我叫鹰角小绿不就会回来考我了吗🤔🤔🤔🤓🤓🤓", d:"【羽啾chu2u】我不想叫鹰角，它把小绿夺走了，唉如果我叫鹰角小绿不就会回来考我了吗🤔🤔🤔🤓🤓🤓", date:"11月10日 · 看切片 →"},
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1mpWb6WEZC", cover:"images/records/item15-4.jpg",
+       cat:"联动 · COLLAB", t:"【羽啾chu2u】羽啾（小松绿看到这个视频会是什么反应呢🥰） 小松绿（想你了卫😙）", d:"【羽啾chu2u】羽啾（小松绿看到这个视频会是什么反应呢🥰） 小松绿（想你了卫😙）", date:"11月9日 · 看切片 →"},
+      {kind:"video", uid:"3546791903496550", link:"https://www.bilibili.com/video/BV16vWB6KEMK", cover:"images/records/item15-5.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】最白的绿考子来了，给楚平方调成啥样了", d:"【羽啾chu2u】最白的绿考子来了，给楚平方调成啥样了", date:"11月13日 · 看切片 →"}
     ] }
 ];
