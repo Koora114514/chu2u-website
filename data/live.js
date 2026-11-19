@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":true,"title":"⭐杂杂谈谈悠悠哉哉⭐","online":26597,"area":"虚拟主播","start":1795096818,"checked":"2026-11-19 22:02:03"};
+window.CHU2U_LIVE={"live":false,"title":"⭐杂杂谈谈悠悠哉哉⭐","online":0,"area":"虚拟主播","start":-1,"checked":"2026-11-20 00:14:01"};
