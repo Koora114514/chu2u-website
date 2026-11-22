@@ -1,1 +1,1 @@
-window.CHU2U_LIVE={"live":false,"title":"bilibili主播的直播间","online":0,"area":"虚拟主播","start":-1,"checked":"2026-11-20 17:58:01"};
+window.CHU2U_LIVE={"live":true,"title":"⭐哦耶耶⭐","online":13193,"area":"虚拟主播","start":1795320134,"checked":"2026-11-22 12:04:00"};
