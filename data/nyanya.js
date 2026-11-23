@@ -35,8 +35,16 @@
      ?v= 改成「今天+时分」（YYYYMMDDHHMM，如 202609202013）——缓存版本号，
      不改浏览器会继续显示旧数据；同一天多次更新必须换新值，只用当天日期
      会撞上浏览器/Cloudflare 旧缓存（2026-09-20 实测踩坑）。 */
-window.CHU2U_CAT_UPDATED = "2026-11-16";
+window.CHU2U_CAT_UPDATED = "2026-11-23";
 window.CHU2U_CAT = [
+  {kind:"art", uid:"297578981", link:"//www.bilibili.com/opus/1272659965867196419", cover:"images/nyan/a133.jpg",
+   t:"🤍🤍", d:"千束和泷奈贴贴贴", date:"2026年11月20日"},
+  {kind:"art", uid:"359949721", link:"//www.bilibili.com/opus/1271348974348926981", cover:"images/nyan/a134.jpg",
+   t:"纪念一下在舰百天！！！", d:"御坂11369", date:"2026年11月17日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1247591706363166721", cover:"images/nyan/a135.jpg",
+   t:"好可爱一羽啾", d:"-海圻-", date:"2026年9月14日"},
+  {kind:"art", uid:"33747490", link:"//www.bilibili.com/opus/1245610833082318850", cover:"images/nyan/a136.jpg",
+   t:"萌萌的q版羽啾", d:"-海圻-", date:"2026年9月8日"},
   {kind:"art", uid:"3493257038268887", link:"//www.bilibili.com/opus/1270480416020627456", cover:"images/nyan/a127.jpg",
    t:"100 Days", d:"十六契灵命异事务所", date:"2026年11月14日"},
   {kind:"art", uid:"15378481", link:"//www.bilibili.com/opus/1270397729270398979", cover:"images/nyan/a128.jpg",
@@ -125,12 +133,4 @@ window.CHU2U_CAT = [
    t:"宇宙猫月饼！应该是什么口味的？", d:"灲秘书", date:"2026年9月25日"},
   {kind:"art", uid:"393767790", link:"https://www.bilibili.com/opus/1250566185955622917", cover:"images/nyan/a29.jpg",
    t:"（图帖·无文字，上传前请改标题）", d:"瞬噬魔王点肠粉LZX", date:"2026年9月22日"},
-  {kind:"art", uid:"91226097", link:"https://www.bilibili.com/opus/1248987824115417140", cover:"images/nyan/a12.jpg",
-   t:"分享图片", d:"自由高松灯", date:"2026年9月17日"},
-  {kind:"art", uid:"41664105", link:"https://www.bilibili.com/opus/1248499310253834249", cover:"images/nyan/a11.jpg",
-   t:"画师@狸SX 萌萌主播@羽啾chu2u", d:"-nolo-", date:"2026年9月16日"},
-  {kind:"art", uid:"3494373633297224", link:"https://www.bilibili.com/opus/1248327936773193753", cover:"images/nyan/a8.jpg",
-   t:"呃，顶萌来了，你们聊", d:"残星下的悼亡曲", date:"2026年9月15日"},
-  {kind:"art", uid:"3747549391359135", link:"https://www.bilibili.com/opus/1247900269694418953", cover:"images/nyan/a30.jpg",
-   t:"课间", d:"核对插座电量", date:"2026年9月14日"},
 ];
