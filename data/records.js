@@ -284,5 +284,20 @@ window.CHU2U_RECORDS = [
        cat:"联动 · COLLAB", t:"【羽啾chu2u】羽啾（小松绿看到这个视频会是什么反应呢🥰） 小松绿（想你了卫😙）", d:"【羽啾chu2u】羽啾（小松绿看到这个视频会是什么反应呢🥰） 小松绿（想你了卫😙）", date:"11月9日 · 看切片 →"},
       {kind:"video", uid:"3546791903496550", link:"https://www.bilibili.com/video/BV16vWB6KEMK", cover:"images/records/item15-5.jpg",
        cat:"直播切片 · CLIP", t:"【羽啾chu2u】最白的绿考子来了，给楚平方调成啥样了", d:"【羽啾chu2u】最白的绿考子来了，给楚平方调成啥样了", date:"11月13日 · 看切片 →"}
+    ] },
+  { no:16, tag:"第16期 · 周观测", title:"本周观测速报",
+    range:"2026.11.16 – 2026.11.22", cover:"images/records/issue16.jpg", stamp:"记录·入库",
+    lead:"本周观测站收到 5 条信号，最热的是《羽啾她不是一般的小孩，她是那种吃饭要点小…》（播放 9133）。",
+    items:[
+      {kind:"video", uid:"3158233", link:"https://www.bilibili.com/video/BV15FyVzdEaC", cover:"images/records/item16-1.jpg",
+       cat:"直播切片 · CLIP", t:"羽啾她不是一般的小孩，她是那种吃饭要点小孩菜的小孩😚哎呀太萌了【雨纪_Ameki】", d:"羽啾她不是一般的小孩，她是那种吃饭要点小孩菜的小孩😚哎呀太萌了【雨纪_Ameki】", date:"11月22日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1rSsa6xEBf", cover:"images/records/item16-2.jpg",
+       cat:"直播切片 · CLIP", t:"无语了💧朋友给羽啾发皮包啾表情包,你们真太变态了吧！【羽啾chu2u】", d:"无语了💧朋友给羽啾发皮包啾表情包,你们真太变态了吧！【羽啾chu2u】", date:"11月19日 · 看切片 →"},
+      {kind:"video", uid:"51268685", link:"https://www.bilibili.com/video/BV1ZXsT6jEBh", cover:"images/records/item16-3.jpg",
+       cat:"直播切片 · CLIP", t:"扫啾羽叫🥵躺在床上被女室友玩弄先导版（音声）【羽啾chu2u】", d:"扫啾羽叫🥵躺在床上被女室友玩弄先导版（音声）【羽啾chu2u】", date:"11月17日 · 看切片 →"},
+      {kind:"video", uid:"417365093", link:"https://www.bilibili.com/video/BV1VFsM6kE1n", cover:"images/records/item16-4.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】不会让你们听我打ow的😡我能不知道你们想听什么吗", d:"【羽啾chu2u】不会让你们听我打ow的😡我能不知道你们想听什么吗", date:"11月17日 · 看切片 →"},
+      {kind:"video", uid:"523220443", link:"https://www.bilibili.com/video/BV17csA6iEfk", cover:"images/records/item16-5.jpg",
+       cat:"直播切片 · CLIP", t:"【羽啾chu2u】被小孩姐问姐姐你看鬼灭吗，被当成同龄人了。姐姐你看羽啾吗？看羽啾这小孩也就废了", d:"【羽啾chu2u】被小孩姐问姐姐你看鬼灭吗，被当成同龄人了。姐姐你看羽啾吗？看羽啾这小孩也就废了", date:"11月16日 · 看切片 →"}
     ] }
 ];
